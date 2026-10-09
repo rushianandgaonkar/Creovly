@@ -1,46 +1,70 @@
-# Astro Starter Kit: Basics
+# Creovly
 
-```sh
-npm create astro@latest -- --template basics
+**Create smarter. Publish better.**
+
+Creovly is a pre-publish workspace and toolkit for YouTube creators. It is being built as a polished creator SaaS product rather than a generic collection of SEO utilities.
+
+## Stack
+
+- Next.js (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+
+## Local development
+
+```bash
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Then open the local URL printed by Next.js.
 
-## 🚀 Project Structure
+## Production checks
 
-Inside of your Astro project, you'll see the following folders and files:
+Before considering a task complete:
+
+```bash
+npm run lint
+npm run build
+```
+
+Both should complete without errors.
+
+Regression tests run with `npm test`. The thumbnail compressor is available at `/tools/youtube-thumbnail-compressor`; the thumbnail category is at `/tools/thumbnail`. It processes images locally and preserves their dimensions. The resizer at `/tools/youtube-thumbnail-resizer` supports crop positioning, padding, custom dimensions, and local export. All eight individual tools are functional; Publish Studio and editorial guides remain previews.
+
+## Project structure
 
 ```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+app/                  Routes, layouts, metadata
+components/
+  layout/             Header, Footer, navigation
+  ui/                 Buttons, badges, shared primitives
+  form/               Inputs, selects, sliders, toggles, drop zones
+  results/            Metrics, progress, score and result panels
+config/                Site navigation and tool registry
+lib/                   Shared utilities
+public/                Static assets
+styles/                Global styles/design tokens when needed
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+The exact structure may evolve, but reusable components must remain centralized rather than copied into individual tool pages.
 
-## 🧞 Commands
+## Product areas
 
-All commands are run from the root of the project, from a terminal:
+- Tools directory
+- Thumbnail tools
+- Title tools
+- Money & Growth calculators
+- Shorts tools
+- Publish Studio
+- Pre-Publish Checklist
+- Creator Guides
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Current development phase
 
-## 👀 Want to learn more?
+The project is currently in **Step 2: Individual creator tools**.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+The thumbnail tools, title checker, and four money and growth calculators are implemented while preserving the existing visual identity. Studio and editorial guides remain previews; authentication, payments, databases, and external AI services remain out of scope.
+
+Read `DESIGN.md` before making UI changes.
