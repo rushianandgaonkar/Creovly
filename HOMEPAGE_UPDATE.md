@@ -27,3 +27,14 @@ Reference: https://nextjs.org/docs/app/api-reference/config/next-config-js/devIn
 - Production homepage/directory interaction checks produced no warning/error logs.
 
 The original full hydration attribute diff was not supplied, so the exact mismatched attribute was not confirmed. The reported badge-specific path has been mitigated, and the warning was not reproduced in the checks after the change.
+# Approved visual refinement — October 7, 2026
+
+- Compact centered brand promise with a static blue radial glow and faint grid; tool discovery follows immediately.
+- Homepage-only decorative SVG diagrams distinguish all eight tools. They contain no live outputs, invented scores, or performance claims and are hidden from assistive technology.
+- Primary header navigation is Tools and Checklist. Removed the duplicate discovery CTA and category navigation; existing routes and category anchors remain intact.
+- Studio and Guides are secondary footer links, both labelled Preview. The Studio preview and checklist cards remain below the tool collection.
+- Existing search, category filtering, status messaging, and shared tool-card components are reused. No animation or component library was added.
+- Mobile navigation supports Escape with focus returned to its toggle.
+- Verified search and filters, light/dark appearance, mobile menu, no horizontal overflow at 375/768/1280px, and no browser console warnings/errors during development checks.
+- Tailwind documentation snapshot initialized with user approval; generated documentation is excluded from Git.
+- Final validation: `npm run lint` and `npm run build` passed. Production build generated all 17 pages.

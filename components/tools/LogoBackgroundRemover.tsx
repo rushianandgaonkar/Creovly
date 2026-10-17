@@ -1,0 +1,362 @@
+/* Hallmark · genre: modern-minimal · macrostructure: Workbench */
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+import DropZone from '@/components/form/DropZone';
+import Slider from '@/components/form/Slider';
+import Button from '@/components/ui/Button';
+import Alert from '@/components/feedback/Alert';
+import ImagePreview, { useBlobUrl } from './ImagePreview';
+import ToolWorkspaceLayout from './ToolWorkspaceLayout';
+import { formatBytes } from '@/lib/image-compression';
+import { readLogo, removeLogoBackground } from '@/lib/logo-background';
+import { toolSamples } from '@/config/tool-samples';
+
+type Selected = { file: File; width: number; height: number };
+type Result = Awaited<ReturnType<typeof removeLogoBackground>>;
+
+const quickColors = [
+  { label: 'White', hex: '#ffffff' },
+  { label: 'Black', hex: '#000000' },
+  { label: 'Slate', hex: '#0f172a' },
+  { label: 'Gray', hex: '#1e293b' },
+  { label: 'Green', hex: '#00ff00' },
+];
+
+export default function LogoBackgroundRemover() {
+  const [selected, setSelected] = useState<Selected>();
+  const [result, setResult] = useState<Result>();
+  const [color, setColor] = useState('#ffffff');
+  const [hexInput, setHexInput] = useState('#ffffff');
+  const [tolerance, setTolerance] = useState(12);
+  const [background, setBackground] = useState('checkerboard');
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState('');
+  const [fileKey, setFileKey] = useState(0);
+
+  const generation = useRef(0);
+  const controller = useRef<AbortController | null>(null);
+  const errorRef = useRef<HTMLDivElement>(null);
+
+  const originalUrl = useBlobUrl(selected?.file);
+  const outputUrl = useBlobUrl(result?.blob);
+
+  useEffect(() => {
+    const ctrl = controller;
+    const gen = generation;
+    return () => {
+      gen.current++;
+      ctrl.current?.abort();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (error) errorRef.current?.focus();
+  }, [error]);
+
+  const clear = () => {
+    generation.current++;
+    controller.current?.abort();
+    setResult(undefined);
+    setError('');
+    setBusy(false);
+  };
+
+  const handleColorChange = (newColor: string) => {
+    clear();
+    setColor(newColor);
+    setHexInput(newColor);
+  };
+
+  const select = async (file: File) => {
+    clear();
+    setSelected(undefined);
+    const id = generation.current;
+    setBusy(true);
+    try {
+      const info = await readLogo(file);
+      if (id === generation.current) {
+        setSelected({ file, width: info.width, height: info.height });
+        handleColorChange(info.color);
+      }
+    } catch (cause) {
+      if (id === generation.current) {
+        setError(cause instanceof Error ? cause.message : 'Could not open this image.');
+      }
+    } finally {
+      if (id === generation.current) setBusy(false);
+    }
+  };
+
+  const run = async () => {
+    if (!selected || busy) return;
+    clear();
+    const id = generation.current;
+    const abort = new AbortController();
+    controller.current = abort;
+    setBusy(true);
+    try {
+      const next = await removeLogoBackground(selected.file, color, tolerance, abort.signal);
+      if (id === generation.current) setResult(next);
+    } catch (cause) {
+      if (id === generation.current && !abort.signal.aborted) {
+        setError(cause instanceof Error ? cause.message : 'Background removal failed.');
+      }
+    } finally {
+      if (id === generation.current) setBusy(false);
+    }
+  };
+
+  const resetAll = () => {
+    clear();
+    setSelected(undefined);
+    handleColorChange('#ffffff');
+    setTolerance(12);
+    setFileKey((key) => key + 1);
+  };
+
+  return (
+    <ToolWorkspaceLayout
+      workspace={
+        <>
+          <DropZone
+            key={fileKey}
+            id="logo-file"
+            label="Upload Brand Logo"
+            maxSizeMB={20}
+            privacyNote="100% In-Browser Execution"
+            disabled={busy}
+            onFileSelect={select}
+            onError={setError}
+            samples={toolSamples['logo-background-remover']}
+          />
+
+          <div ref={errorRef} tabIndex={-1} className="focus-ring rounded-md">
+            {error && (
+              <Alert variant="error" title="Check your image">
+                {error}
+              </Alert>
+            )}
+          </div>
+
+          {selected && (
+            <div className="flex items-center justify-between p-3 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-xs font-mono">
+              <span className="truncate max-w-[200px] text-[var(--text-ink)] font-medium">
+                {selected.file.name}
+              </span>
+              <span className="text-[var(--text-muted)]">
+                {selected.width} × {selected.height} px · {formatBytes(selected.file.size)}
+              </span>
+            </div>
+          )}
+
+          <fieldset disabled={busy} className="space-y-5 min-w-0">
+            <legend className="sr-only">Background removal settings</legend>
+
+            <div className="space-y-2.5">
+              <label htmlFor="logo-color" className="block text-xs font-medium text-[var(--text-ink)]">
+                Target Background Color to Remove
+              </label>
+              <div className="flex items-center gap-2.5">
+                <input
+                  id="logo-color"
+                  type="color"
+                  value={color}
+                  onChange={(e) => handleColorChange(e.target.value)}
+                  className="h-10 w-14 cursor-pointer rounded-lg border border-[var(--border-hairline)] p-0.5 bg-[var(--bg-canvas-elevated)] focus-ring shrink-0"
+                />
+                <input
+                  id="logo-hex-input"
+                  type="text"
+                  value={hexInput}
+                  onChange={(e) => {
+                    const val = e.target.value;
+                    setHexInput(val);
+                    if (/^#[0-9A-Fa-f]{6}$/.test(val)) {
+                      clear();
+                      setColor(val);
+                    }
+                  }}
+                  onBlur={() => {
+                    if (/^#[0-9A-Fa-f]{6}$/.test(hexInput)) {
+                      setColor(hexInput);
+                    } else {
+                      setHexInput(color);
+                    }
+                  }}
+                  placeholder="#ffffff"
+                  className="h-10 w-24 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] px-2.5 font-mono text-xs text-[var(--text-ink)] focus-ring uppercase"
+                />
+                <div className="flex items-center gap-1 overflow-x-auto">
+                  {quickColors.map((item) => (
+                    <button
+                      key={item.hex}
+                      type="button"
+                      onClick={() => handleColorChange(item.hex)}
+                      className={`px-2 py-1.5 rounded-md text-[10px] font-mono border transition-all ${
+                        color.toLowerCase() === item.hex.toLowerCase()
+                          ? 'border-[var(--brand-accent)] bg-[var(--brand-accent-soft)] text-[var(--brand-accent-deep)] font-semibold'
+                          : 'border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-body)] hover:border-[var(--brand-accent)]'
+                      }`}
+                    >
+                      {item.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <p className="text-xs text-[var(--text-muted)]">
+                Sampled from top-left pixel by default. You can pick, type an exact hex code, or use quick presets.
+              </p>
+            </div>
+
+            <Slider
+              id="logo-tolerance"
+              label="Color Tolerance"
+              value={tolerance}
+              unit="%"
+              onChange={(value) => {
+                clear();
+                setTolerance(value);
+              }}
+            />
+            <p className="text-xs text-[var(--text-body)] leading-relaxed">
+              Lower tolerance preserves subtle logo gradients. Higher values strip anti-aliased fringes. Only outer border-connected pixels are erased; interior logo fills remain protected.
+            </p>
+          </fieldset>
+
+          <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-[var(--border-hairline-subtle)]">
+            <Button variant="outline" size="sm" onClick={resetAll} disabled={busy}>
+              Reset
+            </Button>
+            <Button onClick={run} disabled={!selected || busy}>
+              {busy ? 'Processing locally…' : 'Remove Background'}
+            </Button>
+          </div>
+
+          <p className="text-xs text-[var(--text-muted)]">
+            Client-side flood-fill for flat logo backgrounds. No AI artifacts, server uploads, or brush scrubbing. JPEG, PNG, or WebP up to 20 MB.
+          </p>
+        </>
+      }
+      results={
+        <div className="space-y-5" aria-busy={busy}>
+          <div>
+            <h3 className="text-sm font-semibold text-[var(--text-ink)]">
+              Before & After Comparison
+            </h3>
+            <p role="status" className="mt-1 text-xs text-[var(--text-body)]">
+              {busy
+                ? 'Processing locally on your device…'
+                : result
+                ? `${result.removed.toLocaleString()} background pixels converted to transparent alpha. Inspect edges below.`
+                : 'Upload a logo to preview original and generate transparent output.'}
+            </p>
+          </div>
+
+          {originalUrl && selected && (
+            <ImagePreview
+              url={originalUrl}
+              title="Original Input"
+              width={selected.width}
+              height={selected.height}
+            />
+          )}
+
+          {outputUrl && result && (
+            <>
+              <div>
+                <label
+                  htmlFor="logo-preview-background"
+                  className="block text-xs font-medium text-[var(--text-ink)] mb-2"
+                >
+                  Inspect Transparency Surface
+                </label>
+                <select
+                  id="logo-preview-background"
+                  value={background}
+                  onChange={(e) => setBackground(e.target.value)}
+                  className="w-full rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] p-2.5 text-xs font-mono focus-ring"
+                >
+                  <option value="checkerboard">Checkerboard (Alpha Grid)</option>
+                  <option value="white">Solid White Surface</option>
+                  <option value="black">Solid Black Surface</option>
+                  <option value="#0f172a">Dark Slate (YouTube Dark Mode)</option>
+                </select>
+              </div>
+
+              <ImagePreview
+                url={outputUrl}
+                title="Transparent Output (PNG)"
+                width={result.width}
+                height={result.height}
+                transparencyGrid={background === 'checkerboard'}
+                frame={
+                  background === 'checkerboard'
+                    ? undefined
+                    : {
+                        width: result.width,
+                        height: result.height,
+                        fit: 'contain',
+                        x: 50,
+                        y: 50,
+                        background,
+                      }
+                }
+              />
+
+              {result.removed === 0 && (
+                <Alert variant="info" title="No matching background pixels found">
+                  Choose a background color that touches image borders or increase tolerance slightly.
+                </Alert>
+              )}
+
+              {result.removed === result.width * result.height && (
+                <Alert variant="warning" title="Entire canvas was removed">
+                  Tolerance is too high or target color matches your logo artwork. Lower tolerance.
+                </Alert>
+              )}
+
+              <div className="flex items-center justify-between p-3 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-xs font-mono">
+                <span className="text-[var(--text-ink)]">PNG Alpha</span>
+                <span className="text-[var(--text-muted)]">
+                  {result.width} × {result.height} px · {formatBytes(result.blob.size)}
+                </span>
+              </div>
+
+              <Button
+                className="w-full"
+                onClick={() => {
+                  const anchor = document.createElement('a');
+                  anchor.href = outputUrl;
+                  anchor.download = `${
+                    selected?.file.name
+                      .replace(/\.[^.]+$/, '')
+                      .replace(/[^\p{L}\p{N}_-]/gu, '-')
+                      .slice(0, 80) || 'logo'
+                  }-transparent.png`;
+                  anchor.click();
+                }}
+              >
+                <svg
+                  className="w-4 h-4 mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                  />
+                </svg>
+                Download Transparent PNG
+              </Button>
+            </>
+          )}
+        </div>
+      }
+    />
+  );
+}

@@ -3,7 +3,7 @@ import React from 'react';
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label: string;
   id: string;
-  hint?: string;
+  hint?: React.ReactNode;
   error?: string;
   className?: string;
 }

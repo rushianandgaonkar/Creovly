@@ -7,6 +7,7 @@ export interface MetricCardProps {
   trend?: 'up' | 'down' | 'neutral';
   trendValue?: string;
   className?: string;
+  tone?: 'success' | 'warning' | 'error';
 }
 
 export const MetricCard: React.FC<MetricCardProps> = ({
@@ -16,9 +17,11 @@ export const MetricCard: React.FC<MetricCardProps> = ({
   trend,
   trendValue,
   className = '',
+  tone,
 }) => {
   return (
     <div
+      style={tone ? { borderColor: `var(--state-${tone}-border)`, backgroundColor: `var(--state-${tone}-bg)` } : undefined}
       className={`min-w-0 p-4 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] flex flex-col justify-between ${className}`}
     >
       <div className="flex items-center justify-between gap-2">
@@ -43,11 +46,11 @@ export const MetricCard: React.FC<MetricCardProps> = ({
       </div>
 
       <div className="mt-2">
-        <div className="text-2xl font-bold tracking-tight text-[var(--text-ink)] tabular-nums font-mono [overflow-wrap:anywhere]">
+        <div style={tone ? { color: `var(--state-${tone}-text)` } : undefined} className="text-2xl font-bold tracking-tight text-[var(--text-ink)] tabular-nums font-mono [overflow-wrap:anywhere]">
           {value}
         </div>
         {subtext && (
-          <p className="mt-1 text-xs text-[var(--text-body)]">
+          <p style={tone ? { color: `var(--state-${tone}-text)` } : undefined} className="mt-1 text-xs text-[var(--text-body)]">
             {subtext}
           </p>
         )}

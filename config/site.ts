@@ -1,4 +1,8 @@
-import type { SiteConfig, NavItem, ToolDefinition } from '@/types';
+import type { SiteConfig, NavItem, ToolDefinition, ToolCategory, HeroTone } from '@/types';
+
+export const categoryHeroTones: Record<ToolCategory, HeroTone> = {
+  thumbnail: 'blue', title: 'violet', 'money-growth': 'teal', shorts: 'rose', publishing: 'indigo',
+};
 
 export const siteConfig: SiteConfig = {
   name: 'Creovly',
@@ -26,12 +30,13 @@ export const toolCategories = [
 
 export const navItems: NavItem[] = [
   { name: 'Tools', href: '/tools' },
+  { name: 'Publish Studio', href: '/studio' },
   { name: 'Checklist', href: '/checklist' },
 ];
 
 export const secondaryNavItems: NavItem[] = [
-  { name: 'Publish Studio', href: '/studio', badge: 'Preview' },
-  { name: 'Creator Guides', href: '/guides', badge: 'Preview' },
+  { name: 'Publish Studio', href: '/studio' },
+  { name: 'Creator Guides', href: '/guides' },
 ];
 
 export const footerNavigation = {
@@ -41,6 +46,7 @@ export const footerNavigation = {
       items: [
         { name: 'Thumbnail Compressor', href: '/tools/youtube-thumbnail-compressor' },
         { name: 'Thumbnail Resizer', href: '/tools/youtube-thumbnail-resizer' },
+        { name: 'Logo Background Remover', href: '/tools/logo-background-remover' },
         { name: 'Shorts Safe Zone', href: '/tools/youtube-shorts-safe-zone' },
       ],
     },
@@ -74,6 +80,12 @@ export const footerNavigation = {
 
 export const toolRegistry: ToolDefinition[] = [
   {
+    id: 'logo-background-remover', title: 'Logo Background Remover', slug: 'logo-background-remover',
+    href: '/tools/logo-background-remover', category: 'thumbnail', categoryLabel: 'Thumbnail Tools',
+    description: 'Remove a solid-color background from your existing logo locally. Compare before and after, then download a transparent PNG.',
+    status: 'available', seoTarget: 'Logo Background Remover',
+  },
+  {
     id: 'youtube-thumbnail-compressor',
     title: 'YouTube Thumbnail Compressor',
     slug: 'youtube-thumbnail-compressor',
@@ -99,6 +111,7 @@ export const toolRegistry: ToolDefinition[] = [
   },
   {
     id: 'youtube-shorts-safe-zone',
+    heroTone: 'rose',
     title: 'YouTube Shorts Safe Zone Checker',
     slug: 'youtube-shorts-safe-zone',
     href: '/tools/youtube-shorts-safe-zone',

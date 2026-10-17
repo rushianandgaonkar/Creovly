@@ -4,7 +4,7 @@ export function analyzeTitle(title: string, keyword = '') {
   const length = title.length; const letters = [...title].filter((char) => /\p{L}/u.test(char) && char.toUpperCase() !== char.toLowerCase());
   const uppercase = letters.filter((char) => char === char.toUpperCase()).length;
   const notes: string[] = [];
-  if (length > 100) notes.push('Over 100 character units. Shorten the title before uploading.');
+  if (length > 100) notes.push(`${length - 100} character${length === 101 ? '' : 's'} over the limit of 100 character units. Shorten the title before uploading.`);
   if (title !== title.trim() || /\s{2,}/u.test(title)) notes.push('Extra whitespace detected. Trim the ends and review repeated spaces.');
   if (/[!?]{2,}/u.test(title)) notes.push('Repeated exclamation or question marks detected. Consider simplifying punctuation.');
   if (letters.length >= 8 && uppercase / letters.length > .6) notes.push('Most cased letters are uppercase. Review whether the emphasis helps readability.');

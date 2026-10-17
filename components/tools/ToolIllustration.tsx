@@ -4,7 +4,13 @@ export default function ToolIllustration({ toolId }: { toolId: string }) {
   const isThumbnail = kind.startsWith('thumbnail');
   return <div className={`tool-illustration illustration-${kind}`} aria-hidden="true">
     <svg viewBox="0 0 320 112" fill="none" className="tool-diagram">
-      {isThumbnail ? <>
+      {kind === 'logo-background-remover' ? <>
+        <rect x="52" y="24" width="80" height="64" rx="8" className="diagram-surface" />
+        <path d="m78 67 14-28 14 28H78Z" className="diagram-fill" />
+        <path d="M146 56h28m-6-6 6 6-6 6" className="diagram-accent" strokeWidth="2" />
+        <rect x="190" y="24" width="80" height="64" rx="8" className="diagram-muted" strokeDasharray="4 4" />
+        <path d="m216 67 14-28 14 28h-28Z" className="diagram-fill" />
+      </> : isThumbnail ? <>
         <rect x="54" y="19" width="135" height="76" rx="8" className="diagram-surface" />
         <path d="m55 83 34-36 29 27 22-19 48 39H62a7 7 0 0 1-7-7Z" className="diagram-fill" />
         <circle cx="155" cy="40" r="10" className="diagram-fill" />

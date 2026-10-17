@@ -85,7 +85,9 @@ Use it primarily in:
 - occasional flagship Publish Studio marketing moments
 - subtle empty-state or premium feature accents when justified
 
-Do not place a large gradient behind every section or tool.
+Inner pages use a compact gradient title panel, approved after the homepage refinement. Use the shared PageHero and GradientBackground components: blue for thumbnails, rose for Shorts, violet for titles/guides, teal for money/growth, amber for the checklist, and indigo for the directory/Studio. Match the title color to the panel and provide equivalent dark-theme colors.
+
+Keep gradients confined to the introduction; working forms, results, and educational sections retain clear neutral surfaces. Do not repeat decorative gradients behind each section.
 
 ## 7. Layout Principles
 
@@ -125,13 +127,13 @@ Do not duplicate these primitives inside individual pages.
 
 ## 9. Header & Navigation
 
-Primary navigation currently contains Tools and Checklist, followed by the theme toggle.
+Primary navigation currently contains Tools, Publish Studio, and Checklist, followed by the theme toggle.
 Thumbnail, title, and money/growth categories belong in tool-discovery filters and group headings rather than duplicated header links.
 Preserve existing category and individual tool URLs.
 
 Mobile navigation must be intentional and accessible.
 
-Publish Studio and Guides remain secondary destinations while they are previews.
+Publish Studio is a working local workspace. Guides remain a secondary preview destination.
 
 ## 10. Tool Page Experience
 
@@ -155,7 +157,7 @@ Keep:
 - compact centered introduction with the brand promise, restrained blue glow, and subtle static grid
 - working tool search and category filters immediately after the introduction
 - consistent visual tool cards with decorative diagrams, without fabricated live results
-- clearly labelled Publish Studio preview below the tools
+- working Publish Studio introduction below the tools
 - useful tool discovery
 - category/product benefits
 - privacy or browser-processing claims only where true
@@ -232,15 +234,18 @@ Build reusable patterns first. Do not create each tool as an isolated microsite.
 
 ## 17. Current Phase
 
-Current phase: **Step 2 — Individual creator tools**.
+Current phase: **Step 3 — Local Publish Studio**, explicitly requested after the individual tools and visual refinements.
 
 Allowed now:
+- complete shared tool-page demonstrations, three-step instructions, specific FAQs, and three relevant next-tool links; examples remain distinct from live results
+- implement the requested solid-color logo background remover with local processing, actual before/after previews, and transparent PNG export
 - add the thumbnail category page while preserving individual tool URLs
 - implement all eight individual browser-based tools: compressor, resizer, manual Shorts guide, title checker, and four money and growth calculators
 - establish reusable upload, error, results, and tool-page patterns
-- preserve the approved visual system and keep Publish Studio and editorial guides as previews
+- preserve the approved visual system; editorial guides remain previews
+- implement a local Studio project with metadata checks, thumbnail preparation, manual Shorts planning, manual review, explicit text-draft saving/loading, and project ZIP export
 
-Out of scope: full Studio functionality, external AI APIs, authentication, databases, payments, analytics vendors, and unrelated tool categories.
+Out of scope: publishing to YouTube, external AI APIs, authentication, databases, payments, analytics vendors, automatic video/content analysis, and unrelated tool categories.
 
 
 

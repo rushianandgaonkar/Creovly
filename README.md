@@ -31,7 +31,7 @@ npm run build
 
 Both should complete without errors.
 
-Regression tests run with `npm test`. The thumbnail compressor is available at `/tools/youtube-thumbnail-compressor`; the thumbnail category is at `/tools/thumbnail`. It processes images locally and preserves their dimensions. The resizer at `/tools/youtube-thumbnail-resizer` supports crop positioning, padding, custom dimensions, and local export. All eight individual tools are functional; Publish Studio and editorial guides remain previews.
+Regression tests run with `npm test`. The thumbnail compressor is available at `/tools/youtube-thumbnail-compressor`; the thumbnail category is at `/tools/thumbnail`. It processes images locally and preserves their dimensions. The resizer at `/tools/youtube-thumbnail-resizer` supports crop positioning, padding, custom dimensions, and local export. All eight individual tools and the local Publish Studio are functional; editorial guides remain previews. Studio supports metadata and image checks, JPEG preparation, manual Shorts planning, explicit local text drafts, and project ZIP export.
 
 ## Project structure
 
@@ -65,6 +65,6 @@ The exact structure may evolve, but reusable components must remain centralized 
 
 The project is currently in **Step 2: Individual creator tools**.
 
-The thumbnail tools, title checker, and four money and growth calculators are implemented while preserving the existing visual identity. Studio and editorial guides remain previews; authentication, payments, databases, and external AI services remain out of scope.
+The thumbnail tools, title checker, and four money and growth calculators are implemented while preserving the existing visual identity. Publish Studio now provides a local pre-publish workspace; editorial guides remain previews. Publishing to YouTube, authentication, payments, databases, and external AI services remain out of scope.
 
 Read `DESIGN.md` before making UI changes.

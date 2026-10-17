@@ -1,0 +1,72 @@
+{
+  "compressor-source.jpg": {
+    "width": 1600,
+    "height": 1000,
+    "bytes": 258969
+  },
+  "logo-source.png": {
+    "width": 800,
+    "height": 480,
+    "bytes": 7911
+  },
+  "logo-transparent.png": {
+    "width": 800,
+    "height": 480,
+    "bytes": 16245
+  },
+  "shorts-guide.png": {
+    "width": 1080,
+    "height": 1920,
+    "bytes": 85487
+  },
+  "shorts-source.png": {
+    "width": 1080,
+    "height": 1920,
+    "bytes": 29985
+  },
+  "thumbnail-compressed.jpg": {
+    "width": 1600,
+    "height": 1000,
+    "bytes": 76231
+  },
+  "thumbnail-resized.jpg": {
+    "width": 1280,
+    "height": 720,
+    "bytes": 54653
+  },
+  "thumbnail-source.png": {
+    "width": 1600,
+    "height": 1000,
+    "bytes": 43629
+  },
+  "sample-gaming-badge.png": {
+    "width": 800,
+    "height": 600,
+    "bytes": 5310
+  },
+  "sample-gaming-badge-transparent.png": {
+    "width": 800,
+    "height": 600,
+    "bytes": 5859
+  },
+  "sample-podcast-logo.png": {
+    "width": 800,
+    "height": 600,
+    "bytes": 6358
+  },
+  "sample-podcast-logo-transparent.png": {
+    "width": 800,
+    "height": 600,
+    "bytes": 6758
+  },
+  "sample-creator-mark.png": {
+    "width": 800,
+    "height": 600,
+    "bytes": 3856
+  },
+  "sample-creator-mark-transparent.png": {
+    "width": 800,
+    "height": 600,
+    "bytes": 4408
+  }
+}

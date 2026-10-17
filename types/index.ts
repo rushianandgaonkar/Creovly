@@ -25,8 +25,10 @@ export interface NavItem {
 export type ToolCategory = 'thumbnail' | 'title' | 'money-growth' | 'publishing' | 'shorts';
 
 export type ToolStatus = 'planned' | 'preview' | 'available';
+export type HeroTone = 'blue' | 'violet' | 'teal' | 'rose' | 'amber' | 'indigo';
 
 export interface ToolDefinition {
+  heroTone?: HeroTone;
   id: string;
   title: string;
   slug: string;

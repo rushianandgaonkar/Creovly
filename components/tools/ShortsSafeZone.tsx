@@ -1,4 +1,6 @@
+/* Hallmark · genre: modern-minimal · macrostructure: Workbench */
 'use client';
+
 import Image from 'next/image';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import DropZone from '@/components/form/DropZone';
@@ -9,66 +11,455 @@ import Alert from '@/components/feedback/Alert';
 import MetricCard from '@/components/results/MetricCard';
 import ToolWorkspaceLayout from './ToolWorkspaceLayout';
 import { useBlobUrl } from './ImagePreview';
-import { decodeImage, validateImage, downloadName, type OutputFormat } from '@/lib/image-compression';
-import { checkShortsGuide, exportShortsGuide, starterBox, starterMargins, type Margins } from '@/lib/shorts-guide';
+import {
+  decodeImage,
+  validateImage,
+  downloadName,
+  type OutputFormat,
+} from '@/lib/image-compression';
+import {
+  checkShortsGuide,
+  exportShortsGuide,
+  starterBox,
+  starterMargins,
+  type Margins,
+} from '@/lib/shorts-guide';
+import { toolSamples } from '@/config/tool-samples';
+
+const marginPresets = [
+  { label: 'YouTube Standard', margins: starterMargins },
+  { label: 'Safe Minimal', margins: { top: 10, bottom: 15, left: 5, right: 10 } },
+  { label: 'High Clearance', margins: { top: 20, bottom: 25, left: 8, right: 15 } },
+];
 
 export default function ShortsSafeZone() {
-  const [selected, setSelected] = useState<{ file: File; width: number; height: number; format: OutputFormat }>();
-  const [margins, setMargins] = useState(starterMargins); const [box, setBox] = useState(starterBox); const [markContent, setMarkContent] = useState(false);
-  const [showGuide, setShowGuide] = useState(true); const [output, setOutput] = useState<Blob>();
-  const [loading, setLoading] = useState(false); const [busy, setBusy] = useState(false); const [error, setError] = useState(''); const [key, setKey] = useState(0);
-  const request = useRef(0); const controller = useRef<AbortController | undefined>(undefined); const errorRef = useRef<HTMLDivElement>(null);
-  const source = useMemo(() => selected ? new Blob([selected.file], { type: selected.format }) : undefined, [selected]);
-  const sourceUrl = useBlobUrl(source); const outputUrl = useBlobUrl(output);
+  const [selected, setSelected] = useState<{
+    file: File;
+    width: number;
+    height: number;
+    format: OutputFormat;
+  }>();
+  const [margins, setMargins] = useState<Margins>(starterMargins);
+  const [box, setBox] = useState(starterBox);
+  const [markContent, setMarkContent] = useState(false);
+  const [showGuide, setShowGuide] = useState(true);
+  const [output, setOutput] = useState<Blob>();
+  const [loading, setLoading] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState('');
+  const [key, setKey] = useState(0);
+
+  const request = useRef(0);
+  const controller = useRef<AbortController | undefined>(undefined);
+  const errorRef = useRef<HTMLDivElement>(null);
+
+  const source = useMemo(
+    () => (selected ? new Blob([selected.file], { type: selected.format }) : undefined),
+    [selected]
+  );
+  const sourceUrl = useBlobUrl(source);
+  const outputUrl = useBlobUrl(output);
+
   const guide = checkShortsGuide(margins, markContent ? box : undefined);
-  useEffect(() => () => { request.current++; controller.current?.abort(); }, []);
-  useEffect(() => { if (error) errorRef.current?.focus(); }, [error]);
-  const clear = () => { request.current++; controller.current?.abort(); setBusy(false); setLoading(false); setOutput(undefined); setError(''); };
-  const select = async (file: File) => {
-    clear(); const id = request.current; setSelected(undefined); setLoading(true);
-    try { const format = await validateImage(file); const bitmap = await decodeImage(file); const dimensions = { width: bitmap.width, height: bitmap.height }; bitmap.close(); if (id === request.current) setSelected({ file, format, ...dimensions }); }
-    catch (cause) { if (id === request.current) setError(cause instanceof Error ? cause.message : 'Could not open the frame.'); }
-    finally { if (id === request.current) setLoading(false); }
+
+  useEffect(() => {
+    const ctrl = controller;
+    const req = request;
+    return () => {
+      req.current++;
+      ctrl.current?.abort();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (error) errorRef.current?.focus();
+  }, [error]);
+
+  const clear = () => {
+    request.current++;
+    controller.current?.abort();
+    setBusy(false);
+    setLoading(false);
+    setOutput(undefined);
+    setError('');
   };
-  const reset = () => { clear(); setSelected(undefined); setMargins(starterMargins); setBox(starterBox); setMarkContent(false); setShowGuide(true); setKey((v) => v + 1); };
+
+  const select = async (file: File) => {
+    clear();
+    const id = request.current;
+    setSelected(undefined);
+    setLoading(true);
+    try {
+      const format = await validateImage(file);
+      const bitmap = await decodeImage(file);
+      const dimensions = { width: bitmap.width, height: bitmap.height };
+      bitmap.close();
+      if (id === request.current) setSelected({ file, format, ...dimensions });
+    } catch (cause) {
+      if (id === request.current) {
+        setError(cause instanceof Error ? cause.message : 'Could not open the frame.');
+      }
+    } finally {
+      if (id === request.current) setLoading(false);
+    }
+  };
+
+  const reset = () => {
+    clear();
+    setSelected(undefined);
+    setMargins(starterMargins);
+    setBox(starterBox);
+    setMarkContent(false);
+    setShowGuide(true);
+    setKey((v) => v + 1);
+  };
+
   const run = async () => {
     if (!selected || busy) return;
-    clear(); const id = request.current; const abort = new AbortController(); controller.current = abort; setBusy(true);
-    try { const blob = await exportShortsGuide(selected.file, margins, markContent ? box : undefined, abort.signal); if (id === request.current) setOutput(blob); }
-    catch (cause) { if (id === request.current && !abort.signal.aborted) setError(cause instanceof Error ? cause.message : 'Could not create the guide.'); }
-    finally { if (id === request.current) setBusy(false); }
+    clear();
+    const id = request.current;
+    const abort = new AbortController();
+    controller.current = abort;
+    setBusy(true);
+    try {
+      const blob = await exportShortsGuide(
+        selected.file,
+        margins,
+        markContent ? box : undefined,
+        abort.signal
+      );
+      if (id === request.current) setOutput(blob);
+    } catch (cause) {
+      if (id === request.current && !abort.signal.aborted) {
+        setError(cause instanceof Error ? cause.message : 'Could not create the guide.');
+      }
+    } finally {
+      if (id === request.current) setBusy(false);
+    }
   };
-  const positioned = { left: `${guide.center.x}%`, top: `${guide.center.y}%`, width: `${guide.center.width}%`, height: `${guide.center.height}%` };
-  return <ToolWorkspaceLayout workspace={<>
-    <DropZone key={key} id="shorts-frame" label="Select a still frame" maxSizeMB={20} privacyNote="Stays on your device" onFileSelect={select} onError={setError} disabled={loading || busy} />
-    <div ref={errorRef} tabIndex={-1} className="rounded focus-ring">{error && <Alert variant="error" title="Check your frame">{error}</Alert>}</div>
-    {selected && <p className="text-xs text-[var(--text-body)] break-all">{selected.file.name} · {selected.width} × {selected.height}. Fitted into a 9:16 canvas without cropping.</p>}
-    <Alert variant="info" title="Manual planning guide">Starting margins are Creovly planning assumptions, not official YouTube safe-zone measurements. UI overlays vary. This tool does not detect text, faces, captions, or policy compliance.</Alert>
-    <fieldset disabled={busy || loading} className="space-y-5 min-w-0"><legend className="sr-only">Guide settings</legend>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">{(['top', 'bottom', 'left', 'right'] as (keyof Margins)[]).map((side) => <Slider key={side} id={`margin-${side}`} label={`${side[0].toUpperCase() + side.slice(1)} reserved margin`} min={0} max={side === 'bottom' ? 50 : 40} unit="%" value={margins[side]} onChange={(value) => { clear(); setMargins((current) => ({ ...current, [side]: value })); }} />)}</div>
-      <Toggle id="show-shorts-guide" label="Show guide overlay" checked={showGuide} onChange={(event) => setShowGuide(event.target.checked)} />
-      <Toggle id="mark-shorts-content" label="Mark important content with a box" hint="Place this box over the text or subject you want to check. Coordinates refer to the full 9:16 canvas." checked={markContent} onChange={(event) => { clear(); setMarkContent(event.target.checked); }} />
-      {markContent && <div className="space-y-5">
-        <Slider id="content-x" label="Content box left position" min={0} max={100 - box.width} value={box.x} unit="%" onChange={(x) => { clear(); setBox((current) => ({ ...current, x })); }} />
-        <Slider id="content-y" label="Content box top position" min={0} max={100 - box.height} value={box.y} unit="%" onChange={(y) => { clear(); setBox((current) => ({ ...current, y })); }} />
-        <Slider id="content-width" label="Content box width" min={1} max={100 - box.x} value={box.width} unit="%" onChange={(width) => { clear(); setBox((current) => ({ ...current, width })); }} />
-        <Slider id="content-height" label="Content box height" min={1} max={100 - box.y} value={box.height} unit="%" onChange={(height) => { clear(); setBox((current) => ({ ...current, height })); }} />
-      </div>}
-    </fieldset>
-    <div className="flex flex-wrap justify-between gap-3"><Button variant="outline" onClick={reset}>Reset</Button><Button disabled={!selected || loading || busy} onClick={run}>{busy ? 'Creating guide…' : 'Create PNG guide'}</Button></div>
-    <p role="status" className="text-xs text-[var(--text-body)]">{loading ? 'Opening frame…' : busy ? 'Creating the annotated guide…' : output ? 'Guide ready to download. It includes visible planning annotations.' : 'Select a frame and adjust the margins. Guide exports always include the annotations.'}</p>
-    <p className="text-xs text-[var(--text-body)]">Still JPEG, PNG, or WebP only; video playback is not supported. Images are processed locally, without uploading or saving them to a server.</p>
-  </>} results={<>
-    {sourceUrl ? <>
-      <figure className="space-y-3"><figcaption className="text-xs font-medium">Manual frame preview · 9:16 canvas</figcaption><div className="relative mx-auto w-full max-w-[280px] aspect-[9/16] overflow-hidden rounded-lg bg-black" role="img" aria-label="Your frame fitted into a portrait canvas with adjustable reserved margins and an optional marked content box">
-        <Image unoptimized fill sizes="280px" src={sourceUrl} alt="Selected Shorts frame" className="object-contain" />
-        {showGuide && <><div className="absolute border-2 border-green-400" style={{ ...positioned, boxShadow: '0 0 0 2000px rgba(220,38,38,.35)' }} /><span className="absolute top-2 left-2 text-[10px] bg-black/80 text-white px-2 py-1 rounded">Planning guide</span></>}
-        {markContent && <div className="absolute border-2 border-dashed border-yellow-300" style={{ left: `${box.x}%`, top: `${box.y}%`, width: `${box.width}%`, height: `${box.height}%` }} />}
-      </div><p className="text-xs text-[var(--text-body)]">Solid outline: chosen central area. Shaded edges: reserved margins. Dashed box: content you marked.</p></figure>
-      <MetricCard label="Chosen central area" value={`${guide.center.width}% × ${guide.center.height}%`} subtext="Width × height of the canvas; not a clearance score" />
-      {markContent ? <Alert variant={guide.overlaps.length ? 'warning' : 'success'} title={guide.overlaps.length ? 'Box overlaps your margins' : 'Box fits inside your margins'}>{guide.overlaps.length ? `Your marked box intersects the ${guide.overlaps.join(', ')} reserved margin${guide.overlaps.length > 1 ? 's' : ''}. Adjust its position or the margins.` : 'The box you marked is inside your chosen central area. This does not guarantee visibility in the YouTube app.'}</Alert> : <p className="text-xs text-[var(--text-body)]">Enable the content box to check a specific part of your frame against the chosen margins.</p>}
-      {outputUrl && <a className="inline-flex w-full justify-center rounded-full bg-[var(--brand-primary)] text-[var(--brand-on-primary)] px-4 py-3 text-sm font-medium focus-ring" href={outputUrl} download={downloadName(selected?.file.name ?? 'frame', 'image/png').replace('-compressed.', '-planning-guide.')}>Download annotated PNG guide</a>}
-      <p className="text-xs text-[var(--text-body)]">The export is a 1080 × 1920 planning reference with visible overlays. Inspect the actual Shorts player before publishing.</p>
-    </> : <p className="py-10 text-center text-sm text-[var(--text-body)]">Your frame and adjustable guide will appear here.</p>}
-  </>} />;
+
+  const positioned = {
+    left: `${guide.center.x}%`,
+    top: `${guide.center.y}%`,
+    width: `${guide.center.width}%`,
+    height: `${guide.center.height}%`,
+  };
+
+  return (
+    <ToolWorkspaceLayout
+      workspace={
+        <>
+          <DropZone
+            key={key}
+            id="shorts-frame"
+            label="Upload Shorts Still Frame (9:16)"
+            maxSizeMB={20}
+            privacyNote="100% In-Browser Execution"
+            onFileSelect={select}
+            onError={setError}
+            disabled={loading || busy}
+            samples={toolSamples['youtube-shorts-safe-zone']}
+          />
+
+          <div ref={errorRef} tabIndex={-1} className="rounded focus-ring">
+            {error && (
+              <Alert variant="error" title="Check your frame">
+                {error}
+              </Alert>
+            )}
+          </div>
+
+          {selected && (
+            <div className="flex items-center justify-between p-3 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-xs font-mono">
+              <span className="truncate max-w-[200px] text-[var(--text-ink)] font-medium">
+                {selected.file.name}
+              </span>
+              <span className="text-[var(--text-muted)]">
+                {selected.width} × {selected.height} px · Fitted to 9:16 canvas
+              </span>
+            </div>
+          )}
+
+          <fieldset disabled={busy || loading} className="space-y-5 min-w-0">
+            <legend className="sr-only">Guide settings</legend>
+
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-medium text-[var(--text-ink)]">
+                  Reserved UI Margin Presets
+                </span>
+                <span className="text-[10px] font-mono text-[var(--text-muted)]">
+                  UI OVERLAY CLEARANCE
+                </span>
+              </div>
+              <div className="flex flex-wrap gap-1.5">
+                {marginPresets.map((preset) => (
+                  <button
+                    key={preset.label}
+                    type="button"
+                    onClick={() => {
+                      clear();
+                      setMargins(preset.margins);
+                    }}
+                    className="px-2.5 py-1.5 rounded-md text-[11px] font-mono border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-body)] hover:border-[var(--brand-accent)] hover:text-[var(--text-ink)] transition-all"
+                  >
+                    {preset.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)]">
+              {(['top', 'bottom', 'left', 'right'] as (keyof Margins)[]).map((side) => (
+                <Slider
+                  key={side}
+                  id={`margin-${side}`}
+                  label={`${side[0].toUpperCase() + side.slice(1)} Margin`}
+                  min={0}
+                  max={side === 'bottom' ? 50 : 40}
+                  unit="%"
+                  value={margins[side]}
+                  onChange={(value) => {
+                    clear();
+                    setMargins((current) => ({ ...current, [side]: value }));
+                  }}
+                />
+              ))}
+            </div>
+
+            <div className="space-y-3 pt-2">
+              <Toggle
+                id="show-shorts-guide"
+                label="Display Safe Zone Overlay Boundary"
+                checked={showGuide}
+                onChange={(event) => setShowGuide(event.target.checked)}
+              />
+              <Toggle
+                id="mark-shorts-content"
+                label="Target Content Bounding Box"
+                hint="Position a custom bounding box around key subtitles, logos, or face to audit clearance."
+                checked={markContent}
+                onChange={(event) => {
+                  clear();
+                  setMarkContent(event.target.checked);
+                }}
+              />
+            </div>
+
+            {markContent && (
+              <div className="space-y-4 p-4 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)]">
+                <span className="text-xs font-mono font-medium text-[var(--text-ink)]">
+                  Target Content Coordinates (% of 9:16 Canvas)
+                </span>
+                <Slider
+                  id="content-x"
+                  label="Content Left X"
+                  min={0}
+                  max={100 - box.width}
+                  value={box.x}
+                  unit="%"
+                  onChange={(x) => {
+                    clear();
+                    setBox((current) => ({ ...current, x }));
+                  }}
+                />
+                <Slider
+                  id="content-y"
+                  label="Content Top Y"
+                  min={0}
+                  max={100 - box.height}
+                  value={box.y}
+                  unit="%"
+                  onChange={(y) => {
+                    clear();
+                    setBox((current) => ({ ...current, y }));
+                  }}
+                />
+                <Slider
+                  id="content-width"
+                  label="Content Box Width"
+                  min={1}
+                  max={100 - box.x}
+                  value={box.width}
+                  unit="%"
+                  onChange={(width) => {
+                    clear();
+                    setBox((current) => ({ ...current, width }));
+                  }}
+                />
+                <Slider
+                  id="content-height"
+                  label="Content Box Height"
+                  min={1}
+                  max={100 - box.y}
+                  value={box.height}
+                  unit="%"
+                  onChange={(height) => {
+                    clear();
+                    setBox((current) => ({ ...current, height }));
+                  }}
+                />
+              </div>
+            )}
+          </fieldset>
+
+          <div className="flex flex-wrap justify-between items-center gap-3 pt-4 border-t border-[var(--border-hairline-subtle)]">
+            <Button variant="outline" size="sm" onClick={reset}>
+              Reset
+            </Button>
+            <Button disabled={!selected || loading || busy} onClick={run}>
+              {busy ? 'Generating Guide…' : 'Export Annotated PNG Guide'}
+            </Button>
+          </div>
+
+          <p role="status" className="text-xs text-[var(--text-muted)]">
+            {loading
+              ? 'Opening frame…'
+              : busy
+              ? 'Rendering 1080×1920 annotated guide…'
+              : output
+              ? 'Guide ready to download.'
+              : 'Still image frames only. Client-side canvas overlay calculation.'}
+          </p>
+        </>
+      }
+      results={
+        <>
+          {sourceUrl ? (
+            <div className="space-y-4">
+              <figure className="space-y-2">
+                <div className="flex items-center justify-between text-xs font-mono">
+                  <span className="font-semibold text-[var(--text-ink)]">
+                    9:16 Portrait Viewport
+                  </span>
+                  <span className="text-[var(--text-muted)]">1080 × 1920 REF</span>
+                </div>
+
+                <div
+                  className="relative mx-auto w-full max-w-[260px] aspect-[9/16] overflow-hidden rounded-2xl bg-black border border-[var(--border-hairline)] shadow-[var(--shadow-floating)]"
+                  role="img"
+                  aria-label="Shorts portrait preview with safe zone overlay"
+                >
+                  <Image
+                    unoptimized
+                    fill
+                    sizes="260px"
+                    src={sourceUrl}
+                    alt="Shorts frame preview"
+                    className="object-contain"
+                  />
+
+                  {/* YouTube Simulated Right Rail Icons */}
+                  <div className="absolute right-2.5 bottom-20 flex flex-col items-center gap-3 pointer-events-none z-10 opacity-70">
+                    <div className="w-7 h-7 rounded-full bg-black/60 flex items-center justify-center text-white text-[10px]">
+                      👍
+                    </div>
+                    <div className="w-7 h-7 rounded-full bg-black/60 flex items-center justify-center text-white text-[10px]">
+                      💬
+                    </div>
+                    <div className="w-7 h-7 rounded-full bg-black/60 flex items-center justify-center text-white text-[10px]">
+                      ↗
+                    </div>
+                  </div>
+
+                  {/* YouTube Simulated Bottom Creator Handle */}
+                  <div className="absolute left-3 bottom-4 right-12 pointer-events-none z-10 opacity-70">
+                    <div className="flex items-center gap-1.5 mb-1">
+                      <div className="w-5 h-5 rounded-full bg-white/20" />
+                      <div className="h-2.5 w-16 bg-white/40 rounded" />
+                    </div>
+                    <div className="h-2 w-32 bg-white/30 rounded" />
+                  </div>
+
+                  {showGuide && (
+                    <>
+                      <div
+                        className="absolute border-2 border-emerald-400 z-20 pointer-events-none"
+                        style={{
+                          ...positioned,
+                          boxShadow: '0 0 0 2000px rgba(220, 38, 38, 0.32)',
+                        }}
+                      />
+                      <span className="absolute top-3 left-3 text-[10px] font-mono bg-black/80 text-emerald-400 px-2 py-0.5 rounded border border-emerald-400/30 z-20">
+                        SAFE ZONE
+                      </span>
+                    </>
+                  )}
+
+                  {markContent && (
+                    <div
+                      className="absolute border-2 border-dashed border-amber-300 z-30 pointer-events-none"
+                      style={{
+                        left: `${box.x}%`,
+                        top: `${box.y}%`,
+                        width: `${box.width}%`,
+                        height: `${box.height}%`,
+                      }}
+                    />
+                  )}
+                </div>
+                <p className="text-[11px] text-[var(--text-muted)] text-center">
+                  Green outline: Unobstructed central zone · Red shade: YouTube UI overlay zone
+                </p>
+              </figure>
+
+              <MetricCard
+                label="Central Safe Zone Dimensions"
+                value={`${guide.center.width}% × ${guide.center.height}%`}
+                subtext="Total unobstructed screen area on typical mobile devices"
+              />
+
+              {markContent && (
+                <Alert
+                  variant={guide.overlaps.length ? 'warning' : 'success'}
+                  title={
+                    guide.overlaps.length
+                      ? 'Target Box Overlaps Reserved Margins'
+                      : 'Target Box Fully Clear'
+                  }
+                >
+                  {guide.overlaps.length
+                    ? `Your marked content intersects with the ${guide.overlaps.join(
+                        ', '
+                      )} margin. Adjust content framing to prevent UI collision.`
+                    : 'Target content sits safely within the unobstructed clear zone.'}
+                </Alert>
+              )}
+
+              {outputUrl && (
+                <a
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[var(--brand-primary)] text-[var(--brand-on-primary)] px-4 py-3 text-sm font-semibold hover:opacity-90 transition-opacity focus-ring shadow-[var(--shadow-whisper)]"
+                  href={outputUrl}
+                  download={downloadName(selected?.file.name ?? 'frame', 'image/png').replace(
+                    '-compressed.',
+                    '-planning-guide.'
+                  )}
+                >
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                    />
+                  </svg>
+                  Download Annotated 1080×1920 PNG Guide
+                </a>
+              )}
+            </div>
+          ) : (
+            <div className="py-16 text-center text-xs text-[var(--text-muted)] font-mono">
+              Upload a 9:16 Shorts frame to test YouTube UI overlay clearance.
+            </div>
+          )}
+        </>
+      }
+    />
+  );
 }

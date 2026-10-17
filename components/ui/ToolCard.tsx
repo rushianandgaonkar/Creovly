@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import Badge from './Badge';
@@ -22,6 +24,18 @@ const badgeVariants = {
   Free: 'free' as const,
 };
 
+const toolFeatureTags: Record<string, string> = {
+  'logo-background-remover': 'Transparent PNG • Canvas',
+  'youtube-thumbnail-compressor': '< 2MB Payload • JPEG/WebP',
+  'youtube-thumbnail-resizer': '1280×720 HD • 16:9',
+  'youtube-shorts-safe-zone': '9:16 Safe Zone • Mask',
+  'youtube-title-checker': 'Mobile ~50 Chars • Truncation',
+  'youtube-revenue-calculator': 'Dynamic RPM • Modeler',
+  'youtube-rpm-calculator': 'Net Earnings / 1K Views',
+  'youtube-watch-hours-calculator': '4,000 Hr Goal • Pace',
+  'youtube-monetization-calculator': 'Multi-Stream Revenue',
+};
+
 export const ToolCard: React.FC<ToolCardProps> = ({
   title,
   description,
@@ -33,10 +47,17 @@ export const ToolCard: React.FC<ToolCardProps> = ({
   className = '',
   illustration,
 }) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    e.currentTarget.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+    e.currentTarget.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+  };
+
   return (
     <Link
       href={href}
-      className={`group relative flex flex-col justify-between p-5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] hover:border-[var(--border-hairline-strong)] hover:shadow-[var(--shadow-floating)] transition-all duration-200 focus-ring overflow-hidden ${className}`}
+      onMouseMove={handleMouseMove}
+      className={`spotlight-card group relative flex flex-col justify-between p-5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] hover:border-[var(--border-hairline-strong)] hover:shadow-[var(--shadow-floating)] transition-all duration-200 focus-ring overflow-hidden ${className}`}
     >
       <div>
         {illustration && <ToolIllustration toolId={illustration} />}
@@ -75,6 +96,16 @@ export const ToolCard: React.FC<ToolCardProps> = ({
         <p className="mt-2 text-xs leading-relaxed text-[var(--text-body)] line-clamp-2">
           {description}
         </p>
+
+        {/* Feature Spec Chip */}
+        {illustration && toolFeatureTags[illustration] && (
+          <div className="mt-3">
+            <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-[10px] font-mono text-[var(--text-muted)] font-medium">
+              <span className="w-1 h-1 rounded-full bg-[var(--brand-accent)]" />
+              {toolFeatureTags[illustration]}
+            </span>
+          </div>
+        )}
       </div>
 
       {/* Footer / Action prompt */}

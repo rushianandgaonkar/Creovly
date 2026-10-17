@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
+import type { SampleImageOption } from '@/config/tool-samples';
 
 export interface DropZoneProps {
   id: string;
@@ -12,6 +14,7 @@ export interface DropZoneProps {
   onFileSelect?: (file: File) => void;
   onError?: (message: string) => void;
   disabled?: boolean;
+  samples?: SampleImageOption[];
 }
 
 export const DropZone: React.FC<DropZoneProps> = ({
@@ -24,9 +27,11 @@ export const DropZone: React.FC<DropZoneProps> = ({
   onFileSelect,
   onError,
   disabled = false,
+  samples,
 }) => {
   const [selectedFileName, setSelectedFileName] = useState<string | null>(null);
   const [dragging, setDragging] = useState(false);
+  const [loadingSampleId, setLoadingSampleId] = useState<string | null>(null);
 
   const selectFiles = (files: FileList | null) => {
     if (disabled || !files?.length) return;
@@ -40,6 +45,23 @@ export const DropZone: React.FC<DropZoneProps> = ({
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     selectFiles(e.target.files);
     e.target.value = '';
+  };
+
+  const handleSampleClick = async (sample: SampleImageOption) => {
+    if (disabled || !onFileSelect) return;
+    setLoadingSampleId(sample.id);
+    try {
+      const response = await fetch(sample.src);
+      if (!response.ok) throw new Error('Could not load sample asset');
+      const blob = await response.blob();
+      const file = new File([blob], sample.fileName, { type: blob.type || 'image/png' });
+      setSelectedFileName(file.name);
+      onFileSelect(file);
+    } catch {
+      onError?.('Could not load sample. Please choose another file.');
+    } finally {
+      setLoadingSampleId(null);
+    }
   };
 
   return (
@@ -110,6 +132,56 @@ export const DropZone: React.FC<DropZoneProps> = ({
           JPG, PNG, or WebP · {onFileSelect ? 'Maximum' : 'Planned limit:'} {maxSizeMB} MB
         </p>
       </label>
+
+      {/* 1-Click Creator Sample Presets */}
+      {samples && samples.length > 0 && onFileSelect && (
+        <div className="mt-1 pt-2 border-t border-[var(--border-hairline-subtle)]">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-xs font-medium text-[var(--text-body)]">
+              No image handy? Try a creator sample:
+            </span>
+            <span className="text-[10px] font-mono text-[var(--brand-accent)] font-medium">
+              1-click test
+            </span>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            {samples.map((sample) => {
+              const isCurrentLoading = loadingSampleId === sample.id;
+              return (
+                <button
+                  key={sample.id}
+                  type="button"
+                  disabled={disabled || loadingSampleId !== null}
+                  onClick={() => handleSampleClick(sample)}
+                  aria-label={`Test with sample: ${sample.label}`}
+                  className="flex items-center gap-2 p-1.5 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] hover:border-[var(--brand-accent)] hover:bg-[var(--bg-canvas-subtle)] transition-all text-left focus-ring disabled:opacity-50 group cursor-pointer"
+                >
+                  <div className="w-8 h-8 rounded bg-[var(--bg-canvas-subtle)] border border-[var(--border-hairline-subtle)] shrink-0 overflow-hidden flex items-center justify-center p-0.5">
+                    <Image
+                      unoptimized
+                      src={sample.src}
+                      alt=""
+                      width={32}
+                      height={32}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <span className="block text-xs font-medium text-[var(--text-ink)] truncate group-hover:text-[var(--brand-accent)]">
+                      {isCurrentLoading ? 'Loading…' : sample.label}
+                    </span>
+                    {sample.category && (
+                      <span className="block text-[10px] font-mono text-[var(--text-muted)] truncate">
+                        {sample.category}
+                      </span>
+                    )}
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
