@@ -3,6 +3,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { toolRegistry } from '@/config/site';
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogDescription,
+} from '@/components/ui/dialog';
 
 interface QuickSearchItem {
   id: string;
@@ -69,13 +75,7 @@ export default function QuickSearchModal({
       setQuery('');
       setSelectedIndex(0);
       setTimeout(() => inputRef.current?.focus(), 50);
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
     }
-    return () => {
-      document.body.style.overflow = '';
-    };
   }, [isOpen]);
 
   useEffect(() => {
@@ -96,26 +96,20 @@ export default function QuickSearchModal({
         router.push(filtered[selectedIndex].href);
         onClose();
       }
-    } else if (e.key === 'Escape') {
-      e.preventDefault();
-      onClose();
     }
   };
 
-  if (!isOpen) return null;
-
   return (
-    <div
-      role="dialog"
-      aria-modal="true"
-      aria-label="Quick tool launcher"
-      className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4 bg-black/60 backdrop-blur-sm animate-fade-in-up"
-      onClick={onClose}
-    >
-      <div
-        className="w-full max-w-2xl rounded-2xl border border-[var(--border-hairline-strong)] bg-[var(--bg-canvas-elevated)] shadow-2xl overflow-hidden"
-        onClick={(e) => e.stopPropagation()}
+    <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
+      <DialogContent
+        showCloseButton={false}
+        className="top-[18%] sm:top-[22%] translate-y-0 w-full max-w-2xl rounded-2xl border border-[var(--border-hairline-strong)] bg-[var(--bg-canvas-elevated)] shadow-2xl p-0 gap-0 overflow-hidden"
       >
+        <DialogTitle className="sr-only">Quick tool launcher</DialogTitle>
+        <DialogDescription className="sr-only">
+          Search and launch Creovly tools, calculators, studio, and guides
+        </DialogDescription>
+
         {/* Search Input Bar */}
         <div className="flex items-center gap-3 px-4 py-3.5 border-b border-[var(--border-hairline)] bg-[var(--bg-canvas)]">
           <svg className="w-5 h-5 text-[var(--brand-accent)] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -193,7 +187,7 @@ export default function QuickSearchModal({
           </div>
           <span>100% Client-Side Search</span>
         </div>
-      </div>
-    </div>
+      </DialogContent>
+    </Dialog>
   );
 }

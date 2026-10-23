@@ -1,0 +1,35 @@
+.page {
+  --artwork-wash: #e6f3fc;
+  --artwork-warm: #f5f0e8;
+  --artwork-paper: #f7fbff;
+  --artwork-sheet: #b8d4ee;
+  background: radial-gradient(ellipse 65% 580px at 0 0, var(--artwork-wash), transparent), radial-gradient(ellipse 65% 650px at 100% 350px, var(--artwork-warm), transparent);
+  border-radius: 24px;
+}
+:global(.dark) .page {
+  --artwork-wash: #10263a;
+  --artwork-warm: #242331;
+  --artwork-paper: #192a3b;
+  --artwork-sheet: #375975;
+}
+.picker { padding: 4px 0; }
+.presets { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.preset { padding: 12px 4px; border: 1px solid transparent; border-radius: 12px; text-align: center; cursor: pointer; transition: background 180ms, border-color 180ms; }
+.preset:hover { background: var(--bg-canvas-subtle); }
+.preset[aria-pressed='true'] { background: var(--brand-accent-soft); border-color: var(--brand-accent); }
+.preset:disabled { opacity: .5; cursor: default; }
+.folder { display: block; position: relative; height: 82px; margin: 0 auto 12px; width: min(100%, 100px); isolation: isolate; }
+.sheet { position: absolute; inset: 4px 12px 18px; background: var(--artwork-paper); border: 1px solid var(--border-hairline-strong); border-radius: 6px; transform: rotate(-6deg); transition: transform 180ms; }
+.preset:is(:hover, :focus-visible, [aria-pressed='true']):not(:disabled) .sheet { transform: translateY(-5px) rotate(-3deg); }
+.diagram { display: block; position: absolute; top: 9px; left: 8px; right: 8px; aspect-ratio: 16 / 9; background: var(--artwork-sheet); border-radius: 2px; }
+[data-artwork='banner'] .diagram::after { content: ''; position: absolute; inset: 35% 20%; border: 1px solid var(--brand-accent-deep); }
+[data-artwork='profile'] .diagram { width: 30px; height: 30px; left: calc(50% - 15px); border-radius: 50%; }
+[data-artwork='watermark'] .diagram { width: 22px; height: 22px; left: calc(50% - 11px); aspect-ratio: 1; }
+.pocket { position: absolute; bottom: 0; left: 3px; right: 3px; height: 39px; padding-top: 13px; font-size: 10px; font-weight: 600; border-radius: 4px 9px 8px 8px; background: color-mix(in srgb, var(--bg-canvas-elevated) 80%, transparent); border: 1px solid var(--border-hairline-strong); backdrop-filter: blur(5px); color: var(--text-body); }
+.pocket::before { content: ''; position: absolute; width: 40%; height: 5px; top: -6px; left: -1px; border: 1px solid var(--border-hairline-strong); border-bottom: 0; border-radius: 4px 4px 0 0; background: var(--bg-canvas-elevated); }
+.guide { position: absolute; pointer-events: none; border: 2px dashed white; box-shadow: 0 0 0 1000px rgb(0 0 0 / .42), inset 0 0 0 1px rgb(0 0 0 / .5); }
+.empty { padding: 24px; border-radius: 12px; background: var(--artwork-paper); }
+.canvas { position: relative; margin: 0 auto 20px; background: var(--artwork-sheet); overflow: hidden; border-radius: 4px; }
+.emptyGuide { position: absolute; border: 1px dashed var(--brand-accent-deep); }
+@media (max-width: 420px) { .presets { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (prefers-reduced-motion: reduce) { .preset, .sheet { transition: none; } }

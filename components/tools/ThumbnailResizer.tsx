@@ -21,6 +21,9 @@ import {
 } from '@/lib/image-compression';
 import { resizeGeometry, resizeImage, validateResize, type ResizeOptions } from '@/lib/image-resize';
 import { toolSamples } from '@/config/tool-samples';
+import { artworkPresets, artworkGuide, artworkWarnings } from '@/config/artwork-presets';
+import ArtworkPresetPicker from '@/components/ui/ArtworkPresetPicker';
+import styles from '@/components/ui/artwork.module.css';
 
 const defaults: ResizeOptions = {
   width: 1280,
@@ -33,14 +36,6 @@ const defaults: ResizeOptions = {
   quality: 0.9,
 };
 
-const dimensionPresets = [
-  { label: '1280 × 720 (HD 16:9)', value: '1280x720' },
-  { label: '1920 × 1080 (Full HD)', value: '1920x1080' },
-  { label: '3840 × 2160 (4K UHD)', value: '3840x2160' },
-  { label: '1080 × 1920 (Shorts 9:16)', value: '1080x1920' },
-  { label: 'Custom', value: 'custom' },
-];
-
 export default function ThumbnailResizer() {
   const [selected, setSelected] = useState<{
     file: File;
@@ -49,7 +44,8 @@ export default function ThumbnailResizer() {
     format: OutputFormat;
   }>();
   const [options, setOptions] = useState(defaults);
-  const [preset, setPreset] = useState('1280x720');
+  const [preset, setPreset] = useState('thumbnail');
+  const [showGuide, setShowGuide] = useState(true);
   const [width, setWidth] = useState('1280');
   const [height, setHeight] = useState('720');
   const [result, setResult] = useState<Awaited<ReturnType<typeof resizeImage>>>();
@@ -70,6 +66,11 @@ export default function ThumbnailResizer() {
   const outputUrl = useBlobUrl(result?.blob);
 
   const settings = { ...options, width: Number(width), height: Number(height) };
+  const activePreset = artworkPresets.find(item => item.id === preset);
+  const guide = artworkGuide(preset);
+  const guideStyle = guide ? { left: `${guide.left}%`, top: `${guide.top}%`, width: `${guide.width}%`, height: `${guide.height}%`, borderRadius: guide.shape === 'circle' ? '50%' : 0 } : undefined;
+  const overlay = guide && showGuide ? <span aria-hidden="true" className={styles.guide} style={guideStyle} /> : undefined;
+  const warnings = result ? artworkWarnings(preset, result.blob.size, result.blob.type) : [];
   let valid = true;
   try {
     validateResize(settings);
@@ -114,6 +115,14 @@ export default function ThumbnailResizer() {
     setOptions((current) => ({ ...current, ...patch }));
   };
 
+  const choosePreset = (id: string) => {
+    clear(); setPreset(id); setShowGuide(true);
+    const next = artworkPresets.find(item => item.id === id);
+    if (!next) return;
+    setWidth(String(next.width)); setHeight(String(next.height));
+    setOptions(current => ({ ...current, width: next.width, height: next.height, x: 50, y: 50, fit: next.fit, format: next.format, background: next.background }));
+  };
+
   const selectFile = async (file: File) => {
     clear();
     setSelected(undefined);
@@ -140,7 +149,8 @@ export default function ThumbnailResizer() {
     setOptions(defaults);
     setWidth('1280');
     setHeight('720');
-    setPreset('1280x720');
+    setPreset('thumbnail');
+    setShowGuide(true);
     setFileKey((key) => key + 1);
   };
 
@@ -167,12 +177,13 @@ export default function ThumbnailResizer() {
     <ToolWorkspaceLayout
       workspace={
         <>
+          <ArtworkPresetPicker value={preset} onChange={choosePreset} disabled={loading || busy} />
           <DropZone
             key={fileKey}
             id="resizer-file"
-            label="Upload Image to Resize"
+            label="Choose your artwork"
             maxSizeMB={20}
-            privacyNote="100% In-Browser Execution"
+            privacyNote="Processed on your device"
             disabled={loading || busy}
             onFileSelect={selectFile}
             onError={setError}
@@ -201,35 +212,11 @@ export default function ThumbnailResizer() {
           <fieldset disabled={loading || busy} className="space-y-5 min-w-0">
             <legend className="sr-only">Resize settings</legend>
 
-            <div className="space-y-2">
-              <label className="block text-xs font-medium text-[var(--text-ink)]">
-                Target Canvas Geometry
-              </label>
-              <div className="flex flex-wrap gap-1.5">
-                {dimensionPresets.map((item) => (
-                  <button
-                    key={item.value}
-                    type="button"
-                    onClick={() => {
-                      clear();
-                      setPreset(item.value);
-                      if (item.value !== 'custom') {
-                        const [w, h] = item.value.split('x');
-                        setWidth(w);
-                        setHeight(h);
-                      }
-                    }}
-                    className={`px-2.5 py-1.5 rounded-md text-[11px] font-mono border transition-all ${
-                      preset === item.value
-                        ? 'border-[var(--brand-accent)] bg-[var(--brand-accent-soft)] text-[var(--brand-accent-deep)] font-semibold'
-                        : 'border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-body)] hover:border-[var(--brand-accent)]'
-                    }`}
-                  >
-                    {item.label}
-                  </button>
-                ))}
-              </div>
-            </div>
+            <Select id="artwork-size" label="Canvas size" value={preset} onChange={event => choosePreset(event.target.value)} options={[
+              ...artworkPresets.map(item => ({ value: item.id, label: `${item.label} · ${item.width} × ${item.height}` })),
+              { value: 'custom', label: 'Custom dimensions' },
+            ]} />
+            <p className="text-xs text-[var(--text-body)]">{activePreset?.description ?? 'Choose your own canvas dimensions. Preset framing guides are hidden for custom sizes.'}</p>
 
             {preset === 'custom' && (
               <div className="grid grid-cols-2 gap-4">
@@ -262,32 +249,32 @@ export default function ThumbnailResizer() {
 
             <Select
               id="resize-fit"
-              label="Canvas Fitting Strategy"
+              label="How should the image fit?"
               value={options.fit}
               onChange={(event) =>
                 change({ fit: event.target.value as ResizeOptions['fit'] })
               }
               options={[
-                { value: 'cover', label: 'Crop to Fill — zero borders / full bleed' },
-                { value: 'contain', label: 'Fit Entire Image — preserve all artwork with padding' },
+                { value: 'cover', label: 'Crop to fill · trim edges' },
+                { value: 'contain', label: 'Fit entire image · add padding' },
               ]}
             />
 
             {options.fit === 'cover' ? (
               <div className="space-y-3 p-4 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)]">
                 <span className="text-xs font-mono font-medium text-[var(--text-ink)]">
-                  Crop Focal Point Alignment
+                  Adjust the crop
                 </span>
                 <Slider
                   id="crop-x"
-                  label="Horizontal Crop Anchor"
+                  label="Horizontal position"
                   value={options.x}
                   unit="%"
                   onChange={(x) => change({ x })}
                 />
                 <Slider
                   id="crop-y"
-                  label="Vertical Crop Anchor"
+                  label="Vertical position"
                   value={options.y}
                   unit="%"
                   onChange={(y) => change({ y })}
@@ -319,7 +306,7 @@ export default function ThumbnailResizer() {
                 value={options.format}
                 onChange={(event) => change({ format: event.target.value as OutputFormat })}
                 options={[
-                  { value: 'image/jpeg', label: 'JPEG (Best for YouTube)' },
+                  { value: 'image/jpeg', label: 'JPEG' },
                   { value: 'image/png', label: 'PNG (Alpha transparency)' },
                   { value: 'image/webp', label: 'WebP' },
                 ]}
@@ -339,9 +326,11 @@ export default function ThumbnailResizer() {
             )}
           </fieldset>
 
+          {options.background === 'transparent' && options.format === 'image/jpeg' && <p className="text-xs text-[var(--text-body)]">JPEG replaces transparent areas with white. Choose PNG to keep transparency.</p>}
+
           {upscaled && (
-            <Alert variant="warning" title="Upscaling Resolution">
-              Source resolution is smaller than target canvas. While crisp bicubic resampling is applied, consider using higher-res master assets if available.
+            <Alert variant="warning" title="This image will be enlarged">
+              The source is smaller than this canvas. Enlarging cannot recover detail; use a larger original when possible.
             </Alert>
           )}
 
@@ -350,7 +339,7 @@ export default function ThumbnailResizer() {
               Reset
             </Button>
             <Button disabled={!selected || busy || loading} onClick={run}>
-              {busy ? 'Rendering canvas locally…' : 'Resize Thumbnail'}
+              {busy ? 'Resizing…' : 'Resize artwork'}
             </Button>
           </div>
 
@@ -362,16 +351,25 @@ export default function ThumbnailResizer() {
               : result
               ? 'Resize completed. Download or compress output.'
               : selected
-              ? 'Ready. Adjust crop sliders and click Resize.'
+              ? 'Ready. Adjust the framing and select Resize artwork.'
               : 'Choose an image to begin.'}
           </p>
         </>
       }
       results={
         <>
+          <div>
+            <h3 className="text-base font-semibold">{activePreset?.label ?? 'Custom artwork'} <span className="text-xs font-normal text-[var(--text-body)]">{valid ? `${settings.width} × ${settings.height}` : 'Check dimensions'}</span></h3>
+            {guide && <label className="flex items-center gap-2 mt-3 text-sm"><input type="checkbox" checked={showGuide} onChange={event => setShowGuide(event.target.checked)} className="focus-ring" />Show {guide.shape === 'circle' ? 'circle' : 'text and logo'} guide</label>}
+            {guide && <p className="text-xs text-[var(--text-body)] mt-2">{guide.shape === 'circle' ? 'Illustrative circle crop; your download stays square.' : 'Central text/logo area, scaled from YouTube’s minimum-size guidance. Device crops can vary.'} Guides are preview-only.</p>}
+          </div>
           {!selected && (
-            <div className="py-16 text-center text-xs text-[var(--text-muted)] font-mono">
-              Upload an image to inspect source geometry and crop boundaries.
+            <div className={styles.empty}>
+              <div aria-hidden="true" className={styles.canvas} style={{ aspectRatio: valid ? `${settings.width}/${settings.height}` : '16/9', width: `min(100%, ${valid ? Math.min(400, 220 * settings.width / settings.height) : 400}px)` }}>
+                {guide && showGuide && <span className={styles.emptyGuide} style={guideStyle} />}
+              </div>
+              <p className="text-sm font-medium">Your artwork goes here</p>
+              <p className="text-xs text-[var(--text-body)] mt-2">Choose an image or try a sample to preview its framing on this canvas. This diagram is a guide, not an exported result.</p>
             </div>
           )}
 
@@ -387,9 +385,11 @@ export default function ThumbnailResizer() {
           {selected && sourceUrl && valid && !result && (
             <ImagePreview
               url={sourceUrl}
-              title="Interactive Framing Preview (Not yet exported)"
+              title="Framing preview · not exported yet"
               width={selected.width}
               height={selected.height}
+              overlay={overlay}
+              transparencyGrid={options.background === 'transparent' && options.format !== 'image/jpeg'}
               frame={{
                 width: settings.width,
                 height: settings.height,
@@ -411,9 +411,12 @@ export default function ThumbnailResizer() {
               {outputUrl && (
                 <ImagePreview
                   url={outputUrl}
-                  title="Resized Master Output"
+                  title="Exported artwork"
                   width={result.width}
                   height={result.height}
+                  overlay={overlay}
+                  transparencyGrid={options.background === 'transparent' && options.format !== 'image/jpeg'}
+                  frame={{ width: result.width, height: result.height, fit: 'contain', x: 50, y: 50, background: 'transparent' }}
                 />
               )}
 
@@ -425,6 +428,8 @@ export default function ThumbnailResizer() {
                   subtext={formatLabel(result.blob.type)}
                 />
               </div>
+              {warnings.map(warning => <Alert key={warning} variant="warning" title="Before uploading">{warning}</Alert>)}
+              <p className="text-xs text-[var(--text-body)]">Review the exported image in YouTube’s upload preview. Dimensions alone do not guarantee upload eligibility.</p>
 
               {outputUrl && (
                 <a
@@ -458,7 +463,7 @@ export default function ThumbnailResizer() {
                 variant="outline"
                 className="w-full text-xs font-mono"
               >
-                Send to Thumbnail Compressor &rarr;
+                Open Thumbnail Compressor &rarr;
               </Button>
             </>
           )}

@@ -1,4 +1,7 @@
+'use client';
+
 import React from 'react';
+import { Progress } from '@/components/ui/progress';
 
 export interface ProgressBarProps {
   value: number; // 0 to 100
@@ -8,7 +11,7 @@ export interface ProgressBarProps {
   className?: string;
 }
 
-const variantColors = {
+const variantIndicatorColors = {
   primary: 'bg-[var(--brand-accent)]',
   success: 'bg-emerald-500',
   warning: 'bg-amber-500',
@@ -37,18 +40,11 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
         </div>
       )}
 
-      <div
-        role="progressbar"
-        aria-valuenow={clamped}
-        aria-valuemin={0}
-        aria-valuemax={100}
-        className="w-full h-2 rounded-full bg-[var(--bg-canvas-subtle)] border border-[var(--border-hairline)] overflow-hidden"
-      >
-        <div
-          className={`h-full rounded-full transition-all duration-300 ${variantColors[variant]}`}
-          style={{ width: `${clamped}%` }}
-        />
-      </div>
+      <Progress
+        value={clamped}
+        className="h-2"
+        indicatorClassName={variantIndicatorColors[variant]}
+      />
     </div>
   );
 };

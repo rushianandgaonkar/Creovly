@@ -11,6 +11,7 @@ import Select from '@/components/form/Select';
 import Slider from '@/components/form/Slider';
 import DropZone from '@/components/form/DropZone';
 import Button from '@/components/ui/Button';
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Alert from '@/components/feedback/Alert';
 import MetricCard from '@/components/results/MetricCard';
 import { useBlobUrl } from '@/components/tools/ImagePreview';
@@ -216,30 +217,25 @@ export default function PublishStudio() {
               <span className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)] font-semibold">
                 Simulated YouTube View
               </span>
-              <div className="flex items-center gap-1 p-0.5 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-xs">
-                <button
-                  type="button"
-                  onClick={() => setPreviewSurface('mobile')}
-                  className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition-all ${
-                    previewSurface === 'mobile'
-                      ? 'bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)] shadow-2xs font-semibold'
-                      : 'text-[var(--text-muted)] hover:text-[var(--text-ink)]'
-                  }`}
-                >
-                  📱 Mobile Feed
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setPreviewSurface('desktop')}
-                  className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition-all ${
-                    previewSurface === 'desktop'
-                      ? 'bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)] shadow-2xs font-semibold'
-                      : 'text-[var(--text-muted)] hover:text-[var(--text-ink)]'
-                  }`}
-                >
-                  💻 Desktop Search
-                </button>
-              </div>
+              <Tabs
+                value={previewSurface}
+                onValueChange={(val) => setPreviewSurface(val as 'mobile' | 'desktop')}
+              >
+                <TabsList className="h-7 p-0.5 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)]">
+                  <TabsTrigger
+                    value="mobile"
+                    className="px-2.5 py-1 text-[11px] font-medium rounded-md data-[state=active]:bg-[var(--bg-canvas-elevated)] data-[state=active]:text-[var(--text-ink)] data-[state=active]:shadow-xs"
+                  >
+                    📱 Mobile Feed
+                  </TabsTrigger>
+                  <TabsTrigger
+                    value="desktop"
+                    className="px-2.5 py-1 text-[11px] font-medium rounded-md data-[state=active]:bg-[var(--bg-canvas-elevated)] data-[state=active]:text-[var(--text-ink)] data-[state=active]:shadow-xs"
+                  >
+                    💻 Desktop Search
+                  </TabsTrigger>
+                </TabsList>
+              </Tabs>
             </div>
           )}
 

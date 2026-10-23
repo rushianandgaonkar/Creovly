@@ -93,7 +93,7 @@ export const toolRegistry: ToolDefinition[] = [
     category: 'thumbnail',
     categoryLabel: 'Thumbnail Tools',
     description:
-      'Compress JPEG, PNG, and WebP thumbnails in your browser. Choose a target size, compare the result, and download your image.',
+      'Compress up to 10 JPEG, PNG, or WebP thumbnails locally. Compare each result and download images individually or together as a ZIP.',
     status: 'available',
     seoTarget: 'YouTube Thumbnail Compressor',
   },
@@ -105,7 +105,7 @@ export const toolRegistry: ToolDefinition[] = [
     category: 'thumbnail',
     categoryLabel: 'Thumbnail Tools',
     description:
-      'Resize thumbnails locally with custom dimensions, adjustable cropping, padding, and JPEG, PNG, or WebP downloads.',
+      'Resize thumbnails, channel banners, profile pictures and watermark assets locally, with framing guides, custom dimensions and image downloads.',
     status: 'available',
     seoTarget: 'YouTube Thumbnail Resizer',
   },

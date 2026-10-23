@@ -1,4 +1,7 @@
+'use client';
+
 import React from 'react';
+import { motion, useReducedMotion } from 'motion/react';
 
 export interface AlertProps {
   variant?: 'info' | 'success' | 'warning' | 'error';
@@ -37,10 +40,14 @@ export const Alert: React.FC<AlertProps> = ({
   children,
 }) => {
   const current = styles[variant];
+  const shouldReduceMotion = useReducedMotion();
 
   return (
-    <div
+    <motion.div
       role="alert"
+      initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: -4, scale: 0.99 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
       className={`flex gap-3 p-3.5 rounded-lg border text-sm leading-relaxed ${current.container} ${className}`}
     >
       <div className="shrink-0 mt-0.5">
@@ -80,7 +87,7 @@ export const Alert: React.FC<AlertProps> = ({
           {children}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import type { SampleImageOption } from '@/config/tool-samples';
 
@@ -12,6 +12,7 @@ export interface DropZoneProps {
   privacyNote?: string;
   className?: string;
   onFileSelect?: (file: File) => void;
+  onFilesSelect?: (files: File[]) => boolean | void;
   onError?: (message: string) => void;
   disabled?: boolean;
   samples?: SampleImageOption[];
@@ -25,6 +26,7 @@ export const DropZone: React.FC<DropZoneProps> = ({
   privacyNote = 'Preview · No processing',
   className = '',
   onFileSelect,
+  onFilesSelect,
   onError,
   disabled = false,
   samples,
@@ -32,9 +34,15 @@ export const DropZone: React.FC<DropZoneProps> = ({
   const [selectedFileName, setSelectedFileName] = useState<string | null>(null);
   const [dragging, setDragging] = useState(false);
   const [loadingSampleId, setLoadingSampleId] = useState<string | null>(null);
+  const sampleRequest = useRef(0);
+  useEffect(() => () => { sampleRequest.current++; }, []);
+  useEffect(() => { if (disabled) { sampleRequest.current++; setLoadingSampleId(null); } }, [disabled]);
+  const acceptsFiles = Boolean(onFileSelect || onFilesSelect);
 
   const selectFiles = (files: FileList | null) => {
     if (disabled || !files?.length) return;
+    sampleRequest.current++; setLoadingSampleId(null);
+    if (onFilesSelect) { if (onFilesSelect(Array.from(files)) !== false) setSelectedFileName(`${files.length} image${files.length === 1 ? '' : 's'} selected`); return; }
     if (files.length !== 1) { onError?.('Choose one image at a time.'); return; }
     const file = files[0];
     if (file.size > maxSizeMB * 1_000_000) { onError?.(`Choose an image under ${maxSizeMB} MB.`); return; }
@@ -48,19 +56,21 @@ export const DropZone: React.FC<DropZoneProps> = ({
   };
 
   const handleSampleClick = async (sample: SampleImageOption) => {
-    if (disabled || !onFileSelect) return;
+    if (disabled || !acceptsFiles) return;
+    const request = ++sampleRequest.current;
     setLoadingSampleId(sample.id);
     try {
       const response = await fetch(sample.src);
       if (!response.ok) throw new Error('Could not load sample asset');
       const blob = await response.blob();
       const file = new File([blob], sample.fileName, { type: blob.type || 'image/png' });
+      if (request !== sampleRequest.current) return;
       setSelectedFileName(file.name);
-      onFileSelect(file);
+      if (onFilesSelect) onFilesSelect([file]); else onFileSelect?.(file);
     } catch {
-      onError?.('Could not load sample. Please choose another file.');
+      if (request === sampleRequest.current) onError?.('Could not load sample. Please choose another file.');
     } finally {
-      setLoadingSampleId(null);
+      if (request === sampleRequest.current) setLoadingSampleId(null);
     }
   };
 
@@ -93,14 +103,15 @@ export const DropZone: React.FC<DropZoneProps> = ({
 
       <label
         htmlFor={id}
-        onDragOver={onFileSelect ? (event) => { event.preventDefault(); if (!disabled) setDragging(true); } : undefined}
+        onDragOver={acceptsFiles ? (event) => { event.preventDefault(); if (!disabled) setDragging(true); } : undefined}
         onDragLeave={() => setDragging(false)}
-        onDrop={onFileSelect ? (event) => { event.preventDefault(); setDragging(false); selectFiles(event.dataTransfer.files); } : undefined}
+        onDrop={acceptsFiles ? (event) => { event.preventDefault(); setDragging(false); selectFiles(event.dataTransfer.files); } : undefined}
         className={`relative flex flex-col items-center justify-center p-8 border-2 border-dashed ${dragging ? 'border-[var(--brand-accent)]' : 'border-[var(--border-hairline)]'} hover:border-[var(--brand-accent)] rounded-xl bg-[var(--bg-canvas-subtle)] hover:bg-[var(--bg-canvas-elevated)] transition-colors duration-200 cursor-pointer group text-center focus-within:outline-2 focus-within:outline-[var(--brand-accent)] focus-within:outline-offset-2 ${disabled ? 'opacity-50' : ''}`}
       >
         <input
           id={id}
           type="file"
+          multiple={Boolean(onFilesSelect)}
           accept={accept}
           disabled={disabled}
           aria-label={label}
@@ -126,15 +137,15 @@ export const DropZone: React.FC<DropZoneProps> = ({
         </div>
 
         <p className="text-sm font-medium text-[var(--text-ink)]">
-          {selectedFileName ? <span className="break-all">{selectedFileName}</span> : onFileSelect ? 'Choose an image or drag it here' : 'Choose a sample file'}
+          {selectedFileName ? <span className="break-all">{selectedFileName}</span> : onFilesSelect ? 'Choose images or drag them here' : onFileSelect ? 'Choose an image or drag it here' : 'Choose a sample file'}
         </p>
         <p className="mt-1 text-xs text-[var(--text-muted)]">
-          JPG, PNG, or WebP · {onFileSelect ? 'Maximum' : 'Planned limit:'} {maxSizeMB} MB
+          JPG, PNG, or WebP · {acceptsFiles ? 'Maximum' : 'Planned limit:'} {maxSizeMB} MB{onFilesSelect ? ' per image' : ''}
         </p>
       </label>
 
       {/* 1-Click Creator Sample Presets */}
-      {samples && samples.length > 0 && onFileSelect && (
+      {samples && samples.length > 0 && acceptsFiles && (
         <div className="mt-1 pt-2 border-t border-[var(--border-hairline-subtle)]">
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-medium text-[var(--text-body)]">

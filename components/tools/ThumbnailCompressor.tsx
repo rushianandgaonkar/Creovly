@@ -1,7 +1,6 @@
-/* Hallmark · genre: modern-minimal · macrostructure: Workbench */
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import ImagePreview, { useBlobUrl } from './ImagePreview';
 import DropZone from '@/components/form/DropZone';
 import Select from '@/components/form/Select';
@@ -9,399 +8,138 @@ import NumberInput from '@/components/form/NumberInput';
 import Slider from '@/components/form/Slider';
 import Button from '@/components/ui/Button';
 import Alert from '@/components/feedback/Alert';
-import MetricCard from '@/components/results/MetricCard';
 import ToolWorkspaceLayout from './ToolWorkspaceLayout';
-import {
-  compressImage,
-  decodeImage,
-  downloadName,
-  formatBytes,
-  formatLabel,
-  validateImage,
-  type CompressionResult,
-  type OutputFormat,
-} from '@/lib/image-compression';
+import { formatBytes, formatLabel, type OutputFormat } from '@/lib/image-compression';
+import { batchDownloadName, compressBatch, validateBatchSelection, type BatchItem } from '@/lib/batch-compression';
 import { toolSamples } from '@/config/tool-samples';
 
-interface SelectedImage {
-  file: File;
-  width: number;
-  height: number;
-  format: OutputFormat;
+function CompletedImage({ item, index }: { item: BatchItem; index: number }) {
+  const originalUrl = useBlobUrl(item.file);
+  const outputUrl = useBlobUrl(item.result?.blob);
+  const result = item.result;
+  if (!result) return null;
+  return <div className="space-y-4">
+    {originalUrl && <ImagePreview url={originalUrl} title="Original thumbnail" width={result.width} height={result.height} />}
+    {outputUrl && <ImagePreview url={outputUrl} title="Compressed output" width={result.width} height={result.height} />}
+    <p className="text-sm text-[var(--text-body)]">{formatBytes(item.file.size)} → {formatBytes(result.blob.size)} · {formatLabel(result.blob.type)} · {result.width} × {result.height}</p>
+    <p className="text-xs text-[var(--text-body)]">{result.blob.size < item.file.size ? ((1 - result.blob.size / item.file.size) * 100).toFixed(1) + '% smaller' : result.blob.size === item.file.size ? 'Same file size' : ((result.blob.size / item.file.size - 1) * 100).toFixed(1) + '% larger'} · {result.originalUsed ? 'Smaller original retained' : result.quality === null ? 'PNG output' : 'Quality ' + Math.round(result.quality * 100) + '%'}</p>
+    <Alert variant={result.targetMet ? 'success' : 'warning'} title={result.targetMet ? 'Size target met' : 'Size target not reached'}>{result.targetMet ? 'Review the image before using it. File size alone does not confirm upload eligibility.' : 'Output exceeds your target. Increase the target, change format, or resize first. This output is still downloadable.'}</Alert>
+    {outputUrl && <a href={outputUrl} download={batchDownloadName(item.file.name, index, result.blob.type as OutputFormat)} className="inline-flex rounded-xl bg-[var(--brand-primary)] text-[var(--brand-on-primary)] px-4 py-3 text-sm font-semibold focus-ring">Download {formatLabel(result.blob.type)}</a>}
+  </div>;
 }
 
-const targetPresets = [
-  { label: '2,000 KB (YouTube Max)', value: '2000' },
-  { label: '1,500 KB (Recommended)', value: '1500' },
-  { label: '1,000 KB (Balanced)', value: '1000' },
-  { label: '500 KB (Light)', value: '500' },
-];
-
 export default function ThumbnailCompressor() {
-  const [selected, setSelected] = useState<SelectedImage>();
-  const [result, setResult] = useState<CompressionResult>();
+  const [items, setItems] = useState<BatchItem[]>([]);
   const [format, setFormat] = useState<OutputFormat>('image/jpeg');
   const [target, setTarget] = useState('2000');
   const [quality, setQuality] = useState(90);
   const [busy, setBusy] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [packing, setPacking] = useState(false);
   const [error, setError] = useState('');
+  const [message, setMessage] = useState('Choose one image or a batch to begin.');
   const [fileKey, setFileKey] = useState(0);
-
-  const request = useRef(0);
-  const controller = useRef<AbortController | undefined>(undefined);
-  const originalBlob = useMemo(
-    () => (selected ? new Blob([selected.file], { type: selected.format }) : undefined),
-    [selected]
-  );
-  const originalUrl = useBlobUrl(originalBlob);
-  const outputUrl = useBlobUrl(result?.blob);
+  const [preview, setPreview] = useState(0);
+  const generation = useRef(0);
+  const controller = useRef<AbortController | null>(null);
   const errorRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const ctrl = controller;
-    const req = request;
-    return () => {
-      req.current++;
-      ctrl.current?.abort();
-    };
-  }, []);
-
-  useEffect(() => {
-    if (error) errorRef.current?.focus();
-  }, [error]);
-
-  const cancel = () => {
-    request.current++;
-    controller.current?.abort();
-    setBusy(false);
-    setLoading(false);
+  useEffect(() => () => { generation.current++; controller.current?.abort(); }, []);
+  useEffect(() => { if (error) errorRef.current?.focus(); }, [error]);
+  const invalidate = () => {
+    generation.current++; controller.current?.abort(); setBusy(false); setPacking(false); setError('');
+    setItems((current) => current.map(({ file }) => ({ file, status: 'queued' })));
+    setMessage('Settings changed. Compress again to create matching results.');
   };
-
-  const selectFile = async (file: File) => {
-    cancel();
-    const id = request.current;
-    setSelected(undefined);
-    setResult(undefined);
-    setError('');
-    setLoading(true);
-    try {
-      const inputFormat = await validateImage(file);
-      const bitmap = await decodeImage(file);
-      const dimensions = { width: bitmap.width, height: bitmap.height };
-      bitmap.close();
-      if (id === request.current) {
-        setSelected({ file, format: inputFormat, ...dimensions });
-      }
-    } catch (cause) {
-      if (id === request.current) {
-        setError(
-          cause instanceof Error
-            ? cause.message
-            : 'Could not open this image. Please choose another file.'
-        );
-      }
-    } finally {
-      if (id === request.current) setLoading(false);
-    }
+  const select = (files: File[]) => {
+    try { validateBatchSelection(files); }
+    catch (cause) { setError((cause as Error).message + ' Your previous batch is unchanged.'); return false; }
+    invalidate(); setItems(files.map((file) => ({ file, status: 'queued' }))); setPreview(0);
+    setMessage(files.length + (files.length === 1 ? ' image ready.' : ' images ready.') + ' Selecting files again replaces this batch.');
+    return true;
   };
-
-  const clearResult = () => {
-    cancel();
-    setResult(undefined);
-    setError('');
-  };
-
   const reset = () => {
-    cancel();
-    setSelected(undefined);
-    setResult(undefined);
-    setError('');
-    setFileKey((key) => key + 1);
-    setFormat('image/jpeg');
-    setTarget('2000');
-    setQuality(90);
+    invalidate(); setItems([]); setFileKey((key) => key + 1); setTarget('2000'); setQuality(90); setFormat('image/jpeg'); setPreview(0);
+    setMessage('Workspace cleared. Choose images to begin.');
   };
-
   const run = async () => {
-    if (!selected || busy) return;
-    const bytes = Number(target) * 1000;
-    if (!Number.isFinite(bytes) || bytes < 10_000 || bytes > 20_000_000) {
-      setError('Enter a target between 10 and 20,000 KB.');
-      return;
-    }
-    cancel();
-    const id = request.current;
-    const abort = new AbortController();
-    controller.current = abort;
-    setBusy(true);
-    setError('');
-    setResult(undefined);
+    if (!items.length || busy || packing) return;
+    const targetBytes = Number(target) * 1000;
+    if (!Number.isFinite(targetBytes) || targetBytes < 10_000 || targetBytes > 20_000_000) { setError('Enter a target between 10 and 20,000 KB per image.'); return; }
+    invalidate();
+    const id = generation.current;
+    const abort = new AbortController(); controller.current = abort; setBusy(true); setMessage('Processing images locally, one at a time.');
     try {
-      const output = await compressImage(
-        selected.file,
-        { format, targetBytes: bytes, maxQuality: quality / 100 },
-        abort.signal
-      );
-      if (id === request.current) setResult(output);
-    } catch (cause) {
-      if (id === request.current && !abort.signal.aborted) {
-        setError(
-          cause instanceof Error
-            ? cause.message
-            : 'Compression failed. Please try another format.'
-        );
+      const rows = await compressBatch(items.map((item) => item.file), { format, targetBytes, maxQuality: quality / 100 }, {
+        signal: abort.signal,
+        onUpdate: (index, row) => {
+          if (id === generation.current) setItems((current) => current.map((item, at) => at === index ? row : item));
+        },
+      });
+      if (id === generation.current) {
+        setItems(rows);
+        const first = rows.findIndex((row) => row.status === 'complete'); if (first >= 0) setPreview(first);
+        const count = rows.filter((row) => row.status === 'complete').length;
+        setMessage((abort.signal.aborted ? 'Cancelled. ' : 'Batch finished. ') + count + ' of ' + rows.length + ' outputs ready. Review each result before downloading.');
       }
-    } finally {
-      if (id === request.current) setBusy(false);
-    }
+    } catch (cause) { if (id === generation.current) setError(cause instanceof Error ? cause.message : 'Batch processing failed. Try a smaller batch.'); }
+    finally { if (id === generation.current) setBusy(false); }
   };
-
-  return (
-    <ToolWorkspaceLayout
-      workspace={
-        <>
-          <DropZone
-            key={fileKey}
-            id="thumbnail-file"
-            label="Upload Thumbnail Image"
-            maxSizeMB={20}
-            privacyNote="100% In-Browser Execution"
-            onFileSelect={selectFile}
-            onError={setError}
-            disabled={busy || loading}
-            samples={toolSamples['youtube-thumbnail-compressor']}
-          />
-
-          <div ref={errorRef} tabIndex={-1} className="focus-ring rounded-md">
-            {error && (
-              <Alert variant="error" title="Check your image or settings">
-                {error}
-              </Alert>
-            )}
-          </div>
-
-          {selected && (
-            <div className="flex items-center justify-between p-3 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-xs font-mono">
-              <span className="truncate max-w-[200px] text-[var(--text-ink)] font-medium">
-                {selected.file.name}
-              </span>
-              <span className="text-[var(--text-muted)]">
-                {formatBytes(selected.file.size)} · {selected.width} × {selected.height} px ·{' '}
-                {formatLabel(selected.format)}
-              </span>
-            </div>
-          )}
-
-          <fieldset disabled={busy || loading} className="space-y-5 min-w-0">
-            <legend className="sr-only">Compression settings</legend>
-
-            <div className="space-y-2">
-              <NumberInput
-                id="target-size"
-                label="Target File Size Ceiling"
-                value={target}
-                min={10}
-                max={20000}
-                step={1}
-                suffix="KB"
-                onChange={(event) => {
-                  clearResult();
-                  setTarget(event.target.value);
-                }}
-              />
-              <div className="flex flex-wrap gap-1.5 pt-1">
-                {targetPresets.map((preset) => (
-                  <button
-                    key={preset.value}
-                    type="button"
-                    onClick={() => {
-                      clearResult();
-                      setTarget(preset.value);
-                    }}
-                    className={`px-2.5 py-1 rounded-md text-[11px] font-mono border transition-all ${
-                      target === preset.value
-                        ? 'border-[var(--brand-accent)] bg-[var(--brand-accent-soft)] text-[var(--brand-accent-deep)] font-semibold'
-                        : 'border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-body)] hover:border-[var(--brand-accent)]'
-                    }`}
-                  >
-                    {preset.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <Select
-              id="output-format"
-              label="Export Format"
-              value={format}
-              onChange={(event) => {
-                clearResult();
-                setFormat(event.target.value as OutputFormat);
-              }}
-              options={[
-                { value: 'image/jpeg', label: 'JPEG — recommended for YouTube' },
-                { value: 'image/png', label: 'PNG — lossless with transparency' },
-                { value: 'image/webp', label: 'WebP — compact web format' },
-              ]}
-            />
-
-            <p className="text-xs text-[var(--text-body)] leading-relaxed">
-              {format === 'image/jpeg'
-                ? 'JPEG applies iterative binary search quality compression. Pixel dimensions stay 100% untouched.'
-                : format === 'image/png'
-                ? 'PNG maintains lossless alpha transparency. PNG file size is determined by image complexity.'
-                : 'WebP offers high density compression with alpha support. YouTube accepts WebP for custom thumbnails.'}
-            </p>
-
-            {format !== 'image/png' && (
-              <details className="rounded-xl border border-[var(--border-hairline)] p-4 bg-[var(--bg-canvas-subtle)]">
-                <summary className="text-xs font-mono font-medium text-[var(--text-ink)] cursor-pointer focus-ring rounded select-none">
-                  Advanced Quality Thresholds
-                </summary>
-                <div className="mt-4">
-                  <Slider
-                    id="max-quality"
-                    label="Maximum Quality Cap"
-                    value={quality}
-                    min={25}
-                    max={95}
-                    unit="%"
-                    onChange={(value) => {
-                      clearResult();
-                      setQuality(value);
-                    }}
-                  />
-                </div>
-                <p className="text-xs text-[var(--text-muted)] mt-2">
-                  Creovly tests the highest quality level that meets your size target, down to 25%.
-                </p>
-              </details>
-            )}
-          </fieldset>
-
-          <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-[var(--border-hairline-subtle)]">
-            <Button variant="outline" size="sm" onClick={reset} disabled={busy || loading}>
-              Reset
-            </Button>
-            <Button disabled={!selected || busy || loading} onClick={run}>
-              {busy ? 'Compressing locally…' : 'Compress Thumbnail'}
-            </Button>
-          </div>
-
-          <p role="status" aria-live="polite" className="text-xs text-[var(--text-muted)]">
-            {loading
-              ? 'Opening image…'
-              : busy
-              ? 'Calculating optimal quality step. Keep window open.'
-              : result
-              ? 'Compression complete. Review comparison below.'
-              : selected
-              ? 'Ready. Adjust target size and click Compress.'
-              : 'Choose an image or creator sample to start.'}
-          </p>
-        </>
-      }
-      results={
-        <>
-          {!selected && (
-            <div className="py-16 text-center text-xs text-[var(--text-muted)] font-mono">
-              Upload a thumbnail to inspect original and compressed results.
-            </div>
-          )}
-
-          {selected && originalUrl && (
-            <ImagePreview
-              url={originalUrl}
-              title="Original Thumbnail"
-              width={selected.width}
-              height={selected.height}
-            />
-          )}
-
-          {selected && !result && (
-            <p className="text-xs text-[var(--text-muted)] font-mono text-center py-4">
-              Click Compress Thumbnail to calculate output size.
-            </p>
-          )}
-
-          {selected && result && (
-            <>
-              {outputUrl && (
-                <ImagePreview
-                  url={outputUrl}
-                  title="Compressed Output"
-                  width={result.width}
-                  height={result.height}
-                />
-              )}
-
-              <div className="grid grid-cols-2 gap-3">
-                <MetricCard label="Original Size" value={formatBytes(selected.file.size)} />
-                <MetricCard
-                  label="Output Size"
-                  value={formatBytes(result.blob.size)}
-                  subtext={`${formatLabel(result.blob.type)} · ${result.width} × ${result.height}`}
-                />
-              </div>
-
-              <div className="p-3 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] flex items-center justify-between text-xs font-mono">
-                <span className="text-[var(--text-ink)] font-semibold">
-                  {result.blob.size < selected.file.size
-                    ? `${((1 - result.blob.size / selected.file.size) * 100).toFixed(1)}% reduction`
-                    : result.blob.size === selected.file.size
-                    ? 'Identical size'
-                    : `+${((result.blob.size / selected.file.size - 1) * 100).toFixed(1)}%`}
-                </span>
-                <span className="text-[var(--text-muted)]">
-                  {result.quality === null
-                    ? result.originalUsed
-                      ? 'Original retained'
-                      : 'Lossless PNG'
-                    : `Quality: ${Math.round(result.quality * 100)}%`}
-                </span>
-              </div>
-
-              <Alert
-                variant={result.targetMet ? 'success' : 'warning'}
-                title={result.targetMet ? 'YouTube Spec Met' : 'Target Threshold Exceeded'}
-              >
-                {result.targetMet
-                  ? `Output is safely within your ${formatBytes(
-                      Number(target) * 1000
-                    )} ceiling. Ready for YouTube Studio.`
-                  : 'Target cannot be reached at this resolution. Consider resizing to 1280×720 first or selecting JPEG.'}
-                {result.originalUsed &&
-                  ' Original was already smaller than the re-encoded result, preserving max fidelity.'}
-              </Alert>
-
-              {outputUrl && (
-                <a
-                  href={outputUrl}
-                  download={downloadName(selected.file.name, format)}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[var(--brand-primary)] text-[var(--brand-on-primary)] px-4 py-3 text-sm font-semibold hover:opacity-90 transition-opacity focus-ring shadow-[var(--shadow-whisper)]"
-                >
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                    />
-                  </svg>
-                  Download {formatLabel(result.blob.type)} ({formatBytes(result.blob.size)})
-                </a>
-              )}
-            </>
-          )}
-        </>
-      }
-    />
-  );
+  const zip = async () => {
+    if (busy || packing) return;
+    const files = items.flatMap((item, index) => item.status === 'complete' && item.result ? [{ name: batchDownloadName(item.file.name, index, item.result.blob.type as OutputFormat), blob: item.result.blob }] : []);
+    if (!files.length) return;
+    const id = generation.current; setPacking(true); setError('');
+    try {
+      const { createStudioZip } = await import('@/lib/studio-zip');
+      const blob = await createStudioZip(files);
+      if (id !== generation.current) return;
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement('a'); anchor.href = url; anchor.download = 'creovly-thumbnails.zip'; anchor.click();
+      setTimeout(() => URL.revokeObjectURL(url), 30_000);
+      setMessage('ZIP prepared with ' + files.length + ' completed outputs. Failed and cancelled files are excluded.');
+    } catch (cause) { if (id === generation.current) setError(cause instanceof Error ? cause.message : 'ZIP creation failed. Download the images individually.'); }
+    finally { if (id === generation.current) setPacking(false); }
+  };
+  const complete = items.filter((item) => item.status === 'complete');
+  const settled = items.filter((item) => ['complete', 'error', 'cancelled'].includes(item.status)).length;
+  const selected = items[preview];
+  const locked = busy || packing;
+  return <ToolWorkspaceLayout workspace={<>
+    <DropZone key={fileKey} id="thumbnail-file" label="Select thumbnails" maxSizeMB={20} privacyNote="Stays on your device" onFilesSelect={select} onError={setError} disabled={locked} samples={toolSamples['youtube-thumbnail-compressor']} />
+    <p className="text-xs text-[var(--text-body)]">Up to 10 images · 20 MB each · 50 MB total. Selected files replace the current batch. Sample buttons load one image.</p>
+    <div ref={errorRef} tabIndex={-1} className="focus-ring rounded-md">{error && <Alert variant="error" title="Check your batch or settings">{error}</Alert>}</div>
+    <fieldset disabled={locked} className="space-y-5 min-w-0">
+      <legend className="sr-only">Compression settings for every image</legend>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <NumberInput id="target-size" label="Target size per image" suffix="KB" value={target} min={10} max={20000} onChange={(event) => { invalidate(); setTarget(event.target.value); }} />
+        <Select id="output-format" label="Export format" value={format} onChange={(event) => { invalidate(); setFormat(event.target.value as OutputFormat); }} options={[{ value: 'image/jpeg', label: 'JPEG' }, { value: 'image/png', label: 'PNG · transparency' }, { value: 'image/webp', label: 'WebP · web image' }]} />
+      </div>
+      <div className="flex flex-wrap gap-2">{['2000', '1500', '1000', '500'].map((value) => <button key={value} type="button" aria-pressed={target === value} onClick={() => { invalidate(); setTarget(value); }} className="rounded-md border border-[var(--border-hairline)] px-3 py-2 text-xs focus-ring disabled:opacity-50">{Number(value).toLocaleString('en-US')} KB</button>)}</div>
+      <p className="text-xs text-[var(--text-body)]">Dimensions stay unchanged. {format === 'image/jpeg' ? 'JPEG is lossy and replaces transparency with white.' : format === 'image/png' ? 'PNG preserves transparency. A size target may not be reachable, and conversion can make files larger.' : 'WebP is lossy and supports transparency. Choose JPEG or PNG when preparing a YouTube upload.'}</p>
+      {format !== 'image/png' && <details className="rounded-xl border border-[var(--border-hairline)] p-4"><summary className="text-xs font-medium cursor-pointer focus-ring rounded">Advanced quality settings</summary><div className="mt-4"><Slider id="max-quality" label="Maximum quality" min={25} max={95} value={quality} unit="%" onChange={(value) => { invalidate(); setQuality(value); }} /></div><p className="mt-3 text-xs text-[var(--text-body)]">The compressor searches down to 25% quality to try to meet your target. Inspect small text and edges.</p></details>}
+    </fieldset>
+    <div className="flex flex-wrap gap-3">
+      <Button onClick={run} disabled={!items.length || locked}>{busy ? 'Compressing…' : items.length > 1 ? 'Compress batch' : 'Compress thumbnail'}</Button>
+      {busy && <Button variant="outline" onClick={() => { controller.current?.abort(); setMessage('Cancelling current image. Completed outputs will remain available.'); }}>Cancel processing</Button>}
+      <Button variant="outline" onClick={reset} disabled={packing}>Reset</Button>
+    </div>
+    <p role="status" aria-live="polite" className="text-sm text-[var(--text-body)]">{message}</p>
+    {items.length > 0 && <div className="space-y-3">
+      <label htmlFor="batch-progress" className="text-xs text-[var(--text-body)]">{settled} / {items.length} images finished · {complete.length} outputs ready</label>
+      <progress id="batch-progress" value={settled} max={items.length} className="w-full" />
+      <ul className="divide-y divide-[var(--border-hairline)]">{items.map((item, index) => <li key={index} className="py-3 space-y-2">
+        <div className="flex flex-wrap justify-between gap-2 text-sm"><span className="break-all font-medium">{index + 1}. {item.file.name}</span><span className="text-[var(--text-body)]">{formatBytes(item.file.size)} · {item.status === 'complete' ? 'Ready' : item.status === 'error' ? 'Failed' : item.status === 'processing' ? 'Processing' : item.status === 'cancelled' ? 'Cancelled' : 'Queued'}</span></div>
+        {item.error && <p className="text-xs text-[var(--state-error-text)]">{item.error}</p>}
+        {item.result && <p className="text-xs text-[var(--text-body)]">{formatBytes(item.result.blob.size)} · {item.result.targetMet ? 'Size target met' : 'Size target not reached'}</p>}
+        <div className="flex gap-3">
+          {item.status === 'complete' && <button type="button" onClick={() => setPreview(index)} className="text-xs text-[var(--brand-accent)] underline focus-ring" aria-pressed={preview === index}>Review image {index + 1}</button>}
+          <button type="button" disabled={locked} onClick={() => { setError(''); setItems((current) => current.filter((_, at) => at !== index)); setPreview(0); setMessage('Image removed. Other completed results remain available.'); }} aria-label={'Remove image ' + (index + 1)} className="text-xs text-[var(--text-body)] underline focus-ring disabled:opacity-50">Remove</button>
+        </div>
+      </li>)}</ul>
+    </div>}
+    <p className="text-xs text-[var(--text-muted)]">Images are processed sequentially in your browser without uploads or saved batches. Reset or leave to clear them. Completed outputs are capped at 60 MB total.</p>
+  </>} results={<>
+    <div className="flex flex-wrap items-center justify-between gap-3"><h3 className="text-base font-semibold">Batch results</h3><Button onClick={zip} disabled={!complete.length || locked}>{packing ? 'Preparing ZIP…' : 'Download ZIP (' + complete.length + ')'}</Button></div>
+    <p className="text-xs text-[var(--text-body)]">The ZIP includes completed outputs only, even when a size target was missed. Unique numbered filenames prevent collisions.</p>
+    {selected?.result ? <><p className="break-all text-sm font-medium">Image {preview + 1}: {selected.file.name}</p><CompletedImage key={generation.current + '-' + preview} item={selected} index={preview} /></> : <p className="py-12 text-sm text-[var(--text-body)]">Compress your images, then select a completed image to compare the original and output and download it individually.</p>}
+  </>} />;
 }

@@ -1,10 +1,19 @@
-import React from 'react';
+'use client';
 
-export interface ToggleProps extends React.InputHTMLAttributes<HTMLInputElement> {
+import React from 'react';
+import { Switch } from '@/components/ui/switch';
+
+export interface ToggleProps {
   label: string;
   id: string;
+  name?: string;
+  checked?: boolean;
+  defaultChecked?: boolean;
+  disabled?: boolean;
   hint?: string;
   className?: string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onCheckedChange?: (checked: boolean) => void;
 }
 
 export const Toggle: React.FC<ToggleProps> = ({
@@ -13,40 +22,60 @@ export const Toggle: React.FC<ToggleProps> = ({
   name = id,
   checked,
   defaultChecked = false,
+  disabled = false,
   hint,
   className = '',
   onChange,
-  ...rest
+  onCheckedChange,
 }) => {
+  const handleCheckedChange = (nextChecked: boolean) => {
+    if (onCheckedChange) {
+      onCheckedChange(nextChecked);
+    }
+    if (onChange) {
+      // Synthesize change event for backwards compatibility
+      const syntheticEvent = {
+        target: {
+          id,
+          name,
+          type: 'checkbox',
+          checked: nextChecked,
+        },
+        currentTarget: {
+          id,
+          name,
+          type: 'checkbox',
+          checked: nextChecked,
+        },
+      } as unknown as React.ChangeEvent<HTMLInputElement>;
+      onChange(syntheticEvent);
+    }
+  };
+
   return (
-    <label
-      htmlFor={id}
-      className={`flex items-start justify-between gap-4 cursor-pointer select-none ${className}`}
+    <div
+      className={`flex items-start justify-between gap-4 select-none ${className}`}
     >
-      <div className="flex flex-col">
+      <label htmlFor={id} className="flex flex-col cursor-pointer">
         <span className="text-xs font-medium text-[var(--text-ink)] leading-snug">{label}</span>
         {hint && (
           <span className="text-[11px] text-[var(--text-muted)] leading-relaxed mt-0.5">
             {hint}
           </span>
         )}
-      </div>
+      </label>
 
-      <div className="relative inline-flex items-center shrink-0">
-        <input
+      <div className="relative inline-flex items-center shrink-0 pt-0.5">
+        <Switch
           id={id}
           name={name}
-          type="checkbox"
+          disabled={disabled}
           checked={checked}
           defaultChecked={checked !== undefined ? undefined : defaultChecked}
-          onChange={onChange}
-          className="peer sr-only"
-          {...rest}
+          onCheckedChange={handleCheckedChange}
         />
-        <div className="w-9 h-5 bg-[var(--border-hairline-strong)] peer-focus-visible:ring-2 peer-focus-visible:ring-[var(--brand-accent)] rounded-full peer peer-checked:bg-[var(--brand-accent)] transition-colors"></div>
-        <div className="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full transition-transform peer-checked:translate-x-4"></div>
       </div>
-    </label>
+    </div>
   );
 };
 

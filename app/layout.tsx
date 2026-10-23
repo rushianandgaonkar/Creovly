@@ -3,6 +3,7 @@ import { siteConfig } from '@/config/site';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import { TooltipProvider } from '@/components/ui/tooltip';
 import '@/app/globals.css';
 
 const geistSans = Geist({
@@ -47,11 +48,13 @@ export default function RootLayout({
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
-        <Header />
-        <main id="main-content" className="flex-1 w-full focus:outline-none" tabIndex={-1}>
-          {children}
-        </main>
-        <Footer />
+        <TooltipProvider>
+          <Header />
+          <main id="main-content" className="flex-1 w-full focus:outline-none" tabIndex={-1}>
+            {children}
+          </main>
+          <Footer />
+        </TooltipProvider>
       </body>
     </html>
   );

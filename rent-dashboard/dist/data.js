@@ -1,0 +1,1 @@
+const INITIAL_BILLS = [];

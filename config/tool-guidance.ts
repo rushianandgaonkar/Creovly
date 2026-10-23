@@ -28,17 +28,17 @@ export const toolGuidance: Record<string, ToolGuidance> = {
   },
   [resizer]: {
     steps: [
-      { title: 'Select a thumbnail', body: 'Choose a still JPEG, PNG, or WebP. Review its original dimensions before choosing your canvas.' },
-      { title: 'Set the framing', body: 'Choose dimensions, crop or padding, and an output format. Move the crop to keep important content visible.' },
-      { title: 'Resize and review', body: 'Select Resize thumbnail, compare the exported output, and download it. Compress afterward if needed.' },
+      { title: 'Choose your canvas', body: 'Start with a thumbnail, banner, profile picture or watermark preset, then choose a still JPEG, PNG or WebP image.' },
+      { title: 'Set the framing', body: 'Adjust cropping or padding. Preview-only banner and circle guides help you position important content; custom sizes remain available.' },
+      { title: 'Resize and review', body: 'Select Resize artwork and inspect the actual output. Download it, then check the crop in YouTube’s upload preview. Compress afterward if needed.' },
     ], related: [compressor, logo, title],
     image: { before: 'thumbnail-source.png', after: 'thumbnail-resized.jpg', beforeLabel: 'Before · 1600 × 1000', afterLabel: 'After · 1280 × 720', note: 'Center crop to fill a 16:9 canvas, exported as JPEG at 90% quality. Top and bottom edges are cropped; the image is not stretched.' },
   },
   [compressor]: {
     steps: [
-      { title: 'Select your image', body: 'Choose a still JPEG, PNG, or WebP thumbnail. Its dimensions and original file size appear in the workspace.' },
-      { title: 'Choose a size target', body: 'Set the target and format. Advanced settings let you limit JPEG or WebP quality.' },
-      { title: 'Compare and download', body: 'Compress, inspect text and edges, and download the result. If the target is missed, adjust settings or resize first.' },
+      { title: 'Select your image', body: 'Select 1–10 still JPEG, PNG, or WebP thumbnails, up to 20 MB each and 50 MB total. Files are processed one at a time.' },
+      { title: 'Choose a size target', body: 'Set the size target per image and a shared output format. Advanced settings limit JPEG or WebP quality.' },
+      { title: 'Compare and download', body: 'Compress the batch, review each completed output, and download individually or as a ZIP. Failed or cancelled files are excluded from the ZIP.' },
     ], related: [resizer, title, logo],
     image: { before: 'compressor-source.jpg', after: 'thumbnail-compressed.jpg', beforeLabel: 'Before · original JPEG', afterLabel: 'After · compressed JPEG', note: 'Same 1600 × 1000 dimensions. JPEG, 2,000 KB target, maximum quality 90%. File sizes below are measured from these example files; results vary by image and browser.' },
   },

@@ -2,7 +2,7 @@
 /* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 */
 import { createPageMetadata } from '@/lib/metadata';
 import Button from '@/components/ui/Button';
-import ToolDiscovery from '@/components/tools/ToolDiscovery';
+import PolaroidLineCarousel from '@/components/ui/polaroid-line-carousel';
 import CreatorHero from '@/components/home/CreatorHero';
 import { siteConfig, toolRegistry } from '@/config/site';
 
@@ -20,13 +20,12 @@ export default function HomePage() {
     <>
       <CreatorHero />
 
-      {/* The 3-Step Pre-Publish Workflow */}
-      <WorkflowShowcase />
+      {/* Primary tool discovery */}
+      <div id="tools" className="home-tools max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 scroll-mt-6">
+        <PolaroidLineCarousel tools={toolRegistry.filter(tool => tool.status === 'available')} />
+      </div>
 
-      {/* Primary Tool Discovery Workbench */}
-      <main id="tools" className="home-tools max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 scroll-mt-6">
-        <ToolDiscovery tools={toolRegistry} visualCards />
-      </main>
+      <WorkflowShowcase />
 
       {/* Pre-Publish Workflow Destinations */}
       <section aria-label="Pre-publish workflow options" className="max-w-6xl mx-auto px-4 sm:px-6 pb-12 sm:pb-16">

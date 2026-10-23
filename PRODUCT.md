@@ -26,17 +26,18 @@ A zero-friction, local-first pre-publish command center:
 
 - Pre-upload phase of YouTube content production
 - Desktop and mobile browser environments
-- YouTube platform constraints: 1280×720 thumbnail resolution, 2MB thumbnail file size limit, 100-character title limit with ~50-60 character mobile truncation boundary, 9:16 Shorts interactive UI overlay safe zones
+- Creator preparation: configurable thumbnail dimensions and file-size targets, conservative title-length checks, and manual 9:16 Shorts planning margins. Verify current platform requirements before changing upload guidance.
 - Local project archiving: saving metadata drafts and exporting zipped project assets (.zip) for upload readiness
 
 ## Capabilities and Constraints
 
 ### Implemented Capabilities (Step 3 Phase)
 - **Local Publish Studio**: Multi-pane project workspace combining title analysis, description, thumbnail upload/inspection, Shorts planning, checklist items, local text draft save/load, and ZIP export.
-- **Logo Background Remover**: Pure client-side canvas-based solid background remover with tolerance, edge feathering, eyedropper color picker, and transparent PNG export.
-- **Thumbnail Tools**: Browser-based client-side compressor (JPEG/WebP export under 2MB) and resizer (1280×720 HD with aspect fit/fill options).
-- **Shorts Safe Zone Guide**: Interactive 9:16 preview with official YouTube mobile overlay masks (avatar, like/comment sidebar, sound title, progress bar).
-- **Title Checker**: Live character counter, mobile truncation preview, sentiment, and power word analysis.
+- **Logo Background Remover**: Local solid-color background removal with a background color control, tolerance, border-connected removal, and transparent PNG export. No feathering, image eyedropper, or photo-subject detection.
+- **Thumbnail Tools**: Local JPEG/PNG/WebP compression with user-selected targets that may not be achievable, plus a resizer with presets, custom dimensions, cropping and padding. Compression supports up to 10 images, 50 MB aggregate input, per-file results, cancellation and ZIP export.
+- **Shorts Safe Zone Guide**: Manual 9:16 planning margins and an optional content rectangle, with geometric overlap checks and annotated PNG export. Margins are not official YouTube measurements.
+- **Channel Artwork Presets**: The existing resizer includes banner (2560×1440), profile (800×800 Creovly preset), and watermark asset (150×150) canvases. Banner and circle guides are preview-only; exports stay rectangular. Watermark preparation does not place logos on images or remove backgrounds.
+- **Title Checker**: Character-unit counter, illustrative wrapping preview, whitespace/punctuation/uppercase checks, and optional exact topic phrase matching. No sentiment analysis or predicted click-through score.
 - **Calculators**: YouTube revenue, RPM, monetization, and watch hours calculators.
 - **Pre-Publish Checklist**: Comprehensive interactive launch checklist.
 

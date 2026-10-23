@@ -10,6 +10,12 @@ import type { FAQItem } from '@/types';
 import { toolGuidance } from '@/config/tool-guidance';
 import ToolDemonstration from './ToolDemonstration';
 import ToolSteps from './ToolSteps';
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from '@/components/ui/accordion';
 
 export interface ToolPageShellProps {
   title: string;
@@ -22,6 +28,7 @@ export interface ToolPageShellProps {
   results?: React.ReactNode;
   children?: React.ReactNode;
   educationalContent?: React.ReactNode;
+  className?: string;
 }
 
 const previewFaqs: FAQItem[] = [
@@ -48,6 +55,7 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
   results,
   children,
   educationalContent,
+  className = '',
 }) => {
   const tool = toolRegistry.find((entry) => entry.slug === toolSlug);
   const isPreview = tool?.status !== 'available';
@@ -66,7 +74,7 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
     .slice(0, 3);
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <div className={`max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 ${className}`}>
       {/* Precision Breadcrumb */}
       <nav
         className="flex items-center gap-2 text-xs font-mono text-[var(--text-muted)] mb-6 overflow-x-auto whitespace-nowrap"
@@ -252,36 +260,23 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
           >
             Frequently Asked Questions
           </h2>
-          <div className="mt-6 divide-y divide-[var(--border-hairline)] rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] shadow-[var(--shadow-whisper)] overflow-hidden">
-            {displayedFaqs.map((faq) => (
-              <details
-                key={faq.question}
-                className="group p-5 hover:bg-[var(--bg-canvas-subtle)] transition-colors"
-              >
-                <summary className="flex items-center justify-between text-sm font-semibold text-[var(--text-ink)] cursor-pointer focus-ring rounded list-none select-none">
-                  <span>{faq.question}</span>
-                  <span className="ml-4 shrink-0 text-[var(--text-muted)] group-open:rotate-180 transition-transform duration-200">
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </span>
-                </summary>
-                <p className="mt-3 text-sm text-[var(--text-body)] leading-relaxed pr-8">
-                  {faq.answer}
-                </p>
-              </details>
-            ))}
+          <div className="mt-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] shadow-[var(--shadow-whisper)] overflow-hidden p-2 sm:p-4">
+            <Accordion type="single" collapsible className="w-full">
+              {displayedFaqs.map((faq, index) => (
+                <AccordionItem
+                  key={faq.question}
+                  value={`faq-${index}`}
+                  className="px-2 sm:px-4 border-b border-[var(--border-hairline)] last:border-b-0"
+                >
+                  <AccordionTrigger className="text-left text-sm font-semibold text-[var(--text-ink)] hover:no-underline py-4">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-sm text-[var(--text-body)] leading-relaxed pb-4">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </section>
       )}

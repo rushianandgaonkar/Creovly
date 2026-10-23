@@ -89,6 +89,10 @@ Inner pages use a compact gradient title panel, approved after the homepage refi
 
 Keep gradients confined to the introduction; working forms, results, and educational sections retain clear neutral surfaces. Do not repeat decorative gradients behind each section.
 
+The homepage hanging tool gallery may use a scoped soft-blue background wash behind white paper cards, with a deep-blue wash and elevated dark paper in dark mode. This gallery treatment does not extend to working tool interfaces or other homepage sections.
+
+Channel artwork phase: the resizer may use a scoped cool-blue and warm-neutral background wash around the workspace, as requested by the user. Forms and results retain neutral surfaces. Its preset selector uses small layered folder diagrams adapted from the supplied design references; selection is explicit and keyboard accessible. The directory retains its existing discovery interface.
+
 ## 7. Layout Principles
 
 - Marketing content max width: approximately 1152–1200px
@@ -154,14 +158,20 @@ Do not fabricate functionality. If a tool is not implemented, label it as previe
 The homepage is a customer-facing product page, not a design-system playground.
 
 Keep:
-- compact centered introduction with the brand promise, restrained blue glow, and subtle static grid
-- working tool search and category filters immediately after the introduction
-- consistent visual tool cards with decorative diagrams, without fabricated live results
+- compact centered introduction with the brand promise and direct tool/Publish Studio actions
+- a registry-fed hanging Polaroid tool carousel directly after the introduction, showing all nine available tools
+- white paper cards with restrained tilt, a fine hanging line, blue clips, and existing decorative tool diagrams, without fabricated live results; dark mode uses elevated dark paper with readable text
+- manual arrow controls, native horizontal/touch scrolling, desktop dragging, and keyboard navigation with visible focus and semantic links to the existing tool URLs
+- all nine named jump selectors below the cards, with a clear current selection and tool count
+- subtle hover/focus motion only; no autoplay, with reduced-motion support for card treatment and scrolling
+- a direct link to the tool directory, where working search and category filters remain available
 - working Publish Studio introduction below the tools
 - useful tool discovery
 - category/product benefits
 - privacy or browser-processing claims only where true
 - creator-oriented workflow story
+
+This homepage discovery change preserves the existing working tool pages and their URLs.
 
 Do not expose:
 - design token showcases

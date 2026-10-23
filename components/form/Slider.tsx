@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { Slider as AnimatedSlider } from '@/components/ui/slider';
 
 export interface SliderProps {
   label: string;
@@ -19,7 +20,6 @@ export interface SliderProps {
 export const Slider: React.FC<SliderProps> = ({
   label,
   id,
-  name = id,
   min = 0,
   max = 100,
   step = 1,
@@ -35,8 +35,8 @@ export const Slider: React.FC<SliderProps> = ({
 
   const currentValue = value !== undefined ? value : internalValue;
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const nextVal = Number(e.target.value);
+  const handleValueChange = (vals: number[]) => {
+    const nextVal = vals[0] ?? min;
     if (value === undefined) {
       setInternalValue(nextVal);
     }
@@ -56,16 +56,14 @@ export const Slider: React.FC<SliderProps> = ({
         </span>
       </div>
 
-      <input
+      <AnimatedSlider
         id={id}
-        name={name}
-        type="range"
         min={min}
         max={max}
         step={step}
-        value={currentValue}
-        onChange={handleChange}
-        className="w-full h-1.5 bg-[var(--border-hairline)] rounded-lg appearance-none cursor-pointer accent-[var(--brand-accent)] focus-ring"
+        value={[currentValue]}
+        onValueChange={handleValueChange}
+        className="w-full cursor-pointer py-1"
       />
 
       <div className="flex items-center justify-between text-[11px] font-mono text-[var(--text-muted)] select-none">
