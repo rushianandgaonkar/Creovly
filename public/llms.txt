@@ -30,3 +30,10 @@ Creovly is a private, in-browser workspace for YouTube creators. Compress thumbn
 - [Decoding YouTube RPM](https://creovly.com/guides/decoding-youtube-rpm): Platform mathematics explaining RPM vs CPM, YouTube's 55/45 creator revenue share, Shorts ad pool mechanics, and seasonal revenue swings.
 - [YouTube Shorts Safe Zone Reference](https://creovly.com/guides/youtube-shorts-safe-zone): Engineering breakdown of 9:16 vertical video UI boundaries, title safe zones, and comment button collision areas.
 
+
+## Company & Support
+
+- [About Creovly](https://creovly.com/about): Mission, philosophy, and privacy engineering principles.
+- [Contact Support](https://creovly.com/contact): Creator feedback, feature requests, and support inquiries.
+- [Privacy Policy](https://creovly.com/privacy): Details on our 100% client-side, local processing architecture.
+- [Terms of Service](https://creovly.com/terms): Creator IP ownership and acceptable use policies.

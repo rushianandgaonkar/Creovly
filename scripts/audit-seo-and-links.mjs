@@ -70,18 +70,28 @@ async function runAudit() {
     issues.push(`Failed to fetch /sitemap.xml: ${err.message}`);
   }
 
-  // 3. Verify manifest.webmanifest
-  console.log('\n3. Checking /manifest.webmanifest ...');
+  // 3. Verify site.webmanifest and favicons
+  console.log('\n3. Checking /site.webmanifest & favicon assets ...');
   try {
-    const manifest = await fetchUrl('/manifest.webmanifest');
+    const manifest = await fetchUrl('/site.webmanifest');
     if (manifest.status !== 200) {
-      issues.push(`manifest.webmanifest returned HTTP ${manifest.status}`);
+      issues.push(`site.webmanifest returned HTTP ${manifest.status}`);
     } else {
       const parsed = JSON.parse(manifest.text);
       console.log(`   ✓ Manifest valid JSON: "${parsed.name}"`);
     }
+
+    const favicons = ['/favicon-96x96.png', '/apple-touch-icon.png', '/favicon.ico', '/favicon.svg'];
+    for (const fav of favicons) {
+      const favRes = await fetchUrl(fav);
+      if (favRes.status !== 200) {
+        issues.push(`Favicon asset ${fav} returned HTTP ${favRes.status}`);
+      } else {
+        console.log(`   ✓ Favicon asset ${fav} returned 200 OK`);
+      }
+    }
   } catch (err) {
-    issues.push(`Failed to fetch /manifest.webmanifest: ${err.message}`);
+    issues.push(`Failed to fetch manifest/favicons: ${err.message}`);
   }
 
   // 4. Verify llms.txt

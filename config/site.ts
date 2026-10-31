@@ -76,7 +76,12 @@ export const footerNavigation = {
       ],
     },
   ],
-  company: [] as NavItem[],
+  company: [
+    { name: 'About Creovly', href: '/about' },
+    { name: 'Contact Us', href: '/contact' },
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+  ],
 };
 
 export const toolRegistry: ToolDefinition[] = [

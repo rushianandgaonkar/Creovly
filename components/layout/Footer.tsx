@@ -82,8 +82,28 @@ export const Footer: React.FC = () => {
           ))}
         </div>
 
+        {/* Company & Legal Navigation */}
+        {footerNavigation.company.length > 0 && (
+          <div className="mt-10 pt-6 border-t border-[var(--border-hairline-subtle)] flex flex-wrap items-center justify-between gap-4 text-xs">
+            <nav aria-label="Company and Legal links" className="flex flex-wrap gap-x-6 gap-y-2 text-[var(--text-body)]">
+              {footerNavigation.company.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="hover:text-[var(--text-ink)] transition-colors focus-ring rounded"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+            <div className="flex items-center gap-2 text-[11px] font-mono text-[var(--text-muted)]">
+              <span>Client-Side Architecture</span>
+            </div>
+          </div>
+        )}
+
         {/* Bottom Bar */}
-        <div className="mt-12 pt-6 border-t border-[var(--border-hairline-subtle)] flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-[var(--text-muted)]">
+        <div className="mt-6 pt-4 border-t border-[var(--border-hairline-subtle)] flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-[var(--text-muted)]">
           <p className="font-mono">
             &copy; {currentYear} {siteConfig.name}. All processing occurs locally in your browser.
           </p>
