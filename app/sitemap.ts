@@ -2,6 +2,8 @@ import type { MetadataRoute } from 'next';
 import { siteConfig, toolRegistry } from '@/config/site';
 import { guides } from '@/lib/guides';
 
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url.replace(/\/$/, '');
   const currentDate = new Date().toISOString().split('T')[0];
