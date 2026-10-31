@@ -9,5 +9,19 @@ export default function nextConfig(phase) {
     devIndicators: false,
     // Development must not overwrite the files used by a production preview.
     distDir: phase === constants.PHASE_DEVELOPMENT_SERVER ? '.next-dev' : '.next',
+    async redirects() {
+      return [
+        {
+          source: '/sitemap-0.xml',
+          destination: '/sitemap.xml',
+          permanent: true,
+        },
+        {
+          source: '/sitemap_index.xml',
+          destination: '/sitemap.xml',
+          permanent: true,
+        },
+      ];
+    },
   };
 }
