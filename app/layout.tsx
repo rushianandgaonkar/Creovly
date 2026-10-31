@@ -23,9 +23,100 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  keywords: [
+    'YouTube creator tools',
+    'YouTube thumbnail compressor',
+    'YouTube thumbnail resizer',
+    'Shorts safe zone checker',
+    'YouTube title checker',
+    'YouTube RPM calculator',
+    'YouTube revenue calculator',
+    'YouTube monetization calculator',
+    'YouTube pre-publish checklist',
+    'Publish Studio',
+    'Creovly',
+  ],
+  authors: [{ name: 'Creovly' }],
+  creator: 'Creovly',
+  publisher: 'Creovly',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    description: siteConfig.description,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    description: siteConfig.description,
+    creator: '@creovly',
+  },
   icons: {
     icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }, { url: '/favicon.ico' }],
   },
+  alternates: {
+    canonical: '/',
+  },
+};
+
+const jsonLdData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebApplication',
+      '@id': `${siteConfig.url}/#app`,
+      name: siteConfig.name,
+      url: siteConfig.url,
+      description: siteConfig.description,
+      applicationCategory: 'MultimediaApplication',
+      operatingSystem: 'Any (Modern Web Browser)',
+      browserRequirements: 'Requires JavaScript. Requires HTML5.',
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+      },
+      featureList: [
+        'YouTube Thumbnail Compressor with local client-side processing',
+        'YouTube Thumbnail Resizer with 16:9 1280x720 framing guides',
+        'Logo Background Remover with local transparent PNG export',
+        'YouTube Shorts Safe Zone Checker with vertical UI overlays',
+        'YouTube Title Checker & Analyzer with mobile wrapping preview',
+        'Creator Monetization, RPM, and Watch Hours scenario calculators',
+        'Pre-Publish Creator Checklist and Publish Studio project packager',
+      ],
+    },
+    {
+      '@type': 'Organization',
+      '@id': `${siteConfig.url}/#organization`,
+      name: siteConfig.name,
+      url: siteConfig.url,
+      logo: `${siteConfig.url}/favicon.svg`,
+      sameAs: [siteConfig.links.twitter, siteConfig.links.github],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteConfig.url}/#website`,
+      name: siteConfig.name,
+      url: siteConfig.url,
+      publisher: {
+        '@id': `${siteConfig.url}/#organization`,
+      },
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -40,6 +131,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem('creovly-theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(!t&&d)){document.documentElement.classList.add('dark')}else{document.documentElement.classList.remove('dark')}}catch(e){}})()`,
           }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
         />
       </head>
       <body

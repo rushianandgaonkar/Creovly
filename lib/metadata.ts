@@ -24,7 +24,7 @@ export function createPageMetadata({ title, description, path, noindex = false }
       title: socialTitle,
       description,
     },
-    twitter: { card: 'summary', title: socialTitle, description },
+    twitter: { card: 'summary_large_image', title: socialTitle, description },
     robots: { index: !noindex, follow: true },
   };
 }

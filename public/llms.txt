@@ -1,0 +1,32 @@
+# Creovly
+
+> Create smarter. Publish better.
+
+Creovly is an in-browser pre-publish workspace and creator toolkit engineered specifically for YouTube creators. All processing (compression, resizing, background removal, title checks, financial scenarios) runs locally in the creator's browser with zero cloud storage, zero tracking, and complete privacy.
+
+## Core Features
+
+- [Creovly Publish Studio](https://creovly.com/studio): Unified pre-publish packaging command center for YouTube titles, thumbnails, Shorts safe zones, and file export packages.
+- [Pre-Publish Checklist](https://creovly.com/checklist): Interactive pre-flight checklist covering YouTube title, thumbnail, monetization, tags, and copyright requirements.
+
+## Creative & Packaging Tools
+
+- [YouTube Thumbnail Compressor](https://creovly.com/tools/youtube-thumbnail-compressor): Client-side image compression supporting JPG, PNG, and WebP targeting YouTube's 2 MB limit with side-by-side quality inspection.
+- [YouTube Thumbnail Resizer](https://creovly.com/tools/youtube-thumbnail-resizer): Fast client-side resizing for 1280x720 16:9 thumbnails, banners (2048x1152), and channel icons.
+- [Logo Background Remover](https://creovly.com/tools/logo-background-remover): Local flood-fill edge detection algorithm removing solid backgrounds from channel avatars and logos into transparent PNGs.
+- [YouTube Shorts Safe Zone Checker](https://creovly.com/tools/youtube-shorts-safe-zone): Overlay inspector simulating YouTube UI elements (subscribe button, sound icon, title overlay) over 9:16 vertical video frames.
+- [YouTube Title Checker & Analyzer](https://creovly.com/tools/youtube-title-checker): Real-time title length, character count, mobile truncation warning, and power word analysis.
+
+## Creator Monetization & Mathematics Calculators
+
+- [YouTube Revenue Calculator](https://creovly.com/tools/youtube-revenue-calculator): Estimate monthly and annual ad revenue based on creator-provided RPM and expected view volume.
+- [YouTube RPM Calculator](https://creovly.com/tools/youtube-rpm-calculator): Calculate precise revenue per mille (1,000 views) from existing YouTube Studio revenue and view data.
+- [YouTube Watch Hours Calculator](https://creovly.com/tools/youtube-watch-hours-calculator): Milestone projection calculator for reaching 4,000 public watch hours needed for YouTube Partner Program (YPP).
+- [YouTube Monetization Calculator](https://creovly.com/tools/youtube-monetization-calculator): Comprehensive scenario builder incorporating ad revenue, channel memberships, sponsorship deals, and operating expenses.
+
+## Verified Creator Guides
+
+- [The YouTube Thumbnail Blueprint](https://creovly.com/guides/youtube-thumbnail-blueprint): Official YouTube platform specs for 1280x720 resolution, 2 MB mobile caps, sRGB color spaces, and mobile CTR optimization.
+- [Decoding YouTube RPM](https://creovly.com/guides/decoding-youtube-rpm): Platform mathematics explaining RPM vs CPM, YouTube's 55/45 creator revenue share, Shorts ad pool mechanics, and seasonal revenue swings.
+- [YouTube Shorts Safe Zone Reference](https://creovly.com/guides/youtube-shorts-safe-zone): Engineering breakdown of 9:16 vertical video UI boundaries, title safe zones, and comment button collision areas.
+
