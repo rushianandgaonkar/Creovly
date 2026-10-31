@@ -47,8 +47,8 @@ async function runAudit() {
     issues.push(`Failed to fetch /robots.txt: ${err.message}`);
   }
 
-  // 2. Verify sitemap.xml
-  console.log('\n2. Checking /sitemap.xml ...');
+  // 2. Verify sitemap.xml & sitemap_index.xml
+  console.log('\n2. Checking /sitemap.xml & /sitemap_index.xml ...');
   const sitemapUrls = [];
   try {
     const sitemap = await fetchUrl('/sitemap.xml');
@@ -61,13 +61,27 @@ async function runAudit() {
       while ((match = locRegex.exec(sitemap.text)) !== null) {
         sitemapUrls.push(match[1]);
       }
-      console.log(`   ✓ Found ${sitemapUrls.length} URLs in sitemap`);
+      console.log(`   ✓ Found ${sitemapUrls.length} URLs in sitemap.xml`);
       if (sitemapUrls.length < 15) {
         issues.push(`Expected >= 15 URLs in sitemap, found ${sitemapUrls.length}`);
       }
     }
+
+    const sitemapIndex = await fetchUrl('/sitemap_index.xml');
+    if (sitemapIndex.status !== 200) {
+      issues.push(`sitemap_index.xml returned HTTP ${sitemapIndex.status}`);
+    } else {
+      console.log('   ✓ /sitemap_index.xml returned 200 OK');
+    }
+
+    const sitemap0 = await fetchUrl('/sitemap-0.xml');
+    if (sitemap0.status !== 200) {
+      issues.push(`sitemap-0.xml returned HTTP ${sitemap0.status}`);
+    } else {
+      console.log('   ✓ /sitemap-0.xml returned 200 OK');
+    }
   } catch (err) {
-    issues.push(`Failed to fetch /sitemap.xml: ${err.message}`);
+    issues.push(`Failed to fetch sitemaps: ${err.message}`);
   }
 
   // 3. Verify site.webmanifest and favicons
