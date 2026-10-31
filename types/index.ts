@@ -13,6 +13,7 @@ export interface SiteConfig {
     twitter: string;
     github: string;
   };
+  ogImage?: string;
 }
 
 export interface NavItem {

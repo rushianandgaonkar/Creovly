@@ -57,11 +57,20 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
     description: siteConfig.description,
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.name} — ${siteConfig.tagline}`,
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
     description: siteConfig.description,
+    images: ['/og-image.png'],
     creator: '@creovly',
   },
   icons: {
@@ -81,6 +90,7 @@ const jsonLdData = {
       name: siteConfig.name,
       url: siteConfig.url,
       description: siteConfig.description,
+      image: `${siteConfig.url}/og-image.png`,
       applicationCategory: 'MultimediaApplication',
       operatingSystem: 'Any (Modern Web Browser)',
       browserRequirements: 'Requires JavaScript. Requires HTML5.',

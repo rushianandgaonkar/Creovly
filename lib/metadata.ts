@@ -23,8 +23,21 @@ export function createPageMetadata({ title, description, path, noindex = false }
       url,
       title: socialTitle,
       description,
+      images: [
+        {
+          url: '/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: `${siteConfig.name} — ${siteConfig.tagline}`,
+        },
+      ],
     },
-    twitter: { card: 'summary_large_image', title: socialTitle, description },
+    twitter: {
+      card: 'summary_large_image',
+      title: socialTitle,
+      description,
+      images: ['/og-image.png'],
+    },
     robots: { index: !noindex, follow: true },
   };
 }

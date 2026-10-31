@@ -10,7 +10,7 @@ export const siteConfig: SiteConfig = {
   url: 'https://creovly.com',
   tagline: 'Create smarter. Publish better.',
   description:
-    'Prepare thumbnails, check title drafts and Shorts framing, and calculate creator income scenarios locally. Explore Publish Studio and use the publishing checklist.',
+    'Creovly is a private, in-browser workspace for YouTube creators. Compress thumbnails, check title hooks, verify Shorts safe zones, and model revenue locally.',
   flagship: {
     name: 'Creovly Publish Studio',
     tagline: 'The unified pre-publish command center for creators',
@@ -20,6 +20,7 @@ export const siteConfig: SiteConfig = {
     twitter: 'https://twitter.com/creovly',
     github: 'https://github.com/creovly',
   },
+  ogImage: '/og-image.png',
 };
 
 export const toolCategories = [

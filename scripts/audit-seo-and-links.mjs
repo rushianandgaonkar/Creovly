@@ -148,14 +148,16 @@ async function runAudit() {
       const ogTitle = page.text.match(/<meta[^>]*property=["']og:title["'][^>]*content=["']([^"']*)["']/i);
       const ogDesc = page.text.match(/<meta[^>]*property=["']og:description["'][^>]*content=["']([^"']*)["']/i);
       const ogUrl = page.text.match(/<meta[^>]*property=["']og:url["'][^>]*content=["']([^"']*)["']/i);
-      if (!ogTitle || !ogDesc || !ogUrl) {
-        issues.push(`[${pagePath}] Incomplete OpenGraph tags (title: ${!!ogTitle}, desc: ${!!ogDesc}, url: ${!!ogUrl})`);
+      const ogImage = page.text.match(/<meta[^>]*property=["']og:image["'][^>]*content=["']([^"']*)["']/i);
+      if (!ogTitle || !ogDesc || !ogUrl || !ogImage) {
+        issues.push(`[${pagePath}] Incomplete OpenGraph tags (title: ${!!ogTitle}, desc: ${!!ogDesc}, url: ${!!ogUrl}, image: ${!!ogImage})`);
       }
 
       // Check Twitter Card
       const twitterCard = page.text.match(/<meta[^>]*name=["']twitter:card["'][^>]*content=["']([^"']*)["']/i);
-      if (!twitterCard) {
-        issues.push(`[${pagePath}] Missing <meta name="twitter:card">`);
+      const twitterImage = page.text.match(/<meta[^>]*name=["']twitter:image["'][^>]*content=["']([^"']*)["']/i);
+      if (!twitterCard || !twitterImage) {
+        issues.push(`[${pagePath}] Missing Twitter tags (card: ${!!twitterCard}, image: ${!!twitterImage})`);
       }
 
       // Check Schema.org JSON-LD

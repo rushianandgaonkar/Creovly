@@ -1,5 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="8" fill="#171717"/>
-  <rect x="5" y="5" width="22" height="22" rx="6" stroke="#ffffff" stroke-width="2"/>
-  <path d="M12 10.5 20 16l-8 5.5v-11Z" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" role="img" aria-label="Creovly colored logo">
+  <defs>
+    <linearGradient id="base" x1="61" y1="12" x2="193" y2="226" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#11B8F4"/>
+      <stop offset="0.34" stop-color="#2658FF"/>
+      <stop offset="0.66" stop-color="#7922FA"/>
+      <stop offset="1" stop-color="#FD238D"/>
+    </linearGradient>
+    <radialGradient id="warm" cx="0" cy="0" r="1" gradientTransform="translate(194 180) rotate(-137) scale(111 87)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFAE12"/>
+      <stop offset="0.42" stop-color="#FF5C27"/>
+      <stop offset="0.76" stop-color="#F52A5B" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#F52A5B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="purple" cx="0" cy="0" r="1" gradientTransform="translate(75 228) rotate(-65) scale(133 105)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A600FF"/>
+      <stop offset="0.56" stop-color="#6626FF" stop-opacity="0.94"/>
+      <stop offset="1" stop-color="#6526FF" stop-opacity="0"/>
+    </radialGradient>
+    <path id="shape" fill-rule="evenodd" d="M 27 58 C 27 21 66 2 98 20 L 212 88 C 246 108 246 150 212 170 L 98 238 C 66 257 27 236 27 199 Z M 87 95 L 87 161 C 87 171 95 177 104 172 L 163 137 C 172 132 172 125 163 120 L 104 85 C 95 80 87 85 87 95 Z"/>
+    <clipPath id="ring"><use href="#shape"/></clipPath>
+  </defs>
+  <use href="#shape" fill="url(#base)"/>
+  <g clip-path="url(#ring)">
+    <rect width="256" height="256" fill="url(#purple)"/>
+    <rect width="256" height="256" fill="url(#warm)"/>
+  </g>
 </svg>
