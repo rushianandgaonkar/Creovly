@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
 import Button from '@/components/ui/Button';
 
 interface WorkflowStep {
@@ -19,7 +18,7 @@ const steps: WorkflowStep[] = [
   {
     id: 'visuals',
     number: '01',
-    tag: 'VISUAL AUDIT',
+    tag: 'Visual Audit',
     title: 'Verify thumbnail specs & eliminate UI overlap',
     description:
       'Never lose CTR to an obscured title or an oversized payload. Validate 1280×720 HD resolution, compress under the 2MB YouTube upload ceiling, and keep critical focal points out of the bottom-right timestamp zone.',
@@ -34,7 +33,7 @@ const steps: WorkflowStep[] = [
   {
     id: 'metadata',
     number: '02',
-    tag: 'METADATA ENGINE',
+    tag: 'Metadata Engine',
     title: 'Stress-test titles against mobile truncation',
     description:
       'Over 70% of YouTube views originate on smartphones. Check where mobile home feeds truncate titles behind ellipses, calibrate keyword placement, and ensure your core emotional hook lands in the first 50 characters.',
@@ -49,7 +48,7 @@ const steps: WorkflowStep[] = [
   {
     id: 'package',
     number: '03',
-    tag: 'ZERO-CLOUD PACKAGING',
+    tag: 'Zero-Cloud Packaging',
     title: 'Consolidate assets into an upload-ready ZIP',
     description:
       'Publish Studio brings title drafts, description formatting, prepared thumbnails, and an 11-point readiness checklist into a unified local workspace. Export everything as a structured ZIP archive ready for YouTube Studio.',
@@ -74,10 +73,6 @@ export default function WorkflowShowcase() {
     >
       {/* Section Header */}
       <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 space-y-3">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)] font-semibold select-none">
-          <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
-          The Pre-Publish Workflow
-        </div>
         <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--text-ink)]">
           From rough draft to publish-ready in 3 steps
         </h2>
@@ -107,14 +102,14 @@ export default function WorkflowShowcase() {
               >
                 <div className="flex items-center justify-between gap-2 mb-2">
                   <span
-                    className={`text-xs font-mono font-bold tracking-wider ${
+                    className={`text-xs font-semibold tracking-wide ${
                       isActive ? 'text-[var(--brand-accent)]' : 'text-[var(--text-muted)]'
                     }`}
                   >
-                    STEP {step.number} • {step.tag}
+                    Stage {step.number} &bull; {step.tag}
                   </span>
                   {isActive && (
-                    <span className="w-2 h-2 rounded-full bg-[var(--brand-accent)] animate-pulse" />
+                    <span className="w-2 h-2 rounded-full bg-[var(--brand-accent)]" />
                   )}
                 </div>
                 <h3
@@ -131,14 +126,17 @@ export default function WorkflowShowcase() {
 
         {/* Dynamic Interactive Preview Panel */}
         <div className="lg:col-span-7">
-          <div className="rounded-2xl border border-[var(--border-hairline-strong)] bg-[var(--bg-canvas-elevated)] p-6 sm:p-8 shadow-[var(--shadow-floating)] space-y-6">
+          <div
+            data-ui
+            className="rounded-2xl border border-[var(--border-hairline-strong)] bg-[var(--bg-canvas-elevated)] p-6 sm:p-8 shadow-[var(--shadow-floating)] space-y-6"
+          >
             {/* Step Header */}
             <div className="space-y-2 border-b border-[var(--border-hairline)] pb-5">
               <div className="flex items-center justify-between gap-2">
-                <span className="text-xs font-mono uppercase tracking-wider text-[var(--brand-accent)] font-semibold">
+                <span className="text-xs font-semibold tracking-wide text-[var(--brand-accent)]">
                   Stage {activeStep.number} &mdash; {activeStep.tag}
                 </span>
-                <span className="text-xs font-mono text-[var(--text-muted)]">100% Client-Side</span>
+                <span className="text-xs text-[var(--text-muted)]">100% Client-Side</span>
               </div>
               <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[var(--text-ink)]">
                 {activeStep.title}
@@ -148,73 +146,154 @@ export default function WorkflowShowcase() {
               </p>
             </div>
 
-            {/* Interactive Visual Graphic for Current Step */}
-            <div className="rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] p-5 space-y-4">
+            {/* High-Fidelity Visual Graphic for Current Step */}
+            <div className="rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] p-4 sm:p-5 space-y-4">
               {activeStepIndex === 0 && (
-                /* Step 1 Graphic: Thumbnail Comparison & Checks */
+                /* Step 1 Graphic: Side-by-Side Before/After Visual Comparison */
                 <div className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                    <div className="p-3.5 rounded-lg border border-red-200 dark:border-red-950/80 bg-red-50/50 dark:bg-red-950/20 space-y-1.5">
-                      <div className="flex items-center justify-between text-red-700 dark:text-red-400 font-semibold font-mono">
-                        <span>BEFORE OPTIMIZATION</span>
-                        <span>⚠️ 4.2 MB</span>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {/* Before Frame: Raw Uncompressed Export with Alert */}
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between text-xs">
+                        <span className="font-semibold text-red-600 dark:text-red-400">
+                          Before: Raw Export
+                        </span>
+                        <span className="text-[11px] font-semibold text-red-700 dark:text-red-300 bg-red-500/10 px-2 py-0.5 rounded border border-red-500/20">
+                          4.2 MB &bull; Rejection
+                        </span>
                       </div>
-                      <p className="text-[11px] text-[var(--text-body)]">
-                        Exceeds YouTube 2MB limit. Reject on upload. Key title words hidden behind timestamp badge.
+                      <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-red-500/40 shadow-sm bg-black">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src="/examples/compressor-source.jpg"
+                          alt="Before optimization uncompressed thumbnail"
+                          width={320}
+                          height={180}
+                          className="w-full h-full object-cover opacity-85"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        {/* Danger Indicator covering critical words */}
+                        <div className="absolute bottom-2 right-2 bg-red-600/95 text-white text-[10px] font-semibold px-2 py-1 rounded shadow-md flex items-center gap-1">
+                          <span>14:20 Badge Covers Title Hook</span>
+                        </div>
+                      </div>
+                      <p className="text-[11px] text-[var(--text-muted)]">
+                        Exceeds YouTube 2MB ceiling. Rejection on upload, with vital text obscured behind timestamp.
                       </p>
                     </div>
 
-                    <div className="p-3.5 rounded-lg border border-emerald-200 dark:border-emerald-950/80 bg-emerald-50/50 dark:bg-emerald-950/20 space-y-1.5">
-                      <div className="flex items-center justify-between text-emerald-700 dark:text-emerald-400 font-semibold font-mono">
-                        <span>CREOVLY VERIFIED</span>
-                        <span>✓ 1.2 MB</span>
+                    {/* After Frame: Creovly Verified & Compressed */}
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between text-xs">
+                        <span className="font-semibold text-emerald-600 dark:text-emerald-400">
+                          Creovly Verified
+                        </span>
+                        <span className="text-[11px] font-semibold text-emerald-700 dark:text-emerald-300 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                          1.1 MB &bull; Ready
+                        </span>
                       </div>
-                      <p className="text-[11px] text-[var(--text-body)]">
-                        1280×720 HD resolution verified. 71% file size reduction. Clean safe zones confirmed.
+                      <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-emerald-500/50 shadow-sm bg-black">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src="/examples/compressor-source.jpg"
+                          alt="After optimization Creovly verified thumbnail"
+                          width={320}
+                          height={180}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        {/* YouTube Timestamp badge placed safely */}
+                        <div className="absolute bottom-2 right-2 bg-black/90 text-white text-[10px] font-medium px-1.5 py-0.5 rounded shadow">
+                          14:20
+                        </div>
+                        {/* Verified Safe Zone Overlay Tag */}
+                        <div className="absolute top-2 left-2 bg-emerald-600 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded shadow">
+                          1280&times;720 HD Pass
+                        </div>
+                      </div>
+                      <p className="text-[11px] text-[var(--text-muted)]">
+                        74% size reduction to 1.1 MB WebP. Crisp clarity preserved with safe-zone clearance verified.
                       </p>
                     </div>
                   </div>
 
-                  <div className="p-3 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] flex items-center justify-between text-xs font-mono">
+                  {/* Benchmark Bar */}
+                  <div className="p-3 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] flex items-center justify-between text-xs">
                     <span className="text-[var(--text-muted)]">YouTube Limit: 2,000,000 bytes</span>
-                    <span className="text-emerald-600 dark:text-emerald-400 font-bold">1,258,291 bytes (Passes)</span>
+                    <span className="text-emerald-600 dark:text-emerald-400 font-bold">1,153,433 bytes (Passes Ceiling)</span>
                   </div>
                 </div>
               )}
 
               {activeStepIndex === 1 && (
-                /* Step 2 Graphic: Title Truncation Meter */
+                /* Step 2 Graphic: Authentic YouTube Mobile Feed Preview */
                 <div className="space-y-4">
-                  <div className="p-3.5 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-2">
-                    <div className="flex items-center justify-between text-xs font-mono text-[var(--text-muted)]">
-                      <span>SIMULATED YOUTUBE MOBILE FEED</span>
-                      <span className="text-emerald-600 dark:text-emerald-400 font-bold">✓ FIRST 50 CHARS HOOK</span>
-                    </div>
-                    <div className="text-sm font-semibold text-[var(--text-ink)] leading-snug">
-                      <span className="bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 px-1 py-0.5 rounded">
-                        How I Automated My Video Workflow
-                      </span>{' '}
-                      <span className="text-[var(--text-muted)] text-xs font-normal">
-                        (And Saved 15 Hours Every Week...)
+                  <div className="p-3.5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-3">
+                    <div className="flex items-center justify-between text-xs text-[var(--text-muted)]">
+                      <span className="font-semibold text-[var(--text-ink)]">
+                        YouTube Smartphone Feed Simulation
+                      </span>
+                      <span className="text-emerald-600 dark:text-emerald-400 font-semibold">
+                        First 50 Chars Hook Safe
                       </span>
                     </div>
-                    <p className="text-[11px] text-[var(--text-muted)]">
-                      The core emotional proposition is completely visible before mobile cutoff occurs.
-                    </p>
+
+                    {/* YouTube Mobile Card Replica */}
+                    <div className="flex gap-3 items-start p-2 rounded-lg bg-[var(--bg-canvas-subtle)] border border-[var(--border-hairline)]">
+                      <div className="relative w-28 aspect-video rounded overflow-hidden shrink-0 bg-black">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src="/examples/thumbnail-source.png"
+                          alt="Mobile feed video thumbnail preview"
+                          width={160}
+                          height={90}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <span className="absolute bottom-1 right-1 bg-black/85 text-white text-[9px] font-medium px-1 rounded">
+                          14:20
+                        </span>
+                      </div>
+                      <div className="space-y-1 min-w-0">
+                        <p className="text-xs font-semibold text-[var(--text-ink)] leading-snug">
+                          <span className="bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 px-1 py-0.5 rounded">
+                            How I Automated My Video Production
+                          </span>{' '}
+                          <span className="text-[var(--text-muted)]">
+                            (And Saved 15 Hours)...
+                          </span>
+                        </p>
+                        <div className="flex items-center gap-1.5 text-[10px] text-[var(--text-muted)]">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src="/examples/avatar-tech.png"
+                            alt="Channel Avatar"
+                            width={14}
+                            height={14}
+                            className="rounded-full"
+                          />
+                          <span>TechCreator &bull; 142K views &bull; 2 days ago</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
-                  <div className="grid grid-cols-3 gap-2 text-center text-xs font-mono">
-                    <div className="p-2 rounded border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
-                      <span className="block text-[10px] text-[var(--text-muted)]">CHARACTER COUNT</span>
-                      <strong className="text-[var(--text-ink)]">48 / 100</strong>
+                  {/* Metrics Row */}
+                  <div className="grid grid-cols-3 gap-2 text-center text-xs">
+                    <div className="p-2.5 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
+                      <span className="block text-[10px] text-[var(--text-muted)] uppercase tracking-wide">Character Count</span>
+                      <strong className="text-[var(--text-ink)] text-sm">48 / 100</strong>
                     </div>
-                    <div className="p-2 rounded border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
-                      <span className="block text-[10px] text-[var(--text-muted)]">MOBILE SAFE</span>
-                      <strong className="text-emerald-600 dark:text-emerald-400">100% VISIBLE</strong>
+                    <div className="p-2.5 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
+                      <span className="block text-[10px] text-[var(--text-muted)] uppercase tracking-wide">Mobile Feed</span>
+                      <strong className="text-emerald-600 dark:text-emerald-400 text-sm">100% In-Bounds</strong>
                     </div>
-                    <div className="p-2 rounded border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
-                      <span className="block text-[10px] text-[var(--text-muted)]">SEARCH SCORE</span>
-                      <strong className="text-[var(--brand-accent)]">HIGH CTR</strong>
+                    <div className="p-2.5 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
+                      <span className="block text-[10px] text-[var(--text-muted)] uppercase tracking-wide">CTR Rating</span>
+                      <strong className="text-[var(--brand-accent)] text-sm">High Impact</strong>
                     </div>
                   </div>
                 </div>
@@ -223,35 +302,36 @@ export default function WorkflowShowcase() {
               {activeStepIndex === 2 && (
                 /* Step 3 Graphic: Publish Package ZIP Explorer */
                 <div className="space-y-3">
-                  <div className="p-3.5 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-2.5">
-                    <div className="flex items-center justify-between text-xs font-mono text-[var(--text-muted)]">
-                      <span className="flex items-center gap-1.5">
+                  <div className="p-4 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-3">
+                    <div className="flex items-center justify-between text-xs text-[var(--text-muted)]">
+                      <span className="font-semibold text-[var(--text-ink)] flex items-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                        PACKAGE CONTENTS (ZIP ARCHIVE)
+                        Package Contents (ZIP Archive)
                       </span>
                       <span className="text-[var(--brand-accent)] font-semibold">Ready to Export</span>
                     </div>
-                    <ul className="text-xs space-y-1.5 font-mono text-[var(--text-body)]">
-                      <li className="flex items-center justify-between p-1.5 rounded bg-[var(--bg-canvas-subtle)]">
-                        <span>📁 /project-assets/</span>
-                        <span className="text-[var(--text-muted)]">Archive</span>
-                      </li>
-                      <li className="flex items-center justify-between pl-4">
-                        <span>📄 video-metadata.txt</span>
+
+                    <div className="space-y-2 text-xs text-[var(--text-body)]">
+                      <div className="flex items-center justify-between p-2 rounded-lg bg-[var(--bg-canvas-subtle)]">
+                        <span className="font-semibold text-[var(--text-ink)]">/project-assets.zip</span>
+                        <span className="text-[var(--text-muted)]">Complete Package</span>
+                      </div>
+                      <div className="flex items-center justify-between px-3 py-1.5 border-l-2 border-zinc-300 dark:border-zinc-700 ml-3">
+                        <span className="text-[var(--text-ink)] font-medium">video-metadata.txt</span>
                         <span className="text-emerald-600 dark:text-emerald-400">Title &amp; Description</span>
-                      </li>
-                      <li className="flex items-center justify-between pl-4">
-                        <span>🖼️ thumbnail.jpg</span>
-                        <span className="text-emerald-600 dark:text-emerald-400">1280×720 (1.2 MB)</span>
-                      </li>
-                      <li className="flex items-center justify-between pl-4">
-                        <span>📋 pre-publish-checklist.json</span>
+                      </div>
+                      <div className="flex items-center justify-between px-3 py-1.5 border-l-2 border-zinc-300 dark:border-zinc-700 ml-3">
+                        <span className="text-[var(--text-ink)] font-medium">thumbnail.webp</span>
+                        <span className="text-emerald-600 dark:text-emerald-400">1280&times;720 HD (1.1 MB)</span>
+                      </div>
+                      <div className="flex items-center justify-between px-3 py-1.5 border-l-2 border-zinc-300 dark:border-zinc-700 ml-3">
+                        <span className="text-[var(--text-ink)] font-medium">pre-publish-checklist.json</span>
                         <span className="text-emerald-600 dark:text-emerald-400">11 Checks Passed</span>
-                      </li>
-                    </ul>
+                      </div>
+                    </div>
                   </div>
 
-                  <div className="p-2.5 rounded-lg border border-emerald-500/20 bg-emerald-500/5 text-xs text-emerald-800 dark:text-emerald-300 flex items-center gap-2">
+                  <div className="p-3 rounded-lg border border-emerald-500/20 bg-emerald-500/5 text-xs text-emerald-800 dark:text-emerald-300 flex items-center gap-2">
                     <svg className="w-4 h-4 shrink-0 text-emerald-600" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                     </svg>
@@ -263,7 +343,7 @@ export default function WorkflowShowcase() {
 
             {/* Checklist Highlights */}
             <div className="space-y-2">
-              <span className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)] font-semibold">
+              <span className="text-xs uppercase tracking-wider text-[var(--text-muted)] font-semibold block">
                 Guaranteed Pre-Publish Quality:
               </span>
               <ul className="text-xs text-[var(--text-body)] space-y-1.5">

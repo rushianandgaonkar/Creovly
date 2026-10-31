@@ -60,7 +60,11 @@ export const ToolCard: React.FC<ToolCardProps> = ({
       className={`spotlight-card group relative flex flex-col justify-between p-5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] hover:border-[var(--border-hairline-strong)] hover:shadow-[var(--shadow-floating)] transition-all duration-200 focus-ring overflow-hidden ${className}`}
     >
       <div>
-        {illustration && <ToolIllustration toolId={illustration} />}
+        {illustration && (
+          <div className="h-28 -mx-5 -mt-5 mb-4 border-b border-[var(--border-hairline)] overflow-hidden relative">
+            <ToolIllustration toolId={illustration} />
+          </div>
+        )}
         {/* Card Header: Category + Optional Badge */}
         {(!illustration || status !== 'available' || badge) && <div className="flex items-center justify-between gap-2 mb-3">
           <span className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)]">

@@ -39,10 +39,62 @@
 .card[data-selected='true'] .print { outline: 1px solid color-mix(in srgb, var(--brand-accent) 40%, transparent); }
 .clip { position: absolute; z-index: 1; left: calc(50% - 6px); top: -18px; width: 12px; height: 29px; border-radius: 3px; background: linear-gradient(90deg, var(--clip-dark), var(--clip-light) 48%, var(--clip-dark)); box-shadow: 0 2px 3px rgb(0 0 0 / .15); }
 .clip::after { content: ''; position: absolute; left: 5px; top: 9px; width: 2px; height: 9px; border-radius: 1px; background: var(--clip-dark); }
-.picture { position: relative; display: flex; align-items: center; min-height: 180px; aspect-ratio: 4 / 3; overflow: hidden; background: var(--brand-accent-soft); }
-.picture :global(.tool-illustration) { margin: 0; border: 0; height: 128px; width: 100%; background: transparent; }
-.category { position: absolute; top: 12px; left: 12px; font-size: 11px; font-weight: 550; color: var(--brand-accent-deep); }
-.openHint { position: absolute; bottom: 12px; right: 12px; color: var(--brand-accent-deep); font-size: 11px; }
+.picture {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  min-height: 180px;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #09090b;
+}
+.picture :global(.tool-preview),
+.picture :global(.tool-illustration) {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  border: 0;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+}
+.category {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 20;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(9, 9, 11, 0.75);
+  color: #f4f4f5;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+}
+.openHint {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  z-index: 20;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(9, 9, 11, 0.85);
+  color: #e4e4e7;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  opacity: 0;
+  transition: opacity 150ms ease;
+  pointer-events: none;
+}
+.print:hover .openHint,
+.print:focus-visible .openHint {
+  opacity: 1;
+}
 .print h3 { font-size: 17px; font-weight: 650; letter-spacing: -.025em; margin: 18px 4px 8px; line-height: 1.25; }
 .print p { margin: 0 4px; font-size: 12px; color: var(--frame-body); line-height: 1.6; min-height: 58px; }
 .controls { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 4px 32px 20px; }

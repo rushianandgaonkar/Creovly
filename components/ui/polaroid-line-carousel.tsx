@@ -111,7 +111,6 @@ export default function PolaroidLineCarousel({ tools }: { tools: ToolDefinition[
           <Link href={tool.href} className={`${styles.print} focus-ring`} draggable={false}>
             <span className={styles.clip} aria-hidden="true" />
             <div className={styles.picture} data-category={tool.category}>
-              <span className={styles.category}>{tool.categoryLabel}</span>
               <ToolIllustration toolId={tool.id} />
               <span className={styles.openHint}>Open tool <span aria-hidden="true">↗</span></span>
             </div>
