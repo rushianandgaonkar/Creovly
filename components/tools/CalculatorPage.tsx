@@ -3,6 +3,7 @@ import ToolPageShell from './ToolPageShell';
 import CreatorCalculator from './CreatorCalculator';
 import { getTool } from '@/lib/metadata';
 import { calculatorDefinitions, type CalculatorKind } from '@/lib/creator-calculators';
+import { calculatorFaqs } from '@/config/calculator-faqs';
 
 export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; slug: string }) {
   const tool = getTool(slug);
@@ -52,32 +53,7 @@ export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; s
           </p>
         </div>
       }
-      faqs={[
-        {
-          question: 'Which measurement units should I enter?',
-          answer: watch
-            ? 'Enter watch hours as cumulative hours, monthly pace as hours per month, and average view duration as minutes. Decimal values are supported.'
-            : 'Financial inputs use USD ($) and accept decimal numbers. View counts and sponsorship deals require integers. There is no automated currency exchange.',
-        },
-        {
-          question: 'Are calculated revenue numbers guaranteed by YouTube?',
-          answer:
-            'No. They are mathematical scenarios calculated strictly from your entered assumptions. Seasonal RPM swings, ad inventory changes, and subscriber churn alter real-world income.',
-        },
-        {
-          question: watch
-            ? 'Does reaching 4,000 hours guarantee YouTube Partner Program approval?'
-            : 'Is YouTube’s platform revenue share deducted from this calculation?',
-          answer: watch
-            ? 'No. This models an accumulation timeline. Official YPP admission also requires 1,000 subscribers, 2-factor authentication, advanced channel review, and policy compliance.'
-            : 'No. RPM (Revenue Per Mille) is already the net amount paid to the creator after YouTube’s 45% platform split has been deducted.',
-        },
-        {
-          question: 'Are my financial assumptions stored anywhere?',
-          answer:
-            'No. Inputs and results exist exclusively in temporary browser memory. Leaving or refreshing the tab resets the workspace entirely.',
-        },
-      ]}
+      faqs={calculatorFaqs[kind]}
     >
       <CreatorCalculator kind={kind} />
     </ToolPageShell>

@@ -6,13 +6,55 @@ const tool = getTool('logo-background-remover');
 export const metadata = createToolMetadata(tool.slug);
 
 export default function LogoBackgroundRemoverPage() {
-  return <ToolPageShell title={tool.title} description={tool.description} category="Thumbnail Tools" categoryHref="/tools/thumbnail" toolSlug={tool.slug}
-    educationalContent={<><p>Choose an existing logo with a solid background, confirm the background color, and adjust tolerance. Select Remove background, inspect the actual before/after images, then download a transparent PNG.</p><p>This tool removes matching colors connected to the image border. It preserves enclosed areas, including enclosed background inside letters. Similar foreground colors touching the background can also be removed. Complex photos, gradients, shadows, and anti-aliased edges may need a dedicated editor.</p><p>Processing stays in your browser. Images are not saved between visits. Original dimensions are preserved; PNG output may be larger than your source file.</p></>}
-    faqs={[
-      { question: 'Which files and download formats are supported?', answer: 'Select a still JPEG, PNG, or WebP up to 20 MB, 8 megapixels, and 8,192 pixels per side. The result is a PNG at the original dimensions. PNG supports transparency, and its file size can be larger than the input.' },
-      { question: 'Does this generate a new logo?', answer: 'No. It removes a solid background from an existing logo. It does not generate designs or identify photo subjects.' },
-      { question: 'Will white lettering disappear?', answer: 'Enclosed white areas are preserved. Matching lettering connected to the outer background can disappear, especially with high tolerance. Review the preview and reduce tolerance if needed.' },
-      { question: 'Why are some edges or enclosed areas still visible?', answer: 'This version removes border-connected colors only. Enclosed holes stay intact, and compressed or blended edge pixels may differ from the chosen color. Increase tolerance carefully; manual brush refinement is not available.' },
-      { question: 'Are my files uploaded?', answer: 'No. Images are decoded, processed, and exported locally in your browser. Resetting or leaving clears this workspace.' },
-    ]}><LogoBackgroundRemover /></ToolPageShell>;
+  return (
+    <ToolPageShell
+      title={tool.title}
+      description={tool.description}
+      category="Thumbnail Tools"
+      categoryHref="/tools/thumbnail"
+      toolSlug={tool.slug}
+      educationalContent={
+        <>
+          <p>
+            Choose an existing logo with a solid background, confirm the background color, and adjust tolerance. Select Remove background, inspect the actual before/after images, then download a transparent PNG.
+          </p>
+          <p>
+            This tool removes matching colors connected to the image border. It preserves enclosed areas, including enclosed background inside letters. Similar foreground colors touching the background can also be removed. Complex photos, gradients, shadows, and anti-aliased edges may need a dedicated editor.
+          </p>
+          <p>
+            Processing stays in your browser. Images are not saved between visits. Original dimensions are preserved; PNG output may be larger than your source file.
+          </p>
+        </>
+      }
+      faqs={[
+        {
+          question: 'How to remove background from a logo for free?',
+          answer:
+            'Upload your logo, select the background color, and click Remove background. Export a clean, transparent PNG directly in your browser with zero fees and no account required.',
+        },
+        {
+          question: 'How to make a logo background transparent?',
+          answer:
+            'Use this tool to detect and eliminate border-connected background pixels. Exporting as a PNG preserves the alpha channel so your logo overlays cleanly on any background color.',
+        },
+        {
+          question: 'How to remove white background from a logo?',
+          answer:
+            'Select white as your background color and adjust the tolerance slider to clean edge fringes. Enclosed white lettering stays protected while outer white borders are removed.',
+        },
+        {
+          question: 'How to convert a JPG logo to transparent PNG?',
+          answer:
+            'Since JPG does not support transparency, simply changing the file extension will not work. Process your JPG through this tool to strip the solid background, then download the resulting PNG.',
+        },
+        {
+          question: 'How to remove logo background without losing quality?',
+          answer:
+            'Upload your highest-resolution source file and maintain full original dimensions during export. All pixel processing executes locally with lossless canvas operations.',
+        },
+      ]}
+    >
+      <LogoBackgroundRemover />
+    </ToolPageShell>
+  );
 }
