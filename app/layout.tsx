@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { siteConfig } from '@/config/site';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import '@/app/globals.css';
 
@@ -150,6 +150,18 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Google tag (gtag.js) */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-0JBY0X9MY4"
+        />
+        <Script
+          id="google-tag-manager"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-0JBY0X9MY4');`,
+          }}
+        />
         <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="shortcut icon" href="/favicon.ico" />
@@ -165,7 +177,6 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
         />
-        <GoogleAnalytics />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans min-h-screen flex flex-col bg-[var(--bg-canvas)] text-[var(--text-ink)] antialiased selection:bg-[var(--brand-accent)] selection:text-white`}
