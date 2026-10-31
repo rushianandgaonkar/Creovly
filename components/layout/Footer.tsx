@@ -87,7 +87,11 @@ export const Footer: React.FC = () => {
           <p className="font-mono">
             &copy; {currentYear} {siteConfig.name}. All processing occurs locally in your browser.
           </p>
-          <p className="font-mono text-[10px]">YouTube™ is a trademark of Google LLC.</p>
+          <div className="flex flex-wrap items-center gap-2 text-[10px] text-[var(--text-muted)]">
+            <span>Sample media: CC BY via Wikimedia Commons</span>
+            <span aria-hidden="true">•</span>
+            <span>YouTube™ is a trademark of Google LLC.</span>
+          </div>
         </div>
       </div>
     </footer>

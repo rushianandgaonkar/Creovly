@@ -2,42 +2,42 @@
   "compressor-source.jpg": {
     "width": 1600,
     "height": 1000,
-    "bytes": 258969
+    "bytes": 1134615
   },
   "logo-source.png": {
     "width": 800,
     "height": 480,
-    "bytes": 7911
+    "bytes": 22294
   },
   "logo-transparent.png": {
     "width": 800,
     "height": 480,
-    "bytes": 16245
+    "bytes": 21427
   },
   "shorts-guide.png": {
     "width": 1080,
     "height": 1920,
-    "bytes": 85487
+    "bytes": 410061
   },
   "shorts-source.png": {
     "width": 1080,
     "height": 1920,
-    "bytes": 29985
+    "bytes": 375428
   },
   "thumbnail-compressed.jpg": {
     "width": 1600,
     "height": 1000,
-    "bytes": 76231
+    "bytes": 229359
   },
   "thumbnail-resized.jpg": {
     "width": 1280,
     "height": 720,
-    "bytes": 54653
+    "bytes": 155974
   },
   "thumbnail-source.png": {
     "width": 1600,
     "height": 1000,
-    "bytes": 43629
+    "bytes": 3386759
   },
   "sample-gaming-badge.png": {
     "width": 800,
