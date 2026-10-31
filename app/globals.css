@@ -329,10 +329,32 @@ html.dark {
   animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+/* Interactive Ripple Background (tactile ambient canvas) */
+@keyframes ripple {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.85;
+  }
+  100% {
+    width: 480px;
+    height: 480px;
+    opacity: 0;
+  }
+}
+
+.animate-ripple {
+  animation: ripple 2s cubic-bezier(0.15, 0.5, 0.35, 1) forwards;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-in-up {
     animation: none;
     transform: none;
+  }
+  .animate-ripple {
+    animation: none;
+    display: none;
   }
   .spotlight-card::before {
     display: none;

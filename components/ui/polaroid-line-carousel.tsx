@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect, useRef, useState, type PointerEvent, type KeyboardEvent } from 'react';
+import { ArrowUpRight } from 'lucide-react';
 import ToolIllustration from '@/components/tools/ToolIllustration';
 import { clampCard, nearestCard, stringY } from '@/lib/polaroid-navigation';
 import type { ToolDefinition } from '@/types';
@@ -107,15 +108,27 @@ export default function PolaroidLineCarousel({ tools }: { tools: ToolDefinition[
           if (card && event.target !== rail.current) setActive(Number(card.dataset.card));
         }}
       >
-        {tools.map((tool, index) => <li key={tool.id} data-card={index} className={styles.card} data-selected={active === index} style={{ '--tilt': `${[-2, 1.6, -1, 2, -1.7, .8, -1.5, 1.3, -1][index % 9]}deg` } as React.CSSProperties}>
+        {tools.map((tool, index) => <li key={tool.id} data-card={index} className={styles.card} data-selected={active === index}>
           <Link href={tool.href} className={`${styles.print} focus-ring`} draggable={false}>
-            <span className={styles.clip} aria-hidden="true" />
             <div className={styles.picture} data-category={tool.category}>
               <ToolIllustration toolId={tool.id} />
-              <span className={styles.openHint}>Open tool <span aria-hidden="true">↗</span></span>
+              <span className={styles.category}>{tool.category}</span>
             </div>
-            <h3>{nameOf(tool)}</h3>
-            <p>{tool.description}</p>
+            <div className={styles.cardBody}>
+              <div>
+                <h3>{nameOf(tool)}</h3>
+                <p>{tool.description}</p>
+              </div>
+              <div className={styles.actionRow}>
+                <span className={styles.badge}>
+                  <span className={styles.badgeDot} aria-hidden="true" />
+                  100% Local
+                </span>
+                <span className={styles.actionBtn} aria-hidden="true">
+                  <ArrowUpRight className={styles.actionIcon} />
+                </span>
+              </div>
+            </div>
           </Link>
         </li>)}
       </ul>
