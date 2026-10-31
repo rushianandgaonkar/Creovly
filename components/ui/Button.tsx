@@ -15,30 +15,31 @@ export interface ButtonProps {
 }
 
 const baseStyles =
-  'inline-flex items-center justify-center font-medium transition-colors duration-150 select-none focus-ring cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none';
+  'inline-flex items-center justify-center font-medium transition-all duration-150 select-none focus-ring cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none';
 
 const variantStyles = {
-  // App chrome (6px rounded)
+  // App & marketing primary (Obsidian pill with ambient shadow)
   primary:
-    'rounded-md bg-[var(--brand-primary)] text-[var(--brand-on-primary)] hover:opacity-90 active:scale-[0.98]',
+    'rounded-full bg-[var(--brand-primary)] text-[var(--brand-on-primary)] shadow-[var(--shadow-button-primary)] hover:shadow-[var(--shadow-button-primary-hover)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]',
   secondary:
-    'rounded-md bg-[var(--bg-canvas-subtle)] text-[var(--text-ink)] border border-[var(--border-hairline)] hover:bg-[var(--border-hairline)] active:scale-[0.98]',
+    'rounded-full bg-[var(--bg-canvas-subtle)] text-[var(--text-ink)] border border-[var(--border-hairline)] hover:bg-[var(--border-hairline)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]',
   ghost:
-    'rounded-md text-[var(--text-body)] hover:text-[var(--text-ink)] hover:bg-[var(--bg-canvas-subtle)] active:scale-[0.98]',
+    'rounded-full text-[var(--text-body)] hover:text-[var(--text-ink)] hover:bg-[var(--bg-canvas-subtle)] active:scale-[0.98]',
+  // Floating white pill (Crisp white with soft diffused elevation)
   outline:
-    'rounded-md bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)] border border-[var(--border-hairline)] hover:border-[var(--border-hairline-strong)] active:scale-[0.98]',
+    'rounded-full bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)] border border-[var(--border-hairline)] shadow-[var(--shadow-button-elevated)] hover:shadow-[var(--shadow-button-elevated-hover)] hover:border-[var(--border-hairline-strong)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]',
 
-  // Marketing CTAs (Pill rounded)
+  // Backwards-compatible aliases
   'pill-primary':
-    'rounded-full bg-[var(--brand-primary)] text-[var(--brand-on-primary)] hover:opacity-90 active:scale-[0.98] shadow-sm',
+    'rounded-full bg-[var(--brand-primary)] text-[var(--brand-on-primary)] shadow-[var(--shadow-button-primary)] hover:shadow-[var(--shadow-button-primary-hover)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]',
   'pill-secondary':
-    'rounded-full bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)] border border-[var(--border-hairline)] hover:border-[var(--border-hairline-strong)] hover:bg-[var(--bg-canvas-subtle)] active:scale-[0.98]',
+    'rounded-full bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)] border border-[var(--border-hairline)] shadow-[var(--shadow-button-elevated)] hover:shadow-[var(--shadow-button-elevated-hover)] hover:border-[var(--border-hairline-strong)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]',
 };
 
 const sizeStyles = {
-  sm: 'h-8 px-3 text-xs gap-1.5',
-  md: 'h-9 px-4 text-sm gap-2',
-  lg: 'h-11 px-6 text-base gap-2.5',
+  sm: 'h-8 px-4 text-xs gap-1.5',
+  md: 'h-10 px-5 text-sm gap-2',
+  lg: 'h-12 px-7 text-base gap-2.5',
 };
 
 export const Button: React.FC<ButtonProps> = ({

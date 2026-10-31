@@ -102,14 +102,14 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setSearchModalOpen(true)}
-            className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] hover:border-[var(--brand-accent)] text-xs text-[var(--text-muted)] hover:text-[var(--text-ink)] transition-colors focus-ring cursor-pointer"
+            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] hover:border-[var(--brand-accent)] text-xs text-[var(--text-muted)] hover:text-[var(--text-ink)] shadow-[var(--shadow-button-elevated)] hover:shadow-[var(--shadow-button-elevated-hover)] hover:-translate-y-0.5 active:translate-y-0 transition-all focus-ring cursor-pointer"
             aria-label="Open tool search command palette"
           >
             <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
             <span>Search</span>
-            <kbd className="text-[10px] font-mono px-1 rounded bg-[var(--bg-canvas-elevated)] border border-[var(--border-hairline)] text-[var(--text-body)]">/</kbd>
+            <kbd className="text-[10px] font-mono px-1.5 py-0.2 rounded-full bg-[var(--bg-canvas-subtle)] border border-[var(--border-hairline)] text-[var(--text-body)]">/</kbd>
           </button>
 
           <nav className="hidden md:flex items-center gap-1" aria-label="Primary navigation">
