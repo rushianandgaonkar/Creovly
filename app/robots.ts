@@ -25,15 +25,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: [
-      `${baseUrl}/sitemap.xml`,
-      `${baseUrl}/sitemap_index.xml`,
-      `${baseUrl}/sitemap-0.xml`,
-      'https://creovly.creovly.workers.dev/sitemap.xml',
-      'https://creovly.creovly.workers.dev/sitemap_index.xml',
-      'https://creovly.creovly.workers.dev/sitemap-0.xml',
-    ],
+    sitemap: `${baseUrl}/sitemap.xml`,
     host: baseUrl,
   };
 }
-

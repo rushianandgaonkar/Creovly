@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { siteConfig } from '@/config/site';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Header from '@/components/layout/Header';
+import ConsentBanner from '@/components/feedback/ConsentBanner';
 import Footer from '@/components/layout/Footer';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import '@/app/globals.css';
@@ -72,8 +73,7 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
     description: siteConfig.description,
     images: ['/og-image.png'],
-    creator: '@creovly',
-  },
+      },
   icons: {
     icon: [
       { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
@@ -128,7 +128,7 @@ const jsonLdData = {
       name: siteConfig.name,
       url: siteConfig.url,
       logo: `${siteConfig.url}/favicon.svg`,
-      sameAs: [siteConfig.links.twitter, siteConfig.links.github],
+      sameAs: [siteConfig.links.github].filter(Boolean),
     },
     {
       '@type': 'WebSite',
@@ -150,17 +150,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Google tag (gtag.js) */}
+        {/* Google tag (gtag.js) with Google Consent Mode v2 */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}var sc=null;try{sc=localStorage.getItem('creovly-consent');}catch(e){}gtag('consent','default',{'analytics_storage':sc==='granted'?'granted':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied'});gtag('js', new Date());gtag('config', 'G-0JBY0X9MY4', { anonymize_ip: true });`,
+          }}
+        />
         <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-0JBY0X9MY4"
-        />
-        <Script
-          id="google-tag-manager"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-0JBY0X9MY4');`,
-          }}
         />
         <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -190,6 +188,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <ConsentBanner />
         </TooltipProvider>
       </body>
     </html>

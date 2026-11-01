@@ -12,8 +12,3 @@ Allow: /
 
 Host: https://creovly.com
 Sitemap: https://creovly.com/sitemap.xml
-Sitemap: https://creovly.com/sitemap_index.xml
-Sitemap: https://creovly.com/sitemap-0.xml
-Sitemap: https://creovly.creovly.workers.dev/sitemap.xml
-Sitemap: https://creovly.creovly.workers.dev/sitemap_index.xml
-Sitemap: https://creovly.creovly.workers.dev/sitemap-0.xml

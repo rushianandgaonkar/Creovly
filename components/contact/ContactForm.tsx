@@ -12,8 +12,9 @@ export default function ContactForm() {
     message: '',
   });
 
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'submitted' | 'error'>('idle');
+  const [status, setStatus] = useState<'idle' | 'submitted'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
+  const [copied, setCopied] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -23,6 +24,10 @@ export default function ContactForm() {
       [e.target.name]: e.target.value,
     }));
   };
+
+  const subjectLine = `[Creovly ${formData.subject}] from ${formData.name || 'Creator'}${formData.channel ? ` (${formData.channel})` : ''}`;
+  const bodyText = `Hi Creovly Support Team,\n\nName: ${formData.name}\nEmail: ${formData.email}\nChannel: ${formData.channel || 'N/A'}\nTopic: ${formData.subject}\n\nMessage:\n${formData.message}\n\n---\nSent via creovly.com/contact`;
+  const mailtoUrl = `mailto:support@creovly.com?subject=${encodeURIComponent(subjectLine)}&body=${encodeURIComponent(bodyText)}`;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -42,45 +47,75 @@ export default function ContactForm() {
       return;
     }
 
-    setStatus('submitting');
+    // Direct client dispatch to user's mail client (zero local storage, zero cloud intermediary)
+    try {
+      window.location.href = mailtoUrl;
+    } catch (_) {
+      // In case browser blocks navigation, the submitted state provides a direct link
+    }
 
-    // Simulate reliable submission
-    setTimeout(() => {
-      // Store submission in local storage for local reference if needed
-      try {
-        const stored = JSON.parse(localStorage.getItem('creovly-contact-submissions') || '[]');
-        stored.push({ ...formData, timestamp: new Date().toISOString() });
-        localStorage.setItem('creovly-contact-submissions', JSON.stringify(stored));
-      } catch (err) {
-        // Ignore storage errors in private browsing
-      }
+    setStatus('submitted');
+  };
 
-      setStatus('submitted');
-    }, 700);
+  const handleCopy = () => {
+    const textToCopy = `To: support@creovly.com\nSubject: ${subjectLine}\n\n${bodyText}`;
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2500);
+      });
+    }
   };
 
   if (status === 'submitted') {
     return (
-      <div className="p-8 sm:p-10 rounded-2xl border border-emerald-500/20 bg-emerald-500/5 text-center space-y-4">
+      <div className="p-8 sm:p-10 rounded-2xl border border-emerald-500/20 bg-emerald-500/5 text-center space-y-5">
         <div className="w-12 h-12 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 mx-auto flex items-center justify-center font-bold text-xl">
           ✓
         </div>
-        <h3 className="text-xl font-bold text-[var(--text-ink)]">
-          Message Received!
-        </h3>
-        <p className="text-sm text-[var(--text-body)] max-w-md mx-auto leading-relaxed">
-          Thank you for reaching out, <span className="font-semibold text-[var(--text-ink)]">{formData.name}</span>. Your information and message have been recorded. Our team will review your inquiry and follow up at <span className="font-semibold text-[var(--text-ink)]">{formData.email}</span>.
+        <div className="space-y-2">
+          <h3 className="text-xl font-bold text-[var(--text-ink)]">
+            Ready to Send via Email
+          </h3>
+          <p className="text-sm text-[var(--text-body)] max-w-md mx-auto leading-relaxed">
+            Your default mail client is opening with your message addressed to{' '}
+            <strong className="text-[var(--text-ink)]">support@creovly.com</strong>.
+          </p>
+        </div>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+          <a
+            href={mailtoUrl}
+            className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-[var(--brand-accent)] text-white text-xs font-semibold hover:opacity-90 transition-opacity"
+          >
+            Open Mail Client Again &rarr;
+          </a>
+          <button
+            type="button"
+            onClick={handleCopy}
+            className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2.5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-xs font-semibold text-[var(--text-ink)] hover:bg-[var(--bg-canvas-subtle)] transition-colors"
+          >
+            {copied ? '✓ Copied to Clipboard' : 'Copy Message to Clipboard'}
+          </button>
+        </div>
+
+        <p className="text-xs text-[var(--text-muted)] max-w-md mx-auto pt-2">
+          If your device did not automatically launch an email client, copy the message above or write directly to{' '}
+          <a href="mailto:support@creovly.com" className="text-[var(--brand-accent)] underline">
+            support@creovly.com
+          </a>.
         </p>
-        <div className="pt-2">
+
+        <div className="pt-2 border-t border-[var(--border-hairline)]">
           <Button
             type="button"
-            variant="outline"
+            variant="ghost"
             onClick={() => {
               setFormData({ name: '', email: '', channel: '', subject: 'Feedback', message: '' });
               setStatus('idle');
             }}
           >
-            Send Another Message
+            Edit Message
           </Button>
         </div>
       </div>
@@ -181,19 +216,17 @@ export default function ContactForm() {
         />
       </div>
 
-      <div className="flex items-center justify-between pt-2">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2">
         <p className="text-[11px] text-[var(--text-muted)] font-mono">
-          🔒 Your details are never shared or sold.
+          Direct email to support@creovly.com. No cookies or server logging.
         </p>
         <Button
           type="submit"
           variant="primary"
-          disabled={status === 'submitting'}
         >
-          {status === 'submitting' ? 'Submitting...' : 'Send Message'}
+          Send Message via Email &rarr;
         </Button>
       </div>
     </form>
   );
 }
-

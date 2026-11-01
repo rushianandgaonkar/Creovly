@@ -17,8 +17,7 @@ export const siteConfig: SiteConfig = {
     path: '/studio',
   },
   links: {
-    twitter: 'https://twitter.com/creovly',
-    github: 'https://github.com/creovly',
+    github: 'https://github.com/rushianandgaonkar/Creovly',
   },
   ogImage: '/og-image.png',
 };

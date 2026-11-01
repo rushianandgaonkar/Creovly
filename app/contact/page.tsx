@@ -34,7 +34,7 @@ export default function ContactPage() {
           Contact Creovly
         </h1>
         <p className="mt-3 text-sm sm:text-base text-[var(--text-body)] leading-relaxed">
-          Have an idea for a new creator tool, feedback on Publish Studio, or need assistance? Fill out the form below and we will follow up with you directly.
+          Have an idea for a new creator tool, feedback on Publish Studio, or need assistance? Send us a message below or write directly to <a href="mailto:support@creovly.com" className="text-[var(--brand-accent)] font-semibold underline">support@creovly.com</a>.
         </p>
       </PageHero>
 

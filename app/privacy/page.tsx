@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { createPageMetadata } from '@/lib/metadata';
 import PageHero from '@/components/ui/PageHero';
 import Badge from '@/components/ui/Badge';
+import ConsentSettings from '@/components/privacy/ConsentSettings';
 
 export const metadata = createPageMetadata({
   title: 'Privacy Policy — Creovly',
@@ -51,9 +52,9 @@ export default function PrivacyPage() {
             Unlike traditional creator SaaS platforms, all file processing tools on Creovly (including the YouTube Thumbnail Compressor, Thumbnail Resizer, Logo Background Remover, Shorts Safe Zone Checker, and Title Checker) execute entirely inside your local web browser session using modern Web APIs (HTML5 Canvas, File API, Web Workers, and local JavaScript threads).
           </p>
           <ul className="list-disc pl-5 space-y-1.5 text-xs text-[var(--text-muted)]">
-            <li>Your uploaded images, graphics, and thumbnail artwork are never transmitted to any Creovly server, cloud storage, or external database.</li>
+            <li>Your uploaded images, graphics, and thumbnail artwork are processed entirely in-memory and are never transmitted to any Creovly server, cloud storage, or external database.</li>
             <li>Calculated financial models, RPM estimates, and scenario figures remain solely in temporary browser memory.</li>
-            <li>No files, video assets, or drafts are logged, cached, or retained once you close or refresh your browser tab.</li>
+            <li>No media files, raw video assets, or photographic uploads are ever logged, cached, or retained on servers.</li>
           </ul>
         </section>
 
@@ -66,40 +67,69 @@ export default function PrivacyPage() {
             <strong>No Account Required:</strong> You do not need to register an account, authenticate via Google or YouTube OAuth, or provide personal payment credentials to use Creovly tools.
           </p>
           <p>
-            <strong>Voluntary Contact Inquiries:</strong> If you choose to contact us through our Contact form or email, we collect only the information you voluntarily submit (such as your name, email address, optional channel name, and message details) strictly for the purpose of responding to your inquiry. We never sell, rent, or distribute contact lists to third-party data brokers or marketing vendors.
+            <strong>Voluntary Contact Inquiries:</strong> Contact messages are dispatched directly through your own email application to <code>support@creovly.com</code>. We do not store your contact messages or personal information in browser <code>localStorage</code> or on external web servers. We collect only what you voluntarily email us strictly to respond to your inquiry, and we never sell, rent, or distribute contact details to third-party data brokers or marketing vendors.
           </p>
         </section>
 
-        {/* Local Storage */}
+        {/* Local Storage Inventory */}
         <section className="space-y-3">
           <h2 className="text-lg font-bold text-[var(--text-ink)]">
-            3. Local Storage & Functional Cookies
+            3. Local Browser Storage Inventory
           </h2>
           <p>
-            Creovly utilizes standard browser <code>localStorage</code> solely to persist your local workspace preferences across sessions:
+            To provide a seamless creator experience without requiring cloud logins or user accounts, Creovly utilizes standard browser <code>localStorage</code> on your physical device. We strictly disclose all stored keys below:
           </p>
-          <ul className="list-disc pl-5 space-y-1.5">
-            <li><strong>Theme Preference:</strong> Storing your light or dark mode selection (<code>creovly-theme</code>).</li>
-            <li><strong>Checklist State:</strong> Persisting checked pre-publish milestones (<code>creovly-checklist</code>) in your browser so you do not lose progress if you navigate away.</li>
-          </ul>
-          <p>
-            You can clear these saved items at any time through your browser’s site data settings or by resetting the tool workspace.
+          <div className="rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] p-4 space-y-3 text-xs">
+            <div className="space-y-1">
+              <span className="font-mono font-semibold text-[var(--text-ink)]">creovly-studio-draft</span>
+              <p className="text-[var(--text-body)]">
+                Used in <strong>Publish Studio</strong>. Saves your in-progress project text draft (video title, description text, targets, and packaging settings) locally in your browser so you do not lose work if you refresh or navigate away. <em>Binary image files are never stored in localStorage.</em> You can delete this draft at any time using the &ldquo;Remove Saved Draft&rdquo; button in Studio.
+              </p>
+            </div>
+            <div className="border-t border-[var(--border-hairline)] pt-2.5 space-y-1">
+              <span className="font-mono font-semibold text-[var(--text-ink)]">creovly-checklist</span>
+              <p className="text-[var(--text-body)]">
+                Used in the <strong>Pre-Publish Checklist</strong>. Saves checked verification milestones so your workflow status is preserved across visits. You can reset this at any time using the &ldquo;Reset Checklist&rdquo; button.
+              </p>
+            </div>
+            <div className="border-t border-[var(--border-hairline)] pt-2.5 space-y-1">
+              <span className="font-mono font-semibold text-[var(--text-ink)]">creovly-theme</span>
+              <p className="text-[var(--text-body)]">
+                Stores your light or dark display preference (<code>light</code> or <code>dark</code>) to prevent screen flickering between page navigations.
+              </p>
+            </div>
+            <div className="border-t border-[var(--border-hairline)] pt-2.5 space-y-1">
+              <span className="font-mono font-semibold text-[var(--text-ink)]">creovly-consent</span>
+              <p className="text-[var(--text-body)]">
+                Stores your analytics cookie preference (<code>granted</code> or <code>denied</code>) in compliance with Google Consent Mode v2.
+              </p>
+            </div>
+          </div>
+          <p className="text-xs text-[var(--text-muted)]">
+            All stored browser data remains exclusively on your personal device and is never transmitted to Creovly servers. You can clear all items at any time through your web browser&rsquo;s site settings or privacy options.
           </p>
         </section>
 
-        {/* Analytics */}
-        <section className="space-y-3">
+        {/* Analytics & Active Consent */}
+        <section className="space-y-4">
           <h2 className="text-lg font-bold text-[var(--text-ink)]">
-            4. Web Analytics (Google Analytics 4)
+            4. Web Analytics &amp; Active Consent Handling
           </h2>
           <p>
             To understand high-level site traffic, monitor technical performance, and identify broken links, Creovly utilizes Google Analytics 4 (Measurement ID: <code>G-0JBY0X9MY4</code>). Google Analytics sets cookies (such as <code>_ga</code> and <code>_ga_*</code>) to distinguish unique visitors and measure aggregate interaction metrics.
           </p>
           <p>
-            Analytics measurements collect aggregated technical information such as browser type, operating system, referring URLs, and pages visited, without collecting personal creator identities or file contents. IP addresses are automatically masked or anonymized.
+            Creovly implements <strong>Google Consent Mode v2</strong>. Analytics cookies are set to <code>denied</code> by default until you grant explicit consent. When denied, Google Analytics does not read or set analytics cookies on your device.
           </p>
           <p>
-            You can opt out of Google Analytics tracking across all websites by adjusting your browser cookie settings or by installing the{' '}
+            All analytics measurements collect aggregated technical information (such as browser type, device category, referring URLs, and pages visited) with IP anonymization enforced. We never collect personal creator identities, channel logins, or uploaded media contents.
+          </p>
+
+          {/* Interactive Consent Manager */}
+          <ConsentSettings />
+
+          <p className="text-xs text-[var(--text-muted)]">
+            You can also opt out of Google Analytics tracking across all websites by adjusting your browser cookie settings or by installing the{' '}
             <a
               href="https://tools.google.com/dlpage/gaoptout"
               target="_blank"
@@ -185,7 +215,7 @@ export default function PrivacyPage() {
             7. Contact & Data Inquiries
           </h2>
           <p>
-            If you have questions about this Privacy Policy or our client-side architecture, please reach out through our{' '}
+            If you have questions about this Privacy Policy, our client-side architecture, or browser storage, please reach out through our{' '}
             <Link href="/contact" className="text-[var(--brand-accent)] font-medium hover:underline">
               Contact Page
             </Link>{' '}

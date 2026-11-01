@@ -1,72 +1,34 @@
 import fs from 'fs';
 import path from 'path';
 
-const today = new Date().toISOString().split('T')[0];
-
-function generateSitemaps() {
+function syncStaticSitemaps() {
   const outDir = path.resolve('out');
   const publicDir = path.resolve('public');
 
   if (!fs.existsSync(outDir)) {
-    console.log('out directory does not exist yet; skipping post-build sitemaps.');
+    console.log('out directory does not exist yet; skipping post-build sitemap sync.');
     return;
   }
 
-  // 1. Ensure sitemap.xml exists in out
+  // 1. Sync canonical sitemap.xml
   const sitemapOutPath = path.join(outDir, 'sitemap.xml');
-  if (!fs.existsSync(sitemapOutPath)) {
-    console.error('Warning: out/sitemap.xml not found!');
-    return;
+  if (fs.existsSync(sitemapOutPath)) {
+    fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), fs.readFileSync(sitemapOutPath, 'utf8'), 'utf8');
+    console.log('✓ Synced canonical public/sitemap.xml');
   }
 
-  const sitemapXmlContent = fs.readFileSync(sitemapOutPath, 'utf8');
-
-  // 2. Generate sitemap-0.xml (identical full urlset)
-  const sitemap0OutPath = path.join(outDir, 'sitemap-0.xml');
-  fs.writeFileSync(sitemap0OutPath, sitemapXmlContent, 'utf8');
-  console.log('✓ Created out/sitemap-0.xml');
-
-  // Copy to public/ as well
-  fs.writeFileSync(path.join(publicDir, 'sitemap-0.xml'), sitemapXmlContent, 'utf8');
-  console.log('✓ Synced public/sitemap-0.xml');
-
-  // 3. Generate sitemap_index.xml (standard Google sitemap index)
-  const sitemapIndexContent = `<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap>
-    <loc>https://creovly.com/sitemap.xml</loc>
-    <lastmod>${today}</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://creovly.com/sitemap-0.xml</loc>
-    <lastmod>${today}</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://creovly.creovly.workers.dev/sitemap.xml</loc>
-    <lastmod>${today}</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://creovly.creovly.workers.dev/sitemap-0.xml</loc>
-    <lastmod>${today}</lastmod>
-  </sitemap>
-</sitemapindex>
-`;
-
-  const sitemapIndexOutPath = path.join(outDir, 'sitemap_index.xml');
-  fs.writeFileSync(sitemapIndexOutPath, sitemapIndexContent, 'utf8');
-  console.log('✓ Created out/sitemap_index.xml');
-
-  // Copy to public/ as well
-  fs.writeFileSync(path.join(publicDir, 'sitemap_index.xml'), sitemapIndexContent, 'utf8');
-  console.log('✓ Synced public/sitemap_index.xml');
-
-  // 4. Ensure robots.txt in public/ matches out/robots.txt
+  // 2. Sync robots.txt
   const robotsOutPath = path.join(outDir, 'robots.txt');
   if (fs.existsSync(robotsOutPath)) {
     fs.writeFileSync(path.join(publicDir, 'robots.txt'), fs.readFileSync(robotsOutPath, 'utf8'), 'utf8');
     console.log('✓ Synced public/robots.txt');
   }
+
+  // 3. Clean up any stale legacy sitemap files in out/
+  for (const legacy of ['sitemap-0.xml', 'sitemap_index.xml']) {
+    const p = path.join(outDir, legacy);
+    if (fs.existsSync(p)) fs.unlinkSync(p);
+  }
 }
 
-generateSitemaps();
-
+syncStaticSitemaps();

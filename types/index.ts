@@ -10,7 +10,7 @@ export interface SiteConfig {
     path: string;
   };
   links: {
-    twitter: string;
+    twitter?: string;
     github: string;
   };
   ogImage?: string;

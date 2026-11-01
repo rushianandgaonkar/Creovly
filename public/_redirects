@@ -1,5 +1,7 @@
 # Cloudflare Pages / Workers Redirects
-# Aliases for sitemap index
-/sitemap.index /sitemap_index.xml 301
-/sitemap_index /sitemap_index.xml 301
+# Aliases for sitemap (redirect to single canonical sitemap.xml)
+/sitemap.index /sitemap.xml 301
+/sitemap_index /sitemap.xml 301
+/sitemap_index.xml /sitemap.xml 301
+/sitemap-0.xml /sitemap.xml 301
 /sitemap /sitemap.xml 301
