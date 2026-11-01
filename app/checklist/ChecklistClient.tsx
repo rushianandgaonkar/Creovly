@@ -4,64 +4,14 @@ import React, { useState, useEffect } from 'react';
 import Button from '@/components/ui/Button';
 import Badge from '@/components/ui/Badge';
 import PageHero from '@/components/ui/PageHero';
-
-interface ChecklistItem {
-  id: string;
-  title: string;
-  description: string;
-}
-
-interface ChecklistSection {
-  title: string;
-  items: ChecklistItem[];
-}
-
-const checklistData: ChecklistSection[] = [
-  {
-    title: '01. Visual Packaging & Assets',
-    items: [
-      {
-        id: 'thumb-size',
-        title: 'Thumbnail format, dimensions, and file size suit your upload',
-        description: 'Use 16:9 aspect ratio (baseline 1280×720 HD up to 3840×2160, minimum width 640px) in JPG or PNG format. YouTube Studio mobile uploads enforce a strict 2 MB limit, while desktop browser uploads accept up to 50 MB.',
-      },
-      {
-        id: 'thumb-mobile',
-        title: 'Thumbnail text is readable on mobile devices (small screen check)',
-        description: 'Over 70% of YouTube viewership occurs on mobile viewports.',
-      },
-      {
-        id: 'shorts-overlay',
-        title: 'Shorts critical captions are outside the right-side UI overlay safe zone',
-        description: 'Ensures comments, like buttons, and channel handle do not cover text.',
-      },
-    ],
-  },
-  {
-    title: '02. Title, Description & Metadata',
-    items: [
-      {
-        id: 'title-hook',
-        title: 'Primary hook or keyword is within the first 50 characters of the title',
-        description: 'Prevents mobile cutoff in push notifications and recommendation feeds.',
-      },
-      {
-        id: 'timestamps',
-        title: 'Timestamps / Video Chapters are accurately formatted (00:00 start)',
-        description: 'Required for Google Search key moments indexation.',
-      },
-      {
-        id: 'affiliate-disclosure',
-        title: 'Affiliate links include explicit FTC disclosure notice',
-        description: 'Mandatory legal compliance for YouTube monetization.',
-      },
-    ],
-  },
-];
+import { useI18n, LocalizedLink } from '@/lib/i18n';
 
 export const ChecklistClient: React.FC = () => {
+  const { t } = useI18n();
   const [checkedState, setCheckedState] = useState<Record<string, boolean>>({});
   const [isLoaded, setIsLoaded] = useState(false);
+
+  const sections = t.checklist.sections;
 
   useEffect(() => {
     try {
@@ -90,12 +40,40 @@ export const ChecklistClient: React.FC = () => {
     } catch (_) {}
   };
 
-  const totalItems = checklistData.reduce((acc, sec) => acc + sec.items.length, 0);
+  const totalItems = sections.reduce((acc, sec) => acc + sec.items.length, 0);
   const completedCount = isLoaded
-    ? checklistData
+    ? sections
         .flatMap((s) => s.items)
         .filter((item) => checkedState[item.id]).length
     : 0;
+
+  const handleExportText = () => {
+    const lines: string[] = [
+      `${t.checklist.hero.heading}`,
+      `${t.checklist.status.completed.replace('{count}', String(completedCount)).replace('{total}', String(totalItems))}`,
+      '',
+    ];
+
+    sections.forEach((section) => {
+      lines.push(`--- ${section.title} ---`);
+      section.items.forEach((item) => {
+        const mark = checkedState[item.id] ? '[x]' : '[ ]';
+        lines.push(`${mark} ${item.title}`);
+        lines.push(`    ${item.description}`);
+      });
+      lines.push('');
+    });
+
+    const blob = new Blob([lines.join('\n')], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.download = 'pre-publish-checklist.txt';
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 30000);
+  };
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
@@ -103,26 +81,36 @@ export const ChecklistClient: React.FC = () => {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div>
             <div className="inline-flex items-center gap-2 mb-2">
-              <Badge variant="new">Retention & Quality</Badge>
+              <Badge variant="new">{t.checklist.hero.badge}</Badge>
               <span className="text-xs font-mono text-[var(--text-muted)]">Pre-Flight Audit</span>
             </div>
             <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-[var(--text-ink)]">
-              YouTube Pre-Publish Checklist
+              {t.checklist.hero.heading}
             </h1>
             <p className="mt-2 text-sm sm:text-base text-[var(--text-body)] leading-relaxed max-w-2xl">
-              Never publish with a typo, an uncompressed thumbnail, or broken affiliate links. Run through this pre-flight checklist before switching your video visibility to Public.
+              {t.checklist.hero.subheading}
             </p>
           </div>
 
-          {isLoaded && completedCount > 0 && (
+          <div className="flex items-center gap-3 shrink-0">
+            {isLoaded && completedCount > 0 && (
+              <button
+                type="button"
+                onClick={handleReset}
+                aria-label={t.checklist.status.resetAria}
+                className="text-xs text-[var(--text-muted)] hover:text-red-500 transition-colors underline cursor-pointer"
+              >
+                {t.checklist.status.resetButton}
+              </button>
+            )}
             <button
               type="button"
-              onClick={handleReset}
-              className="text-xs text-[var(--text-muted)] hover:text-red-500 transition-colors underline shrink-0 cursor-pointer"
+              onClick={handleExportText}
+              className="text-xs text-[var(--brand-accent)] hover:underline cursor-pointer font-medium"
             >
-              Reset checklist
+              {t.checklist.status.exportButton}
             </button>
-          )}
+          </div>
         </div>
       </PageHero>
 
@@ -130,18 +118,18 @@ export const ChecklistClient: React.FC = () => {
       <div className="mb-6 p-4 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-2.5 shadow-2xs">
         <div className="flex items-center justify-between text-xs font-mono">
           <span className="text-[var(--text-body)]">
-            Audit Readiness: <strong className="text-[var(--text-ink)]">{completedCount} of {totalItems} completed</strong>
+            Audit Readiness: <strong className="text-[var(--text-ink)]">{t.checklist.status.completed.replace('{count}', String(completedCount)).replace('{total}', String(totalItems))}</strong>
           </span>
           <span className={completedCount === totalItems ? 'text-emerald-600 dark:text-emerald-400 font-bold' : 'text-[var(--brand-accent)] font-bold'}>
-            {Math.round((completedCount / totalItems) * 100)}%
+            {totalItems > 0 ? Math.round((completedCount / totalItems) * 100) : 0}%
           </span>
         </div>
         <div className="w-full h-2 rounded-full bg-[var(--bg-canvas-subtle)] border border-[var(--border-hairline-subtle)] overflow-hidden">
           <div
             className={`h-full transition-all duration-300 ${
-              completedCount === totalItems ? 'bg-emerald-500' : 'bg-[var(--brand-accent)]'
+              completedCount === totalItems && totalItems > 0 ? 'bg-emerald-500' : 'bg-[var(--brand-accent)]'
             }`}
-            style={{ width: `${(completedCount / totalItems) * 100}%` }}
+            style={{ width: `${totalItems > 0 ? (completedCount / totalItems) * 100 : 0}%` }}
           />
         </div>
       </div>
@@ -151,17 +139,19 @@ export const ChecklistClient: React.FC = () => {
         <div className="p-4 rounded-xl border border-emerald-500/30 bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 flex flex-wrap items-center justify-between gap-3 mb-6 animate-fade-in-up">
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-            <strong className="text-xs sm:text-sm font-semibold">100% Pre-Flight Audit Passed — Upload Ready!</strong>
+            <strong className="text-xs sm:text-sm font-semibold">{t.checklist.status.allComplete}</strong>
           </div>
-          <Button href="/studio" variant="primary" size="sm">
-            Package Project in Studio &rarr;
-          </Button>
+          <LocalizedLink href="/studio">
+            <Button variant="primary" size="sm">
+              Package Project in Studio &rarr;
+            </Button>
+          </LocalizedLink>
         </div>
       )}
 
       {/* Interactive Checklist Groups */}
       <div className="space-y-6">
-        {checklistData.map((section) => {
+        {sections.map((section) => {
           const groupCompleted = section.items.filter((i) => checkedState[i.id]).length;
           const isGroupAllDone = groupCompleted === section.items.length && section.items.length > 0;
           return (
@@ -227,9 +217,11 @@ export const ChecklistClient: React.FC = () => {
         <span className="text-xs text-[var(--text-muted)]">
           Checklist progress auto-saves to your local browser storage.
         </span>
-        <Button variant="primary" size="md" href="/studio">
-          Open Publish Studio &rarr;
-        </Button>
+        <LocalizedLink href="/studio">
+          <Button variant="primary" size="md">
+            Open Publish Studio &rarr;
+          </Button>
+        </LocalizedLink>
       </div>
     </div>
   );

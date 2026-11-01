@@ -2,8 +2,12 @@
 
 import React, { useState } from 'react';
 import Button from '@/components/ui/Button';
+import { useI18n } from '@/lib/i18n';
 
 export default function ContactForm() {
+  const { t } = useI18n();
+  const contact = t.pages.contact;
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -35,15 +39,15 @@ export default function ContactForm() {
 
     // Client-side validations
     if (!formData.name.trim()) {
-      setErrorMsg('Please enter your name.');
+      setErrorMsg(contact.errors.nameRequired);
       return;
     }
     if (!formData.email.trim() || !formData.email.includes('@')) {
-      setErrorMsg('Please enter a valid email address so we can reach you.');
+      setErrorMsg(contact.errors.emailValid);
       return;
     }
     if (!formData.message.trim() || formData.message.trim().length < 10) {
-      setErrorMsg('Please enter a message of at least 10 characters.');
+      setErrorMsg(contact.errors.messageMin);
       return;
     }
 
@@ -75,14 +79,11 @@ export default function ContactForm() {
         </div>
         <div className="space-y-2">
           <h3 className="text-xl font-bold text-[var(--text-ink)]">
-            Email Draft Prepared
+            {contact.form.submittedHeading}
           </h3>
           <p className="text-sm text-[var(--text-body)] max-w-lg mx-auto leading-relaxed">
-            Your default email application has been prompted to open with your draft addressed to{' '}
+            {contact.form.submittedBody}{' '}
             <strong className="text-[var(--text-ink)]">support@creovly.com</strong>.
-          </p>
-          <p className="text-xs text-[var(--text-muted)] max-w-md mx-auto leading-relaxed">
-            <strong>Important:</strong> You must click <strong>Send</strong> in your email app to complete delivery. If you use webmail (e.g. Gmail or Outlook in a browser) or if your email app did not open, click the button below to copy the message and paste it directly into an email.
           </p>
         </div>
 
@@ -91,85 +92,64 @@ export default function ContactForm() {
             href={mailtoUrl}
             className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-[var(--brand-accent)] text-white text-xs font-semibold hover:opacity-90 transition-opacity"
           >
-            Launch Email App Again &rarr;
+            Launch Email App &rarr;
           </a>
           <button
             type="button"
             onClick={handleCopy}
             className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2.5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-xs font-semibold text-[var(--text-ink)] hover:bg-[var(--bg-canvas-subtle)] transition-colors"
           >
-            {copied ? '✓ Copied to Clipboard' : 'Copy Message to Clipboard'}
+            {copied ? '✓ Copied!' : contact.form.buttonCopy}
           </button>
-        </div>
-
-        <p className="text-xs text-[var(--text-muted)] max-w-md mx-auto pt-2">
-          Prefer to write directly? Contact us anytime at{' '}
-          <a href="mailto:support@creovly.com" className="text-[var(--brand-accent)] underline">
-            support@creovly.com
-          </a>.
-        </p>
-
-        <div className="pt-2 border-t border-[var(--border-hairline)]">
-          <Button
-            type="button"
-            variant="ghost"
-            onClick={() => {
-              setStatus('idle');
-            }}
-          >
-            Edit Message
-          </Button>
         </div>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-5">
       {errorMsg && (
-        <div className="p-3.5 rounded-xl border border-rose-500/20 bg-rose-500/10 text-xs text-rose-600 dark:text-rose-400">
+        <div className="p-3.5 rounded-xl border border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400 text-xs font-medium">
           {errorMsg}
         </div>
       )}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <div>
-          <label htmlFor="name" className="block text-xs font-semibold text-[var(--text-ink)] mb-1.5">
-            Your Name <span className="text-rose-500">*</span>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="space-y-1.5">
+          <label htmlFor="name" className="block text-xs font-semibold text-[var(--text-ink)]">
+            {contact.form.nameLabel} <span className="text-red-500">*</span>
           </label>
           <input
             type="text"
             id="name"
             name="name"
-            required
             value={formData.name}
             onChange={handleChange}
-            placeholder="e.g. Alex Rivera"
-            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-sm text-[var(--text-ink)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)] transition-all"
+            placeholder={contact.form.namePlaceholder}
+            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-hairline-strong)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition-all"
           />
         </div>
 
-        <div>
-          <label htmlFor="email" className="block text-xs font-semibold text-[var(--text-ink)] mb-1.5">
-            Email Address <span className="text-rose-500">*</span>
+        <div className="space-y-1.5">
+          <label htmlFor="email" className="block text-xs font-semibold text-[var(--text-ink)]">
+            {contact.form.emailLabel} <span className="text-red-500">*</span>
           </label>
           <input
             type="email"
             id="email"
             name="email"
-            required
             value={formData.email}
             onChange={handleChange}
-            placeholder="alex@example.com"
-            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-sm text-[var(--text-ink)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)] transition-all"
+            placeholder={contact.form.emailPlaceholder}
+            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-hairline-strong)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition-all"
           />
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <div>
-          <label htmlFor="channel" className="block text-xs font-semibold text-[var(--text-ink)] mb-1.5">
-            YouTube Channel or Handle <span className="text-[var(--text-muted)] font-normal">(Optional)</span>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="space-y-1.5">
+          <label htmlFor="channel" className="block text-xs font-semibold text-[var(--text-ink)]">
+            {contact.form.channelLabel}
           </label>
           <input
             type="text"
@@ -177,57 +157,52 @@ export default function ContactForm() {
             name="channel"
             value={formData.channel}
             onChange={handleChange}
-            placeholder="@YourChannel"
-            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-sm text-[var(--text-ink)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)] transition-all"
+            placeholder={contact.form.channelPlaceholder}
+            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-hairline-strong)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition-all"
           />
         </div>
 
-        <div>
-          <label htmlFor="subject" className="block text-xs font-semibold text-[var(--text-ink)] mb-1.5">
-            Topic / Subject
+        <div className="space-y-1.5">
+          <label htmlFor="subject" className="block text-xs font-semibold text-[var(--text-ink)]">
+            {contact.form.topicLabel}
           </label>
           <select
             id="subject"
             name="subject"
             value={formData.subject}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-sm text-[var(--text-ink)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)] transition-all"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-hairline-strong)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition-all cursor-pointer"
           >
-            <option value="Feedback">General Feedback</option>
-            <option value="Feature Request">New Feature or Tool Suggestion</option>
-            <option value="Bug Report">Technical Issue / Bug Report</option>
-            <option value="Partnership">Creator Collaboration / Partnership</option>
-            <option value="Other">Other Inquiries</option>
+            <option value="Feedback">{contact.form.topics.feedback}</option>
+            <option value="Bug">{contact.form.topics.bug}</option>
+            <option value="Feature">{contact.form.topics.feature}</option>
+            <option value="Partnership">{contact.form.topics.partnership}</option>
           </select>
         </div>
       </div>
 
-      <div>
-        <label htmlFor="message" className="block text-xs font-semibold text-[var(--text-ink)] mb-1.5">
-          Your Message <span className="text-rose-500">*</span>
+      <div className="space-y-1.5">
+        <label htmlFor="message" className="block text-xs font-semibold text-[var(--text-ink)]">
+          {contact.form.messageLabel} <span className="text-red-500">*</span>
         </label>
         <textarea
           id="message"
           name="message"
-          required
           rows={5}
           value={formData.message}
           onChange={handleChange}
-          placeholder="Tell us what's on your mind, how we can help, or feature suggestions for Creovly..."
-          className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-sm text-[var(--text-ink)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)] transition-all resize-y"
+          placeholder={contact.form.messagePlaceholder}
+          className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-hairline-strong)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition-all leading-relaxed"
         />
       </div>
 
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2">
-        <p className="text-[11px] text-[var(--text-muted)]">
-          Prepares an email in your mail app addressed to <code>support@creovly.com</code>. Requires pressing Send in your email client.
-        </p>
-        <Button
-          type="submit"
-          variant="primary"
-        >
-          Compose Email &rarr;
+      <div className="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <Button type="submit" variant="primary" size="md">
+          {contact.form.buttonSubmit} &rarr;
         </Button>
+        <span className="text-[11px] text-[var(--text-muted)]">
+          {contact.form.privacyNote}
+        </span>
       </div>
     </form>
   );

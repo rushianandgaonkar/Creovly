@@ -10,38 +10,10 @@ import MetricCard from '@/components/results/MetricCard';
 import ResultSummaryPanel from '@/components/results/ResultSummaryPanel';
 import ToolWorkspaceLayout from './ToolWorkspaceLayout';
 import { analyzeTitle } from '@/lib/title-analysis';
-
-function lengthFeedback(length: number) {
-  const remaining = 100 - length;
-  if (remaining < 0) {
-    return {
-      tone: 'error' as const,
-      message: `${-remaining} char${remaining === -1 ? '' : 's'} over 100-limit`,
-      percentage: 100,
-    };
-  }
-  if (remaining === 0) {
-    return {
-      tone: 'warning' as const,
-      message: 'At 100-character ceiling',
-      percentage: 100,
-    };
-  }
-  const percentage = Math.min(100, (length / 100) * 100);
-  return {
-    tone: length >= 90 ? ('warning' as const) : ('success' as const),
-    message: `${remaining} char${remaining === 1 ? '' : 's'} remaining`,
-    percentage,
-  };
-}
-
-const viewportPresets = [
-  { label: 'Mobile (320px)', width: 320 },
-  { label: 'Tablet (400px)', width: 400 },
-  { label: 'Desktop (480px)', width: 480 },
-];
+import { useI18n } from '@/lib/i18n';
 
 export default function TitleChecker() {
+  const { t } = useI18n();
   const [title, setTitle] = useState('');
   const [keyword, setKeyword] = useState('');
   const [width, setWidth] = useState(360);
@@ -49,8 +21,38 @@ export default function TitleChecker() {
   const [error, setError] = useState('');
   const errorRef = useRef<HTMLDivElement>(null);
 
+  const lengthFeedback = (length: number) => {
+    const remaining = 100 - length;
+    if (remaining < 0) {
+      return {
+        tone: 'error' as const,
+        message: t.titleChecker.charactersOverLimit.replace('{count}', String(-remaining)),
+        percentage: 100,
+      };
+    }
+    if (remaining === 0) {
+      return {
+        tone: 'warning' as const,
+        message: t.titleChecker.characterCeiling,
+        percentage: 100,
+      };
+    }
+    const percentage = Math.min(100, (length / 100) * 100);
+    return {
+      tone: length >= 90 ? ('warning' as const) : ('success' as const),
+      message: t.titleChecker.charactersRemaining.replace('{count}', String(remaining)),
+      percentage,
+    };
+  };
+
   const draftFeedback = lengthFeedback(title.length);
   const resultFeedback = result ? lengthFeedback(result.length) : undefined;
+
+  const viewportPresets = [
+    { label: t.titleChecker.presetMobile, width: 320 },
+    { label: t.titleChecker.presetTablet, width: 400 },
+    { label: t.titleChecker.presetDesktop, width: 480 },
+  ];
 
   useEffect(() => {
     if (error) errorRef.current?.focus();
@@ -78,6 +80,19 @@ export default function TitleChecker() {
     setWidth(360);
   };
 
+  const localizeNote = (note: string): string => {
+    const lower = note.toLowerCase();
+    if (lower.includes('all caps')) return t.titleChecker.heuristics.allCaps;
+    if (lower.includes('repeated punctuation')) return t.titleChecker.heuristics.repeatedPunctuation;
+    if (lower.includes('target keyword') && lower.includes('not found')) return t.titleChecker.heuristics.keywordMissing;
+    if (lower.includes('target keyword') && lower.includes('first 50')) return t.titleChecker.heuristics.keywordFrontLoaded;
+    if (lower.includes('target keyword') && lower.includes('after char 50')) return t.titleChecker.heuristics.keywordLate;
+    if (lower.includes('optimal length') || (lower.includes('between 50') && lower.includes('70'))) return t.titleChecker.heuristics.optimalLength;
+    if (lower.includes('short title') || lower.includes('under 50')) return t.titleChecker.heuristics.tooShort;
+    if (lower.includes('over 70') || lower.includes('truncate')) return t.titleChecker.heuristics.tooLong;
+    return note;
+  };
+
   return (
     <ToolWorkspaceLayout
       workspace={
@@ -85,10 +100,10 @@ export default function TitleChecker() {
           <div className="space-y-2">
             <Input
               id="draft-title"
-              label="Draft YouTube Video Title"
+              label={t.titleChecker.inputTitleLabel}
               value={title}
               maxLength={200}
-              placeholder="e.g. 10 Mistakes Every Creator Makes in 2026"
+              placeholder={t.titleChecker.inputTitlePlaceholder}
               onChange={(event) => {
                 clear();
                 setTitle(event.target.value);
@@ -106,7 +121,7 @@ export default function TitleChecker() {
                   }}
                   className="font-semibold"
                 >
-                  {title.length} / 100 units
+                  {title.length} / 100
                   {title.length > 0 && ` · ${draftFeedback.message}`}
                 </span>
                 <span className="text-[10px] text-[var(--text-muted)]">
@@ -130,10 +145,10 @@ export default function TitleChecker() {
 
           <Input
             id="title-keyword"
-            label="Key Topic / Search Phrase (Optional)"
+            label={t.titleChecker.keywordLabel}
             value={keyword}
             maxLength={100}
-            placeholder="e.g. Creator Mistakes"
+            placeholder={t.titleChecker.keywordPlaceholder}
             onChange={(event) => {
               clear();
               setKeyword(event.target.value);
@@ -143,7 +158,7 @@ export default function TitleChecker() {
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <label htmlFor="title-preview-width" className="text-xs font-medium text-[var(--text-ink)]">
-                Feed Preview Container Width
+                {t.titleChecker.viewportWidthLabel}
               </label>
               <div className="flex items-center gap-1">
                 {viewportPresets.map((preset) => (
@@ -151,7 +166,7 @@ export default function TitleChecker() {
                     key={preset.width}
                     type="button"
                     onClick={() => setWidth(preset.width)}
-                    className={`px-2 py-0.5 rounded text-[10px] font-mono border transition-all ${
+                    className={`px-2 py-0.5 rounded text-[10px] font-mono border transition-all cursor-pointer ${
                       width === preset.width
                         ? 'border-[var(--brand-accent)] bg-[var(--brand-accent-soft)] text-[var(--brand-accent-deep)] font-semibold'
                         : 'border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-muted)]'
@@ -164,7 +179,7 @@ export default function TitleChecker() {
             </div>
             <Slider
               id="title-preview-width"
-              label="Interactive Width Slider"
+              label={t.titleChecker.viewportWidthLabel}
               min={240}
               max={480}
               value={width}
@@ -175,7 +190,7 @@ export default function TitleChecker() {
 
           <div ref={errorRef} tabIndex={-1} className="rounded focus-ring">
             {error && (
-              <Alert variant="error" title="Check your title">
+              <Alert variant="error" title={t.compressor.errors.checkBatchOrSettings}>
                 {error}
               </Alert>
             )}
@@ -183,16 +198,12 @@ export default function TitleChecker() {
 
           <div className="flex flex-wrap justify-between items-center gap-3 pt-4 border-t border-[var(--border-hairline-subtle)]">
             <Button type="button" variant="outline" size="sm" onClick={resetAll}>
-              Reset
+              {t.titleChecker.buttonReset}
             </Button>
             <Button type="submit" disabled={!title.trim()}>
-              Check Title Heuristics
+              {t.titleChecker.buttonAnalyze}
             </Button>
           </div>
-
-          <p className="text-xs text-[var(--text-muted)]">
-            Instant client-side heuristic audit. No remote AI hallucinations or fabricated rank predictions.
-          </p>
         </form>
       }
       results={
@@ -202,9 +213,9 @@ export default function TitleChecker() {
               <div>
                 <div className="flex items-center justify-between text-xs font-mono mb-2">
                   <span className="font-semibold text-[var(--text-ink)]">
-                    Simulated YouTube Video Card
+                    {t.titleChecker.wrappingPreviewHeading}
                   </span>
-                  <span className="text-[var(--text-muted)]">{width}px Feed Width</span>
+                  <span className="text-[var(--text-muted)]">{width}px</span>
                 </div>
 
                 <div
@@ -258,33 +269,29 @@ export default function TitleChecker() {
                     </div>
                   </div>
                 </div>
-
-                <p className="mt-2 text-[11px] text-[var(--text-muted)] leading-relaxed">
-                  Line wrapping varies by device screen density and platform layout. Titles above 70 characters often truncate with ellipsis on mobile search feeds.
-                </p>
               </div>
 
               {result && (
                 <ResultSummaryPanel
                   embedded
                   key={`${title}:${keyword}`}
-                  title="Heuristic Title Audit"
-                  badge="Verified Rules"
+                  title={t.titleChecker.resultsHeading}
+                  badge={t.common.badges.verified}
                   canCopy
                   onCopy={async () => {
                     await navigator.clipboard.writeText(
                       [
                         `Title: ${title}`,
-                        `Length: ${result.length} / 100 units`,
+                        `Length: ${result.length} / 100`,
                         `Words: ${result.words}`,
-                        ...result.notes.map((n) => `• ${n}`),
+                        ...result.notes.map((n) => `• ${localizeNote(n)}`),
                       ].join('\n')
                     );
                   }}
                 >
                   <div className="grid grid-cols-2 gap-3">
                     <MetricCard
-                      label="Length (Units)"
+                      label={t.titleChecker.characterCount}
                       value={`${result.length} / 100`}
                       tone={resultFeedback?.tone}
                       subtext={resultFeedback?.message}
@@ -292,19 +299,19 @@ export default function TitleChecker() {
                     <MetricCard
                       label="Word Count"
                       value={String(result.words)}
-                      subtext="Words in title"
+                      subtext="Words"
                     />
                   </div>
 
                   <div className="p-3.5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] space-y-2">
                     <span className="text-xs font-mono font-medium text-[var(--text-ink)] block">
-                      Editorial Heuristics
+                      {t.titleChecker.heuristicsHeading}
                     </span>
                     <ul className="space-y-1.5 text-xs text-[var(--text-body)]">
                       {result.notes.map((note) => (
                         <li key={note} className="flex items-start gap-2">
                           <span className="text-[var(--brand-accent)] shrink-0 font-bold">✓</span>
-                          <span>{note}</span>
+                          <span>{localizeNote(note)}</span>
                         </li>
                       ))}
                     </ul>
@@ -314,7 +321,7 @@ export default function TitleChecker() {
             </div>
           ) : (
             <div className="py-16 text-center text-xs text-[var(--text-muted)] font-mono">
-              Type a draft title to inspect live wrapping and character limits.
+              {t.titleChecker.inputTitlePlaceholder}
             </div>
           )}
         </>

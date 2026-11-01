@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { toolRegistry } from '@/config/site';
+import { useI18n } from '@/lib/i18n';
 import {
   Dialog,
   DialogContent,
@@ -19,33 +20,6 @@ interface QuickSearchItem {
   tag?: string;
 }
 
-const allSearchItems: QuickSearchItem[] = [
-  {
-    id: 'studio',
-    title: 'Publish Studio (Command Center)',
-    category: 'Flagship Studio',
-    href: '/studio',
-    description: 'Unified workspace for title, description, thumbnail preparation, automated checks, and ZIP package export.',
-    tag: 'Flagship Tool',
-  },
-  {
-    id: 'checklist',
-    title: 'Pre-Publish Launch Checklist',
-    category: 'Workflow',
-    href: '/checklist',
-    description: 'Systematic pre-flight audit for thumbnails, titles, affiliate disclosures, and YouTube compliance.',
-    tag: 'Checklist',
-  },
-  ...toolRegistry.map((tool) => ({
-    id: tool.id,
-    title: tool.title,
-    category: tool.categoryLabel,
-    href: tool.href,
-    description: tool.description,
-    tag: tool.badge || 'Tool',
-  })),
-];
-
 export default function QuickSearchModal({
   isOpen,
   onClose,
@@ -58,6 +32,59 @@ export default function QuickSearchModal({
   const inputRef = useRef<HTMLInputElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
+  const { t, translateHref } = useI18n();
+
+  const getToolTitle = (id: string, fallback: string): string => {
+    switch (id) {
+      case 'youtube-thumbnail-compressor':
+        return t.compressor.title;
+      case 'youtube-thumbnail-resizer':
+        return t.resizer.title;
+      case 'logo-background-remover':
+        return t.logoRemover.title;
+      case 'youtube-shorts-safe-zone':
+        return t.shorts.title;
+      case 'youtube-title-checker':
+        return t.titleChecker.title;
+      case 'youtube-revenue-calculator':
+        return t.calculator.revenue.title;
+      case 'youtube-rpm-calculator':
+        return t.calculator.rpm.title;
+      case 'youtube-watch-hours-calculator':
+        return t.calculator.watchHours.title;
+      case 'youtube-monetization-calculator':
+        return t.calculator.monetization.title;
+      default:
+        return fallback;
+    }
+  };
+
+  const allSearchItems: QuickSearchItem[] = [
+    {
+      id: 'studio',
+      title: `${t.common.nav.studio} (${t.common.searchModal.flagshipBadge})`,
+      category: t.common.nav.studio,
+      href: '/studio',
+      description: t.home.destinations.studio.description,
+      tag: t.common.searchModal.flagshipBadge,
+    },
+    {
+      id: 'checklist',
+      title: t.checklist.hero.heading,
+      category: t.common.searchModal.workflowBadge,
+      href: '/checklist',
+      description: t.checklist.hero.subheading,
+      tag: t.common.nav.checklist,
+    },
+    ...toolRegistry.map((tool) => ({
+      id: tool.id,
+      title: getToolTitle(tool.id, tool.title),
+      category: tool.categoryLabel,
+      href: tool.href,
+      description: tool.description,
+      tag: tool.badge || t.common.badges.available,
+    })),
+  ];
 
   // Filter items
   const filtered = allSearchItems.filter((item) => {
@@ -93,7 +120,7 @@ export default function QuickSearchModal({
     } else if (e.key === 'Enter') {
       e.preventDefault();
       if (filtered[selectedIndex]) {
-        router.push(filtered[selectedIndex].href);
+        router.push(translateHref(filtered[selectedIndex].href));
         onClose();
       }
     }
@@ -105,9 +132,9 @@ export default function QuickSearchModal({
         showCloseButton={false}
         className="top-[18%] sm:top-[22%] translate-y-0 w-full max-w-2xl rounded-2xl border border-[var(--border-hairline-strong)] bg-[var(--bg-canvas-elevated)] shadow-2xl p-0 gap-0 overflow-hidden"
       >
-        <DialogTitle className="sr-only">Quick tool launcher</DialogTitle>
+        <DialogTitle className="sr-only">{t.common.searchModal.title}</DialogTitle>
         <DialogDescription className="sr-only">
-          Search and launch Creovly tools, calculators, studio, and guides
+          {t.common.searchModal.placeholder}
         </DialogDescription>
 
         {/* Search Input Bar */}
@@ -121,7 +148,7 @@ export default function QuickSearchModal({
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Search tools, calculators, studio, checklist…"
+            placeholder={t.common.searchModal.placeholder}
             className="w-full bg-transparent text-sm sm:text-base text-[var(--text-ink)] placeholder-[var(--text-muted)] focus:outline-none font-sans"
           />
           <kbd className="hidden sm:inline-flex items-center px-1.5 py-0.5 text-[10px] font-mono rounded border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-[var(--text-muted)]">
@@ -139,11 +166,11 @@ export default function QuickSearchModal({
                   key={item.id}
                   type="button"
                   onClick={() => {
-                    router.push(item.href);
+                    router.push(translateHref(item.href));
                     onClose();
                   }}
                   onMouseEnter={() => setSelectedIndex(idx)}
-                  className={`w-full text-left px-3.5 py-3 rounded-xl transition-colors flex items-start justify-between gap-3 ${
+                  className={`w-full text-left px-3.5 py-3 rounded-xl transition-colors flex items-start justify-between gap-3 cursor-pointer ${
                     isSelected
                       ? 'bg-[var(--bg-canvas-subtle)] border border-[var(--brand-accent)]/30'
                       : 'hover:bg-[var(--bg-canvas-subtle)] border border-transparent'
@@ -172,8 +199,8 @@ export default function QuickSearchModal({
             })
           ) : (
             <div className="py-12 text-center text-xs text-[var(--text-muted)] space-y-1">
-              <p className="font-semibold text-[var(--text-ink)]">No results found for &quot;{query}&quot;</p>
-              <p>Try searching for thumbnail, compressor, title, RPM, or studio.</p>
+              <p className="font-semibold text-[var(--text-ink)]">{t.common.searchModal.noResults} &quot;{query}&quot;</p>
+              <p>{t.common.searchModal.tryDifferent}</p>
             </div>
           )}
         </div>
@@ -181,11 +208,11 @@ export default function QuickSearchModal({
         {/* Modal Footer */}
         <div className="px-4 py-2.5 border-t border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] flex items-center justify-between text-[11px] font-mono text-[var(--text-muted)]">
           <div className="flex items-center gap-3">
-            <span>↑↓ Navigate</span>
-            <span>↵ Select</span>
-            <span>ESC Close</span>
+            <span>↑↓ {t.common.searchModal.navigate}</span>
+            <span>↵ {t.common.searchModal.select}</span>
+            <span>ESC {t.common.searchModal.close}</span>
           </div>
-          <span>100% Client-Side Search</span>
+          <span>{t.common.badges.inBrowser}</span>
         </div>
       </DialogContent>
     </Dialog>

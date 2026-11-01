@@ -162,7 +162,40 @@ function verifyStaticSitemaps() {
     }
   }
 
-  // 6. Clean up any stale legacy sitemap files in out/
+  // 6. Ensure correct server-rendered HTML lang attribute on localized static export files
+  const nonDefaultLocales = ['es', 'ja', 'fr', 'de', 'pt', 'ko', 'it'];
+  let localizedHtmlFilesUpdated = 0;
+
+  function updateHtmlLang(filePath, targetLang) {
+    if (!fs.existsSync(filePath)) return;
+    let content = fs.readFileSync(filePath, 'utf8');
+    if (content.includes('<html lang="en"')) {
+      content = content.replace('<html lang="en"', `<html lang="${targetLang}"`);
+      fs.writeFileSync(filePath, content, 'utf8');
+      localizedHtmlFilesUpdated++;
+    }
+  }
+
+  function processDir(dirPath, targetLang) {
+    if (!fs.existsSync(dirPath)) return;
+    const entries = fs.readdirSync(dirPath, { withFileTypes: true });
+    for (const entry of entries) {
+      const fullPath = path.join(dirPath, entry.name);
+      if (entry.isDirectory()) {
+        processDir(fullPath, targetLang);
+      } else if (entry.name.endsWith('.html')) {
+        updateHtmlLang(fullPath, targetLang);
+      }
+    }
+  }
+
+  for (const loc of nonDefaultLocales) {
+    updateHtmlLang(path.join(outDir, `${loc}.html`), loc);
+    processDir(path.join(outDir, loc), loc);
+  }
+  console.log(`✓ Verified and ensured server-rendered HTML lang attribute on ${localizedHtmlFilesUpdated} localized static pages.`);
+
+  // 7. Clean up any stale legacy sitemap files in out/
   for (const legacy of ['sitemap-0.xml', 'sitemap_index.xml']) {
     const p = path.join(outDir, legacy);
     if (fs.existsSync(p)) {

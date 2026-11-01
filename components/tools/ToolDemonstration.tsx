@@ -1,12 +1,19 @@
 /* Hallmark · genre: modern-minimal · macrostructure: Workbench */
-import Image from 'next/image';
+'use client';
+
 import { toolGuidance, titleDemonstration } from '@/config/tool-guidance';
 import assets from '@/config/tool-example-assets.json';
 import { analyzeTitle } from '@/lib/title-analysis';
 import { calculateCreator, calculatorDefinitions, formatCalculatorMetric } from '@/lib/creator-calculators';
 import ComparisonSlider from './ComparisonSlider';
+import { useI18n } from '@/lib/i18n';
+import { toolPlaybookTranslations } from '@/config/tool-guidance-i18n';
 
 export default function ToolDemonstration({ slug }: { slug: string }) {
+  const { locale } = useI18n();
+  const playbook = toolPlaybookTranslations[locale] || toolPlaybookTranslations.en;
+  const demoText = playbook.demonstration;
+
   const guidance = toolGuidance[slug];
   if (!guidance) return null;
   const example = guidance.image;
@@ -22,7 +29,7 @@ export default function ToolDemonstration({ slug }: { slug: string }) {
       <div className="flex items-center gap-2 mb-2">
         <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
         <span className="text-xs font-mono uppercase tracking-wider text-[var(--brand-accent)] font-medium">
-          Demonstration // Sample Inputs
+          {demoText.badge}
         </span>
       </div>
       <h2
@@ -30,17 +37,17 @@ export default function ToolDemonstration({ slug }: { slug: string }) {
         className="text-xl font-bold tracking-tight text-[var(--text-ink)]"
       >
         {example
-          ? 'Before and After Inspection'
+          ? demoText.inspectionHeading
           : guidance.titleExample
-          ? 'Title Draft Revision Example'
-          : 'Worked Calculation Scenario'}
+          ? demoText.titleHeading
+          : demoText.calcHeading}
       </h2>
       <p className="mt-1 text-xs sm:text-sm text-[var(--text-body)]">
         {example
-          ? 'A fictional example processed with this tool. Your image and settings will produce different results.'
+          ? demoText.inspectionSubheading
           : guidance.titleExample
-          ? 'An editorial example checked with the same title analysis. This is a wording choice, not an automatic rewrite or a performance prediction.'
-          : 'These are demonstration assumptions, not channel data or expected earnings. Results use the same formulas as the calculator above.'}
+          ? demoText.titleSubheading
+          : demoText.calcSubheading}
       </p>
 
       {example && (() => {
@@ -68,7 +75,7 @@ export default function ToolDemonstration({ slug }: { slug: string }) {
                   download
                   className="font-mono text-xs text-[var(--brand-accent)] hover:underline focus-ring"
                 >
-                  Download original {example.before.endsWith('.png') ? 'PNG' : 'JPEG'}
+                  {demoText.downloadOriginal} {example.before.endsWith('.png') ? 'PNG' : 'JPEG'}
                 </a>
                 <span className="text-[var(--text-faint)]">·</span>
                 <a
@@ -76,7 +83,7 @@ export default function ToolDemonstration({ slug }: { slug: string }) {
                   download
                   className="font-mono text-xs text-[var(--brand-accent)] hover:underline focus-ring"
                 >
-                  Download processed {example.after.endsWith('.png') ? 'PNG' : 'JPEG'}
+                  {demoText.downloadProcessed} {example.after.endsWith('.png') ? 'PNG' : 'JPEG'}
                 </a>
               </div>
             </div>
@@ -97,7 +104,7 @@ export default function ToolDemonstration({ slug }: { slug: string }) {
                 <div>
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono font-semibold uppercase tracking-wider text-[var(--text-ink)]">
-                      {index === 0 ? 'Before // Original Draft' : 'After // Polished Draft'}
+                      {index === 0 ? demoText.beforeDraft : demoText.afterDraft}
                     </span>
                     <span
                       className={`text-[10px] font-mono px-2 py-0.5 rounded ${
@@ -106,16 +113,13 @@ export default function ToolDemonstration({ slug }: { slug: string }) {
                           : 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20'
                       }`}
                     >
-                      {index === 0 ? 'Raw Draft' : 'Refined'}
+                      {analysis.characters} units
                     </span>
                   </div>
-                  <p className="my-4 whitespace-pre-wrap break-words text-base font-medium text-[var(--text-ink)]">
+                  <p className="mt-3 text-sm font-semibold text-[var(--text-ink)] break-words">
                     &ldquo;{text}&rdquo;
                   </p>
-                  <p className="text-xs font-mono text-[var(--text-muted)]">
-                    {analysis.length} / 100 units · {analysis.words} words
-                  </p>
-                  <ul className="list-disc pl-4 mt-3 space-y-1.5 text-xs leading-relaxed text-[var(--text-body)]">
+                  <ul className="mt-3 space-y-1.5 text-xs text-[var(--text-body)] border-t border-[var(--border-hairline-subtle)] pt-3">
                     {analysis.notes.map((note) => (
                       <li key={note}>{note}</li>
                     ))}

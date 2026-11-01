@@ -1,0 +1,93 @@
+{
+  "timestamp": "2026-11-01T23:16:41.860Z",
+  "canonicalLocale": "en",
+  "totalKeys": 681,
+  "languages": {
+    "en": {
+      "code": "en",
+      "totalKeys": 681,
+      "translatedKeys": 681,
+      "missingKeys": 0,
+      "coveragePercent": 100,
+      "placeholderMismatches": 0,
+      "status": "SOURCE_OF_TRUTH"
+    },
+    "es": {
+      "code": "es",
+      "totalKeys": 681,
+      "translatedKeys": 681,
+      "missingKeys": 0,
+      "missingKeyDetails": [],
+      "placeholderMismatches": 0,
+      "placeholderDetails": [],
+      "coveragePercent": 100,
+      "status": "PASSED"
+    },
+    "ja": {
+      "code": "ja",
+      "totalKeys": 681,
+      "translatedKeys": 681,
+      "missingKeys": 0,
+      "missingKeyDetails": [],
+      "placeholderMismatches": 0,
+      "placeholderDetails": [],
+      "coveragePercent": 100,
+      "status": "PASSED"
+    },
+    "fr": {
+      "code": "fr",
+      "totalKeys": 681,
+      "translatedKeys": 681,
+      "missingKeys": 0,
+      "missingKeyDetails": [],
+      "placeholderMismatches": 0,
+      "placeholderDetails": [],
+      "coveragePercent": 100,
+      "status": "PASSED"
+    },
+    "de": {
+      "code": "de",
+      "totalKeys": 681,
+      "translatedKeys": 681,
+      "missingKeys": 0,
+      "missingKeyDetails": [],
+      "placeholderMismatches": 0,
+      "placeholderDetails": [],
+      "coveragePercent": 100,
+      "status": "PASSED"
+    },
+    "pt": {
+      "code": "pt",
+      "totalKeys": 681,
+      "translatedKeys": 681,
+      "missingKeys": 0,
+      "missingKeyDetails": [],
+      "placeholderMismatches": 0,
+      "placeholderDetails": [],
+      "coveragePercent": 100,
+      "status": "PASSED"
+    },
+    "ko": {
+      "code": "ko",
+      "totalKeys": 681,
+      "translatedKeys": 681,
+      "missingKeys": 0,
+      "missingKeyDetails": [],
+      "placeholderMismatches": 0,
+      "placeholderDetails": [],
+      "coveragePercent": 100,
+      "status": "PASSED"
+    },
+    "it": {
+      "code": "it",
+      "totalKeys": 681,
+      "translatedKeys": 681,
+      "missingKeys": 0,
+      "missingKeyDetails": [],
+      "placeholderMismatches": 0,
+      "placeholderDetails": [],
+      "coveragePercent": 100,
+      "status": "PASSED"
+    }
+  }
+}

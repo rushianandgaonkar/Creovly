@@ -1,5 +1,6 @@
+'use client';
+
 import React from 'react';
-import Link from 'next/link';
 import type { GuideItem } from '@/lib/guides';
 import PageHero from '@/components/ui/PageHero';
 import Badge from '@/components/ui/Badge';
@@ -7,13 +8,21 @@ import ToolCard from '@/components/ui/ToolCard';
 import { toolRegistry } from '@/config/site';
 import WorkedExampleCard from './WorkedExampleCard';
 import ActionChecklist from './ActionChecklist';
+import { useI18n, LocalizedLink } from '@/lib/i18n';
 
 interface GuideArticleProps {
   guide: GuideItem;
 }
 
 export default function GuideArticle({ guide }: GuideArticleProps) {
+  const { t } = useI18n();
   const relatedTools = toolRegistry.filter((t) => guide.relatedToolIds.includes(t.id));
+  const localizedItem = t.guides.items[guide.slug as keyof typeof t.guides.items];
+
+  const displayTitle = localizedItem?.title || guide.title;
+  const displayCategory = localizedItem?.category || guide.category;
+  const displayReadTime = localizedItem?.readTime || guide.readTime;
+  const displayDesc = localizedItem?.description || guide.description;
 
   return (
     <article className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
@@ -21,19 +30,19 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
       <nav aria-label="Breadcrumb" className="mb-6">
         <ol className="flex items-center space-x-2 text-xs font-mono text-[var(--text-muted)]">
           <li>
-            <Link href="/" className="hover:text-[var(--text-ink)] transition-colors">
-              Home
-            </Link>
+            <LocalizedLink href="/" className="hover:text-[var(--text-ink)] transition-colors">
+              {t.tools.shell.breadcrumbHome}
+            </LocalizedLink>
           </li>
           <li aria-hidden="true">/</li>
           <li>
-            <Link href="/guides" className="hover:text-[var(--text-ink)] transition-colors">
-              Creator Guides
-            </Link>
+            <LocalizedLink href="/guides" className="hover:text-[var(--text-ink)] transition-colors">
+              {t.guides.article.breadcrumbGuides}
+            </LocalizedLink>
           </li>
           <li aria-hidden="true">/</li>
           <li className="text-[var(--text-ink)] truncate max-w-[200px] sm:max-w-none">
-            {guide.title}
+            {displayTitle}
           </li>
         </ol>
       </nav>
@@ -41,22 +50,22 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
       {/* Guide Hero with approved violet tone */}
       <PageHero tone="violet" className="mb-10">
         <div className="flex flex-wrap items-center gap-2 mb-3">
-          <Badge variant="neutral">{guide.category}</Badge>
-          <span className="text-xs font-mono text-[var(--text-muted)]">{guide.readTime}</span>
+          <Badge variant="neutral">{displayCategory}</Badge>
+          <span className="text-xs font-mono text-[var(--text-muted)]">{displayReadTime}</span>
           <span className="text-xs font-mono text-[var(--text-muted)]">&middot;</span>
           <span className="text-xs font-mono text-[var(--text-muted)]">
             By Creovly Editorial Team
           </span>
           <span className="text-xs font-mono text-[var(--text-muted)]">&middot;</span>
           <span className="text-xs font-mono text-[var(--text-muted)]">
-            Last verified: {guide.lastVerified}
+            {t.guides.article.lastVerifiedPrefix} {guide.lastVerified}
           </span>
         </div>
         <h1 className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--text-ink)] leading-tight">
-          {guide.title}
+          {displayTitle}
         </h1>
         <p className="mt-3 text-sm sm:text-base text-[var(--text-body)] leading-relaxed">
-          {guide.description}
+          {displayDesc}
         </p>
       </PageHero>
 
@@ -68,7 +77,7 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
         >
           <div className="flex items-center gap-2 mb-2">
             <span className="text-[11px] font-mono uppercase font-semibold text-[var(--brand-accent-deep)] dark:text-blue-400">
-              Verified Platform Standards
+              {t.guides.article.verifiedLabel}
             </span>
           </div>
           <p className="text-xs text-[var(--text-muted)] mb-3">
@@ -125,7 +134,7 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
       <WorkedExampleCard example={guide.workedExample} />
 
       {/* Actionable Pre-Publish Checklist */}
-      <ActionChecklist items={guide.checklist} guideTitle={guide.title} />
+      <ActionChecklist items={guide.checklist} guideTitle={displayTitle} />
 
       {/* Related Tools Section */}
       {relatedTools.length > 0 && (
@@ -135,7 +144,7 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
               Applied Utilities
             </span>
             <h2 className="text-xl font-bold tracking-tight text-[var(--text-ink)] mt-1">
-              Put this guide into practice
+              {t.guides.article.relatedToolsHeading}
             </h2>
             <p className="text-xs sm:text-sm text-[var(--text-body)] mt-1">
               Use these client-side Creovly tools to verify and format your assets before publishing.

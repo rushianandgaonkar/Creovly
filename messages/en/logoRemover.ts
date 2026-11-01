@@ -1,0 +1,22 @@
+export const logoRemover = {
+  title: 'Logo Background Remover',
+  dropzoneLabel: 'Select logo to process',
+  dropzoneHint: 'Upload a logo up to 20 MB with a solid single-color background (JPEG, PNG, or WebP).',
+  selectColorHeading: 'Pick background color to remove',
+  toleranceLabel: 'Removal tolerance',
+  toleranceHint: 'Higher values remove variations near edges; lower values protect subtle shadows.',
+  previewBackgroundHeading: 'Preview backdrop',
+  backdropChecker: 'Checkerboard (Transparency)',
+  backdropWhite: 'White',
+  backdropDark: 'Dark',
+  buttonProcess: 'Remove background',
+  buttonProcessing: 'Processing logo locally…',
+  buttonReset: 'Reset',
+  buttonDownload: 'Download transparent PNG',
+  resultsHeading: 'Processed logo',
+  originalLabel: 'Original image',
+  transparentLabel: 'Transparent PNG output',
+  resultsPrompt: 'Select a logo with a solid background, then click Remove background to generate a transparent PNG.',
+  noticePreserved: 'Enclosed letter openings (like O and D) remain protected while outer border-connected pixels are cleared.',
+};
+

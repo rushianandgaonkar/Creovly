@@ -15,8 +15,10 @@ import {
   type CalculatorKind,
   type CalculatorResult,
 } from '@/lib/creator-calculators';
+import { useI18n } from '@/lib/i18n';
 
 export default function CreatorCalculator({ kind }: { kind: CalculatorKind }) {
+  const { t } = useI18n();
   const definition = calculatorDefinitions[kind];
   const [input, setInput] = useState<Record<string, string>>({});
   const [result, setResult] = useState<CalculatorResult>();
@@ -42,18 +44,95 @@ export default function CreatorCalculator({ kind }: { kind: CalculatorKind }) {
     }
   };
 
+  const getLocalizedTitle = (): string => {
+    switch (kind) {
+      case 'revenue':
+        return t.calculator.revenue.title;
+      case 'rpm':
+        return t.calculator.rpm.title;
+      case 'watch-hours':
+        return t.calculator.watchHours.title;
+      case 'monetization':
+        return t.calculator.monetization.title;
+    }
+  };
+
+  const getLocalizedNote = (): string => {
+    switch (kind) {
+      case 'revenue':
+        return t.calculator.revenue.note;
+      case 'rpm':
+        return t.calculator.rpm.note;
+      case 'watch-hours':
+        return t.calculator.watchHours.note;
+      case 'monetization':
+        return t.calculator.monetization.note;
+    }
+  };
+
+  const getLocalizedField = (fieldKey: string, fallbackLabel: string, fallbackSuffix?: string) => {
+    if (kind === 'revenue') {
+      const f = (t.calculator.revenue.fields as any)[fieldKey];
+      if (f) return { label: f.label, suffix: f.suffix || fallbackSuffix };
+    } else if (kind === 'rpm') {
+      const f = (t.calculator.rpm.fields as any)[fieldKey];
+      if (f) return { label: f.label, suffix: f.suffix || fallbackSuffix };
+    } else if (kind === 'watch-hours') {
+      const f = (t.calculator.watchHours.fields as any)[fieldKey];
+      if (f) return { label: f.label, suffix: f.suffix || fallbackSuffix };
+    } else if (kind === 'monetization') {
+      const f = (t.calculator.monetization.fields as any)[fieldKey];
+      if (f) return { label: f.label, suffix: f.suffix || fallbackSuffix };
+    }
+    return { label: fallbackLabel, suffix: fallbackSuffix };
+  };
+
+  const getLocalizedMetricLabel = (label: string): string => {
+    if (kind === 'revenue') {
+      if (label.includes('Lower Monthly')) return t.calculator.revenue.metrics.monthlyLower;
+      if (label.includes('Upper Monthly')) return t.calculator.revenue.metrics.monthlyUpper;
+      if (label.includes('Lower Annual')) return t.calculator.revenue.metrics.annualLower;
+      if (label.includes('Upper Annual')) return t.calculator.revenue.metrics.annualUpper;
+    } else if (kind === 'rpm') {
+      if (label.includes('Calculated RPM')) return t.calculator.rpm.metrics.calculatedRpm;
+      if (label.includes('Revenue Entered')) return t.calculator.rpm.metrics.revenueEntered;
+      if (label.includes('Views Entered')) return t.calculator.rpm.metrics.viewsEntered;
+    } else if (kind === 'watch-hours') {
+      if (label.includes('Hours Remaining')) return t.calculator.watchHours.metrics.remaining;
+      if (label.includes('Progress to Goal')) return t.calculator.watchHours.metrics.progress;
+      if (label.includes('Pace')) return t.calculator.watchHours.metrics.pace;
+      if (label.includes('Views Needed')) return t.calculator.watchHours.metrics.viewsNeeded;
+    } else if (kind === 'monetization') {
+      if (label.includes('Total Monthly Revenue')) return t.calculator.monetization.metrics.monthlyTotal;
+      if (label.includes('Monthly After Costs')) return t.calculator.monetization.metrics.afterCosts;
+      if (label.includes('Platform Ad Revenue')) return t.calculator.monetization.metrics.platform;
+      if (label.includes('Sponsorship Revenue')) return t.calculator.monetization.metrics.sponsorship;
+      if (label.includes('Affiliate Revenue')) return t.calculator.monetization.metrics.affiliate;
+      if (label.includes('Other Revenue')) return t.calculator.monetization.metrics.other;
+      if (label.includes('Costs')) return t.calculator.monetization.metrics.costs;
+      if (label.includes('Annual Net')) return t.calculator.monetization.metrics.annualNet;
+    }
+    return label;
+  };
+
+  const localizedTitle = getLocalizedTitle();
+  const localizedNote = getLocalizedNote();
+
   const summary = result
     ? [
-        definition.title,
-        '--- Inputs ---',
-        ...definition.fields.map((field) => `${field.label}: ${input[field.key] || '0'} ${field.suffix ?? ''}`),
-        '--- Calculated Results ---',
+        localizedTitle,
+        t.calculator.shared.inputsHeader,
+        ...definition.fields.map((field) => {
+          const loc = getLocalizedField(field.key, field.label, field.suffix);
+          return `${loc.label}: ${input[field.key] || '0'} ${loc.suffix ?? ''}`;
+        }),
+        t.calculator.shared.resultsHeader,
         ...result.metrics.map(
-          (metric) => `${metric.label}: ${formatCalculatorMetric(metric)} (${metric.detail ?? ''})`
+          (metric) => `${getLocalizedMetricLabel(metric.label)}: ${formatCalculatorMetric(metric)} (${metric.detail ?? ''})`
         ),
-        `Formula: ${result.formula}`,
-        `Methodology: ${result.explanation}`,
-        definition.note,
+        `${t.calculator.shared.formulaPrefix}${result.formula}`,
+        `${t.calculator.shared.methodologyPrefix}${result.explanation}`,
+        localizedNote,
       ].join('\n')
     : '';
 
@@ -63,7 +142,7 @@ export default function CreatorCalculator({ kind }: { kind: CalculatorKind }) {
         <form noValidate onSubmit={handleCalculate} className="space-y-6">
           <div ref={errorRef} tabIndex={-1} className="rounded focus-ring">
             {error && (
-              <Alert variant="error" title="Input validation notice">
+              <Alert variant="error" title={t.calculator.shared.validationNoticeTitle}>
                 {error}
               </Alert>
             )}
@@ -71,7 +150,7 @@ export default function CreatorCalculator({ kind }: { kind: CalculatorKind }) {
 
           <div className="flex items-center justify-between pb-2 border-b border-[var(--border-hairline-subtle)]">
             <span className="text-xs font-mono font-medium uppercase tracking-wider text-[var(--text-ink)]">
-              {definition.title} Parameters
+              {t.calculator.shared.parametersHeading.replace('{title}', localizedTitle)}
             </span>
             <button
               type="button"
@@ -81,31 +160,34 @@ export default function CreatorCalculator({ kind }: { kind: CalculatorKind }) {
               }}
               className="text-[11px] font-mono text-[var(--brand-accent)] hover:underline focus-ring cursor-pointer"
             >
-              Load Example Scenario &rarr;
+              {t.calculator.shared.loadExample}
             </button>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {definition.fields.map((field) => (
-              <NumberInput
-                key={field.key}
-                id={`${kind}-${field.key}`}
-                label={field.label}
-                value={input[field.key] ?? ''}
-                min={field.min ?? 0}
-                max={field.max ?? 1_000_000_000_000}
-                step={field.integer ? 1 : 'any'}
-                suffix={field.suffix}
-                onChange={(event) => {
-                  clear();
-                  setInput((current) => ({ ...current, [field.key]: event.target.value }));
-                }}
-              />
-            ))}
+            {definition.fields.map((field) => {
+              const loc = getLocalizedField(field.key, field.label, field.suffix);
+              return (
+                <NumberInput
+                  key={field.key}
+                  id={`${kind}-${field.key}`}
+                  label={loc.label}
+                  value={input[field.key] ?? ''}
+                  min={field.min ?? 0}
+                  max={field.max ?? 1_000_000_000_000}
+                  step={field.integer ? 1 : 'any'}
+                  suffix={loc.suffix}
+                  onChange={(event) => {
+                    clear();
+                    setInput((current) => ({ ...current, [field.key]: event.target.value }));
+                  }}
+                />
+              );
+            })}
           </div>
 
           <p className="text-xs text-[var(--text-body)] leading-relaxed">
-            {definition.note}
+            {localizedNote}
           </p>
 
           <div className="flex flex-wrap gap-3 items-center justify-between pt-4 border-t border-[var(--border-hairline-subtle)]">
@@ -118,15 +200,15 @@ export default function CreatorCalculator({ kind }: { kind: CalculatorKind }) {
                 setInput({});
               }}
             >
-              Clear
+              {t.calculator.shared.clearButton}
             </Button>
-            <Button type="submit">Calculate Scenario</Button>
+            <Button type="submit">{t.calculator.shared.calculateButton}</Button>
           </div>
 
           <p role="status" className="text-xs text-[var(--text-muted)]">
             {result
-              ? 'Calculations complete. Values calculated strictly from your inputs.'
-              : 'Client-side arithmetic. No channel connection or financial data retention.'}
+              ? t.calculator.shared.completeStatus
+              : t.calculator.shared.initialStatus}
           </p>
         </form>
       }
@@ -135,8 +217,8 @@ export default function CreatorCalculator({ kind }: { kind: CalculatorKind }) {
           <ResultSummaryPanel
             embedded
             key={summary}
-            title={definition.title}
-            badge="Calculated"
+            title={localizedTitle}
+            badge={t.calculator.shared.calculatedBadge}
             canCopy
             onCopy={async () => {
               await navigator.clipboard.writeText(summary);
@@ -146,7 +228,7 @@ export default function CreatorCalculator({ kind }: { kind: CalculatorKind }) {
               {result.metrics.map((metric) => (
                 <MetricCard
                   key={metric.label}
-                  label={metric.label}
+                  label={getLocalizedMetricLabel(metric.label)}
                   value={formatCalculatorMetric(metric)}
                   subtext={metric.detail}
                 />
@@ -155,7 +237,7 @@ export default function CreatorCalculator({ kind }: { kind: CalculatorKind }) {
 
             <div className="p-4 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] space-y-2">
               <span className="text-xs font-mono font-medium text-[var(--text-ink)] block">
-                Formula & Logic
+                {t.calculator.shared.formulaPrefix.trim()}
               </span>
               <p className="text-xs font-mono text-[var(--text-muted)] break-words">
                 {result.formula}
@@ -167,7 +249,7 @@ export default function CreatorCalculator({ kind }: { kind: CalculatorKind }) {
           </ResultSummaryPanel>
         ) : (
           <div className="py-16 text-center text-xs text-[var(--text-muted)] font-mono">
-            Enter values and click Calculate Scenario to see detailed breakdowns.
+            {t.calculator.shared.initialStatus}
           </div>
         )
       }

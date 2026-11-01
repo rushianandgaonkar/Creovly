@@ -11,19 +11,13 @@ import ToolWorkspaceLayout from './ToolWorkspaceLayout';
 import { formatBytes } from '@/lib/image-compression';
 import { readLogo, removeLogoBackground } from '@/lib/logo-background';
 import { toolSamples } from '@/config/tool-samples';
+import { useI18n } from '@/lib/i18n';
 
 type Selected = { file: File; width: number; height: number };
 type Result = Awaited<ReturnType<typeof removeLogoBackground>>;
 
-const quickColors = [
-  { label: 'White', hex: '#ffffff' },
-  { label: 'Black', hex: '#000000' },
-  { label: 'Slate', hex: '#0f172a' },
-  { label: 'Gray', hex: '#1e293b' },
-  { label: 'Green', hex: '#00ff00' },
-];
-
 export default function LogoBackgroundRemover() {
+  const { t } = useI18n();
   const [selected, setSelected] = useState<Selected>();
   const [result, setResult] = useState<Result>();
   const [color, setColor] = useState('#ffffff');
@@ -40,6 +34,14 @@ export default function LogoBackgroundRemover() {
 
   const originalUrl = useBlobUrl(selected?.file);
   const outputUrl = useBlobUrl(result?.blob);
+
+  const quickColors = [
+    { label: 'White', hex: '#ffffff' },
+    { label: 'Black', hex: '#000000' },
+    { label: 'Slate', hex: '#0f172a' },
+    { label: 'Gray', hex: '#1e293b' },
+    { label: 'Green', hex: '#00ff00' },
+  ];
 
   useEffect(() => {
     const ctrl = controller;
@@ -122,9 +124,9 @@ export default function LogoBackgroundRemover() {
           <DropZone
             key={fileKey}
             id="logo-file"
-            label="Upload Brand Logo"
+            label={t.logoRemover.dropzoneLabel}
             maxSizeMB={20}
-            privacyNote="100% In-Browser Execution"
+            privacyNote={t.common.dropzone.localPrivacyNote}
             disabled={busy}
             onFileSelect={select}
             onError={setError}
@@ -133,7 +135,7 @@ export default function LogoBackgroundRemover() {
 
           <div ref={errorRef} tabIndex={-1} className="focus-ring rounded-md">
             {error && (
-              <Alert variant="error" title="Check your image">
+              <Alert variant="error" title={t.compressor.errors.checkBatchOrSettings}>
                 {error}
               </Alert>
             )}
@@ -155,7 +157,7 @@ export default function LogoBackgroundRemover() {
 
             <div className="space-y-2.5">
               <label htmlFor="logo-color" className="block text-xs font-medium text-[var(--text-ink)]">
-                Target Background Color to Remove
+                {t.logoRemover.selectColorHeading}
               </label>
               <div className="flex items-center gap-2.5">
                 <input
@@ -193,7 +195,7 @@ export default function LogoBackgroundRemover() {
                       key={item.hex}
                       type="button"
                       onClick={() => handleColorChange(item.hex)}
-                      className={`px-2 py-1.5 rounded-md text-[10px] font-mono border transition-all ${
+                      className={`px-2 py-1.5 rounded-md text-[10px] font-mono border transition-all cursor-pointer ${
                         color.toLowerCase() === item.hex.toLowerCase()
                           ? 'border-[var(--brand-accent)] bg-[var(--brand-accent-soft)] text-[var(--brand-accent-deep)] font-semibold'
                           : 'border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-body)] hover:border-[var(--brand-accent)]'
@@ -205,13 +207,13 @@ export default function LogoBackgroundRemover() {
                 </div>
               </div>
               <p className="text-xs text-[var(--text-muted)]">
-                Sampled from top-left pixel by default. You can pick, type an exact hex code, or use quick presets.
+                {t.logoRemover.dropzoneHint}
               </p>
             </div>
 
             <Slider
               id="logo-tolerance"
-              label="Color Tolerance"
+              label={t.logoRemover.toleranceLabel}
               value={tolerance}
               unit="%"
               onChange={(value) => {
@@ -220,21 +222,21 @@ export default function LogoBackgroundRemover() {
               }}
             />
             <p className="text-xs text-[var(--text-body)] leading-relaxed">
-              Lower tolerance preserves subtle logo gradients. Higher values strip anti-aliased fringes. Only outer border-connected pixels are erased; interior logo fills remain protected.
+              {t.logoRemover.toleranceHint}
             </p>
           </fieldset>
 
           <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-[var(--border-hairline-subtle)]">
             <Button variant="outline" size="sm" onClick={resetAll} disabled={busy}>
-              Reset
+              {t.logoRemover.buttonReset}
             </Button>
             <Button onClick={run} disabled={!selected || busy}>
-              {busy ? 'Processing locally…' : 'Remove Background'}
+              {busy ? t.logoRemover.buttonProcessing : t.logoRemover.buttonProcess}
             </Button>
           </div>
 
           <p className="text-xs text-[var(--text-muted)]">
-            Client-side flood-fill for flat logo backgrounds. No AI artifacts, server uploads, or brush scrubbing. JPEG, PNG, or WebP up to 20 MB.
+            {t.logoRemover.noticePreserved}
           </p>
         </>
       }
@@ -242,21 +244,21 @@ export default function LogoBackgroundRemover() {
         <div className="space-y-5" aria-busy={busy}>
           <div>
             <h3 className="text-sm font-semibold text-[var(--text-ink)]">
-              Before & After Comparison
+              {t.logoRemover.resultsHeading}
             </h3>
             <p role="status" className="mt-1 text-xs text-[var(--text-body)]">
               {busy
-                ? 'Processing locally on your device…'
+                ? t.logoRemover.buttonProcessing
                 : result
-                ? `${result.removed.toLocaleString()} background pixels converted to transparent alpha. Inspect edges below.`
-                : 'Upload a logo to preview original and generate transparent output.'}
+                ? `${result.removed.toLocaleString()} pixels converted`
+                : t.logoRemover.resultsPrompt}
             </p>
           </div>
 
           {originalUrl && selected && (
             <ImagePreview
               url={originalUrl}
-              title="Original Input"
+              title={t.logoRemover.originalLabel}
               width={selected.width}
               height={selected.height}
             />
@@ -269,7 +271,7 @@ export default function LogoBackgroundRemover() {
                   htmlFor="logo-preview-background"
                   className="block text-xs font-medium text-[var(--text-ink)] mb-2"
                 >
-                  Inspect Transparency Surface
+                  {t.logoRemover.previewBackgroundHeading}
                 </label>
                 <select
                   id="logo-preview-background"
@@ -277,16 +279,15 @@ export default function LogoBackgroundRemover() {
                   onChange={(e) => setBackground(e.target.value)}
                   className="w-full rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] p-2.5 text-xs font-mono focus-ring"
                 >
-                  <option value="checkerboard">Checkerboard (Alpha Grid)</option>
-                  <option value="white">Solid White Surface</option>
-                  <option value="black">Solid Black Surface</option>
-                  <option value="#0f172a">Dark Slate (YouTube Dark Mode)</option>
+                  <option value="checkerboard">{t.logoRemover.backdropChecker}</option>
+                  <option value="white">{t.logoRemover.backdropWhite}</option>
+                  <option value="black">{t.logoRemover.backdropDark}</option>
                 </select>
               </div>
 
               <ImagePreview
                 url={outputUrl}
-                title="Transparent Output (PNG)"
+                title={t.logoRemover.transparentLabel}
                 width={result.width}
                 height={result.height}
                 transparencyGrid={background === 'checkerboard'}
@@ -303,18 +304,6 @@ export default function LogoBackgroundRemover() {
                       }
                 }
               />
-
-              {result.removed === 0 && (
-                <Alert variant="info" title="No matching background pixels found">
-                  Choose a background color that touches image borders or increase tolerance slightly.
-                </Alert>
-              )}
-
-              {result.removed === result.width * result.height && (
-                <Alert variant="warning" title="Entire canvas was removed">
-                  Tolerance is too high or target color matches your logo artwork. Lower tolerance.
-                </Alert>
-              )}
 
               <div className="flex items-center justify-between p-3 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-xs font-mono">
                 <span className="text-[var(--text-ink)]">PNG Alpha</span>
@@ -351,7 +340,7 @@ export default function LogoBackgroundRemover() {
                     d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                   />
                 </svg>
-                Download Transparent PNG
+                {t.logoRemover.buttonDownload}
               </Button>
             </>
           )}

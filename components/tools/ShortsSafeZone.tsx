@@ -25,14 +25,10 @@ import {
   type Margins,
 } from '@/lib/shorts-guide';
 import { toolSamples } from '@/config/tool-samples';
-
-const marginPresets = [
-  { label: 'YouTube Standard', margins: starterMargins },
-  { label: 'Safe Minimal', margins: { top: 10, bottom: 15, left: 5, right: 10 } },
-  { label: 'High Clearance', margins: { top: 20, bottom: 25, left: 8, right: 15 } },
-];
+import { useI18n } from '@/lib/i18n';
 
 export default function ShortsSafeZone() {
+  const { t } = useI18n();
   const [selected, setSelected] = useState<{
     file: File;
     width: number;
@@ -52,6 +48,12 @@ export default function ShortsSafeZone() {
   const request = useRef(0);
   const controller = useRef<AbortController | undefined>(undefined);
   const errorRef = useRef<HTMLDivElement>(null);
+
+  const marginPresets = [
+    { label: t.shorts.presetStandard, margins: starterMargins },
+    { label: t.shorts.presetMinimal, margins: { top: 10, bottom: 15, left: 5, right: 10 } },
+    { label: t.shorts.presetHighClearance, margins: { top: 20, bottom: 25, left: 8, right: 15 } },
+  ];
 
   const source = useMemo(
     () => (selected ? new Blob([selected.file], { type: selected.format }) : undefined),
@@ -152,9 +154,9 @@ export default function ShortsSafeZone() {
           <DropZone
             key={key}
             id="shorts-frame"
-            label="Upload Shorts Still Frame (9:16)"
+            label={t.shorts.dropzoneLabel}
             maxSizeMB={20}
-            privacyNote="100% In-Browser Execution"
+            privacyNote={t.common.dropzone.localPrivacyNote}
             onFileSelect={select}
             onError={setError}
             disabled={loading || busy}
@@ -163,7 +165,7 @@ export default function ShortsSafeZone() {
 
           <div ref={errorRef} tabIndex={-1} className="rounded focus-ring">
             {error && (
-              <Alert variant="error" title="Check your frame">
+              <Alert variant="error" title={t.compressor.errors.checkBatchOrSettings}>
                 {error}
               </Alert>
             )}
@@ -175,7 +177,7 @@ export default function ShortsSafeZone() {
                 {selected.file.name}
               </span>
               <span className="text-[var(--text-muted)]">
-                {selected.width} × {selected.height} px · Fitted to 9:16 canvas
+                {selected.width} × {selected.height} px
               </span>
             </div>
           )}
@@ -186,10 +188,10 @@ export default function ShortsSafeZone() {
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-medium text-[var(--text-ink)]">
-                  Reserved UI Margin Presets
+                  {t.shorts.marginPresetsHeading}
                 </span>
                 <span className="text-[10px] font-mono text-[var(--text-muted)]">
-                  UI OVERLAY CLEARANCE
+                  CLEARANCE
                 </span>
               </div>
               <div className="flex flex-wrap gap-1.5">
@@ -201,7 +203,7 @@ export default function ShortsSafeZone() {
                       clear();
                       setMargins(preset.margins);
                     }}
-                    className="px-2.5 py-1.5 rounded-md text-[11px] font-mono border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-body)] hover:border-[var(--brand-accent)] hover:text-[var(--text-ink)] transition-all"
+                    className="px-2.5 py-1.5 rounded-md text-[11px] font-mono border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-body)] hover:border-[var(--brand-accent)] hover:text-[var(--text-ink)] transition-all cursor-pointer"
                   >
                     {preset.label}
                   </button>
@@ -210,34 +212,66 @@ export default function ShortsSafeZone() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)]">
-              {(['top', 'bottom', 'left', 'right'] as (keyof Margins)[]).map((side) => (
-                <Slider
-                  key={side}
-                  id={`margin-${side}`}
-                  label={`${side[0].toUpperCase() + side.slice(1)} Margin`}
-                  min={0}
-                  max={side === 'bottom' ? 50 : 40}
-                  unit="%"
-                  value={margins[side]}
-                  onChange={(value) => {
-                    clear();
-                    setMargins((current) => ({ ...current, [side]: value }));
-                  }}
-                />
-              ))}
+              <Slider
+                id="margin-top"
+                label={t.shorts.topMargin}
+                min={0}
+                max={40}
+                unit="%"
+                value={margins.top}
+                onChange={(value) => {
+                  clear();
+                  setMargins((current) => ({ ...current, top: value }));
+                }}
+              />
+              <Slider
+                id="margin-bottom"
+                label={t.shorts.bottomMargin}
+                min={0}
+                max={50}
+                unit="%"
+                value={margins.bottom}
+                onChange={(value) => {
+                  clear();
+                  setMargins((current) => ({ ...current, bottom: value }));
+                }}
+              />
+              <Slider
+                id="margin-left"
+                label={t.shorts.leftMargin}
+                min={0}
+                max={40}
+                unit="%"
+                value={margins.left}
+                onChange={(value) => {
+                  clear();
+                  setMargins((current) => ({ ...current, left: value }));
+                }}
+              />
+              <Slider
+                id="margin-right"
+                label={t.shorts.rightMargin}
+                min={0}
+                max={40}
+                unit="%"
+                value={margins.right}
+                onChange={(value) => {
+                  clear();
+                  setMargins((current) => ({ ...current, right: value }));
+                }}
+              />
             </div>
 
             <div className="space-y-3 pt-2">
               <Toggle
                 id="show-shorts-guide"
-                label="Display Safe Zone Overlay Boundary"
+                label={t.shorts.guideToggle}
                 checked={showGuide}
                 onChange={(event) => setShowGuide(event.target.checked)}
               />
               <Toggle
                 id="mark-shorts-content"
-                label="Target Content Bounding Box"
-                hint="Position a custom bounding box around key subtitles, logos, or face to audit clearance."
+                label={t.shorts.contentBoxToggle}
                 checked={markContent}
                 onChange={(event) => {
                   clear();
@@ -249,11 +283,11 @@ export default function ShortsSafeZone() {
             {markContent && (
               <div className="space-y-4 p-4 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)]">
                 <span className="text-xs font-mono font-medium text-[var(--text-ink)]">
-                  Target Content Coordinates (% of 9:16 Canvas)
+                  {t.shorts.contentBoxHeading}
                 </span>
                 <Slider
                   id="content-x"
-                  label="Content Left X"
+                  label={t.shorts.leftMargin}
                   min={0}
                   max={100 - box.width}
                   value={box.x}
@@ -265,7 +299,7 @@ export default function ShortsSafeZone() {
                 />
                 <Slider
                   id="content-y"
-                  label="Content Top Y"
+                  label={t.shorts.topMargin}
                   min={0}
                   max={100 - box.height}
                   value={box.y}
@@ -277,7 +311,7 @@ export default function ShortsSafeZone() {
                 />
                 <Slider
                   id="content-width"
-                  label="Content Box Width"
+                  label={t.resizer.widthLabel}
                   min={1}
                   max={100 - box.x}
                   value={box.width}
@@ -289,7 +323,7 @@ export default function ShortsSafeZone() {
                 />
                 <Slider
                   id="content-height"
-                  label="Content Box Height"
+                  label={t.resizer.heightLabel}
                   min={1}
                   max={100 - box.y}
                   value={box.height}
@@ -305,22 +339,12 @@ export default function ShortsSafeZone() {
 
           <div className="flex flex-wrap justify-between items-center gap-3 pt-4 border-t border-[var(--border-hairline-subtle)]">
             <Button variant="outline" size="sm" onClick={reset}>
-              Reset
+              {t.shorts.buttonReset}
             </Button>
             <Button disabled={!selected || loading || busy} onClick={run}>
-              {busy ? 'Generating Guide…' : 'Export Annotated PNG Guide'}
+              {busy ? t.shorts.buttonExporting : t.shorts.buttonExport}
             </Button>
           </div>
-
-          <p role="status" className="text-xs text-[var(--text-muted)]">
-            {loading
-              ? 'Opening frame…'
-              : busy
-              ? 'Rendering 1080×1920 annotated guide…'
-              : output
-              ? 'Guide ready to download.'
-              : 'Still image frames only. Client-side canvas overlay calculation.'}
-          </p>
         </>
       }
       results={
@@ -398,15 +422,12 @@ export default function ShortsSafeZone() {
                     />
                   )}
                 </div>
-                <p className="text-[11px] text-[var(--text-muted)] text-center">
-                  Green outline: Unobstructed central zone · Red shade: YouTube UI overlay zone
-                </p>
               </figure>
 
               <MetricCard
-                label="Central Safe Zone Dimensions"
+                label={t.shorts.resultsHeading}
                 value={`${guide.center.width}% × ${guide.center.height}%`}
-                subtext="Total unobstructed screen area on typical mobile devices"
+                subtext="Total unobstructed screen area"
               />
 
               {markContent && (
@@ -414,15 +435,13 @@ export default function ShortsSafeZone() {
                   variant={guide.overlaps.length ? 'warning' : 'success'}
                   title={
                     guide.overlaps.length
-                      ? 'Target Box Overlaps Reserved Margins'
-                      : 'Target Box Fully Clear'
+                      ? t.shorts.statusOverlapDetected
+                      : t.shorts.statusInSafeZone
                   }
                 >
                   {guide.overlaps.length
-                    ? `Your marked content intersects with the ${guide.overlaps.join(
-                        ', '
-                      )} margin. Adjust content framing to prevent UI collision.`
-                    : 'Target content sits safely within the unobstructed clear zone.'}
+                    ? `${t.shorts.statusOverlapDetected} (${guide.overlaps.join(', ')})`
+                    : t.shorts.statusInSafeZone}
                 </Alert>
               )}
 
@@ -449,13 +468,13 @@ export default function ShortsSafeZone() {
                       d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                     />
                   </svg>
-                  Download Annotated 1080×1920 PNG Guide
+                  {t.shorts.buttonExport}
                 </a>
               )}
             </div>
           ) : (
             <div className="py-16 text-center text-xs text-[var(--text-muted)] font-mono">
-              Upload a 9:16 Shorts frame to test YouTube UI overlay clearance.
+              {t.shorts.resultsPrompt}
             </div>
           )}
         </>

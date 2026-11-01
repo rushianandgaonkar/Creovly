@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { LocalizedLink } from '@/lib/i18n';
 
 interface ThumbnailPreset {
   id: string;
@@ -99,12 +99,12 @@ export default function StudioHeroWorkspace() {
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
             100% Client-Side Engine
           </span>
-          <Link
+          <LocalizedLink
             href="/studio"
             className="text-[11px] font-semibold text-white bg-sky-600 hover:bg-sky-500 px-2.5 py-1 rounded transition-colors"
           >
             Open in Studio &rarr;
-          </Link>
+          </LocalizedLink>
         </div>
       </div>
 
@@ -319,12 +319,12 @@ export default function StudioHeroWorkspace() {
 
           {/* Action Button */}
           <div className="pt-3 border-t border-zinc-800">
-            <Link
+            <LocalizedLink
               href="/studio"
               className="w-full flex items-center justify-center gap-1.5 py-2 px-3 text-xs font-semibold rounded-lg bg-white hover:bg-zinc-200 text-zinc-950 transition-colors shadow"
             >
               Export Project ZIP in Studio &rarr;
-            </Link>
+            </LocalizedLink>
           </div>
         </div>
       </div>

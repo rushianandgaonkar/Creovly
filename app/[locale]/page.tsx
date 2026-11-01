@@ -2,12 +2,11 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { nonDefaultLocales, translations, type Locale } from '@/config/i18n';
 import { createPageMetadata } from '@/lib/metadata';
-import Button from '@/components/ui/Button';
 import PolaroidLineCarousel from '@/components/ui/polaroid-line-carousel';
 import CreatorHero from '@/components/home/CreatorHero';
 import { toolRegistry } from '@/config/site';
-import SpotlightCard from '@/components/ui/SpotlightCard';
 import WorkflowShowcase from '@/components/home/WorkflowShowcase';
+import WorkflowDestinations from '@/components/home/WorkflowDestinations';
 
 export function generateStaticParams() {
   return nonDefaultLocales.map((locale) => ({ locale }));
@@ -80,51 +79,7 @@ export default async function LocalizedHomePage({ params }: LocalizedPageProps) 
 
       <WorkflowShowcase />
 
-      {/* Pre-Publish Workflow Destinations */}
-      <section aria-label="Pre-publish workflow options" className="max-w-6xl mx-auto px-4 sm:px-6 pb-12 sm:pb-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-[var(--border-hairline)] pt-8">
-          <SpotlightCard as="article" className="p-6 space-y-4">
-            <div className="flex items-center justify-between">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)] font-semibold">
-                {content.nav.checklist}
-              </span>
-              <span className="w-2 h-2 rounded-full bg-amber-500" aria-hidden="true" />
-            </div>
-            <h2 className="text-xl font-bold tracking-tight text-[var(--text-ink)]">
-              {content.home.checklistTitle}
-            </h2>
-            <p className="text-sm text-[var(--text-body)] leading-relaxed">
-              {content.home.checklistDesc}
-            </p>
-            <div className="pt-2">
-              <Button href={`/${loc}/checklist`} variant="outline">
-                {content.home.openChecklist} &rarr;
-              </Button>
-            </div>
-          </SpotlightCard>
-
-          <SpotlightCard as="article" className="p-6 space-y-4">
-            <div className="flex items-center justify-between">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)] font-semibold">
-                {content.nav.studio}
-              </span>
-              <span className="w-2 h-2 rounded-full bg-[var(--brand-accent)]" aria-hidden="true" />
-            </div>
-            <h2 className="text-xl font-bold tracking-tight text-[var(--text-ink)]">
-              {content.home.studioTitle}
-            </h2>
-            <p className="text-sm text-[var(--text-body)] leading-relaxed">
-              {content.home.studioDesc}
-            </p>
-            <div className="pt-2">
-              <Button href={`/${loc}/studio`} variant="outline">
-                {content.home.openStudio} &rarr;
-              </Button>
-            </div>
-          </SpotlightCard>
-        </div>
-      </section>
+      <WorkflowDestinations />
     </>
   );
 }
-

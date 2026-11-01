@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import type { SampleImageOption } from '@/config/tool-samples';
+import { useI18n } from '@/lib/i18n';
 
 export interface DropZoneProps {
   id: string;
@@ -20,10 +21,10 @@ export interface DropZoneProps {
 
 export const DropZone: React.FC<DropZoneProps> = ({
   id,
-  label = 'Upload file',
+  label,
   accept = 'image/jpeg,image/png,image/webp',
   maxSizeMB = 2,
-  privacyNote = 'Preview · No processing',
+  privacyNote,
   className = '',
   onFileSelect,
   onFilesSelect,
@@ -31,6 +32,10 @@ export const DropZone: React.FC<DropZoneProps> = ({
   disabled = false,
   samples,
 }) => {
+  const { t } = useI18n();
+  const effectiveLabel = label || t.common.dropzone.labelDefault;
+  const effectivePrivacyNote = privacyNote || t.common.dropzone.localPrivacyNote;
+
   const [selectedFileName, setSelectedFileName] = useState<string | null>(null);
   const [dragging, setDragging] = useState(false);
   const [loadingSampleId, setLoadingSampleId] = useState<string | null>(null);
@@ -42,7 +47,12 @@ export const DropZone: React.FC<DropZoneProps> = ({
   const selectFiles = (files: FileList | null) => {
     if (disabled || !files?.length) return;
     sampleRequest.current++; setLoadingSampleId(null);
-    if (onFilesSelect) { if (onFilesSelect(Array.from(files)) !== false) setSelectedFileName(`${files.length} image${files.length === 1 ? '' : 's'} selected`); return; }
+    if (onFilesSelect) {
+      if (onFilesSelect(Array.from(files)) !== false) {
+        setSelectedFileName(`${files.length} images`);
+      }
+      return;
+    }
     if (files.length !== 1) { onError?.('Choose one image at a time.'); return; }
     const file = files[0];
     if (file.size > maxSizeMB * 1_000_000) { onError?.(`Choose an image under ${maxSizeMB} MB.`); return; }
@@ -78,9 +88,9 @@ export const DropZone: React.FC<DropZoneProps> = ({
     <div className={`flex flex-col gap-2 w-full ${className}`}>
       <div className="flex items-center justify-between">
         <span className="text-xs font-medium text-[var(--text-ink)] select-none">
-          {label}
+          {effectiveLabel}
         </span>
-        {privacyNote && (
+        {effectivePrivacyNote && (
           <span className="inline-flex items-center gap-1 text-[11px] text-emerald-600 dark:text-emerald-400 font-medium">
             <svg
               className="w-3.5 h-3.5"
@@ -96,7 +106,7 @@ export const DropZone: React.FC<DropZoneProps> = ({
                 d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
               />
             </svg>
-            {privacyNote}
+            {effectivePrivacyNote}
           </span>
         )}
       </div>
@@ -114,7 +124,7 @@ export const DropZone: React.FC<DropZoneProps> = ({
           multiple={Boolean(onFilesSelect)}
           accept={accept}
           disabled={disabled}
-          aria-label={label}
+          aria-label={effectiveLabel}
           onChange={handleFileChange}
           className="sr-only"
         />
@@ -137,10 +147,14 @@ export const DropZone: React.FC<DropZoneProps> = ({
         </div>
 
         <p className="text-sm font-medium text-[var(--text-ink)]">
-          {selectedFileName ? <span className="break-all">{selectedFileName}</span> : onFilesSelect ? 'Choose images or drag them here' : onFileSelect ? 'Choose an image or drag it here' : 'Choose a sample file'}
+          {selectedFileName ? (
+            <span className="break-all">{selectedFileName}</span>
+          ) : (
+            t.common.dropzone.labelDefault
+          )}
         </p>
         <p className="mt-1 text-xs text-[var(--text-muted)]">
-          JPG, PNG, or WebP · {acceptsFiles ? 'Maximum' : 'Planned limit:'} {maxSizeMB} MB{onFilesSelect ? ' per image' : ''}
+          JPG, PNG, WebP · {t.common.dropzone.maxSize} {maxSizeMB} MB
         </p>
       </label>
 
@@ -149,7 +163,7 @@ export const DropZone: React.FC<DropZoneProps> = ({
         <div className="mt-1 pt-2 border-t border-[var(--border-hairline-subtle)]">
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-medium text-[var(--text-body)]">
-              No image handy? Try a creator sample:
+              {t.common.dropzone.sampleButtonPrefix}
             </span>
             <span className="text-[10px] font-mono text-[var(--brand-accent)] font-medium">
               1-click test
@@ -164,7 +178,7 @@ export const DropZone: React.FC<DropZoneProps> = ({
                   type="button"
                   disabled={disabled || loadingSampleId !== null}
                   onClick={() => handleSampleClick(sample)}
-                  aria-label={`Test with sample: ${sample.label}`}
+                  aria-label={`${t.common.dropzone.sampleButtonPrefix} ${sample.label}`}
                   className="flex items-center gap-2 p-1.5 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] hover:border-[var(--brand-accent)] hover:bg-[var(--bg-canvas-subtle)] transition-all text-left focus-ring disabled:opacity-50 group cursor-pointer"
                 >
                   <div className="w-8 h-8 rounded bg-[var(--bg-canvas-subtle)] border border-[var(--border-hairline-subtle)] shrink-0 overflow-hidden flex items-center justify-center p-0.5">

@@ -1,0 +1,62 @@
+export const studio = {
+  hero: {
+    badge: 'Your pre-publish workspace',
+    heading: 'Creovly Publish Studio',
+    subheading: 'Bring your title, description, and image together. Review the details, prepare your files, and download a package for your next upload.',
+    footnote: 'Runs in your browser · No account needed · You stay in control of publishing',
+  },
+  sections: {
+    titleDesc: '1. Title & Description',
+    packaging: '2. Packaging Image',
+    checks: '3. Pre-Flight Checks',
+    export: '4. Export Package',
+  },
+  tabs: {
+    mobilePreview: 'Mobile feed preview',
+    desktopPreview: 'Desktop feed preview',
+  },
+  titleSection: {
+    titleLabel: 'Video title draft',
+    titlePlaceholder: 'Enter title draft...',
+    descLabel: 'Video description draft',
+    descPlaceholder: 'Paste draft description, timestamps, and affiliate disclosures...',
+    keywordLabel: 'Topic focus keyword (optional)',
+    keywordPlaceholder: 'e.g. saas tutorial',
+  },
+  packagingSection: {
+    dropzoneLabel: 'Select thumbnail or still frame',
+    presetLabel: 'Packaging canvas preset',
+    presetThumbnail: '16:9 Thumbnail (1280×720)',
+    presetShorts: '9:16 Shorts Framing',
+    presetBanner: 'TV Banner (2560×1440)',
+    buttonCompress: 'Compress under 2 MB',
+    buttonResize: 'Resize to 1280×720',
+    buttonShortsGuide: 'Generate Shorts safe zone guide',
+  },
+  checksSection: {
+    heading: 'Pre-flight upload readiness',
+    scoreLabel: '{completed} of {total} checks completed',
+    confirmationsHeading: 'Creator confirmation checks',
+    checkTitle: 'Title length is within 100 characters',
+    checkMobile: 'Primary hook fits within ~55 characters for mobile feeds',
+    checkImage: 'Thumbnail is uploaded and formatted',
+    checkSize: 'Image file size is under YouTube’s 2 MB limit',
+    checkSafeZone: 'Shorts safe zone verified (if vertical video)',
+    checkDisclosure: 'Affiliate and sponsorship disclosures added if applicable',
+  },
+  exportSection: {
+    heading: 'Download production package',
+    description: 'Generates a clean project ZIP containing your verified thumbnail, title text, description draft, and pre-publish verification report.',
+    buttonSaveDraft: 'Save draft locally',
+    buttonDownloadZip: 'Download project package (.zip)',
+    buttonExportText: 'Export text summary (.txt)',
+    buttonReset: 'Reset studio workspace',
+  },
+  messages: {
+    initial: 'Start a project. Nothing is saved until you choose Save draft.',
+    saved: 'Project draft saved to local browser storage.',
+    cleared: 'Studio workspace cleared.',
+    storageUnavailable: 'Browser storage is unavailable. You can still work and download your project.',
+  },
+};
+

@@ -2,68 +2,57 @@
 
 import React, { useState } from 'react';
 import Button from '@/components/ui/Button';
-
-interface WorkflowStep {
-  id: string;
-  number: string;
-  tag: string;
-  title: string;
-  description: string;
-  highlights: string[];
-  toolLink: string;
-  toolLabel: string;
-}
-
-const steps: WorkflowStep[] = [
-  {
-    id: 'visuals',
-    number: '01',
-    tag: 'Visual Audit',
-    title: 'Verify thumbnail specs & eliminate UI overlap',
-    description:
-      'Never lose CTR to an obscured title or an oversized payload. Validate 16:9 aspect ratio (from 1280×720 HD up to 3840×2160 4K), compress under the 2 MB YouTube mobile app limit (desktop accepts up to 50 MB), and keep critical focal points out of the bottom-right timestamp zone.',
-    highlights: [
-      'Automatic 16:9 aspect ratio verification (1280×720 up to 3840×2160)',
-      'Client-side JPEG compression below 2 MB (mobile-safe)',
-      'Timestamp & Shorts mobile UI danger-zone clearance',
-    ],
-    toolLink: '/tools/youtube-thumbnail-compressor',
-    toolLabel: 'Explore Thumbnail Compressor',
-  },
-  {
-    id: 'metadata',
-    number: '02',
-    tag: 'Metadata Engine',
-    title: 'Stress-test titles against mobile truncation',
-    description:
-      'Over 70% of YouTube views originate on smartphones. Check where mobile home feeds truncate titles behind ellipses, calibrate keyword placement, and ensure your core emotional hook lands in the first 50 characters.',
-    highlights: [
-      'Real-time ~50 character mobile feed boundary alert',
-      'Desktop search vs. smartphone feed preview',
-      'Actionable length scoring with zero cloud tracking',
-    ],
-    toolLink: '/tools/youtube-title-checker',
-    toolLabel: 'Explore Title Checker',
-  },
-  {
-    id: 'package',
-    number: '03',
-    tag: 'Zero-Cloud Packaging',
-    title: 'Consolidate assets into an upload-ready ZIP',
-    description:
-      'Publish Studio brings title drafts, description formatting, prepared thumbnails, and an 11-point readiness checklist into a unified local workspace. Export everything as a structured ZIP archive ready for YouTube Studio.',
-    highlights: [
-      '11-point automated and manual upload checks',
-      'Local draft saving directly in browser memory',
-      'Single-click complete project package (.zip) export',
-    ],
-    toolLink: '/studio',
-    toolLabel: 'Open Publish Studio',
-  },
-];
+import { useI18n, LocalizedLink } from '@/lib/i18n';
 
 export default function WorkflowShowcase() {
+  const { t } = useI18n();
   const [activeStepIndex, setActiveStepIndex] = useState(0);
+
+  const steps = [
+    {
+      id: 'visuals',
+      number: '01',
+      tag: 'Visual Audit',
+      title: t.home.workflow.steps.pack.title,
+      description: t.home.workflow.steps.pack.description,
+      highlights: [
+        'Automatic 16:9 aspect ratio verification (1280×720 up to 3840×2160)',
+        'Client-side JPEG compression below 2 MB (mobile-safe)',
+        'Timestamp & Shorts mobile UI danger-zone clearance',
+      ],
+      toolLink: '/tools/youtube-thumbnail-compressor',
+      toolLabel: 'Explore Thumbnail Compressor',
+    },
+    {
+      id: 'metadata',
+      number: '02',
+      tag: 'Metadata Engine',
+      title: t.home.workflow.steps.audit.title,
+      description: t.home.workflow.steps.audit.description,
+      highlights: [
+        'Real-time ~50 character mobile feed boundary alert',
+        'Desktop search vs. smartphone feed preview',
+        'Actionable length scoring with zero cloud tracking',
+      ],
+      toolLink: '/tools/youtube-title-checker',
+      toolLabel: 'Explore Title Checker',
+    },
+    {
+      id: 'package',
+      number: '03',
+      tag: 'Zero-Cloud Packaging',
+      title: t.home.workflow.steps.export.title,
+      description: t.home.workflow.steps.export.description,
+      highlights: [
+        '11-point automated and manual upload checks',
+        'Local draft saving directly in browser memory',
+        'Single-click complete project package (.zip) export',
+      ],
+      toolLink: '/studio',
+      toolLabel: 'Open Publish Studio',
+    },
+  ];
+
   const activeStep = steps[activeStepIndex];
 
   return (
@@ -73,11 +62,14 @@ export default function WorkflowShowcase() {
     >
       {/* Section Header */}
       <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 space-y-3">
+        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono uppercase tracking-wider font-semibold border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-[var(--text-muted)] mb-2">
+          {t.home.workflow.badge}
+        </div>
         <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--text-ink)]">
-          From rough draft to publish-ready in 3 steps
+          {t.home.workflow.heading}
         </h2>
         <p className="text-sm sm:text-base text-[var(--text-body)] leading-relaxed">
-          The systematic pre-flight process elite YouTube creators use before hitting Publish.
+          {t.home.workflow.subheading}
         </p>
       </div>
 
@@ -360,9 +352,11 @@ export default function WorkflowShowcase() {
 
             {/* Step Action Button */}
             <div className="pt-2 border-t border-[var(--border-hairline)] flex items-center justify-between">
-              <Button href={activeStep.toolLink} variant="primary">
-                {activeStep.toolLabel} &rarr;
-              </Button>
+              <LocalizedLink href={activeStep.toolLink}>
+                <Button variant="primary">
+                  {activeStep.toolLabel} &rarr;
+                </Button>
+              </LocalizedLink>
               <span className="text-xs text-[var(--text-muted)]">
                 Step {activeStep.number} of 03
               </span>

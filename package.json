@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "node --test tests/*.test.cjs",
+    "validate:i18n": "node scripts/validate-translations.mjs",
     "audit:seo": "node scripts/audit-seo-and-links.mjs",
     "deploy": "next build && node scripts/generate-sitemaps.mjs && wrangler deploy"
   },
