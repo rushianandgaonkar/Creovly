@@ -40,8 +40,8 @@ export default function TermsPage() {
 
       <div className="space-y-10 text-sm text-[var(--text-body)] leading-relaxed">
         {/* Purpose */}
-        <section className="space-y-3">
-          <h2 className="text-lg font-bold text-[var(--text-ink)]">
+        <section className="p-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-3">
+          <h2 className="text-base font-semibold text-[var(--text-ink)]">
             1. Purpose and Nature of the Service
           </h2>
           <p>
@@ -63,8 +63,8 @@ export default function TermsPage() {
         </section>
 
         {/* Disclaimers & Mathematical Scenarios */}
-        <section className="space-y-3">
-          <h2 className="text-lg font-bold text-[var(--text-ink)]">
+        <section className="p-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-3">
+          <h2 className="text-base font-semibold text-[var(--text-ink)]">
             3. Disclaimer Regarding Performance & Earnings
           </h2>
           <p>
@@ -78,8 +78,8 @@ export default function TermsPage() {
         </section>
 
         {/* Platform Trademark Notice */}
-        <section className="space-y-3">
-          <h2 className="text-lg font-bold text-[var(--text-ink)]">
+        <section className="p-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-3">
+          <h2 className="text-base font-semibold text-[var(--text-ink)]">
             4. Third-Party Trademarks & Independent Status
           </h2>
           <p>
@@ -91,8 +91,8 @@ export default function TermsPage() {
         </section>
 
         {/* Limitation of Liability */}
-        <section className="space-y-3">
-          <h2 className="text-lg font-bold text-[var(--text-ink)]">
+        <section className="p-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-3">
+          <h2 className="text-base font-semibold text-[var(--text-ink)]">
             5. Limitation of Liability
           </h2>
           <p>
@@ -101,7 +101,7 @@ export default function TermsPage() {
         </section>
 
         {/* Contact */}
-        <section className="pt-6 border-t border-[var(--border-hairline)] space-y-2">
+        <section className="p-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-3">
           <h2 className="text-base font-semibold text-[var(--text-ink)]">
             6. Inquiries
           </h2>
