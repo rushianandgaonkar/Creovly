@@ -47,7 +47,7 @@ export default function ContactForm() {
       return;
     }
 
-    // Direct client dispatch to user's mail client (zero local storage, zero cloud intermediary)
+    // Direct client dispatch to user's mail client (zero local storage, zero web database)
     try {
       window.location.href = mailtoUrl;
     } catch (_) {
@@ -69,17 +69,20 @@ export default function ContactForm() {
 
   if (status === 'submitted') {
     return (
-      <div className="p-8 sm:p-10 rounded-2xl border border-emerald-500/20 bg-emerald-500/5 text-center space-y-5">
+      <div className="p-8 sm:p-10 rounded-2xl border border-emerald-500/20 bg-emerald-500/5 text-center space-y-5 animate-fade-in">
         <div className="w-12 h-12 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 mx-auto flex items-center justify-center font-bold text-xl">
-          ✓
+          ✉
         </div>
         <div className="space-y-2">
           <h3 className="text-xl font-bold text-[var(--text-ink)]">
-            Ready to Send via Email
+            Email Draft Prepared
           </h3>
-          <p className="text-sm text-[var(--text-body)] max-w-md mx-auto leading-relaxed">
-            Your default mail client is opening with your message addressed to{' '}
+          <p className="text-sm text-[var(--text-body)] max-w-lg mx-auto leading-relaxed">
+            Your default email application has been prompted to open with your draft addressed to{' '}
             <strong className="text-[var(--text-ink)]">support@creovly.com</strong>.
+          </p>
+          <p className="text-xs text-[var(--text-muted)] max-w-md mx-auto leading-relaxed">
+            <strong>Important:</strong> You must click <strong>Send</strong> in your email app to complete delivery. If you use webmail (e.g. Gmail or Outlook in a browser) or if your email app did not open, click the button below to copy the message and paste it directly into an email.
           </p>
         </div>
 
@@ -88,7 +91,7 @@ export default function ContactForm() {
             href={mailtoUrl}
             className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-[var(--brand-accent)] text-white text-xs font-semibold hover:opacity-90 transition-opacity"
           >
-            Open Mail Client Again &rarr;
+            Launch Email App Again &rarr;
           </a>
           <button
             type="button"
@@ -100,7 +103,7 @@ export default function ContactForm() {
         </div>
 
         <p className="text-xs text-[var(--text-muted)] max-w-md mx-auto pt-2">
-          If your device did not automatically launch an email client, copy the message above or write directly to{' '}
+          Prefer to write directly? Contact us anytime at{' '}
           <a href="mailto:support@creovly.com" className="text-[var(--brand-accent)] underline">
             support@creovly.com
           </a>.
@@ -111,7 +114,6 @@ export default function ContactForm() {
             type="button"
             variant="ghost"
             onClick={() => {
-              setFormData({ name: '', email: '', channel: '', subject: 'Feedback', message: '' });
               setStatus('idle');
             }}
           >
@@ -217,14 +219,14 @@ export default function ContactForm() {
       </div>
 
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2">
-        <p className="text-[11px] text-[var(--text-muted)] font-mono">
-          Direct email to support@creovly.com. No cookies or server logging.
+        <p className="text-[11px] text-[var(--text-muted)]">
+          Prepares an email in your mail app addressed to <code>support@creovly.com</code>. Requires pressing Send in your email client.
         </p>
         <Button
           type="submit"
           variant="primary"
         >
-          Send Message via Email &rarr;
+          Compose Email &rarr;
         </Button>
       </div>
     </form>

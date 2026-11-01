@@ -67,7 +67,7 @@ export default function PrivacyPage() {
             <strong>No Account Required:</strong> You do not need to register an account, authenticate via Google or YouTube OAuth, or provide personal payment credentials to use Creovly tools.
           </p>
           <p>
-            <strong>Voluntary Contact Inquiries:</strong> Contact messages are dispatched directly through your own email application to <code>support@creovly.com</code>. We do not store your contact messages or personal information in browser <code>localStorage</code> or on external web servers. We collect only what you voluntarily email us strictly to respond to your inquiry, and we never sell, rent, or distribute contact details to third-party data brokers or marketing vendors.
+            <strong>Voluntary Contact Communications &amp; Email Processing:</strong> When you use our Contact page, the form formats your inquiry into an email draft in your local email application addressed to <code>support@creovly.com</code> rather than automatically submitting data to a website database. Delivery is not completed until you explicitly press &ldquo;Send&rdquo; in your email client. When you send an email to us, your message, sender address, and any optional information (such as your channel handle) are routed through and retained by standard email infrastructure—both by your email provider and by Creovly&rsquo;s email service provider (inbox servers)—strictly so our team can read and answer your communication. Creovly does not store contact submissions in browser <code>localStorage</code> or on web application servers, and we never sell, rent, or distribute contact details to third-party data brokers or marketing vendors.
           </p>
         </section>
 
@@ -81,9 +81,9 @@ export default function PrivacyPage() {
           </p>
           <div className="rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] p-4 space-y-3 text-xs">
             <div className="space-y-1">
-              <span className="font-mono font-semibold text-[var(--text-ink)]">creovly-studio-draft</span>
+              <span className="font-mono font-semibold text-[var(--text-ink)]">creovly-studio-draft-v1</span>
               <p className="text-[var(--text-body)]">
-                Used in <strong>Publish Studio</strong>. Saves your in-progress project text draft (video title, description text, targets, and packaging settings) locally in your browser so you do not lose work if you refresh or navigate away. <em>Binary image files are never stored in localStorage.</em> You can delete this draft at any time using the &ldquo;Remove Saved Draft&rdquo; button in Studio.
+                Used in <strong>Publish Studio</strong>. Saves your project metadata (video title, description text, targets, and packaging settings) locally on your physical device only when you explicitly select <strong>&ldquo;Save draft&rdquo;</strong> (or press <kbd className="font-mono text-[10px] px-1 py-0.5 rounded bg-[var(--bg-canvas-elevated)] border border-[var(--border-hairline)]">Ctrl+S</kbd> / <kbd className="font-mono text-[10px] px-1 py-0.5 rounded bg-[var(--bg-canvas-elevated)] border border-[var(--border-hairline)]">⌘S</kbd>). Publish Studio does <em>not</em> automatically save every edit as you type; saving is an intentional creator action. <em>Binary image files are never stored in localStorage.</em> You can reload your saved project with &ldquo;Load saved draft&rdquo; or delete it permanently using &ldquo;Remove Saved Draft&rdquo;.
               </p>
             </div>
             <div className="border-t border-[var(--border-hairline)] pt-2.5 space-y-1">
@@ -116,13 +116,24 @@ export default function PrivacyPage() {
             4. Web Analytics &amp; Active Consent Handling
           </h2>
           <p>
-            To understand high-level site traffic, monitor technical performance, and identify broken links, Creovly utilizes Google Analytics 4 (Measurement ID: <code>G-0JBY0X9MY4</code>). Google Analytics sets cookies (such as <code>_ga</code> and <code>_ga_*</code>) to distinguish unique visitors and measure aggregate interaction metrics.
+            To monitor technical performance, diagnose broken tools, and understand aggregate creator traffic, Creovly utilizes Google Analytics 4 (Measurement ID: <code>G-0JBY0X9MY4</code>).
           </p>
           <p>
-            Creovly implements <strong>Google Consent Mode v2</strong>. Analytics cookies are set to <code>denied</code> by default until you grant explicit consent. When denied, Google Analytics does not read or set analytics cookies on your device.
+            Creovly implements <strong>Google Consent Mode v2</strong> in <strong>Advanced Consent Mode</strong>:
           </p>
+          <ul className="list-disc pl-5 space-y-2 text-xs sm:text-sm">
+            <li>
+              <strong>Default State &amp; Declined Consent (Cookieless Measurement):</strong> By default—and whenever you explicitly choose &ldquo;Decline Analytics&rdquo;—<code>analytics_storage</code> is set to <code>denied</code>. In this state, Google Analytics <strong>does not set or read analytics cookies</strong> (such as <code>_ga</code> or <code>_ga_*</code>) on your browser. Under Google&rsquo;s Advanced Consent Mode architecture, Google Analytics transmits aggregate, cookieless measurement pings (beacons) with IP masking enforced. These pings allow Google to model high-level site traffic and platform health without establishing a persistent cross-session identifier or tracking your device across visits.
+            </li>
+            <li>
+              <strong>Granted Consent:</strong> If you explicitly click &ldquo;Accept Analytics&rdquo; or enable analytics below, <code>analytics_storage</code> is updated to <code>granted</code>. Google Analytics then writes first-party cookies (<code>_ga</code> and <code>_ga_*</code>) to maintain continuous session analytics, distinguish repeat visits, and evaluate tool retention metrics.
+            </li>
+            <li>
+              <strong>Consent Revocation &amp; Cookie Purging:</strong> You may revoke or modify your consent decision at any time using the control panel below. Revoking consent immediately resets <code>analytics_storage</code> to <code>denied</code>, purges active <code>_ga</code>, <code>_ga_*</code>, <code>_gid</code>, and <code>_gat</code> cookies from your browser, and persists your preference locally under <code>creovly-consent</code>.
+            </li>
+          </ul>
           <p>
-            All analytics measurements collect aggregated technical information (such as browser type, device category, referring URLs, and pages visited) with IP anonymization enforced. We never collect personal creator identities, channel logins, or uploaded media contents.
+            All analytics measurements collect only technical telemetry (such as browser family, device category, referring URLs, and visited routes). We never collect creator identities, channel credentials, financial calculations, or uploaded media assets.
           </p>
 
           {/* Interactive Consent Manager */}

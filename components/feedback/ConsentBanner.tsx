@@ -2,44 +2,22 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-
-declare global {
-  interface Window {
-    dataLayer?: unknown[];
-    gtag?: (...args: unknown[]) => void;
-  }
-}
+import { getConsentChoice, setConsentChoice, type ConsentChoice } from '@/lib/consent';
 
 export default function ConsentBanner() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    try {
-      const consent = localStorage.getItem('creovly-consent');
-      if (!consent) {
-        // Small delay so layout doesn't jump abruptly on first paint
-        const timer = setTimeout(() => setIsVisible(true), 600);
-        return () => clearTimeout(timer);
-      }
-    } catch (_) {
-      // Ignore private browsing storage restrictions
+    const consent = getConsentChoice();
+    if (consent === 'unset') {
+      // Small delay so layout doesn't jump abruptly on first paint
+      const timer = setTimeout(() => setIsVisible(true), 600);
+      return () => clearTimeout(timer);
     }
   }, []);
 
-  const handleConsent = (choice: 'granted' | 'denied') => {
-    try {
-      localStorage.setItem('creovly-consent', choice);
-    } catch (_) {}
-
-    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-      window.gtag('consent', 'update', {
-        analytics_storage: choice,
-        ad_storage: 'denied',
-        ad_user_data: 'denied',
-        ad_personalization: 'denied',
-      });
-    }
-
+  const handleConsent = (choice: ConsentChoice) => {
+    setConsentChoice(choice);
     setIsVisible(false);
   };
 
@@ -60,7 +38,7 @@ export default function ConsentBanner() {
       </div>
 
       <p className="text-xs text-[var(--text-body)] leading-relaxed">
-        We use privacy-friendly Google Analytics (with IP masking) to understand site traffic and fix broken tools. We never track personal identities or upload your video assets. Learn more in our{' '}
+        We use Google Analytics (with IP masking) to evaluate aggregate site traffic. If you decline, no analytics cookies are stored on your device, and any existing analytics cookies are deleted. Learn more in our{' '}
         <Link href="/privacy" className="text-[var(--brand-accent)] underline hover:no-underline font-medium">
           Privacy Policy
         </Link>.
@@ -85,4 +63,3 @@ export default function ConsentBanner() {
     </aside>
   );
 }
-
