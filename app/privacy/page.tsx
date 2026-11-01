@@ -59,8 +59,8 @@ export default function PrivacyPage() {
         </section>
 
         {/* Information We Collect */}
-        <section className="space-y-3">
-          <h2 className="text-lg font-bold text-[var(--text-ink)]">
+        <section className="p-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-3">
+          <h2 className="text-base font-semibold text-[var(--text-ink)]">
             2. Information We Do and Do Not Collect
           </h2>
           <p>
@@ -72,8 +72,8 @@ export default function PrivacyPage() {
         </section>
 
         {/* Local Storage Inventory */}
-        <section className="space-y-3">
-          <h2 className="text-lg font-bold text-[var(--text-ink)]">
+        <section className="p-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-3">
+          <h2 className="text-base font-semibold text-[var(--text-ink)]">
             3. Local Browser Storage Inventory
           </h2>
           <p>
@@ -111,8 +111,8 @@ export default function PrivacyPage() {
         </section>
 
         {/* Analytics & Active Consent */}
-        <section className="space-y-4">
-          <h2 className="text-lg font-bold text-[var(--text-ink)]">
+        <section className="p-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-3">
+          <h2 className="text-base font-semibold text-[var(--text-ink)]">
             4. Web Analytics &amp; Active Consent Handling
           </h2>
           <p>
@@ -153,7 +153,7 @@ export default function PrivacyPage() {
         </section>
 
         {/* Google AdSense & Advertising Readiness */}
-        <section className="p-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] space-y-3">
+        <section className="p-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-3">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-blue-500" aria-hidden="true" />
             <h2 className="text-base font-semibold text-[var(--text-ink)]">
@@ -208,8 +208,8 @@ export default function PrivacyPage() {
         </section>
 
         {/* Third-Party Links */}
-        <section className="space-y-3">
-          <h2 className="text-lg font-bold text-[var(--text-ink)]">
+        <section className="p-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-3">
+          <h2 className="text-base font-semibold text-[var(--text-ink)]">
             6. External Links & YouTube Trademarks
           </h2>
           <p>
@@ -221,7 +221,7 @@ export default function PrivacyPage() {
         </section>
 
         {/* Contact */}
-        <section className="pt-6 border-t border-[var(--border-hairline)] space-y-2">
+        <section className="p-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-3">
           <h2 className="text-base font-semibold text-[var(--text-ink)]">
             7. Contact & Data Inquiries
           </h2>
