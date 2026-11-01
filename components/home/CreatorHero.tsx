@@ -16,8 +16,12 @@ export default function CreatorHero() {
               <span className="font-medium">The pre-publish workspace for YouTube creators</span>
             </div>
 
-            <h1 className="text-4xl sm:text-6xl font-bold tracking-[-0.035em] text-[var(--text-ink)] leading-[1.06]">
-              Create smarter. <span className="block sm:inline">Publish better.</span>
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-[-0.035em] text-[var(--text-ink)] leading-[1.08]">
+              <span>Free YouTube Creator Tools</span>
+              <span className="sr-only"> &mdash; </span>
+              <span className="block text-xl sm:text-3xl font-medium text-[var(--text-muted)] mt-2.5 tracking-normal">
+                Create Smarter, Publish Better
+              </span>
             </h1>
             <p className="mt-4 text-base sm:text-lg text-[var(--text-body)] max-w-xl mx-auto leading-relaxed">
               Prepare visuals, calibrate titles, stress-test hooks,

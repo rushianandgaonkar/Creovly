@@ -44,7 +44,7 @@ export default function ThumbnailResizerPage() {
         {
           question: 'What is the best YouTube thumbnail size in 2026?',
           answer:
-            'Standard YouTube video thumbnails require a 16:9 aspect ratio. The industry benchmark is 1280 × 720 pixels (minimum width 640 px), while up to 3840 × 2160 is supported as long as it stays under upload file caps.',
+            'Standard YouTube video thumbnails require a 16:9 aspect ratio with a minimum width of 640 pixels. The recommended baseline resolution is 1280 × 720 pixels, with higher resolutions up to 3840 × 2160 supported on desktop. Files must remain under 2 MB for mobile Studio uploads and under 50 MB for desktop browser uploads. Supported formats are JPG, PNG, GIF, and BMP (with JPG and PNG officially recommended).',
         },
         {
           question: 'How to resize an image for a YouTube thumbnail?',

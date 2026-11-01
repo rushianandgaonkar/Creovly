@@ -10,12 +10,6 @@ import type { FAQItem } from '@/types';
 import { toolGuidance } from '@/config/tool-guidance';
 import ToolDemonstration from './ToolDemonstration';
 import ToolSteps from './ToolSteps';
-import {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-} from '@/components/ui/accordion';
 
 export interface ToolPageShellProps {
   title: string;
@@ -141,7 +135,7 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
             100% In-Browser Execution
           </span>
           <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-mono text-[var(--text-muted)] border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)]">
-            YouTube 2026 Ready
+            Updated Specifications
           </span>
         </div>
 
@@ -260,23 +254,30 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
           >
             Frequently Asked Questions
           </h2>
-          <div className="mt-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] shadow-[var(--shadow-whisper)] overflow-hidden p-2 sm:p-4">
-            <Accordion type="single" collapsible className="w-full">
-              {displayedFaqs.map((faq, index) => (
-                <AccordionItem
-                  key={faq.question}
-                  value={`faq-${index}`}
-                  className="px-2 sm:px-4 border-b border-[var(--border-hairline)] last:border-b-0"
-                >
-                  <AccordionTrigger className="text-left text-sm font-semibold text-[var(--text-ink)] hover:no-underline py-4">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-sm text-[var(--text-body)] leading-relaxed pb-4">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+          <div className="mt-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] shadow-[var(--shadow-whisper)] divide-y divide-[var(--border-hairline)] overflow-hidden">
+            {displayedFaqs.map((faq) => (
+              <details
+                key={faq.question}
+                className="group p-4 sm:p-5 transition-colors [&_summary::-webkit-details-marker]:hidden"
+              >
+                <summary className="flex items-center justify-between gap-4 cursor-pointer list-none text-left text-sm font-semibold text-[var(--text-ink)] hover:text-[var(--brand-accent)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-accent)] rounded">
+                  <span>{faq.question}</span>
+                  <svg
+                    className="w-4 h-4 shrink-0 text-[var(--text-muted)] transition-transform duration-200 group-open:rotate-180"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    aria-hidden="true"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="mt-3 text-sm text-[var(--text-body)] leading-relaxed pt-2 border-t border-[var(--border-hairline)]/60">
+                  {faq.answer}
+                </div>
+              </details>
+            ))}
           </div>
         </section>
       )}

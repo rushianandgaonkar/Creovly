@@ -54,8 +54,8 @@ export default function ThumbnailToolsPage() {
           Thumbnail & Packaging Toolkit
         </h1>
         <p className="mt-2.5 text-sm sm:text-base text-[var(--text-body)] max-w-2xl leading-relaxed">
-          Frame, resize, remove logo backgrounds, and compress YouTube thumbnails locally to meet
-          the 2MB ceiling without losing crisp visual clarity.
+          Frame, resize, remove logo backgrounds, and compress YouTube thumbnails locally to ensure
+          universal mobile upload compatibility (under 2 MB) and desktop support (up to 50 MB) without losing crisp visual clarity.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Button href="/tools/youtube-thumbnail-compressor">
@@ -123,10 +123,10 @@ export default function ThumbnailToolsPage() {
             </span>
             <div>
               <h3 className="text-sm font-semibold text-[var(--text-ink)]">
-                Enforce File Size Ceiling
+                Optimize File Size & Format
               </h3>
               <p className="text-xs text-[var(--text-body)] mt-1 leading-relaxed">
-                Run the image through the <Link href="/tools/youtube-thumbnail-compressor" className="text-[var(--brand-accent)] hover:underline">Thumbnail Compressor</Link> to ensure it stays below YouTube’s 2MB limit while retaining edge sharpness.
+                Run the image through the <Link href="/tools/youtube-thumbnail-compressor" className="text-[var(--brand-accent)] hover:underline">Thumbnail Compressor</Link> to ensure it meets YouTube’s 2 MB mobile Studio limit (desktop supports up to 50 MB) and uses recommended JPG or PNG formats.
               </p>
             </div>
           </li>

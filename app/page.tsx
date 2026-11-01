@@ -10,8 +10,9 @@ import SpotlightCard from '@/components/ui/SpotlightCard';
 import WorkflowShowcase from '@/components/home/WorkflowShowcase';
 
 export const metadata = createPageMetadata({
-  title: `${siteConfig.name} — YouTube creator tools`,
-  description: siteConfig.description,
+  title: 'Free YouTube Creator Tools | Creovly',
+  description:
+    'Explore free YouTube creator tools by Creovly. Compress and resize thumbnails, analyze titles, check Shorts safe zones, and calculate revenue.',
   path: '/',
 });
 

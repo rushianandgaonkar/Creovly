@@ -17,12 +17,12 @@ export default function ThumbnailCompressorPage() {
         {
           question: 'How to compress a YouTube thumbnail without losing quality?',
           answer:
-            'Upload your thumbnail, select JPEG or WebP, and set quality between 75% and 85%. This reduces file weight dramatically while keeping fine text and faces sharp and visually indistinguishable from the source.',
+            'Upload your thumbnail and select JPEG (the format officially recommended by YouTube along with PNG). While WebP is supported for website embedding, YouTube officially recommends JPG or PNG for Studio uploads. Setting quality between 75% and 85% reduces file weight dramatically while keeping fine text and faces sharp.',
         },
         {
           question: 'How to reduce YouTube thumbnail size under 2MB?',
           answer:
-            'Set your target file size slider to under 2 MB in the compressor. This guarantees your thumbnail meets YouTube’s strict 2 MB mobile Studio upload limit (desktop allows up to 50 MB).',
+            'Set your target file size slider to under 2 MB in the compressor. This ensures your thumbnail meets YouTube’s strict 2 MB mobile Studio upload limit (desktop allows up to 50 MB) and prevents upload rejection errors.',
         },
         {
           question: 'How to make a YouTube thumbnail file smaller?',

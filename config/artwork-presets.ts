@@ -32,6 +32,11 @@ export function artworkWarnings(id: string, bytes: number, format: string): stri
   const warnings: string[] = [];
   if (id === 'banner' && bytes > 6_000_000) warnings.push('This banner exceeds 6 MB. Compress it before uploading to YouTube.');
   if (id === 'watermark' && bytes >= 1_000_000) warnings.push('YouTube requires a watermark smaller than 1 MB. Compress this output before uploading.');
-  if (['banner', 'profile', 'watermark'].includes(id) && format === 'image/webp') warnings.push('Choose JPEG or PNG for this YouTube artwork upload. WebP remains available for other uses.');
+  if (['thumbnail', 'full-hd', '4k'].includes(id) && bytes > 2_000_000) {
+    warnings.push('This thumbnail exceeds the 2 MB YouTube Studio mobile limit (desktop browser uploads accept up to 50 MB). Consider compressing it below 2 MB for universal upload compatibility.');
+  }
+  if (['thumbnail', 'full-hd', '4k', 'banner', 'profile', 'watermark'].includes(id) && format === 'image/webp') {
+    warnings.push('Choose JPEG or PNG for this YouTube artwork upload. YouTube officially recommends JPG or PNG for thumbnails; WebP remains available for other uses.');
+  }
   return warnings;
 }

@@ -23,7 +23,7 @@ const checklistData: ChecklistSection[] = [
       {
         id: 'thumb-size',
         title: 'Thumbnail format, dimensions, and file size suit your upload',
-        description: 'Use JPEG or PNG and a 16:9 image for standard videos. Mobile video-thumbnail uploads have a 2 MB limit; desktop limits differ.',
+        description: 'Use 16:9 aspect ratio (baseline 1280×720 HD up to 3840×2160, minimum width 640px) in JPG or PNG format. YouTube Studio mobile uploads enforce a strict 2 MB limit, while desktop browser uploads accept up to 50 MB.',
       },
       {
         id: 'thumb-mobile',

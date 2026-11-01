@@ -8,7 +8,7 @@ import SpotlightCard from '@/components/ui/SpotlightCard';
 export const metadata = createPageMetadata({
   title: 'About Creovly — The Pre-Publish Workspace for YouTube Creators',
   description:
-    'Learn why Creovly was built: private, in-browser creator tools engineered to prepare thumbnails, stress-test titles, verify Shorts safe zones, and model revenue.',
+    'Learn about Creovly: an independent, privacy-first pre-publish command center offering 100% in-browser YouTube creator tools to compress thumbnails, test title hooks, check Shorts safe zones, and model revenue.',
   path: '/about',
 });
 
@@ -36,7 +36,7 @@ export default function AboutPage() {
           Create smarter. <span className="block sm:inline">Publish better.</span>
         </h1>
         <p className="mt-4 text-base sm:text-lg text-[var(--text-body)] max-w-2xl leading-relaxed">
-          Creovly is an independent, privacy-first pre-publish command center. We give digital video creators fast, client-side tools to inspect thumbnails, stress-test title hooks, eliminate Shorts UI overlap, and project channel revenue—all before hitting publish.
+          Creovly is an independent, privacy-first pre-publish workspace. We provide digital video creators, editors, and channel managers with fast, client-side tools to inspect thumbnails, stress-test title hooks, eliminate Shorts UI overlap, and project channel revenue—all before hitting publish.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Button href="/studio" variant="primary">Launch Publish Studio</Button>
@@ -44,8 +44,24 @@ export default function AboutPage() {
         </div>
       </PageHero>
 
-      {/* The Origin Story & Problem */}
       <div className="space-y-16">
+        {/* What Creovly Is & Who It's For */}
+        <section className="space-y-4">
+          <div className="flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
+            <span className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)]">
+              Who We Serve
+            </span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[var(--text-ink)]">
+            A dedicated pre-flight workbench for modern video creators
+          </h2>
+          <p className="text-sm sm:text-base text-[var(--text-body)] leading-relaxed">
+            Creovly is specifically designed for <strong>YouTube creators, video editors, thumbnail artists, and channel growth teams</strong>. The critical moments right before uploading define whether a video captures clicks or gets lost in the feed. Creovly exists to make those final verification steps fast, rigorous, and completely private.
+          </p>
+        </section>
+
+        {/* The Problem We Solved */}
         <section className="space-y-4">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
@@ -57,10 +73,10 @@ export default function AboutPage() {
             Creators shouldn’t have to compromise privacy just to resize an image or check a title.
           </h2>
           <p className="text-sm sm:text-base text-[var(--text-body)] leading-relaxed">
-            In modern content creation, the hours right before uploading are critical. Creators need to compress thumbnails under YouTube’s strict 2 MB mobile upload limit, confirm that titles won’t truncate on smartphone screens, ensure subtitles aren’t hidden behind Shorts like buttons, and calculate RPM revenue scenarios.
+            Before uploading to YouTube, creators must navigate strict technical constraints: keeping thumbnails under the 2 MB mobile Studio upload cap (or up to 50 MB on desktop), ensuring primary title hooks land within the first 50 characters to avoid mobile truncation, checking that Shorts subtitles aren’t hidden behind engagement buttons, and accurately modeling revenue without flawed double deductions.
           </p>
           <p className="text-sm sm:text-base text-[var(--text-body)] leading-relaxed">
-            Historically, doing this meant uploading unreleased video thumbnails to sketchy ad-riddled websites, surrendering personal analytics data, or signing up for bloated monthly subscriptions. We built Creovly to eliminate that compromise entirely.
+            Historically, solving these issues meant uploading unreleased media assets to ad-cluttered third-party sites, surrendering channel data, or purchasing expensive monthly SaaS subscriptions. We built Creovly to eliminate that friction: precision tools that process everything in your browser, with zero server uploads and zero paywalls.
           </p>
         </section>
 
@@ -85,7 +101,7 @@ export default function AboutPage() {
                 100% In-Browser Execution
               </h3>
               <p className="text-xs text-[var(--text-body)] leading-relaxed">
-                Every image compression, background removal, and mathematical calculation runs locally in your device’s browser. Your creative assets never touch our servers.
+                Every image compression, background cutout, and mathematical projection runs locally using modern Web APIs (HTML5 Canvas, File API, and Web Workers). Your creative media files never touch our servers.
               </p>
             </SpotlightCard>
 
@@ -94,10 +110,10 @@ export default function AboutPage() {
                 02
               </div>
               <h3 className="text-base font-semibold text-[var(--text-ink)]">
-                Calibrated Platform Specs
+                Calibrated Platform Standards
               </h3>
               <p className="text-xs text-[var(--text-body)] leading-relaxed">
-                Built against verified YouTube specifications: 1280×720 aspect ratios, 2 MB mobile caps, 9:16 vertical safe margins, and official Partner Program math.
+                Built against verified YouTube specifications: 16:9 ratios (from 1280×720 HD up to 3840×2160), mobile 2 MB caps, 9:16 vertical safe margins, and official YouTube Partner Program formulas.
               </p>
             </SpotlightCard>
 
@@ -106,12 +122,59 @@ export default function AboutPage() {
                 03
               </div>
               <h3 className="text-base font-semibold text-[var(--text-ink)]">
-                Zero Paywalls & Zero Spam
+                100% Free & No Sign-Up
               </h3>
               <p className="text-xs text-[var(--text-body)] leading-relaxed">
-                No forced account registrations, no credit card paywalls, and no pop-ups. Just reliable, precision tools ready when you need to upload.
+                No forced user registration, no credit cards, and no intrusive subscriptions. All core tools are completely free to use whenever you need to prepare an upload.
               </p>
             </SpotlightCard>
+          </div>
+        </section>
+
+        {/* Independent Status Disclaimer & Legal Transparency */}
+        <section className="p-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] space-y-3">
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-zinc-400" aria-hidden="true" />
+            <h2 className="text-base font-semibold text-[var(--text-ink)]">
+              Independent Status & Trademark Notice
+            </h2>
+          </div>
+          <p className="text-xs sm:text-sm text-[var(--text-body)] leading-relaxed">
+            Creovly is an independent creator utility developed to support content publishers with workflow tools and educational documentation. Creovly is <strong>not affiliated with, endorsed by, sponsored by, or officially associated with YouTube, Google LLC, Alphabet Inc., or any of their subsidiaries</strong>.
+          </p>
+          <p className="text-xs text-[var(--text-muted)] leading-relaxed">
+            YouTube™ and the YouTube logo are registered trademarks of Google LLC. All product names, platform references, and trademarks mentioned on this website belong to their respective owners and are used strictly for identification and educational reference under fair use.
+          </p>
+        </section>
+
+        {/* Contact and Support */}
+        <section className="p-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-3">
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-emerald-500" aria-hidden="true" />
+            <h2 className="text-base font-semibold text-[var(--text-ink)]">
+              Get in Touch
+            </h2>
+          </div>
+          <p className="text-xs sm:text-sm text-[var(--text-body)] leading-relaxed">
+            Have feedback on our tools, noticed an update in YouTube platform specifications, or need technical assistance? Our team is here to help:
+          </p>
+          <div className="flex flex-wrap items-center gap-4 pt-1">
+            <a
+              href="mailto:support@creovly.com"
+              className="text-xs font-semibold text-[var(--brand-accent)] hover:underline inline-flex items-center gap-1.5"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              support@creovly.com
+            </a>
+            <span className="text-xs text-[var(--text-muted)]">&bull;</span>
+            <Link
+              href="/contact"
+              className="text-xs font-semibold text-[var(--text-ink)] hover:underline"
+            >
+              Contact Form &rarr;
+            </Link>
           </div>
         </section>
 
@@ -133,4 +196,3 @@ export default function AboutPage() {
     </div>
   );
 }
-

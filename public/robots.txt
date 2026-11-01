@@ -1,0 +1,19 @@
+User-Agent: *
+Allow: /
+
+User-Agent: GPTBot
+User-Agent: ClaudeBot
+User-Agent: PerplexityBot
+User-Agent: Google-Extended
+User-Agent: Applebot-Extended
+User-Agent: CCBot
+User-Agent: cohere-ai
+Allow: /
+
+Host: https://creovly.com
+Sitemap: https://creovly.com/sitemap.xml
+Sitemap: https://creovly.com/sitemap_index.xml
+Sitemap: https://creovly.com/sitemap-0.xml
+Sitemap: https://creovly.creovly.workers.dev/sitemap.xml
+Sitemap: https://creovly.creovly.workers.dev/sitemap_index.xml
+Sitemap: https://creovly.creovly.workers.dev/sitemap-0.xml

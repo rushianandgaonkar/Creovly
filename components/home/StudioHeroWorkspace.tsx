@@ -19,7 +19,7 @@ const presets: ThumbnailPreset[] = [
     name: 'Workflow Breakdown',
     src: '/examples/compressor-source.jpg',
     aspect: '1280 × 720 HD',
-    size: '1.1 MB WebP',
+    size: '1.1 MB JPEG',
     timestamp: '14:20',
     format: '16:9',
   },
@@ -258,7 +258,7 @@ export default function StudioHeroWorkspace() {
                 onClick={() => toggleCheck('resolution')}
                 className="w-full flex items-center justify-between text-left p-1.5 rounded hover:bg-zinc-800/60"
               >
-                <span className="text-zinc-300 truncate">1280×720 Resolution</span>
+                <span className="text-zinc-300 truncate">16:9 Aspect Ratio</span>
                 <span className={checklist.resolution ? 'text-emerald-400 font-bold' : 'text-zinc-600'}>
                   {checklist.resolution ? 'PASS' : 'SKIP'}
                 </span>
@@ -269,7 +269,7 @@ export default function StudioHeroWorkspace() {
                 onClick={() => toggleCheck('fileSize')}
                 className="w-full flex items-center justify-between text-left p-1.5 rounded hover:bg-zinc-800/60"
               >
-                <span className="text-zinc-300 truncate">&lt; 2MB Payload Cap</span>
+                <span className="text-zinc-300 truncate">&lt; 2 MB Mobile Cap (≤ 50 MB Desktop)</span>
                 <span className={checklist.fileSize ? 'text-emerald-400 font-bold' : 'text-zinc-600'}>
                   {checklist.fileSize ? 'PASS' : 'SKIP'}
                 </span>

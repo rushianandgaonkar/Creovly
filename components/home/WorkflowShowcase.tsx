@@ -21,10 +21,10 @@ const steps: WorkflowStep[] = [
     tag: 'Visual Audit',
     title: 'Verify thumbnail specs & eliminate UI overlap',
     description:
-      'Never lose CTR to an obscured title or an oversized payload. Validate 1280×720 HD resolution, compress under the 2MB YouTube upload ceiling, and keep critical focal points out of the bottom-right timestamp zone.',
+      'Never lose CTR to an obscured title or an oversized payload. Validate 16:9 aspect ratio (from 1280×720 HD up to 3840×2160 4K), compress under the 2 MB YouTube mobile app limit (desktop accepts up to 50 MB), and keep critical focal points out of the bottom-right timestamp zone.',
     highlights: [
-      'Automatic 1280×720 HD aspect ratio verification',
-      'Client-side JPEG/WebP compression below 2 MB',
+      'Automatic 16:9 aspect ratio verification (1280×720 up to 3840×2160)',
+      'Client-side JPEG compression below 2 MB (mobile-safe)',
       'Timestamp & Shorts mobile UI danger-zone clearance',
     ],
     toolLink: '/tools/youtube-thumbnail-compressor',
@@ -159,7 +159,7 @@ export default function WorkflowShowcase() {
                           Before: Raw Export
                         </span>
                         <span className="text-[11px] font-semibold text-red-700 dark:text-red-300 bg-red-500/10 px-2 py-0.5 rounded border border-red-500/20">
-                          4.2 MB &bull; Rejection
+                          4.2 MB &bull; Mobile Limit Exceeded
                         </span>
                       </div>
                       <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-red-500/40 shadow-sm bg-black">
@@ -179,7 +179,7 @@ export default function WorkflowShowcase() {
                         </div>
                       </div>
                       <p className="text-[11px] text-[var(--text-muted)]">
-                        Exceeds YouTube 2MB ceiling. Rejection on upload, with vital text obscured behind timestamp.
+                        Exceeds YouTube Studio mobile 2 MB limit (desktop supports up to 50 MB). Critical text obscured behind timestamp.
                       </p>
                     </div>
 
@@ -214,15 +214,15 @@ export default function WorkflowShowcase() {
                         </div>
                       </div>
                       <p className="text-[11px] text-[var(--text-muted)]">
-                        74% size reduction to 1.1 MB WebP. Crisp clarity preserved with safe-zone clearance verified.
+                        74% size reduction to 1.1 MB JPEG. Crisp clarity preserved with safe-zone clearance verified.
                       </p>
                     </div>
                   </div>
 
                   {/* Benchmark Bar */}
                   <div className="p-3 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] flex items-center justify-between text-xs">
-                    <span className="text-[var(--text-muted)]">YouTube Limit: 2,000,000 bytes</span>
-                    <span className="text-emerald-600 dark:text-emerald-400 font-bold">1,153,433 bytes (Passes Ceiling)</span>
+                    <span className="text-[var(--text-muted)]">YouTube Mobile Limit: 2,000,000 bytes (≤ 50 MB Desktop)</span>
+                    <span className="text-emerald-600 dark:text-emerald-400 font-bold">1,153,433 bytes (Universal Mobile Compatibility)</span>
                   </div>
                 </div>
               )}
@@ -321,7 +321,7 @@ export default function WorkflowShowcase() {
                         <span className="text-emerald-600 dark:text-emerald-400">Title &amp; Description</span>
                       </div>
                       <div className="flex items-center justify-between px-3 py-1.5 border-l-2 border-zinc-300 dark:border-zinc-700 ml-3">
-                        <span className="text-[var(--text-ink)] font-medium">thumbnail.webp</span>
+                        <span className="text-[var(--text-ink)] font-medium">thumbnail.jpg</span>
                         <span className="text-emerald-600 dark:text-emerald-400">1280&times;720 HD (1.1 MB)</span>
                       </div>
                       <div className="flex items-center justify-between px-3 py-1.5 border-l-2 border-zinc-300 dark:border-zinc-700 ml-3">
@@ -344,7 +344,7 @@ export default function WorkflowShowcase() {
             {/* Checklist Highlights */}
             <div className="space-y-2">
               <span className="text-xs uppercase tracking-wider text-[var(--text-muted)] font-semibold block">
-                Guaranteed Pre-Publish Quality:
+                Pre-Publish Verification Standards:
               </span>
               <ul className="text-xs text-[var(--text-body)] space-y-1.5">
                 {activeStep.highlights.map((item, idx) => (

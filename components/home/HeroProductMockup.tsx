@@ -144,10 +144,10 @@ export default function HeroProductMockup() {
                   <div className="flex items-center justify-between gap-2 z-10">
                     <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-black/75 backdrop-blur-md border border-white/15 text-[11px] font-mono text-white">
                       <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                      1280 × 720 HD
+                      16:9 (1280 × 720 HD)
                     </span>
                     <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-black/75 backdrop-blur-md border border-white/15 text-[11px] font-mono text-emerald-300">
-                      1.3 MB &lt; 2 MB Limit
+                      1.3 MB &lt; 2 MB Mobile Cap
                     </span>
                   </div>
 
@@ -198,13 +198,13 @@ export default function HeroProductMockup() {
                       <svg className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                       </svg>
-                      <span><strong>1280×720 Aspect Ratio:</strong> Standard 16:9 verified for desktop and TV.</span>
+                      <span><strong>16:9 Aspect Ratio:</strong> Baseline 1280×720 HD up to 3840×2160 4K verified.</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <svg className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                       </svg>
-                      <span><strong>Payload &lt; 2 MB:</strong> Passes YouTube upload limits without lossy distortion.</span>
+                      <span><strong>Payload &lt; 2 MB:</strong> Universal compatibility for YouTube mobile Studio uploads (desktop accepts up to 50 MB).</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <svg className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">

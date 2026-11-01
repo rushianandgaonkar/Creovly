@@ -43,7 +43,11 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
         <div className="flex flex-wrap items-center gap-2 mb-3">
           <Badge variant="neutral">{guide.category}</Badge>
           <span className="text-xs font-mono text-[var(--text-muted)]">{guide.readTime}</span>
-          <span className="text-xs font-mono text-[var(--text-muted)]">·</span>
+          <span className="text-xs font-mono text-[var(--text-muted)]">&middot;</span>
+          <span className="text-xs font-mono text-[var(--text-muted)]">
+            By Creovly Editorial Team
+          </span>
+          <span className="text-xs font-mono text-[var(--text-muted)]">&middot;</span>
           <span className="text-xs font-mono text-[var(--text-muted)]">
             Last verified: {guide.lastVerified}
           </span>

@@ -59,6 +59,13 @@ function generateSitemaps() {
   // Copy to public/ as well
   fs.writeFileSync(path.join(publicDir, 'sitemap_index.xml'), sitemapIndexContent, 'utf8');
   console.log('✓ Synced public/sitemap_index.xml');
+
+  // 4. Ensure robots.txt in public/ matches out/robots.txt
+  const robotsOutPath = path.join(outDir, 'robots.txt');
+  if (fs.existsSync(robotsOutPath)) {
+    fs.writeFileSync(path.join(publicDir, 'robots.txt'), fs.readFileSync(robotsOutPath, 'utf8'), 'utf8');
+    console.log('✓ Synced public/robots.txt');
+  }
 }
 
 generateSitemaps();
