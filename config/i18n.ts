@@ -305,7 +305,7 @@ export const translations: Record<Locale, I18nContent> = {
   es: {
     nav: {
       tools: 'Herramientas',
-      studio: 'Publish Studio',
+      studio: 'Estudio de publicación',
       checklist: 'Lista de verificación',
       guides: 'Guías de creadores',
       about: 'Acerca de',
@@ -327,15 +327,15 @@ export const translations: Record<Locale, I18nContent> = {
       zeroUploads: 'Cero subidas a la nube',
       checklistTitle: 'Lista de verificación previa',
       checklistDesc: 'Verifica sistemáticamente especificaciones de miniaturas, títulos y preparación.',
-      studioTitle: 'Publish Studio',
+      studioTitle: 'Estudio de publicación',
       studioDesc: 'Reúne título, descripción e imagen en un único entorno de trabajo local.',
       openChecklist: 'Abrir lista de verificación',
       openStudio: 'Abrir Studio',
     },
     studio: {
-      title: 'Publish Studio — Prepara tu próxima subida a YouTube',
+      title: 'Estudio de publicación — Prepara tu próxima subida a YouTube',
       description: 'Prepara título, descripción e imagen en un único entorno local. Revisa comprobaciones, guarda borradores y descarga tu proyecto.',
-      heading: 'Creovly Publish Studio',
+      heading: 'Estudio de publicación Creovly',
       subheading: 'Centro de control previo a la publicación para creadores de YouTube',
     },
     checklist: {
@@ -440,7 +440,7 @@ export const translations: Record<Locale, I18nContent> = {
   ja: {
     nav: {
       tools: 'ツール一覧',
-      studio: 'Publish Studio',
+      studio: '公開スタジオ',
       checklist: 'チェックリスト',
       guides: 'ガイド',
       about: 'Creovlyについて',
@@ -462,15 +462,15 @@ export const translations: Record<Locale, I18nContent> = {
       zeroUploads: 'クラウドへのアップロードなし',
       checklistTitle: '公開前チェックリスト',
       checklistDesc: 'サムネイル規格、タイトルの途切れ、音声ライセンスを体系的に確認。',
-      studioTitle: 'Publish Studio',
+      studioTitle: '公開スタジオ',
       studioDesc: 'タイトル、説明文、サムネイルを1つのワークスペースで統合準備。',
       openChecklist: 'チェックリストを開く',
       openStudio: 'Studioを開く',
     },
     studio: {
-      title: 'Publish Studio — YouTube公開前準備ワークスペース',
+      title: '公開スタジオ — YouTube動画の公開前チェック＆準備',
       description: 'タイトル・説明文・サムネイルを1つのローカル環境で統合チェック。確認後にプロジェクト一括ダウンロード可能。',
-      heading: 'Creovly Publish Studio',
+      heading: 'Creovly 公開スタジオ',
       subheading: 'YouTubeクリエイターのための公開前コマンドセンター',
     },
     checklist: {
@@ -575,7 +575,7 @@ export const translations: Record<Locale, I18nContent> = {
   fr: {
     nav: {
       tools: 'Outils',
-      studio: 'Publish Studio',
+      studio: 'Studio de publication',
       checklist: 'Check-list',
       guides: 'Guides créateurs',
       about: 'À propos',
@@ -597,15 +597,15 @@ export const translations: Record<Locale, I18nContent> = {
       zeroUploads: 'Zéro envoi sur le cloud',
       checklistTitle: 'Check-list avant publication',
       checklistDesc: 'Vérifiez méthodiquement la résolution, les coupures de titre et les autorisations audio.',
-      studioTitle: 'Publish Studio',
+      studioTitle: 'Studio de publication',
       studioDesc: 'Rassemblez votre titre, description et miniature dans un espace de travail local unifié.',
       openChecklist: 'Ouvrir la check-list',
       openStudio: 'Lancer Studio',
     },
     studio: {
-      title: 'Publish Studio — Préparez votre prochaine vidéo YouTube',
+      title: 'Studio de publication — Préparez votre prochaine vidéo YouTube',
       description: 'Préparez votre titre, description et image dans un espace local. Vérifiez les critères et téléchargez votre dossier de projet.',
-      heading: 'Creovly Publish Studio',
+      heading: 'Studio de publication Creovly',
       subheading: 'Centre de contrôle de pré-publication pour créateurs YouTube',
     },
     checklist: {
@@ -710,7 +710,7 @@ export const translations: Record<Locale, I18nContent> = {
   de: {
     nav: {
       tools: 'Tools',
-      studio: 'Publish Studio',
+      studio: 'Veröffentlichungs-Studio',
       checklist: 'Checkliste',
       guides: 'Leitfäden',
       about: 'Über uns',
@@ -732,15 +732,15 @@ export const translations: Record<Locale, I18nContent> = {
       zeroUploads: 'Null Cloud-Uploads',
       checklistTitle: 'Pre-Publish-Checkliste',
       checklistDesc: 'Thumbnail-Vorgaben, Titel-Abschneidung und Upload-Bereitschaft systematisch prüfen.',
-      studioTitle: 'Publish Studio',
+      studioTitle: 'Veröffentlichungs-Studio',
       studioDesc: 'Titel, Beschreibung und Thumbnail an einem zentralen Ort bündeln und vorbereiten.',
       openChecklist: 'Checkliste öffnen',
       openStudio: 'Studio starten',
     },
     studio: {
-      title: 'Publish Studio — YouTube-Uploads optimal vorbereiten',
+      title: 'Veröffentlichungs-Studio — YouTube-Uploads optimal vorbereiten',
       description: 'Titel, Beschreibung und Thumbnail lokal abstimmen, Checks durchführen und als fertiges Projektpaket herunterladen.',
-      heading: 'Creovly Publish Studio',
+      heading: 'Creovly Veröffentlichungs-Studio',
       subheading: 'Die Pre-Publish-Kommandozentrale für erfolgreiche YouTube-Creator',
     },
     checklist: {
@@ -845,7 +845,7 @@ export const translations: Record<Locale, I18nContent> = {
   pt: {
     nav: {
       tools: 'Ferramentas',
-      studio: 'Publish Studio',
+      studio: 'Estúdio de publicação',
       checklist: 'Checklist',
       guides: 'Guias de criadores',
       about: 'Sobre',
@@ -867,15 +867,15 @@ export const translations: Record<Locale, I18nContent> = {
       zeroUploads: 'Zero uploads para a nuvem',
       checklistTitle: 'Checklist pré-publicação',
       checklistDesc: 'Verifique especificações de miniatura, quebras de título e prontidão de envio.',
-      studioTitle: 'Publish Studio',
+      studioTitle: 'Estúdio de publicação',
       studioDesc: 'Reúna título, descrição e thumbnail em um único espaço de trabalho local.',
       openChecklist: 'Abrir checklist',
       openStudio: 'Iniciar Studio',
     },
     studio: {
-      title: 'Publish Studio — Prepare seu próximo envio para o YouTube',
+      title: 'Estúdio de publicação — Prepare o seu próximo envio para o YouTube',
       description: 'Prepare título, descrição e imagem localmente. Revise verificações essenciais e baixe seu projeto compactado.',
-      heading: 'Creovly Publish Studio',
+      heading: 'Estúdio de publicação Creovly',
       subheading: 'Centro de comando pré-publicação para criadores de conteúdo',
     },
     checklist: {
@@ -980,7 +980,7 @@ export const translations: Record<Locale, I18nContent> = {
   ko: {
     nav: {
       tools: '도구 모음',
-      studio: 'Publish Studio',
+      studio: '게시 스튜디오',
       checklist: '체크리스트',
       guides: '크리에이터 가이드',
       about: '소개',
@@ -1002,15 +1002,15 @@ export const translations: Record<Locale, I18nContent> = {
       zeroUploads: '클라우드 업로드 제로',
       checklistTitle: '발행 전 체크리스트',
       checklistDesc: '썸네일 규격, 모바일 제목 잘림 현상, 음원 저작권 표기를 체계적으로 점검합니다.',
-      studioTitle: 'Publish Studio',
+      studioTitle: '게시 스튜디오',
       studioDesc: '제목, 설명, 썸네일을 로컬 환경에서 한 번에 검토하고 패키징합니다.',
       openChecklist: '체크리스트 열기',
       openStudio: 'Studio 열기',
     },
     studio: {
-      title: 'Publish Studio — YouTube 업로드 사전 준비 워크스페이스',
+      title: '게시 스튜디오 — YouTube 영상 게시 전 준비 및 체크',
       description: '제목, 설명, 이미지를 단일 로컬 환경에서 통합 준비하고 검증 후 프로젝트 파일로 다운로드하세요.',
-      heading: 'Creovly Publish Studio',
+      heading: 'Creovly 게시 스튜디오',
       subheading: 'YouTube 크리에이터를 위한 사전 발행 사령탑',
     },
     checklist: {
@@ -1115,7 +1115,7 @@ export const translations: Record<Locale, I18nContent> = {
   it: {
     nav: {
       tools: 'Strumenti',
-      studio: 'Publish Studio',
+      studio: 'Studio di pubblicazione',
       checklist: 'Checklist',
       guides: 'Guide per creator',
       about: 'Chi siamo',
@@ -1137,15 +1137,15 @@ export const translations: Record<Locale, I18nContent> = {
       zeroUploads: 'Zero caricamenti su server cloud',
       checklistTitle: 'Checklist pre-pubblicazione',
       checklistDesc: 'Verifica in modo sistematico specifiche delle miniature, troncamento dei titoli e prontezza al rilascio.',
-      studioTitle: 'Publish Studio',
+      studioTitle: 'Studio di pubblicazione',
       studioDesc: 'Unisci titolo, descrizione e miniatura in un unico ambiente di lavoro locale.',
       openChecklist: 'Apri la checklist',
       openStudio: 'Avvia Studio',
     },
     studio: {
-      title: 'Publish Studio — Prepara il tuo prossimo video YouTube',
+      title: 'Studio di pubblicazione — Prepara il tuo prossimo video YouTube',
       description: 'Organizza titolo, descrizione e miniatura in locale. Esegui controlli prima della pubblicazione e scarica il pacchetto di progetto.',
-      heading: 'Creovly Publish Studio',
+      heading: 'Studio di pubblicazione Creovly',
       subheading: 'Centro di controllo pre-pubblicazione per creator di YouTube',
     },
     checklist: {
