@@ -10,7 +10,9 @@ declare global {
 }
 
 /**
- * Removes Google Analytics cookies (_ga, _ga_*, _gid, _gat) when consent is revoked or denied.
+ * Removes Google Analytics client-side cookies (_ga, _ga_*, _gid, _gat) when consent is revoked or denied.
+ * Note: Only script-accessible cookies in document.cookie can be purged.
+ * Cookies with the HttpOnly flag (such as Cloudflare infrastructure cookies) cannot be read or deleted by JavaScript.
  */
 export function purgeAnalyticsCookies(): void {
   if (typeof document === 'undefined') return;
@@ -18,11 +20,12 @@ export function purgeAnalyticsCookies(): void {
   const cookies = document.cookie ? document.cookie.split(';') : [];
   if (cookies.length === 0) return;
 
-  const hostname = typeof window !== 'undefined' ? window.location.hostname : '';
+  const hostname = (typeof window !== 'undefined' && window.location?.hostname) ? window.location.hostname : '';
   const hostParts = hostname ? hostname.split('.') : [];
-  const domains: string[] = ['', hostname];
+  const domains: string[] = ['']; // Empty string targets host-only cookies (no domain attribute)
 
   if (hostname) {
+    domains.push(hostname);
     domains.push(`.${hostname}`);
   }
   if (hostParts.length > 2) {
@@ -30,8 +33,10 @@ export function purgeAnalyticsCookies(): void {
   }
 
   for (const cookieStr of cookies) {
-    const eqIdx = cookieStr.indexOf('=');
-    const name = (eqIdx > -1 ? cookieStr.slice(0, eqIdx) : cookieStr).trim();
+    const trimmed = cookieStr.trim();
+    if (!trimmed) continue;
+    const eqIdx = trimmed.indexOf('=');
+    const name = (eqIdx > -1 ? trimmed.slice(0, eqIdx) : trimmed).trim();
 
     if (name.startsWith('_ga') || name.startsWith('_gid') || name.startsWith('_gat')) {
       for (const domain of domains) {
@@ -48,18 +53,24 @@ export function purgeAnalyticsCookies(): void {
  */
 export function setConsentChoice(choice: ConsentChoice): void {
   try {
-    localStorage.setItem(CONSENT_STORAGE_KEY, choice);
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem(CONSENT_STORAGE_KEY, choice);
+    }
   } catch (_) {
-    // Ignore private browsing storage restrictions
+    // Ignore private browsing storage restrictions / QuotaExceededError
   }
 
   if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-    window.gtag('consent', 'update', {
-      analytics_storage: choice,
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied',
-    });
+    try {
+      window.gtag('consent', 'update', {
+        analytics_storage: choice,
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+      });
+    } catch (_) {
+      // Ignore gtag invocation errors
+    }
   }
 
   if (choice === 'denied') {
@@ -73,11 +84,12 @@ export function setConsentChoice(choice: ConsentChoice): void {
 export function getConsentChoice(): ConsentChoice | 'unset' {
   if (typeof window === 'undefined') return 'unset';
   try {
-    const val = localStorage.getItem(CONSENT_STORAGE_KEY);
-    if (val === 'granted' || val === 'denied') return val;
+    if (typeof localStorage !== 'undefined') {
+      const val = localStorage.getItem(CONSENT_STORAGE_KEY);
+      if (val === 'granted' || val === 'denied') return val;
+    }
   } catch (_) {
     // Ignore storage errors
   }
   return 'unset';
 }
-
