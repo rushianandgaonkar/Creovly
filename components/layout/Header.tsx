@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Wordmark from '../ui/Wordmark';
 import ThemeToggle from '../ui/ThemeToggle';
+import LanguageSelector from './LanguageSelector';
 import QuickSearchModal from '../ui/QuickSearchModal';
 import { navItems } from '@/config/site';
 
@@ -116,6 +117,7 @@ export default function Header() {
             {navigationLinks()}
           </nav>
           <div className="flex items-center gap-2 border-l border-[var(--border-hairline)] pl-3 sm:pl-4">
+            <LanguageSelector className="hidden sm:inline-block" />
             <ThemeToggle />
             <button
               id="navigation-toggle"
@@ -137,9 +139,14 @@ export default function Header() {
         <nav
           id="mobile-navigation"
           aria-label="Mobile navigation"
-          className="md:hidden border-t border-[var(--border-hairline)] bg-[var(--bg-canvas)] px-4 py-3 space-y-1"
+          className="md:hidden border-t border-[var(--border-hairline)] bg-[var(--bg-canvas)] px-4 py-3 space-y-3"
         >
-          {navigationLinks(true)}
+          <div className="space-y-1">
+            {navigationLinks(true)}
+          </div>
+          <div className="pt-2 border-t border-[var(--border-hairline)]">
+            <LanguageSelector variant="footer" />
+          </div>
         </nav>
       )}
 

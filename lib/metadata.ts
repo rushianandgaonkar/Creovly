@@ -1,24 +1,49 @@
 import type { Metadata } from 'next';
 import { siteConfig, toolRegistry } from '@/config/site';
+import {
+  type Locale,
+  defaultLocale,
+  getOgLocale,
+  getLanguageAlternates,
+  stripLocale,
+  translatePath,
+  translations,
+} from '@/config/i18n';
 
 interface PageMetadataOptions {
   title: string;
   description: string;
   path: string;
   noindex?: boolean;
+  locale?: Locale;
+  keywords?: string[];
 }
 
-export function createPageMetadata({ title, description, path, noindex = false }: PageMetadataOptions): Metadata {
-  const url = new URL(path, siteConfig.url).toString();
-  const socialTitle = path === '/' ? title : `${title} | ${siteConfig.name}`;
+export function createPageMetadata({
+  title,
+  description,
+  path,
+  noindex = false,
+  locale = defaultLocale,
+  keywords,
+}: PageMetadataOptions): Metadata {
+  const canonicalPath = translatePath(path, locale);
+  const url = new URL(canonicalPath, siteConfig.url).toString();
+  const isHome = stripLocale(path) === '/';
+  const socialTitle = isHome && locale === defaultLocale ? title : `${title} | ${siteConfig.name}`;
+  const languageAlternates = getLanguageAlternates(path, siteConfig.url);
 
   return {
-    title: path === '/' ? { absolute: title } : title,
+    title: isHome && locale === defaultLocale ? { absolute: title } : title,
     description,
-    alternates: { canonical: url },
+    keywords,
+    alternates: {
+      canonical: url,
+      languages: languageAlternates,
+    },
     openGraph: {
       type: 'website',
-      locale: 'en_US',
+      locale: getOgLocale(locale),
       siteName: siteConfig.name,
       url,
       title: socialTitle,
@@ -48,12 +73,19 @@ export function getTool(slug: string) {
   return tool;
 }
 
-export function createToolMetadata(slug: string): Metadata {
+export function createToolMetadata(slug: string, locale: Locale = defaultLocale): Metadata {
   const tool = getTool(slug);
+  const localeData = translations[locale]?.tools?.[slug];
+  const title = localeData?.title || tool.title;
+  const description = localeData?.description || tool.description;
+  const keywords = localeData?.keywords;
+
   return createPageMetadata({
-    title: tool.title,
-    description: tool.description,
+    title,
+    description,
     path: tool.href,
     noindex: tool.status !== 'available',
+    locale,
+    keywords,
   });
 }

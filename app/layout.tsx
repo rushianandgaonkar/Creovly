@@ -91,6 +91,17 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/',
+    languages: {
+      en: `${siteConfig.url}/`,
+      es: `${siteConfig.url}/es`,
+      ja: `${siteConfig.url}/ja`,
+      fr: `${siteConfig.url}/fr`,
+      de: `${siteConfig.url}/de`,
+      pt: `${siteConfig.url}/pt`,
+      ko: `${siteConfig.url}/ko`,
+      it: `${siteConfig.url}/it`,
+      'x-default': `${siteConfig.url}/`,
+    },
   },
 };
 
@@ -166,6 +177,11 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="Creovly" />
         <link rel="manifest" href="/site.webmanifest" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var p=window.location.pathname.replace(/^\\/+/,'').split('/')[0];var l=['es','ja','fr','de','pt','ko','it'].indexOf(p)!==-1?p:'en';document.documentElement.lang=l;}catch(e){}})()`,
+          }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem('creovly-theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(!t&&d)){document.documentElement.classList.add('dark')}else{document.documentElement.classList.remove('dark')}}catch(e){}})()`,

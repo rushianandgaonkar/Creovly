@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Wordmark from '../ui/Wordmark';
+import LanguageSelector from './LanguageSelector';
 import { siteConfig, footerNavigation, secondaryNavItems } from '@/config/site';
 
 export const Footer: React.FC = () => {
@@ -80,6 +81,11 @@ export const Footer: React.FC = () => {
               </ul>
             </div>
           ))}
+        </div>
+
+        {/* Language Selector Bar */}
+        <div className="mt-10 pt-6 border-t border-[var(--border-hairline-subtle)]">
+          <LanguageSelector variant="footer" />
         </div>
 
         {/* Company & Legal Navigation */}
