@@ -272,5 +272,20 @@ test('all 8 languages render educational guidance and interactive UI strings', (
     assert.ok(guides.index.readGuide && guides.index.readGuide.length > 2);
     assert.ok(guides.article.author && guides.article.author.length > 3);
     assert.ok(guides.article.sourcesDescription && guides.article.sourcesDescription.length > 5);
+
+    // Studio Hero Workspace
+    const ws = messages.home.studioWorkspace;
+    assert.ok(ws, `studioWorkspace missing for ${locale}`);
+    assert.ok(ws.colTitle && ws.colTitle.length > 3, `colTitle missing in ${locale}`);
+    assert.ok(ws.videoTitleLabel && ws.videoTitleLabel.length > 3, `videoTitleLabel missing in ${locale}`);
+    assert.ok(ws.sampleTitle1 && ws.sampleTitle1.length > 10, `sampleTitle1 missing in ${locale}`);
+    assert.ok(ws.sampleTitle2 && ws.sampleTitle2.length > 10, `sampleTitle2 missing in ${locale}`);
+    assert.ok(ws.sampleTitle3 && ws.sampleTitle3.length > 10, `sampleTitle3 missing in ${locale}`);
+    assert.ok(ws.colThumbnail && ws.colThumbnail.length > 3, `colThumbnail missing in ${locale}`);
+    assert.ok(ws.colChecklist && ws.colChecklist.length > 3, `colChecklist missing in ${locale}`);
+    assert.ok(ws.checkAspect && ws.checkAspect.length > 3, `checkAspect missing in ${locale}`);
+    assert.ok(ws.checkFileSize && ws.checkFileSize.length > 3, `checkFileSize missing in ${locale}`);
+    assert.ok(ws.checkSafeZone && ws.checkSafeZone.length > 3, `checkSafeZone missing in ${locale}`);
+    assert.ok(ws.exportZip && ws.exportZip.length > 5, `exportZip missing in ${locale}`);
   }
 });

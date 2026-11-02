@@ -87,6 +87,7 @@ const AST_COMPONENTS_TO_CHECK = [
   'components/guides/GuidesContent.tsx',
   'components/form/DropZone.tsx',
   'app/checklist/ChecklistClient.tsx',
+  'components/home/StudioHeroWorkspace.tsx',
 ];
 
 const ALLOWED_LITERAL_REGEX = [
