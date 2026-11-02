@@ -9,6 +9,7 @@ import { useI18n, LocalizedLink } from '@/lib/i18n';
 export default function ContactContent() {
   const { t } = useI18n();
   const contact = t.pages.contact;
+  const sidebar = contact.sidebar;
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
@@ -49,10 +50,10 @@ export default function ContactContent() {
         <div className="space-y-6 text-xs text-[var(--text-body)]">
           <div className="p-5 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-3">
             <h3 className="font-semibold text-sm text-[var(--text-ink)]">
-              Direct Contact
+              {sidebar.directTitle}
             </h3>
             <p className="leading-relaxed">
-              Prefer writing directly from your mail client? Email our creator inbox anytime:
+              {sidebar.directBody}
             </p>
             <a
               href="mailto:support@creovly.com"
@@ -64,19 +65,19 @@ export default function ContactContent() {
 
           <div className="p-5 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-2">
             <h3 className="font-semibold text-sm text-[var(--text-ink)]">
-              Response Time
+              {sidebar.responseTitle}
             </h3>
             <p className="leading-relaxed text-[var(--text-muted)]">
-              We typically review creator feedback and support inquiries within 24–48 business hours.
+              {sidebar.responseBody}
             </p>
           </div>
 
           <div className="p-5 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-2">
             <h3 className="font-semibold text-sm text-[var(--text-ink)]">
-              Feature Requests
+              {sidebar.featuresTitle}
             </h3>
             <p className="leading-relaxed text-[var(--text-muted)]">
-              Most tools on Creovly were built directly from creator suggestions. If a pre-publish step is frustrating in your workflow, tell us!
+              {sidebar.featuresBody}
             </p>
           </div>
         </div>
@@ -84,4 +85,3 @@ export default function ContactContent() {
     </div>
   );
 }
-

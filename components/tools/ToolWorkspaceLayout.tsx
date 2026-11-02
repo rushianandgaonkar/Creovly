@@ -1,5 +1,8 @@
 /* Hallmark · genre: modern-minimal · macrostructure: Workbench */
+'use client';
+
 import type { ReactNode } from 'react';
+import { useI18n } from '@/lib/i18n';
 
 interface ToolWorkspaceLayoutProps {
   workspace: ReactNode;
@@ -12,6 +15,9 @@ export default function ToolWorkspaceLayout({
   results,
   preview = false,
 }: ToolWorkspaceLayoutProps) {
+  const { t } = useI18n();
+  const shell = t.tools.shell;
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start mb-16">
       {/* Input Workbench Panel (Controls) */}
@@ -29,11 +35,11 @@ export default function ToolWorkspaceLayout({
               id="workspace-heading"
               className="text-xs font-mono font-semibold uppercase tracking-wider text-[var(--text-ink)]"
             >
-              Workbench Controls
+              {shell.workbenchControls}
             </h2>
           </div>
           <span className="text-[11px] font-mono text-[var(--text-muted)]">
-            INPUT // LOCAL
+            {shell.inputLocal}
           </span>
         </div>
         <div className="p-5 sm:p-6 space-y-6">{workspace}</div>
@@ -56,11 +62,11 @@ export default function ToolWorkspaceLayout({
               id="results-heading"
               className="text-xs font-mono font-semibold uppercase tracking-wider text-[var(--text-ink)]"
             >
-              {preview ? 'Sample Results' : 'Output & Inspection'}
+              {preview ? shell.sampleResults : shell.outputInspection}
             </h2>
           </div>
           <span className="text-[11px] font-mono text-[var(--text-muted)]">
-            {preview ? 'PREVIEW MODE' : 'LIVE SPEC'}
+            {preview ? shell.previewMode : shell.liveSpec}
           </span>
         </div>
         <div className="p-5 sm:p-6 space-y-5 max-h-[calc(100vh-8rem)] overflow-y-auto">

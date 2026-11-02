@@ -46,5 +46,16 @@ export const home = {
       buttonText: 'Launch Publish Studio',
     },
   },
+  carousel: {
+    heading: 'Find your next creator tool.',
+    subheading: 'Small tasks. A better publish day. Pick a tool and make it yours.',
+    viewDirectory: 'View tool directory',
+    localBadge: '100% Local',
+    hint: 'Swipe, drag or use the arrows to explore. Every card opens a working tool.',
+    ariaLabel: 'Creator tool cards. Use left and right arrows to browse.',
+    prevAria: 'Previous tool',
+    nextAria: 'Next tool',
+    jumpAria: 'Jump to any creator tool',
+  },
 };
 

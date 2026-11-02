@@ -166,7 +166,7 @@ export const DropZone: React.FC<DropZoneProps> = ({
               {t.common.dropzone.sampleButtonPrefix}
             </span>
             <span className="text-[10px] font-mono text-[var(--brand-accent)] font-medium">
-              1-click test
+              {t.common.dropzone.oneClickTest}
             </span>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">

@@ -116,6 +116,71 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
     }
   };
 
+  const renderGuidance = () => {
+    if (toolSlug === 'youtube-thumbnail-compressor' && t.tools.guidance?.compressor) {
+      const g = t.tools.guidance.compressor;
+      return (
+        <>
+          <p>{g.p1}</p>
+          <p>{g.p2}</p>
+          <p>
+            <a
+              href="https://support.google.com/youtube/answer/72431?hl=en"
+              className="text-[var(--brand-accent)] underline focus-ring"
+            >
+              {g.linkText}
+            </a>{' '}
+            {g.linkSuffix}
+          </p>
+        </>
+      );
+    }
+    if (toolSlug === 'youtube-thumbnail-resizer' && t.tools.guidance?.resizer) {
+      const g = t.tools.guidance.resizer;
+      return (
+        <>
+          <p>{g.p1}</p>
+          <p>{g.p2}</p>
+          <p>{g.p3}</p>
+          <p>{g.p4}</p>
+        </>
+      );
+    }
+    if (toolSlug === 'logo-background-remover' && t.tools.guidance?.logoRemover) {
+      const g = t.tools.guidance.logoRemover;
+      return (
+        <>
+          <p>{g.p1}</p>
+          <p>{g.p2}</p>
+          <p>{g.p3}</p>
+        </>
+      );
+    }
+    if (toolSlug === 'youtube-shorts-safe-zone' && t.tools.guidance?.shorts) {
+      const g = t.tools.guidance.shorts;
+      return (
+        <>
+          <p>{g.p1}</p>
+          <p>{g.p2}</p>
+          <p>{g.p3}</p>
+        </>
+      );
+    }
+    if (toolSlug === 'youtube-title-checker' && t.tools.guidance?.titleChecker) {
+      const g = t.tools.guidance.titleChecker;
+      return (
+        <>
+          <p>{g.p1}</p>
+          <p>{g.p2}</p>
+          <p>{g.p3}</p>
+        </>
+      );
+    }
+    return educationalContent;
+  };
+
+  const activeGuidance = renderGuidance();
+
   return (
     <div className={`max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 ${className}`}>
       {/* Precision Breadcrumb */}
@@ -236,8 +301,8 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
           {t.tools.shell.aboutHeading.replace('{title}', displayTitle)}
         </h2>
         <div className="mt-4 prose prose-zinc dark:prose-invert max-w-none text-sm text-[var(--text-body)] leading-relaxed space-y-4">
-          {educationalContent ? (
-            educationalContent
+          {activeGuidance ? (
+            activeGuidance
           ) : (
             <>
               <p>

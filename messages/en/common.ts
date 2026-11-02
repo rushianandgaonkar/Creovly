@@ -51,7 +51,8 @@ export const common = {
   },
   consentBanner: {
     title: 'Privacy & Analytics Consent',
-    description: 'We use Google Analytics (with IP masking) to evaluate aggregate site traffic. If you decline, no analytics cookies are stored on your device, and any existing analytics cookies are deleted. Learn more in our',
+    description:
+      'We use Google Analytics (with IP masking) to evaluate aggregate site traffic. If you decline, no analytics cookies are stored on your device, and any existing analytics cookies are deleted. Learn more in our',
     privacyLink: 'Privacy Policy',
     accept: 'Accept Analytics',
     decline: 'Decline',
@@ -64,6 +65,7 @@ export const common = {
     maxSize: 'Max file size:',
     localPrivacyNote: 'Stays on your device',
     sampleButtonPrefix: 'Test with sample:',
+    oneClickTest: '1-click test',
   },
   buttons: {
     clear: 'Clear',
@@ -91,4 +93,3 @@ export const common = {
     updatedSpecs: 'Updated Specifications',
   },
 };
-

@@ -31,10 +31,10 @@ export default function ToolsDirectoryContent() {
         <div className="flex flex-wrap items-center gap-2 mb-3">
           <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono uppercase tracking-wider font-semibold border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)]">
             <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
-            Complete Catalog
+            {t.tools.directory.completeCatalog}
           </span>
           <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-mono text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 bg-emerald-500/5">
-            100% In-Browser Execution
+            {t.tools.shell.badgeInBrowser}
           </span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-[var(--text-ink)]">

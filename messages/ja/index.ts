@@ -67,6 +67,7 @@ export const messagesJa: Messages = {
       maxSize: '最大ファイルサイズ:',
       localPrivacyNote: 'お使いの端末内でのみ処理されます',
       sampleButtonPrefix: 'サンプルで試す:',
+      oneClickTest: '1クリック試行',
     },
     buttons: {
       clear: 'クリア',
@@ -142,6 +143,17 @@ export const messagesJa: Messages = {
         buttonText: 'Publish Studioを開く',
       },
     },
+    carousel: {
+      heading: '次のクリエイターツールを見つけよう',
+      subheading: '小さなタスク、確かな公開。必要なツールを選んですぐに使えます。',
+      viewDirectory: 'ツール一覧を見る',
+      localBadge: '100% ローカル',
+      hint: 'スワイプ、ドラッグ、または矢印キーで探索できます。各カードからツールを開けます。',
+      ariaLabel: 'クリエイターツールカード。左右の矢印でブラウズします。',
+      prevAria: '前のツール',
+      nextAria: '次のツール',
+      jumpAria: '任意のクリエイターツールに移動',
+    },
   },
   tools: {
     shell: {
@@ -170,6 +182,12 @@ export const messagesJa: Messages = {
       relatedHeading: 'おすすめの関連ツール',
       relatedSubheading: '公開前準備をさらに加速する補完ユーティリティ',
       relatedViewAll: 'すべてのツールを見る',
+      workbenchControls: 'ワークベンチ操作パネル',
+      inputLocal: '入力 // ローカル',
+      outputInspection: '出力とプレビュー',
+      sampleResults: 'サンプル結果',
+      previewMode: 'プレビューモード',
+      liveSpec: 'ライブ仕様',
     },
     directory: {
       heading: '動画公開前の必須ユーティリティ',
@@ -184,6 +202,7 @@ export const messagesJa: Messages = {
       emptyTitle: '該当するツールが見つかりませんでした',
       emptyText: '「{query}」に一致するツールはありません。「圧縮」「タイトル」などの単語で検索するか、フィルターをリセットしてください。',
       clearFilters: 'フィルターをクリア',
+      completeCatalog: '全ツールカタログ',
     },
     categories: {
       thumbnail: {
@@ -402,6 +421,35 @@ export const messagesJa: Messages = {
         },
       ],
     },
+    guidance: {
+      compressor: {
+        p1: 'すべての画像に同じ目標サイズ、形式、最大品質設定が適用されます。設定の変更やバッチの差し替えを行うと以前の出力がクリアされ、古い設定のファイルがダウンロードされるのを防ぎます。個別の画像を削除しても、他の完了結果は保持されます。',
+        p2: '寸法はそのまま維持されます。再エンコードによって色味が変化したり、埋め込みメタデータが削除されたりする場合があります。元ファイルが保持される場合はメタデータも保持されます。サンプルは1枚の画像を読み込みます。バッチテストには複数ファイルをアップロードしてください。',
+        linkText: 'YouTubeの最新サムネイル公式ガイダンスを確認',
+        linkSuffix: 'してからアップロードしてください。',
+      },
+      resizer: {
+        p1: '静止画JPEG、PNG、WebPからサムネイル、チャンネルバナー、プロフィール画像、透かし素材を作成します。塗りつぶしトリミングは端を切り取り、全体表示は余白を追加します。すべてのエクスポートは長方形を維持します。',
+        p2: 'バナープリセットは2560×1440を使用します。プレビューガイドは2048×1152バナー用に公開された中央の1235×338テキスト/ロゴエリアを拡大縮小します。800×800のプロフィールキャンバスはCreovlyのプリセットで、円形ガイドが付いています。透かしキャンバスは150×150で、動画への配置や背景削除を行わずに素材を準備します。',
+        p3: 'ガイド線はダウンロードしたファイルには含まれません。YouTubeのアップロードプレビューでデザインを確認してください。YouTubeの仕様ではバナーは6MB以下、透かし画像は1MB以下と定められています。現在の要件についてはYouTubeチャンネルブランディングガイドラインをご覧ください。',
+        p4: '入力ファイルは20MB、2400万画素、1辺あたり8,192ピクセルまでに制限されています。出力キャンバスも同じ制限が適用されます。リサイズは寸法を変更するものであり、目標ファイルサイズを設定するものではありません。拡大によって細部が復元されることはありません。エクスポートによりメタデータが削除されたり色味が変わる場合があります。',
+      },
+      logoRemover: {
+        p1: '単色背景の既存ロゴを選択し、背景色を確認して許容度を調整します。「背景を削除」を選択し、実際の前後画像をプレビューして、透過PNGをダウンロードします。',
+        p2: 'このツールは画像の境界線に接している一致する色を除去します。文字の内側など囲まれた領域は保護されます。背景に接する類似の前景色も除去される場合があります。複雑な写真、グラデーション、影、アンチエイリアス処理されたエッジには専用エディターが必要になる場合があります。',
+        p3: '処理はブラウザ内で完結します。画像はセッション間で保存されません。元の寸法は維持されます。PNG出力は元ファイルよりサイズが大きくなる場合があります。',
+      },
+      shorts: {
+        p1: '動画から静止フレームを選択します。ツールが9:16キャンバスに合わせてフィットさせ、必要に応じて黒い余白を追加します。想定するプレーヤーレイアウトに合わせて予約マージンを調整してください。初期値は目安であり、YouTube公式の固定数値ではありません。',
+        p2: 'コンテンツボックスを有効にして、重要なテキストや被写体の上に配置します。指定したマージンと重なっているかどうかが報告されます。自動的なコンテンツ検出や動画解析を行うものではありません。',
+        p3: '注記付きの1080×1920計画用参照PNGガイドを生成してダウンロードできます。画面上のオーバーレイを非表示にしている場合でも、ダウンロードには常にガイドが含まれます。公開には元のクリーンな素材を使用し、実際のShortsプレーヤーで確認してください。',
+      },
+      titleChecker: {
+        p1: 'タイトルの下書きと、必要に応じて確認したいトピックフレーズを入力します。文字数、空白、重複する句読点、大文字の強調を検証します。フレーズ確認は大文字小文字を区別しませんが、同義語の一致や検索ボリュームの測定は行いません。',
+        p2: 'YouTubeのタイトル上限は100文字です。このツールはスペースを含む保守的なUTF-16コード単位カウントを使用します。一部の絵文字は複数の単位を消費します。最終的な受理可否はYouTube Studioで確認してください。単語数は空白で区切るため、スペースを使用しない言語では参考値となります。',
+        p3: '選択した幅に応じてプレビューが2行に折り返されます。これは表示の目安であり、すべてのYouTube端末の完全な再現ではありません。フィードバックはCTR、ランキング、正確性、プラットフォーム規約への準拠を保証するものではありません。',
+      },
+    },
   },
   compressor: {
     title: 'YouTubeサムネイル圧縮ツール',
@@ -501,10 +549,22 @@ export const messagesJa: Messages = {
     resultsPrompt: 'プリセットを選択または数値を入力し、「画像をリサイズ」をクリックしてプレビューと保存を行います。',
     guideOverlayToggle: 'プレビューに構図ガイドを表示',
     presets: {
-      thumbnail: { label: '動画サムネイル', desc: '1280 × 720 (16:9 HD)' },
-      banner: { label: 'チャンネルバナー', desc: '2560 × 1440 (チャンネルヘッダー)' },
-      profile: { label: 'プロフィールアイコン', desc: '800 × 800 (正方形 1:1)' },
-      watermark: { label: '透かしアイコン', desc: '150 × 150 (右下ブランド透かし)' },
+      thumbnail: {
+        label: '動画サムネイル',
+        desc: '1280 × 720 (16:9 HD)',
+      },
+      banner: {
+        label: 'チャンネルバナー',
+        desc: '2560 × 1440 (チャンネルヘッダー)',
+      },
+      profile: {
+        label: 'プロフィールアイコン',
+        desc: '800 × 800 (正方形 1:1)',
+      },
+      watermark: {
+        label: '透かしアイコン',
+        desc: '150 × 150 (右下ブランド透かし)',
+      },
     },
     warnings: {
       bannerSafeZone: 'スマホやタブレットでは中央の1235×338ピクセルのみが確実に表示されます。',
@@ -611,9 +671,18 @@ export const messagesJa: Messages = {
     revenue: {
       title: '月間収益シナリオ試算',
       fields: {
-        views: { label: '月間想定再生回数', suffix: '回再生' },
-        low: { label: '想定下限RPM (USD)', suffix: 'USD' },
-        high: { label: '想定上限RPM (USD)', suffix: 'USD' },
+        views: {
+          label: '月間想定再生回数',
+          suffix: '回再生',
+        },
+        low: {
+          label: '想定下限RPM (USD)',
+          suffix: 'USD',
+        },
+        high: {
+          label: '想定上限RPM (USD)',
+          suffix: 'USD',
+        },
       },
       note: 'YouTube側の分配後の手取りRPMを入力してください。根拠のない固定平均値は使用しません。Shortsの場合は有効視聴回数とShorts用RPMを使用してください。年間数値は12ヶ月同一と仮定したシナリオであり、将来の保証ではありません。',
       metrics: {
@@ -628,8 +697,14 @@ export const messagesJa: Messages = {
     rpm: {
       title: '実効RPM計算',
       fields: {
-        revenue: { label: '対象期間のクリエイター手取り収益 (USD)', suffix: 'USD' },
-        views: { label: '同期間の総再生回数', suffix: '回再生' },
+        revenue: {
+          label: '対象期間のクリエイター手取り収益 (USD)',
+          suffix: 'USD',
+        },
+        views: {
+          label: '同期間の総再生回数',
+          suffix: '回再生',
+        },
       },
       note: 'YouTubeの手数料控除後の手取り金額と、同じ期間の再生回数を入力してください。Shortsの場合は有効視聴回数を入力します。RPMから広告主が支払うCPMを予測することはできません。',
       metrics: {
@@ -644,10 +719,22 @@ export const messagesJa: Messages = {
     watchHours: {
       title: '総再生時間（4,000時間）進捗シナリオ',
       fields: {
-        current: { label: '現在の有効総再生時間', suffix: '時間' },
-        goal: { label: '目標とする総再生時間', suffix: '時間' },
-        monthly: { label: '月間の増加見込み時間', suffix: '時間' },
-        duration: { label: '動画の平均視聴時間', suffix: '分' },
+        current: {
+          label: '現在の有効総再生時間',
+          suffix: '時間',
+        },
+        goal: {
+          label: '目標とする総再生時間',
+          suffix: '時間',
+        },
+        monthly: {
+          label: '月間の増加見込み時間',
+          suffix: '時間',
+        },
+        duration: {
+          label: '動画の平均視聴時間',
+          suffix: '分',
+        },
       },
       note: 'この試算は過去の再生時間が失効しない前提のシミュレーションです。直近365日のローリング集計は考慮していません。Shortsの再生時間は4,000時間には含まれません。正確な進捗はYouTube Studioの「収益化」タブをご確認ください。',
       metrics: {
@@ -666,13 +753,33 @@ export const messagesJa: Messages = {
     monetization: {
       title: '月間総合収益・利益シナリオ',
       fields: {
-        views: { label: '月間総再生回数', suffix: '回再生' },
-        rpm: { label: '広告RPM想定 (USD)', suffix: 'USD' },
-        deals: { label: '月間の企業タイアップ案件数' },
-        fee: { label: '1案件あたりの報酬単価 (USD)', suffix: 'USD' },
-        affiliate: { label: '月間アフィリエイト収益 (USD)', suffix: 'USD' },
-        other: { label: 'その他月間収益（メンバーシップ等） (USD)', suffix: 'USD' },
-        costs: { label: '月間の運営・制作経費 (USD)', suffix: 'USD' },
+        views: {
+          label: '月間総再生回数',
+          suffix: '回再生',
+        },
+        rpm: {
+          label: '広告RPM想定 (USD)',
+          suffix: 'USD',
+        },
+        deals: {
+          label: '月間の企業タイアップ案件数',
+        },
+        fee: {
+          label: '1案件あたりの報酬単価 (USD)',
+          suffix: 'USD',
+        },
+        affiliate: {
+          label: '月間アフィリエイト収益 (USD)',
+          suffix: 'USD',
+        },
+        other: {
+          label: 'その他月間収益（メンバーシップ等） (USD)',
+          suffix: 'USD',
+        },
+        costs: {
+          label: '月間の運営・制作経費 (USD)',
+          suffix: 'USD',
+        },
       },
       note: '金額はすべてUSD想定です。広告収益は純RPMで計算されます。経費は合算から1回だけ差し引かれます（税金計算は含みません）。',
       metrics: {
@@ -834,6 +941,7 @@ export const messagesJa: Messages = {
       badge: '公開前の対話型チェックフロー',
       heading: 'YouTubeクリエイター向け事前公開チェックリスト',
       subheading: 'サムネイル、タイトル、アフィリエイト表記、音楽ライセンス、YouTube公式ガイドラインへの適合性を網羅した総合点検リスト。',
+      tag: 'フライト前監査',
     },
     status: {
       completed: '{total} 項目中 {count} 項目完了',
@@ -842,6 +950,12 @@ export const messagesJa: Messages = {
       resetButton: 'リストをリセット',
       exportButton: 'リストを出力 (.txt)',
       resetAria: 'チェックリストの全選択を解除',
+      auditReadiness: '監査の進捗状況:',
+      packageStudioButton: 'Studioでプロジェクトを一括パッケージ化 →',
+      completeLabel: '✓ 完了',
+      itemsCount: '{total}項目中 {completed}項目完了',
+      storageNotice: 'チェックリストの進捗はブラウザのローカルストレージに自動保存されます。',
+      openStudioButton: 'Publish Studioを開く →',
     },
     sections: [
       {
@@ -932,6 +1046,7 @@ export const messagesJa: Messages = {
       heroVerified: 'プラットフォーム公式仕様準拠',
       heading: 'クリエイター向け技術ガイド＆リファレンス',
       subheading: '公式の仕様資料に基づき、表示仕様、収益計算の数学的根拠、公開前のベストプラクティスを解説。',
+      readGuide: 'ガイドを読む →',
     },
     article: {
       verifiedLabel: '公式仕様検証済み',
@@ -941,6 +1056,20 @@ export const messagesJa: Messages = {
       checklistHeading: '関連チェックリスト',
       relatedToolsHeading: '関連するCreovlyツール',
       breadcrumbGuides: 'クリエイターガイド',
+      author: 'Creovly編集チーム',
+      sourcesDescription: '本ガイドの技術仕様、アスペクト比、収益計算式はすべてプラットフォームの公式ドキュメントに基づいて検証されています:',
+      keyTakeawayPrefix: '重要ポイント:',
+      appliedUtilitiesBadge: '関連ツール',
+      appliedUtilitiesDesc: '公開前にこれらのCreovlyクライアント側ツールを使って素材を検証・整形してください。',
+      checklistBadge: 'アクションチェックリスト',
+      checklistTitle: '公開前検証ステップ',
+      checklistCompleted: '完了: {total}項目中 {completed}項目',
+      checklistNote: 'YouTubeアップロードの準備を進めながら、各項目をチェックしてください。',
+      workedScenarioBadge: '実践シナリオ',
+      workedScenarioTag: 'ステップごとの詳細解説',
+      scenarioLabel: 'シナリオ設定:',
+      executionStepsLabel: '実行手順',
+      takeawayLabel: 'まとめ:',
     },
     items: {
       'youtube-thumbnail-blueprint': {
@@ -980,7 +1109,16 @@ export const messagesJa: Messages = {
         scopeBody: '私たちはクリエイター向けツールが不誠実な約束をすべきではないと考えています。Creovlyは「爆発的に再生数が伸びる」といった非現実的な主張や、アルゴリズムの架空の秘密を騙ることはありません。すべての計算ツールはプラットフォームの公式基準と、お客様自身が入力したデータのみに基づいて動作します。',
         disclaimerTitle: '独立したサードパーティツールとしての表記',
         disclaimerBody: 'Creovlyは独立して開発されたクリエイター向けソフトウェアです。YouTube™ は Google LLC の商標です。CreovlyはYouTubeまたはGoogle LLCと提携、推奨、または後援関係にあるものではありません。',
+        principlesTag: 'エンジニアリングの基本原則',
+        differenceTitle: 'Creovlyが選ばれる理由',
+        supportTitle: 'お問い合わせ・サポート',
+        supportBody: 'ツールへのご意見、YouTube仕様変更の報告、技術的なサポートが必要な場合は、お気軽にご連絡ください:',
+        contactFormLink: 'お問い合わせフォーム →',
+        ctaHeading: '公開前の作業フローを効率化しませんか？',
+        ctaBody: 'Publish Studioを開いて、タイトル、サムネイル、チェックリストをアップロード準備完了パッケージとして一元化しましょう。',
+        ctaButton: 'Studioを起動 →',
       },
+      breadcrumb: '概要',
     },
     contact: {
       heroBadge: 'サポート窓口',
@@ -1008,11 +1146,21 @@ export const messagesJa: Messages = {
         privacyNote: 'サーバー保存ゼロ: 送信ボタンを押すと、お使いの標準メールアプリが起動します。お問い合わせ内容が当サイトのサーバーやDBに保存されることはありません。',
         submittedHeading: 'メール作成画面の準備完了',
         submittedBody: 'お使いのメールソフトが起動しました。もし起動しなかった場合は、内容をコピーして以下の宛先へ直接お送りください:',
+        launchEmailApp: 'メールアプリを起動 →',
+        copiedNotification: '✓ コピーしました！',
       },
       errors: {
         nameRequired: 'お名前を入力してください。',
         emailValid: '有効なメールアドレスを入力してください。',
         messageMin: 'メッセージは10文字以上で入力してください。',
+      },
+      sidebar: {
+        directTitle: '直接のお問い合わせ',
+        directBody: 'メールクライアントから直接送信をご希望ですか？いつでもクリエイター窓口までご連絡ください:',
+        responseTitle: '返信目安時間',
+        responseBody: 'いただいたご意見やお問合せには、通常24〜48営業時間以内に対応しております。',
+        featuresTitle: '機能のご要望',
+        featuresBody: 'Creovlyのほとんどのツールはクリエイターの皆様のご意見から生まれました。公開前の工程で不便に感じる点があればぜひお聞かせください！',
       },
     },
     privacy: {
@@ -1026,6 +1174,38 @@ export const messagesJa: Messages = {
       consentDeniedText: 'アクセス解析Cookieは現在【無効】です。トラッキングCookieは一切保存されていません。',
       buttonRevoke: '解析Cookieを無効化する',
       buttonGrant: '解析Cookieを有効化する',
+      sections: {
+        clientSideTitle: '1. 100% クライアント側完結の処理アーキテクチャ',
+        clientSideBody: '従来のクリエイター向けSaaSとは異なり、Creovlyのすべてのファイル処理ツール（サムネイル圧縮、リサイズ、ロゴ背景削除、Shortsセーフゾーン確認、タイトルチェッカーなど）は、最新のWeb API（HTML5 Canvas、File API、Web Workers、ローカルJavaScriptスレッド）を使用し、お使いのブラウザセッション内だけで実行されます。',
+        clientSideItem1: 'アップロードされた画像、グラフィック、サムネイルはメモリ内でのみ処理され、Creovlyのサーバー、クラウドストレージ、外部データベースに送信されることは一切ありません。',
+        clientSideItem2: '計算された財務モデル、RPM見積もり、シナリオ数値は一時的なブラウザメモリ内にのみ保持されます。',
+        clientSideItem3: 'メディアファイル、生動画素材、写真などがサーバーにログ記録されたり、キャッシュされたり、保持されることは一切ありません。',
+        dataCollectTitle: '2. 収集する情報と収集しない情報',
+        noAccountHeading: 'アカウント登録不要:',
+        noAccountBody: 'Creovlyのツールを利用するために、アカウント登録、GoogleやYouTubeのOAuth認証、クレジットカード情報などの入力は一切不要です。',
+        contactCommsHeading: '自発的なお問い合わせおよびメール処理:',
+        contactCommsBody: 'お問い合わせページを利用する際、フォームはデータをウェブサイトのデータベースに自動送信するのではなく、お使いのローカルメールアプリで support@creovly.com 宛ての下書きを作成します。メールアプリで「送信」を押すまで配信は行われません。メールを送信いただいた場合、メッセージ、送信元アドレス、任意の入力情報（チャンネル名など）は、弊社チームが確認し返信するために、標準的なメールインフラ（お客様のプロバイダおよびCreovlyのメール受信サーバー）を通じてルーティングおよび保管されます。Creovlyはお問い合わせ内容をブラウザのlocalStorageやWebアプリサーバーに保存することはなく、連絡先情報を第三者のデータブローカーやマーケティング業者に販売、貸与、配布することは決してありません。',
+        storageTitle: '3. ローカルブラウザストレージの開示',
+        storageDescription: 'クラウドログインやユーザーアカウントを要求せずに快適な作業体験を提供するため、Creovlyはお使いの端末の標準的なブラウザlocalStorageを利用しています。使用しているすべてのキーは以下の通りです:',
+        storageKeys: {
+          studioDraftKey: 'creovly-studio-draft-v1',
+          studioDraftDesc: 'Publish Studioで使用。お客様が明示的に「下書きを保存」（またはCtrl+S / ⌘S）を選択した場合にのみ、プロジェクトのメタデータ（タイトル、説明文、目標値、パッケージ設定）をお使いの端末ローカルに保存します。入力中に自動保存されることはなく、保存は意図的な操作でのみ行われます。バイナリ画像ファイルがlocalStorageに保存されることはありません。「保存した下書きを読み込む」で復元でき、「保存した下書きを削除」で完全に消去できます。',
+          checklistKey: 'creovly-checklist',
+          checklistDesc: '公開前チェックリストで使用。再訪問時にも状態が保持されるよう、チェック済みの項目を保存します。「チェックリストをリセット」ボタンでいつでも初期化できます。',
+          themeKey: 'creovly-theme',
+          themeDesc: 'ページ遷移時の画面のちらつきを防ぐため、ライトまたはダークの表示設定（lightまたはdark）を保存します。',
+          analyticsConsentKey: 'creovly-analytics-consent',
+          analyticsConsentDesc: '同意バナーに対するアナリティクスクッキーの明示的な選択（grantedまたはdenied）を保存します。',
+        },
+        analyticsTitle: '4. アナリティクス、クッキーおよび同意管理',
+        analyticsBody: 'Creovlyは全体のトラフィック傾向（日間アクティブユーザー数、人気ツール、端末画面サイズなど）を測定する目的でのみ、IP匿名化を有効にしたGoogle Analytics 4（GA4）を使用しています。',
+        platformTitle: '5. 独立したプラットフォームとしての地位および公正利用',
+        platformBody: 'Creovlyは独立したソフトウェアツールであり、YouTube、Google LLC、Alphabet Inc.またはその子会社との提携、承認、後援、パートナーシップ関係はありません。YouTube™およびYouTubeロゴはGoogle LLCの登録商標です。',
+        contactTitle: '6. データ保護に関するお問い合わせ',
+        contactBodyPrefix: '本プライバシーポリシーまたはお客様のデータ権利に関してご質問がある場合は、',
+        contactBodyMid: ' までメールでお問い合わせいただくか、',
+        contactFormLink: 'お問い合わせフォーム',
+      },
     },
     terms: {
       heroBadge: '法的告知',
@@ -1033,9 +1213,30 @@ export const messagesJa: Messages = {
       heading: '利用規約',
       subheading: 'Creovlyが提供するブラウザ内ツールキットの利用に関する透明なガイドライン。',
       lastUpdated: '最終更新日: 2026年10月31日',
+      sections: {
+        purposeTitle: '1. 本サービスの目的および性質',
+        purposeBody: 'Creovlyは、デジタル動画クリエイターが公開用素材（サムネイル、タイトル、Shorts構図ガイド、収益モデルなど）を準備できるよう設計された、ブラウザベースのユーティリティおよび公開前ワークスペースを提供します。すべてのツールはサーバーを介さず、ユーザーのWebブラウザ内でローカルに動作します。',
+        ipTitle: '2. クリエイターの権利および知的財産権',
+        ipOwnershipHeading: 'コンテンツの権利は100%お客様に帰属します:',
+        ipOwnershipBody: 'Creovlyは、当ツールを通じて処理されたいかなる画像、ロゴ、タイトル、台本、データに対しても、所有権、著作権、知的財産権を一切主張しません。',
+        ipProcessingBody: 'ファイル処理はお使いの端末上で完結するため、Creovlyがお客様のクリエイティブ素材を外部送信、保存、または再ライセンスすることは一切ありません。エクスポートして外部プラットフォームにアップロードするメディアの所有権および責任は、すべてお客様にあります。',
+        disclaimerTitle: '3. パフォーマンスおよび収益に関する免責事項',
+        disclaimerBody: '収益計算ツール、RPM計算ツール、総再生時間計算ツール、タイトル分析ツールなどは、クリエイターが入力した前提条件に基づく計算シナリオを提供する計画支援ツールです。',
+        disclaimerItem1: '算出された収益、クリック率（CTR）、再生時間マイルストーンは仮定のモデルであり、実際の成果を保証するものではありません。',
+        disclaimerItem2: '実際のクリエイター収益は、プラットフォームのアルゴリズム、視聴者属性、季節性、広告需要、YouTubeパートナープログラムの遵守状況等によって変動します。',
+        disclaimerItem3: 'Creovlyは専門的な財務、会計、法律、投資アドバイスを提供するものではありません。',
+        trademarksTitle: '4. 第三者の商標および独立性に関する通知',
+        trademarksBody1: 'Creovlyは独立したソフトウェアツールキットであり、Google LLCまたはYouTube LLCとの提携、後援、認可、推奨関係にはありません。',
+        trademarksBody2: 'YouTube™およびYouTube Shorts™はGoogle LLCの商標です。プラットフォームの機能、仕様、アップロード制限への言及は、技術的互換性および情報提供を目的としています。',
+        liabilityTitle: '5. 責任の制限',
+        liabilityBody: 'Creovlyは明示または黙示を問わず、いかなる保証もなく「現状有姿（AS IS）」かつ「提供可能な範囲（AS AVAILABLE）」で提供されます。法律が認める最大限の範囲において、Creovlyは本ソフトウェアの使用または使用不能、データの損失、ツールの出力に基づく判断から生じるいかなる直接的、間接的、付随的、結果的損害に対しても責任を負いません。',
+        contactTitle: '6. お問い合わせ窓口',
+        contactBodyPrefix: '本利用規約に関するご質問は、',
+        contactBodyMid: ' までお問い合わせいただくか、',
+        contactFormLink: 'お問い合わせフォーム',
+      },
     },
   },
 };
 
 export default messagesJa;
-

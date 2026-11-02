@@ -82,7 +82,7 @@ export const ChecklistClient: React.FC = () => {
           <div>
             <div className="inline-flex items-center gap-2 mb-2">
               <Badge variant="new">{t.checklist.hero.badge}</Badge>
-              <span className="text-xs font-mono text-[var(--text-muted)]">Pre-Flight Audit</span>
+              <span className="text-xs font-mono text-[var(--text-muted)]">{t.checklist.hero.tag}</span>
             </div>
             <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-[var(--text-ink)]">
               {t.checklist.hero.heading}
@@ -118,7 +118,7 @@ export const ChecklistClient: React.FC = () => {
       <div className="mb-6 p-4 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-2.5 shadow-2xs">
         <div className="flex items-center justify-between text-xs font-mono">
           <span className="text-[var(--text-body)]">
-            Audit Readiness: <strong className="text-[var(--text-ink)]">{t.checklist.status.completed.replace('{count}', String(completedCount)).replace('{total}', String(totalItems))}</strong>
+            {t.checklist.status.auditReadiness} <strong className="text-[var(--text-ink)]">{t.checklist.status.completed.replace('{count}', String(completedCount)).replace('{total}', String(totalItems))}</strong>
           </span>
           <span className={completedCount === totalItems ? 'text-emerald-600 dark:text-emerald-400 font-bold' : 'text-[var(--brand-accent)] font-bold'}>
             {totalItems > 0 ? Math.round((completedCount / totalItems) * 100) : 0}%
@@ -143,7 +143,7 @@ export const ChecklistClient: React.FC = () => {
           </div>
           <LocalizedLink href="/studio">
             <Button variant="primary" size="sm">
-              Package Project in Studio &rarr;
+              {t.checklist.status.packageStudioButton}
             </Button>
           </LocalizedLink>
         </div>
@@ -168,12 +168,14 @@ export const ChecklistClient: React.FC = () => {
                   <span>{section.title}</span>
                   {isGroupAllDone && (
                     <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold">
-                      ✓ Complete
+                      {t.checklist.status.completeLabel}
                     </span>
                   )}
                 </span>
                 <span className="text-xs font-mono text-[var(--text-muted)]">
-                  {groupCompleted} / {section.items.length} items
+                  {t.checklist.status.itemsCount
+                    .replace('{completed}', String(groupCompleted))
+                    .replace('{total}', String(section.items.length))}
                 </span>
               </h2>
               <div className="mt-4 space-y-3">
@@ -215,11 +217,11 @@ export const ChecklistClient: React.FC = () => {
 
       <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-6 border-t border-[var(--border-hairline)]">
         <span className="text-xs text-[var(--text-muted)]">
-          Checklist progress auto-saves to your local browser storage.
+          {t.checklist.status.storageNotice}
         </span>
         <LocalizedLink href="/studio">
           <Button variant="primary" size="md">
-            Open Publish Studio &rarr;
+            {t.checklist.status.openStudioButton}
           </Button>
         </LocalizedLink>
       </div>

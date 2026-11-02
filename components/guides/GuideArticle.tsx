@@ -54,7 +54,7 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
           <span className="text-xs font-mono text-[var(--text-muted)]">{displayReadTime}</span>
           <span className="text-xs font-mono text-[var(--text-muted)]">&middot;</span>
           <span className="text-xs font-mono text-[var(--text-muted)]">
-            By Creovly Editorial Team
+            {t.guides.article.author}
           </span>
           <span className="text-xs font-mono text-[var(--text-muted)]">&middot;</span>
           <span className="text-xs font-mono text-[var(--text-muted)]">
@@ -81,8 +81,7 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
             </span>
           </div>
           <p className="text-xs text-[var(--text-muted)] mb-3">
-            All technical specifications, aspect ratios, and revenue formulas in this guide are
-            verified against official platform documentation:
+            {t.guides.article.sourcesDescription}
           </p>
           <ul className="space-y-2">
             {guide.officialSources.map((source, idx) => (
@@ -122,7 +121,7 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
             </p>
             {section.keyTakeaway && (
               <div className="my-3 p-3.5 rounded-lg border-l-2 border-[var(--brand-accent)] bg-[var(--bg-canvas-subtle)] text-xs sm:text-sm text-[var(--text-ink)]">
-                <strong className="font-semibold text-[var(--text-ink)]">Key Takeaway: </strong>
+                <strong className="font-semibold text-[var(--text-ink)]">{t.guides.article.keyTakeawayPrefix} </strong>
                 {section.keyTakeaway}
               </div>
             )}
@@ -141,13 +140,13 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
         <section className="mt-16 pt-10 border-t border-[var(--border-hairline)]">
           <div className="mb-6">
             <span className="text-xs font-mono uppercase text-[var(--text-muted)]">
-              Applied Utilities
+              {t.guides.article.appliedUtilitiesBadge}
             </span>
             <h2 className="text-xl font-bold tracking-tight text-[var(--text-ink)] mt-1">
               {t.guides.article.relatedToolsHeading}
             </h2>
             <p className="text-xs sm:text-sm text-[var(--text-body)] mt-1">
-              Use these client-side Creovly tools to verify and format your assets before publishing.
+              {t.guides.article.appliedUtilitiesDesc}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

@@ -10,6 +10,7 @@ import { useI18n, LocalizedLink } from '@/lib/i18n';
 export default function AboutContent() {
   const { t } = useI18n();
   const about = t.pages.about;
+  const sections = about.sections;
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
@@ -20,7 +21,7 @@ export default function AboutContent() {
         </LocalizedLink>
         <span aria-hidden="true" className="text-[var(--text-faint)]">/</span>
         <span className="text-[var(--text-ink)] font-semibold" aria-current="page">
-          About
+          {about.breadcrumb || about.heading}
         </span>
       </nav>
 
@@ -52,14 +53,14 @@ export default function AboutContent() {
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
             <span className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)]">
-              {about.sections.missionTitle}
+              {sections.missionTitle}
             </span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[var(--text-ink)]">
-            {about.sections.missionTitle}
+            {sections.missionTitle}
           </h2>
           <p className="text-sm sm:text-base text-[var(--text-body)] leading-relaxed">
-            {about.sections.missionBody}
+            {sections.missionBody}
           </p>
         </section>
 
@@ -68,11 +69,11 @@ export default function AboutContent() {
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
             <span className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)]">
-              Engineering Principles
+              {sections.principlesTag}
             </span>
           </div>
           <h2 className="text-2xl font-bold tracking-tight text-[var(--text-ink)]">
-            What makes Creovly different
+            {sections.differenceTitle}
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -81,10 +82,10 @@ export default function AboutContent() {
                 01
               </div>
               <h3 className="text-base font-semibold text-[var(--text-ink)]">
-                {about.sections.privacyTitle}
+                {sections.privacyTitle}
               </h3>
               <p className="text-xs text-[var(--text-body)] leading-relaxed">
-                {about.sections.privacyBody}
+                {sections.privacyBody}
               </p>
             </SpotlightCard>
 
@@ -93,10 +94,10 @@ export default function AboutContent() {
                 02
               </div>
               <h3 className="text-base font-semibold text-[var(--text-ink)]">
-                {about.sections.scopeTitle}
+                {sections.scopeTitle}
               </h3>
               <p className="text-xs text-[var(--text-body)] leading-relaxed">
-                {about.sections.scopeBody}
+                {sections.scopeBody}
               </p>
             </SpotlightCard>
 
@@ -105,10 +106,10 @@ export default function AboutContent() {
                 03
               </div>
               <h3 className="text-base font-semibold text-[var(--text-ink)]">
-                {about.sections.disclaimerTitle}
+                {sections.disclaimerTitle}
               </h3>
               <p className="text-xs text-[var(--text-body)] leading-relaxed">
-                {about.sections.disclaimerBody}
+                {sections.disclaimerBody}
               </p>
             </SpotlightCard>
           </div>
@@ -119,11 +120,11 @@ export default function AboutContent() {
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-zinc-400" aria-hidden="true" />
             <h2 className="text-base font-semibold text-[var(--text-ink)]">
-              {about.sections.disclaimerTitle}
+              {sections.disclaimerTitle}
             </h2>
           </div>
           <p className="text-xs sm:text-sm text-[var(--text-body)] leading-relaxed">
-            {about.sections.disclaimerBody}
+            {sections.disclaimerBody}
           </p>
         </section>
 
@@ -132,11 +133,11 @@ export default function AboutContent() {
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-500" aria-hidden="true" />
             <h2 className="text-base font-semibold text-[var(--text-ink)]">
-              Get in Touch
+              {sections.supportTitle}
             </h2>
           </div>
           <p className="text-xs sm:text-sm text-[var(--text-body)] leading-relaxed">
-            Have feedback on our tools, noticed an update in YouTube platform specifications, or need technical assistance? Our team is here to help:
+            {sections.supportBody}
           </p>
           <div className="flex flex-wrap items-center gap-4 pt-1">
             <a
@@ -153,7 +154,7 @@ export default function AboutContent() {
               href="/contact"
               className="text-xs font-semibold text-[var(--text-ink)] hover:underline"
             >
-              Contact Form &rarr;
+              {sections.contactFormLink}
             </LocalizedLink>
           </div>
         </section>
@@ -162,15 +163,15 @@ export default function AboutContent() {
         <section className="p-8 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div className="space-y-2">
             <h3 className="text-lg font-bold text-[var(--text-ink)]">
-              Ready to streamline your pre-publish workflow?
+              {sections.ctaHeading}
             </h3>
             <p className="text-xs text-[var(--text-body)] max-w-xl">
-              Open Publish Studio to consolidate your title, thumbnail, and checklist into a complete, upload-ready package.
+              {sections.ctaBody}
             </p>
           </div>
           <LocalizedLink href="/studio">
             <Button variant="primary" size="md">
-              Launch Studio &rarr;
+              {sections.ctaButton}
             </Button>
           </LocalizedLink>
         </section>
@@ -178,4 +179,3 @@ export default function AboutContent() {
     </div>
   );
 }
-

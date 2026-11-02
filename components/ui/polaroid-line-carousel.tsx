@@ -1,11 +1,11 @@
 'use client';
 
-import Link from 'next/link';
 import { useEffect, useRef, useState, type PointerEvent, type KeyboardEvent } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import ToolIllustration from '@/components/tools/ToolIllustration';
 import { clampCard, nearestCard, stringY } from '@/lib/polaroid-navigation';
 import type { ToolDefinition } from '@/types';
+import { useI18n, LocalizedLink } from '@/lib/i18n';
 import styles from './polaroid-line-carousel.module.css';
 
 const nameOf = (tool: ToolDefinition) => tool.title.replace(/^YouTube /, '');
@@ -87,17 +87,19 @@ export default function PolaroidLineCarousel({ tools }: { tools: ToolDefinition[
       goTo(nearestCard(event.currentTarget.scrollLeft, offsets()));
     }
   };
+  const { t } = useI18n();
+  const carousel = t.home.carousel;
   const current = tools[active];
   if (!current) return null;
 
   return <section className={styles.gallery} aria-labelledby="discover-heading" aria-roledescription="carousel">
     <div className={styles.heading}>
-      <div><h2 id="discover-heading">Find your next creator tool.</h2><p>Small tasks. A better publish day. Pick a tool and make it yours.</p></div>
-      <Link href="/tools" className="focus-ring">View tool directory <span aria-hidden="true">↗</span></Link>
+      <div><h2 id="discover-heading">{carousel.heading}</h2><p>{carousel.subheading}</p></div>
+      <LocalizedLink href="/tools" className="focus-ring">{carousel.viewDirectory} <span aria-hidden="true">↗</span></LocalizedLink>
     </div>
     <div className={styles.stage}>
       <svg className={styles.string} viewBox="0 0 1200 48" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 Q600 48 1200 0" fill="none" stroke="currentColor" strokeWidth="1.5" vectorEffect="non-scaling-stroke" /></svg>
-      <ul ref={rail} className={`${styles.rail} focus-ring`} tabIndex={0} aria-label="Creator tool cards. Use left and right arrows to browse."
+      <ul ref={rail} className={`${styles.rail} focus-ring`} tabIndex={0} aria-label={carousel.ariaLabel}
         onScroll={onScroll} onKeyDown={onKey} onPointerDown={onDown} onPointerMove={onMove} onPointerUp={endDrag} onPointerCancel={endDrag}
         onPointerLeave={() => { if (!drag.current?.moved) drag.current = undefined; }}
         onLostPointerCapture={() => { drag.current = undefined; if (rail.current) rail.current.dataset.dragging = 'false'; }}
@@ -109,7 +111,7 @@ export default function PolaroidLineCarousel({ tools }: { tools: ToolDefinition[
         }}
       >
         {tools.map((tool, index) => <li key={tool.id} data-card={index} className={styles.card} data-selected={active === index}>
-          <Link href={tool.href} className={`${styles.print} focus-ring`} draggable={false}>
+          <LocalizedLink href={tool.href} className={`${styles.print} focus-ring`} draggable={false}>
             <div className={styles.picture} data-category={tool.category}>
               <ToolIllustration toolId={tool.id} />
               <span className={styles.category}>{tool.category}</span>
@@ -122,27 +124,27 @@ export default function PolaroidLineCarousel({ tools }: { tools: ToolDefinition[
               <div className={styles.actionRow}>
                 <span className={styles.badge}>
                   <span className={styles.badgeDot} aria-hidden="true" />
-                  100% Local
+                  {carousel.localBadge}
                 </span>
                 <span className={styles.actionBtn} aria-hidden="true">
                   <ArrowUpRight className={styles.actionIcon} />
                 </span>
               </div>
             </div>
-          </Link>
+          </LocalizedLink>
         </li>)}
       </ul>
     </div>
     <div className={styles.controls}>
       <p role="status" aria-live="polite" aria-atomic="true"><span className={styles.count}>{active + 1} / {tools.length}</span> {nameOf(current)}</p>
       <div className={styles.arrows}>
-        <button type="button" onClick={() => goTo(active - 1)} disabled={active === 0} aria-label="Previous tool" className="focus-ring"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m12 5-5 5 5 5" stroke="currentColor" strokeWidth="1.7" /></svg></button>
-        <button type="button" onClick={() => goTo(active + 1)} disabled={active === tools.length - 1} aria-label="Next tool" className="focus-ring"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m8 5 5 5-5 5" stroke="currentColor" strokeWidth="1.7" /></svg></button>
+        <button type="button" onClick={() => goTo(active - 1)} disabled={active === 0} aria-label={carousel.prevAria} className="focus-ring"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m12 5-5 5 5 5" stroke="currentColor" strokeWidth="1.7" /></svg></button>
+        <button type="button" onClick={() => goTo(active + 1)} disabled={active === tools.length - 1} aria-label={carousel.nextAria} className="focus-ring"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m8 5 5 5-5 5" stroke="currentColor" strokeWidth="1.7" /></svg></button>
       </div>
     </div>
-    <div className={styles.index} role="group" aria-label="Jump to any creator tool">
+    <div className={styles.index} role="group" aria-label={carousel.jumpAria}>
       {tools.map((tool, index) => <button key={tool.id} type="button" aria-pressed={active === index} onClick={() => goTo(index)} className="focus-ring">{nameOf(tool)}</button>)}
     </div>
-    <p className={styles.hint}>Swipe, drag or use the arrows to explore. Every card opens a working tool.</p>
+    <p className={styles.hint}>{carousel.hint}</p>
   </section>;
 }

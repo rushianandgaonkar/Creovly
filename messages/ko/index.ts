@@ -67,6 +67,7 @@ export const messagesKo: Messages = {
       maxSize: '최대 파일 크기:',
       localPrivacyNote: '파일이 기기 외부로 전송되지 않습니다',
       sampleButtonPrefix: '샘플로 테스트:',
+      oneClickTest: '1클릭 테스트',
     },
     buttons: {
       clear: '지우기',
@@ -142,6 +143,17 @@ export const messagesKo: Messages = {
         buttonText: 'Publish Studio 열기',
       },
     },
+    carousel: {
+      heading: '필요한 크리에이터 도구를 찾아보세요.',
+      subheading: '작은 준비가 완벽한 발행을 만듭니다. 원하는 도구를 선택해 바로 시작하세요.',
+      viewDirectory: '도구 디렉터리 보기',
+      localBadge: '100% 로컬',
+      hint: '스와이프, 드래그 또는 방향키로 둘러보세요. 모든 카드는 즉시 실행 가능한 도구로 연결됩니다.',
+      ariaLabel: '크리에이터 도구 카드. 좌우 방향키로 탐색하세요.',
+      prevAria: '이전 도구',
+      nextAria: '다음 도구',
+      jumpAria: '원하는 크리에이터 도구로 이동',
+    },
   },
   tools: {
     shell: {
@@ -170,6 +182,12 @@ export const messagesKo: Messages = {
       relatedHeading: '추천 크리에이터 도구',
       relatedSubheading: '발행 준비를 더욱 완벽하게 만들어 주는 보완 도구들',
       relatedViewAll: '모든 도구 보기',
+      workbenchControls: '작업대 제어판',
+      inputLocal: '입력 // 로컬',
+      outputInspection: '출력 및 검수',
+      sampleResults: '샘플 결과',
+      previewMode: '미리보기 모드',
+      liveSpec: '실시간 사양',
     },
     directory: {
       heading: '영상 발행 전 필수 유틸리티',
@@ -184,6 +202,7 @@ export const messagesKo: Messages = {
       emptyTitle: '검색 결과가 없습니다',
       emptyText: '"{query}"와 일치하는 도구가 없습니다. "압축", "제목" 등의 검색어를 입력하거나 필터를 초기화해 보세요.',
       clearFilters: '필터 초기화',
+      completeCatalog: '전체 도구 카탈로그',
     },
     categories: {
       thumbnail: {
@@ -402,6 +421,35 @@ export const messagesKo: Messages = {
         },
       ],
     },
+    guidance: {
+      compressor: {
+        p1: '모든 이미지에 동일한 목표 용량, 파일 포맷, 최대 품질 설정이 적용됩니다. 설정을 변경하거나 새 배치를 선택하면 이전 결과가 초기화되어 이전 설정의 결과물이 혼동되어 다운로드되는 것을 방지합니다. 특정 이미지를 제거해도 완료된 다른 결과는 유지됩니다.',
+        p2: '원본 해상도는 보존됩니다. 재인코딩 시 색감이 미세하게 달라지거나 내장 메타데이터가 제거될 수 있습니다. 원본 파일이 유지되는 경우 메타데이터도 함께 보존됩니다. 샘플 버튼은 단일 이미지를 로드하며, 일괄 처리를 테스트하려면 여러 파일을 직접 업로드하세요.',
+        linkText: '유튜브의 최신 공식 썸네일 가이드라인을 확인',
+        linkSuffix: '한 후 업로드하세요.',
+      },
+      resizer: {
+        p1: '정지 이미지(JPEG, PNG, WebP)로 썸네일, 채널 배너, 프로필 사진 또는 워터마크 에셋을 준비하세요. 채우기 크롭은 가장자리를 잘라내고, 전체 맞춤은 여백을 추가합니다. 모든 내보내기는 직사각형 규격을 유지합니다.',
+        p2: '배너 프리셋은 2560 × 1440 규격을 사용합니다. 미리보기 가이드는 2048 × 1152 배너에 맞춰 중앙의 1235 × 338 텍스트/로고 안전 영역을 축소/확대해 보여줍니다. 800 × 800 프로필 캔버스는 원형 가이드가 포함된 Creovly 전용 프리셋입니다. 워터마크 캔버스는 150 × 150 규격으로, 배경 제거나 영상 합성 없이 사전 에셋을 준비합니다.',
+        p3: '가이드라인은 다운로드된 파일에 절대 포함되지 않습니다. 유튜브 업로드 미리보기에서 디자인을 검토하세요. 유튜브 규격상 배너는 6MB 이하, 워터마크는 1MB 이하로 제한됩니다. 최신 기준은 유튜브 채널 브랜딩 가이드라인을 참조하세요.',
+        p4: '입력 파일은 20MB, 2400만 화소, 단변/장변 8,192픽셀로 제한됩니다. 출력 캔버스도 동일한 제한을 따릅니다. 리사이즈는 해상도 치수를 변경하는 작업이며 특정 파일 용량을 맞추는 작업이 아닙니다. 확대 시 손실된 디테일이 복원되지 않으며 메타데이터 제거 및 색감 변동이 있을 수 있습니다.',
+      },
+      logoRemover: {
+        p1: '단색 배경의 기존 로고를 선택하고 배경색을 확인한 뒤 허용 오차를 조절하세요. 배경 제거를 누르고 실제 전후 이미지를 검수한 후 투명 PNG를 다운로드합니다.',
+        p2: '이 도구는 이미지 외곽 테두리와 연결된 일치 색상을 감지해 제거합니다. 글자 내부 공간처럼 둘러싸인 영역은 보존됩니다. 배경에 닿아 있는 유사한 전경 색상도 함께 지워질 수 있습니다. 복잡한 사진, 그라데이션, 그림자, 안티에일리어싱 처리된 경계면은 전용 그래픽 소프트웨어가 필요할 수 있습니다.',
+        p3: '모든 연산은 브라우저 내부에서만 수행됩니다. 이미지는 세션 종료 후 저장되지 않습니다. 원본 해상도는 유지되며 무손실 PNG 특성상 원본 파일보다 용량이 커질 수 있습니다.',
+      },
+      shorts: {
+        p1: '영상에서 캡처한 정지 프레임을 선택하세요. 도구가 9:16 비율에 맞추고 필요한 경우 검은색 레터박스를 추가합니다. 계획하려는 플레이어 인터페이스에 맞춰 예약 여백을 조절하세요. 기본 여백은 참고용 추정치이며 유튜브 공식 고정 수치가 아닙니다.',
+        p2: '콘텐츠 박스를 활성화하고 중요한 자막이나 인물 피사체 위에 배치하세요. 지정한 여백과 겹치는지 여부를 즉시 보고합니다. 자동 영상 분석이나 객체 인식을 수행하지는 않습니다.',
+        p3: '1080 × 1920 해상도의 주석이 포함된 기획 참조용 PNG 가이드를 생성해 다운로드하세요. 화면의 오버레이를 숨긴 상태에서도 다운로드 파일에는 가이드가 포함됩니다. 실제 발행에는 원본 클린 파일을 사용하고 공식 쇼츠 플레이어에서 최종 확인하세요.',
+      },
+      titleChecker: {
+        p1: '제목 초안과 검사할 정확한 키워드 문구를 입력하세요. 글자 수, 공백, 반복 문장부호, 대문자 강조 등을 확인합니다. 문구 검사는 대소문자를 구분하지 않으나 유의어 검색이나 검색량 측정은 지원하지 않습니다.',
+        p2: '유튜브의 제목 글자 수 한도는 100자입니다. 본 도구는 공백을 포함해 보수적인 UTF-16 코드 단위를 기준으로 계산하며, 일부 이모지는 2단위 이상을 차지합니다. 유튜브 스튜디오에서 최종 등록 여부를 확인하세요. 단어 수 계산은 띄어쓰기를 기준으로 하므로 공백을 쓰지 않는 언어에서는 참고용으로 활용하세요.',
+        p3: '설정한 화면 너비에 맞춰 2줄로 줄바꿈되어 표시됩니다. 이는 가독성 예시이며 모든 유튜브 기기 화면을 완벽히 복제한 것은 아닙니다. 진단 피드백은 CTR, 순위 상승, 알고리즘 성과를 보장하지 않습니다.',
+      },
+    },
   },
   compressor: {
     title: 'YouTube 썸네일 압축기',
@@ -501,10 +549,22 @@ export const messagesKo: Messages = {
     resultsPrompt: '프리셋을 선택하거나 수치를 입력한 후 [이미지 크기 조정]을 클릭하여 확인하고 다운로드하세요.',
     guideOverlayToggle: '미리보기에 구도 격자선 표시',
     presets: {
-      thumbnail: { label: '영상 썸네일', desc: '1280 × 720 (16:9 HD)' },
-      banner: { label: '채널 배너', desc: '2560 × 1440 (채널 아트)' },
-      profile: { label: '프로필 사진', desc: '800 × 800 (정사각형 1:1)' },
-      watermark: { label: '영상 워터마크', desc: '150 × 150 (우측 하단 아이콘)' },
+      thumbnail: {
+        label: '영상 썸네일',
+        desc: '1280 × 720 (16:9 HD)',
+      },
+      banner: {
+        label: '채널 배너',
+        desc: '2560 × 1440 (채널 아트)',
+      },
+      profile: {
+        label: '프로필 사진',
+        desc: '800 × 800 (정사각형 1:1)',
+      },
+      watermark: {
+        label: '영상 워터마크',
+        desc: '150 × 150 (우측 하단 아이콘)',
+      },
     },
     warnings: {
       bannerSafeZone: '스마트폰과 태블릿에서는 중앙의 1235 × 338 픽셀 영역만 잘림 없이 안전하게 표시됩니다.',
@@ -611,9 +671,18 @@ export const messagesKo: Messages = {
     revenue: {
       title: '월간 예상 수익 시뮬레이션',
       fields: {
-        views: { label: '월간 예상 조회수', suffix: '회' },
-        low: { label: '예상 최소 RPM (USD)', suffix: 'USD' },
-        high: { label: '예상 최대 RPM (USD)', suffix: 'USD' },
+        views: {
+          label: '월간 예상 조회수',
+          suffix: '회',
+        },
+        low: {
+          label: '예상 최소 RPM (USD)',
+          suffix: 'USD',
+        },
+        high: {
+          label: '예상 최대 RPM (USD)',
+          suffix: 'USD',
+        },
       },
       note: 'YouTube 수수료 공제 후 크리에이터가 실제 정산받는 RPM 범위를 입력하세요. 근거 없는 임의 평균치는 쓰이지 않습니다. 쇼츠는 유효 조회수와 쇼츠 RPM을 넣으세요. 연간 수치는 동일한 월이 12번 지속된다고 가정한 시나리오입니다.',
       metrics: {
@@ -628,8 +697,14 @@ export const messagesKo: Messages = {
     rpm: {
       title: '실효 RPM 계산기',
       fields: {
-        revenue: { label: '해당 기간 크리에이터 정산 수익 (USD)', suffix: 'USD' },
-        views: { label: '동일 기간 총 조회수', suffix: '회' },
+        revenue: {
+          label: '해당 기간 크리에이터 정산 수익 (USD)',
+          suffix: 'USD',
+        },
+        views: {
+          label: '동일 기간 총 조회수',
+          suffix: '회',
+        },
       },
       note: 'YouTube 측 수수료를 제외한 실제 정산 수익과 동일 기간의 조회수를 입력하세요. 쇼츠의 경우 유효 조회수를 입력합니다. RPM 수치로 광고주가 지불한 CPM을 유추할 수는 없습니다.',
       metrics: {
@@ -644,10 +719,22 @@ export const messagesKo: Messages = {
     watchHours: {
       title: '시청 시간(4,000시간) 달성 시나리오',
       fields: {
-        current: { label: '현재 누적된 유효 시청 시간', suffix: '시간' },
-        goal: { label: '목표 시청 시간', suffix: '시간' },
-        monthly: { label: '월간 추가 유입 시청 시간', suffix: '시간' },
-        duration: { label: '영상의 평균 시청 지속 시간', suffix: '분' },
+        current: {
+          label: '현재 누적된 유효 시청 시간',
+          suffix: '시간',
+        },
+        goal: {
+          label: '목표 시청 시간',
+          suffix: '시간',
+        },
+        monthly: {
+          label: '월간 추가 유입 시청 시간',
+          suffix: '시간',
+        },
+        duration: {
+          label: '영상의 평균 시청 지속 시간',
+          suffix: '분',
+        },
       },
       note: '과거 시청 시간이 만료되지 않고 꾸준히 누적된다는 전제의 선형 시뮬레이션입니다. YouTube의 최근 365일 롤링 기간 감축은 반영하지 않습니다. 쇼츠 시청 시간은 제외하고 입력하세요.',
       metrics: {
@@ -666,13 +753,33 @@ export const messagesKo: Messages = {
     monetization: {
       title: '월간 종합 수익 및 순이익 플래너',
       fields: {
-        views: { label: '월간 총 조회수', suffix: '회' },
-        rpm: { label: '플랫폼 광고 RPM 가정 (USD)', suffix: 'USD' },
-        deals: { label: '월간 기업 스폰서십/협찬 건수' },
-        fee: { label: '건당 협찬 단가 (USD)', suffix: 'USD' },
-        affiliate: { label: '월간 제휴 마케팅 수익 (USD)', suffix: 'USD' },
-        other: { label: '기타 월간 수익 (멤버십 등) (USD)', suffix: 'USD' },
-        costs: { label: '월간 운영 및 제작 경비 (USD)', suffix: 'USD' },
+        views: {
+          label: '월간 총 조회수',
+          suffix: '회',
+        },
+        rpm: {
+          label: '플랫폼 광고 RPM 가정 (USD)',
+          suffix: 'USD',
+        },
+        deals: {
+          label: '월간 기업 스폰서십/협찬 건수',
+        },
+        fee: {
+          label: '건당 협찬 단가 (USD)',
+          suffix: 'USD',
+        },
+        affiliate: {
+          label: '월간 제휴 마케팅 수익 (USD)',
+          suffix: 'USD',
+        },
+        other: {
+          label: '기타 월간 수익 (멤버십 등) (USD)',
+          suffix: 'USD',
+        },
+        costs: {
+          label: '월간 운영 및 제작 경비 (USD)',
+          suffix: 'USD',
+        },
       },
       note: '모든 금액은 USD 기준입니다. 플랫폼 수익은 순수 RPM으로 계산됩니다. 제작 경비는 합산 총액에서 1회 차감되며 세금 연산은 포함되지 않습니다.',
       metrics: {
@@ -834,6 +941,7 @@ export const messagesKo: Messages = {
       badge: '인터랙티브 사전 발행 점검',
       heading: 'YouTube 크리에이터 사전 발행 체크리스트',
       subheading: '썸네일, 제목, 제휴 링크 고지, 음원 저작권, 플랫폼 정책 준수 여부를 빠짐없이 확인하는 종합 체크리스트.',
+      tag: '발행 전 사전 점검',
     },
     status: {
       completed: '{total}개 항목 중 {count}개 확인 완료',
@@ -842,6 +950,12 @@ export const messagesKo: Messages = {
       resetButton: '체크리스트 초기화',
       exportButton: '체크리스트 내보내기 (.txt)',
       resetAria: '체크리스트 모든 항목 선택 해제',
+      auditReadiness: '감사 준비 완료도:',
+      packageStudioButton: '스튜디오에서 프로젝트 패키징 →',
+      completeLabel: '✓ 완료됨',
+      itemsCount: '{total}개 중 {completed}개 검증 완료',
+      storageNotice: '체크리스트 진행 상황은 브라우저 로컬 저장소에 자동 보관됩니다.',
+      openStudioButton: 'Publish Studio 열기 →',
     },
     sections: [
       {
@@ -932,6 +1046,7 @@ export const messagesKo: Messages = {
       heroVerified: '플랫폼 공식 규격 준수',
       heading: '크리에이터를 위한 기술 가이드 및 참고 자료',
       subheading: '공식 기술 문서를 기반으로 한 이미지 규격, 수익화 수학적 로직, 업로드 전 필수 점검 사항에 대한 심층 해설.',
+      readGuide: '가이드 읽기 →',
     },
     article: {
       verifiedLabel: '공식 규격 검증 완료',
@@ -941,6 +1056,20 @@ export const messagesKo: Messages = {
       checklistHeading: '바로 적용하는 체크리스트',
       relatedToolsHeading: '관련 Creovly 도구',
       breadcrumbGuides: '크리에이터 가이드',
+      author: 'Creovly 에디토리얼 팀',
+      sourcesDescription: '본 가이드의 모든 기술 규격, 화면비, 수익 산출 공식은 공식 플랫폼 문서를 바탕으로 철저히 검증되었습니다:',
+      keyTakeawayPrefix: '핵심 요약:',
+      appliedUtilitiesBadge: '적용 유틸리티',
+      appliedUtilitiesDesc: '발행 전 Creovly의 로컬 브라우저 도구를 활용해 규격을 점검하고 최적화하세요.',
+      checklistBadge: '실행 체크리스트',
+      checklistTitle: '발행 전 최종 확인',
+      checklistCompleted: '완료: {total}개 중 {completed}개',
+      checklistNote: '유튜브 업로드를 준비하면서 각 항목을 차례대로 점검하세요.',
+      workedScenarioBadge: '실전 시나리오',
+      workedScenarioTag: '단계별 상세 분석',
+      scenarioLabel: '상황 설정:',
+      executionStepsLabel: '실행 절차',
+      takeawayLabel: '시사점:',
     },
     items: {
       'youtube-thumbnail-blueprint': {
@@ -980,7 +1109,16 @@ export const messagesKo: Messages = {
         scopeBody: '우리는 크리에이터 소프트웨어가 지키지 못할 약속을 해서는 안 된다고 믿습니다. Creovly는 "알고리즘의 비밀"이나 "마법 같은 조회수 폭발"을 장담하지 않습니다. 모든 계산기와 검사 도구는 플랫폼의 공개된 공식 기준과 사용자가 직접 입력한 객관적인 수치에 근거합니다.',
         disclaimerTitle: '독립 서드파티 소프트웨어 안내',
         disclaimerBody: 'Creovly는 크리에이터를 위해 독립적으로 개발된 소프트웨어입니다. YouTube™는 Google LLC의 등록 상표입니다. Creovly는 YouTube 또는 Google LLC와 제휴, 보증, 후원 관계가 없습니다.',
+        principlesTag: '엔지니어링 원칙',
+        differenceTitle: 'Creovly만의 차별점',
+        supportTitle: '문의 및 지원',
+        supportBody: '도구에 대한 의견이 있으시거나 유튜브 규격 변동 사항을 발견하셨나요? 언제든 개발팀에 알려주세요:',
+        contactFormLink: '문의 양식 작성하기 →',
+        ctaHeading: '발행 전 작업 흐름을 간소화할 준비가 되셨나요?',
+        ctaBody: 'Publish Studio를 열어 제목, 썸네일, 체크리스트를 업로드 준비가 완료된 하나의 패키지로 통합하세요.',
+        ctaButton: '스튜디오 시작하기 →',
       },
+      breadcrumb: '소개',
     },
     contact: {
       heroBadge: '크리에이터 지원',
@@ -1008,11 +1146,21 @@ export const messagesKo: Messages = {
         privacyNote: '서버 저장 제로: 전송 버튼을 누르면 작성된 내용이 담긴 기본 이메일 프로그램이 열립니다. 데이터베이스에 문의 내역이 저장되지 않습니다.',
         submittedHeading: '메일 작성창이 준비되었습니다',
         submittedBody: '이메일 소프트웨어가 실행되었습니다. 메일 앱이 열리지 않았다면 내용을 복사하여 다음 주소로 직접 보내주세요:',
+        launchEmailApp: '메일 앱 실행하기 →',
+        copiedNotification: '✓ 복사되었습니다!',
       },
       errors: {
         nameRequired: '성함을 입력해 주세요.',
         emailValid: '답변을 받으실 수 있는 올바른 이메일 주소를 입력해 주세요.',
         messageMin: '문의 내용은 10자 이상으로 작성해 주세요.',
+      },
+      sidebar: {
+        directTitle: '직접 문의',
+        directBody: '사용 중인 메일 프로그램에서 바로 작성하시겠습니까? 언제든 크리에이터 전용 메일로 보내주세요:',
+        responseTitle: '응답 안내 시간',
+        responseBody: '크리에이터 피드백과 문의 사항은 영업일 기준 24~48시간 이내에 검토 후 답변드립니다.',
+        featuresTitle: '기능 제안',
+        featuresBody: 'Creovly의 대부분의 도구는 크리에이터의 아이디어에서 시작되었습니다. 워크플로 중 불편한 단계가 있다면 알려주세요!',
       },
     },
     privacy: {
@@ -1026,6 +1174,38 @@ export const messagesKo: Messages = {
       consentDeniedText: '통계 분석 쿠키가 현재 [거부] 상태입니다. 어떠한 추적 쿠키도 저장되지 않습니다.',
       buttonRevoke: '분석 쿠키 비활성화',
       buttonGrant: '분석 쿠키 활성화',
+      sections: {
+        clientSideTitle: '1. 100% 클라이언트 브라우저 처리 아키텍처',
+        clientSideBody: '기존의 크리에이터 SaaS 플랫폼과 달리, Creovly의 모든 파일 처리 도구(썸네일 압축기, 리사이저, 로고 배경 제거기, 쇼츠 세이프존 확인기, 제목 진단기)는 최신 웹 API(HTML5 Canvas, File API, Web Workers, 로컬 JavaScript 스레드)를 활용하여 사용자의 로컬 브라우저 세션 내부에서만 실행됩니다.',
+        clientSideItem1: '업로드된 이미지, 그래픽, 썸네일 아트워크는 순수 메모리 상에서만 처리되며 Creovly의 서버, 클라우드 스토리지, 외부 데이터베이스로 전송되지 않습니다.',
+        clientSideItem2: '계산된 수익 모델, 추정 RPM, 시나리오 수치는 오직 브라우저 임시 메모리에만 유지됩니다.',
+        clientSideItem3: '어떠한 미디어 파일, 원본 비디오 에셋, 사진 데이터도 서버에 기록, 캐싱 또는 보관되지 않습니다.',
+        dataCollectTitle: '2. 수집하는 정보와 수집하지 않는 정보',
+        noAccountHeading: '회원가입 및 계정 불필요:',
+        noAccountBody: 'Creovly 도구를 이용하기 위해 회원가입을 하거나, Google/YouTube OAuth 권한을 연동하거나, 결제 카드 정보를 입력할 필요가 없습니다.',
+        contactCommsHeading: '자발적 문의 접수 및 이메일 처리 절차:',
+        contactCommsBody: '문의하기 페이지를 이용하실 때 입력 양식은 웹사이트 데이터베이스에 저장되지 않고, 사용자의 로컬 이메일 프로그램에서 support@creovly.com 수신인으로 사전 작성된 임시 메일을 열어줍니다. 메일 프로그램에서 직접 "보내기"를 누르기 전까지는 전송이 이뤄지지 않습니다. 이메일을 전송할 경우, 문의 내용과 발신자 주소 및 입력된 채널명 등은 고객 응대를 목적으로 통상적인 이메일 인프라(발신사 및 Creovly 수신 메일 서버)를 통해서만 라우팅 및 보관됩니다. Creovly는 문의 내용을 브라우저 localStorage나 웹 서버 DB에 저장하지 않으며, 연락처 정보를 데이터 중개업체나 마케팅 대행사에 판매, 대여, 제공하지 않습니다.',
+        storageTitle: '3. 로컬 브라우저 저장소(localStorage) 사용 내역',
+        storageDescription: '클라우드 로그인이나 계정 생성 없이도 쾌적한 작업 환경을 제공하기 위해, Creovly는 사용자의 물리적 기기에 탑재된 표준 브라우저 localStorage를 활용합니다. 저장되는 키의 목록과 용도는 다음과 같습니다:',
+        storageKeys: {
+          studioDraftKey: 'creovly-studio-draft-v1',
+          studioDraftDesc: 'Publish Studio에서 사용됩니다. 사용자가 명시적으로 "임시저장"(또는 Ctrl+S / ⌘S)을 선택했을 때만 프로젝트 메타데이터(제목, 설명문, 목표값, 패키지 설정)를 로컬 기기에 보관합니다. 입력 중 자동 저장되지 않으며 사용자의 능동적 조작으로만 저장됩니다. 바이너리 이미지 파일은 localStorage에 절대 저장되지 않습니다. "저장된 초안 불러오기"로 복원하거나 "저장된 초안 삭제"로 영구 제거할 수 있습니다.',
+          checklistKey: 'creovly-checklist',
+          checklistDesc: '사전 점검 체크리스트에서 사용됩니다. 다음 방문 시에도 점검 내역이 이어지도록 체크된 항목을 기록합니다. "체크리스트 초기화" 버튼으로 언제든 비울 수 있습니다.',
+          themeKey: 'creovly-theme',
+          themeDesc: '화면 깜빡임을 방지하기 위해 라이트 또는 다크 모드 표시 환경설정(light 또는 dark)을 저장합니다.',
+          analyticsConsentKey: 'creovly-analytics-consent',
+          analyticsConsentDesc: '쿠키 동의 배너에 대한 사용자의 명시적인 분석 쿠키 허용 여부(granted 또는 denied)를 저장합니다.',
+        },
+        analyticsTitle: '4. 분석 도구, 쿠키 및 동의 관리',
+        analyticsBody: 'Creovly는 IP 익명화가 적용된 Google Analytics 4(GA4)를 사용하여 일일 활성 사용자 수, 주요 사용 도구, 기기 해상도 분류 등 통계적 트래픽 지표만을 집계 측정합니다.',
+        platformTitle: '5. 독립적 플랫폼 지위 및 공정 이용 안내',
+        platformBody: 'Creovly는 독립적인 소프트웨어 제품이며 YouTube, Google LLC, Alphabet Inc. 또는 그 계열사와 제휴, 후원, 보증 또는 파트너십 관계가 없습니다. YouTube™ 및 YouTube 로고는 Google LLC의 등록 상표입니다.',
+        contactTitle: '6. 개인정보 보호 담당자 문의',
+        contactBodyPrefix: '본 개인정보 처리방침 또는 권리 행사에 대해 궁금한 점이 있으시면 ',
+        contactBodyMid: ' 으로 문의하시거나 ',
+        contactFormLink: '문의 양식',
+      },
     },
     terms: {
       heroBadge: '법적 고지',
@@ -1033,9 +1213,30 @@ export const messagesKo: Messages = {
       heading: '이용약관',
       subheading: 'Creovly 브라우저 기반 도구 모음의 이용에 관한 명확하고 투명한 지침.',
       lastUpdated: '최종 개정일: 2026년 10월 31일',
+      sections: {
+        purposeTitle: '1. 서비스의 목적 및 성격',
+        purposeBody: 'Creovly는 디지털 영상 크리에이터가 업로드 에셋(썸네일, 제목, 쇼츠 화면 구도 가이드, 수익 모델 등)을 준비할 수 있도록 돕는 브라우저 기반 유틸리티 및 발행 전 워크스페이스를 제공합니다. 모든 도구는 서버 측 미디어 연산 없이 사용자의 웹 브라우저 내에서 로컬로 작동합니다.',
+        ipTitle: '2. 크리에이터 소유권 및 지식재산권',
+        ipOwnershipHeading: '콘텐츠에 대한 권리는 100% 크리에이터에게 있습니다:',
+        ipOwnershipBody: 'Creovly는 본 도구를 통해 가공된 이미지, 로고, 제목, 대본 또는 데이터에 대해 어떠한 소유권, 저작권, 지식재산권도 주장하지 않습니다.',
+        ipProcessingBody: '파일 처리가 전적으로 사용자의 기기에서 실행되므로 Creovly는 귀하의 창작 자산을 외부로 전송하거나 저장, 재라이선스하지 않습니다. 다운로드하여 외부 플랫폼에 게시하는 모든 미디어에 대한 권리와 책임은 전적으로 사용자 본인에게 있습니다.',
+        disclaimerTitle: '3. 성과 및 수익 예측에 관한 면책 공지',
+        disclaimerBody: '수익 계산기, RPM 계산기, 시청 시간 계산기, 제목 분석기 등의 도구는 크리에이터가 입력한 가정을 바탕으로 수학적 시뮬레이션을 제공하는 기획 보조 수단입니다.',
+        disclaimerItem1: '계산된 수익, 클릭률(CTR), 시청 시간 목표는 가상의 수치 모델이며 실제 성과를 보장하지 않습니다.',
+        disclaimerItem2: '실제 크리에이터 수익은 플랫폼 알고리즘, 시청자 인구통계, 시즌성, 광고주 입찰 경쟁 및 유튜브 파트너 프로그램 준수 여부에 따라 달라집니다.',
+        disclaimerItem3: 'Creovly는 전문적인 금융, 세무, 법률 또는 투자 자문을 제공하지 않습니다.',
+        trademarksTitle: '4. 타사 상표권 및 독립성 고지',
+        trademarksBody1: 'Creovly는 독립적인 소프트웨어 툴킷이며 Google LLC 또는 YouTube LLC와 공식적인 제휴, 후원, 인가 관계가 없습니다.',
+        trademarksBody2: 'YouTube™ 및 YouTube Shorts™는 Google LLC의 상표입니다. 플랫폼 기능, 업로드 규격 및 한도에 대한 언급은 기술적 호환성과 정보 제공 목적으로만 인용됩니다.',
+        liabilityTitle: '5. 책임의 한계',
+        liabilityBody: 'Creovly는 어떠한 명시적/묵시적 보증 없이 "있는 그대로(AS IS)" 및 "제공 가능한 상태(AS AVAILABLE)"로 제공됩니다. 관련 법령이 허용하는 최대 범위 내에서, Creovly는 소프트웨어 사용 또는 사용 불능, 데이터 손실, 계산 결과를 바탕으로 내린 결정으로 인해 발생하는 직간접적 손해에 대해 책임을 지지 않습니다.',
+        contactTitle: '6. 이용 문의 창구',
+        contactBodyPrefix: '본 이용약관에 대해 질문이 있으신 경우 ',
+        contactBodyMid: ' 로 문의하시거나 ',
+        contactFormLink: '문의 양식',
+      },
     },
   },
 };
 
 export default messagesKo;
-

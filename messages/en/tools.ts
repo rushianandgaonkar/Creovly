@@ -25,10 +25,17 @@ export const tools = {
     relatedHeading: 'Related Creator Tools',
     relatedSubheading: 'Complementary utilities for your YouTube pre-publish checklist',
     relatedViewAll: 'View all tools',
+    workbenchControls: 'Workbench Controls',
+    inputLocal: 'INPUT // LOCAL',
+    outputInspection: 'Output & Inspection',
+    sampleResults: 'Sample Results',
+    previewMode: 'PREVIEW MODE',
+    liveSpec: 'LIVE SPEC',
   },
   directory: {
     heading: 'Creator Pre-Publish Utilities',
     subheading: 'Zero sign-ups. Zero server uploads. Client-side tools to inspect thumbnails, optimize video titles, ensure Shorts UI safe zones, and model YouTube channel economics.',
+    completeCatalog: 'Complete Catalog',
     searchPlaceholder: 'Search tools (/)...',
     filterAll: 'All',
     toolsCount: '{count} {label} {status}',
@@ -256,6 +263,35 @@ export const tools = {
         answer: 'Gross revenue misleads creators. Factoring in editing, equipment depreciation, software subscriptions, and taxes reveals your actual take-home profit per upload.',
       },
     ],
+  },
+  guidance: {
+    compressor: {
+      p1: 'Every image uses the same target, format, and maximum quality settings. Changing settings or selecting a replacement batch clears previous outputs so you cannot download results from stale settings. Removing an individual image keeps the other completed results.',
+      p2: 'Dimensions are preserved. Re-encoding can change colors or remove embedded metadata. If the original is retained, its metadata is retained too. Samples load one image; upload multiple files to test a batch.',
+      linkText: 'Check YouTube’s current thumbnail guidance',
+      linkSuffix: 'before uploading.',
+    },
+    resizer: {
+      p1: 'Prepare a thumbnail, channel banner, profile picture or watermark asset from a still JPEG, PNG or WebP. Crop to fill trims edges; fit entire image adds padding. All exports remain rectangular.',
+      p2: 'The banner preset uses 2560 × 1440. Its preview guide scales the central 1235 × 338 text/logo area published for a 2048 × 1152 banner. The 800 × 800 profile canvas is a Creovly preset, with an illustrative circle guide. The watermark canvas is 150 × 150; it prepares an asset without placing it on a video or removing its background.',
+      p3: 'Guides never appear in downloaded files. Review your artwork in YouTube’s own upload preview. YouTube specifies banners at 6 MB or smaller and watermark images below 1 MB. See YouTube’s channel branding guidelines for current requirements.',
+      p4: 'Inputs are limited to 20 MB, 24 megapixels and 8,192 pixels per side. Output canvases use the same dimension limits. Resizing changes dimensions, not a target file size. Enlarging cannot recover detail. Exports may remove metadata or change colors.',
+    },
+    logoRemover: {
+      p1: 'Choose an existing logo with a solid background, confirm the background color, and adjust tolerance. Select Remove background, inspect the actual before/after images, then download a transparent PNG.',
+      p2: 'This tool removes matching colors connected to the image border. It preserves enclosed areas, including enclosed background inside letters. Similar foreground colors touching the background can also be removed. Complex photos, gradients, shadows, and anti-aliased edges may need a dedicated editor.',
+      p3: 'Processing stays in your browser. Images are not saved between visits. Original dimensions are preserved; PNG output may be larger than your source file.',
+    },
+    shorts: {
+      p1: 'Choose a still frame. The tool fits it into a 9:16 canvas, adding black padding when needed. Adjust the reserved margins to approximate the player layout you want to plan around. The defaults are starting assumptions, not official YouTube measurements.',
+      p2: 'Enable the content box and position it over your important text or subject. The checker reports whether that box overlaps your chosen margins. It does not detect actual content or analyze a video.',
+      p3: 'Create a PNG guide to download a 1080 × 1920 annotated planning reference. The download always includes the guide, even when the on-screen overlay is hidden. Use your clean source for publishing and inspect it in the actual Shorts player.',
+    },
+    titleChecker: {
+      p1: 'Enter a draft title and, optionally, an exact topic phrase. Check the length, whitespace, repeated punctuation, and uppercase emphasis. The phrase check ignores case but does not match synonyms or measure search demand.',
+      p2: 'YouTube lists a 100-character title limit. This tool uses a conservative UTF-16 character-unit count, including spaces; some emoji use more than one unit. Check final acceptance in YouTube Studio. The word count splits on whitespace and is less useful for languages that do not use spaces.',
+      p3: 'The preview wraps into two lines at your chosen width. It is an illustration, not a replica of every YouTube surface. Feedback does not predict CTR, rankings, truthfulness, or platform policy compliance.',
+    },
   },
 };
 

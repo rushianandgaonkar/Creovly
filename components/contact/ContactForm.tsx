@@ -92,14 +92,14 @@ export default function ContactForm() {
             href={mailtoUrl}
             className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-[var(--brand-accent)] text-white text-xs font-semibold hover:opacity-90 transition-opacity"
           >
-            Launch Email App &rarr;
+            {contact.form.launchEmailApp}
           </a>
           <button
             type="button"
             onClick={handleCopy}
             className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2.5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-xs font-semibold text-[var(--text-ink)] hover:bg-[var(--bg-canvas-subtle)] transition-colors"
           >
-            {copied ? '✓ Copied!' : contact.form.buttonCopy}
+            {copied ? contact.form.copiedNotification : contact.form.buttonCopy}
           </button>
         </div>
       </div>

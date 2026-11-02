@@ -80,7 +80,7 @@ export default function GuidesContent() {
                   href={`/guides/${guide.slug}`}
                   className="text-xs font-medium text-[var(--brand-accent)] hover:underline inline-flex items-center gap-1"
                 >
-                  Read guide &rarr;
+                  {t.guides.index.readGuide}
                 </LocalizedLink>
               </div>
             </article>

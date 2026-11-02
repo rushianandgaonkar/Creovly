@@ -1,6 +1,7 @@
 export const checklist = {
   hero: {
     badge: 'Interactive Pre-Publish Workflow',
+    tag: 'Pre-Flight Audit',
     heading: 'Pre-Publish Creator Checklist',
     subheading: 'Systematic pre-flight audit for thumbnails, titles, affiliate disclosures, audio licensing, and YouTube distribution.',
   },
@@ -11,6 +12,12 @@ export const checklist = {
     resetButton: 'Reset Checklist',
     exportButton: 'Export Checklist (.txt)',
     resetAria: 'Reset all checklist items to unchecked',
+    auditReadiness: 'Audit Readiness:',
+    packageStudioButton: 'Package Project in Studio →',
+    completeLabel: '✓ Complete',
+    itemsCount: '{completed} of {total} items',
+    storageNotice: 'Checklist progress auto-saves to your local browser storage.',
+    openStudioButton: 'Open Publish Studio →',
   },
   sections: [
     {

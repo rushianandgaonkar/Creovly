@@ -67,6 +67,7 @@ export const messagesPt: Messages = {
       maxSize: 'Tamanho máximo de ficheiro:',
       localPrivacyNote: 'Permanece no seu dispositivo',
       sampleButtonPrefix: 'Testar com exemplo:',
+      oneClickTest: 'Teste em 1 clique',
     },
     buttons: {
       clear: 'Limpar',
@@ -142,6 +143,17 @@ export const messagesPt: Messages = {
         buttonText: 'Abrir Publish Studio',
       },
     },
+    carousel: {
+      heading: 'Encontre sua próxima ferramenta de criador.',
+      subheading: 'Pequenas tarefas. Uma publicação mais tranquila. Escolha uma ferramenta e comece agora.',
+      viewDirectory: 'Ver diretório de ferramentas',
+      localBadge: '100% Local',
+      hint: 'Deslize, arraste ou use as setas para explorar. Cada cartão abre uma ferramenta funcional.',
+      ariaLabel: 'Cartões de ferramentas para criadores. Use as setas esquerda e direita para navegar.',
+      prevAria: 'Ferramenta anterior',
+      nextAria: 'Próxima ferramenta',
+      jumpAria: 'Pular para qualquer ferramenta de criador',
+    },
   },
   tools: {
     shell: {
@@ -170,6 +182,12 @@ export const messagesPt: Messages = {
       relatedHeading: 'Ferramentas complementares para criadores',
       relatedSubheading: 'Utilitários para a sua rotina antes da publicação',
       relatedViewAll: 'Ver todas as ferramentas',
+      workbenchControls: 'Controles da bancada',
+      inputLocal: 'ENTRADA // LOCAL',
+      outputInspection: 'Saída e inspeção',
+      sampleResults: 'Resultados de exemplo',
+      previewMode: 'MODO DE PRÉ-VISUALIZAÇÃO',
+      liveSpec: 'ESPECIFICAÇÃO AO VIVO',
     },
     directory: {
       heading: 'Utilitários de pré-publicação',
@@ -184,6 +202,7 @@ export const messagesPt: Messages = {
       emptyTitle: 'Nenhuma ferramenta encontrada',
       emptyText: 'Nenhuma ferramenta corresponde a "{query}". Tente pesquisar "comprimir", "título" ou limpe os filtros.',
       clearFilters: 'Limpar filtros de pesquisa',
+      completeCatalog: 'Catálogo completo',
     },
     categories: {
       thumbnail: {
@@ -402,6 +421,35 @@ export const messagesPt: Messages = {
         },
       ],
     },
+    guidance: {
+      compressor: {
+        p1: 'Todas as imagens usam o mesmo objetivo, formato e configurações de qualidade máxima. Alterar configurações ou selecionar um novo lote redefine as saídas anteriores para evitar o download de arquivos desatualizados. Remover uma imagem individual preserva os outros resultados concluídos.',
+        p2: 'As dimensões são preservadas. A recodificação pode alterar cores ou remover metadados incorporados. Se o original for mantido, seus metadados também serão preservados. As amostras carregam uma única imagem; envie vários arquivos para testar um lote.',
+        linkText: 'Consulte as diretrizes oficiais atuais do YouTube para miniaturas',
+        linkSuffix: 'antes de fazer o upload.',
+      },
+      resizer: {
+        p1: 'Prepare uma miniatura, banner de canal, foto de perfil ou marca d’água a partir de imagens JPEG, PNG ou WebP. Preencher corta as bordas; ajustar adiciona margens. Todas as exportações permanecem retangulares.',
+        p2: 'O modelo de banner usa 2560 × 1440. Seu guia de pré-visualização dimensiona a área central de texto/logo de 1235 × 338 publicada para um banner de 2048 × 1152. A tela de perfil de 800 × 800 é um modelo Creovly com guia circular ilustrativo. A tela de marca d’água é de 150 × 150; prepara o recurso sem sobrepô-lo a um vídeo nem remover seu fundo.',
+        p3: 'As guias nunca aparecem nos arquivos baixados. Confira sua arte na prévia de upload do YouTube. O YouTube estipula banners com até 6 MB e marcas d’água abaixo de 1 MB. Consulte as diretrizes de personalização do canal do YouTube para conferir os requisitos vigentes.',
+        p4: 'Os arquivos de entrada são limitados a 20 MB, 24 megapixels e 8.192 pixels por lado. As telas de saída respeitam os mesmos limites. Redimensionar altera dimensões, não o tamanho de arquivo desejado. Ampliar não recupera detalhes. As exportações podem remover metadados ou alterar cores.',
+      },
+      logoRemover: {
+        p1: 'Escolha um logotipo existente com fundo sólido, confirme a cor de fundo e ajuste a tolerância. Clique em Remover fundo, inspecione a comparação antes/depois e baixe um PNG transparente.',
+        p2: 'Esta ferramenta remove cores correspondentes conectadas à borda da imagem. Ela preserva áreas fechadas, inclusive fundos no interior de letras. Cores de primeiro plano semelhantes que toquem o fundo também podem ser removidas. Fotos complexas, gradientes, sombras e bordas suavizadas podem exigir um editor dedicado.',
+        p3: 'O processamento permanece no seu navegador. As imagens não são salvas entre visitas. As dimensões originais são mantidas; a saída PNG pode ser maior que o arquivo original.',
+      },
+      shorts: {
+        p1: 'Escolha um quadro estático. A ferramenta o adapta para uma tela 9:16, adicionando barras pretas quando necessário. Ajuste as margens reservadas para simular o layout do reprodutor planejado. Os padrões são estimativas iniciais, não medidas oficiais do YouTube.',
+        p2: 'Ative a caixa de conteúdo e posicione-a sobre o texto ou assunto importante. O verificador indica se a caixa sobrepõe as margens selecionadas. Ele não detecta conteúdo automaticamente nem analisa vídeo.',
+        p3: 'Gere um guia PNG para baixar uma referência de planejamento anotada de 1080 × 1920. O download sempre inclui o guia, mesmo quando a sobreposição na tela estiver oculta. Use seu arquivo limpo original para publicar e inspecione-o no aplicativo Shorts real.',
+      },
+      titleChecker: {
+        p1: 'Digite um rascunho de título e, opcionalmente, uma frase-chave exata do tópico. Verifique contagem de caracteres, espaços, pontuação repetida e ênfase em maiúsculas. A busca não diferencia maiúsculas de minúsculas, mas não analisa sinônimos nem volume de busca.',
+        p2: 'O YouTube estipula um limite de 100 caracteres. Esta ferramenta utiliza uma contagem conservadora de unidades UTF-16, incluindo espaços; alguns emojis contam como mais de uma unidade. Verifique a aceitação final no YouTube Studio. A contagem de palavras divide por espaços e é menos precisa em idiomas sem espaçamento.',
+        p3: 'A pré-visualização quebra em duas linhas conforme a largura escolhida. Trata-se de uma ilustração e não de uma réplica de todas as telas do YouTube. As sugestões não preveem CTR, classificação ou conformidade com as diretrizes da plataforma.',
+      },
+    },
   },
   compressor: {
     title: 'Compressor de miniaturas do YouTube',
@@ -501,10 +549,22 @@ export const messagesPt: Messages = {
     resultsPrompt: 'Escolha uma predefinição ou indique dimensões e clique em Redimensionar para pré-visualizar e guardar.',
     guideOverlayToggle: 'Mostrar grelha de enquadramento na pré-visualização',
     presets: {
-      thumbnail: { label: 'Miniatura de vídeo', desc: '1280 × 720 (16:9 HD)' },
-      banner: { label: 'Faixa do canal', desc: '2560 × 1440 (Cabeçalho do canal)' },
-      profile: { label: 'Foto de perfil', desc: '800 × 800 (Quadrado 1:1)' },
-      watermark: { label: 'Marca d’água', desc: '150 × 150 (Ícone de canto)' },
+      thumbnail: {
+        label: 'Miniatura de vídeo',
+        desc: '1280 × 720 (16:9 HD)',
+      },
+      banner: {
+        label: 'Faixa do canal',
+        desc: '2560 × 1440 (Cabeçalho do canal)',
+      },
+      profile: {
+        label: 'Foto de perfil',
+        desc: '800 × 800 (Quadrado 1:1)',
+      },
+      watermark: {
+        label: 'Marca d’água',
+        desc: '150 × 150 (Ícone de canto)',
+      },
     },
     warnings: {
       bannerSafeZone: 'Apenas a área central de 1235 × 338 píxeis é garantida como visível em telemóveis e tablets.',
@@ -611,9 +671,18 @@ export const messagesPt: Messages = {
     revenue: {
       title: 'Cenário de receita mensal',
       fields: {
-        views: { label: 'Visualizações mensais estimadas', suffix: 'visualizações' },
-        low: { label: 'Estimativa de RPM inferior (USD)', suffix: 'USD' },
-        high: { label: 'Estimativa de RPM superior (USD)', suffix: 'USD' },
+        views: {
+          label: 'Visualizações mensais estimadas',
+          suffix: 'visualizações',
+        },
+        low: {
+          label: 'Estimativa de RPM inferior (USD)',
+          suffix: 'USD',
+        },
+        high: {
+          label: 'Estimativa de RPM superior (USD)',
+          suffix: 'USD',
+        },
       },
       note: 'Indique a sua estimativa de RPM líquido após a comissão do YouTube. Não são aplicadas médias arbitrárias. Para Shorts, utilize visualizações monetizadas e o RPM específico.',
       metrics: {
@@ -628,8 +697,14 @@ export const messagesPt: Messages = {
     rpm: {
       title: 'Cálculo de RPM real',
       fields: {
-        revenue: { label: 'Receita líquida do criador no período (USD)', suffix: 'USD' },
-        views: { label: 'Visualizações no mesmo período', suffix: 'visualizações' },
+        revenue: {
+          label: 'Receita líquida do criador no período (USD)',
+          suffix: 'USD',
+        },
+        views: {
+          label: 'Visualizações no mesmo período',
+          suffix: 'visualizações',
+        },
       },
       note: 'Indique a receita após a dedução do YouTube e as visualizações do mesmo período. O RPM não permite deduzir o CPM pago pelos anunciantes.',
       metrics: {
@@ -644,10 +719,22 @@ export const messagesPt: Messages = {
     watchHours: {
       title: 'Cenário de horas de exibição (4.000 h)',
       fields: {
-        current: { label: 'Horas de exibição públicas atuais', suffix: 'horas' },
-        goal: { label: 'Meta de horas de exibição', suffix: 'horas' },
-        monthly: { label: 'Horas adicionais previstas por mês', suffix: 'horas' },
-        duration: { label: 'Duração média de visualização', suffix: 'minutos' },
+        current: {
+          label: 'Horas de exibição públicas atuais',
+          suffix: 'horas',
+        },
+        goal: {
+          label: 'Meta de horas de exibição',
+          suffix: 'horas',
+        },
+        monthly: {
+          label: 'Horas adicionais previstas por mês',
+          suffix: 'horas',
+        },
+        duration: {
+          label: 'Duração média de visualização',
+          suffix: 'minutos',
+        },
       },
       note: 'A projeção assume um ritmo regular sem caducidade de horas antigas. Não reproduz a janela móvel de 365 dias do YouTube. Os Shorts não contam para esta meta.',
       metrics: {
@@ -666,13 +753,33 @@ export const messagesPt: Messages = {
     monetization: {
       title: 'Cenário abrangente de receita e lucro mensal',
       fields: {
-        views: { label: 'Visualizações mensais', suffix: 'visualizações' },
-        rpm: { label: 'Estimativa de RPM de anúncios (USD)', suffix: 'USD' },
-        deals: { label: 'Parcerias de patrocínio por mês' },
-        fee: { label: 'Valor cobrado por parceria (USD)', suffix: 'USD' },
-        affiliate: { label: 'Receita mensal com afiliados (USD)', suffix: 'USD' },
-        other: { label: 'Outras receitas mensais (membros, etc.) (USD)', suffix: 'USD' },
-        costs: { label: 'Custos operacionais e de produção mensais (USD)', suffix: 'USD' },
+        views: {
+          label: 'Visualizações mensais',
+          suffix: 'visualizações',
+        },
+        rpm: {
+          label: 'Estimativa de RPM de anúncios (USD)',
+          suffix: 'USD',
+        },
+        deals: {
+          label: 'Parcerias de patrocínio por mês',
+        },
+        fee: {
+          label: 'Valor cobrado por parceria (USD)',
+          suffix: 'USD',
+        },
+        affiliate: {
+          label: 'Receita mensal com afiliados (USD)',
+          suffix: 'USD',
+        },
+        other: {
+          label: 'Outras receitas mensais (membros, etc.) (USD)',
+          suffix: 'USD',
+        },
+        costs: {
+          label: 'Custos operacionais e de produção mensais (USD)',
+          suffix: 'USD',
+        },
       },
       note: 'Todos os valores em USD. A receita de anúncios baseia-se no seu RPM líquido. As despesas são deduzidas uma única vez; impostos não são calculados.',
       metrics: {
@@ -834,6 +941,7 @@ export const messagesPt: Messages = {
       badge: 'Controlo passo a passo pré-publicação',
       heading: 'Lista de verificação para criadores do YouTube',
       subheading: 'Auditoria completa de miniaturas, títulos, avisos de afiliados, direitos musicais e diretrizes de publicação.',
+      tag: 'Auditoria de pré-voo',
     },
     status: {
       completed: '{count} de {total} itens verificados',
@@ -842,6 +950,12 @@ export const messagesPt: Messages = {
       resetButton: 'Repor lista',
       exportButton: 'Exportar lista (.txt)',
       resetAria: 'Desmarcar todos os itens da lista de verificação',
+      auditReadiness: 'Prontidão da auditoria:',
+      packageStudioButton: 'Empacotar projeto no Studio →',
+      completeLabel: '✓ Concluído',
+      itemsCount: '{completed} de {total} itens verificados',
+      storageNotice: 'O progresso da lista de verificação é salvo automaticamente no armazenamento local do seu navegador.',
+      openStudioButton: 'Abrir Publish Studio →',
     },
     sections: [
       {
@@ -932,6 +1046,7 @@ export const messagesPt: Messages = {
       heroVerified: 'Padrões oficiais da plataforma',
       heading: 'Guias e referências técnicas para criadores',
       subheading: 'Artigos fundamentados com fontes oficiais sobre especificações de imagem, cálculos de monetização e boas práticas antes de publicar.',
+      readGuide: 'Ler guia →',
     },
     article: {
       verifiedLabel: 'Padrão oficial verificado',
@@ -941,6 +1056,20 @@ export const messagesPt: Messages = {
       checklistHeading: 'Lista de verificação aplicável',
       relatedToolsHeading: 'Ferramentas Creovly relacionadas',
       breadcrumbGuides: 'Guias para criadores',
+      author: 'Pela equipe editorial do Creovly',
+      sourcesDescription: 'Todas as especificações técnicas, proporções de tela e fórmulas de receita deste guia foram verificadas com base na documentação oficial da plataforma:',
+      keyTakeawayPrefix: 'Destaque principal:',
+      appliedUtilitiesBadge: 'Utilidades aplicadas',
+      appliedUtilitiesDesc: 'Use estas ferramentas locais do Creovly para validar e formatar seus materiais antes de publicar.',
+      checklistBadge: 'Plano de ação',
+      checklistTitle: 'Verificação pré-publicação',
+      checklistCompleted: 'Concluído: {completed} de {total}',
+      checklistNote: 'Marque cada item à medida que prepara seus arquivos para o YouTube.',
+      workedScenarioBadge: 'Cenário prático',
+      workedScenarioTag: 'Análise passo a passo',
+      scenarioLabel: 'O cenário:',
+      executionStepsLabel: 'Etapas de execução',
+      takeawayLabel: 'Conclusão:',
     },
     items: {
       'youtube-thumbnail-blueprint': {
@@ -980,7 +1109,16 @@ export const messagesPt: Messages = {
         scopeBody: 'Acreditamos que o software para criadores não deve criar ilusões. A Creovly não promete visualizações mágicas nem inventa segredos sobre o algoritmo. Todas as nossas calculadoras utilizam fórmulas matemáticas da própria plataforma e os dados que você introduz.',
         disclaimerTitle: 'Declaração de independência',
         disclaimerBody: 'A Creovly é uma solução de software independente desenvolvida para criadores. YouTube™ é uma marca registada da Google LLC. A Creovly não tem qualquer vínculo, recomendação ou patrocínio do YouTube ou da Google LLC.',
+        principlesTag: 'Princípios de engenharia',
+        differenceTitle: 'O que torna o Creovly diferente',
+        supportTitle: 'Entre em contato',
+        supportBody: 'Tem sugestões para nossas ferramentas, notou alguma alteração nas especificações do YouTube ou precisa de suporte técnico? Nossa equipe está à disposição:',
+        contactFormLink: 'Formulário de contato →',
+        ctaHeading: 'Pronto para otimizar seu fluxo de pré-publicação?',
+        ctaBody: 'Abra o Publish Studio para reunir seu título, miniatura e lista de verificação em um pacote completo pronto para envio.',
+        ctaButton: 'Iniciar Studio →',
       },
+      breadcrumb: 'Sobre',
     },
     contact: {
       heroBadge: 'Apoio ao criador',
@@ -1008,11 +1146,21 @@ export const messagesPt: Messages = {
         privacyNote: 'Zero armazenamento em servidor: ao submeter, a sua aplicação de e-mail predefinida abre-se com o texto pronto. Nenhum dado é guardado em bases de dados.',
         submittedHeading: 'Mensagem preparada',
         submittedBody: 'A sua aplicação de e-mail deverá ter sido aberta. Caso contrário, pode copiar a mensagem e enviá-la diretamente para',
+        launchEmailApp: 'Abrir aplicativo de e-mail →',
+        copiedNotification: '✓ Copiado!',
       },
       errors: {
         nameRequired: 'Por favor, indique o seu nome.',
         emailValid: 'Por favor, indique um endereço de e-mail válido para podermos responder-lhe.',
         messageMin: 'A sua mensagem deve ter pelo menos 10 carateres.',
+      },
+      sidebar: {
+        directTitle: 'Contato direto',
+        directBody: 'Prefere enviar uma mensagem direto do seu cliente de e-mail? Escreva para nossa caixa postal a qualquer momento:',
+        responseTitle: 'Tempo de resposta',
+        responseBody: 'Costumamos responder a sugestões e dúvidas de criadores em até 24 a 48 horas úteis.',
+        featuresTitle: 'Sugestões de recursos',
+        featuresBody: 'A maioria das ferramentas do Creovly nasceu de ideias da comunidade. Se houver uma etapa travando seu fluxo de trabalho, conte para nós!',
       },
     },
     privacy: {
@@ -1026,6 +1174,38 @@ export const messagesPt: Messages = {
       consentDeniedText: 'Os cookies analíticos estão atualmente desativados. Nenhum cookie de rastreamento é guardado.',
       buttonRevoke: 'Desativar cookies analíticos',
       buttonGrant: 'Ativar cookies analíticos',
+      sections: {
+        clientSideTitle: '1. Arquitetura de processamento 100% no cliente',
+        clientSideBody: 'Diferente das plataformas SaaS tradicionais para criadores, todas as ferramentas de processamento de arquivos do Creovly (incluindo Compressor de Miniaturas, Redimensionador, Removedor de Fundo de Logos, Verificador de Área Segura de Shorts e Verificador de Títulos) rodam exclusivamente na sessão local do seu navegador através de APIs modernas da Web (HTML5 Canvas, File API, Web Workers e threads JavaScript locais).',
+        clientSideItem1: 'Suas imagens, ilustrações e miniaturas enviadas são processadas estritamente na memória volátil e nunca são transmitidas a servidores, nuvens ou bancos de dados do Creovly.',
+        clientSideItem2: 'Modelos financeiros calculados, estimativas de RPM e valores de simulação permanecem unicamente na memória temporária do navegador.',
+        clientSideItem3: 'Nenhum arquivo de mídia, gravação bruta ou fotografia é registrado em logs, mantido em cache ou retido em servidores.',
+        dataCollectTitle: '2. Dados que coletamos e não coletamos',
+        noAccountHeading: 'Nenhuma conta necessária:',
+        noAccountBody: 'Você não precisa registrar uma conta, autenticar-se via OAuth do Google ou YouTube, nem fornecer dados de pagamento para usar as ferramentas do Creovly.',
+        contactCommsHeading: 'Comunicações voluntárias de contato e processamento de e-mails:',
+        contactCommsBody: 'Quando você utiliza nossa página de Contato, o formulário prepara sua mensagem como rascunho no seu aplicativo de e-mail local endereçado a support@creovly.com, em vez de enviar dados automaticamente para um banco de dados online. O envio só ocorre quando você clica deliberadamente em "Enviar" no seu gerenciador de e-mails. Ao nos escrever, sua mensagem, e-mail de origem e dados opcionais são roteados e retidos pela infraestrutura padrão de e-mails — tanto pelo seu provedor quanto pelo provedor de caixa postal do Creovly — exclusivamente para que nossa equipe possa responder. O Creovly não armazena formulários de contato no localStorage nem em servidores de aplicação web, e jamais vende ou aluga dados de contato para corretores de dados ou empresas de publicidade.',
+        storageTitle: '3. Inventário de armazenamento local do navegador',
+        storageDescription: 'Para fornecer uma experiência ágil sem exigir logins ou contas na nuvem, o Creovly utiliza o localStorage padrão do seu navegador no seu dispositivo físico. Divulgamos com total clareza todas as chaves utilizadas:',
+        storageKeys: {
+          studioDraftKey: 'creovly-studio-draft-v1',
+          studioDraftDesc: 'Usado no Publish Studio. Salva os metadados do seu projeto (título, descrição, metas e opções de empacotamento) localmente no seu dispositivo físico somente quando você clica deliberadamente em "Salvar rascunho" (ou pressiona Ctrl+S / ⌘S). O Publish Studio não salva automaticamente enquanto você digita; salvar é uma decisão consciente do criador. Imagens binárias nunca são gravadas no localStorage. Você pode restaurar seu projeto via "Carregar rascunho salvo" ou excluí-lo definitivamente com "Remover rascunho salvo".',
+          checklistKey: 'creovly-checklist',
+          checklistDesc: 'Usado na Lista de Verificação Pré-Publicação. Armazena os marcos conferidos para que seu progresso continue nas visitas seguintes. Você pode reiniciar os itens quando desejar clicando em "Redefinir lista de verificação".',
+          themeKey: 'creovly-theme',
+          themeDesc: 'Guarda sua escolha de tema claro ou escuro (light ou dark) para evitar oscilações de brilho durante a navegação.',
+          analyticsConsentKey: 'creovly-analytics-consent',
+          analyticsConsentDesc: 'Registra sua decisão explícita sobre cookies de análise (granted ou denied) ao responder ao aviso de consentimento.',
+        },
+        analyticsTitle: '4. Análise de tráfego, cookies e consentimento',
+        analyticsBody: 'O Creovly utiliza o Google Analytics 4 (GA4) com anonimização de IP ativada unicamente para acompanhar estatísticas agregadas de tráfego (como usuários ativos diários, utilitários mais acessados e categorias de resolução de tela).',
+        platformTitle: '5. Estatuto independente e uso legítimo',
+        platformBody: 'O Creovly é uma ferramenta de software independente e não tem vínculo, patrocínio, aprovação ou associação com YouTube, Google LLC, Alphabet Inc. ou suas subsidiárias. YouTube™ e o logotipo do YouTube são marcas registradas da Google LLC.',
+        contactTitle: '6. Fale com o encarregado de proteção de dados',
+        contactBodyPrefix: 'Se tiver dúvidas sobre esta Política de Privacidade ou seus direitos de proteção de dados, fale com nossa equipe pelo e-mail ',
+        contactBodyMid: ' ou utilize nosso ',
+        contactFormLink: 'Formulário de contato',
+      },
     },
     terms: {
       heroBadge: 'Avisos legais',
@@ -1033,9 +1213,30 @@ export const messagesPt: Messages = {
       heading: 'Termos de Serviço',
       subheading: 'Diretrizes transparentes que regulam a utilização das ferramentas em navegador da Creovly.',
       lastUpdated: 'Última atualização: 31 de outubro de 2026',
+      sections: {
+        purposeTitle: '1. Finalidade e natureza do serviço',
+        purposeBody: 'O Creovly oferece utilitários executados no navegador e espaços de trabalho de pré-publicação desenvolvidos para ajudar criadores de vídeo digital a preparar materiais de divulgação (miniaturas, títulos, guias de enquadramento para Shorts e projeções financeiras). Todas as ferramentas funcionam localmente no navegador do usuário, sem processamento de mídia em servidores.',
+        ipTitle: '2. Direitos do criador e propriedade intelectual',
+        ipOwnershipHeading: 'Você é o proprietário de 100% do seu conteúdo:',
+        ipOwnershipBody: 'O Creovly não reivindica nenhum direito de propriedade, direitos autorais ou propriedade intelectual sobre imagens, logotipos, títulos, roteiros ou dados manipulados através de nossas ferramentas.',
+        ipProcessingBody: 'Como o processamento de arquivos é realizado totalmente no seu dispositivo, o Creovly nunca envia, armazena ou sublicencia suas criações. Você mantém a total titularidade e responsabilidade pelas mídias que exportar e publicar em plataformas externas.',
+        disclaimerTitle: '3. Isenção de responsabilidade sobre desempenho e ganhos',
+        disclaimerBody: 'Ferramentas como a Calculadora de Receita, Calculadora de RPM, Calculadora de Horas de Exibição e o Analisador de Títulos são instrumentos de planejamento que geram simulações matemáticas baseadas nos parâmetros fornecidos pelo criador.',
+        disclaimerItem1: 'Estimativas de receita, taxas de cliques (CTR) ou marcos de horas de exibição são modelos teóricos e não asseguram resultados no mundo real.',
+        disclaimerItem2: 'Os rendimentos reais de um criador variam de acordo com algoritmos, público-alvo, sazonalidade, investimentos de anunciantes e conformidade com o Programa de Parcerias do YouTube.',
+        disclaimerItem3: 'O Creovly não oferece consultoria financeira, contábil, jurídica ou de investimentos de caráter profissional.',
+        trademarksTitle: '4. Marcas de terceiros e independência',
+        trademarksBody1: 'O Creovly é um conjunto independente de softwares e não é afiliado, patrocinado, autorizado nem endossado pela Google LLC ou YouTube LLC.',
+        trademarksBody2: 'YouTube™ e YouTube Shorts™ são marcas registradas da Google LLC. A menção a recursos, dimensões e limites de envio da plataforma destina-se exclusivamente à compatibilidade técnica e finalidades informativas.',
+        liabilityTitle: '5. Limitação de responsabilidade',
+        liabilityBody: 'O Creovly é disponibilizado "NO ESTADO EM QUE SE ENCONTRA" e "CONFORME DISPONÍVEL", sem garantias de qualquer natureza. Na extensão máxima permitida pela legislação aplicável, o Creovly não se responsabiliza por prejuízos diretos, indiretos ou incidentais resultantes do uso ou da impossibilidade de uso do software, perda de dados ou decisões tomadas com base nas saídas das ferramentas.',
+        contactTitle: '6. Dúvidas e contato',
+        contactBodyPrefix: 'Caso tenha questionamentos sobre estes Termos de Serviço, escreva para ',
+        contactBodyMid: ' ou acesse nosso ',
+        contactFormLink: 'Formulário de contato',
+      },
     },
   },
 };
 
 export default messagesPt;
-
