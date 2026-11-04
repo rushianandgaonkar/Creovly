@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: LocalizedPageProps): Promise<
   const loc = locale as Locale;
   const content = translations[loc];
   return createPageMetadata({
-    title: `${content.home.title} | Creovly`,
+    title: content.home.title,
     description: content.home.description,
     path: `/${loc}`,
     locale: loc,

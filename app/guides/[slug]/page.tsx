@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import { guides, getGuideBySlug } from '@/lib/guides';
 import { createPageMetadata } from '@/lib/metadata';
 import GuideArticle from '@/components/guides/GuideArticle';
+import JsonLd from '@/components/seo/JsonLd';
+import { guideArticleJsonLd, breadcrumbJsonLd } from '@/lib/structured-data';
 
 interface GuidePageProps {
   params: Promise<{
@@ -22,7 +24,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
 
   if (!guide) {
     return createPageMetadata({
-      title: 'Guide Not Found — Creovly',
+      title: 'Guide Not Found',
       description: 'The requested creator guide could not be found.',
       path: '/guides',
       noindex: true,
@@ -30,7 +32,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
   }
 
   return createPageMetadata({
-    title: `${guide.title} — Creovly`,
+    title: guide.title,
     description: guide.description,
     path: `/guides/${guide.slug}`,
   });
@@ -44,5 +46,18 @@ export default async function GuidePage({ params }: GuidePageProps) {
     notFound();
   }
 
-  return <GuideArticle guide={guide} />;
+  const schemas = [
+    guideArticleJsonLd(guide),
+    breadcrumbJsonLd([
+      { name: 'Guides', href: '/guides' },
+      { name: guide.title, href: `/guides/${guide.slug}` },
+    ]),
+  ];
+
+  return (
+    <>
+      <JsonLd data={schemas} />
+      <GuideArticle guide={guide} />
+    </>
+  );
 }

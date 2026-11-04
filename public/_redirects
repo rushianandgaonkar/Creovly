@@ -1,4 +1,15 @@
 # Cloudflare Pages / Workers Redirects
+
+# Trailing-slash normalization (301) — keep one canonical URL per page
+/tools/    /tools    301
+/guides/   /guides   301
+/studio/   /studio   301
+/checklist/ /checklist 301
+/about/    /about    301
+/contact/  /contact  301
+/privacy/  /privacy  301
+/terms/    /terms    301
+
 # Aliases for sitemap (redirect to single canonical sitemap.xml)
 /sitemap.index /sitemap.xml 301
 /sitemap_index /sitemap.xml 301

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Button from '@/components/ui/Button';
 
 export const metadata = {
-  title: '404 — Page Not Found | Creovly',
+  title: '404 — Page Not Found',
   description: 'The requested page or creator tool could not be found.',
   robots: { index: false, follow: true },
 };

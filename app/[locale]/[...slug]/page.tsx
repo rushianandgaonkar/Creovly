@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation';
 import { nonDefaultLocales, translations, type Locale } from '@/config/i18n';
 import { createPageMetadata, createToolMetadata } from '@/lib/metadata';
 import { guides, getGuideBySlug } from '@/lib/guides';
+import JsonLd from '@/components/seo/JsonLd';
+import { toolWebApplicationJsonLd, guideArticleJsonLd, breadcrumbJsonLd } from '@/lib/structured-data';
 
 // Import existing page components to avoid duplicate implementations
 import StudioPage from '@/app/studio/page';
@@ -84,7 +86,7 @@ export async function generateMetadata({ params }: LocalizedCatchAllProps): Prom
   if (slugPath === 'tools/thumbnail') {
     const t = content.tools['youtube-thumbnail-compressor'];
     return createPageMetadata({
-      title: `${content.nav.tools} — ${t?.categoryLabel || 'Thumbnails'} | Creovly`,
+      title: `${content.nav.tools} — ${t?.categoryLabel || 'Thumbnails'}`,
       description: content.toolsDirectory.description,
       path: '/tools/thumbnail',
       locale: loc,
@@ -95,7 +97,7 @@ export async function generateMetadata({ params }: LocalizedCatchAllProps): Prom
   // Tools directory
   if (slugPath === 'tools') {
     return createPageMetadata({
-      title: `${content.toolsDirectory.title} | Creovly`,
+      title: content.toolsDirectory.title,
       description: content.toolsDirectory.description,
       path: '/tools',
       locale: loc,
@@ -106,7 +108,7 @@ export async function generateMetadata({ params }: LocalizedCatchAllProps): Prom
   // Studio
   if (slugPath === 'studio') {
     return createPageMetadata({
-      title: `${content.studio.title} | Creovly`,
+      title: content.studio.title,
       description: content.studio.description,
       path: '/studio',
       locale: loc,
@@ -116,7 +118,7 @@ export async function generateMetadata({ params }: LocalizedCatchAllProps): Prom
   // Checklist
   if (slugPath === 'checklist') {
     return createPageMetadata({
-      title: `${content.checklist.title} | Creovly`,
+      title: content.checklist.title,
       description: content.checklist.description,
       path: '/checklist',
       locale: loc,
@@ -138,7 +140,7 @@ export async function generateMetadata({ params }: LocalizedCatchAllProps): Prom
     const guide = getGuideBySlug(slug[1]);
     if (guide) {
       return createPageMetadata({
-        title: `${guide.title} — Creovly (${loc.toUpperCase()})`,
+        title: guide.title,
         description: guide.description,
         path: `/guides/${guide.slug}`,
         locale: loc,
@@ -197,6 +199,39 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
 
   const slugPath = slug.join('/');
 
+  const loc = locale as Locale;
+
+  // Helper to render tool pages with locale-specific structured data
+  const toolPageMap: Record<string, React.ReactNode> = {
+    'tools/logo-background-remover': <LogoBackgroundRemoverPage />,
+    'tools/youtube-thumbnail-compressor': <ThumbnailCompressorPage />,
+    'tools/youtube-thumbnail-resizer': <ThumbnailResizerPage />,
+    'tools/youtube-shorts-safe-zone': <ShortsSafeZonePage />,
+    'tools/youtube-title-checker': <TitleCheckerPage />,
+    'tools/youtube-revenue-calculator': <RevenueCalculatorPage />,
+    'tools/youtube-rpm-calculator': <RpmCalculatorPage />,
+    'tools/youtube-watch-hours-calculator': <WatchHoursCalculatorPage />,
+    'tools/youtube-monetization-calculator': <MonetizationCalculatorPage />,
+  };
+
+  if (slug[0] === 'tools' && slug[1] && toolPageMap[slugPath]) {
+    const toolSlug = slug[1];
+    const schemas = [
+      toolWebApplicationJsonLd(toolSlug, loc),
+      breadcrumbJsonLd([
+        { name: 'Tools', href: '/tools' },
+        { name: translations[loc]?.tools?.[toolSlug]?.title || toolSlug, href: `/tools/${toolSlug}` },
+      ], loc),
+    ].filter(Boolean);
+
+    return (
+      <>
+        <JsonLd data={schemas as Record<string, unknown>[]} />
+        {toolPageMap[slugPath]}
+      </>
+    );
+  }
+
   switch (slugPath) {
     case 'studio':
       return <StudioPage />;
@@ -206,24 +241,6 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
       return <ToolsDirectoryPage />;
     case 'tools/thumbnail':
       return <ThumbnailToolsPage />;
-    case 'tools/logo-background-remover':
-      return <LogoBackgroundRemoverPage />;
-    case 'tools/youtube-thumbnail-compressor':
-      return <ThumbnailCompressorPage />;
-    case 'tools/youtube-thumbnail-resizer':
-      return <ThumbnailResizerPage />;
-    case 'tools/youtube-shorts-safe-zone':
-      return <ShortsSafeZonePage />;
-    case 'tools/youtube-title-checker':
-      return <TitleCheckerPage />;
-    case 'tools/youtube-revenue-calculator':
-      return <RevenueCalculatorPage />;
-    case 'tools/youtube-rpm-calculator':
-      return <RpmCalculatorPage />;
-    case 'tools/youtube-watch-hours-calculator':
-      return <WatchHoursCalculatorPage />;
-    case 'tools/youtube-monetization-calculator':
-      return <MonetizationCalculatorPage />;
     case 'guides':
       return <GuidesPage />;
     case 'about':
@@ -238,7 +255,19 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
       if (slug[0] === 'guides' && slug[1]) {
         const guide = getGuideBySlug(slug[1]);
         if (!guide) notFound();
-        return <GuideArticle guide={guide} />;
+        const guideSchemas = [
+          guideArticleJsonLd(guide, loc),
+          breadcrumbJsonLd([
+            { name: 'Guides', href: '/guides' },
+            { name: guide.title, href: `/guides/${guide.slug}` },
+          ], loc),
+        ];
+        return (
+          <>
+            <JsonLd data={guideSchemas} />
+            <GuideArticle guide={guide} />
+          </>
+        );
       }
       notFound();
   }

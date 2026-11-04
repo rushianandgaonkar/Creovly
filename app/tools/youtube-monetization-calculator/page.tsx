@@ -1,4 +1,24 @@
-import { createToolMetadata } from '@/lib/metadata';
+import { createToolMetadata, getTool } from '@/lib/metadata';
 import CalculatorPage from '@/components/tools/CalculatorPage';
-export const metadata = createToolMetadata('youtube-monetization-calculator');
-export default function Page() { return <CalculatorPage kind="monetization" slug="youtube-monetization-calculator" />; }
+import JsonLd from '@/components/seo/JsonLd';
+import { toolWebApplicationJsonLd, breadcrumbJsonLd } from '@/lib/structured-data';
+
+const tool = getTool('youtube-monetization-calculator');
+export const metadata = createToolMetadata(tool.slug);
+
+export default function Page() {
+  const schemas = [
+    toolWebApplicationJsonLd(tool.slug),
+    breadcrumbJsonLd([
+      { name: 'Tools', href: '/tools' },
+      { name: tool.title, href: tool.href },
+    ]),
+  ].filter(Boolean);
+
+  return (
+    <>
+      <JsonLd data={schemas as Record<string, unknown>[]} />
+      <CalculatorPage kind="monetization" slug="youtube-monetization-calculator" />
+    </>
+  );
+}
