@@ -7,6 +7,8 @@ import CreatorHero from '@/components/home/CreatorHero';
 import { toolRegistry } from '@/config/site';
 import WorkflowShowcase from '@/components/home/WorkflowShowcase';
 import WorkflowDestinations from '@/components/home/WorkflowDestinations';
+import JsonLd from '@/components/seo/JsonLd';
+import { websiteJsonLd, organizationJsonLd } from '@/lib/structured-data';
 
 export function generateStaticParams() {
   return nonDefaultLocales.map((locale) => ({ locale }));
@@ -60,6 +62,7 @@ export default async function LocalizedHomePage({ params }: LocalizedPageProps) 
 
   return (
     <>
+      <JsonLd data={[websiteJsonLd(), organizationJsonLd()]} />
       <CreatorHero
         badge={content.home.badge}
         title={content.home.title}

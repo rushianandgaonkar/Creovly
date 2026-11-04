@@ -146,8 +146,17 @@ const jsonLdData = {
       '@id': `${siteConfig.url}/#website`,
       name: siteConfig.name,
       url: siteConfig.url,
+      description: siteConfig.description,
       publisher: {
         '@id': `${siteConfig.url}/#organization`,
+      },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: `${siteConfig.url}/tools?q={search_term_string}`,
+        },
+        'query-input': 'required name=search_term_string',
       },
     },
   ],

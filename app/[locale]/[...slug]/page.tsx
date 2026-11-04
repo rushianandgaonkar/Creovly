@@ -3,25 +3,32 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { nonDefaultLocales, translations, type Locale } from '@/config/i18n';
 import { createPageMetadata, createToolMetadata } from '@/lib/metadata';
+import { siteConfig, toolRegistry } from '@/config/site';
 import { guides, getGuideBySlug } from '@/lib/guides';
+import { getLocalizedGuide } from '@/config/guides-i18n';
 import JsonLd from '@/components/seo/JsonLd';
-import { toolWebApplicationJsonLd, guideArticleJsonLd, breadcrumbJsonLd } from '@/lib/structured-data';
+import {
+  toolSoftwareApplicationJsonLd,
+  toolFaqJsonLd,
+  guideArticleJsonLd,
+  guideFaqJsonLd,
+  breadcrumbJsonLd,
+} from '@/lib/structured-data';
 
-// Import existing page components to avoid duplicate implementations
+// Import reusable components
 import StudioPage from '@/app/studio/page';
 import ChecklistPage from '@/app/checklist/page';
-import ToolsDirectoryPage from '@/app/tools/page';
-import ThumbnailToolsPage from '@/app/tools/thumbnail/page';
-import LogoBackgroundRemoverPage from '@/app/tools/logo-background-remover/page';
-import ThumbnailCompressorPage from '@/app/tools/youtube-thumbnail-compressor/page';
-import ThumbnailResizerPage from '@/app/tools/youtube-thumbnail-resizer/page';
-import ShortsSafeZonePage from '@/app/tools/youtube-shorts-safe-zone/page';
-import TitleCheckerPage from '@/app/tools/youtube-title-checker/page';
-import RevenueCalculatorPage from '@/app/tools/youtube-revenue-calculator/page';
-import RpmCalculatorPage from '@/app/tools/youtube-rpm-calculator/page';
-import WatchHoursCalculatorPage from '@/app/tools/youtube-watch-hours-calculator/page';
-import MonetizationCalculatorPage from '@/app/tools/youtube-monetization-calculator/page';
-import GuidesPage from '@/app/guides/page';
+import ToolsDirectoryContent from '@/components/tools/ToolsDirectoryContent';
+import ThumbnailToolsContent from '@/components/pages/ThumbnailToolsContent';
+import ToolPageShell from '@/components/tools/ToolPageShell';
+import ThumbnailCompressor from '@/components/tools/ThumbnailCompressor';
+import ThumbnailResizer from '@/components/tools/ThumbnailResizer';
+import styles from '@/components/ui/artwork.module.css';
+import LogoBackgroundRemover from '@/components/tools/LogoBackgroundRemover';
+import ShortsSafeZone from '@/components/tools/ShortsSafeZone';
+import TitleChecker from '@/components/tools/TitleChecker';
+import CalculatorPage from '@/components/tools/CalculatorPage';
+import GuidesContent from '@/components/guides/GuidesContent';
 import GuideArticle from '@/components/guides/GuideArticle';
 import AboutPage from '@/app/about/page';
 import ContactPage from '@/app/contact/page';
@@ -91,6 +98,7 @@ export async function generateMetadata({ params }: LocalizedCatchAllProps): Prom
       path: '/tools/thumbnail',
       locale: loc,
       keywords: t?.keywords,
+      ogImage: '/og/tools.png',
     });
   }
 
@@ -102,6 +110,7 @@ export async function generateMetadata({ params }: LocalizedCatchAllProps): Prom
       path: '/tools',
       locale: loc,
       keywords: [content.toolsDirectory.title, ...Object.values(content.tools).map((x) => x.title)],
+      ogImage: '/og/tools.png',
     });
   }
 
@@ -132,6 +141,7 @@ export async function generateMetadata({ params }: LocalizedCatchAllProps): Prom
       description: content.guidesIndex.description,
       path: '/guides',
       locale: loc,
+      ogImage: '/og/guides.png',
     });
   }
 
@@ -139,11 +149,19 @@ export async function generateMetadata({ params }: LocalizedCatchAllProps): Prom
   if (slug[0] === 'guides' && slug[1]) {
     const guide = getGuideBySlug(slug[1]);
     if (guide) {
+      const locGuide = getLocalizedGuide(guide.slug, loc);
+      const title = locGuide?.title || guide.title;
+      const description = locGuide?.description || guide.description;
+      const ogImage =
+        guide.slug === 'youtube-shorts-safe-zone'
+          ? '/og/guide-youtube-shorts-safe-zone.png'
+          : `/og/${guide.slug}.png`;
       return createPageMetadata({
-        title: guide.title,
-        description: guide.description,
+        title,
+        description,
         path: `/guides/${guide.slug}`,
         locale: loc,
+        ogImage,
       });
     }
   }
@@ -155,6 +173,7 @@ export async function generateMetadata({ params }: LocalizedCatchAllProps): Prom
       description: content.about.description,
       path: '/about',
       locale: loc,
+      ogImage: '/og/about.png',
     });
   }
 
@@ -198,36 +217,112 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
   }
 
   const slugPath = slug.join('/');
-
   const loc = locale as Locale;
+  const content = translations[loc];
 
-  // Helper to render tool pages with locale-specific structured data
-  const toolPageMap: Record<string, React.ReactNode> = {
-    'tools/logo-background-remover': <LogoBackgroundRemoverPage />,
-    'tools/youtube-thumbnail-compressor': <ThumbnailCompressorPage />,
-    'tools/youtube-thumbnail-resizer': <ThumbnailResizerPage />,
-    'tools/youtube-shorts-safe-zone': <ShortsSafeZonePage />,
-    'tools/youtube-title-checker': <TitleCheckerPage />,
-    'tools/youtube-revenue-calculator': <RevenueCalculatorPage />,
-    'tools/youtube-rpm-calculator': <RpmCalculatorPage />,
-    'tools/youtube-watch-hours-calculator': <WatchHoursCalculatorPage />,
-    'tools/youtube-monetization-calculator': <MonetizationCalculatorPage />,
-  };
-
-  if (slug[0] === 'tools' && slug[1] && toolPageMap[slugPath]) {
+  // Localized individual tool pages
+  if (slug[0] === 'tools' && slug[1] && slug[1] !== 'thumbnail') {
     const toolSlug = slug[1];
+    const tool = toolRegistry.find((t) => t.slug === toolSlug);
+    if (!tool) notFound();
+
     const schemas = [
-      toolWebApplicationJsonLd(toolSlug, loc),
+      toolSoftwareApplicationJsonLd(toolSlug, loc),
+      toolFaqJsonLd(toolSlug, loc),
       breadcrumbJsonLd([
-        { name: 'Tools', href: '/tools' },
+        { name: content.nav.tools, href: '/tools' },
         { name: translations[loc]?.tools?.[toolSlug]?.title || toolSlug, href: `/tools/${toolSlug}` },
       ], loc),
     ].filter(Boolean);
 
+    let toolComponent: React.ReactNode = null;
+    switch (toolSlug) {
+      case 'youtube-thumbnail-compressor':
+        toolComponent = (
+          <ToolPageShell
+            title={tool.title}
+            description={tool.description}
+            category={tool.categoryLabel}
+            categoryHref="/tools/thumbnail"
+            toolSlug={tool.slug}
+          >
+            <ThumbnailCompressor />
+          </ToolPageShell>
+        );
+        break;
+      case 'youtube-thumbnail-resizer':
+        toolComponent = (
+          <ToolPageShell
+            className={styles.page}
+            title={tool.title}
+            description={tool.description}
+            category="Thumbnail Tools"
+            categoryHref="/tools/thumbnail"
+            toolSlug={tool.slug}
+          >
+            <ThumbnailResizer />
+          </ToolPageShell>
+        );
+        break;
+      case 'logo-background-remover':
+        toolComponent = (
+          <ToolPageShell
+            title={tool.title}
+            description={tool.description}
+            category="Thumbnail Tools"
+            categoryHref="/tools/thumbnail"
+            toolSlug={tool.slug}
+          >
+            <LogoBackgroundRemover />
+          </ToolPageShell>
+        );
+        break;
+      case 'youtube-shorts-safe-zone':
+        toolComponent = (
+          <ToolPageShell
+            title={tool.title}
+            description={tool.description}
+            category="Thumbnail Tools"
+            categoryHref="/tools/thumbnail"
+            toolSlug={tool.slug}
+          >
+            <ShortsSafeZone />
+          </ToolPageShell>
+        );
+        break;
+      case 'youtube-title-checker':
+        toolComponent = (
+          <ToolPageShell
+            title={tool.title}
+            description={tool.description}
+            category="Title Tools"
+            categoryHref="/tools#title"
+            toolSlug={tool.slug}
+          >
+            <TitleChecker />
+          </ToolPageShell>
+        );
+        break;
+      case 'youtube-revenue-calculator':
+        toolComponent = <CalculatorPage kind="revenue" slug="youtube-revenue-calculator" />;
+        break;
+      case 'youtube-rpm-calculator':
+        toolComponent = <CalculatorPage kind="rpm" slug="youtube-rpm-calculator" />;
+        break;
+      case 'youtube-watch-hours-calculator':
+        toolComponent = <CalculatorPage kind="watch-hours" slug="youtube-watch-hours-calculator" />;
+        break;
+      case 'youtube-monetization-calculator':
+        toolComponent = <CalculatorPage kind="monetization" slug="youtube-monetization-calculator" />;
+        break;
+      default:
+        notFound();
+    }
+
     return (
       <>
         <JsonLd data={schemas as Record<string, unknown>[]} />
-        {toolPageMap[slugPath]}
+        {toolComponent}
       </>
     );
   }
@@ -238,11 +333,31 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
     case 'checklist':
       return <ChecklistPage />;
     case 'tools':
-      return <ToolsDirectoryPage />;
-    case 'tools/thumbnail':
-      return <ThumbnailToolsPage />;
+      return (
+        <>
+          <JsonLd data={breadcrumbJsonLd([{ name: content.nav.tools, href: '/tools' }], loc)} />
+          <ToolsDirectoryContent />
+        </>
+      );
+    case 'tools/thumbnail': {
+      const t = content.tools['youtube-thumbnail-compressor'];
+      return (
+        <>
+          <JsonLd data={breadcrumbJsonLd([
+            { name: content.nav.tools, href: '/tools' },
+            { name: t?.categoryLabel || 'Thumbnails', href: '/tools/thumbnail' },
+          ], loc)} />
+          <ThumbnailToolsContent />
+        </>
+      );
+    }
     case 'guides':
-      return <GuidesPage />;
+      return (
+        <>
+          <JsonLd data={breadcrumbJsonLd([{ name: content.nav.guides, href: '/guides' }], loc)} />
+          <GuidesContent />
+        </>
+      );
     case 'about':
       return <AboutPage />;
     case 'contact':
@@ -255,16 +370,19 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
       if (slug[0] === 'guides' && slug[1]) {
         const guide = getGuideBySlug(slug[1]);
         if (!guide) notFound();
+        const locGuide = getLocalizedGuide(guide.slug, loc);
+        const guideTitle = locGuide?.title || guide.title;
         const guideSchemas = [
           guideArticleJsonLd(guide, loc),
+          guideFaqJsonLd(guide.slug, loc),
           breadcrumbJsonLd([
-            { name: 'Guides', href: '/guides' },
-            { name: guide.title, href: `/guides/${guide.slug}` },
+            { name: content.nav.guides || 'Guides', href: '/guides' },
+            { name: guideTitle, href: `/guides/${guide.slug}` },
           ], loc),
-        ];
+        ].filter(Boolean);
         return (
           <>
-            <JsonLd data={guideSchemas} />
+            <JsonLd data={guideSchemas as Record<string, unknown>[]} />
             <GuideArticle guide={guide} />
           </>
         );
@@ -272,4 +390,3 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
       notFound();
   }
 }
-

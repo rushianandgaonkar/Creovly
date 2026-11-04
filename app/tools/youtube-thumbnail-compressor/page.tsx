@@ -2,14 +2,15 @@ import { createToolMetadata, getTool } from '@/lib/metadata';
 import ToolPageShell from '@/components/tools/ToolPageShell';
 import ThumbnailCompressor from '@/components/tools/ThumbnailCompressor';
 import JsonLd from '@/components/seo/JsonLd';
-import { toolWebApplicationJsonLd, breadcrumbJsonLd } from '@/lib/structured-data';
+import { toolSoftwareApplicationJsonLd, toolFaqJsonLd, breadcrumbJsonLd } from '@/lib/structured-data';
 
 const tool = getTool('youtube-thumbnail-compressor');
 export const metadata = createToolMetadata(tool.slug);
 
 export default function ThumbnailCompressorPage() {
   const schemas = [
-    toolWebApplicationJsonLd(tool.slug),
+    toolSoftwareApplicationJsonLd(tool.slug),
+    toolFaqJsonLd(tool.slug),
     breadcrumbJsonLd([
       { name: 'Tools', href: '/tools' },
       { name: 'Thumbnails', href: '/tools/thumbnail' },

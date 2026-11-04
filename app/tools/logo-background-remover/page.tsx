@@ -2,14 +2,15 @@ import { createToolMetadata, getTool } from '@/lib/metadata';
 import ToolPageShell from '@/components/tools/ToolPageShell';
 import LogoBackgroundRemover from '@/components/tools/LogoBackgroundRemover';
 import JsonLd from '@/components/seo/JsonLd';
-import { toolWebApplicationJsonLd, breadcrumbJsonLd } from '@/lib/structured-data';
+import { toolSoftwareApplicationJsonLd, toolFaqJsonLd, breadcrumbJsonLd } from '@/lib/structured-data';
 
 const tool = getTool('logo-background-remover');
 export const metadata = createToolMetadata(tool.slug);
 
 export default function LogoBackgroundRemoverPage() {
   const schemas = [
-    toolWebApplicationJsonLd(tool.slug),
+    toolSoftwareApplicationJsonLd(tool.slug),
+    toolFaqJsonLd(tool.slug),
     breadcrumbJsonLd([
       { name: 'Tools', href: '/tools' },
       { name: 'Thumbnails', href: '/tools/thumbnail' },

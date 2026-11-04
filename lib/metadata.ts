@@ -17,6 +17,7 @@ interface PageMetadataOptions {
   noindex?: boolean;
   locale?: Locale;
   keywords?: string[];
+  ogImage?: string;
 }
 
 export function createPageMetadata({
@@ -26,12 +27,14 @@ export function createPageMetadata({
   noindex = false,
   locale = defaultLocale,
   keywords,
+  ogImage,
 }: PageMetadataOptions): Metadata {
   const canonicalPath = translatePath(path, locale);
   const url = new URL(canonicalPath, siteConfig.url).toString();
   const isHome = stripLocale(path) === '/';
   const socialTitle = isHome && locale === defaultLocale ? title : `${title} | ${siteConfig.name}`;
   const languageAlternates = getLanguageAlternates(path, siteConfig.url);
+  const selectedOgImage = ogImage || '/og-image.png';
 
   return {
     title: isHome && locale === defaultLocale ? { absolute: title } : title,
@@ -50,10 +53,10 @@ export function createPageMetadata({
       description,
       images: [
         {
-          url: '/og-image.png',
+          url: selectedOgImage,
           width: 1200,
           height: 630,
-          alt: `${siteConfig.name} — ${siteConfig.tagline}`,
+          alt: socialTitle,
         },
       ],
     },
@@ -61,7 +64,7 @@ export function createPageMetadata({
       card: 'summary_large_image',
       title: socialTitle,
       description,
-      images: ['/og-image.png'],
+      images: [selectedOgImage],
     },
     robots: { index: !noindex, follow: true },
   };
@@ -87,5 +90,6 @@ export function createToolMetadata(slug: string, locale: Locale = defaultLocale)
     noindex: tool.status !== 'available',
     locale,
     keywords,
+    ogImage: `/og/${slug}.png`,
   });
 }

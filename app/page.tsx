@@ -6,6 +6,8 @@ import CreatorHero from '@/components/home/CreatorHero';
 import { toolRegistry } from '@/config/site';
 import WorkflowShowcase from '@/components/home/WorkflowShowcase';
 import WorkflowDestinations from '@/components/home/WorkflowDestinations';
+import JsonLd from '@/components/seo/JsonLd';
+import { websiteJsonLd, organizationJsonLd } from '@/lib/structured-data';
 
 export const metadata = createPageMetadata({
   title: 'Free YouTube Creator Tools | Creovly',
@@ -17,6 +19,7 @@ export const metadata = createPageMetadata({
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={[websiteJsonLd(), organizationJsonLd()]} />
       <CreatorHero />
 
       {/* Primary tool discovery */}

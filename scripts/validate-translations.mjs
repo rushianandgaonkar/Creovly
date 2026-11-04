@@ -384,7 +384,7 @@ for (const page of canonicalPages) {
     }
   }
 
-  const expectedEnUrl = `https://creovly.com${page === '/' ? '/' : page}`;
+  const expectedEnUrl = `https://creovly.com${page === '/' ? '' : page}`;
   if (alternates['en'] !== expectedEnUrl) {
     console.error(`  ❌ Incorrect English canonical URL for ${page}: ${alternates['en']}`);
     seoTagErrors++;

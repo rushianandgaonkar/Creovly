@@ -9,20 +9,31 @@ import { toolRegistry } from '@/config/site';
 import WorkedExampleCard from './WorkedExampleCard';
 import ActionChecklist from './ActionChecklist';
 import { useI18n, LocalizedLink } from '@/lib/i18n';
+import { getLocalizedGuide } from '@/config/guides-i18n';
 
 interface GuideArticleProps {
   guide: GuideItem;
 }
 
 export default function GuideArticle({ guide }: GuideArticleProps) {
-  const { t } = useI18n();
+  const { locale, t } = useI18n();
   const relatedTools = toolRegistry.filter((t) => guide.relatedToolIds.includes(t.id));
-  const localizedItem = t.guides.items[guide.slug as keyof typeof t.guides.items];
+  const locGuide = getLocalizedGuide(guide.slug, locale);
 
-  const displayTitle = localizedItem?.title || guide.title;
-  const displayCategory = localizedItem?.category || guide.category;
-  const displayReadTime = localizedItem?.readTime || guide.readTime;
-  const displayDesc = localizedItem?.description || guide.description;
+  const displayTitle = locGuide?.title || guide.title;
+  const displayCategory = locGuide?.category || guide.category;
+  const displayReadTime = locGuide?.readTime || guide.readTime;
+  const displayDesc = locGuide?.description || guide.description;
+  const displaySections = locGuide?.contentSections || guide.contentSections;
+  const displayWorkedExample = locGuide?.workedExample || guide.workedExample;
+  const displayChecklist = locGuide?.checklist || guide.checklist;
+
+  // Map official sources, using localized descriptions where available
+  const displaySources = guide.officialSources.map((source, idx) => ({
+    ...source,
+    description: locGuide?.officialSources?.[idx]?.description || source.description,
+    label: locGuide?.officialSources?.[idx]?.label || source.label,
+  }));
 
   return (
     <article className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
@@ -70,7 +81,7 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
       </PageHero>
 
       {/* Official Documentation Citations */}
-      {guide.officialSources.length > 0 && (
+      {displaySources.length > 0 && (
         <aside
           aria-label="Official Documentation"
           className="mb-10 p-5 rounded-xl border border-[var(--border-hairline-strong)] bg-[var(--bg-canvas-subtle)]"
@@ -84,7 +95,7 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
             {t.guides.article.sourcesDescription}
           </p>
           <ul className="space-y-2">
-            {guide.officialSources.map((source, idx) => (
+            {displaySources.map((source, idx) => (
               <li key={idx} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2 text-xs">
                 <a
                   href={source.url}
@@ -111,7 +122,7 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
 
       {/* Main Editorial Content */}
       <div className="space-y-8 text-[var(--text-body)] leading-relaxed text-sm sm:text-base">
-        {guide.contentSections.map((section, idx) => (
+        {displaySections.map((section, idx) => (
           <section key={idx} className="space-y-3">
             <h2 className="text-lg sm:text-xl font-bold tracking-tight text-[var(--text-ink)]">
               {section.heading}
@@ -130,10 +141,10 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
       </div>
 
       {/* Worked Example */}
-      <WorkedExampleCard example={guide.workedExample} />
+      <WorkedExampleCard example={displayWorkedExample} />
 
       {/* Actionable Pre-Publish Checklist */}
-      <ActionChecklist items={guide.checklist} guideTitle={displayTitle} />
+      <ActionChecklist items={displayChecklist} guideTitle={displayTitle} />
 
       {/* Related Tools Section */}
       {relatedTools.length > 0 && (

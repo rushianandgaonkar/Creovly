@@ -6,6 +6,7 @@ export const metadata = createPageMetadata({
   description:
     'Learn about Creovly: an independent, privacy-first pre-publish command center offering 100% in-browser YouTube creator tools to compress thumbnails, test title hooks, check Shorts safe zones, and model revenue.',
   path: '/about',
+  ogImage: '/og/about.png',
 });
 
 export default function AboutPage() {

@@ -102,12 +102,12 @@ export function getLanguageAlternates(pathname: string, baseUrl: string = 'https
   const alts: Record<string, string> = {};
   for (const loc of supportedLocales) {
     if (loc === defaultLocale) {
-      alts[loc] = `${normalizedBaseUrl}${base}`;
+      alts[loc] = `${normalizedBaseUrl}${cleanBase}`;
     } else {
       alts[loc] = `${normalizedBaseUrl}/${loc}${cleanBase}`;
     }
   }
-  alts['x-default'] = `${normalizedBaseUrl}${base}`;
+  alts['x-default'] = `${normalizedBaseUrl}${cleanBase}`;
   return alts;
 }
 

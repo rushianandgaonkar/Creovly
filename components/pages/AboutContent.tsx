@@ -5,6 +5,7 @@ import PageHero from '@/components/ui/PageHero';
 import Badge from '@/components/ui/Badge';
 import Button from '@/components/ui/Button';
 import SpotlightCard from '@/components/ui/SpotlightCard';
+import LinkToUs from '@/components/ui/LinkToUs';
 import { useI18n, LocalizedLink } from '@/lib/i18n';
 
 export default function AboutContent() {
@@ -114,6 +115,9 @@ export default function AboutContent() {
             </SpotlightCard>
           </div>
         </section>
+
+        {/* Link to Us & Press Kit Section */}
+        <LinkToUs />
 
         {/* Independent Status Disclaimer & Legal Transparency */}
         <section className="p-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] space-y-3">

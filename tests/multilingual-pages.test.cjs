@@ -289,3 +289,31 @@ test('all 8 languages render educational guidance and interactive UI strings', (
     assert.ok(ws.exportZip && ws.exportZip.length > 5, `exportZip missing in ${locale}`);
   }
 });
+
+test('all 8 languages provide complete localized guide articles with sections, examples, checklists, and FAQs', () => {
+  const guidesConfig = loadTsModule('config/guides-i18n.ts');
+  const GUIDE_SLUGS = [
+    'youtube-thumbnail-blueprint',
+    'decoding-youtube-rpm',
+    'youtube-shorts-safe-zone',
+  ];
+
+  for (const locale of LOCALES) {
+    for (const slug of GUIDE_SLUGS) {
+      const guide = guidesConfig.getLocalizedGuide(slug, locale);
+      assert.ok(guide, `Guide ${slug} missing in ${locale}`);
+      assert.ok(guide.title && guide.title.length > 5, `Title missing for ${slug} in ${locale}`);
+      assert.ok(guide.description && guide.description.length > 10, `Description missing for ${slug} in ${locale}`);
+      assert.ok(guide.contentSections && guide.contentSections.length >= 3, `Sections missing for ${slug} in ${locale}`);
+      for (const section of guide.contentSections) {
+        assert.ok(section.heading && section.heading.length > 3, `Heading missing in ${slug} (${locale})`);
+        assert.ok(section.body && section.body.length > 20, `Body missing in ${slug} (${locale})`);
+      }
+      assert.ok(guide.workedExample && guide.workedExample.title, `Worked example missing for ${slug} in ${locale}`);
+      assert.ok(guide.workedExample.steps && guide.workedExample.steps.length >= 3, `Steps missing for ${slug} in ${locale}`);
+      assert.ok(guide.checklist && guide.checklist.length >= 3, `Checklist missing for ${slug} in ${locale}`);
+      assert.ok(guide.faqs && guide.faqs.length >= 3, `FAQs missing for ${slug} in ${locale}`);
+    }
+  }
+});
+

@@ -49,7 +49,7 @@ export const Footer: React.FC = () => {
   ];
 
   const companyLinks = [
-    { name: t.common.nav.about, href: '/about' },
+    { name: `${t.common.nav.about} / Press`, href: '/about' },
     { name: t.common.nav.contact, href: '/contact' },
     { name: t.common.nav.privacy, href: '/privacy' },
     { name: t.common.nav.terms, href: '/terms' },

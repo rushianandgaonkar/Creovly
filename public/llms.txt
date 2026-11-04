@@ -2,7 +2,7 @@
 
 > Create smarter. Publish better.
 
-Creovly is a private, in-browser workspace for YouTube creators. Compress thumbnails, check title hooks, verify Shorts safe zones, and model revenue locally. All processing runs locally in the creator's browser with zero cloud storage, zero tracking, and complete privacy.
+Creovly is a private, in-browser workspace for YouTube creators. Compress thumbnails, check title hooks, verify Shorts safe zones, and model revenue locally. All media processing runs 100% locally in the creator's browser with zero cloud storage, zero file uploads, and complete user privacy. Optional, privacy-conscious usage metrics require explicit consent via Google Consent Mode v2.
 
 ## Core Features
 

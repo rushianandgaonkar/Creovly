@@ -76,7 +76,7 @@ export const footerNavigation = {
     },
   ],
   company: [
-    { name: 'About Creovly', href: '/about' },
+    { name: 'About Creovly / Press', href: '/about' },
     { name: 'Contact Us', href: '/contact' },
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },

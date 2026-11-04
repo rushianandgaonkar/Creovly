@@ -4,7 +4,7 @@ import { guides, getGuideBySlug } from '@/lib/guides';
 import { createPageMetadata } from '@/lib/metadata';
 import GuideArticle from '@/components/guides/GuideArticle';
 import JsonLd from '@/components/seo/JsonLd';
-import { guideArticleJsonLd, breadcrumbJsonLd } from '@/lib/structured-data';
+import { guideArticleJsonLd, guideFaqJsonLd, breadcrumbJsonLd } from '@/lib/structured-data';
 
 interface GuidePageProps {
   params: Promise<{
@@ -31,10 +31,13 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
     });
   }
 
+  const ogImage = slug === 'youtube-shorts-safe-zone' ? '/og/guide-youtube-shorts-safe-zone.png' : `/og/${slug}.png`;
+
   return createPageMetadata({
     title: guide.title,
     description: guide.description,
     path: `/guides/${guide.slug}`,
+    ogImage,
   });
 }
 
@@ -48,15 +51,16 @@ export default async function GuidePage({ params }: GuidePageProps) {
 
   const schemas = [
     guideArticleJsonLd(guide),
+    guideFaqJsonLd(guide.slug),
     breadcrumbJsonLd([
       { name: 'Guides', href: '/guides' },
       { name: guide.title, href: `/guides/${guide.slug}` },
     ]),
-  ];
+  ].filter(Boolean);
 
   return (
     <>
-      <JsonLd data={schemas} />
+      <JsonLd data={schemas as Record<string, unknown>[]} />
       <GuideArticle guide={guide} />
     </>
   );

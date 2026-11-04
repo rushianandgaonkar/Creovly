@@ -3,14 +3,15 @@ import ToolPageShell from '@/components/tools/ToolPageShell';
 import ThumbnailResizer from '@/components/tools/ThumbnailResizer';
 import styles from '@/components/ui/artwork.module.css';
 import JsonLd from '@/components/seo/JsonLd';
-import { toolWebApplicationJsonLd, breadcrumbJsonLd } from '@/lib/structured-data';
+import { toolSoftwareApplicationJsonLd, toolFaqJsonLd, breadcrumbJsonLd } from '@/lib/structured-data';
 
 const tool = getTool('youtube-thumbnail-resizer');
 export const metadata = createToolMetadata(tool.slug);
 
 export default function ThumbnailResizerPage() {
   const schemas = [
-    toolWebApplicationJsonLd(tool.slug),
+    toolSoftwareApplicationJsonLd(tool.slug),
+    toolFaqJsonLd(tool.slug),
     breadcrumbJsonLd([
       { name: 'Tools', href: '/tools' },
       { name: 'Thumbnails', href: '/tools/thumbnail' },
