@@ -87,7 +87,7 @@ export const toolRegistry: ToolDefinition[] = [
   {
     id: 'logo-background-remover', title: 'Logo Background Remover', slug: 'logo-background-remover',
     href: '/tools/logo-background-remover', category: 'thumbnail', categoryLabel: 'Thumbnail Tools',
-    description: 'Remove a solid-color background from your existing logo locally. Compare before and after, then download a transparent PNG.',
+    description: "Remove solid-color backgrounds from logos online for free. Preview the result and download a transparent PNG with Creovly's browser-based logo remover.",
     status: 'available', seoTarget: 'Logo Background Remover',
   },
   {
@@ -98,7 +98,7 @@ export const toolRegistry: ToolDefinition[] = [
     category: 'thumbnail',
     categoryLabel: 'Thumbnail Tools',
     description:
-      'Compress up to 10 JPEG, PNG, or WebP thumbnails locally. Compare each result and download images individually or together as a ZIP.',
+      'Compress YouTube thumbnails online for free. Reduce JPEG, PNG and WebP file sizes in your browser, compare results and download optimized images.',
     status: 'available',
     seoTarget: 'YouTube Thumbnail Compressor',
   },
@@ -110,7 +110,7 @@ export const toolRegistry: ToolDefinition[] = [
     category: 'thumbnail',
     categoryLabel: 'Thumbnail Tools',
     description:
-      'Resize thumbnails, channel banners, profile pictures and watermark assets locally, with framing guides, custom dimensions and image downloads.',
+      'Resize YouTube thumbnails online for free. Adjust images to 1280x720 or custom dimensions, preview framing and download ready-to-use files.',
     status: 'available',
     seoTarget: 'YouTube Thumbnail Resizer',
   },
@@ -123,7 +123,7 @@ export const toolRegistry: ToolDefinition[] = [
     category: 'thumbnail',
     categoryLabel: 'Thumbnail Tools',
     description:
-      'Check a still frame against adjustable planning margins, mark important content, and export an annotated Shorts guide.',
+      'Check YouTube Shorts safe zones before publishing. Preview placement guides, keep important content clear of overlays and export an annotated guide.',
     status: 'available',
     seoTarget: 'YouTube Shorts Safe Zone',
   },
@@ -135,7 +135,7 @@ export const toolRegistry: ToolDefinition[] = [
     category: 'title',
     categoryLabel: 'Title Tools',
     description:
-      'Check title length, punctuation, whitespace, and topic phrase placement with an illustrative wrapping preview.',
+      'Check YouTube video titles for free. Analyze title length, punctuation, keyword placement and mobile text wrapping before publishing your next video.',
     status: 'available',
     seoTarget: 'YouTube Title Checker',
   },
@@ -147,7 +147,7 @@ export const toolRegistry: ToolDefinition[] = [
     category: 'money-growth',
     categoryLabel: 'Money & Growth',
     description:
-      'Model monthly and annual creator revenue from your views and an RPM range you supply.',
+      'Estimate YouTube earnings with a free revenue calculator. Enter monthly views and RPM ranges to model potential monthly and yearly creator income.',
     status: 'available',
     seoTarget: 'YouTube Revenue Calculator',
   },
@@ -159,7 +159,7 @@ export const toolRegistry: ToolDefinition[] = [
     category: 'money-growth',
     categoryLabel: 'Money & Growth',
     description:
-      'Calculate revenue per 1,000 views from creator revenue and views in the same period.',
+      'Calculate YouTube RPM for free. Enter your total revenue and video views to find earnings per 1,000 views and better understand channel performance.',
     status: 'available',
     seoTarget: 'YouTube RPM Calculator',
   },
@@ -171,7 +171,7 @@ export const toolRegistry: ToolDefinition[] = [
     category: 'money-growth',
     categoryLabel: 'Money & Growth',
     description:
-      'Calculate hours remaining, additional views, and a constant-pace timeline toward your chosen watch-hours goal.',
+      'Calculate YouTube watch hours and estimate views needed to reach your goal. Track remaining hours using average view duration and viewing pace.',
     status: 'available',
     seoTarget: 'YouTube Watch Hours Calculator',
   },
@@ -183,7 +183,7 @@ export const toolRegistry: ToolDefinition[] = [
     category: 'money-growth',
     categoryLabel: 'Money & Growth',
     description:
-      'Combine platform income, sponsorships, affiliates, and other income, then subtract costs for a monthly scenario.',
+      'Estimate YouTube creator income from ads, sponsorships, affiliates and other sources. Subtract expenses to model your potential monthly earnings.',
     status: 'available',
     seoTarget: 'YouTube Monetization Calculator',
   },

@@ -116,7 +116,7 @@ export default function AboutContent() {
           </div>
         </section>
 
-        {/* Link to Us & Press Kit Section */}
+        {/* Media Kit & Brand Assets Section */}
         <LinkToUs />
 
         {/* Independent Status Disclaimer & Legal Transparency */}

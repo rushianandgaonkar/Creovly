@@ -25,6 +25,16 @@ export default function nextConfig(phase) {
             destination: '/sitemap.xml',
             permanent: true,
           },
+          {
+            source: '/media-kit',
+            destination: '/about',
+            permanent: true,
+          },
+          {
+            source: '/press',
+            destination: '/about',
+            permanent: true,
+          },
         ];
       },
     }),
