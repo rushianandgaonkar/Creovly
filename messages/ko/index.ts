@@ -1179,7 +1179,7 @@ export const messagesKo: Messages = {
         },
         messageLabel: '문의 내용',
         messagePlaceholder: '의견이나 겪으신 문제, 원하시는 기능을 자세히 적어주세요...',
-        buttonSubmit: '이메일 앱을 통해 전송',
+        buttonSubmit: '이메일 앱 열기',
         buttonCopy: '메시지 내용 복사',
         privacyNote: '서버 저장 제로: 전송 버튼을 누르면 작성된 내용이 담긴 기본 이메일 프로그램이 열립니다. 데이터베이스에 문의 내역이 저장되지 않습니다.',
         submittedHeading: '메일 작성창이 준비되었습니다',

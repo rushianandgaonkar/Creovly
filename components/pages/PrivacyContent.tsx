@@ -128,11 +128,11 @@ export default function PrivacyContent() {
         </section>
 
         {/* Contact Information */}
-        <section className="p-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] space-y-2">
+        <section className="p-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-3">
           <h2 className="text-base font-semibold text-[var(--text-ink)]">
             {sections.contactTitle}
           </h2>
-          <p className="text-xs text-[var(--text-body)]">
+          <p>
             {sections.contactBodyPrefix}
             <a href="mailto:support@creovly.com" className="text-[var(--brand-accent)] font-medium hover:underline">
               support@creovly.com

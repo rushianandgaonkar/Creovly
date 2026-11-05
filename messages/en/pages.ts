@@ -64,7 +64,7 @@ export const pages = {
       },
       messageLabel: 'Your message',
       messagePlaceholder: 'Describe your feedback, bug report, or feature request in detail...',
-      buttonSubmit: 'Send message via email client',
+      buttonSubmit: 'Email Client',
       buttonCopy: 'Copy message text',
       privacyNote:
         'Zero server storage: submitting opens your default email client with your pre-formatted message. No form data is saved to a database.',

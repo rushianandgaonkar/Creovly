@@ -1179,7 +1179,7 @@ export const messagesJa: Messages = {
         },
         messageLabel: 'メッセージ本文',
         messagePlaceholder: 'ご意見、遭遇した問題、ご要望の詳細をご記入ください...',
-        buttonSubmit: 'メールソフトを起動して送信',
+        buttonSubmit: 'メールソフト起動',
         buttonCopy: 'メッセージ内容をコピー',
         privacyNote: 'サーバー保存ゼロ: 送信ボタンを押すと、お使いの標準メールアプリが起動します。お問い合わせ内容が当サイトのサーバーやDBに保存されることはありません。',
         submittedHeading: 'メール作成画面の準備完了',

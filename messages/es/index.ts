@@ -1179,7 +1179,7 @@ export const messagesEs: Messages = {
         },
         messageLabel: 'Tu mensaje',
         messagePlaceholder: 'Detalla tus comentarios, error encontrado o función deseada...',
-        buttonSubmit: 'Enviar mensaje mediante cliente de correo',
+        buttonSubmit: 'Cliente de correo',
         buttonCopy: 'Copiar texto del mensaje',
         privacyNote: 'Cero almacenamiento en servidor: al enviar se abrirá tu gestor de correo predeterminado con el mensaje preparado. Ningún dato se guarda en bases de datos.',
         submittedHeading: 'Mensaje preparado',

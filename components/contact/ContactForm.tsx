@@ -197,7 +197,7 @@ export default function ContactForm() {
       </div>
 
       <div className="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-        <Button type="submit" variant="primary" size="md">
+        <Button type="submit" variant="primary" size="md" className="shrink-0">
           {contact.form.buttonSubmit} &rarr;
         </Button>
         <span className="text-[11px] text-[var(--text-muted)]">

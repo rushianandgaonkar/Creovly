@@ -15,7 +15,7 @@ export interface ButtonProps {
 }
 
 const baseStyles =
-  'inline-flex items-center justify-center font-medium transition-all duration-150 select-none focus-ring cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none';
+  'inline-flex items-center justify-center whitespace-nowrap font-medium transition-all duration-150 select-none focus-ring cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none';
 
 const variantStyles = {
   // App & marketing primary (Obsidian pill with ambient shadow)

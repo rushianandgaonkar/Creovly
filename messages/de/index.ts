@@ -1179,7 +1179,7 @@ export const messagesDe: Messages = {
         },
         messageLabel: 'Ihre Nachricht',
         messagePlaceholder: 'Beschreiben Sie Ihr Feedback, das Problem oder Ihren Vorschlag ausführlich...',
-        buttonSubmit: 'Über E-Mail-Programm senden',
+        buttonSubmit: 'E-Mail-Programm',
         buttonCopy: 'Nachrichtentext kopieren',
         privacyNote: 'Keine Server-Speicherung: Beim Absenden öffnet sich Ihr Standard-Mailprogramm mit dem vorbereiteten Text. Es werden keine Daten in Datenbanken gespeichert.',
         submittedHeading: 'E-Mail vorbereitet',

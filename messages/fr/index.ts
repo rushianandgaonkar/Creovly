@@ -1179,7 +1179,7 @@ export const messagesFr: Messages = {
         },
         messageLabel: 'Votre message',
         messagePlaceholder: 'Détaillez vos remarques, le dysfonctionnement rencontré ou la fonctionnalité souhaitée...',
-        buttonSubmit: 'Envoyer via votre logiciel de messagerie',
+        buttonSubmit: 'Client de messagerie',
         buttonCopy: 'Copier le texte du message',
         privacyNote: 'Zéro enregistrement sur serveur : l’envoi ouvre votre logiciel de messagerie avec le texte préparé. Aucune donnée n’est stockée dans une base de données.',
         submittedHeading: 'Message préparé',

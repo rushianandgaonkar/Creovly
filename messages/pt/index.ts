@@ -1179,7 +1179,7 @@ export const messagesPt: Messages = {
         },
         messageLabel: 'A sua mensagem',
         messagePlaceholder: 'Descreva a sua dúvida, sugestão ou o problema detetado com o máximo detalhe...',
-        buttonSubmit: 'Enviar através do cliente de e-mail',
+        buttonSubmit: 'Cliente de e-mail',
         buttonCopy: 'Copiar texto da mensagem',
         privacyNote: 'Zero armazenamento em servidor: ao submeter, a sua aplicação de e-mail predefinida abre-se com o texto pronto. Nenhum dado é guardado em bases de dados.',
         submittedHeading: 'Mensagem preparada',

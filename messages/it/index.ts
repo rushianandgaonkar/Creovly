@@ -1179,7 +1179,7 @@ export const messagesIt: Messages = {
         },
         messageLabel: 'Il tuo messaggio',
         messagePlaceholder: 'Descrivi la tua richiesta, il problema riscontrato o la funzione che vorresti...',
-        buttonSubmit: 'Invia tramite client di posta',
+        buttonSubmit: 'Client di posta',
         buttonCopy: 'Copia testo del messaggio',
         privacyNote: 'Nessun salvataggio su server: facendo clic si aprirà il tuo programma di posta predefinito con il testo pronto. Nessun dato viene archiviato in database.',
         submittedHeading: 'Messaggio preparato',
