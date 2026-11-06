@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
   const ogImage = slug === 'youtube-shorts-safe-zone' ? '/og/guide-youtube-shorts-safe-zone.png' : `/og/${slug}.png`;
 
   return createPageMetadata({
-    title: guide.title,
+    title: guide.seoTitle || guide.title,
     description: guide.description,
     path: `/guides/${guide.slug}`,
     ogImage,

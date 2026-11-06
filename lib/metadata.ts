@@ -20,6 +20,14 @@ interface PageMetadataOptions {
   ogImage?: string;
 }
 
+// Titles get " | Creovly" from the root layout's title template, so drop any
+// brand suffix already baked into a title (e.g. "Contacto — Creovly").
+const BRAND_SUFFIX = new RegExp(`\\s*[—–|-]\\s*${siteConfig.name}\\s*$`, 'u');
+
+export function stripBrandSuffix(title: string): string {
+  return title.replace(BRAND_SUFFIX, '').trim();
+}
+
 export function createPageMetadata({
   title,
   description,
@@ -29,6 +37,7 @@ export function createPageMetadata({
   keywords,
   ogImage,
 }: PageMetadataOptions): Metadata {
+  title = stripBrandSuffix(title);
   const canonicalPath = translatePath(path, locale);
   const url = new URL(canonicalPath, siteConfig.url).toString();
   const isHome = stripLocale(path) === '/';

@@ -49,9 +49,9 @@ export default function ContactContent() {
         {/* Direct Sidebar Column */}
         <div className="space-y-6 text-xs text-[var(--text-body)]">
           <div className="p-5 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-3">
-            <h3 className="font-semibold text-sm text-[var(--text-ink)]">
+            <h2 className="font-semibold text-sm text-[var(--text-ink)]">
               {sidebar.directTitle}
-            </h3>
+            </h2>
             <p className="leading-relaxed">
               {sidebar.directBody}
             </p>
@@ -64,18 +64,18 @@ export default function ContactContent() {
           </div>
 
           <div className="p-5 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-2">
-            <h3 className="font-semibold text-sm text-[var(--text-ink)]">
+            <h2 className="font-semibold text-sm text-[var(--text-ink)]">
               {sidebar.responseTitle}
-            </h3>
+            </h2>
             <p className="leading-relaxed text-[var(--text-muted)]">
               {sidebar.responseBody}
             </p>
           </div>
 
           <div className="p-5 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-2">
-            <h3 className="font-semibold text-sm text-[var(--text-ink)]">
+            <h2 className="font-semibold text-sm text-[var(--text-ink)]">
               {sidebar.featuresTitle}
-            </h3>
+            </h2>
             <p className="leading-relaxed text-[var(--text-muted)]">
               {sidebar.featuresBody}
             </p>

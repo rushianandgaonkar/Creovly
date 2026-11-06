@@ -93,8 +93,8 @@ export async function generateMetadata({ params }: LocalizedCatchAllProps): Prom
   if (slugPath === 'tools/thumbnail') {
     const t = content.tools['youtube-thumbnail-compressor'];
     return createPageMetadata({
-      title: `${content.nav.tools} — ${t?.categoryLabel || 'Thumbnails'}`,
-      description: content.toolsDirectory.description,
+      title: content.thumbnailCategory?.title || t?.categoryLabel || 'Thumbnail Tools',
+      description: content.thumbnailCategory?.description || content.toolsDirectory.description,
       path: '/tools/thumbnail',
       locale: loc,
       keywords: t?.keywords,
@@ -150,7 +150,7 @@ export async function generateMetadata({ params }: LocalizedCatchAllProps): Prom
     const guide = getGuideBySlug(slug[1]);
     if (guide) {
       const locGuide = getLocalizedGuide(guide.slug, loc);
-      const title = locGuide?.title || guide.title;
+      const title = locGuide?.seoTitle || locGuide?.title || guide.seoTitle || guide.title;
       const description = locGuide?.description || guide.description;
       const ogImage =
         guide.slug === 'youtube-shorts-safe-zone'

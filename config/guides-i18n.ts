@@ -30,6 +30,8 @@ export interface LocalizedFaqItem {
 
 export interface LocalizedGuideData {
   title: string;
+  /** Shorter <title> for search results (≤50 chars; layout adds " | Creovly"). */
+  seoTitle?: string;
   category: string;
   readTime: string;
   description: string;
@@ -44,6 +46,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
   en: {
     'youtube-thumbnail-blueprint': {
       title: 'The YouTube Thumbnail Blueprint: File Limits, Dimensions & CTR',
+      seoTitle: 'YouTube Thumbnail Size, Limits & CTR Guide',
       category: 'Visual Packaging',
       readTime: '6 min read',
       description: 'Verified platform guidelines for 1280×720 aspect ratios, 2 MB mobile upload limits, and mobile-first legibility to maximize visual clarity.',
@@ -103,6 +106,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
     },
     'decoding-youtube-rpm': {
       title: 'Decoding YouTube RPM: How Creators Actually Get Paid in 2026',
+      seoTitle: 'YouTube RPM Explained: How Creators Get Paid',
       category: 'Monetization',
       readTime: '8 min read',
       description: 'A mathematical analysis of creator RPM vs advertiser CPM, geographic audience tiers, platform revenue shares, and net earnings calculation.',
@@ -162,6 +166,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
     },
     'youtube-shorts-safe-zone': {
       title: 'Shorts Safe Zones: Keeping Subtitles & Faces Unobscured',
+      seoTitle: 'Shorts Safe Zones: Keep Subtitles & Faces Clear',
       category: 'Shorts & Vertical Video',
       readTime: '5 min read',
       description: 'Technical dimensions and UI overlay margins for 9:16 vertical video. Prevent engagement buttons and title tags from blocking your hook.',
@@ -224,6 +229,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
   es: {
     'youtube-thumbnail-blueprint': {
       title: 'Guía técnica de miniaturas de YouTube: Límites, dimensiones y CTR',
+      seoTitle: 'Miniaturas de YouTube: tamaño, límites y CTR',
       category: 'Presentación visual',
       readTime: '6 min de lectura',
       description: 'Pautas oficiales de la plataforma para proporciones 16:9, límite de 2 MB en móviles y legibilidad móvil para maximizar el CTR.',
@@ -283,6 +289,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
     },
     'decoding-youtube-rpm': {
       title: 'Descifrando el RPM de YouTube: Cómo cobran realmente los creadores en 2026',
+      seoTitle: 'RPM de YouTube: cómo cobran los creadores',
       category: 'Monetización',
       readTime: '8 min de lectura',
       description: 'Análisis matemático de RPM frente a CPM, distribución geográfica de audiencia, comisión de YouTube y cálculo de ganancias netas.',
@@ -342,6 +349,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
     },
     'youtube-shorts-safe-zone': {
       title: 'Zonas seguras en Shorts: Mantener subtítulos y rostros visibles',
+      seoTitle: 'Zonas seguras en Shorts: subtítulos y rostros',
       category: 'Shorts y vídeo vertical',
       readTime: '5 min de lectura',
       description: 'Medidas técnicas y márgenes de interfaz para formato vertical 9:16. Evita que los botones de interacción tapen tu gancho.',
@@ -584,6 +592,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
   fr: {
     'youtube-thumbnail-blueprint': {
       title: 'Le guide des miniatures YouTube : dimensions, limites et CTR',
+      seoTitle: 'Miniatures YouTube : dimensions, limites et CTR',
       category: 'Packaging visuel',
       readTime: '6 min de lecture',
       description: 'Spécifications officielles pour le ratio 16:9, la limite de 2 Mo sur mobile et la lisibilité smartphone afin de maximiser le taux de clics.',
@@ -643,6 +652,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
     },
     'decoding-youtube-rpm': {
       title: 'Comprendre le RPM YouTube : la vraie rémunération des créateurs en 2026',
+      seoTitle: 'RPM YouTube : comment les créateurs sont payés',
       category: 'Monétisation',
       readTime: '8 min de lecture',
       description: 'Analyse mathématique du RPM créateur par rapport au CPM annonceur, répartition géographique et calcul des revenus nets.',
@@ -702,6 +712,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
     },
     'youtube-shorts-safe-zone': {
       title: 'Zones sécurisées Shorts : protéger sous-titres et visages des boutons UI',
+      seoTitle: 'Zones sécurisées Shorts : sous-titres et visages',
       category: 'Shorts & vidéo verticale',
       readTime: '5 min de lecture',
       description: 'Dimensions et marges d’interface pour la vidéo verticale 9:16. Empêchez les boutons d’interaction de masquer vos accroches.',
@@ -764,6 +775,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
   de: {
     'youtube-thumbnail-blueprint': {
       title: 'Der YouTube-Thumbnail-Leitfaden: Dateilimits, Maße & Klickrate',
+      seoTitle: 'YouTube-Thumbnails: Maße, Limits & Klickrate',
       category: 'Visuelle Gestaltung',
       readTime: '6 Min. Lesezeit',
       description: 'Offizielle Plattform-Richtlinien für 16:9-Format, 1280×720 Pixel, 2-MB-Upload-Limit auf Mobilgeräten und Lesbarkeit auf Smartphones.',
@@ -823,6 +835,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
     },
     'decoding-youtube-rpm': {
       title: 'YouTube-RPM erklärt: Wie Creator 2026 tatsächlich bezahlt werden',
+      seoTitle: 'YouTube-RPM erklärt: So verdienen Creator',
       category: 'Monetarisierung',
       readTime: '8 Min. Lesezeit',
       description: 'Mathematische Analyse von Creator-RPM gegenüber Werbetreibenden-CPM, Länder-Tiers und Netto-Einnahmenberechnung.',
@@ -882,6 +895,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
     },
     'youtube-shorts-safe-zone': {
       title: 'Shorts-Safe-Zones: Untertitel und Gesichter vor UI-Elementen schützen',
+      seoTitle: 'Shorts-Safe-Zones: Untertitel & Gesichter',
       category: 'Shorts & Vertikalvideo',
       readTime: '5 Min. Lesezeit',
       description: 'Technische Maße und UI-Überlagerungsgrenzen für 9:16-Vertikalvideos. Verhindern Sie, dass Abo-Buttons wichtige Bildinhalte verdecken.',
@@ -944,6 +958,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
   pt: {
     'youtube-thumbnail-blueprint': {
       title: 'Guia definitivo de miniaturas do YouTube: limites, dimensões e CTR',
+      seoTitle: 'Miniaturas do YouTube: tamanho, limites e CTR',
       category: 'Identidade visual',
       readTime: '6 min de leitura',
       description: 'Diretrizes oficiais da plataforma para proporção 16:9, limite de 2 MB no celular e legibilidade móvel para maximizar sua taxa de cliques.',
@@ -1003,6 +1018,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
     },
     'decoding-youtube-rpm': {
       title: 'Decodificando o RPM do YouTube: como os criadores são pagos em 2026',
+      seoTitle: 'RPM do YouTube: como os criadores são pagos',
       category: 'Monetização',
       readTime: '8 min de leitura',
       description: 'Análise matemática de RPM frente a CPM, faixas geográficas de audiência e cálculo exato de ganhos líquidos.',
@@ -1062,6 +1078,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
     },
     'youtube-shorts-safe-zone': {
       title: 'Zonas seguras no Shorts: mantendo legendas e rostos desobstruídos',
+      seoTitle: 'Zonas seguras no Shorts: legendas e rostos',
       category: 'Shorts e vídeo vertical',
       readTime: '5 min de leitura',
       description: 'Dimensões técnicas e margens da interface para vídeos verticais 9:16. Evite que botões e títulos cubram seu conteúdo.',
@@ -1304,6 +1321,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
   it: {
     'youtube-thumbnail-blueprint': {
       title: 'Guida definitiva alle miniature YouTube: limiti, dimensioni e CTR',
+      seoTitle: 'Miniature YouTube: dimensioni, limiti e CTR',
       category: 'Packaging visivo',
       readTime: '6 min di lettura',
       description: 'Linee guida ufficiali della piattaforma per proporzioni 16:9, limite di 2 MB su mobile e leggibilità su smartphone per massimizzare il CTR.',
@@ -1363,6 +1381,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
     },
     'decoding-youtube-rpm': {
       title: 'Decodifica dell’RPM di YouTube: come vengono pagati i creator nel 2026',
+      seoTitle: 'RPM di YouTube: come vengono pagati i creator',
       category: 'Monetizzazione',
       readTime: '8 min di lettura',
       description: 'Analisi matematica di RPM rispetto al CPM degli inserzionisti, fasce geografiche di pubblico e calcolo dei guadagni netti.',
@@ -1422,6 +1441,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
     },
     'youtube-shorts-safe-zone': {
       title: 'Zone sicure negli Shorts: proteggere sottotitoli e volti dai pulsanti UI',
+      seoTitle: 'Zone sicure negli Shorts: sottotitoli e volti',
       category: 'Shorts e video verticali',
       readTime: '5 min di lettura',
       description: 'Dimensioni tecniche e margini dell’interfaccia per video verticali 9:16. Evita che i pulsanti di interazione coprano i punti salienti del video.',

@@ -25,6 +25,8 @@ export interface ContentSection {
 export interface GuideItem {
   slug: string;
   title: string;
+  /** Shorter <title> for search results (≤50 chars; layout adds " | Creovly"). */
+  seoTitle?: string;
   category: string;
   readTime: string;
   description: string;
@@ -40,6 +42,7 @@ export const guides: GuideItem[] = [
   {
     slug: 'youtube-thumbnail-blueprint',
     title: 'The YouTube Thumbnail Blueprint: File Limits, Dimensions & CTR',
+    seoTitle: 'YouTube Thumbnail Size, Limits & CTR Guide',
     category: 'Visual Packaging',
     readTime: '6 min read',
     description:
@@ -118,6 +121,7 @@ export const guides: GuideItem[] = [
   {
     slug: 'decoding-youtube-rpm',
     title: 'Decoding YouTube RPM: How Creators Actually Get Paid in 2026',
+    seoTitle: 'YouTube RPM Explained: How Creators Get Paid',
     category: 'Monetization',
     readTime: '8 min read',
     description:
@@ -212,6 +216,7 @@ export const guides: GuideItem[] = [
   {
     slug: 'youtube-shorts-safe-zone',
     title: 'Shorts Safe Zones: Keeping Subtitles & Faces Unobscured',
+    seoTitle: 'Shorts Safe Zones: Keep Subtitles & Faces Clear',
     category: 'Shorts',
     readTime: '5 min read',
     description:

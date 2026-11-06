@@ -2,9 +2,9 @@ import { createPageMetadata } from '@/lib/metadata';
 import AboutContent from '@/components/pages/AboutContent';
 
 export const metadata = createPageMetadata({
-  title: 'About — The Pre-Publish Workspace for YouTube Creators',
+  title: 'About Creovly: Pre-Publish Tools for YouTubers',
   description:
-    'Learn about Creovly: an independent, privacy-first pre-publish command center offering 100% in-browser YouTube creator tools to compress thumbnails, test title hooks, check Shorts safe zones, and model revenue.',
+    'Creovly is a free, privacy-first pre-publish workspace for YouTube creators: compress thumbnails, test titles, check Shorts safe zones and model revenue.',
   path: '/about',
   ogImage: '/og/about.png',
 });

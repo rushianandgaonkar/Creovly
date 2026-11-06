@@ -158,6 +158,8 @@ export interface I18nContent {
   studio: PageTranslation;
   checklist: PageTranslation;
   toolsDirectory: PageTranslation;
+  /** Metadata for /tools/thumbnail (falls back to toolsDirectory when absent). */
+  thumbnailCategory?: PageTranslation;
   guidesIndex: PageTranslation;
   about: PageTranslation;
   contact: PageTranslation;
@@ -222,7 +224,7 @@ export const translations: Record<Locale, I18nContent> = {
       subheading: 'Technical references and platform limits verified for creators',
     },
     about: {
-      title: 'About Creovly — The Pre-Publish Workspace for YouTube Creators',
+      title: 'About Creovly: Pre-Publish Tools for YouTubers',
       description: 'Learn about Creovly: an independent, privacy-first pre-publish command center offering 100% in-browser YouTube creator tools.',
       heading: 'About Creovly',
       subheading: 'Privacy-first pre-publish workspace engineered for YouTube creators.',
@@ -333,7 +335,7 @@ export const translations: Record<Locale, I18nContent> = {
       openStudio: 'Abrir Studio',
     },
     studio: {
-      title: 'Estudio de publicación — Prepara tu próxima subida a YouTube',
+      title: 'Estudio de publicación para YouTube',
       description: 'Prepara título, descripción e imagen en un único entorno local. Revisa comprobaciones, guarda borradores y descarga tu proyecto.',
       heading: 'Estudio de publicación Creovly',
       subheading: 'Centro de control previo a la publicación para creadores de YouTube',
@@ -350,6 +352,10 @@ export const translations: Record<Locale, I18nContent> = {
       heading: 'Utilidades previas a la publicación',
       subheading: 'Herramientas locales para inspeccionar miniaturas, optimizar títulos y modelar ingresos.',
     },
+    thumbnailCategory: {
+      title: 'Herramientas de miniaturas para YouTube',
+      description: 'Prepara tus miniaturas de YouTube con redimensionado y compresión locales, más guías de encuadre para Shorts.',
+    },
     guidesIndex: {
       title: 'Guías y referencias para creadores — Creovly',
       description: 'Guías técnicas, límites de plataforma y flujos de trabajo verificados para creadores de YouTube.',
@@ -357,7 +363,7 @@ export const translations: Record<Locale, I18nContent> = {
       subheading: 'Referencias técnicas y especificaciones oficiales verificadas',
     },
     about: {
-      title: 'Acerca de Creovly — Herramientas para creadores de YouTube',
+      title: 'Acerca de Creovly: herramientas para YouTube',
       description: 'Conoce Creovly: espacio de trabajo independiente y privado que ofrece utilidades 100% locales en tu navegador.',
       heading: 'Acerca de Creovly',
       subheading: 'Espacio de trabajo privado diseñado para creadores de YouTube.',
@@ -376,7 +382,7 @@ export const translations: Record<Locale, I18nContent> = {
     },
     terms: {
       title: 'Términos de servicio — Creovly',
-      description: 'Términos de uso y derechos de propiedad intelectual de Creovly.',
+      description: 'Consulta los términos de servicio de Creovly: condiciones de uso aceptable y derechos de propiedad intelectual sobre el contenido de los creadores.',
       heading: 'Términos de servicio',
       subheading: 'Condiciones de uso claras para nuestro kit de herramientas.',
     },
@@ -454,7 +460,7 @@ export const translations: Record<Locale, I18nContent> = {
       badge: 'YouTubeクリエイター向け公開前ワークスペース',
       title: '無料のYouTubeクリエイターツール',
       subtitle: 'よりスマートに制作し、より良く公開する',
-      description: 'サムネイル圧縮・リサイズ、タイトル検証、Shortsセーフゾーン確認、収益シミュレーションをブラウザ完結で実行。',
+      description: '無料のYouTubeクリエイターツール。サムネイルの圧縮・リサイズ、タイトルの長さチェック、Shortsセーフゾーン確認、収益シミュレーションをすべてブラウザ内で実行できます。',
       launchStudio: 'Publish Studioを開く',
       exploreTools: '全ツールを見る',
       localBadge: '100%ブラウザローカル処理',
@@ -469,21 +475,25 @@ export const translations: Record<Locale, I18nContent> = {
     },
     studio: {
       title: '公開スタジオ — YouTube動画の公開前チェック＆準備',
-      description: 'タイトル・説明文・サムネイルを1つのローカル環境で統合チェック。確認後にプロジェクト一括ダウンロード可能。',
+      description: 'タイトル・説明文・サムネイルを1つのローカル環境でまとめてチェック。公開前の確認項目を見直し、テキスト下書きを保存して、プロジェクト一式をダウンロードできます。',
       heading: 'Creovly 公開スタジオ',
       subheading: 'YouTubeクリエイターのための公開前コマンドセンター',
     },
     checklist: {
       title: 'YouTube公開前チェックリスト',
-      description: '次の動画公開に向けて、ブラウザに自動保存されるチェックリストで万全の確認を実施。',
+      description: '次のYouTube動画を公開する前に、タイトル・サムネイル・説明文などをインタラクティブなチェックリストで確認。進捗はブラウザに自動保存されます。',
       heading: '公開前クリエイターチェックリスト',
       subheading: '再生回数とクリック率を最大化するための事前検証',
     },
     toolsDirectory: {
       title: 'クリエイターツール一覧ディレクトリ',
-      description: 'サムネイル、タイトル検証、Shortsフレーム、収益計算、RPM、総再生時間計算ツール。',
+      description: 'YouTubeクリエイター向けツール一覧。サムネイルの圧縮・リサイズ、タイトル検証、Shortsフレーミング、収益・RPM・総再生時間の計算ツールを無料で使えます。',
       heading: '公開前クリエイターユーティリティ',
       subheading: 'サインアップ不要。サーバー送信なし。完全クライアントサイド実行ツール。',
+    },
+    thumbnailCategory: {
+      title: 'YouTubeサムネイルツール',
+      description: 'ブラウザ内でのリサイズ・圧縮とShortsのフレーミングガイドで、YouTubeサムネイルを公開前に準備。1280×720への調整やファイルサイズの最適化も無料で行えます。',
     },
     guidesIndex: {
       title: 'クリエイターガイド＆プラットフォーム基準 — Creovly',
@@ -603,7 +613,7 @@ export const translations: Record<Locale, I18nContent> = {
       openStudio: 'Lancer Studio',
     },
     studio: {
-      title: 'Studio de publication — Préparez votre prochaine vidéo YouTube',
+      title: 'Studio de publication pour YouTube',
       description: 'Préparez votre titre, description et image dans un espace local. Vérifiez les critères et téléchargez votre dossier de projet.',
       heading: 'Studio de publication Creovly',
       subheading: 'Centre de contrôle de pré-publication pour créateurs YouTube',
@@ -619,6 +629,10 @@ export const translations: Record<Locale, I18nContent> = {
       description: 'Outils pour miniatures, titres, cadrage Shorts, revenus, RPM et heures de visionnage.',
       heading: 'Utilitaires créateurs locaux',
       subheading: 'Sans inscription. Zéro transfert de fichiers. Traitement local et sécurisé.',
+    },
+    thumbnailCategory: {
+      title: 'Outils de miniatures YouTube',
+      description: 'Préparez vos miniatures YouTube avec redimensionnement et compression locaux, plus des repères de cadrage pour les Shorts.',
     },
     guidesIndex: {
       title: 'Guides créateurs et repères de plateforme — Creovly',
@@ -738,7 +752,7 @@ export const translations: Record<Locale, I18nContent> = {
       openStudio: 'Studio starten',
     },
     studio: {
-      title: 'Veröffentlichungs-Studio — YouTube-Uploads optimal vorbereiten',
+      title: 'Veröffentlichungs-Studio für YouTube',
       description: 'Titel, Beschreibung und Thumbnail lokal abstimmen, Checks durchführen und als fertiges Projektpaket herunterladen.',
       heading: 'Creovly Veröffentlichungs-Studio',
       subheading: 'Die Pre-Publish-Kommandozentrale für erfolgreiche YouTube-Creator',
@@ -755,6 +769,10 @@ export const translations: Record<Locale, I18nContent> = {
       heading: 'Pre-Publish-Werkzeuge',
       subheading: 'Ohne Anmeldung. Keine Server-Uploads. Leistungsstarke Client-Side-Tools.',
     },
+    thumbnailCategory: {
+      title: 'YouTube-Thumbnail-Tools',
+      description: 'Bereite deine YouTube-Thumbnails mit lokaler Größenanpassung und Komprimierung sowie Rahmenhilfen für Shorts vor.',
+    },
     guidesIndex: {
       title: 'Creator-Leitfäden & Plattform-Benchmarks — Creovly',
       description: 'Technische Leitfäden und geprüfte Richtlinien für maximale Performance auf YouTube.',
@@ -762,7 +780,7 @@ export const translations: Record<Locale, I18nContent> = {
       subheading: 'Verifizierte Spezifikationen und offizielle Plattform-Vorgaben',
     },
     about: {
-      title: 'Über Creovly — Der Arbeitsbereich für YouTube-Creator',
+      title: 'Über Creovly: Tools für YouTube-Creator',
       description: 'Creovly bietet unabhängige, datenschutzfreundliche Creator-Tools direkt im Webbrowser.',
       heading: 'Über Creovly',
       subheading: 'Entwickelt für maximale Privatsphäre und Effizienz bei der Videoerstellung.',
@@ -873,7 +891,7 @@ export const translations: Record<Locale, I18nContent> = {
       openStudio: 'Iniciar Studio',
     },
     studio: {
-      title: 'Estúdio de publicação — Prepare o seu próximo envio para o YouTube',
+      title: 'Estúdio de publicação para YouTube',
       description: 'Prepare título, descrição e imagem localmente. Revise verificações essenciais e baixe seu projeto compactado.',
       heading: 'Estúdio de publicação Creovly',
       subheading: 'Centro de comando pré-publicação para criadores de conteúdo',
@@ -889,6 +907,10 @@ export const translations: Record<Locale, I18nContent> = {
       description: 'Utilitários para miniaturas, análise de títulos, Shorts, receita, RPM e horas de exibição.',
       heading: 'Utilitários pré-publicação',
       subheading: 'Sem login. Sem envio de dados. Execução segura direto no seu navegador.',
+    },
+    thumbnailCategory: {
+      title: 'Ferramentas de miniaturas do YouTube',
+      description: 'Prepare suas miniaturas do YouTube com redimensionamento e compressão locais, além de guias de enquadramento para Shorts.',
     },
     guidesIndex: {
       title: 'Guias e benchmarks para criadores — Creovly',
@@ -1025,6 +1047,10 @@ export const translations: Record<Locale, I18nContent> = {
       heading: '발행 전 크리에이터 유틸리티',
       subheading: '가입 불필요. 서버 업로드 없음. 안전한 100% 클라이언트 사이드 도구.',
     },
+    thumbnailCategory: {
+      title: 'YouTube 썸네일 도구',
+      description: '브라우저에서 바로 리사이즈·압축하고 Shorts 프레이밍 가이드로 YouTube 썸네일을 준비하세요.',
+    },
     guidesIndex: {
       title: '크리에이터 가이드 및 플랫폼 기준 — Creovly',
       description: 'YouTube 공식 기준에 기반한 기술 가이드, 썸네일 규격 및 수익화 벤치마크.',
@@ -1143,7 +1169,7 @@ export const translations: Record<Locale, I18nContent> = {
       openStudio: 'Avvia Studio',
     },
     studio: {
-      title: 'Studio di pubblicazione — Prepara il tuo prossimo video YouTube',
+      title: 'Studio di pubblicazione per YouTube',
       description: 'Organizza titolo, descrizione e miniatura in locale. Esegui controlli prima della pubblicazione e scarica il pacchetto di progetto.',
       heading: 'Studio di pubblicazione Creovly',
       subheading: 'Centro di controllo pre-pubblicazione per creator di YouTube',
@@ -1159,6 +1185,10 @@ export const translations: Record<Locale, I18nContent> = {
       description: 'Strumenti per miniature, titoli, inquadratura Shorts, entrate, RPM e ore di visualizzazione.',
       heading: 'Utility pre-pubblicazione',
       subheading: 'Zero registrazioni. Nessun invio dati. Strumenti client-side veloci e sicuri.',
+    },
+    thumbnailCategory: {
+      title: 'Strumenti per miniature YouTube',
+      description: 'Prepara le miniature YouTube con ridimensionamento e compressione locali, più guide di inquadratura per gli Shorts.',
     },
     guidesIndex: {
       title: 'Guide e standard per creator — Creovly',

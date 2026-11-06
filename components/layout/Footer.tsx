@@ -114,9 +114,9 @@ export const Footer: React.FC = () => {
           {/* Category Columns */}
           {categories.map((col) => (
             <div key={col.title} className="flex flex-col gap-3">
-              <h4 className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-ink)] font-semibold">
+              <h2 className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-ink)] font-semibold">
                 {col.title}
-              </h4>
+              </h2>
               <ul className="space-y-2 text-xs">
                 {col.items.map((item) => (
                   <li key={item.href}>
