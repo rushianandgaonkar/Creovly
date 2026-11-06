@@ -31,12 +31,15 @@ const VALID_TOOL_IDS = new Set([
   'youtube-monetization-calculator',
 ]);
 
-test('guide registry contains exactly three approved guides with valid slugs and metadata', () => {
-  assert.equal(guides.length, 3);
+test('guide registry contains approved guides with valid slugs and metadata', () => {
+  assert.equal(guides.length, 6);
   const expectedSlugs = [
     'youtube-thumbnail-blueprint',
     'decoding-youtube-rpm',
     'youtube-shorts-safe-zone',
+    'youtube-banner-size',
+    'youtube-monetization-requirements',
+    'how-to-change-youtube-thumbnail',
   ];
   assert.deepEqual(guides.map((g) => g.slug), expectedSlugs);
 
@@ -44,7 +47,7 @@ test('guide registry contains exactly three approved guides with valid slugs and
     assert.ok(guide.title && guide.title.length > 10);
     assert.ok(guide.category && guide.category.length > 0);
     assert.ok(guide.readTime && guide.readTime.includes('min read'));
-    assert.ok(guide.lastVerified && guide.lastVerified.includes('October 2026'));
+    assert.ok(guide.lastVerified && (guide.lastVerified.includes('October 2026') || guide.lastVerified.includes('November 2026')));
     assert.ok(guide.officialSources && guide.officialSources.length > 0);
     assert.ok(guide.workedExample && guide.workedExample.title && guide.workedExample.steps.length > 0);
     assert.ok(guide.checklist && guide.checklist.length >= 3);
@@ -60,6 +63,9 @@ test('getGuideBySlug returns the matching guide or undefined', () => {
   assert.equal(getGuideBySlug('youtube-thumbnail-blueprint')?.slug, 'youtube-thumbnail-blueprint');
   assert.equal(getGuideBySlug('decoding-youtube-rpm')?.slug, 'decoding-youtube-rpm');
   assert.equal(getGuideBySlug('youtube-shorts-safe-zone')?.slug, 'youtube-shorts-safe-zone');
+  assert.equal(getGuideBySlug('youtube-banner-size')?.slug, 'youtube-banner-size');
+  assert.equal(getGuideBySlug('youtube-monetization-requirements')?.slug, 'youtube-monetization-requirements');
+  assert.equal(getGuideBySlug('how-to-change-youtube-thumbnail')?.slug, 'how-to-change-youtube-thumbnail');
   assert.equal(getGuideBySlug('non-existent-guide'), undefined);
 });
 

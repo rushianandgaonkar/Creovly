@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { guides, getGuideBySlug } from '@/lib/guides';
+import { guides, getGuideBySlug, getGuideOgImage } from '@/lib/guides';
 import { createPageMetadata } from '@/lib/metadata';
 import GuideArticle from '@/components/guides/GuideArticle';
 import JsonLd from '@/components/seo/JsonLd';
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
     });
   }
 
-  const ogImage = slug === 'youtube-shorts-safe-zone' ? '/og/guide-youtube-shorts-safe-zone.png' : `/og/${slug}.png`;
+  const ogImage = getGuideOgImage(slug);
 
   return createPageMetadata({
     title: guide.seoTitle || guide.title,

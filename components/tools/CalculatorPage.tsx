@@ -6,7 +6,7 @@ import CreatorCalculator from './CreatorCalculator';
 import { getTool } from '@/lib/metadata';
 import { calculatorDefinitions, type CalculatorKind } from '@/lib/creator-calculators';
 import { calculatorFaqs } from '@/config/calculator-faqs';
-import { useI18n } from '@/lib/i18n';
+import { useI18n, LocalizedLink } from '@/lib/i18n';
 
 export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; slug: string }) {
   const { t } = useI18n();
@@ -49,6 +49,39 @@ export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; s
       toolSlug={slug}
       educationalContent={
         <div className="space-y-4">
+          {kind === 'revenue' && (
+            <div>
+              <p className="font-medium text-[var(--text-ink)] mb-2">
+                Use this YouTube money calculator to turn monthly views and RPM into estimated revenue.
+              </p>
+              <h2 className="text-base font-bold text-[var(--text-ink)] pt-1">
+                YouTube views to money
+              </h2>
+            </div>
+          )}
+          {kind === 'monetization' && (
+            <div>
+              <p className="font-medium text-[var(--text-ink)] mb-2">
+                Use this free YouTube monetization calculator to model potential channel income across ad revenue, sponsorships, and affiliate programs.
+              </p>
+              <p className="text-xs">
+                Review official thresholds and partner criteria in our guide to{' '}
+                <LocalizedLink href="/guides/youtube-monetization-requirements" className="text-[var(--brand-accent)] underline hover:no-underline font-medium">
+                  YouTube monetization requirements
+                </LocalizedLink>.
+              </p>
+            </div>
+          )}
+          {kind === 'watch-hours' && (
+            <div>
+              <p className="text-xs">
+                Track your eligibility trajectory with official platform standards in our guide to{' '}
+                <LocalizedLink href="/guides/youtube-monetization-requirements" className="text-[var(--brand-accent)] underline hover:no-underline font-medium">
+                  YouTube monetization requirements
+                </LocalizedLink>.
+              </p>
+            </div>
+          )}
           <p>
             {t.calculator.shared.educationalIntro}
           </p>

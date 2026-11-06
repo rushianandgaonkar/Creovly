@@ -88,7 +88,7 @@ export function getTool(slug: string) {
 export function createToolMetadata(slug: string, locale: Locale = defaultLocale): Metadata {
   const tool = getTool(slug);
   const localeData = translations[locale]?.tools?.[slug];
-  const title = localeData?.title || tool.title;
+  const title = localeData?.seoTitle || tool.seoTitle || localeData?.title || tool.title;
   const description = localeData?.description || tool.description;
   const keywords = localeData?.keywords;
 

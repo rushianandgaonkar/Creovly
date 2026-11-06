@@ -155,8 +155,8 @@ export const tools = {
     ],
     titleChecker: [
       {
-        question: 'How long should a YouTube video title be?',
-        answer: 'Aim for 50–70 characters. While YouTube permits up to 100 characters, mobile search feeds and suggested rails frequently truncate titles after 55–60 characters. Place your primary hook and keywords upfront.',
+        question: 'How long should a YouTube title be?',
+        answer: 'Aim for 50–60 characters. While YouTube permits up to 100 characters in YouTube Studio, mobile search feeds and suggested rails frequently truncate titles after 50–60 characters. Place your primary hook and keywords upfront before the cutoff.',
       },
       {
         question: 'What is the maximum character limit for YouTube titles?',
@@ -193,8 +193,8 @@ export const tools = {
         answer: 'Use the standard formula: Estimated Earnings = (Total Views ÷ 1,000) × RPM. For instance, 80,000 views at a $4.00 RPM produces $320 in net creator revenue.',
       },
       {
-        question: 'How much do YouTube Shorts earn per 1 million views?',
-        answer: 'Shorts monetize through the creator ad pool, yielding an effective RPM between $0.03 and $0.12 per 1,000 views. One million Shorts views generally generates approximately $30 to $120.',
+        question: 'Does this work for Shorts?',
+        answer: 'Yes, but you must enter your Shorts-specific RPM and view volume. YouTube Shorts monetize through the pooled Creator Pool at lower RPMs (typically $0.03 to $0.12 per 1,000 views) compared to long-form video ad revenue.',
       },
     ],
     rpm: [
@@ -272,7 +272,7 @@ export const tools = {
       linkSuffix: 'before uploading.',
     },
     resizer: {
-      p1: 'Prepare a thumbnail, channel banner, profile picture or watermark asset from a still JPEG, PNG or WebP. Crop to fill trims edges; fit entire image adds padding. All exports remain rectangular.',
+      p1: 'Prepare YouTube thumbnail size (1280×720), channel banner, profile picture, or watermark assets from a still JPEG, PNG or WebP with this free YouTube thumbnail resizer. Crop to fill trims edges; fit entire image adds padding. All exports remain rectangular.',
       p2: 'The banner preset uses 2560 × 1440. Its preview guide scales the central 1235 × 338 text/logo area published for a 2048 × 1152 banner. The 800 × 800 profile canvas is a Creovly preset, with an illustrative circle guide. The watermark canvas is 150 × 150; it prepares an asset without placing it on a video or removing its background.',
       p3: 'Guides never appear in downloaded files. Review your artwork in YouTube’s own upload preview. YouTube specifies banners at 6 MB or smaller and watermark images below 1 MB. See YouTube’s channel branding guidelines for current requirements.',
       p4: 'Inputs are limited to 20 MB, 24 megapixels and 8,192 pixels per side. Output canvases use the same dimension limits. Resizing changes dimensions, not a target file size. Enlarging cannot recover detail. Exports may remove metadata or change colors.',

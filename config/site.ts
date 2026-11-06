@@ -123,7 +123,7 @@ export const toolRegistry: ToolDefinition[] = [
     category: 'thumbnail',
     categoryLabel: 'Thumbnail Tools',
     description:
-      'Check YouTube Shorts safe zones before publishing. Preview placement guides, keep important content clear of overlays and export an annotated guide.',
+      'Check YouTube Shorts safe zones before publishing. Preview overlay guides, keep key content clear of buttons and export an annotated safe zone guide.',
     status: 'available',
     seoTarget: 'YouTube Shorts Safe Zone',
   },
@@ -135,19 +135,20 @@ export const toolRegistry: ToolDefinition[] = [
     category: 'title',
     categoryLabel: 'Title Tools',
     description:
-      'Check YouTube video titles for free. Analyze title length, punctuation, keyword placement and mobile text wrapping before publishing your next video.',
+      'Free YouTube title checker. Analyze title length, punctuation, keyword placement and mobile truncation before you publish your next video.',
     status: 'available',
     seoTarget: 'YouTube Title Checker',
   },
   {
     id: 'youtube-revenue-calculator',
     title: 'YouTube Revenue Calculator',
+    seoTitle: 'YouTube Money Calculator: Views to Revenue',
     slug: 'youtube-revenue-calculator',
     href: '/tools/youtube-revenue-calculator',
     category: 'money-growth',
     categoryLabel: 'Money & Growth',
     description:
-      'Estimate YouTube earnings with a free revenue calculator. Enter monthly views and RPM ranges to model potential monthly and yearly creator income.',
+      'Free YouTube money calculator. Enter monthly views and an RPM range to estimate your monthly and yearly YouTube revenue in your browser.',
     status: 'available',
     seoTarget: 'YouTube Revenue Calculator',
   },
@@ -183,7 +184,7 @@ export const toolRegistry: ToolDefinition[] = [
     category: 'money-growth',
     categoryLabel: 'Money & Growth',
     description:
-      'Estimate YouTube creator income from ads, sponsorships, affiliates and other sources. Subtract expenses to model your potential monthly earnings.',
+      'Free YouTube monetization calculator. Estimate channel income from ads, sponsorships and affiliates, then subtract expenses for monthly earnings.',
     status: 'available',
     seoTarget: 'YouTube Monetization Calculator',
   },

@@ -24,9 +24,9 @@ export const calculatorFaqs: Record<CalculatorKind, FAQItem[]> = {
         'Use the standard formula: Estimated Earnings = (Total Views ÷ 1,000) × RPM. For instance, 80,000 views at a $4.00 RPM produces $320 in net creator revenue.',
     },
     {
-      question: 'How much do YouTube Shorts earn per 1 million views?',
+      question: 'Does this work for Shorts?',
       answer:
-        'Shorts monetize through the creator ad pool, yielding an effective RPM between $0.03 and $0.12 per 1,000 views. One million Shorts views generally generates approximately $30 to $120.',
+        'Yes, but you must enter your Shorts-specific RPM and view volume. YouTube Shorts monetize via the pooled Creator Pool at lower RPMs (typically $0.03 to $0.12 per 1,000 views) compared to long-form video ad revenue.',
     },
   ],
   rpm: [

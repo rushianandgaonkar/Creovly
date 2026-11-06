@@ -4,6 +4,7 @@ import { defaultLocale, translatePath, translations } from '@/config/i18n';
 import { getMessages } from '@/messages';
 import { tools as enTools } from '@/messages/en/tools';
 import { getLocalizedGuide } from '@/config/guides-i18n';
+import { getGuideOgImage } from '@/lib/guides';
 
 interface BreadcrumbItem {
   name: string;
@@ -180,8 +181,6 @@ export function guideArticleJsonLd(guide: {
   const category = locGuide?.category || guide.category;
   const path = translatePath(`/guides/${guide.slug}`, locale);
   const url = new URL(path, siteConfig.url).toString();
-  const ogImageSlug = guide.slug === 'youtube-shorts-safe-zone' ? 'guide-youtube-shorts-safe-zone' : guide.slug;
-
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -189,7 +188,7 @@ export function guideArticleJsonLd(guide: {
     headline,
     description,
     url,
-    image: `${siteConfig.url}/og/${ogImageSlug}.png`,
+    image: `${siteConfig.url}${getGuideOgImage(guide.slug)}`,
     datePublished: '2026-10-01T00:00:00Z',
     dateModified: '2026-11-03T00:00:00Z',
     author: {

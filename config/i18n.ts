@@ -91,6 +91,12 @@ export function translatePath(pathname: string, targetLocale: Locale): string {
   return base === '/' ? `/${targetLocale}` : `/${targetLocale}${base}`;
 }
 
+const translatedGuideSlugs = [
+  'youtube-thumbnail-blueprint',
+  'decoding-youtube-rpm',
+  'youtube-shorts-safe-zone',
+];
+
 /**
  * Generates an alternates dictionary containing canonical and all language alternates for hreflang tags.
  */
@@ -99,7 +105,17 @@ export function getLanguageAlternates(pathname: string, baseUrl: string = 'https
   const cleanBase = base === '/' ? '' : base;
   const normalizedBaseUrl = baseUrl.replace(/\/$/, '');
 
+  const isGuide = base.startsWith('/guides/');
+  const guideSlug = isGuide ? base.replace(/^\/guides\//, '').split('/')[0] : '';
+  const isEnglishOnlyGuide = isGuide && guideSlug && !translatedGuideSlugs.includes(guideSlug);
+
   const alts: Record<string, string> = {};
+  if (isEnglishOnlyGuide) {
+    alts['en'] = `${normalizedBaseUrl}${cleanBase}`;
+    alts['x-default'] = `${normalizedBaseUrl}${cleanBase}`;
+    return alts;
+  }
+
   for (const loc of supportedLocales) {
     if (loc === defaultLocale) {
       alts[loc] = `${normalizedBaseUrl}${cleanBase}`;
@@ -113,6 +129,8 @@ export function getLanguageAlternates(pathname: string, baseUrl: string = 'https
 
 export interface ToolTranslation {
   title: string;
+  /** Shorter <title> for search results (≤50 chars; layout adds " | Creovly"). */
+  seoTitle?: string;
   description: string;
   categoryLabel: string;
   keywords: string[];
@@ -264,25 +282,26 @@ export const translations: Record<Locale, I18nContent> = {
         title: 'YouTube Thumbnail Resizer',
         description: 'Resize YouTube thumbnails online for free. Adjust images to 1280x720 or custom dimensions, preview framing and download ready-to-use files.',
         categoryLabel: 'Thumbnail Tools',
-        keywords: ['youtube thumbnail resizer', 'youtube banner resizer', '1280x720 thumbnail resize', 'youtube cover photo resizer', 'youtube image dimension tool'],
+        keywords: ['youtube thumbnail resizer', 'youtube thumbnail size', 'youtube thumbnail dimensions', 'youtube thumbnail aspect ratio', 'youtube banner resizer', '1280x720 thumbnail resize', 'youtube cover photo resizer', 'youtube image dimension tool'],
       },
       'youtube-shorts-safe-zone': {
         title: 'YouTube Shorts Safe Zone Checker',
-        description: 'Check YouTube Shorts safe zones before publishing. Preview placement guides, keep important content clear of overlays and export an annotated guide.',
+        description: 'Check YouTube Shorts safe zones before publishing. Preview overlay guides, keep key content clear of buttons and export an annotated safe zone guide.',
         categoryLabel: 'Thumbnail Tools',
-        keywords: ['youtube shorts safe zone', 'shorts overlay checker', 'shorts safe area template', 'vertical video framing tool', 'shorts ui margins'],
+        keywords: ['youtube shorts safe zone', 'youtube shorts safe zone template', 'shorts overlay checker', 'shorts safe area template', 'vertical video framing tool', 'shorts ui margins'],
       },
       'youtube-title-checker': {
         title: 'YouTube Title Checker & Analyzer',
-        description: 'Check YouTube video titles for free. Analyze title length, punctuation, keyword placement and mobile text wrapping before publishing your next video.',
+        description: 'Free YouTube title checker. Analyze title length, punctuation, keyword placement and mobile truncation before you publish your next video.',
         categoryLabel: 'Title Tools',
-        keywords: ['youtube title checker', 'youtube title length tester', 'video title truncation analyzer', 'catchy youtube titles', 'youtube title character counter'],
+        keywords: ['youtube title checker', 'youtube title analyzer', 'youtube title tester', 'youtube title length checker', 'youtube title length tester', 'video title truncation analyzer', 'catchy youtube titles', 'youtube title character counter'],
       },
       'youtube-revenue-calculator': {
         title: 'YouTube Revenue Calculator',
-        description: 'Estimate YouTube earnings with a free revenue calculator. Enter monthly views and RPM ranges to model potential monthly and yearly creator income.',
+        seoTitle: 'YouTube Money Calculator: Views to Revenue',
+        description: 'Free YouTube money calculator. Enter monthly views and an RPM range to estimate your monthly and yearly YouTube revenue in your browser.',
         categoryLabel: 'Money & Growth',
-        keywords: ['youtube revenue calculator', 'youtube money calculator', 'how much youtube pays', 'video view income estimator', 'creator revenue modeler'],
+        keywords: ['youtube revenue calculator', 'youtube money calculator', 'youtube video money calculator', 'youtube views to money calculator', 'youtube ad revenue calculator', 'how much youtube pays', 'video view income estimator', 'creator revenue modeler'],
       },
       'youtube-rpm-calculator': {
         title: 'YouTube RPM Calculator',
@@ -298,9 +317,9 @@ export const translations: Record<Locale, I18nContent> = {
       },
       'youtube-monetization-calculator': {
         title: 'YouTube Monetization Calculator',
-        description: 'Estimate YouTube creator income from ads, sponsorships, affiliates and other sources. Subtract expenses to model your potential monthly earnings.',
+        description: 'Free YouTube monetization calculator. Estimate channel income from ads, sponsorships and affiliates, then subtract expenses for monthly earnings.',
         categoryLabel: 'Money & Growth',
-        keywords: ['youtube monetization calculator', 'creator income calculator', 'sponsorship income modeler', 'youtube creator business calculator', 'net creator earnings'],
+        keywords: ['youtube monetization calculator', 'youtube income calculator', 'youtube channel income calculator', 'creator income calculator', 'sponsorship income modeler', 'youtube creator business calculator', 'net creator earnings'],
       },
     },
   },

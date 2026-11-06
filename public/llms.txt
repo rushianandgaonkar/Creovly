@@ -29,6 +29,9 @@ Creovly is a private, in-browser workspace for YouTube creators. Compress thumbn
 - [The YouTube Thumbnail Blueprint](https://creovly.com/guides/youtube-thumbnail-blueprint): Official YouTube platform specs for 1280x720 resolution, 2 MB mobile caps, sRGB color spaces, and mobile CTR optimization.
 - [Decoding YouTube RPM](https://creovly.com/guides/decoding-youtube-rpm): Platform mathematics explaining RPM vs CPM, YouTube's 55/45 creator revenue share, Shorts ad pool mechanics, and seasonal revenue swings.
 - [YouTube Shorts Safe Zone Reference](https://creovly.com/guides/youtube-shorts-safe-zone): Engineering breakdown of 9:16 vertical video UI boundaries, title safe zones, and comment button collision areas.
+- [YouTube Banner Size: Dimensions, Safe Area & Template](https://creovly.com/guides/youtube-banner-size): Verified 2560x1440 resolution, 1235x338 central safe area for mobile and desktop, and 6 MB upload limit.
+- [YouTube Monetization Requirements Explained](https://creovly.com/guides/youtube-monetization-requirements): Clear breakdown of YPP eligibility tiers: 500 & 1,000 subscriber tiers, 4,000 watch hours, and 10M Shorts views.
+- [How to Change a YouTube Thumbnail, Step by Step](https://creovly.com/guides/how-to-change-youtube-thumbnail): Step-by-step tutorial for desktop Studio, mobile app, phone verification, and Shorts thumbnail selection.
 
 
 ## Company & Support

@@ -143,6 +143,12 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
           <p>{g.p2}</p>
           <p>{g.p3}</p>
           <p>{g.p4}</p>
+          <p className="text-xs pt-1">
+            Need official dimension and file specifications? Read our guide to{' '}
+            <LocalizedLink href="/guides/youtube-thumbnail-blueprint" className="text-[var(--brand-accent)] underline hover:no-underline font-medium">
+              YouTube thumbnail size and dimensions
+            </LocalizedLink>.
+          </p>
         </>
       );
     }
@@ -161,8 +167,17 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
       return (
         <>
           <p>{g.p1}</p>
+          <h2 className="text-base font-bold text-[var(--text-ink)] pt-1">
+            YouTube Shorts safe zone template
+          </h2>
           <p>{g.p2}</p>
           <p>{g.p3}</p>
+          <p className="text-xs pt-1">
+            Learn UI overlay dimensions and button clear areas in our guide to the{' '}
+            <LocalizedLink href="/guides/youtube-shorts-safe-zone" className="text-[var(--brand-accent)] underline hover:no-underline font-medium">
+              YouTube Shorts safe zone
+            </LocalizedLink>.
+          </p>
         </>
       );
     }

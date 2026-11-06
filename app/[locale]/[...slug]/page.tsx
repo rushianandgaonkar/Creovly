@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { nonDefaultLocales, translations, type Locale } from '@/config/i18n';
 import { createPageMetadata, createToolMetadata } from '@/lib/metadata';
 import { siteConfig, toolRegistry } from '@/config/site';
-import { guides, getGuideBySlug } from '@/lib/guides';
+import { guides, getGuideBySlug, getGuideOgImage } from '@/lib/guides';
 import { getLocalizedGuide } from '@/config/guides-i18n';
 import JsonLd from '@/components/seo/JsonLd';
 import {
@@ -152,10 +152,7 @@ export async function generateMetadata({ params }: LocalizedCatchAllProps): Prom
       const locGuide = getLocalizedGuide(guide.slug, loc);
       const title = locGuide?.seoTitle || locGuide?.title || guide.seoTitle || guide.title;
       const description = locGuide?.description || guide.description;
-      const ogImage =
-        guide.slug === 'youtube-shorts-safe-zone'
-          ? '/og/guide-youtube-shorts-safe-zone.png'
-          : `/og/${guide.slug}.png`;
+      const ogImage = getGuideOgImage(guide.slug);
       return createPageMetadata({
         title,
         description,

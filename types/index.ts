@@ -32,6 +32,8 @@ export interface ToolDefinition {
   heroTone?: HeroTone;
   id: string;
   title: string;
+  /** Shorter <title> for search results (≤50 chars; layout adds " | Creovly"). */
+  seoTitle?: string;
   slug: string;
   href: string;
   category: ToolCategory;
