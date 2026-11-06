@@ -6,9 +6,9 @@ export const home = {
     description: 'Prepare visuals, calibrate titles, stress-test hooks, and package every upload before releasing.',
     launchStudioText: 'Launch Publish Studio',
     exploreToolsText: 'Explore {count} creator tools',
-    clientSide: '100% Client-side',
+    clientSide: 'Tools run in your browser',
     noAccount: 'No account required',
-    zeroUploads: 'Private & zero cloud uploads',
+    zeroUploads: 'Your files are never uploaded',
   },
   workflow: {
     badge: 'Publishing Architecture',
@@ -18,12 +18,12 @@ export const home = {
       pack: {
         number: '01',
         title: 'Calibrate Packaging',
-        description: 'Compress thumbnails under 2 MB, eliminate safe-zone overlap, and format mobile-first titles with high CTR retention.',
+        description: 'Compress thumbnails under 2 MB, eliminate safe-zone overlap, and preview how titles wrap on mobile.',
       },
       audit: {
         number: '02',
         title: 'Verify Before Upload',
-        description: 'Check platform technical bounds, verify audio rights, and ensure metadata complies with YouTube Partner Program requirements.',
+        description: 'Check thumbnail and title limits, confirm audio rights yourself, and review your metadata against YouTube Partner Program requirements.',
       },
       export: {
         number: '03',
@@ -50,8 +50,8 @@ export const home = {
     heading: 'Find your next creator tool.',
     subheading: 'Small tasks. A better publish day. Pick a tool and make it yours.',
     viewDirectory: 'View tool directory',
-    localBadge: '100% Local',
-    hint: 'Swipe, drag or use the arrows to explore. Every card opens a working tool.',
+    localBadge: 'Runs in your browser',
+    hint: 'Swipe, drag or use the arrows to explore. Every card opens a working tool. Card previews show example data.',
     ariaLabel: 'Creator tool cards. Use left and right arrows to browse.',
     prevAria: 'Previous tool',
     nextAria: 'Next tool',
@@ -59,8 +59,8 @@ export const home = {
   },
   studioWorkspace: {
     title: 'Publish Studio',
-    projectDraft: '/ Project Draft',
-    clientSideBadge: '100% Client-Side Engine',
+    projectDraft: '/ Sample Project',
+    clientSideBadge: 'Runs in your browser',
     openStudio: 'Open in Studio →',
     colTitle: '1. Title & Metadata',
     charsCount: '{count} / 100 chars',

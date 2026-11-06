@@ -39,13 +39,13 @@ export default function CreatorHero({
   const resolvedExploreTools = exploreToolsText || t.home.hero.exploreToolsText.replace('{count}', String(count));
 
   return (
-    <section className="relative overflow-hidden pt-10 pb-6 sm:pt-14 sm:pb-10">
+    <section className="relative overflow-hidden pt-8 pb-4 sm:pt-14 sm:pb-10">
       <RippleBackground className="py-2">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center space-y-6">
           <div className="max-w-3xl mx-auto">
             {/* Ambient Floating Pill Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]/90 backdrop-blur shadow-[var(--shadow-button-elevated)] text-xs text-[var(--text-body)] mb-5">
-              <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" aria-hidden="true" />
+              <span className="w-2 h-2 rounded-full bg-[var(--brand-accent)]" aria-hidden="true" />
               <span className="font-medium">{resolvedBadge}</span>
             </div>
 
@@ -60,10 +60,10 @@ export default function CreatorHero({
               {resolvedDescription}
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+              <Button href={toolsHref} variant="primary" size="lg">{resolvedExploreTools}</Button>
               <LocalizedLink href={studioHref}>
-                <Button variant="primary" size="lg">{resolvedLaunchStudio}</Button>
+                <Button variant="outline" size="lg">{resolvedLaunchStudio}</Button>
               </LocalizedLink>
-              <Button href={toolsHref} variant="outline" size="lg">{resolvedExploreTools}</Button>
             </div>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-[var(--text-muted)]">
               <span className="inline-flex items-center gap-1.5">
@@ -82,7 +82,7 @@ export default function CreatorHero({
           </div>
 
           {/* Flagship Interactive Studio Workspace Fragment */}
-          <div className="pt-2 sm:pt-4">
+          <div className="hidden md:block pt-2 sm:pt-4">
             <StudioHeroWorkspace />
           </div>
         </div>

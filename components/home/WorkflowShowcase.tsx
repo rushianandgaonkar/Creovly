@@ -32,7 +32,7 @@ export default function WorkflowShowcase() {
       highlights: [
         'Real-time ~50 character mobile feed boundary alert',
         'Desktop search vs. smartphone feed preview',
-        'Actionable length scoring with zero cloud tracking',
+        'Length and wrapping checks that run in your browser',
       ],
       toolLink: '/tools/youtube-title-checker',
       toolLabel: 'Explore Title Checker',
@@ -40,7 +40,7 @@ export default function WorkflowShowcase() {
     {
       id: 'package',
       number: '03',
-      tag: 'Zero-Cloud Packaging',
+      tag: 'Local Packaging',
       title: t.home.workflow.steps.export.title,
       description: t.home.workflow.steps.export.description,
       highlights: [
@@ -128,7 +128,7 @@ export default function WorkflowShowcase() {
                 <span className="text-xs font-semibold tracking-wide text-[var(--brand-accent)]">
                   Stage {activeStep.number} &mdash; {activeStep.tag}
                 </span>
-                <span className="text-xs text-[var(--text-muted)]">100% Client-Side</span>
+                <span className="text-xs text-[var(--text-muted)]">Runs in your browser</span>
               </div>
               <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[var(--text-ink)]">
                 {activeStep.title}
@@ -140,6 +140,9 @@ export default function WorkflowShowcase() {
 
             {/* High-Fidelity Visual Graphic for Current Step */}
             <div className="rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] p-4 sm:p-5 space-y-4">
+              <p className="text-[11px] font-medium text-[var(--text-muted)]">
+                Illustrative example with sample media. Your results depend on your own files.
+              </p>
               {activeStepIndex === 0 && (
                 /* Step 1 Graphic: Side-by-Side Before/After Visual Comparison */
                 <div className="space-y-4">
@@ -179,7 +182,7 @@ export default function WorkflowShowcase() {
                     <div className="space-y-2">
                       <div className="flex items-center justify-between text-xs">
                         <span className="font-semibold text-emerald-600 dark:text-emerald-400">
-                          Creovly Verified
+                          After: Optimized
                         </span>
                         <span className="text-[11px] font-semibold text-emerald-700 dark:text-emerald-300 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
                           1.1 MB &bull; Ready
@@ -189,7 +192,7 @@ export default function WorkflowShowcase() {
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src="/examples/compressor-source.jpg"
-                          alt="After optimization Creovly verified thumbnail"
+                          alt="After optimization thumbnail example"
                           width={320}
                           height={180}
                           className="w-full h-full object-cover"
@@ -206,7 +209,7 @@ export default function WorkflowShowcase() {
                         </div>
                       </div>
                       <p className="text-[11px] text-[var(--text-muted)]">
-                        74% size reduction to 1.1 MB JPEG. Crisp clarity preserved with safe-zone clearance verified.
+                        Example: 74% smaller at 1.1 MB, with the timestamp moved clear of the title text.
                       </p>
                     </div>
                   </div>
@@ -267,7 +270,7 @@ export default function WorkflowShowcase() {
                             height={14}
                             className="rounded-full"
                           />
-                          <span>TechCreator &bull; 142K views &bull; 2 days ago</span>
+                          <span>Example channel</span>
                         </div>
                       </div>
                     </div>
@@ -281,11 +284,11 @@ export default function WorkflowShowcase() {
                     </div>
                     <div className="p-2.5 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
                       <span className="block text-[10px] text-[var(--text-muted)] uppercase tracking-wide">Mobile Feed</span>
-                      <strong className="text-emerald-600 dark:text-emerald-400 text-sm">100% In-Bounds</strong>
+                      <strong className="text-[var(--text-ink)] text-sm">Wrap preview</strong>
                     </div>
                     <div className="p-2.5 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
-                      <span className="block text-[10px] text-[var(--text-muted)] uppercase tracking-wide">CTR Rating</span>
-                      <strong className="text-[var(--brand-accent)] text-sm">High Impact</strong>
+                      <span className="block text-[10px] text-[var(--text-muted)] uppercase tracking-wide">Sample data</span>
+                      <strong className="text-[var(--text-muted)] text-sm">Illustrative</strong>
                     </div>
                   </div>
                 </div>

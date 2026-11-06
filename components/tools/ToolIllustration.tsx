@@ -67,7 +67,7 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
           {/* Compression Badge */}
           <div className="absolute top-2.5 left-2.5 z-10 flex items-center gap-1.5 px-2 py-0.5 rounded bg-black/75 backdrop-blur-sm border border-emerald-500/40 text-[10px] font-semibold text-emerald-300">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-            1.1 MB • WebP &lt; 2MB
+            Example: 1.1 MB • &lt; 2 MB
           </div>
           {/* YouTube Video Timestamp in bottom-right */}
           <div className="absolute bottom-2.5 right-2.5 z-10 px-1.5 py-0.5 rounded bg-black/85 text-white font-medium text-[10px] tracking-tight">
@@ -146,7 +146,7 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
           <div className="space-y-1.5">
             <div className="flex items-center justify-between text-[10px] text-zinc-400 pb-1 border-b border-zinc-800">
               <span className="font-semibold text-zinc-300">Mobile Feed Preview</span>
-              <span className="text-emerald-400 font-medium">52 chars (Optimal)</span>
+              <span className="text-zinc-400 font-medium">Example · 52 chars</span>
             </div>
             {/* Video Card Simulation */}
             <div className="flex gap-2.5 items-start pt-1">
@@ -173,15 +173,15 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
                 <div className="flex items-center gap-1.5 text-[9px] text-zinc-400">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/examples/avatar-tech.png" alt="Channel avatar" width={14} height={14} className="rounded-full" />
-                  <span>TechCreator • 120K views</span>
+                  <span>Example channel</span>
                 </div>
               </div>
             </div>
           </div>
           {/* Truncation boundary guide */}
           <div className="pt-2 border-t border-zinc-800/80 flex items-center justify-between text-[10px]">
-            <span className="text-zinc-400">Hook Safe Zone:</span>
-            <span className="text-emerald-400 font-semibold">100% In-Bounds</span>
+            <span className="text-zinc-400">Mobile wrap preview</span>
+            <span className="text-zinc-300 font-semibold">Illustrative</span>
           </div>
         </div>
       );
@@ -192,8 +192,8 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
           <div className="space-y-1">
             <div className="flex items-center justify-between">
               <span className="text-[10px] text-zinc-400 uppercase tracking-wide font-medium">Estimated Monthly</span>
-              <span className="text-[10px] text-emerald-400 font-semibold flex items-center gap-0.5">
-                +18.4% ↑
+              <span className="text-[10px] text-zinc-400 font-semibold flex items-center gap-0.5">
+                Example
               </span>
             </div>
             <div className="text-2xl font-bold text-white tracking-tight">
@@ -214,7 +214,7 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
             </svg>
           </div>
           <div className="flex items-center justify-between text-[10px] text-zinc-400 pt-1 border-t border-zinc-800">
-            <span>Based on 580K Views</span>
+            <span>Example: 580K views</span>
             <span className="text-zinc-200 font-medium">$4.22 RPM</span>
           </div>
         </div>
@@ -226,7 +226,7 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
           <div>
             <div className="flex items-center justify-between text-[10px] text-zinc-400 mb-1">
               <span className="uppercase tracking-wide font-medium">Net Creator RPM</span>
-              <span className="px-1.5 py-0.2 rounded bg-sky-500/20 text-sky-300 text-[9px] font-semibold">Verified</span>
+              <span className="px-1.5 py-0.5 rounded bg-zinc-700/60 text-zinc-300 text-[9px] font-semibold">Example</span>
             </div>
             <div className="text-2xl font-bold text-white tracking-tight">
               $4.85 <span className="text-xs text-zinc-400 font-normal">/ 1K views</span>
@@ -244,7 +244,7 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
             </div>
           </div>
           <div className="text-[10px] text-zinc-400">
-            Same-period views & earnings calibrated
+            Example values. Enter your own numbers.
           </div>
         </div>
       );
@@ -255,7 +255,7 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
           <div>
             <div className="flex items-center justify-between text-[10px] text-zinc-400 mb-1">
               <span className="uppercase tracking-wide font-medium">YPP 4,000 Hour Goal</span>
-              <span className="text-amber-400 font-semibold">71% Reached</span>
+              <span className="text-zinc-400 font-semibold">Example</span>
             </div>
             <div className="text-xl font-bold text-white tracking-tight">
               2,840 <span className="text-zinc-400 text-xs font-normal">/ 4,000 hrs</span>
@@ -272,7 +272,7 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
             </div>
           </div>
           <div className="text-[10px] text-zinc-400 pt-1 border-t border-zinc-800">
-            YouTube Partner Program Tracker
+            Example values. Enter your own numbers.
           </div>
         </div>
       );
@@ -283,7 +283,7 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
           <div>
             <div className="flex items-center justify-between text-[10px] text-zinc-400 mb-1">
               <span className="uppercase tracking-wide font-medium">Monthly Diversified Income</span>
-              <span className="text-emerald-400 font-semibold">3 Streams</span>
+              <span className="text-zinc-400 font-semibold">Example</span>
             </div>
             <div className="text-xl font-bold text-white tracking-tight">
               $4,120<span className="text-xs text-zinc-400 font-normal"> net / mo</span>
@@ -303,7 +303,7 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
             </div>
           </div>
           <div className="text-[10px] text-zinc-400 pt-1 border-t border-zinc-800">
-            Platform cuts & costs factored
+            Example mix. Enter your own numbers.
           </div>
         </div>
       );
