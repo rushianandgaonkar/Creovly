@@ -21,7 +21,7 @@ export default function StudioHeroWorkspace() {
     {
       id: 'workflow',
       name: ws.presetWorkflow,
-      src: '/examples/compressor-source.jpg',
+      src: '/examples/compressor-source.webp',
       aspect: '1280 × 720 HD',
       size: '1.1 MB JPEG',
       timestamp: '14:20',
@@ -30,7 +30,7 @@ export default function StudioHeroWorkspace() {
     {
       id: 'framing',
       name: ws.presetFraming,
-      src: '/examples/thumbnail-source.png',
+      src: '/examples/thumbnail-source.webp',
       aspect: '1280 × 720 HD',
       size: '1.3 MB JPEG',
       timestamp: '08:45',
@@ -39,7 +39,7 @@ export default function StudioHeroWorkspace() {
     {
       id: 'shorts',
       name: ws.presetShorts,
-      src: '/examples/shorts-source.png',
+      src: '/examples/shorts-source.webp',
       aspect: '1080 × 1920 (9:16)',
       size: '890 KB JPEG',
       timestamp: '00:54',
@@ -130,9 +130,9 @@ export default function StudioHeroWorkspace() {
         {/* Column 1: Metadata & Title Stress-Tester (4 cols) */}
         <div className="lg:col-span-4 p-5 space-y-4">
           <div className="flex items-center justify-between">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
+            <h2 className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
               {ws.colTitle}
-            </h4>
+            </h2>
             <span
               className={`text-xs font-semibold px-2 py-0.5 rounded ${
                 isHookSafe
@@ -199,9 +199,9 @@ export default function StudioHeroWorkspace() {
         {/* Column 2: 16:9 Thumbnail Canvas (5 cols) */}
         <div className="lg:col-span-5 p-5 space-y-4">
           <div className="flex items-center justify-between">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
+            <h2 className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
               {ws.colThumbnail}
-            </h4>
+            </h2>
             <span className="text-xs text-zinc-400">{activePreset.aspect}</span>
           </div>
 
@@ -218,7 +218,6 @@ export default function StudioHeroWorkspace() {
                   ? 'object-contain bg-zinc-950'
                   : 'object-cover'
               }`}
-              loading="lazy"
               decoding="async"
             />
 
@@ -266,9 +265,9 @@ export default function StudioHeroWorkspace() {
         <div className="lg:col-span-3 p-5 space-y-4 bg-zinc-900/40 flex flex-col justify-between">
           <div className="space-y-3">
             <div className="flex items-center justify-between">
-              <h4 className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
+              <h2 className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
                 {ws.colChecklist}
-              </h4>
+              </h2>
               <span className="text-xs font-bold text-emerald-400">
                 {formattedReadyCount}
               </span>

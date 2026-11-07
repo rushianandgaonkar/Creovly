@@ -104,13 +104,13 @@ export default function WorkflowShowcase() {
                     <span className="w-2 h-2 rounded-full bg-[var(--brand-accent)]" />
                   )}
                 </div>
-                <h3
-                  className={`text-base font-semibold tracking-tight transition-colors ${
+                <span
+                  className={`block text-base font-semibold tracking-tight transition-colors ${
                     isActive ? 'text-[var(--text-ink)]' : 'text-[var(--text-body)]'
                   }`}
                 >
                   {step.title}
-                </h3>
+                </span>
               </button>
             );
           })}
@@ -160,7 +160,7 @@ export default function WorkflowShowcase() {
                       <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-red-500/40 shadow-sm bg-black">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                          src="/examples/compressor-source.jpg"
+                          src="/examples/compressor-source.webp"
                           alt="Before optimization uncompressed thumbnail"
                           width={320}
                           height={180}
@@ -191,7 +191,7 @@ export default function WorkflowShowcase() {
                       <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-emerald-500/50 shadow-sm bg-black">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                          src="/examples/compressor-source.jpg"
+                          src="/examples/compressor-source.webp"
                           alt="After optimization thumbnail example"
                           width={320}
                           height={180}
@@ -240,7 +240,7 @@ export default function WorkflowShowcase() {
                       <div className="relative w-28 aspect-video rounded overflow-hidden shrink-0 bg-black">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                          src="/examples/thumbnail-source.png"
+                          src="/examples/thumbnail-source.webp"
                           alt="Mobile feed video thumbnail preview"
                           width={160}
                           height={90}
@@ -264,7 +264,7 @@ export default function WorkflowShowcase() {
                         <div className="flex items-center gap-1.5 text-[10px] text-[var(--text-muted)]">
                           {/* eslint-disable-next-line @next/next/no-img-element */}
                           <img
-                            src="/examples/avatar-tech.png"
+                            src="/examples/avatar-tech.webp"
                             alt="Channel Avatar"
                             width={14}
                             height={14}

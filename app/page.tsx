@@ -6,11 +6,12 @@ import CreatorHero from '@/components/home/CreatorHero';
 import { toolRegistry } from '@/config/site';
 import WorkflowShowcase from '@/components/home/WorkflowShowcase';
 import WorkflowDestinations from '@/components/home/WorkflowDestinations';
+import HomeGuide from '@/components/home/HomeGuide';
 import JsonLd from '@/components/seo/JsonLd';
 import { websiteJsonLd, organizationJsonLd } from '@/lib/structured-data';
 
 export const metadata = createPageMetadata({
-  title: 'Free YouTube Creator Tools | Creovly',
+  title: 'Free YouTube Creator Tools for Thumbnails & Titles | Creovly',
   description:
     'Explore free YouTube creator tools by Creovly. Compress and resize thumbnails, analyze titles, check Shorts safe zones, and calculate revenue.',
   path: '/',
@@ -30,6 +31,8 @@ export default function HomePage() {
       <WorkflowShowcase />
 
       <WorkflowDestinations />
+
+      <HomeGuide />
     </>
   );
 }
