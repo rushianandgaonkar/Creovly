@@ -284,6 +284,32 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
         </div>
       );
 
+    case 'description-generator':
+      return (
+        <div className={`tool-preview preview-description-generator w-full h-full p-3 bg-zinc-950 text-zinc-100 flex flex-col justify-between select-none ${className}`} data-ui>
+          <div className="flex items-center justify-between text-[10px] text-zinc-400">
+            <span className="uppercase tracking-wide font-medium text-indigo-400">Description Builder</span>
+            <span className="px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-300 text-[9px] font-semibold border border-indigo-500/30">Above-the-Fold</span>
+          </div>
+          <div className="bg-zinc-900/90 rounded-lg p-2.5 border border-zinc-800 space-y-1.5 my-auto">
+            <div className="text-[11px] font-medium text-zinc-200 line-clamp-1">
+              Master Next.js 15 App Router in 2026. Everything you need to build...
+            </div>
+            <div className="flex items-center gap-1.5 text-[9px] text-indigo-400 font-mono">
+              <span className="text-sky-400">00:00</span> Intro &bull; <span className="text-sky-400">02:30</span> Server Actions &bull; <span className="text-sky-400">08:15</span> Deploy
+            </div>
+            <div className="flex justify-between items-center text-[9px] text-zinc-500 font-mono pt-1 border-t border-zinc-800/60">
+              <span className="text-zinc-400">#NextJS #WebDev</span>
+              <span className="text-emerald-400 font-semibold">1,240 / 5,000 chars</span>
+            </div>
+          </div>
+          <div className="flex items-center justify-between text-[9px] text-zinc-400 pt-1.5 border-t border-zinc-800/80">
+            <span>6 Video Templates</span>
+            <span className="text-zinc-300 font-medium">Auto Chapters &amp; Links</span>
+          </div>
+        </div>
+      );
+
     case 'revenue-calculator':
       return (
         <div className={`tool-preview preview-revenue w-full h-full p-3.5 bg-zinc-900 text-zinc-100 flex flex-col justify-between select-none ${className}`} data-ui>

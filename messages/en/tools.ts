@@ -241,6 +241,28 @@ export const tools = {
         answer: 'In YouTube Studio’s tag box, tags are separated by commas (not hashtags). Hashtags (#) should be placed inside your video title or description, whereas keyword tags belong in the dedicated Studio metadata field.',
       },
     ],
+    descriptionGenerator: [
+      {
+        question: 'How does the YouTube description generator work?',
+        answer: 'Select a video format template (such as tutorial, review, vlog, or gaming), enter your video title, key points, and chapter timestamps. The generator structures a professional, SEO-optimized YouTube video description with above-the-fold hooks, social links, and disclaimers.',
+      },
+      {
+        question: 'What is the character limit for YouTube video descriptions?',
+        answer: 'YouTube permits up to 5,000 characters per video description. Creovly’s generator features a live character counter to ensure your description remains within platform limits while maximizing search discoverability.',
+      },
+      {
+        question: 'Why are the first three lines of a YouTube description so important?',
+        answer: 'The first 150 to 200 characters (the first 2–3 lines) appear above the "...more" fold in mobile feeds, suggested video cards, and search engine snippets. Front-loading your primary hook and call to action here dramatically increases viewer engagement.',
+      },
+      {
+        question: 'How do video chapters and timestamps work in YouTube descriptions?',
+        answer: 'To enable automatic chapters on your video timeline, your description must start with a timestamp at "00:00", contain at least three timestamps in ascending chronological order, and have each chapter be at least 10 seconds long.',
+      },
+      {
+        question: 'Do hashtags in YouTube descriptions help SEO?',
+        answer: 'Yes. Placing 2 to 3 relevant hashtags at the bottom of your description helps YouTube categorize your content. The first three hashtags will also display as clickable discovery links above your video title on mobile.',
+      },
+    ],
     revenue: [
       {
         question: 'How much money does YouTube pay for 1,000 views?',

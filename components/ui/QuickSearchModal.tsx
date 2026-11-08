@@ -52,6 +52,8 @@ export default function QuickSearchModal({
         return t.channelName?.title || 'YouTube Channel Name Generator';
       case 'youtube-tag-generator':
         return t.tagGenerator?.title || 'YouTube Tag Generator';
+      case 'youtube-description-generator':
+        return t.descriptionGenerator?.title || 'YouTube Description Generator';
       case 'youtube-revenue-calculator':
         return t.calculator.revenue.title;
       case 'youtube-rpm-calculator':

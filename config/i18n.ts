@@ -316,6 +316,13 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: 'Title Tools',
         keywords: ['youtube tag generator', 'ai youtube tag generator', 'youtube tags generator', 'youtube tags for views', 'generate tags for youtube', 'youtube seo tags', 'youtube tag extractor and generator'],
       },
+      'youtube-description-generator': {
+        title: 'YouTube Description Generator',
+        seoTitle: 'Free YouTube Description Generator',
+        description: 'Generate optimized YouTube video descriptions with timestamps, above-the-fold hooks, and social links. Free AI-powered video description generator.',
+        categoryLabel: 'Title Tools',
+        keywords: ['youtube description generator', 'ai youtube description generator', 'youtube video description generator', 'youtube description template', 'free youtube description generator', 'youtube description maker'],
+      },
       'youtube-title-checker': {
         title: 'YouTube Title Checker & Analyzer',
         seoTitle: 'Free YouTube Title Checker: Length and Truncation',
@@ -484,6 +491,13 @@ export const translations: Record<Locale, I18nContent> = {
         description: 'Genera etiquetas optimizadas para YouTube y grupos de palabras clave dentro del límite de 500 caracteres. Herramienta SEO gratuita y privada.',
         categoryLabel: 'Herramientas de títulos',
         keywords: ['generador de etiquetas de youtube', 'generador de tags youtube', 'etiquetas para youtube', 'tags para videos de youtube', 'generar etiquetas youtube seo'],
+      },
+      'youtube-description-generator': {
+        title: 'Generador de Descripciones de YouTube',
+        seoTitle: 'Generador de Descripciones para YouTube',
+        description: 'Genera descripciones optimizadas para videos de YouTube con marcas de tiempo, llamadas a la acción y enlaces. Herramienta SEO gratuita y en el navegador.',
+        categoryLabel: 'Herramientas de títulos',
+        keywords: ['generador de descripciones de youtube', 'generador de descripcion youtube ia', 'plantilla descripcion youtube', 'generador de descripciones para videos de youtube', 'crear descripcion youtube'],
       },
       'youtube-title-checker': {
         title: 'Analizador y comprobador de títulos de YouTube',
@@ -654,6 +668,13 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: 'タイトル・SEOツール',
         keywords: ['YouTube タグ 生成', 'youtube タグ ジェネレーター', 'youtube タグ 自動 生成', 'youtube seo タグ', 'youtube タグ おすすめ'],
       },
+      'youtube-description-generator': {
+        title: 'YouTube概要欄ジェネレーター',
+        seoTitle: 'YouTube概要欄作成ツール（無料SEO）',
+        description: 'YouTube動画の概要欄を自動生成。検索上位を狙うフック文、目次タイムスタンプ、SNSリンクを簡単に構成できる無料AIテンプレートツール。',
+        categoryLabel: 'タイトル・SEOツール',
+        keywords: ['YouTube 概要欄 自動生成', 'youtube 説明欄 ジェネレーター', 'youtube 概要欄 テンプレート', 'youtube 概要欄 作り方', 'youtube タイムスタンプ 概要欄'],
+      },
       'youtube-title-checker': {
         title: 'YouTubeタイトルチェッカー＆アナライザー',
         seoTitle: 'YouTube動画タイトルチェッカー: 文字数と省略確認',
@@ -822,6 +843,13 @@ export const translations: Record<Locale, I18nContent> = {
         description: 'Générez des tags YouTube optimisés et des grappes de mots-clés dans la limite de 500 caractères. Outil SEO gratuit avec copie rapide par virgules.',
         categoryLabel: 'Outils de titres',
         keywords: ['générateur de tags youtube', 'generateur tag youtube', 'balises youtube', 'tags pour vidéo youtube', 'mots clés youtube'],
+      },
+      'youtube-description-generator': {
+        title: 'Générateur de Description YouTube',
+        seoTitle: 'Générateur de Description YouTube',
+        description: 'Générez des descriptions YouTube percutantes avec chapitres horodatés, liens et accroches pour le SEO. Outil gratuit dans votre navigateur.',
+        categoryLabel: 'Outils de titres',
+        keywords: ['générateur de description youtube', 'generateur description youtube ia', 'modele description youtube', 'description video youtube', 'chapitres youtube description'],
       },
       'youtube-title-checker': {
         title: 'Vérificateur et analyseur de titres YouTube',
@@ -992,6 +1020,13 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: 'Titel-Tools',
         keywords: ['youtube tag generator', 'youtube tags generieren', 'tags für youtube videos', 'youtube seo tags', 'videotags erstellen'],
       },
+      'youtube-description-generator': {
+        title: 'YouTube-Videobeschreibungs-Generator',
+        seoTitle: 'YouTube-Beschreibungs-Generator',
+        description: 'Erstelle optimierte YouTube-Videobeschreibungen mit Zeitstempeln, Hooks und Social-Links. Kostenloser KI-Beschreibungs-Generator ohne Anmeldung.',
+        categoryLabel: 'Titel-Tools',
+        keywords: ['youtube beschreibung generator', 'youtube videobeschreibung generator', 'youtube beschreibung vorlage', 'youtube beschreibung erstellen', 'youtube timestamps beschreibung'],
+      },
       'youtube-title-checker': {
         title: 'YouTube-Titel-Checker & Analyzer',
         seoTitle: 'YouTube-Titel-Checker: Zeichenlänge & Optimierung',
@@ -1160,6 +1195,13 @@ export const translations: Record<Locale, I18nContent> = {
         description: 'Gere tags otimizadas para YouTube e clusters de palavras-chave no limite de 500 caracteres. Gerador de tags gratuito com cópia rápida separada por vírgula.',
         categoryLabel: 'Ferramentas de títulos',
         keywords: ['gerador de tags para youtube', 'gerador de tags youtube', 'tags para videos youtube', 'como gerar tags youtube', 'tags seo youtube'],
+      },
+      'youtube-description-generator': {
+        title: 'Gerador de Descrição para YouTube',
+        seoTitle: 'Gerador de Descrição para YouTube',
+        description: 'Crie descrições completas para vídeos do YouTube com capítulos, links sociais e introduções otimizadas para SEO. Ferramenta gratuita no navegador.',
+        categoryLabel: 'Ferramentas de títulos',
+        keywords: ['gerador de descricao para youtube', 'gerador de descricao youtube ia', 'modelo de descricao youtube', 'como fazer descricao youtube', 'timestamps descricao youtube'],
       },
       'youtube-title-checker': {
         title: 'Verificador e analisador de títulos do YouTube',
@@ -1330,6 +1372,13 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: '제목 및 검색 도구',
         keywords: ['유튜브 태그 생성기', '유튜브 태그 추천', '유튜브 태그 복사', '유튜브 seo 태그', '유튜브 해시태그 태그'],
       },
+      'youtube-description-generator': {
+        title: '유튜브 설명란 생성기',
+        seoTitle: '유튜브 설명란 생성기 (무료 템플릿)',
+        description: '유튜브 동영상 설명란을 자동으로 작성합니다. 상단 노출용 요약문, 챕터 타임스탬프, 채널 구독 링크 및 소셜 링크 템플릿을 무료로 제공합니다.',
+        categoryLabel: '제목 및 검색 도구',
+        keywords: ['유튜브 설명란 생성기', '유튜브 설명 템플릿', '유튜브 타임스탬프 생성', '유튜브 더보기 란 작성', '유튜브 설명란 양식'],
+      },
       'youtube-title-checker': {
         title: '유튜브 제목 검사기 및 분석기',
         seoTitle: '유튜브 제목 검사기: 글자수 제한 및 모바일 말줄임',
@@ -1498,6 +1547,13 @@ export const translations: Record<Locale, I18nContent> = {
         description: 'Genera tag YouTube ottimizzati e cluster di parole chiave nel limite dei 500 caratteri. Strumento SEO gratuito con copia istantanea separata da virgole.',
         categoryLabel: 'Strumenti titoli',
         keywords: ['generatore tag youtube', 'tag per video youtube', 'generatore di tag youtube', 'come mettere tag youtube', 'tag youtube seo'],
+      },
+      'youtube-description-generator': {
+        title: 'Generatore di Descrizioni per YouTube',
+        seoTitle: 'Generatore Descrizioni YouTube',
+        description: 'Crea descrizioni video YouTube ottimizzate con capitoli con timestamp, hook introduttivi e link social. Generatore gratuito attivo nel tuo browser.',
+        categoryLabel: 'Strumenti titoli',
+        keywords: ['generatore di descrizioni per youtube', 'generatore descrizione youtube ia', 'template descrizione youtube', 'descrizione video youtube', 'timestamp descrizione youtube'],
       },
       'youtube-title-checker': {
         title: 'Analizzatore e verifica titoli YouTube',

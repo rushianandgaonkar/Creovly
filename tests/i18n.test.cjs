@@ -101,6 +101,7 @@ test('translations dictionary covers all 8 languages with all 11 tools', () => {
     'youtube-title-checker',
     'youtube-channel-name-generator',
     'youtube-tag-generator',
+    'youtube-description-generator',
     'youtube-revenue-calculator',
     'youtube-rpm-calculator',
     'youtube-watch-hours-calculator',

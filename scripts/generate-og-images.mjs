@@ -282,6 +282,37 @@ const pages = [
     `,
   },
   {
+    filename: 'youtube-description-generator.png',
+    category: 'TITLE & DESCRIPTION TOOLS',
+    tone: '#6366f1',
+    glow: 'rgba(99, 102, 241, 0.25)',
+    title: 'YouTube Description Generator',
+    description: 'Generate structured YouTube video descriptions with timestamps, above-the-fold hooks, and smart links.',
+    pills: ['5,000-Char Limit', 'Smart Templates', 'Timeline Chapters'],
+    visual: `
+      <div style="background:#191836;border:1px solid rgba(99,102,241,0.3);border-radius:18px;padding:24px;width:100%;height:100%;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 40px rgba(0,0,0,0.5);">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:12px;font-family:monospace;color:#a5b4fc;font-weight:700;letter-spacing:1px;">DESCRIPTION BUILDER</span>
+          <span style="background:rgba(99,102,241,0.2);color:#818cf8;font-size:11px;font-weight:700;padding:4px 8px;border-radius:6px;font-family:monospace;">ABOVE-THE-FOLD</span>
+        </div>
+        <div style="background:#090d16;border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,0.06);">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+            <span style="font-size:11px;font-family:monospace;color:#94a3b8;">Search Snippet</span>
+            <span style="font-size:11px;font-family:monospace;color:#38bdf8;font-weight:700;">First 180 chars</span>
+          </div>
+          <div style="font-size:13px;color:#e2e8f0;line-height:1.4;margin-bottom:8px;font-family:sans-serif;">
+            Master Next.js 15 App Router in 2026. Complete step-by-step roadmap from setup to deployment...
+          </div>
+          <div style="font-size:11px;color:#818cf8;font-family:monospace;">00:00 Intro &bull; 02:15 Server Actions &bull; 08:30 Deploy</div>
+        </div>
+        <div style="display:flex;gap:8px;font-size:11px;font-family:monospace;">
+          <div style="flex:1;background:#0f172a;padding:8px;border-radius:8px;text-align:center;color:#94a3b8;border:1px solid rgba(255,255,255,0.06);">6 Format Templates</div>
+          <div style="flex:1;background:#0f172a;padding:8px;border-radius:8px;text-align:center;color:#94a3b8;border:1px solid rgba(255,255,255,0.06);">5,000-Char Limit</div>
+        </div>
+      </div>
+    `,
+  },
+  {
     filename: 'youtube-revenue-calculator.png',
     category: 'MONEY & GROWTH',
     tone: '#0d9488',

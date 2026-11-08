@@ -32,6 +32,7 @@ const toolFeatureTags: Record<string, string> = {
   'youtube-shorts-safe-zone': '9:16 Safe Zone • Mask',
   'youtube-channel-name-generator': 'AI Formulas • Niche Styles',
   'youtube-tag-generator': '500-Char Limit • Smart Clusters',
+  'youtube-description-generator': '5,000-Char Limit • Smart Templates',
   'youtube-title-checker': 'Mobile ~50 Chars • Truncation',
   'youtube-revenue-calculator': 'Dynamic RPM • Modeler',
   'youtube-rpm-calculator': 'Net Earnings / 1K Views',

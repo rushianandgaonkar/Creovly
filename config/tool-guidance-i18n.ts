@@ -110,6 +110,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Select tags & clusters', body: 'Review generated primary, variant, long-tail, and broad tags. Toggle individual tags to fit under 500 characters.' },
         { title: 'Copy & paste to Studio', body: 'Click Copy All to export your formatted, comma-separated tag list and paste directly into YouTube Studio.' },
       ],
+      'youtube-description-generator': [
+        { title: 'Choose format & enter details', body: 'Select your video style (tutorial, review, vlog, gaming, or podcast) and enter your title, summary hook, and key points.' },
+        { title: 'Add chapters & resource links', body: 'Set up timeline timestamps (00:00 Intro, etc.), social media handles, affiliate links, and community channels.' },
+        { title: 'Review & copy to Studio', body: 'Inspect the above-the-fold snippet and 5,000-character count, then click Copy Description to paste directly into YouTube Studio.' },
+      ],
     },
   },
   es: {
@@ -192,6 +197,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Introduce tema o título del video', body: 'Escribe el tema principal, título provisional o palabra clave central en el generador.' },
         { title: 'Selecciona etiquetas y grupos', body: 'Revisa etiquetas primarias, variantes, long-tail y temas amplios. Ajusta etiquetas para no superar los 500 caracteres.' },
         { title: 'Copia y pega en YouTube Studio', body: 'Haz clic en Copiar todo para exportar la lista separada por comas y pégala directamente en YouTube Studio.' },
+      ],
+      'youtube-description-generator': [
+        { title: 'Elige formato e introduce datos', body: 'Selecciona el estilo de video (tutorial, reseña, vlog, gaming o podcast) y escribe título, gancho inicial y puntos clave.' },
+        { title: 'Añade marcas de tiempo y enlaces', body: 'Configura capítulos de tiempo (00:00 Inicio, etc.), redes sociales, enlaces de afiliados y comunidad.' },
+        { title: 'Revisa y copia en YouTube Studio', body: 'Comprueba el fragmento visible antes del corte y el límite de 5.000 caracteres, y copia la descripción con un solo clic.' },
       ],
     },
   },
@@ -276,6 +286,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'タグ候補とクラスタを選択', body: 'メイン、派生語、ロングテール、広範囲タグを確認します。500文字以内に収まるよう個別にオン/オフ調整します。' },
         { title: 'コピーしてStudioに貼り付け', body: '「すべてコピー」をクリックしてカンマ区切りテキストを取得し、YouTube Studioのタグ欄へそのまま貼り付けます。' },
       ],
+      'youtube-description-generator': [
+        { title: 'ジャンル選択と基本情報の入力', body: '動画スタイル（解説・レビュー・Vlog・ゲーム実況・対談など）を選び、タイトル、要約フック文、ポイントを入力します。' },
+        { title: '目次タイムスタンプとリンク設定', body: '00:00開始のチャプター目次、SNSリンク、紹介アイテムのアフィリエイトリンクを整えます。' },
+        { title: '折りたたみ表示を確認してコピー', body: '「もっと見る」ボタン前の表示プレビューと5,000文字制限を確認し、ワンクリックでコピーしてYouTube Studioへ貼り付けます。' },
+      ],
     },
   },
   fr: {
@@ -358,6 +373,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Entrez le sujet ou titre de la vidéo', body: 'Saisissez votre sujet principal, titre de travail ou mot-clé cible dans le générateur.' },
         { title: 'Sélectionnez vos tags et grappes', body: 'Passez en revue les mots-clés principaux, variantes et expressions longue traîne sous la limite de 500 caractères.' },
         { title: 'Copiez et collez dans YouTube Studio', body: 'Cliquez sur Tout copier pour obtenir la liste formatée avec virgules et collez-la directement dans YouTube Studio.' },
+      ],
+      'youtube-description-generator': [
+        { title: 'Choisissez le format et les détails', body: "Sélectionnez votre style de vidéo (tutoriel, test, vlog, gaming ou podcast) et saisissez le titre, l'accroche et les points clés." },
+        { title: 'Ajoutez chapitres et liens utiles', body: "Intégrez les repères temporels (00:00 Intro, etc.), vos réseaux sociaux, liens affiliés et espaces communautaires." },
+        { title: 'Vérifiez et copiez dans Studio', body: "Contrôlez l'aperçu au-dessus du pli et la limite des 5 000 caractères, puis cliquez sur Copier la description pour YouTube Studio." },
       ],
     },
   },
@@ -442,6 +462,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Tags und Cluster auswählen', body: 'Prüfe primäre Keywords, Varianten, Long-Tail-Fragen und breite Tags passend zum 500-Zeichen-Limit.' },
         { title: 'Kopieren und in Studio einfügen', body: 'Klicke auf Alle kopieren für eine kommagetrennte Liste und füge sie direkt in YouTube Studio ein.' },
       ],
+      'youtube-description-generator': [
+        { title: 'Format wählen & Details eingeben', body: 'Wähle dein Videoformat (Tutorial, Review, Vlog, Gaming oder Podcast) und trage Titel, Einleitungs-Hook und Kernpunkte ein.' },
+        { title: 'Kapitel-Timestamps & Links ergänzen', body: 'Erstelle Zeitstempel (00:00 Intro etc.), trage Social-Media-Handles, Affiliate-Links und Community-Verlinkungen ein.' },
+        { title: 'Prüfen & in Studio einfügen', body: 'Überprüfe den sichtbaren Vorschautext vor dem "Mehr anzeigen"-Umbruch sowie das 5.000-Zeichen-Limit und kopiere die Beschreibung.' },
+      ],
     },
   },
   pt: {
@@ -524,6 +549,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Digite o tema ou título do vídeo', body: 'Insira o tema principal, título provisório ou palavra-chave de foco no gerador.' },
         { title: 'Selecione tags e clusters', body: 'Revise tags primárias, variações, perguntas long-tail e temas amplos, mantendo-se dentro do limite de 500 caracteres.' },
         { title: 'Copie e cole no YouTube Studio', body: 'Clique em Copiar tudo para exportar a lista formatada por vírgulas e cole diretamente no YouTube Studio.' },
+      ],
+      'youtube-description-generator': [
+        { title: 'Escolha o formato e dados do vídeo', body: 'Selecione o estilo do vídeo (tutorial, análise, vlog, games ou podcast) e insira título, gancho inicial e tópicos principais.' },
+        { title: 'Adicione capítulos e links úteis', body: 'Insira os marcadores de tempo (00:00 Início, etc.), redes sociais, links de afiliados e canais da comunidade.' },
+        { title: 'Verifique e copie para o Studio', body: 'Confira a prévia antes do botão "Mostrar mais" e o limite de 5.000 caracteres, copiando a descrição com um clique para o YouTube Studio.' },
       ],
     },
   },
@@ -608,6 +638,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: '태그 및 키워드 클러스터 선택', body: '추출된 메인, 파생어, 롱테일 질문형 태그를 확인하고 500자 제한에 맞춰 원하는 태그를 선택합니다.' },
         { title: '복사 후 YouTube Studio에 붙여넣기', body: '모두 복사를 눌러 쉼표로 구분된 태그 목록을 복사한 뒤 YouTube Studio 태그 입력창에 붙여넣습니다.' },
       ],
+      'youtube-description-generator': [
+        { title: '포맷 선택 및 기본 정보 입력', body: '동영상 유형(튜토리얼, 리뷰, 브이로그, 게임, 팟캐스트)을 선택하고 제목, 상단 후킹 요약문, 핵심 내용을 입력합니다.' },
+        { title: '타임스탬프 챕터 및 링크 설정', body: '00:00 시작 챕터 타임스탬프, SNS 계정, 추천 장비 제휴 링크 및 커뮤니티 링크를 체계적으로 구성합니다.' },
+        { title: '더보기 접힘선 점검 후 복사', body: "모바일 '더보기' 전 노출되는 3줄 요약과 5,000자 제한을 확인한 뒤 설명란 전체를 한 번에 복사하여 YouTube Studio에 등록합니다." },
+      ],
     },
   },
   it: {
@@ -690,6 +725,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Inserisci argomento o titolo del video', body: 'Digita il tema principale, titolo provvisorio o parola chiave di riferimento nel generatore.' },
         { title: 'Seleziona tag e cluster', body: 'Esamina tag principali, varianti, query long-tail e argomenti ampi, rispettando il limite di 500 caratteri.' },
         { title: 'Copia e incolla in YouTube Studio', body: 'Fai clic su Copia tutto per ottenere l\'elenco separato da virgole e incollalo direttamente in YouTube Studio.' },
+      ],
+      'youtube-description-generator': [
+        { title: 'Scegli il format e inserisci i dettagli', body: 'Seleziona lo stile video (tutorial, recensione, vlog, gaming o podcast) e digita titolo, hook iniziale e punti chiave.' },
+        { title: 'Aggiungi capitoli e link utili', body: 'Configura i timestamp orari (00:00 Intro, ecc.), canali social, link di affiliazione e community.' },
+        { title: 'Controlla e copia in YouTube Studio', body: 'Verifica l\'anteprima prima del pulsante "Mostra altro" e il limite di 5.000 caratteri, copiando la descrizione con un click.' },
       ],
     },
   },

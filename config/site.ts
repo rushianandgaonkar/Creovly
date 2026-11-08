@@ -56,6 +56,7 @@ export const footerNavigation = {
       items: [
         { name: 'Channel Name Generator', href: '/tools/youtube-channel-name-generator' },
         { name: 'Tag Generator', href: '/tools/youtube-tag-generator' },
+        { name: 'Description Generator', href: '/tools/youtube-description-generator' },
         { name: 'Title Checker & Analyzer', href: '/tools/youtube-title-checker' },
         { name: 'Pre-Publish Checklist', href: '/checklist' },
       ],
@@ -182,6 +183,20 @@ export const toolRegistry: ToolDefinition[] = [
       'Generate optimized YouTube tags and keyword clusters within the 500-character limit. Free AI-powered tag generator with instant comma-separated copy.',
     status: 'available',
     seoTarget: 'YouTube Tag Generator',
+  },
+  {
+    id: 'youtube-description-generator',
+    heroTone: 'indigo',
+    title: 'YouTube Description Generator',
+    seoTitle: 'Free YouTube Description Generator',
+    slug: 'youtube-description-generator',
+    href: '/tools/youtube-description-generator',
+    category: 'title',
+    categoryLabel: 'Title Tools',
+    description:
+      'Generate optimized YouTube video descriptions with timestamps, above-the-fold hooks, and social links. Free AI-powered video description generator.',
+    status: 'available',
+    seoTarget: 'YouTube Description Generator',
   },
   {
     id: 'youtube-title-checker',

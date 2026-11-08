@@ -37,6 +37,7 @@ const TOOLS = [
   'youtube-title-checker',
   'youtube-channel-name-generator',
   'youtube-tag-generator',
+  'youtube-description-generator',
   'youtube-revenue-calculator',
   'youtube-rpm-calculator',
   'youtube-watch-hours-calculator',
