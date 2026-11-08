@@ -26,9 +26,11 @@ import {
 } from '@/lib/shorts-guide';
 import { toolSamples } from '@/config/tool-samples';
 import { useI18n } from '@/lib/i18n';
+import { toolSeoContent } from '@/config/tool-guidance-i18n';
 
 export default function ShortsSafeZone() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
+  const tmpl = (toolSeoContent[locale] || toolSeoContent.en).shortsTemplate;
   const [selected, setSelected] = useState<{
     file: File;
     width: number;
@@ -480,14 +482,14 @@ export default function ShortsSafeZone() {
               <div className="p-4 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] space-y-2.5">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-semibold text-[var(--text-ink)]">
-                    Shorts Safe Zone Overlay Template
+                    {tmpl.cardTitle}
                   </span>
                   <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20">
-                    1080 × 1920 PNG
+                    {tmpl.cardBadge}
                   </span>
                 </div>
                 <p className="text-xs text-[var(--text-muted)] leading-relaxed">
-                  Download the transparent PNG template to drop directly onto your video timeline in Premiere Pro, DaVinci Resolve, Final Cut, CapCut, or Canva.
+                  {tmpl.cardDesc}
                 </p>
                 <a
                   href="/templates/youtube-shorts-safe-zone-template.png"
@@ -497,7 +499,7 @@ export default function ShortsSafeZone() {
                   <svg className="w-3.5 h-3.5 text-[var(--brand-accent)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                   </svg>
-                  Download Transparent PNG Template
+                  {tmpl.downloadBtn}
                 </a>
               </div>
             </div>

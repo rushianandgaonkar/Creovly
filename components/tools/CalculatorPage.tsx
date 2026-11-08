@@ -7,9 +7,11 @@ import { getTool } from '@/lib/metadata';
 import { calculatorDefinitions, type CalculatorKind } from '@/lib/creator-calculators';
 import { calculatorFaqs } from '@/config/calculator-faqs';
 import { useI18n, LocalizedLink } from '@/lib/i18n';
+import { toolSeoContent } from '@/config/tool-guidance-i18n';
 
 export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; slug: string }) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
+  const seo = toolSeoContent[locale] || toolSeoContent.en;
   const tool = getTool(slug);
   const definition = calculatorDefinitions[kind];
   const watch = kind === 'watch-hours';
@@ -52,33 +54,33 @@ export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; s
           {kind === 'revenue' && (
             <div>
               <p className="font-medium text-[var(--text-ink)] mb-2">
-                Use this YouTube money calculator to turn monthly views and RPM into estimated revenue.
+                {seo.calculators.revenueIntro}
               </p>
               <h2 className="text-base font-bold text-[var(--text-ink)] pt-1">
-                How the YouTube revenue calculator works
+                {seo.calculators.revenueHow}
               </h2>
               <p className="text-xs text-[var(--text-body)] mt-1 mb-2">
-                Enter your monthly views and expected RPM range to model your earnings scenario. The calculator projects lower and upper monthly income alongside yearly revenue based on your exact parameters.
+                {seo.calculators.revenueDesc}
               </p>
             </div>
           )}
           {kind === 'rpm' && (
             <div>
               <p className="font-medium text-[var(--text-ink)] mb-2">
-                Calculate your YouTube RPM to find earnings per 1,000 views from your own channel revenue and views.
+                {seo.calculators.rpmIntro}
               </p>
               <h2 className="text-base font-bold text-[var(--text-ink)] pt-1">
-                How the YouTube RPM calculator works
+                {seo.calculators.rpmHow}
               </h2>
             </div>
           )}
           {kind === 'monetization' && (
             <div>
               <p className="font-medium text-[var(--text-ink)] mb-2">
-                Calculate total YouTube channel earnings across all income streams (ads, sponsors, affiliates) minus expenses.
+                {seo.calculators.monetizationIntro}
               </p>
               <h2 className="text-base font-bold text-[var(--text-ink)] pt-1">
-                How the YouTube monetization calculator works
+                {seo.calculators.monetizationHow}
               </h2>
               <p className="text-xs">
                 Review official thresholds and partner criteria in our guide to{' '}

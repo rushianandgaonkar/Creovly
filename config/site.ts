@@ -119,7 +119,7 @@ export const toolRegistry: ToolDefinition[] = [
     category: 'thumbnail',
     categoryLabel: 'Thumbnail Tools',
     description:
-      'Free YouTube thumbnail resizer and thumbnail size converter. Adjust images to 1280x720 or custom dimensions, preview framing and download ready-to-use files.',
+      'Free YouTube thumbnail resizer and size converter. Adjust images to 1280x720 or custom sizes, preview framing, and download ready-to-use files.',
     status: 'available',
     seoTarget: 'YouTube Thumbnail Resizer',
   },
@@ -133,14 +133,14 @@ export const toolRegistry: ToolDefinition[] = [
     category: 'thumbnail',
     categoryLabel: 'Thumbnail Tools',
     description:
-      'Check YouTube Shorts safe zones before publishing. Preview overlay guides, keep content clear of buttons, and download the free transparent PNG template.',
+      'Check YouTube Shorts safe zones before publishing. Preview guides, keep content clear of player buttons, and download the free transparent PNG template.',
     status: 'available',
     seoTarget: 'YouTube Shorts Safe Zone',
   },
   {
     id: 'youtube-title-checker',
     title: 'YouTube Title Checker & Analyzer',
-    seoTitle: 'Free YouTube Title Checker: Length & Truncation',
+    seoTitle: 'Free YouTube Title Checker: Length and Truncation',
     slug: 'youtube-title-checker',
     href: '/tools/youtube-title-checker',
     category: 'title',
@@ -192,7 +192,7 @@ export const toolRegistry: ToolDefinition[] = [
   {
     id: 'youtube-monetization-calculator',
     title: 'YouTube Monetization Calculator',
-    seoTitle: 'YouTube Monetization Calculator: Ads & Sponsors',
+    seoTitle: 'YouTube Monetization Calculator: Ads and Sponsors',
     slug: 'youtube-monetization-calculator',
     href: '/tools/youtube-monetization-calculator',
     category: 'money-growth',

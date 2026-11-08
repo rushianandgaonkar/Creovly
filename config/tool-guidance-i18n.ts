@@ -575,3 +575,287 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
   },
 };
 
+export interface ToolSeoContent {
+  thumbnailSpecs: {
+    heading: string;
+    recommendedSize: string;
+    recommendedSizeVal: string;
+    aspectRatio: string;
+    aspectRatioVal: string;
+    maxSize: string;
+    maxSizeVal: string;
+    formats: string;
+    formatsVal: string;
+    note: string;
+  };
+  shortsTemplate: {
+    heading: string;
+    body: string;
+    downloadBtn: string;
+    cardTitle: string;
+    cardBadge: string;
+    cardDesc: string;
+  };
+  calculators: {
+    revenueIntro: string;
+    revenueHow: string;
+    revenueDesc: string;
+    rpmIntro: string;
+    rpmHow: string;
+    monetizationIntro: string;
+    monetizationHow: string;
+  };
+}
+
+export const toolSeoContent: Record<Locale, ToolSeoContent> = {
+  en: {
+    thumbnailSpecs: {
+      heading: 'YouTube thumbnail size',
+      recommendedSize: 'Recommended Size',
+      recommendedSizeVal: '1280 × 720 px',
+      aspectRatio: 'Aspect Ratio',
+      aspectRatioVal: '16:9',
+      maxSize: 'Max File Size',
+      maxSizeVal: 'Under 2 MB',
+      formats: 'Formats',
+      formatsVal: 'JPG, PNG, GIF, WebP',
+      note: 'Official YouTube thumbnail specs require a minimum width of 640 pixels, 16:9 aspect ratio, and a file size under 2 MB.',
+    },
+    shortsTemplate: {
+      heading: 'YouTube Shorts safe zone template',
+      body: 'Download our free transparent 1080×1920 PNG overlay template to ensure your titles, subtitles, and key visual actions never get blocked by Shorts player controls, channel icons, or sound discs.',
+      downloadBtn: 'Download Transparent PNG Overlay (1080×1920)',
+      cardTitle: 'Shorts Safe Zone Overlay Template',
+      cardBadge: '1080 × 1920 PNG',
+      cardDesc: 'Download the transparent PNG template to drop directly onto your video timeline in Premiere Pro, DaVinci Resolve, Final Cut, CapCut, or Canva.',
+    },
+    calculators: {
+      revenueIntro: 'Use this YouTube money calculator to turn monthly views and RPM assumptions into estimated revenue.',
+      revenueHow: 'How the YouTube revenue calculator works',
+      revenueDesc: 'Enter your monthly views and expected RPM range to model your earnings scenario. The calculator projects lower and upper monthly income alongside yearly revenue based on your exact parameters.',
+      rpmIntro: 'Calculate your YouTube RPM to find earnings per 1,000 views from your own channel revenue and views.',
+      rpmHow: 'How the YouTube RPM calculator works',
+      monetizationIntro: 'Calculate total YouTube channel earnings across all income streams (ads, sponsors, affiliates) minus expenses.',
+      monetizationHow: 'How the YouTube monetization calculator works',
+    },
+  },
+  es: {
+    thumbnailSpecs: {
+      heading: 'Tamaño de miniatura de YouTube',
+      recommendedSize: 'Medida recomendada',
+      recommendedSizeVal: '1280 × 720 px',
+      aspectRatio: 'Relación de aspecto',
+      aspectRatioVal: '16:9',
+      maxSize: 'Peso máximo',
+      maxSizeVal: 'Menos de 2 MB',
+      formats: 'Formatos',
+      formatsVal: 'JPG, PNG, GIF, WebP',
+      note: 'Las especificaciones oficiales de YouTube exigen un ancho mínimo de 640 píxeles, proporción 16:9 y un peso inferior a 2 MB.',
+    },
+    shortsTemplate: {
+      heading: 'Plantilla de zona segura de YouTube Shorts',
+      body: 'Descarga nuestra plantilla superpuesta PNG transparente de 1080×1920 gratis para asegurarte de que tus títulos, subtítulos y acciones clave nunca queden tapados por los controles de Shorts.',
+      downloadBtn: 'Descargar plantilla PNG transparente (1080×1920)',
+      cardTitle: 'Plantilla de zona segura de Shorts',
+      cardBadge: '1080 × 1920 PNG',
+      cardDesc: 'Descarga la plantilla PNG transparente para usarla directamente en Premiere Pro, DaVinci Resolve, Final Cut, CapCut o Canva.',
+    },
+    calculators: {
+      revenueIntro: 'Usa esta calculadora de dinero de YouTube para estimar ingresos mensuales a partir de tus visitas y RPM.',
+      revenueHow: 'Cómo funciona la calculadora de ingresos de YouTube',
+      revenueDesc: 'Ingresa tus visitas mensuales y rango de RPM para simular tus ingresos. La calculadora proyecta ganancias mensuales y anuales sin deducciones ocultas.',
+      rpmIntro: 'Calcula tu RPM de YouTube para conocer las ganancias por cada 1.000 visitas a partir de los datos reales de tu canal.',
+      rpmHow: 'Cómo funciona la calculadora de RPM de YouTube',
+      monetizationIntro: 'Calcula los ingresos totales del canal en todas las fuentes (anuncios, patrocinios, afiliados) menos costes.',
+      monetizationHow: 'Cómo funciona la calculadora de monetización de YouTube',
+    },
+  },
+  ja: {
+    thumbnailSpecs: {
+      heading: 'YouTubeサムネイルのサイズ規格',
+      recommendedSize: '推奨解像度',
+      recommendedSizeVal: '1280 × 720 px',
+      aspectRatio: 'アスペクト比',
+      aspectRatioVal: '16:9',
+      maxSize: '最大容量',
+      maxSizeVal: '2MB以下',
+      formats: '対応形式',
+      formatsVal: 'JPG, PNG, GIF, WebP',
+      note: 'YouTube公式仕様では、最小幅640ピクセル、16:9のアスペクト比、2MB以下のファイルサイズが必須要件です。',
+    },
+    shortsTemplate: {
+      heading: 'YouTubeショート セーフゾーン テンプレート',
+      body: '1080×1920の無料透明PNGオーバーレイをダウンロードして、タイトルや字幕、重要な演出がショートの再生ボタンやUIに被るのを防ぎましょう。',
+      downloadBtn: '透過PNGテンプレートをダウンロード (1080×1920)',
+      cardTitle: 'Shortsセーフゾーン オーバーレイ テンプレート',
+      cardBadge: '1080 × 1920 PNG',
+      cardDesc: 'Premiere Pro、DaVinci Resolve、Final Cut、CapCut、Canvaのタイムラインに重ねて使える透明ガイド画像をダウンロード。',
+    },
+    calculators: {
+      revenueIntro: '月間再生回数と想定RPMを入力して、YouTube動画の推定月収および年収をシミュレーション。',
+      revenueHow: 'YouTube収益計算ツールの仕組み',
+      revenueDesc: '月間再生回数とRPMの想定幅を入力すると、プラットフォーム手数料を差し引いたクリエイターの手取り収益を自動算出します。',
+      rpmIntro: '自身の総収益と再生回数から、1,000回再生あたりの純収益（RPM）を正確に計算。',
+      rpmHow: 'YouTube RPM計算ツールの仕組み',
+      monetizationIntro: '広告、企業案件、アフィリエイトなどの全収入から制作経費を差し引いて、純利益を算出。',
+      monetizationHow: 'YouTube総合収益化シミュレーターの仕組み',
+    },
+  },
+  fr: {
+    thumbnailSpecs: {
+      heading: 'Taille de miniature YouTube',
+      recommendedSize: 'Taille recommandée',
+      recommendedSizeVal: '1280 × 720 px',
+      aspectRatio: "Format d'image",
+      aspectRatioVal: '16:9',
+      maxSize: 'Poids maximal',
+      maxSizeVal: 'Moins de 2 Mo',
+      formats: 'Formats acceptés',
+      formatsVal: 'JPG, PNG, GIF, WebP',
+      note: 'Les spécifications officielles de YouTube exigent une largeur minimale de 640 pixels, un ratio 16:9 et un fichier de moins de 2 Mo.',
+    },
+    shortsTemplate: {
+      heading: 'Template de zone de sécurité YouTube Shorts',
+      body: "Téléchargez notre template overlay PNG transparent 1080×1920 gratuit pour éviter que vos titres, sous-titres et éléments clés ne soient masqués par l'interface des Shorts.",
+      downloadBtn: 'Télécharger le template PNG transparent (1080×1920)',
+      cardTitle: 'Template de zone de sécurité Shorts',
+      cardBadge: '1080 × 1920 PNG',
+      cardDesc: 'Téléchargez le template PNG transparent pour le glisser directement sur votre piste vidéo dans Premiere Pro, DaVinci Resolve, Final Cut, CapCut ou Canva.',
+    },
+    calculators: {
+      revenueIntro: "Utilisez ce calculateur d'argent YouTube pour convertir vos vues mensuelles et votre RPM en revenus estimés.",
+      revenueHow: 'Comment fonctionne le calculateur de revenus YouTube',
+      revenueDesc: 'Saisissez vos vues mensuelles et votre fourchette de RPM. Le calculateur projette vos revenus mensuels et annuels en toute transparence.',
+      rpmIntro: 'Calculez votre RPM YouTube pour connaître vos gains réels pour 1 000 vues à partir des statistiques de votre chaîne.',
+      rpmHow: 'Comment fonctionne le calculateur de RPM YouTube',
+      monetizationIntro: 'Calculez vos revenus YouTube sur toutes vos sources (pubs, sponsors, affiliation) déduction faite des dépenses.',
+      monetizationHow: 'Comment fonctionne le calculateur de monétisation YouTube',
+    },
+  },
+  de: {
+    thumbnailSpecs: {
+      heading: 'YouTube-Thumbnail-Größe',
+      recommendedSize: 'Empfohlene Maße',
+      recommendedSizeVal: '1280 × 720 px',
+      aspectRatio: 'Seitenverhältnis',
+      aspectRatioVal: '16:9',
+      maxSize: 'Max. Dateigröße',
+      maxSizeVal: 'Unter 2 MB',
+      formats: 'Dateiformate',
+      formatsVal: 'JPG, PNG, GIF, WebP',
+      note: 'Die offiziellen YouTube-Vorgaben verlangen mindestens 640 Pixel Breite, ein 16:9-Verhältnis und maximal 2 MB Dateigröße.',
+    },
+    shortsTemplate: {
+      heading: 'YouTube Shorts Safe Zone Vorlage',
+      body: 'Lade unsere kostenlose transparente 1080×1920 PNG-Vorlage herunter, damit Titel, Untertitel und wichtige Bildinhalte nicht von den Shorts-Buttons verdeckt werden.',
+      downloadBtn: 'Transparente PNG-Vorlage herunterladen (1080×1920)',
+      cardTitle: 'Shorts Safe Zone Overlay-Vorlage',
+      cardBadge: '1080 × 1920 PNG',
+      cardDesc: 'Lade die transparente PNG-Vorlage herunter, um sie direkt in Premiere Pro, DaVinci Resolve, Final Cut, CapCut oder Canva über dein Video zu legen.',
+    },
+    calculators: {
+      revenueIntro: 'Nutze diesen YouTube-Geldrechner, um aus monatlichen Aufrufen und RPM-Werten deine geschätzten Einnahmen zu ermitteln.',
+      revenueHow: 'So funktioniert der YouTube-Einnahmenrechner',
+      revenueDesc: 'Gib Monatsaufrufe und RPM-Spanne ein, um dein Einnahmenszenario zu berechnen. Der Rechner schätzt Monats- und Jahresumsatz ohne versteckte Abzüge.',
+      rpmIntro: 'Berechne deinen YouTube-RPM, um deinen Nettoverdienst pro 1.000 Aufrufe aus deinen echten Kanaldaten zu kennen.',
+      rpmHow: 'So funktioniert der YouTube-RPM-Rechner',
+      monetizationIntro: 'Berechne deine gesamten YouTube-Einnahmen aus allen Quellen (Werbung, Sponsoring, Affiliates) abzüglich Produktionskosten.',
+      monetizationHow: 'So funktioniert der YouTube-Monetarisierungsrechner',
+    },
+  },
+  pt: {
+    thumbnailSpecs: {
+      heading: 'Tamanho de miniatura do YouTube',
+      recommendedSize: 'Tamanho recomendado',
+      recommendedSizeVal: '1280 × 720 px',
+      aspectRatio: 'Proporção da tela',
+      aspectRatioVal: '16:9',
+      maxSize: 'Tamanho máximo',
+      maxSizeVal: 'Menos de 2 MB',
+      formats: 'Formatos aceitos',
+      formatsVal: 'JPG, PNG, GIF, WebP',
+      note: 'As especificações oficiais do YouTube exigem largura mínima de 640 pixels, proporção 16:9 e arquivo com menos de 2 MB.',
+    },
+    shortsTemplate: {
+      heading: 'Modelo de zona segura de YouTube Shorts',
+      body: 'Baixe nosso modelo transparente em PNG 1080×1920 grátis para garantir que títulos, legendas e pontos de foco nunca fiquem escondidos pelos botões dos Shorts.',
+      downloadBtn: 'Baixar modelo PNG transparente (1080×1920)',
+      cardTitle: 'Modelo de zona segura para Shorts',
+      cardBadge: '1080 × 1920 PNG',
+      cardDesc: 'Baixe o modelo PNG transparente para arrastar diretamente para a linha do tempo no Premiere Pro, DaVinci Resolve, Final Cut, CapCut ou Canva.',
+    },
+    calculators: {
+      revenueIntro: 'Use esta calculadora de dinheiro do YouTube para converter visualizações mensais e RPM em receita estimada.',
+      revenueHow: 'Como funciona a calculadora de receita do YouTube',
+      revenueDesc: 'Insira suas visualizações e faixa estimada de RPM. A calculadora projeta seus ganhos mensais e anuais sem deduções extras.',
+      rpmIntro: 'Calcule seu RPM do YouTube para saber seus ganhos reais por 1.000 visualizações com base nas estatísticas do seu canal.',
+      rpmHow: 'Como funciona a calculadora de RPM do YouTube',
+      monetizationIntro: 'Calcule a receita total do canal em todas as fontes (anúncios, patrocínios, afiliados) menos despesas.',
+      monetizationHow: 'Como funciona a calculadora de monetização do YouTube',
+    },
+  },
+  ko: {
+    thumbnailSpecs: {
+      heading: '유튜브 썸네일 크기 및 규격',
+      recommendedSize: '권장 해상도',
+      recommendedSizeVal: '1280 × 720 px',
+      aspectRatio: '화면 비율',
+      aspectRatioVal: '16:9',
+      maxSize: '최대 파일 크기',
+      maxSizeVal: '2MB 이하',
+      formats: '지원 포맷',
+      formatsVal: 'JPG, PNG, GIF, WebP',
+      note: '공식 YouTube 썸네일 규격은 최소 너비 640픽셀, 16:9 화면 비율, 2MB 이하의 파일 크기를 요구합니다.',
+    },
+    shortsTemplate: {
+      heading: '유튜브 쇼츠 세이프존 템플릿',
+      body: '무료 투명 1080×1920 PNG 오버레이 템플릿을 다운로드하여 쇼츠 플레이어 UI, 채널 아이콘, 음원 디스크에 자막이나 중요 화면이 가려지지 않도록 편집하세요.',
+      downloadBtn: '투명 PNG 템플릿 다운로드 (1080×1920)',
+      cardTitle: '쇼츠 세이프존 오버레이 템플릿',
+      cardBadge: '1080 × 1920 PNG',
+      cardDesc: '프리미어 프로, 다빈치 리졸브, 파이널 컷, 캡컷, 캔바 타임라인에 바로 올려서 사용할 수 있는 투명 가이드 PNG입니다.',
+    },
+    calculators: {
+      revenueIntro: '월간 조회수와 예상 RPM을 바탕으로 유튜브 예상 수입을 시뮬레이션하세요.',
+      revenueHow: '유튜브 수익 계산기 작동 원리',
+      revenueDesc: '월간 조회수와 예상 RPM 범위를 입력하면 플랫폼 수수료 차감 후 크리에이터의 순수익을 월별 및 연간으로 산출합니다.',
+      rpmIntro: '채널의 실제 수익과 조회수를 기반으로 1,000회 조회당 순수익(RPM)을 정확히 계산하세요.',
+      rpmHow: '유튜브 RPM 계산기 작동 원리',
+      monetizationIntro: '광고, 협찬, 제휴 등 모든 수입원에서 제작 비용을 차감하여 크리에이터의 실제 월간 순수익을 계산하세요.',
+      monetizationHow: '유튜브 종합 수익화 계산기 작동 원리',
+    },
+  },
+  it: {
+    thumbnailSpecs: {
+      heading: 'Dimensioni miniature YouTube',
+      recommendedSize: 'Dimensione consigliata',
+      recommendedSizeVal: '1280 × 720 px',
+      aspectRatio: 'Proporzioni',
+      aspectRatioVal: '16:9',
+      maxSize: 'Peso massimo',
+      maxSizeVal: 'Sotto 2 MB',
+      formats: 'Formati supportati',
+      formatsVal: 'JPG, PNG, GIF, WebP',
+      note: 'Le specifiche ufficiali di YouTube richiedono una larghezza minima di 640 pixel, formato 16:9 e un peso inferiore a 2 MB.',
+    },
+    shortsTemplate: {
+      heading: 'Template safe zone YouTube Shorts',
+      body: 'Scarica il nostro template overlay PNG trasparente 1080×1920 gratuito per garantire che titoli, sottotitoli ed elementi visivi non vengano coperti dai pulsanti di Shorts.',
+      downloadBtn: 'Scarica template PNG trasparente (1080×1920)',
+      cardTitle: 'Template overlay safe zone Shorts',
+      cardBadge: '1080 × 1920 PNG',
+      cardDesc: 'Scarica il template PNG trasparente da posizionare direttamente sulla timeline in Premiere Pro, DaVinci Resolve, Final Cut, CapCut o Canva.',
+    },
+    calculators: {
+      revenueIntro: 'Usa questo calcolatore di denaro YouTube per convertire visualizzazioni mensili e RPM in guadagni stimati.',
+      revenueHow: 'Come funziona il calcolatore di entrate YouTube',
+      revenueDesc: 'Inserisci le visualizzazioni mensili e la forbice di RPM stimata. Il calcolatore proietta le entrate mensili e annuali senza commissioni nascoste.',
+      rpmIntro: 'Calcola il tuo RPM di YouTube per scoprire i guadagni effettivi per 1.000 visualizzazioni dai dati del tuo canale.',
+      rpmHow: 'Come funziona il calcolatore di RPM YouTube',
+      monetizationIntro: 'Calcola le entrate totali del canale da tutte le fonti (annunci, sponsor, affiliazioni) sottraendo le spese.',
+      monetizationHow: 'Come funziona il calcolatore di monetizzazione YouTube',
+    },
+  },
+};
+
+

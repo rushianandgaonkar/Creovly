@@ -13,6 +13,7 @@ import ToolDemonstration from './ToolDemonstration';
 import ToolSteps from './ToolSteps';
 import { useI18n, LocalizedLink } from '@/lib/i18n';
 import { translations } from '@/config/i18n';
+import { toolSeoContent } from '@/config/tool-guidance-i18n';
 
 export interface ToolPageShellProps {
   title: string;
@@ -116,6 +117,8 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
     }
   };
 
+  const seo = toolSeoContent[locale] || toolSeoContent.en;
+
   const renderGuidance = () => {
     if (toolSlug === 'youtube-thumbnail-compressor' && t.tools.guidance?.compressor) {
       const g = t.tools.guidance.compressor;
@@ -137,32 +140,33 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
     }
     if (toolSlug === 'youtube-thumbnail-resizer' && t.tools.guidance?.resizer) {
       const g = t.tools.guidance.resizer;
+      const specs = seo.thumbnailSpecs;
       return (
         <>
           <div className="rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] p-4 sm:p-5 my-2">
             <h2 className="text-base font-bold text-[var(--text-ink)] mb-3">
-              YouTube thumbnail size
+              {specs.heading}
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
               <div className="p-3 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
-                <span className="font-mono text-[var(--text-muted)] block text-[11px]">Recommended Size</span>
-                <span className="font-semibold text-[var(--text-ink)] text-sm">1280 × 720 px</span>
+                <span className="font-mono text-[var(--text-muted)] block text-[11px]">{specs.recommendedSize}</span>
+                <span className="font-semibold text-[var(--text-ink)] text-sm">{specs.recommendedSizeVal}</span>
               </div>
               <div className="p-3 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
-                <span className="font-mono text-[var(--text-muted)] block text-[11px]">Aspect Ratio</span>
-                <span className="font-semibold text-[var(--text-ink)] text-sm">16:9</span>
+                <span className="font-mono text-[var(--text-muted)] block text-[11px]">{specs.aspectRatio}</span>
+                <span className="font-semibold text-[var(--text-ink)] text-sm">{specs.aspectRatioVal}</span>
               </div>
               <div className="p-3 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
-                <span className="font-mono text-[var(--text-muted)] block text-[11px]">Max File Size</span>
-                <span className="font-semibold text-[var(--text-ink)] text-sm">Under 2 MB</span>
+                <span className="font-mono text-[var(--text-muted)] block text-[11px]">{specs.maxSize}</span>
+                <span className="font-semibold text-[var(--text-ink)] text-sm">{specs.maxSizeVal}</span>
               </div>
               <div className="p-3 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
-                <span className="font-mono text-[var(--text-muted)] block text-[11px]">Formats</span>
-                <span className="font-semibold text-[var(--text-ink)] text-sm">JPG, PNG, GIF, WebP</span>
+                <span className="font-mono text-[var(--text-muted)] block text-[11px]">{specs.formats}</span>
+                <span className="font-semibold text-[var(--text-ink)] text-sm">{specs.formatsVal}</span>
               </div>
             </div>
             <p className="text-xs text-[var(--text-muted)] mt-3">
-              Official YouTube thumbnail specs require a minimum width of 640 pixels, 16:9 aspect ratio, and a file size under 2 MB.
+              {specs.note}
             </p>
           </div>
           <p>{g.p1}</p>
@@ -190,15 +194,16 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
     }
     if (toolSlug === 'youtube-shorts-safe-zone' && t.tools.guidance?.shorts) {
       const g = t.tools.guidance.shorts;
+      const tmpl = seo.shortsTemplate;
       return (
         <>
           <p>{g.p1}</p>
           <div className="rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] p-4 sm:p-5 my-3">
             <h2 className="text-base font-bold text-[var(--text-ink)] mb-2">
-              YouTube Shorts safe zone template
+              {tmpl.heading}
             </h2>
             <p className="text-xs text-[var(--text-body)] leading-relaxed mb-3">
-              Download our free transparent 1080×1920 PNG overlay template to ensure your titles, subtitles, and key visual actions never get blocked by Shorts player controls, channel icons, or sound discs.
+              {tmpl.body}
             </p>
             <a
               href="/templates/youtube-shorts-safe-zone-template.png"
@@ -208,7 +213,7 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
               </svg>
-              Download Transparent PNG Overlay (1080×1920)
+              {tmpl.downloadBtn}
             </a>
           </div>
           <p>{g.p2}</p>
