@@ -30,6 +30,7 @@ const toolFeatureTags: Record<string, string> = {
   'youtube-thumbnail-resizer': '1280×720 HD • 16:9',
   'youtube-banner-size': '2560×1440 • All Devices Safe Area',
   'youtube-shorts-safe-zone': '9:16 Safe Zone • Mask',
+  'youtube-channel-name-generator': 'AI Formulas • Niche Styles',
   'youtube-title-checker': 'Mobile ~50 Chars • Truncation',
   'youtube-revenue-calculator': 'Dynamic RPM • Modeler',
   'youtube-rpm-calculator': 'Net Earnings / 1K Views',

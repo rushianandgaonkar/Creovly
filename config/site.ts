@@ -54,6 +54,7 @@ export const footerNavigation = {
     {
       title: 'Title Tools',
       items: [
+        { name: 'Channel Name Generator', href: '/tools/youtube-channel-name-generator' },
         { name: 'Title Checker & Analyzer', href: '/tools/youtube-title-checker' },
         { name: 'Pre-Publish Checklist', href: '/checklist' },
       ],
@@ -151,6 +152,20 @@ export const toolRegistry: ToolDefinition[] = [
       'Check YouTube Shorts safe zones before publishing. Preview guides, keep content clear of player buttons, and download the free transparent PNG template.',
     status: 'available',
     seoTarget: 'YouTube Shorts Safe Zone',
+  },
+  {
+    id: 'youtube-channel-name-generator',
+    heroTone: 'indigo',
+    title: 'YouTube Channel Name Generator',
+    seoTitle: 'Free YouTube Channel Name Generator',
+    slug: 'youtube-channel-name-generator',
+    href: '/tools/youtube-channel-name-generator',
+    category: 'title',
+    categoryLabel: 'Title Tools',
+    description:
+      'Generate catchy YouTube channel names for gaming, vlogs, tech, and business. Free AI-inspired channel name generator running 100% in your browser.',
+    status: 'available',
+    seoTarget: 'YouTube Channel Name Generator',
   },
   {
     id: 'youtube-title-checker',

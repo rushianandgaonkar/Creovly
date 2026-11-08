@@ -35,6 +35,7 @@ const TOOLS = [
   'logo-background-remover',
   'youtube-shorts-safe-zone',
   'youtube-title-checker',
+  'youtube-channel-name-generator',
   'youtube-revenue-calculator',
   'youtube-rpm-calculator',
   'youtube-watch-hours-calculator',
@@ -92,7 +93,7 @@ test('all 8 languages generate complete page metadata with canonical URLs and re
   }
 });
 
-test('all 10 tool pages generate unique, localized metadata across all 8 languages', () => {
+test('all 11 tool pages generate unique, localized metadata across all 8 languages', () => {
   for (const toolSlug of TOOLS) {
     for (const locale of LOCALES) {
       const meta = metadataLib.createToolMetadata(toolSlug, locale);

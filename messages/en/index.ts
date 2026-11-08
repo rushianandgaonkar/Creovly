@@ -4,6 +4,7 @@ import { tools } from './tools';
 import { compressor } from './compressor';
 import { resizer } from './resizer';
 import { banner } from './banner';
+import { channelName } from './channelName';
 import { logoRemover } from './logoRemover';
 import { shorts } from './shorts';
 import { titleChecker } from './titleChecker';
@@ -20,6 +21,7 @@ export const messagesEn = {
   compressor,
   resizer,
   banner,
+  channelName,
   logoRemover,
   shorts,
   titleChecker,

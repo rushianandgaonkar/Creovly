@@ -100,6 +100,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Calibrate safe zones', body: 'Position critical text, logos, and avatars inside the central 1546 × 423 safe area visible across mobile and desktop.' },
         { title: 'Export 2560 × 1440 banner', body: 'Download the calibrated 2560 × 1440 banner image and test your channel art upload in YouTube Studio.' },
       ],
+      'youtube-channel-name-generator': [
+        { title: 'Input keywords & niche', body: 'Enter your primary channel topics, keywords, or creator niche (e.g. tech, gaming, cooking, finance).' },
+        { title: 'Choose naming archetype', body: 'Select your desired brand style (modern, punchy, classic, or minimalist) and word count.' },
+        { title: 'Test and claim your handle', body: 'Review generated name ideas, check matching @handle availability in YouTube Studio, and save your favorites.' },
+      ],
     },
   },
   es: {
@@ -172,6 +177,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Sube tu diseño de banner', body: 'Selecciona la imagen de cabecera de tu canal en formato JPEG, PNG o WebP de hasta 20 MB.' },
         { title: 'Calibra la zona segura', body: 'Asegúrate de colocar textos, títulos y logotipos dentro del área segura central de 1546 × 423 px.' },
         { title: 'Exporta en 2560 × 1440', body: 'Descarga el banner calibrado en alta resolución de 2560 × 1440 y súbela directamente a YouTube Studio.' },
+      ],
+      'youtube-channel-name-generator': [
+        { title: 'Introduce temática y nicho', body: 'Escribe tus palabras clave principales o temática de contenido (ej. tecnología, videojuegos, cocina, finanzas).' },
+        { title: 'Elige estilo y formato', body: 'Selecciona el arquetipo de marca deseado (moderno, impactante, clásico o minimalista) y la longitud.' },
+        { title: 'Verifica y reserva el handle', body: 'Revisa las ideas generadas, comprueba la disponibilidad del identificador @handle en YouTube Studio y guarda tus favoritos.' },
       ],
     },
   },
@@ -246,6 +256,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'セーフゾーンを調整', body: 'スマホやPC全端末で確実に表示される中央1546×423のセーフエリア内に文字やロゴを配置します。' },
         { title: '2560×1440で書き出し', body: '2560×1440解像度の最適化バナーをダウンロードし、YouTube Studioで適用確認を行います。' },
       ],
+      'youtube-channel-name-generator': [
+        { title: 'キーワードとジャンルを入力', body: 'チャンネルのテーマ、配信ジャンル、関連キーワード（例: ガジェット、ゲーム実況、料理、投資）を入力します。' },
+        { title: 'ネーミングスタイルを選択', body: '先進的、王道、ユニーク、ミニマルなどのブランド傾向と希望の単語数を選びます。' },
+        { title: '@ハンドル名の空きを確認', body: '生成された候補から気に入った名前を選び、YouTube Studioで希望の@ハンドルが取得可能か確認して保存します。' },
+      ],
     },
   },
   fr: {
@@ -318,6 +333,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Importez votre bannière', body: "Sélectionnez votre bannière YouTube au format JPEG, PNG ou WebP jusqu'à 20 Mo." },
         { title: 'Calibrez la zone de sécurité', body: 'Placez textes et logos cruciaux dans la zone centrale sécurisée de 1546 × 423 px visible sur mobile et ordinateur.' },
         { title: 'Exportez en 2560 × 1440', body: 'Téléchargez votre bannière calibrée en 2560 × 1440 et importez-la dans YouTube Studio.' },
+      ],
+      'youtube-channel-name-generator': [
+        { title: 'Saisissez vos mots-clés', body: "Entrez vos thématiques principales ou votre niche de créateur (ex. tech, gaming, cuisine, finance)." },
+        { title: 'Choisissez un style de marque', body: "Sélectionnez la tonalité souhaitée (moderne, percutant, classique ou minimaliste) et la longueur du nom." },
+        { title: 'Testez et réservez l\'identifiant', body: "Parcourez les suggestions, vérifiez la disponibilité de l'identifiant @handle sur YouTube Studio et enregistrez vos favoris." },
       ],
     },
   },
@@ -392,6 +412,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Safe Zone kalibrieren', body: 'Platziere wichtige Logos und Schriften im zentralen Sicherheitsbereich von 1546 × 423 px für alle Endgeräte.' },
         { title: '2560 × 1440 exportieren', body: 'Lade das kalibrierte 2560 × 1440 Banner herunter und überprüfe die Anzeige in YouTube Studio.' },
       ],
+      'youtube-channel-name-generator': [
+        { title: 'Keywords & Nische eingeben', body: 'Gib deine Hauptthemen oder Nische ein (z. B. Technik, Gaming, Kochen, Finanzen).' },
+        { title: 'Namensstil auswählen', body: 'Wähle deinen bevorzugten Markenstil (modern, prägnant, klassisch oder minimalistisch) und die Wortanzahl.' },
+        { title: '@Handle prüfen & sichern', body: 'Prüfe die generierten Namensideen, teste die Verfügbarkeit des @Handles in YouTube Studio und speichere Favoriten.' },
+      ],
     },
   },
   pt: {
@@ -464,6 +489,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Carregar arte do banner', body: 'Selecione a imagem do banner do seu canal em formato JPEG, PNG ou WebP com até 20 MB.' },
         { title: 'Calibrar área segura', body: 'Mantenha textos, títulos e logotipos dentro da zona de segurança central de 1546 × 423 px para todos os dispositivos.' },
         { title: 'Exportar 2560 × 1440', body: 'Baixe o banner calibrado em resolução total de 2560 × 1440 e envie para o YouTube Studio.' },
+      ],
+      'youtube-channel-name-generator': [
+        { title: 'Digite palavras-chave e nicho', body: 'Introduza os tópicos principais ou nicho do canal (ex.: tecnologia, games, culinária, finanças).' },
+        { title: 'Escolha o estilo do nome', body: 'Selecione o arquétipo de marca desejado (moderno, marcante, clássico ou minimalista) e o tamanho.' },
+        { title: 'Verifique e garanta o @handle', body: 'Analise as ideias geradas, confirme a disponibilidade do identificador @handle no YouTube Studio e guarde os favoritos.' },
       ],
     },
   },
@@ -538,6 +568,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: '안전 영역(Safe Area) 교정', body: '모바일과 데스크톱 모두에서 잘리지 않는 중앙 1546 × 423 안전 영역 안에 핵심 로고와 텍스트를 배치합니다.' },
         { title: '2560 × 1440 배너 다운로드', body: '최적화된 2560 × 1440 해상도 배너를 내보내고 YouTube Studio에 등록하여 미리보기를 확인합니다.' },
       ],
+      'youtube-channel-name-generator': [
+        { title: '키워드 및 카테고리 입력', body: '채널의 핵심 주제, 다룰 콘텐츠 키워드(예: 테크, 마인크래프트, 요리, 재테크)를 입력합니다.' },
+        { title: '작명 스타일 및 길이 선택', body: '원하는 브랜드 분위기(트렌디, 정통, 개성, 미니멀)와 적절한 단어 길이를 지정합니다.' },
+        { title: '@핸들 선점 및 즐겨찾기 저장', body: '추천된 이름들을 살펴보고 YouTube Studio에서 @핸들 중복 여부를 확인한 뒤 관심 목록에 저장합니다.' },
+      ],
     },
   },
   it: {
@@ -610,6 +645,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Carica l\'artwork del banner', body: 'Seleziona la grafica del banner del canale in formato JPEG, PNG o WebP fino a 20 MB.' },
         { title: 'Calibra la safe zone', body: 'Assicurati che loghi e testi chiave siano posizionati nella safe area centrale di 1546 × 423 px per tutti i dispositivi.' },
         { title: 'Esporta in 2560 × 1440', body: 'Scarica il banner ottimizzato in alta definizione 2560 × 1440 e caricalo su YouTube Studio.' },
+      ],
+      'youtube-channel-name-generator': [
+        { title: 'Inserisci parole chiave e nicchia', body: 'Digita gli argomenti principali o la nicchia del tuo canale (es. tech, gaming, cucina, finanza).' },
+        { title: 'Scegli lo stile del brand', body: 'Seleziona l\'archetipo desiderato (moderno, d\'impatto, classico o minimalista) e la lunghezza del nome.' },
+        { title: 'Verifica e prenota l\'@handle', body: 'Esamina le idee generate, controlla la disponibilità dell\'@handle su YouTube Studio e salva i preferiti.' },
       ],
     },
   },

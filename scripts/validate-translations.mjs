@@ -313,6 +313,7 @@ const toolSlugs = [
   'logo-background-remover',
   'youtube-shorts-safe-zone',
   'youtube-title-checker',
+  'youtube-channel-name-generator',
   'youtube-revenue-calculator',
   'youtube-rpm-calculator',
   'youtube-watch-hours-calculator',
@@ -360,6 +361,7 @@ const canonicalPages = [
   '/tools/youtube-banner-size',
   '/tools/youtube-shorts-safe-zone',
   '/tools/youtube-title-checker',
+  '/tools/youtube-channel-name-generator',
   '/tools/youtube-revenue-calculator',
   '/tools/youtube-rpm-calculator',
   '/tools/youtube-watch-hours-calculator',
@@ -474,7 +476,7 @@ for (const loc of locales) {
     console.error(`  ❌ Missing tools.faqs in [${loc.toUpperCase()}]`);
     faqInstructionErrors++;
   } else {
-    const requiredFaqKeys = ['compressor', 'resizer', 'banner', 'logoRemover', 'shorts', 'titleChecker', 'revenue', 'rpm', 'watchHours', 'monetization'];
+    const requiredFaqKeys = ['compressor', 'resizer', 'banner', 'logoRemover', 'shorts', 'titleChecker', 'channelName', 'revenue', 'rpm', 'watchHours', 'monetization'];
     for (const fKey of requiredFaqKeys) {
       if (!Array.isArray(faqs[fKey]) || faqs[fKey].length === 0) {
         console.error(`  ❌ Empty or missing tools.faqs.${fKey} in [${loc.toUpperCase()}]`);

@@ -216,6 +216,37 @@ const pages = [
     `,
   },
   {
+    filename: 'youtube-channel-name-generator.png',
+    category: 'TITLE & BRAND TOOLS',
+    tone: '#6366f1',
+    glow: 'rgba(99, 102, 241, 0.25)',
+    title: 'YouTube Channel Name Generator',
+    description: 'Generate catchy, memorable channel names tailored to your niche, archetype, and style with instant handle checks.',
+    pills: ['AI Formulas', 'Niche Archetypes', 'Zero Login & Free'],
+    visual: `
+      <div style="background:#191836;border:1px solid rgba(99,102,241,0.3);border-radius:18px;padding:24px;width:100%;height:100%;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 40px rgba(0,0,0,0.5);">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:12px;font-family:monospace;color:#a5b4fc;font-weight:700;letter-spacing:1px;">NAME FORMULA ENGINE</span>
+          <span style="background:rgba(99,102,241,0.2);color:#818cf8;font-size:11px;font-weight:700;padding:4px 8px;border-radius:6px;font-family:monospace;">SMART ARCHETYPES</span>
+        </div>
+        <div style="background:#090d16;border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,0.06);">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+            <span style="font-size:11px;font-family:monospace;color:#94a3b8;">Archetype Match</span>
+            <span style="font-size:11px;font-family:monospace;color:#34d399;font-weight:700;">Modern &amp; Punchy</span>
+          </div>
+          <div style="font-size:22px;font-weight:900;color:#f8fafc;letter-spacing:-0.02em;margin-bottom:4px;">
+            ApexTech Lab
+          </div>
+          <div style="font-size:11px;color:#818cf8;font-family:monospace;">@ApexTechLab &bull; 12 chars</div>
+        </div>
+        <div style="display:flex;gap:8px;font-size:11px;font-family:monospace;">
+          <div style="flex:1;background:#0f172a;padding:8px;border-radius:8px;text-align:center;color:#94a3b8;border:1px solid rgba(255,255,255,0.06);">Niche Filter</div>
+          <div style="flex:1;background:#0f172a;padding:8px;border-radius:8px;text-align:center;color:#94a3b8;border:1px solid rgba(255,255,255,0.06);">Handle Check</div>
+        </div>
+      </div>
+    `,
+  },
+  {
     filename: 'youtube-revenue-calculator.png',
     category: 'MONEY & GROWTH',
     tone: '#0d9488',

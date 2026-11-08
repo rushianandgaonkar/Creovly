@@ -28,6 +28,7 @@ import styles from '@/components/ui/artwork.module.css';
 import LogoBackgroundRemover from '@/components/tools/LogoBackgroundRemover';
 import ShortsSafeZone from '@/components/tools/ShortsSafeZone';
 import TitleChecker from '@/components/tools/TitleChecker';
+import ChannelNameGenerator from '@/components/tools/ChannelNameGenerator';
 import CalculatorPage from '@/components/tools/CalculatorPage';
 import GuidesContent from '@/components/guides/GuidesContent';
 import GuideArticle from '@/components/guides/GuideArticle';
@@ -47,6 +48,7 @@ const staticSlugs = [
   ['tools', 'youtube-banner-size'],
   ['tools', 'youtube-shorts-safe-zone'],
   ['tools', 'youtube-title-checker'],
+  ['tools', 'youtube-channel-name-generator'],
   ['tools', 'youtube-revenue-calculator'],
   ['tools', 'youtube-rpm-calculator'],
   ['tools', 'youtube-watch-hours-calculator'],
@@ -312,6 +314,19 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
             toolSlug={tool.slug}
           >
             <TitleChecker />
+          </ToolPageShell>
+        );
+        break;
+      case 'youtube-channel-name-generator':
+        toolComponent = (
+          <ToolPageShell
+            title={tool.title}
+            description={tool.description}
+            category="Title Tools"
+            categoryHref="/tools#title"
+            toolSlug={tool.slug}
+          >
+            <ChannelNameGenerator locale={loc} />
           </ToolPageShell>
         );
         break;

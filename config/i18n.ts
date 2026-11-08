@@ -301,6 +301,13 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: 'Thumbnail Tools',
         keywords: ['youtube shorts safe zone', 'youtube shorts safe zone template', 'shorts overlay checker', 'shorts safe area template', 'vertical video framing tool', 'shorts ui margins'],
       },
+      'youtube-channel-name-generator': {
+        title: 'YouTube Channel Name Generator',
+        seoTitle: 'Free YouTube Channel Name Generator',
+        description: 'Generate catchy YouTube channel names for gaming, vlogs, tech, and business. Free AI-inspired channel name generator running 100% in your browser.',
+        categoryLabel: 'Title Tools',
+        keywords: ['youtube channel name generator', 'ai youtube channel name generator', 'channel name ideas', 'youtube name maker', 'cool youtube names', 'gaming channel names', 'creative youtube channel name generator'],
+      },
       'youtube-title-checker': {
         title: 'YouTube Title Checker & Analyzer',
         seoTitle: 'Free YouTube Title Checker: Length and Truncation',
@@ -455,6 +462,13 @@ export const translations: Record<Locale, I18nContent> = {
         description: 'Comprueba las zonas seguras de YouTube Shorts antes de publicar. Evita que los botones tapen tu contenido y descarga la plantilla PNG transparente gratis.',
         categoryLabel: 'Herramientas de miniaturas',
         keywords: ['zona segura youtube shorts', 'plantilla shorts youtube', 'margen seguro video vertical', 'shorts safe zone', 'guia encuadre shorts'],
+      },
+      'youtube-channel-name-generator': {
+        title: 'Generador de nombres para canales de YouTube',
+        seoTitle: 'Generador de nombres para canal de YouTube',
+        description: 'Genera ideas creativas de nombres para tu canal de YouTube en gaming, vlogs y tecnología. Generador gratuito e instantáneo en tu navegador.',
+        categoryLabel: 'Herramientas de títulos',
+        keywords: ['generador de nombres para canales de youtube', 'generador de nombres youtube ia', 'ideas de nombres para youtube', 'nombres para canales de gaming', 'creador de nombres youtube gratis'],
       },
       'youtube-title-checker': {
         title: 'Analizador y comprobador de títulos de YouTube',
@@ -611,6 +625,13 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: 'サムネイルツール',
         keywords: ['YouTube ショート セーフゾーン', 'Shorts UI 被り 確認', 'ショート動画 テロップ 安全領域', '縦型動画 セーフエリア', 'Shorts レイアウト ガイド'],
       },
+      'youtube-channel-name-generator': {
+        title: 'YouTubeチャンネル名ジェネレーター',
+        seoTitle: 'YouTubeチャンネル名ジェネレーター: 無料作成',
+        description: 'ゲーム、Vlog、ビジネス向けのYouTubeチャンネル名を即座に自動生成。ログイン不要、完全無料で使えるチャンネル名作成ツール。',
+        categoryLabel: 'タイトルツール',
+        keywords: ['youtubeチャンネル名ジェネレーター', 'youtubeチャンネル名決め方', 'youtube名前ジェネレーターai', 'チャンネル名おすすめ', 'youtube名前自動生成'],
+      },
       'youtube-title-checker': {
         title: 'YouTubeタイトルチェッカー＆アナライザー',
         seoTitle: 'YouTube動画タイトルチェッカー: 文字数と省略確認',
@@ -765,6 +786,13 @@ export const translations: Record<Locale, I18nContent> = {
         description: 'Vérifiez la zone sûre de vos YouTube Shorts. Évitez les superpositions d’icônes et téléchargez gratuitement le template PNG transparent 1080x1920.',
         categoryLabel: 'Outils de miniatures',
         keywords: ['zone sure youtube shorts', 'template shorts youtube', 'safe zone video verticale', 'shorts overlay checker', 'marges ui shorts'],
+      },
+      'youtube-channel-name-generator': {
+        title: 'Générateur de nom de chaîne YouTube',
+        seoTitle: 'Générateur de nom de chaîne YouTube gratuit',
+        description: 'Trouvez des idées de noms originales pour votre chaîne YouTube de gaming, vlog ou tech. Générateur gratuit et instantané dans votre navigateur.',
+        categoryLabel: 'Outils de titres',
+        keywords: ['generateur de nom de chaine youtube', 'generateur nom youtube ia', 'idees nom chaine youtube', 'nom chaine youtube gaming', 'trouver nom youtube gratuit'],
       },
       'youtube-title-checker': {
         title: 'Vérificateur et analyseur de titres YouTube',
@@ -921,6 +949,13 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: 'Thumbnail-Tools',
         keywords: ['youtube shorts safe zone', 'shorts sicherer bereich vorlage', 'vertikales video framing', 'shorts ui abstaende', 'shorts schablone overlay'],
       },
+      'youtube-channel-name-generator': {
+        title: 'YouTube-Kanalnamen-Generator',
+        seoTitle: 'Kostenloser YouTube-Kanalnamen-Generator',
+        description: 'Finde kreative Namen für deinen YouTube-Kanal in Gaming, Vlogs, Tech und Business. Kostenloser Kanalnamen-Generator direkt im Browser.',
+        categoryLabel: 'Titel-Tools',
+        keywords: ['youtube kanalnamen generator', 'youtube namen generator ki', 'kanalname finden ideen', 'gaming kanal name generator', 'youtube name erstellen kostenlos'],
+      },
       'youtube-title-checker': {
         title: 'YouTube-Titel-Checker & Analyzer',
         seoTitle: 'YouTube-Titel-Checker: Zeichenlänge & Optimierung',
@@ -1075,6 +1110,13 @@ export const translations: Record<Locale, I18nContent> = {
         description: 'Verifique a zona segura do YouTube Shorts antes de publicar. Evite sobreposições de ícones e baixe o modelo PNG transparente de 1080x1920 grátis.',
         categoryLabel: 'Ferramentas de miniatura',
         keywords: ['zona segura youtube shorts', 'safe zone shorts youtube', 'gabarito shorts video vertical', 'margem segura shorts', 'overlay shorts checker'],
+      },
+      'youtube-channel-name-generator': {
+        title: 'Gerador de nomes para canais do YouTube',
+        seoTitle: 'Gerador de nomes para canal do YouTube',
+        description: 'Gere nomes criativos e marcantes para seu canal do YouTube em games, vlogs e negócios. Gerador gratuito e instantâneo no navegador.',
+        categoryLabel: 'Ferramentas de títulos',
+        keywords: ['gerador de nomes para canais do youtube', 'gerador de nomes youtube ia', 'ideias de nomes para canal youtube', 'nomes para canal de jogos', 'criar nome para youtube gratis'],
       },
       'youtube-title-checker': {
         title: 'Verificador e analisador de títulos do YouTube',
@@ -1231,6 +1273,13 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: '썸네일 도구',
         keywords: ['유튜브 쇼츠 세이프존', '쇼츠 자막 안전영역', '쇼츠 오버레이 가림 확인', '세로 영상 비율 템플릿', '쇼츠 ui 규격'],
       },
+      'youtube-channel-name-generator': {
+        title: '유튜브 채널 이름 생성기',
+        seoTitle: '유튜브 채널 이름 생성기: 무료 아이디어',
+        description: '게임, 브이로그, 테크 등 다양한 분야의 유튜브 채널 이름을 무료로 추천받으세요. 브라우저에서 바로 작동하는 스마트 이름 생성기.',
+        categoryLabel: '제목 도구',
+        keywords: ['유튜브 채널 이름 생성기', '유튜브 이름 추천', 'ai 유튜브 채널 이름', '유튜브 채널명 짓기', '유튜브 닉네임 생성기'],
+      },
       'youtube-title-checker': {
         title: '유튜브 제목 검사기 및 분석기',
         seoTitle: '유튜브 제목 검사기: 글자수 제한 및 모바일 말줄임',
@@ -1385,6 +1434,13 @@ export const translations: Record<Locale, I18nContent> = {
         description: 'Verifica la safe zone di YouTube Shorts. Evita sovrapposizioni UI e scarica il template overlay PNG trasparente gratuito a 1080x1920.',
         categoryLabel: 'Strumenti miniatura',
         keywords: ['zona sicura youtube shorts', 'safe zone shorts youtube', 'layout video verticale shorts', 'margini ui shorts', 'griglia shorts youtube'],
+      },
+      'youtube-channel-name-generator': {
+        title: 'Generatore di nomi per canali YouTube',
+        seoTitle: 'Generatore di nomi per canali YouTube',
+        description: 'Trova idee originali per il nome del tuo canale YouTube in gaming, vlog e tecnologia. Generatore gratuito e immediato nel tuo browser.',
+        categoryLabel: 'Strumenti titoli',
+        keywords: ['generatore di nomi per canali youtube', 'generatore nomi youtube ia', 'idee nome canale youtube', 'nomi canali youtube gaming', 'trovare nome canale youtube'],
       },
       'youtube-title-checker': {
         title: 'Analizzatore e verifica titoli YouTube',

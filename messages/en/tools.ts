@@ -197,6 +197,28 @@ export const tools = {
         answer: 'Emojis do not harm search indexing when used sparingly (1–2 relevant symbols), but avoid replacing core keyword text with emojis since search algorithms parse written terms.',
       },
     ],
+    channelName: [
+      {
+        question: 'How does the YouTube channel name generator work?',
+        answer: 'Enter your niche keywords, pick a content category, and choose a style archetype. The generator combines creative formulas, linguistic patterns, and brandable affixes locally in your browser to produce instant name suggestions.',
+      },
+      {
+        question: 'Can I use an AI YouTube channel name generator for free?',
+        answer: 'Yes! Creovly provides a free, AI-inspired algorithmic channel name generator with zero registration, no credits, and no paywalls. You can generate, remix, and copy unlimited channel name ideas.',
+      },
+      {
+        question: 'What makes a good YouTube channel name?',
+        answer: 'A strong YouTube channel name is easy to spell, memorable, 2–3 words or under 20 characters, clearly communicates your niche, and has an available matching @handle.',
+      },
+      {
+        question: 'Can I change my YouTube channel name later without losing subscribers?',
+        answer: 'Yes. You can update your channel name and handle anytime in YouTube Studio under Customization > Basic Info without losing any subscribers, views, watch time, or monetization status.',
+      },
+      {
+        question: 'How do I check if my YouTube handle is available?',
+        answer: 'Visit youtube.com/@yourdesiredhandle or navigate to YouTube Studio > Customization > Basic Info to confirm handle availability before finalizing your channel brand.',
+      },
+    ],
     revenue: [
       {
         question: 'How much money does YouTube pay for 1,000 views?',

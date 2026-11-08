@@ -225,6 +225,34 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
         </div>
       );
 
+    case 'channel-name-generator':
+      return (
+        <div className={`tool-preview preview-channel-name w-full h-full p-3 bg-zinc-950 text-zinc-100 flex flex-col justify-between select-none ${className}`} data-ui>
+          <div className="flex items-center justify-between text-[10px] text-zinc-400">
+            <span className="uppercase tracking-wide font-medium text-indigo-400">Smart Archetypes</span>
+            <span className="px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-300 text-[9px] font-semibold border border-indigo-500/30">AI Formula</span>
+          </div>
+          <div className="bg-zinc-900/90 rounded-lg p-2.5 border border-zinc-800 space-y-1.5 my-auto">
+            <div className="flex items-center justify-between">
+              <span className="text-[9px] font-mono uppercase text-emerald-400 font-bold tracking-wider">Modern &amp; Punchy</span>
+              <span className="text-[9px] font-mono text-zinc-400 bg-zinc-800/80 px-1 py-0.2 rounded">17 chars</span>
+            </div>
+            <div className="text-sm font-bold text-white tracking-tight flex items-center justify-between">
+              <span>NexusCraft Studio</span>
+              <span className="text-indigo-400 text-xs">★</span>
+            </div>
+            <div className="text-[10px] text-zinc-400 font-mono flex items-center gap-1">
+              <span className="text-zinc-500">@</span>
+              <span className="text-zinc-300">NexusCraftStudio</span>
+            </div>
+          </div>
+          <div className="flex items-center justify-between text-[9px] text-zinc-400 pt-1.5 border-t border-zinc-800/80">
+            <span>8 Niche Formats</span>
+            <span className="text-zinc-300 font-medium">Instant Handle Check</span>
+          </div>
+        </div>
+      );
+
     case 'revenue-calculator':
       return (
         <div className={`tool-preview preview-revenue w-full h-full p-3.5 bg-zinc-900 text-zinc-100 flex flex-col justify-between select-none ${className}`} data-ui>
