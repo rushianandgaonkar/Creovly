@@ -55,6 +55,7 @@ export const footerNavigation = {
       title: 'Title Tools',
       items: [
         { name: 'Channel Name Generator', href: '/tools/youtube-channel-name-generator' },
+        { name: 'Tag Generator', href: '/tools/youtube-tag-generator' },
         { name: 'Title Checker & Analyzer', href: '/tools/youtube-title-checker' },
         { name: 'Pre-Publish Checklist', href: '/checklist' },
       ],
@@ -167,6 +168,20 @@ export const toolRegistry: ToolDefinition[] = [
       'Generate catchy YouTube channel names for gaming, vlogs, tech, and business. Free AI-inspired channel name generator running 100% in your browser.',
     status: 'available',
     seoTarget: 'YouTube Channel Name Generator',
+  },
+  {
+    id: 'youtube-tag-generator',
+    heroTone: 'indigo',
+    title: 'YouTube Tag Generator',
+    seoTitle: 'Free YouTube Tag Generator (SEO & Clusters)',
+    slug: 'youtube-tag-generator',
+    href: '/tools/youtube-tag-generator',
+    category: 'title',
+    categoryLabel: 'Title Tools',
+    description:
+      'Generate optimized YouTube tags and keyword clusters within the 500-character limit. Free AI-powered tag generator with instant comma-separated copy.',
+    status: 'available',
+    seoTarget: 'YouTube Tag Generator',
   },
   {
     id: 'youtube-title-checker',

@@ -36,6 +36,7 @@ const TOOLS = [
   'youtube-shorts-safe-zone',
   'youtube-title-checker',
   'youtube-channel-name-generator',
+  'youtube-tag-generator',
   'youtube-revenue-calculator',
   'youtube-rpm-calculator',
   'youtube-watch-hours-calculator',

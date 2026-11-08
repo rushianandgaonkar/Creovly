@@ -130,6 +130,7 @@ const slugToFaqKey: Record<string, string> = {
   'youtube-thumbnail-resizer': 'resizer',
   'youtube-banner-size': 'banner',
   'youtube-channel-name-generator': 'channelName',
+  'youtube-tag-generator': 'tagGenerator',
   'logo-background-remover': 'logoRemover',
   'youtube-shorts-safe-zone': 'shorts',
   'youtube-title-checker': 'titleChecker',

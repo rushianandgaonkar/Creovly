@@ -247,6 +247,41 @@ const pages = [
     `,
   },
   {
+    filename: 'youtube-tag-generator.png',
+    category: 'TITLE & SEO TOOLS',
+    tone: '#6366f1',
+    glow: 'rgba(99, 102, 241, 0.25)',
+    title: 'YouTube Tag Generator',
+    description: 'Generate optimized YouTube tags and keyword clusters within the 500-character limit with instant comma copy.',
+    pills: ['500-Char Limit', 'Smart Clusters', 'Misspelling SEO'],
+    visual: `
+      <div style="background:#191836;border:1px solid rgba(99,102,241,0.3);border-radius:18px;padding:24px;width:100%;height:100%;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 40px rgba(0,0,0,0.5);">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:12px;font-family:monospace;color:#a5b4fc;font-weight:700;letter-spacing:1px;">TAG CLUSTER ENGINE</span>
+          <span style="background:rgba(99,102,241,0.2);color:#818cf8;font-size:11px;font-weight:700;padding:4px 8px;border-radius:6px;font-family:monospace;">500-CHAR METER</span>
+        </div>
+        <div style="background:#090d16;border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,0.06);">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+            <span style="font-size:11px;font-family:monospace;color:#94a3b8;">Studio Capacity</span>
+            <span style="font-size:11px;font-family:monospace;color:#34d399;font-weight:700;">342 / 500 chars</span>
+          </div>
+          <div style="font-size:15px;font-weight:700;color:#f8fafc;letter-spacing:-0.01em;margin-bottom:6px;display:flex;flex-wrap:wrap;gap:6px;">
+            <span style="background:rgba(99,102,241,0.25);color:#c7d2fe;padding:2px 8px;border-radius:4px;font-size:12px;">iphone 16</span>
+            <span style="background:#1e293b;color:#e2e8f0;padding:2px 8px;border-radius:4px;font-size:12px;">iphone 16 review</span>
+            <span style="background:#1e293b;color:#e2e8f0;padding:2px 8px;border-radius:4px;font-size:12px;">camera test</span>
+          </div>
+          <div style="width:100%;height:6px;background:#1e293b;border-radius:3px;overflow:hidden;margin-top:8px;">
+            <div style="width:68%;height:100%;background:#6366f1;border-radius:3px;"></div>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;font-size:11px;font-family:monospace;">
+          <div style="flex:1;background:#0f172a;padding:8px;border-radius:8px;text-align:center;color:#94a3b8;border:1px solid rgba(255,255,255,0.06);">5 Tag Clusters</div>
+          <div style="flex:1;background:#0f172a;padding:8px;border-radius:8px;text-align:center;color:#94a3b8;border:1px solid rgba(255,255,255,0.06);">Comma Separated</div>
+        </div>
+      </div>
+    `,
+  },
+  {
     filename: 'youtube-revenue-calculator.png',
     category: 'MONEY & GROWTH',
     tone: '#0d9488',

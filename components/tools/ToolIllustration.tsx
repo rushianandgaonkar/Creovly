@@ -253,6 +253,37 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
         </div>
       );
 
+    case 'tag-generator':
+      return (
+        <div className={`tool-preview preview-tag-generator w-full h-full p-3 bg-zinc-950 text-zinc-100 flex flex-col justify-between select-none ${className}`} data-ui>
+          <div className="flex items-center justify-between text-[10px] text-zinc-400">
+            <span className="uppercase tracking-wide font-medium text-indigo-400">Cluster Engine</span>
+            <span className="px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-300 text-[9px] font-semibold border border-indigo-500/30">500-Char Meter</span>
+          </div>
+          <div className="bg-zinc-900/90 rounded-lg p-2.5 border border-zinc-800 space-y-2 my-auto">
+            <div className="flex flex-wrap gap-1">
+              <span className="px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-300 text-[9px] font-mono font-medium border border-indigo-500/30">iphone 16</span>
+              <span className="px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-300 text-[9px] font-mono">iphone 16 review</span>
+              <span className="px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-300 text-[9px] font-mono">camera test</span>
+              <span className="px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 text-[9px] font-mono border border-emerald-500/20">is it worth it</span>
+            </div>
+            <div className="space-y-1">
+              <div className="flex justify-between text-[9px] font-mono text-zinc-400">
+                <span>Studio Limit</span>
+                <span className="text-emerald-400 font-bold">342 / 500 chars</span>
+              </div>
+              <div className="w-full h-1 bg-zinc-800 rounded-full overflow-hidden">
+                <div className="h-full bg-indigo-500 rounded-full" style={{ width: '68%' }} />
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center justify-between text-[9px] text-zinc-400 pt-1.5 border-t border-zinc-800/80">
+            <span>5 Smart Clusters</span>
+            <span className="text-zinc-300 font-medium">Instant Comma Copy</span>
+          </div>
+        </div>
+      );
+
     case 'revenue-calculator':
       return (
         <div className={`tool-preview preview-revenue w-full h-full p-3.5 bg-zinc-900 text-zinc-100 flex flex-col justify-between select-none ${className}`} data-ui>

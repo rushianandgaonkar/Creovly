@@ -105,6 +105,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Choose naming archetype', body: 'Select your desired brand style (modern, punchy, classic, or minimalist) and word count.' },
         { title: 'Test and claim your handle', body: 'Review generated name ideas, check matching @handle availability in YouTube Studio, and save your favorites.' },
       ],
+      'youtube-tag-generator': [
+        { title: 'Enter video topic or title', body: 'Type your primary video topic, working title, or focus keyword into the generator.' },
+        { title: 'Select tags & clusters', body: 'Review generated primary, variant, long-tail, and broad tags. Toggle individual tags to fit under 500 characters.' },
+        { title: 'Copy & paste to Studio', body: 'Click Copy All to export your formatted, comma-separated tag list and paste directly into YouTube Studio.' },
+      ],
     },
   },
   es: {
@@ -182,6 +187,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Introduce temática y nicho', body: 'Escribe tus palabras clave principales o temática de contenido (ej. tecnología, videojuegos, cocina, finanzas).' },
         { title: 'Elige estilo y formato', body: 'Selecciona el arquetipo de marca deseado (moderno, impactante, clásico o minimalista) y la longitud.' },
         { title: 'Verifica y reserva el handle', body: 'Revisa las ideas generadas, comprueba la disponibilidad del identificador @handle en YouTube Studio y guarda tus favoritos.' },
+      ],
+      'youtube-tag-generator': [
+        { title: 'Introduce tema o título del video', body: 'Escribe el tema principal, título provisional o palabra clave central en el generador.' },
+        { title: 'Selecciona etiquetas y grupos', body: 'Revisa etiquetas primarias, variantes, long-tail y temas amplios. Ajusta etiquetas para no superar los 500 caracteres.' },
+        { title: 'Copia y pega en YouTube Studio', body: 'Haz clic en Copiar todo para exportar la lista separada por comas y pégala directamente en YouTube Studio.' },
       ],
     },
   },
@@ -261,6 +271,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'ネーミングスタイルを選択', body: '先進的、王道、ユニーク、ミニマルなどのブランド傾向と希望の単語数を選びます。' },
         { title: '@ハンドル名の空きを確認', body: '生成された候補から気に入った名前を選び、YouTube Studioで希望の@ハンドルが取得可能か確認して保存します。' },
       ],
+      'youtube-tag-generator': [
+        { title: '動画のテーマやタイトルを入力', body: '生成フォームに動画の主題、予定タイトル、または狙いたいメインキーワードを入力します。' },
+        { title: 'タグ候補とクラスタを選択', body: 'メイン、派生語、ロングテール、広範囲タグを確認します。500文字以内に収まるよう個別にオン/オフ調整します。' },
+        { title: 'コピーしてStudioに貼り付け', body: '「すべてコピー」をクリックしてカンマ区切りテキストを取得し、YouTube Studioのタグ欄へそのまま貼り付けます。' },
+      ],
     },
   },
   fr: {
@@ -338,6 +353,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Saisissez vos mots-clés', body: "Entrez vos thématiques principales ou votre niche de créateur (ex. tech, gaming, cuisine, finance)." },
         { title: 'Choisissez un style de marque', body: "Sélectionnez la tonalité souhaitée (moderne, percutant, classique ou minimaliste) et la longueur du nom." },
         { title: 'Testez et réservez l\'identifiant', body: "Parcourez les suggestions, vérifiez la disponibilité de l'identifiant @handle sur YouTube Studio et enregistrez vos favoris." },
+      ],
+      'youtube-tag-generator': [
+        { title: 'Entrez le sujet ou titre de la vidéo', body: 'Saisissez votre sujet principal, titre de travail ou mot-clé cible dans le générateur.' },
+        { title: 'Sélectionnez vos tags et grappes', body: 'Passez en revue les mots-clés principaux, variantes et expressions longue traîne sous la limite de 500 caractères.' },
+        { title: 'Copiez et collez dans YouTube Studio', body: 'Cliquez sur Tout copier pour obtenir la liste formatée avec virgules et collez-la directement dans YouTube Studio.' },
       ],
     },
   },
@@ -417,6 +437,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Namensstil auswählen', body: 'Wähle deinen bevorzugten Markenstil (modern, prägnant, klassisch oder minimalistisch) und die Wortanzahl.' },
         { title: '@Handle prüfen & sichern', body: 'Prüfe die generierten Namensideen, teste die Verfügbarkeit des @Handles in YouTube Studio und speichere Favoriten.' },
       ],
+      'youtube-tag-generator': [
+        { title: 'Videothema oder Arbeitstitel eingeben', body: 'Trage dein Hauptthema, den Arbeitstitel oder Fokus-Keywords in das Eingabefeld ein.' },
+        { title: 'Tags und Cluster auswählen', body: 'Prüfe primäre Keywords, Varianten, Long-Tail-Fragen und breite Tags passend zum 500-Zeichen-Limit.' },
+        { title: 'Kopieren und in Studio einfügen', body: 'Klicke auf Alle kopieren für eine kommagetrennte Liste und füge sie direkt in YouTube Studio ein.' },
+      ],
     },
   },
   pt: {
@@ -494,6 +519,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Digite palavras-chave e nicho', body: 'Introduza os tópicos principais ou nicho do canal (ex.: tecnologia, games, culinária, finanças).' },
         { title: 'Escolha o estilo do nome', body: 'Selecione o arquétipo de marca desejado (moderno, marcante, clássico ou minimalista) e o tamanho.' },
         { title: 'Verifique e garanta o @handle', body: 'Analise as ideias geradas, confirme a disponibilidade do identificador @handle no YouTube Studio e guarde os favoritos.' },
+      ],
+      'youtube-tag-generator': [
+        { title: 'Digite o tema ou título do vídeo', body: 'Insira o tema principal, título provisório ou palavra-chave de foco no gerador.' },
+        { title: 'Selecione tags e clusters', body: 'Revise tags primárias, variações, perguntas long-tail e temas amplos, mantendo-se dentro do limite de 500 caracteres.' },
+        { title: 'Copie e cole no YouTube Studio', body: 'Clique em Copiar tudo para exportar a lista formatada por vírgulas e cole diretamente no YouTube Studio.' },
       ],
     },
   },
@@ -573,6 +603,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: '작명 스타일 및 길이 선택', body: '원하는 브랜드 분위기(트렌디, 정통, 개성, 미니멀)와 적절한 단어 길이를 지정합니다.' },
         { title: '@핸들 선점 및 즐겨찾기 저장', body: '추천된 이름들을 살펴보고 YouTube Studio에서 @핸들 중복 여부를 확인한 뒤 관심 목록에 저장합니다.' },
       ],
+      'youtube-tag-generator': [
+        { title: '동영상 주제 또는 가제목 입력', body: '생성기에 영상의 핵심 주제, 작업 중인 제목 또는 노리고자 하는 메인 키워드를 입력합니다.' },
+        { title: '태그 및 키워드 클러스터 선택', body: '추출된 메인, 파생어, 롱테일 질문형 태그를 확인하고 500자 제한에 맞춰 원하는 태그를 선택합니다.' },
+        { title: '복사 후 YouTube Studio에 붙여넣기', body: '모두 복사를 눌러 쉼표로 구분된 태그 목록을 복사한 뒤 YouTube Studio 태그 입력창에 붙여넣습니다.' },
+      ],
     },
   },
   it: {
@@ -650,6 +685,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Inserisci parole chiave e nicchia', body: 'Digita gli argomenti principali o la nicchia del tuo canale (es. tech, gaming, cucina, finanza).' },
         { title: 'Scegli lo stile del brand', body: 'Seleziona l\'archetipo desiderato (moderno, d\'impatto, classico o minimalista) e la lunghezza del nome.' },
         { title: 'Verifica e prenota l\'@handle', body: 'Esamina le idee generate, controlla la disponibilità dell\'@handle su YouTube Studio e salva i preferiti.' },
+      ],
+      'youtube-tag-generator': [
+        { title: 'Inserisci argomento o titolo del video', body: 'Digita il tema principale, titolo provvisorio o parola chiave di riferimento nel generatore.' },
+        { title: 'Seleziona tag e cluster', body: 'Esamina tag principali, varianti, query long-tail e argomenti ampi, rispettando il limite di 500 caratteri.' },
+        { title: 'Copia e incolla in YouTube Studio', body: 'Fai clic su Copia tutto per ottenere l\'elenco separato da virgole e incollalo direttamente in YouTube Studio.' },
       ],
     },
   },

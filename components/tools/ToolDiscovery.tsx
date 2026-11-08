@@ -59,6 +59,8 @@ export default function ToolDiscovery({
         return t.titleChecker.title;
       case 'youtube-channel-name-generator':
         return t.channelName?.title || 'YouTube Channel Name Generator';
+      case 'youtube-tag-generator':
+        return t.tagGenerator?.title || 'YouTube Tag Generator';
       case 'youtube-revenue-calculator':
         return t.calculator.revenue.title;
       case 'youtube-rpm-calculator':

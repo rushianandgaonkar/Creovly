@@ -69,6 +69,7 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
     'youtube-thumbnail-resizer': 'resizer',
     'youtube-banner-size': 'banner',
     'youtube-channel-name-generator': 'channelName',
+    'youtube-tag-generator': 'tagGenerator',
     'logo-background-remover': 'logoRemover',
     'youtube-shorts-safe-zone': 'shorts',
     'youtube-title-checker': 'titleChecker',
@@ -104,6 +105,8 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
         return t.banner?.title || 'YouTube Banner Size';
       case 'youtube-channel-name-generator':
         return t.channelName?.title || 'YouTube Channel Name Generator';
+      case 'youtube-tag-generator':
+        return t.tagGenerator?.title || 'YouTube Tag Generator';
       case 'logo-background-remover':
         return t.logoRemover.title;
       case 'youtube-shorts-safe-zone':

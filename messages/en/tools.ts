@@ -219,6 +219,28 @@ export const tools = {
         answer: 'Visit youtube.com/@yourdesiredhandle or navigate to YouTube Studio > Customization > Basic Info to confirm handle availability before finalizing your channel brand.',
       },
     ],
+    tagGenerator: [
+      {
+        question: 'How does the YouTube tag generator work?',
+        answer: 'Enter your video topic, title, or target search query. The tool instantly generates structured keyword clusters—including exact matches, long-tail queries, broad topic categories, and common misspellings—and formats them with a live 500-character limit counter.',
+      },
+      {
+        question: 'Do YouTube tags still matter for SEO?',
+        answer: 'YouTube states that video tags play a minimal role compared to titles, thumbnails, and descriptions. However, tags are specifically valuable for capturing search traffic when viewers misspell keywords or search for alternative phrasing.',
+      },
+      {
+        question: 'What is the character limit for YouTube tags?',
+        answer: 'YouTube Studio allows a maximum of 500 characters across all video tags combined (including comma separators). Creovly’s tag generator tracks your character count in real time so you never exceed the platform cutoff.',
+      },
+      {
+        question: 'How do I add tags to my YouTube video?',
+        answer: 'Open YouTube Studio, select your video, scroll down to the "Show more" button in the Details tab, find the "Tags" section, and paste your comma-separated tag list directly into the input field.',
+      },
+      {
+        question: 'Are YouTube tags separated by commas or hashtags?',
+        answer: 'In YouTube Studio’s tag box, tags are separated by commas (not hashtags). Hashtags (#) should be placed inside your video title or description, whereas keyword tags belong in the dedicated Studio metadata field.',
+      },
+    ],
     revenue: [
       {
         question: 'How much money does YouTube pay for 1,000 views?',

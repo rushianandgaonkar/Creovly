@@ -309,6 +309,13 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: 'Title Tools',
         keywords: ['youtube channel name generator', 'ai youtube channel name generator', 'channel name ideas', 'youtube name maker', 'cool youtube names', 'gaming channel names', 'creative youtube channel name generator'],
       },
+      'youtube-tag-generator': {
+        title: 'YouTube Tag Generator',
+        seoTitle: 'Free YouTube Tag Generator (SEO & Clusters)',
+        description: 'Generate optimized YouTube tags and keyword clusters within the 500-character limit. Free AI-powered tag generator with instant comma-separated copy.',
+        categoryLabel: 'Title Tools',
+        keywords: ['youtube tag generator', 'ai youtube tag generator', 'youtube tags generator', 'youtube tags for views', 'generate tags for youtube', 'youtube seo tags', 'youtube tag extractor and generator'],
+      },
       'youtube-title-checker': {
         title: 'YouTube Title Checker & Analyzer',
         seoTitle: 'Free YouTube Title Checker: Length and Truncation',
@@ -470,6 +477,13 @@ export const translations: Record<Locale, I18nContent> = {
         description: 'Genera ideas creativas de nombres para tu canal de YouTube en gaming, vlogs y tecnología. Generador gratuito e instantáneo en tu navegador.',
         categoryLabel: 'Herramientas de títulos',
         keywords: ['generador de nombres para canales de youtube', 'generador de nombres youtube ia', 'ideas de nombres para youtube', 'nombres para canales de gaming', 'creador de nombres youtube gratis'],
+      },
+      'youtube-tag-generator': {
+        title: 'Generador de Etiquetas de YouTube',
+        seoTitle: 'Generador de Etiquetas para YouTube',
+        description: 'Genera etiquetas optimizadas para YouTube y grupos de palabras clave dentro del límite de 500 caracteres. Herramienta SEO gratuita y privada.',
+        categoryLabel: 'Herramientas de títulos',
+        keywords: ['generador de etiquetas de youtube', 'generador de tags youtube', 'etiquetas para youtube', 'tags para videos de youtube', 'generar etiquetas youtube seo'],
       },
       'youtube-title-checker': {
         title: 'Analizador y comprobador de títulos de YouTube',
@@ -633,6 +647,13 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: 'タイトルツール',
         keywords: ['youtubeチャンネル名ジェネレーター', 'youtubeチャンネル名決め方', 'youtube名前ジェネレーターai', 'チャンネル名おすすめ', 'youtube名前自動生成'],
       },
+      'youtube-tag-generator': {
+        title: 'YouTubeタグジェネレーター',
+        seoTitle: 'YouTubeタグ生成ツール（無料SEO）',
+        description: 'YouTube動画のSEOに最適なタグを自動生成。500文字制限に準拠し、主要キーワードや類語クラスターを一括カンマ区切りコピー。完全ブラウザ完結。',
+        categoryLabel: 'タイトル・SEOツール',
+        keywords: ['YouTube タグ 生成', 'youtube タグ ジェネレーター', 'youtube タグ 自動 生成', 'youtube seo タグ', 'youtube タグ おすすめ'],
+      },
       'youtube-title-checker': {
         title: 'YouTubeタイトルチェッカー＆アナライザー',
         seoTitle: 'YouTube動画タイトルチェッカー: 文字数と省略確認',
@@ -794,6 +815,13 @@ export const translations: Record<Locale, I18nContent> = {
         description: 'Trouvez des idées de noms originales pour votre chaîne YouTube de gaming, vlog ou tech. Générateur gratuit et instantané dans votre navigateur.',
         categoryLabel: 'Outils de titres',
         keywords: ['generateur de nom de chaine youtube', 'generateur nom youtube ia', 'idees nom chaine youtube', 'nom chaine youtube gaming', 'trouver nom youtube gratuit'],
+      },
+      'youtube-tag-generator': {
+        title: 'Générateur de Tags YouTube',
+        seoTitle: 'Générateur de Tags YouTube (Gratuit)',
+        description: 'Générez des tags YouTube optimisés et des grappes de mots-clés dans la limite de 500 caractères. Outil SEO gratuit avec copie rapide par virgules.',
+        categoryLabel: 'Outils de titres',
+        keywords: ['générateur de tags youtube', 'generateur tag youtube', 'balises youtube', 'tags pour vidéo youtube', 'mots clés youtube'],
       },
       'youtube-title-checker': {
         title: 'Vérificateur et analyseur de titres YouTube',
@@ -957,6 +985,13 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: 'Titel-Tools',
         keywords: ['youtube kanalnamen generator', 'youtube namen generator ki', 'kanalname finden ideen', 'gaming kanal name generator', 'youtube name erstellen kostenlos'],
       },
+      'youtube-tag-generator': {
+        title: 'YouTube-Tag-Generator',
+        seoTitle: 'Kostenloser YouTube-Tag-Generator',
+        description: 'Generiere optimierte YouTube-Tags und Keyword-Cluster innerhalb des 500-Zeichen-Limits. Kostenloser SEO-Tag-Generator mit Direktkopie.',
+        categoryLabel: 'Titel-Tools',
+        keywords: ['youtube tag generator', 'youtube tags generieren', 'tags für youtube videos', 'youtube seo tags', 'videotags erstellen'],
+      },
       'youtube-title-checker': {
         title: 'YouTube-Titel-Checker & Analyzer',
         seoTitle: 'YouTube-Titel-Checker: Zeichenlänge & Optimierung',
@@ -1118,6 +1153,13 @@ export const translations: Record<Locale, I18nContent> = {
         description: 'Gere nomes criativos e marcantes para seu canal do YouTube em games, vlogs e negócios. Gerador gratuito e instantâneo no navegador.',
         categoryLabel: 'Ferramentas de títulos',
         keywords: ['gerador de nomes para canais do youtube', 'gerador de nomes youtube ia', 'ideias de nomes para canal youtube', 'nomes para canal de jogos', 'criar nome para youtube gratis'],
+      },
+      'youtube-tag-generator': {
+        title: 'Gerador de Tags para YouTube',
+        seoTitle: 'Gerador de Tags para YouTube (SEO)',
+        description: 'Gere tags otimizadas para YouTube e clusters de palavras-chave no limite de 500 caracteres. Gerador de tags gratuito com cópia rápida separada por vírgula.',
+        categoryLabel: 'Ferramentas de títulos',
+        keywords: ['gerador de tags para youtube', 'gerador de tags youtube', 'tags para videos youtube', 'como gerar tags youtube', 'tags seo youtube'],
       },
       'youtube-title-checker': {
         title: 'Verificador e analisador de títulos do YouTube',
@@ -1281,6 +1323,13 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: '제목 도구',
         keywords: ['유튜브 채널 이름 생성기', '유튜브 이름 추천', 'ai 유튜브 채널 이름', '유튜브 채널명 짓기', '유튜브 닉네임 생성기'],
       },
+      'youtube-tag-generator': {
+        title: '유튜브 태그 생성기',
+        seoTitle: '유튜브 태그 생성기 (무료 SEO 추천)',
+        description: '유튜브 알고리즘 및 검색 최적화에 맞는 태그를 자동 생성합니다. 500자 글자수 제한 확인, 연관 검색어 클러스터링 및 쉼표 구분 복사 제공.',
+        categoryLabel: '제목 및 검색 도구',
+        keywords: ['유튜브 태그 생성기', '유튜브 태그 추천', '유튜브 태그 복사', '유튜브 seo 태그', '유튜브 해시태그 태그'],
+      },
       'youtube-title-checker': {
         title: '유튜브 제목 검사기 및 분석기',
         seoTitle: '유튜브 제목 검사기: 글자수 제한 및 모바일 말줄임',
@@ -1442,6 +1491,13 @@ export const translations: Record<Locale, I18nContent> = {
         description: 'Trova idee originali per il nome del tuo canale YouTube in gaming, vlog e tecnologia. Generatore gratuito e immediato nel tuo browser.',
         categoryLabel: 'Strumenti titoli',
         keywords: ['generatore di nomi per canali youtube', 'generatore nomi youtube ia', 'idee nome canale youtube', 'nomi canali youtube gaming', 'trovare nome canale youtube'],
+      },
+      'youtube-tag-generator': {
+        title: 'Generatore di Tag per YouTube',
+        seoTitle: 'Generatore di Tag YouTube (SEO)',
+        description: 'Genera tag YouTube ottimizzati e cluster di parole chiave nel limite dei 500 caratteri. Strumento SEO gratuito con copia istantanea separata da virgole.',
+        categoryLabel: 'Strumenti titoli',
+        keywords: ['generatore tag youtube', 'tag per video youtube', 'generatore di tag youtube', 'come mettere tag youtube', 'tag youtube seo'],
       },
       'youtube-title-checker': {
         title: 'Analizzatore e verifica titoli YouTube',
