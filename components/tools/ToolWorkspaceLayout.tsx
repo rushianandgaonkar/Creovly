@@ -31,12 +31,12 @@ export default function ToolWorkspaceLayout({
               className="w-2 h-2 rounded-full bg-emerald-500 ring-2 ring-emerald-500/20"
               aria-hidden="true"
             />
-            <h2
+            <span
               id="workspace-heading"
               className="text-xs font-mono font-semibold uppercase tracking-wider text-[var(--text-ink)]"
             >
               {shell.workbenchControls}
-            </h2>
+            </span>
           </div>
           <span className="text-[11px] font-mono text-[var(--text-muted)]">
             {shell.inputLocal}
@@ -58,12 +58,12 @@ export default function ToolWorkspaceLayout({
               }`}
               aria-hidden="true"
             />
-            <h2
+            <span
               id="results-heading"
               className="text-xs font-mono font-semibold uppercase tracking-wider text-[var(--text-ink)]"
             >
               {preview ? shell.sampleResults : shell.outputInspection}
-            </h2>
+            </span>
           </div>
           <span className="text-[11px] font-mono text-[var(--text-muted)]">
             {preview ? shell.previewMode : shell.liveSpec}

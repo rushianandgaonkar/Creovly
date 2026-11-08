@@ -1,5 +1,5 @@
 export const logoRemover = {
-  title: 'Logo Background Remover',
+  title: 'Remove Background from Logo',
   dropzoneLabel: 'Select logo to process',
   dropzoneHint: 'Upload a logo up to 20 MB with a solid single-color background (JPEG, PNG, or WebP).',
   selectColorHeading: 'Pick background color to remove',

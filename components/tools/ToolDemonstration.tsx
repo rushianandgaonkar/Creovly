@@ -32,7 +32,7 @@ export default function ToolDemonstration({ slug }: { slug: string }) {
           {demoText.badge}
         </span>
       </div>
-      <h2
+      <div
         id="example-heading"
         className="text-xl font-bold tracking-tight text-[var(--text-ink)]"
       >
@@ -41,7 +41,7 @@ export default function ToolDemonstration({ slug }: { slug: string }) {
           : guidance.titleExample
           ? demoText.titleHeading
           : demoText.calcHeading}
-      </h2>
+      </div>
       <p className="mt-1 text-xs sm:text-sm text-[var(--text-body)]">
         {example
           ? demoText.inspectionSubheading

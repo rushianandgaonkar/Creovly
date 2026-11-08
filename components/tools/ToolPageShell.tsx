@@ -139,6 +139,32 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
       const g = t.tools.guidance.resizer;
       return (
         <>
+          <div className="rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] p-4 sm:p-5 my-2">
+            <h2 className="text-base font-bold text-[var(--text-ink)] mb-3">
+              YouTube thumbnail size
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+              <div className="p-3 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
+                <span className="font-mono text-[var(--text-muted)] block text-[11px]">Recommended Size</span>
+                <span className="font-semibold text-[var(--text-ink)] text-sm">1280 × 720 px</span>
+              </div>
+              <div className="p-3 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
+                <span className="font-mono text-[var(--text-muted)] block text-[11px]">Aspect Ratio</span>
+                <span className="font-semibold text-[var(--text-ink)] text-sm">16:9</span>
+              </div>
+              <div className="p-3 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
+                <span className="font-mono text-[var(--text-muted)] block text-[11px]">Max File Size</span>
+                <span className="font-semibold text-[var(--text-ink)] text-sm">Under 2 MB</span>
+              </div>
+              <div className="p-3 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
+                <span className="font-mono text-[var(--text-muted)] block text-[11px]">Formats</span>
+                <span className="font-semibold text-[var(--text-ink)] text-sm">JPG, PNG, GIF, WebP</span>
+              </div>
+            </div>
+            <p className="text-xs text-[var(--text-muted)] mt-3">
+              Official YouTube thumbnail specs require a minimum width of 640 pixels, 16:9 aspect ratio, and a file size under 2 MB.
+            </p>
+          </div>
           <p>{g.p1}</p>
           <p>{g.p2}</p>
           <p>{g.p3}</p>
@@ -167,9 +193,24 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
       return (
         <>
           <p>{g.p1}</p>
-          <h2 className="text-base font-bold text-[var(--text-ink)] pt-1">
-            YouTube Shorts safe zone template
-          </h2>
+          <div className="rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] p-4 sm:p-5 my-3">
+            <h2 className="text-base font-bold text-[var(--text-ink)] mb-2">
+              YouTube Shorts safe zone template
+            </h2>
+            <p className="text-xs text-[var(--text-body)] leading-relaxed mb-3">
+              Download our free transparent 1080×1920 PNG overlay template to ensure your titles, subtitles, and key visual actions never get blocked by Shorts player controls, channel icons, or sound discs.
+            </p>
+            <a
+              href="/templates/youtube-shorts-safe-zone-template.png"
+              download="youtube-shorts-safe-zone-template.png"
+              className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand-primary)] text-[var(--brand-on-primary)] px-4 py-2.5 text-xs font-semibold hover:opacity-90 transition-opacity focus-ring shadow-[var(--shadow-whisper)]"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Download Transparent PNG Overlay (1080×1920)
+            </a>
+          </div>
           <p>{g.p2}</p>
           <p>{g.p3}</p>
           <p className="text-xs pt-1">

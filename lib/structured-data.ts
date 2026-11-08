@@ -100,7 +100,7 @@ export function toolSoftwareApplicationJsonLd(
 
   return {
     '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
+    '@type': 'WebApplication',
     '@id': `${url}#app`,
     name: title,
     url,

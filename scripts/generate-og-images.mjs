@@ -96,7 +96,7 @@ const pages = [
     category: 'THUMBNAILS & SHORTS',
     tone: '#0070f3',
     glow: 'rgba(0, 112, 243, 0.25)',
-    title: 'Logo Background Remover',
+    title: 'Remove Background from Logo',
     description: 'Remove solid-color backgrounds from existing logos locally with adjustable tolerance and transparent PNG export.',
     pills: ['Alpha Channel PNG', 'Local Flood Fill', 'Zero Image Uploads'],
     visual: `
@@ -194,7 +194,7 @@ const pages = [
     category: 'MONEY & GROWTH',
     tone: '#0d9488',
     glow: 'rgba(13, 148, 136, 0.25)',
-    title: 'YouTube Revenue Calculator',
+    title: 'YouTube Money Calculator',
     description: 'Calculate realistic channel earnings based on actual views and RPM, separating long-form from Shorts payouts.',
     pills: ['Creator Net RPM', 'No Double 45% Cut', 'Monthly & Annual Forecast'],
     visual: `

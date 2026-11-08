@@ -13,13 +13,13 @@ Creovly is a private, in-browser workspace for YouTube creators. Compress thumbn
 
 - [YouTube Thumbnail Compressor](https://creovly.com/tools/youtube-thumbnail-compressor): Client-side image compression supporting JPG, PNG, and WebP targeting YouTube's 2 MB limit with side-by-side quality inspection.
 - [YouTube Thumbnail Resizer](https://creovly.com/tools/youtube-thumbnail-resizer): Fast client-side resizing for 1280x720 16:9 thumbnails, banners (2048x1152), and channel icons.
-- [Logo Background Remover](https://creovly.com/tools/logo-background-remover): Local flood-fill edge detection algorithm removing solid backgrounds from channel avatars and logos into transparent PNGs.
+- [Remove Background from Logo](https://creovly.com/tools/logo-background-remover): Local flood-fill edge detection algorithm removing solid backgrounds from channel avatars and logos into transparent PNGs.
 - [YouTube Shorts Safe Zone Checker](https://creovly.com/tools/youtube-shorts-safe-zone): Overlay inspector simulating YouTube UI elements (subscribe button, sound icon, title overlay) over 9:16 vertical video frames.
 - [YouTube Title Checker & Analyzer](https://creovly.com/tools/youtube-title-checker): Real-time title length, character count, mobile truncation warning, and power word analysis.
 
 ## Creator Monetization & Mathematics Calculators
 
-- [YouTube Revenue Calculator](https://creovly.com/tools/youtube-revenue-calculator): Estimate monthly and annual ad revenue based on creator-provided RPM and expected view volume.
+- [YouTube Money Calculator](https://creovly.com/tools/youtube-revenue-calculator): Estimate monthly and annual ad revenue based on creator-provided RPM and expected view volume.
 - [YouTube RPM Calculator](https://creovly.com/tools/youtube-rpm-calculator): Calculate precise revenue per mille (1,000 views) from existing YouTube Studio revenue and view data.
 - [YouTube Watch Hours Calculator](https://creovly.com/tools/youtube-watch-hours-calculator): Milestone projection calculator for reaching 4,000 public watch hours needed for YouTube Partner Program (YPP).
 - [YouTube Monetization Calculator](https://creovly.com/tools/youtube-monetization-calculator): Comprehensive scenario builder incorporating ad revenue, channel memberships, sponsorship deals, and operating expenses.

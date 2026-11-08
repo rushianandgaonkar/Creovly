@@ -473,8 +473,33 @@ export default function ShortsSafeZone() {
               )}
             </div>
           ) : (
-            <div className="py-16 text-center text-xs text-[var(--text-muted)] font-mono">
-              {t.shorts.resultsPrompt}
+            <div className="space-y-4">
+              <div className="py-8 text-center text-xs text-[var(--text-muted)] font-mono">
+                {t.shorts.resultsPrompt}
+              </div>
+              <div className="p-4 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] space-y-2.5">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-semibold text-[var(--text-ink)]">
+                    Shorts Safe Zone Overlay Template
+                  </span>
+                  <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20">
+                    1080 × 1920 PNG
+                  </span>
+                </div>
+                <p className="text-xs text-[var(--text-muted)] leading-relaxed">
+                  Download the transparent PNG template to drop directly onto your video timeline in Premiere Pro, DaVinci Resolve, Final Cut, CapCut, or Canva.
+                </p>
+                <a
+                  href="/templates/youtube-shorts-safe-zone-template.png"
+                  download="youtube-shorts-safe-zone-template.png"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] hover:bg-[var(--bg-canvas-subtle)] text-[var(--text-ink)] px-3 py-2 text-xs font-medium transition-colors focus-ring shadow-[var(--shadow-whisper)]"
+                >
+                  <svg className="w-3.5 h-3.5 text-[var(--brand-accent)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                  Download Transparent PNG Template
+                </a>
+              </div>
             </div>
           )}
         </>

@@ -111,7 +111,7 @@ export const tools = {
     ],
     logoRemover: [
       {
-        question: 'How to remove background from a logo for free?',
+        question: 'How to remove background from a logo?',
         answer: 'Upload your logo, select the background color, and click Remove background. Export a clean, transparent PNG directly in your browser with zero fees and no account required.',
       },
       {

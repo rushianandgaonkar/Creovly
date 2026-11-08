@@ -55,15 +55,31 @@ export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; s
                 Use this YouTube money calculator to turn monthly views and RPM into estimated revenue.
               </p>
               <h2 className="text-base font-bold text-[var(--text-ink)] pt-1">
-                YouTube views to money
+                How the YouTube revenue calculator works
+              </h2>
+              <p className="text-xs text-[var(--text-body)] mt-1 mb-2">
+                Enter your monthly views and expected RPM range to model your earnings scenario. The calculator projects lower and upper monthly income alongside yearly revenue based on your exact parameters.
+              </p>
+            </div>
+          )}
+          {kind === 'rpm' && (
+            <div>
+              <p className="font-medium text-[var(--text-ink)] mb-2">
+                Calculate your YouTube RPM to find earnings per 1,000 views from your own channel revenue and views.
+              </p>
+              <h2 className="text-base font-bold text-[var(--text-ink)] pt-1">
+                How the YouTube RPM calculator works
               </h2>
             </div>
           )}
           {kind === 'monetization' && (
             <div>
               <p className="font-medium text-[var(--text-ink)] mb-2">
-                Use this free YouTube monetization calculator to model potential channel income across ad revenue, sponsorships, and affiliate programs.
+                Calculate total YouTube channel earnings across all income streams (ads, sponsors, affiliates) minus expenses.
               </p>
+              <h2 className="text-base font-bold text-[var(--text-ink)] pt-1">
+                How the YouTube monetization calculator works
+              </h2>
               <p className="text-xs">
                 Review official thresholds and partner criteria in our guide to{' '}
                 <LocalizedLink href="/guides/youtube-monetization-requirements" className="text-[var(--brand-accent)] underline hover:no-underline font-medium">
