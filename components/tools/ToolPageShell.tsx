@@ -67,6 +67,7 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
   const slugToFaqKey: Record<string, keyof typeof t.tools.faqs> = {
     'youtube-thumbnail-compressor': 'compressor',
     'youtube-thumbnail-resizer': 'resizer',
+    'youtube-banner-size': 'banner',
     'logo-background-remover': 'logoRemover',
     'youtube-shorts-safe-zone': 'shorts',
     'youtube-title-checker': 'titleChecker',
@@ -98,6 +99,8 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
         return t.compressor.title;
       case 'youtube-thumbnail-resizer':
         return t.resizer.title;
+      case 'youtube-banner-size':
+        return t.banner?.title || 'YouTube Banner Size';
       case 'logo-background-remover':
         return t.logoRemover.title;
       case 'youtube-shorts-safe-zone':
@@ -179,6 +182,57 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
               YouTube thumbnail size and dimensions
             </LocalizedLink>.
           </p>
+        </>
+      );
+    }
+    if (toolSlug === 'youtube-banner-size') {
+      const specs = seo.bannerSpecs;
+      return (
+        <>
+          <div className="rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] p-4 sm:p-5 my-2">
+            <h2 className="text-base font-bold text-[var(--text-ink)] mb-3">
+              {specs.heading}
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+              <div className="p-3 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
+                <span className="font-mono text-[var(--text-muted)] block text-[11px]">{specs.recommendedSize}</span>
+                <span className="font-semibold text-[var(--text-ink)] text-sm">{specs.recommendedSizeVal}</span>
+              </div>
+              <div className="p-3 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
+                <span className="font-mono text-[var(--text-muted)] block text-[11px]">{specs.safeArea}</span>
+                <span className="font-semibold text-[var(--text-ink)] text-sm">{specs.safeAreaVal}</span>
+              </div>
+              <div className="p-3 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
+                <span className="font-mono text-[var(--text-muted)] block text-[11px]">{specs.maxSize}</span>
+                <span className="font-semibold text-[var(--text-ink)] text-sm">{specs.maxSizeVal}</span>
+              </div>
+              <div className="p-3 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
+                <span className="font-mono text-[var(--text-muted)] block text-[11px]">{specs.formats}</span>
+                <span className="font-semibold text-[var(--text-ink)] text-sm">{specs.formatsVal}</span>
+              </div>
+            </div>
+            <p className="text-xs text-[var(--text-muted)] mt-3">
+              {specs.note}
+            </p>
+          </div>
+          <div className="rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] p-4 sm:p-5 my-3">
+            <h3 className="text-sm font-bold text-[var(--text-ink)] mb-2">
+              {specs.cardTitle}
+            </h3>
+            <p className="text-xs text-[var(--text-body)] leading-relaxed mb-3">
+              {specs.cardDesc}
+            </p>
+            <a
+              href="/templates/youtube-banner-size-template.png"
+              download="youtube-banner-size-template.png"
+              className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand-primary)] text-[var(--brand-on-primary)] px-4 py-2.5 text-xs font-semibold hover:opacity-90 transition-opacity focus-ring shadow-[var(--shadow-whisper)]"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              {specs.downloadTemplateBtn}
+            </a>
+          </div>
         </>
       );
     }

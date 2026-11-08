@@ -92,6 +92,32 @@ const pages = [
     `,
   },
   {
+    filename: 'youtube-banner-size.png',
+    category: 'THUMBNAILS & ARTWORK',
+    tone: '#0070f3',
+    glow: 'rgba(0, 112, 243, 0.25)',
+    title: 'YouTube Banner Size Checker & Resizer',
+    description: 'Calibrate channel art to 2560x1440 with safe areas for all devices: TV, desktop, tablet, and mobile.',
+    pills: ['2560x1440 Canvas', '1546x423 Safe Zone', 'PNG Template Download'],
+    visual: `
+      <div style="background:#131b2e;border:1px solid rgba(0,112,243,0.3);border-radius:18px;padding:24px;width:100%;height:100%;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 40px rgba(0,0,0,0.5);">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:12px;font-family:monospace;color:#93c5fd;font-weight:700;letter-spacing:1px;">BANNER SAFE AREA</span>
+          <span style="background:rgba(16,185,129,0.2);color:#34d399;font-size:11px;font-weight:700;padding:4px 8px;border-radius:6px;font-family:monospace;">ALL DEVICES</span>
+        </div>
+        <div style="background:#0b1120;border:1px dashed rgba(16,185,129,0.5);border-radius:12px;padding:16px;text-align:center;">
+          <div style="font-size:13px;color:#94a3b8;font-family:monospace;">CENTRAL SAFE ZONE</div>
+          <div style="font-size:28px;font-weight:800;color:#34d399;font-family:monospace;margin:6px 0;">1546 × 423</div>
+          <div style="font-size:11px;color:#93c5fd;font-family:monospace;margin-top:4px;">Full Canvas: 2560 × 1440</div>
+        </div>
+        <div style="display:flex;gap:8px;font-size:11px;font-family:monospace;">
+          <div style="flex:1;background:#0f172a;padding:8px;border-radius:8px;text-align:center;color:#94a3b8;border:1px solid rgba(255,255,255,0.06);">TV & Desktop</div>
+          <div style="flex:1;background:#0f172a;padding:8px;border-radius:8px;text-align:center;color:#94a3b8;border:1px solid rgba(255,255,255,0.06);">Mobile Preview</div>
+        </div>
+      </div>
+    `,
+  },
+  {
     filename: 'logo-background-remover.png',
     category: 'THUMBNAILS & SHORTS',
     tone: '#0070f3',

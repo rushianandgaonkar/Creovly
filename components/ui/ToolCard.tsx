@@ -28,6 +28,7 @@ const toolFeatureTags: Record<string, string> = {
   'logo-background-remover': 'Transparent PNG • Canvas',
   'youtube-thumbnail-compressor': '< 2MB Payload • JPEG/WebP',
   'youtube-thumbnail-resizer': '1280×720 HD • 16:9',
+  'youtube-banner-size': '2560×1440 • All Devices Safe Area',
   'youtube-shorts-safe-zone': '9:16 Safe Zone • Mask',
   'youtube-title-checker': 'Mobile ~50 Chars • Truncation',
   'youtube-revenue-calculator': 'Dynamic RPM • Modeler',

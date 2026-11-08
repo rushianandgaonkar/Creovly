@@ -95,6 +95,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Add income and costs', body: 'Include deals, fees, affiliates, other income, and costs. Avoid counting revenue already included in RPM twice.' },
         { title: 'Review the totals', body: 'Calculate monthly income and the amount after costs, before taxes. Annual results repeat the monthly scenario.' },
       ],
+      'youtube-banner-size': [
+        { title: 'Upload your banner', body: 'Select your channel banner artwork in JPEG, PNG, or WebP format up to 20 MB.' },
+        { title: 'Calibrate safe zones', body: 'Position critical text, logos, and avatars inside the central 1546 × 423 safe area visible across mobile and desktop.' },
+        { title: 'Export 2560 × 1440 banner', body: 'Download the calibrated 2560 × 1440 banner image and test your channel art upload in YouTube Studio.' },
+      ],
     },
   },
   es: {
@@ -162,6 +167,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Añade supuestos base', body: 'Introduce visualizaciones mensuales y tu RPM neto de plataforma tras el reparto de YouTube.' },
         { title: 'Incluye acuerdos y costes', body: 'Añade patrocinios, cuotas de miembros, ingresos de afiliados y gastos de producción sin duplicar cifras.' },
         { title: 'Analiza el beneficio neto', body: 'Calcula ingresos brutos y margen neto antes de impuestos. Las cifras anuales proyectan el escenario mensual.' },
+      ],
+      'youtube-banner-size': [
+        { title: 'Sube tu diseño de banner', body: 'Selecciona la imagen de cabecera de tu canal en formato JPEG, PNG o WebP de hasta 20 MB.' },
+        { title: 'Calibra la zona segura', body: 'Asegúrate de colocar textos, títulos y logotipos dentro del área segura central de 1546 × 423 px.' },
+        { title: 'Exporta en 2560 × 1440', body: 'Descarga el banner calibrado en alta resolución de 2560 × 1440 y súbela directamente a YouTube Studio.' },
       ],
     },
   },
@@ -231,6 +241,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'タイアップ・費用を追加', body: 'スポンサー案件、メンバーシップ、アフィリエイト収入と制作外注費を入力します。' },
         { title: '純利益シナリオを点検', body: '経費控除後の月間純収益と年間推計を算出し、健全なチャンネル運営を支援します。' },
       ],
+      'youtube-banner-size': [
+        { title: 'バナー画像をアップロード', body: '最大20MBまでのJPEG、PNG、WebP形式のYouTubeチャンネルバナー画像を選択します。' },
+        { title: 'セーフゾーンを調整', body: 'スマホやPC全端末で確実に表示される中央1546×423のセーフエリア内に文字やロゴを配置します。' },
+        { title: '2560×1440で書き出し', body: '2560×1440解像度の最適化バナーをダウンロードし、YouTube Studioで適用確認を行います。' },
+      ],
     },
   },
   fr: {
@@ -298,6 +313,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Ajoutez les revenus AdSense', body: 'Entrez vos vues prévues et votre RPM de chaîne pour modéliser la part publicitaire.' },
         { title: 'Intégrez sponsors et frais', body: 'Ajoutez partenariats, abonnements, affiliations et déduisez vos dépenses de production.' },
         { title: 'Analysez votre bénéfice net', body: 'Mesurez votre résultat net mensuel et annuel avant impôts pour sécuriser votre activité.' },
+      ],
+      'youtube-banner-size': [
+        { title: 'Importez votre bannière', body: "Sélectionnez votre bannière YouTube au format JPEG, PNG ou WebP jusqu'à 20 Mo." },
+        { title: 'Calibrez la zone de sécurité', body: 'Placez textes et logos cruciaux dans la zone centrale sécurisée de 1546 × 423 px visible sur mobile et ordinateur.' },
+        { title: 'Exportez en 2560 × 1440', body: 'Téléchargez votre bannière calibrée en 2560 × 1440 et importez-la dans YouTube Studio.' },
       ],
     },
   },
@@ -367,6 +387,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Sponsoring & Kosten ergänzen', body: 'Markendeals, Mitgliedschaften, Affiliate-Erlöse eintragen und Produktionskosten abziehen.' },
         { title: 'Nettogewinn prüfen', body: 'Monatlichen und jährlichen Reingewinn vor Steuern kalkulieren, um rentabel zu wirtschaften.' },
       ],
+      'youtube-banner-size': [
+        { title: 'Banner-Design hochladen', body: 'Wähle dein Kanalbanner im JPEG-, PNG- oder WebP-Format mit bis zu 20 MB Dateigröße.' },
+        { title: 'Safe Zone kalibrieren', body: 'Platziere wichtige Logos und Schriften im zentralen Sicherheitsbereich von 1546 × 423 px für alle Endgeräte.' },
+        { title: '2560 × 1440 exportieren', body: 'Lade das kalibrierte 2560 × 1440 Banner herunter und überprüfe die Anzeige in YouTube Studio.' },
+      ],
     },
   },
   pt: {
@@ -434,6 +459,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Projete os ganhos de anúncios', body: 'Introduza as visualizações mensais e o RPM da plataforma para estimar a receita base do AdSense.' },
         { title: 'Adicione patrocínios e custos', body: 'Some parcerias comerciais, membros do canal e comissões de afiliados, deduzindo os custos de produção.' },
         { title: 'Analise o lucro líquido', body: 'Examine o rendimento mensal e anual após custos antes de impostos para manter a sustentabilidade.' },
+      ],
+      'youtube-banner-size': [
+        { title: 'Carregar arte do banner', body: 'Selecione a imagem do banner do seu canal em formato JPEG, PNG ou WebP com até 20 MB.' },
+        { title: 'Calibrar área segura', body: 'Mantenha textos, títulos e logotipos dentro da zona de segurança central de 1546 × 423 px para todos os dispositivos.' },
+        { title: 'Exportar 2560 × 1440', body: 'Baixe o banner calibrado em resolução total de 2560 × 1440 e envie para o YouTube Studio.' },
       ],
     },
   },
@@ -503,6 +533,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: '협찬 및 제작비용 입력', body: '브랜드 스폰서십, 멤버십, 제휴 링크 수입을 더하고 외주 제작비 등 비용을 차감합니다.' },
         { title: '순수익 시나리오 확인', body: '비용을 공제한 월간 및 연간 세전 순수익을 확인하여 지속 가능한 채널 운영을 도모합니다.' },
       ],
+      'youtube-banner-size': [
+        { title: '채널 배너 아트 업로드', body: '최대 20MB 용량의 JPEG, PNG 또는 WebP 형식의 유튜브 채널 배너 이미지를 선택합니다.' },
+        { title: '안전 영역(Safe Area) 교정', body: '모바일과 데스크톱 모두에서 잘리지 않는 중앙 1546 × 423 안전 영역 안에 핵심 로고와 텍스트를 배치합니다.' },
+        { title: '2560 × 1440 배너 다운로드', body: '최적화된 2560 × 1440 해상도 배너를 내보내고 YouTube Studio에 등록하여 미리보기를 확인합니다.' },
+      ],
     },
   },
   it: {
@@ -571,6 +606,11 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Aggiungi accordi commerciali e costi', body: 'Includi sponsorizzazioni, abbonamenti al canale e affiliazioni, sottraendo i costi di produzione video.' },
         { title: 'Analizza l\'utile netto', body: 'Esamina il margine operativo mensile e annuale prima delle imposte per garantire la sostenibilità del progetto.' },
       ],
+      'youtube-banner-size': [
+        { title: 'Carica l\'artwork del banner', body: 'Seleziona la grafica del banner del canale in formato JPEG, PNG o WebP fino a 20 MB.' },
+        { title: 'Calibra la safe zone', body: 'Assicurati che loghi e testi chiave siano posizionati nella safe area centrale di 1546 × 423 px per tutti i dispositivi.' },
+        { title: 'Esporta in 2560 × 1440', body: 'Scarica il banner ottimizzato in alta definizione 2560 × 1440 e caricalo su YouTube Studio.' },
+      ],
     },
   },
 };
@@ -587,6 +627,22 @@ export interface ToolSeoContent {
     formats: string;
     formatsVal: string;
     note: string;
+  };
+  bannerSpecs: {
+    heading: string;
+    recommendedSize: string;
+    recommendedSizeVal: string;
+    safeArea: string;
+    safeAreaVal: string;
+    maxSize: string;
+    maxSizeVal: string;
+    formats: string;
+    formatsVal: string;
+    note: string;
+    downloadTemplateBtn: string;
+    cardTitle: string;
+    cardBadge: string;
+    cardDesc: string;
   };
   shortsTemplate: {
     heading: string;
@@ -621,6 +677,22 @@ export const toolSeoContent: Record<Locale, ToolSeoContent> = {
       formatsVal: 'JPG, PNG, GIF, WebP',
       note: 'Official YouTube thumbnail specs require a minimum width of 640 pixels, 16:9 aspect ratio, and a file size under 2 MB.',
     },
+    bannerSpecs: {
+      heading: 'YouTube banner size specifications',
+      recommendedSize: 'Recommended Size',
+      recommendedSizeVal: '2560 × 1440 px',
+      safeArea: 'Safe Area (All Devices)',
+      safeAreaVal: '1546 × 423 px',
+      maxSize: 'Max File Size',
+      maxSizeVal: 'Under 6 MB',
+      formats: 'Formats',
+      formatsVal: 'JPG, PNG, GIF, WebP',
+      note: 'Official YouTube channel art specifications require 2560 × 1440 px with a 1546 × 423 px central safe zone for logos and text, and a maximum file size of 6 MB.',
+      downloadTemplateBtn: 'Download Transparent PNG Banner Template (2560 × 1440)',
+      cardTitle: 'YouTube Banner Safe Zone Template',
+      cardBadge: '2560 × 1440 PNG',
+      cardDesc: 'Download the official transparent 2560×1440 PNG template with visible TV, desktop, tablet, and mobile safe zones to overlay in Photoshop, Figma, or Canva.',
+    },
     shortsTemplate: {
       heading: 'YouTube Shorts safe zone template',
       body: 'Download our free transparent 1080×1920 PNG overlay template to ensure your titles, subtitles, and key visual actions never get blocked by Shorts player controls, channel icons, or sound discs.',
@@ -651,6 +723,22 @@ export const toolSeoContent: Record<Locale, ToolSeoContent> = {
       formats: 'Formatos',
       formatsVal: 'JPG, PNG, GIF, WebP',
       note: 'Las especificaciones oficiales de YouTube exigen un ancho mínimo de 640 píxeles, proporción 16:9 y un peso inferior a 2 MB.',
+    },
+    bannerSpecs: {
+      heading: 'Especificaciones del tamaño de banner de YouTube',
+      recommendedSize: 'Medida recomendada',
+      recommendedSizeVal: '2560 × 1440 px',
+      safeArea: 'Zona segura (todos los dispositivos)',
+      safeAreaVal: '1546 × 423 px',
+      maxSize: 'Peso máximo',
+      maxSizeVal: 'Menos de 6 MB',
+      formats: 'Formatos',
+      formatsVal: 'JPG, PNG, GIF, WebP',
+      note: 'Las especificaciones oficiales de YouTube exigen 2560 × 1440 px con una zona segura central de 1546 × 423 px para textos y logos, y un peso menor a 6 MB.',
+      downloadTemplateBtn: 'Descargar plantilla PNG transparente (2560 × 1440)',
+      cardTitle: 'Plantilla de zona segura para banner',
+      cardBadge: '2560 × 1440 PNG',
+      cardDesc: 'Descarga la plantilla PNG transparente oficial de 2560×1440 con las zonas seguras de TV, escritorio, tableta y móvil para usar en Photoshop, Figma o Canva.',
     },
     shortsTemplate: {
       heading: 'Plantilla de zona segura de YouTube Shorts',
@@ -683,6 +771,22 @@ export const toolSeoContent: Record<Locale, ToolSeoContent> = {
       formatsVal: 'JPG, PNG, GIF, WebP',
       note: 'YouTube公式仕様では、最小幅640ピクセル、16:9のアスペクト比、2MB以下のファイルサイズが必須要件です。',
     },
+    bannerSpecs: {
+      heading: 'YouTubeバナーの公式サイズ規格',
+      recommendedSize: '推奨解像度',
+      recommendedSizeVal: '2560 × 1440 px',
+      safeArea: '全端末セーフゾーン',
+      safeAreaVal: '1546 × 423 px',
+      maxSize: '最大容量',
+      maxSizeVal: '6MB以下',
+      formats: '対応形式',
+      formatsVal: 'JPG, PNG, GIF, WebP',
+      note: 'YouTube公式チャンネルアート規格では、2560×1440px解像度、文字やロゴが欠けない中央1546×423pxのセーフゾーン、6MB以下の容量が必須要件です。',
+      downloadTemplateBtn: '透過PNGテンプレートをダウンロード (2560×1440)',
+      cardTitle: 'バナーセーフゾーン テンプレート',
+      cardBadge: '2560 × 1440 PNG',
+      cardDesc: 'Photoshop、Figma、Canvaでそのまま重ねて使える、TV・デスクトップ・タブレット・モバイルの各表示枠ガイド入り公式透明PNG画像をダウンロード。',
+    },
     shortsTemplate: {
       heading: 'YouTubeショート セーフゾーン テンプレート',
       body: '1080×1920の無料透明PNGオーバーレイをダウンロードして、タイトルや字幕、重要な演出がショートの再生ボタンやUIに被るのを防ぎましょう。',
@@ -713,6 +817,22 @@ export const toolSeoContent: Record<Locale, ToolSeoContent> = {
       formats: 'Formats acceptés',
       formatsVal: 'JPG, PNG, GIF, WebP',
       note: 'Les spécifications officielles de YouTube exigent une largeur minimale de 640 pixels, un ratio 16:9 et un fichier de moins de 2 Mo.',
+    },
+    bannerSpecs: {
+      heading: 'Spécifications de la taille de bannière YouTube',
+      recommendedSize: 'Taille recommandée',
+      recommendedSizeVal: '2560 × 1440 px',
+      safeArea: 'Zone de sécurité (tous écrans)',
+      safeAreaVal: '1546 × 423 px',
+      maxSize: 'Poids maximal',
+      maxSizeVal: 'Moins de 6 Mo',
+      formats: 'Formats acceptés',
+      formatsVal: 'JPG, PNG, GIF, WebP',
+      note: 'Les spécifications officielles de YouTube exigent 2560 × 1440 px avec une zone de sécurité centrale de 1546 × 423 px pour vos textes et logos, et un fichier de moins de 6 Mo.',
+      downloadTemplateBtn: 'Télécharger le template PNG transparent (2560 × 1440)',
+      cardTitle: 'Template de zone sécurisée de bannière',
+      cardBadge: '2560 × 1440 PNG',
+      cardDesc: 'Téléchargez le template officiel PNG transparent 2560×1440 avec les repères TV, ordinateur, tablette et mobile pour Photoshop, Figma ou Canva.',
     },
     shortsTemplate: {
       heading: 'Template de zone de sécurité YouTube Shorts',
@@ -745,6 +865,22 @@ export const toolSeoContent: Record<Locale, ToolSeoContent> = {
       formatsVal: 'JPG, PNG, GIF, WebP',
       note: 'Die offiziellen YouTube-Vorgaben verlangen mindestens 640 Pixel Breite, ein 16:9-Verhältnis und maximal 2 MB Dateigröße.',
     },
+    bannerSpecs: {
+      heading: 'YouTube-Banner-Größe & Richtlinien',
+      recommendedSize: 'Empfohlene Maße',
+      recommendedSizeVal: '2560 × 1440 px',
+      safeArea: 'Sicherheitsbereich (alle Geräte)',
+      safeAreaVal: '1546 × 423 px',
+      maxSize: 'Max. Dateigröße',
+      maxSizeVal: 'Unter 6 MB',
+      formats: 'Dateiformate',
+      formatsVal: 'JPG, PNG, GIF, WebP',
+      note: 'Offizielle YouTube-Vorgaben verlangen 2560 × 1440 px mit einem zentralen Sicherheitsbereich von 1546 × 423 px für Logos und Schriften sowie maximal 6 MB Dateigröße.',
+      downloadTemplateBtn: 'Transparente PNG-Vorlage herunterladen (2560 × 1440)',
+      cardTitle: 'Banner Safe Zone Vorlage',
+      cardBadge: '2560 × 1440 PNG',
+      cardDesc: 'Lade die offizielle transparente 2560×1440 PNG-Vorlage mit Hilfslinien für TV, Desktop, Tablet und Smartphone zur Verwendung in Photoshop, Figma oder Canva herunter.',
+    },
     shortsTemplate: {
       heading: 'YouTube Shorts Safe Zone Vorlage',
       body: 'Lade unsere kostenlose transparente 1080×1920 PNG-Vorlage herunter, damit Titel, Untertitel und wichtige Bildinhalte nicht von den Shorts-Buttons verdeckt werden.',
@@ -775,6 +911,22 @@ export const toolSeoContent: Record<Locale, ToolSeoContent> = {
       formats: 'Formatos aceitos',
       formatsVal: 'JPG, PNG, GIF, WebP',
       note: 'As especificações oficiais do YouTube exigem largura mínima de 640 pixels, proporção 16:9 e arquivo com menos de 2 MB.',
+    },
+    bannerSpecs: {
+      heading: 'Especificações do tamanho de banner do YouTube',
+      recommendedSize: 'Tamanho recomendado',
+      recommendedSizeVal: '2560 × 1440 px',
+      safeArea: 'Área segura (todos os dispositivos)',
+      safeAreaVal: '1546 × 423 px',
+      maxSize: 'Tamanho máximo',
+      maxSizeVal: 'Menos de 6 MB',
+      formats: 'Formatos aceitos',
+      formatsVal: 'JPG, PNG, GIF, WebP',
+      note: 'As diretrizes oficiais do YouTube exigem 2560 × 1440 px com uma área segura central de 1546 × 423 px para textos e marcas, com tamanho máximo de 6 MB.',
+      downloadTemplateBtn: 'Baixar modelo PNG transparente (2560 × 1440)',
+      cardTitle: 'Modelo de área segura para banner',
+      cardBadge: '2560 × 1440 PNG',
+      cardDesc: 'Baixe o modelo PNG transparente oficial de 2560×1440 com marcações para TV, desktop, tablet e celular para usar no Photoshop, Figma ou Canva.',
     },
     shortsTemplate: {
       heading: 'Modelo de zona segura de YouTube Shorts',
@@ -807,6 +959,22 @@ export const toolSeoContent: Record<Locale, ToolSeoContent> = {
       formatsVal: 'JPG, PNG, GIF, WebP',
       note: '공식 YouTube 썸네일 규격은 최소 너비 640픽셀, 16:9 화면 비율, 2MB 이하의 파일 크기를 요구합니다.',
     },
+    bannerSpecs: {
+      heading: '유튜브 채널 배너 크기 및 규격',
+      recommendedSize: '권장 해상도',
+      recommendedSizeVal: '2560 × 1440 px',
+      safeArea: '모든 기기 안전 영역(Safe Area)',
+      safeAreaVal: '1546 × 423 px',
+      maxSize: '최대 파일 크기',
+      maxSizeVal: '6MB 이하',
+      formats: '지원 포맷',
+      formatsVal: 'JPG, PNG, GIF, WebP',
+      note: '공식 YouTube 채널 아트 규격은 2560 × 1440 px 해상도, 텍스트 및 로고가 잘리지 않는 중앙 1546 × 423 px 안전 영역, 6MB 이하의 파일 크기를 요구합니다.',
+      downloadTemplateBtn: '투명 PNG 템플릿 다운로드 (2560 × 1440)',
+      cardTitle: '유튜브 배너 세이프존 템플릿',
+      cardBadge: '2560 × 1440 PNG',
+      cardDesc: '포토샵, 피그마, 캔바 타임라인에 바로 올려서 TV, PC, 태블릿, 모바일별 표시 영역을 확인할 수 있는 공식 2560×1440 투명 PNG 가이드입니다.',
+    },
     shortsTemplate: {
       heading: '유튜브 쇼츠 세이프존 템플릿',
       body: '무료 투명 1080×1920 PNG 오버레이 템플릿을 다운로드하여 쇼츠 플레이어 UI, 채널 아이콘, 음원 디스크에 자막이나 중요 화면이 가려지지 않도록 편집하세요.',
@@ -837,6 +1005,22 @@ export const toolSeoContent: Record<Locale, ToolSeoContent> = {
       formats: 'Formati supportati',
       formatsVal: 'JPG, PNG, GIF, WebP',
       note: 'Le specifiche ufficiali di YouTube richiedono una larghezza minima di 640 pixel, formato 16:9 e un peso inferiore a 2 MB.',
+    },
+    bannerSpecs: {
+      heading: 'Dimensioni e specifiche banner YouTube',
+      recommendedSize: 'Dimensione consigliata',
+      recommendedSizeVal: '2560 × 1440 px',
+      safeArea: 'Area sicura (tutti i dispositivi)',
+      safeAreaVal: '1546 × 423 px',
+      maxSize: 'Peso massimo',
+      maxSizeVal: 'Sotto 6 MB',
+      formats: 'Formati supportati',
+      formatsVal: 'JPG, PNG, GIF, WebP',
+      note: 'Le specifiche ufficiali di YouTube richiedono una risoluzione di 2560 × 1440 px con una safe area centrale di 1546 × 423 px per loghi e testi, e un peso massimo di 6 MB.',
+      downloadTemplateBtn: 'Scarica template PNG trasparente (2560 × 1440)',
+      cardTitle: 'Template safe zone banner YouTube',
+      cardBadge: '2560 × 1440 PNG',
+      cardDesc: 'Scarica il template PNG trasparente ufficiale 2560×1440 con le aree TV, desktop, tablet e smartphone da usare su Photoshop, Figma o Canva.',
     },
     shortsTemplate: {
       heading: 'Template safe zone YouTube Shorts',

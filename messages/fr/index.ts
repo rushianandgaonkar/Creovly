@@ -304,6 +304,28 @@ export const messagesFr: Messages = {
           answer: 'Cela arrive généralement si l’exportation est inférieure à 1280 × 720, si la compression a été fixée sous 50 % de qualité, ou si l’image a été agrandie à partir d’une capture d’écran vidéo basse résolution.',
         },
       ],
+      banner: [
+        {
+          question: 'Quelle est la taille officielle d’une bannière YouTube ?',
+          answer: 'La taille recommandée pour une bannière YouTube est de 2560 × 1440 pixels avec un ratio 16:9. Les dimensions minimales de téléversement sont de 2048 × 1152 pixels, et le poids maximal est de 6 Mo.',
+        },
+        {
+          question: 'Quelle est la zone de sécurité pour mobile et tous les appareils ?',
+          answer: 'La zone de sécurité centrale pour tous les appareils mesure 1546 × 423 pixels (centrée horizontalement et verticalement). Vos textes, logos et éléments cruciaux doivent rester dans ce rectangle pour être visibles sur mobile, tablette, PC et TV.',
+        },
+        {
+          question: 'Comment fonctionne le convertisseur de taille de bannière YouTube ?',
+          answer: 'Déposez votre image dans l’outil pour l’ajuster sur la toile 2560 × 1440. Vous pouvez prévisualiser le cadrage exact sur mobile, tablette et ordinateur, puis exporter un fichier parfaitement dimensionné.',
+        },
+        {
+          question: 'Pourquoi ma bannière YouTube est-elle rognée ou floue sur mobile ?',
+          answer: 'YouTube adapte l’affichage selon l’écran : les TV affichent toute la surface 2560 × 1440, tandis que les mobiles ne montrent que la tranche centrale de 1546 × 423. Tout élément en dehors est coupé. Téléverser en dessous de 2560 × 1440 cause également un flou de compression.',
+        },
+        {
+          question: 'Comment télécharger un template gratuit de bannière YouTube ?',
+          answer: 'Téléchargez notre template PNG transparent 2560 × 1440 gratuit directement depuis cette page pour l’utiliser dans Canva, Photoshop, Premiere Pro ou DaVinci Resolve.',
+        },
+      ],
       logoRemover: [
         {
           question: 'Comment supprimer le fond d’un logo gratuitement ?',
@@ -608,6 +630,32 @@ export const messagesFr: Messages = {
       bannerSafeZone: 'Seule la zone centrale de 1235 × 338 pixels est garantie visible sur smartphones et tablettes.',
       underSize: 'L’image d’origine est plus petite que la résolution cible. L’agrandissement peut entraîner un flou.',
     },
+  },
+  banner: {
+    title: 'Vérificateur et redimensionneur de bannière YouTube',
+    dropzoneLabel: 'Sélectionner une bannière à calibrer',
+    dropzoneHint: 'Importez votre illustration de bannière (JPEG, PNG ou WebP jusqu’à 20 Mo).',
+    deviceViewHeading: 'Aperçu selon l’appareil',
+    viewAll: 'Guide tous appareils',
+    viewDesktop: 'Ordinateur (2560 × 423)',
+    viewTablet: 'Tablette (1855 × 423)',
+    viewMobile: 'Zone sûre mobile (1546 × 423)',
+    viewTv: 'Téléviseur (2560 × 1440)',
+    fitModeHeading: 'Cadrage et mode d’ajustement',
+    fitCover: 'Remplir (Couvre les 2560 × 1440)',
+    fitContain: 'Adapter (Toile complète avec marges)',
+    zoomLabel: 'Zoom du visuel',
+    panXLabel: 'Décalage horizontal',
+    panYLabel: 'Décalage vertical',
+    guideToggle: 'Afficher les repères de sécurité',
+    buttonExport: 'Télécharger la bannière (2560 × 1440)',
+    buttonExporting: 'Génération de la bannière 2560 × 1440…',
+    buttonTemplate: 'Télécharger le template PNG transparent',
+    buttonReset: 'Réinitialiser',
+    resultsHeading: 'Aperçu et calibrage de la bannière',
+    safeAreaNotice: 'Placez vos logos, slogans et textes cruciaux dans la zone sûre centrale de 1546 × 423.',
+    warningSize: 'Ce fichier dépasse 6 Mo. Compressez-le avant de le téléverser sur YouTube.',
+    resultsPrompt: 'Chargez votre création pour vérifier son cadrage sur écran TV, ordinateur, tablette et smartphone.',
   },
   logoRemover: {
     title: 'Suppresseur de fond pour logos',

@@ -304,6 +304,28 @@ export const messagesIt: Messages = {
           answer: 'Accade solitamente se la miniatura viene esportata sotto i 1280 × 720, se la qualità di compressione è stata impostata sotto il 50%, oppure se è stata ingrandita da uno screenshot a bassa risoluzione.',
         },
       ],
+      banner: [
+        {
+          question: 'Qual è la dimensione ufficiale per il banner di YouTube?',
+          answer: 'La dimensione consigliata per il banner di YouTube è 2560 × 1440 pixel con proporzioni 16:9. La misura minima di caricamento è 2048 × 1152 pixel, con un peso massimo del file di 6 MB.',
+        },
+        {
+          question: 'Cos\'è la safe area del banner per tutti i dispositivi e smartphone?',
+          answer: 'La safe area centrale visibile su tutti gli schermi misura 1546 × 423 pixel (centrata orizzontalmente e verticalmente). Tutti i loghi, testi e dettagli importanti devono restare in questo riquadro per non essere tagliati su cellulari o tablet.',
+        },
+        {
+          question: 'Come funziona il convertitore di dimensioni banner per YouTube?',
+          answer: 'Carica qualsiasi immagine nello strumento per adattarla e riposizionarla nell\'area 2560 × 1440. Controlla l\'anteprima esatta di ritaglio per desktop, tablet e smartphone prima di esportare il banner pronto all\'uso.',
+        },
+        {
+          question: 'Perché il mio banner YouTube viene tagliato o risulta sfocato su cellulare?',
+          answer: 'YouTube ritaglia i banner in base allo schermo: le TV mostrano l\'intera area 2560 × 1440, mentre gli smartphone visualizzano solo la striscia centrale 1546 × 423. Gli elementi esterni vengono tagliati. Caricare immagini sotto 2560 × 1440 genera inoltre sgranatura da compressione.',
+        },
+        {
+          question: 'Come scaricare un template gratuito per banner YouTube?',
+          answer: 'Scarica il nostro template overlay PNG trasparente 2560 × 1440 gratuito direttamente da questa pagina. Inseriscilo sulla tua timeline in Canva, Photoshop, Premiere Pro o DaVinci Resolve per un perfetto allineamento.',
+        },
+      ],
       logoRemover: [
         {
           question: 'Come togliere lo sfondo da un logo gratis?',
@@ -608,6 +630,32 @@ export const messagesIt: Messages = {
       bannerSafeZone: 'Solo l’area centrale di 1235 × 338 pixel è garantita visibile su smartphone e tablet.',
       underSize: 'L’immagine di partenza è più piccola delle dimensioni finali. L’ingrandimento potrebbe sgranare la resa.',
     },
+  },
+  banner: {
+    title: 'Verifica e ridimensiona banner YouTube',
+    dropzoneLabel: 'Seleziona immagine banner da calibrare',
+    dropzoneHint: 'Carica l’immagine per la copertina del tuo canale (JPEG, PNG o WebP fino a 20 MB).',
+    deviceViewHeading: 'Anteprima per tipologia di dispositivo',
+    viewAll: 'Guida per tutti i dispositivi',
+    viewDesktop: 'Desktop (2560 × 423)',
+    viewTablet: 'Tablet (1855 × 423)',
+    viewMobile: 'Area sicura mobile (1546 × 423)',
+    viewTv: 'Schermo TV (2560 × 1440)',
+    fitModeHeading: 'Inquadratura e modalità di adattamento',
+    fitCover: 'Riempi (Copre l’intero 2560 × 1440)',
+    fitContain: 'Adatta (Intera immagine con margini)',
+    zoomLabel: 'Zoom dell’immagine',
+    panXLabel: 'Spostamento orizzontale',
+    panYLabel: 'Spostamento verticale',
+    guideToggle: 'Mostra linee guida dell’area sicura',
+    buttonExport: 'Scarica banner (2560 × 1440)',
+    buttonExporting: 'Generazione banner 2560 × 1440…',
+    buttonTemplate: 'Scarica template PNG trasparente',
+    buttonReset: 'Reimposta',
+    resultsHeading: 'Anteprima e calibrazione banner',
+    safeAreaNotice: 'Mantieni tutti i loghi, slogan e testi centrali nella safe area di 1546 × 423.',
+    warningSize: 'Questo banner supera i 6 MB. Comprimilo prima di caricarlo su YouTube.',
+    resultsPrompt: 'Seleziona un’immagine per verificare il ritaglio su schermi TV, computer, tablet e smartphone.',
   },
   logoRemover: {
     title: 'Strumento per rimuovere lo sfondo dai loghi',

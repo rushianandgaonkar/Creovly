@@ -304,11 +304,12 @@ if (switchLinkErrors === 0) {
 // ---------------------------------------------------------------------
 // 4. Verify every localized tool page retains the correct language
 // ---------------------------------------------------------------------
-console.log(`\n[4/7] Localized Tool Pages: Verifying 9 tools across all 8 languages...`);
+console.log(`\n[4/7] Localized Tool Pages: Verifying 10 tools across all 8 languages...`);
 
 const toolSlugs = [
   'youtube-thumbnail-compressor',
   'youtube-thumbnail-resizer',
+  'youtube-banner-size',
   'logo-background-remover',
   'youtube-shorts-safe-zone',
   'youtube-title-checker',
@@ -337,7 +338,7 @@ for (const loc of locales) {
 }
 
 if (toolLocalizationErrors === 0) {
-  console.log(`  ✓ All 9 tools retain complete localized metadata across all 8 languages.`);
+  console.log(`  ✓ All ${toolSlugs.length} tools retain complete localized metadata across all 8 languages.`);
 } else {
   totalErrors += toolLocalizationErrors;
 }
@@ -356,6 +357,7 @@ const canonicalPages = [
   '/tools/logo-background-remover',
   '/tools/youtube-thumbnail-compressor',
   '/tools/youtube-thumbnail-resizer',
+  '/tools/youtube-banner-size',
   '/tools/youtube-shorts-safe-zone',
   '/tools/youtube-title-checker',
   '/tools/youtube-revenue-calculator',
@@ -472,7 +474,7 @@ for (const loc of locales) {
     console.error(`  ❌ Missing tools.faqs in [${loc.toUpperCase()}]`);
     faqInstructionErrors++;
   } else {
-    const requiredFaqKeys = ['compressor', 'resizer', 'logoRemover', 'shorts', 'titleChecker', 'revenue', 'rpm', 'watchHours', 'monetization'];
+    const requiredFaqKeys = ['compressor', 'resizer', 'banner', 'logoRemover', 'shorts', 'titleChecker', 'revenue', 'rpm', 'watchHours', 'monetization'];
     for (const fKey of requiredFaqKeys) {
       if (!Array.isArray(faqs[fKey]) || faqs[fKey].length === 0) {
         console.error(`  ❌ Empty or missing tools.faqs.${fKey} in [${loc.toUpperCase()}]`);

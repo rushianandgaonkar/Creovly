@@ -49,6 +49,8 @@ export default function ToolDiscovery({
         return t.compressor.title;
       case 'youtube-thumbnail-resizer':
         return t.resizer.title;
+      case 'youtube-banner-size':
+        return t.banner?.title || 'YouTube Banner Size';
       case 'logo-background-remover':
         return t.logoRemover.title;
       case 'youtube-shorts-safe-zone':

@@ -304,6 +304,28 @@ export const messagesPt: Messages = {
           answer: 'Isso ocorre frequentemente quando a imagem exportada tem resolução inferior a 1280 × 720, quando foi comprimida com qualidade abaixo de 50%, ou quando foi ampliada a partir de uma captura de ecrã em baixa definição.',
         },
       ],
+      banner: [
+        {
+          question: 'Qual é o tamanho oficial do banner do YouTube?',
+          answer: 'O tamanho de banner recomendado pelo YouTube é de 2560 × 1440 píxeis com proporção 16:9. A dimensão mínima de envio é de 2048 × 1152 píxeis, e o tamanho máximo do ficheiro é de 6 MB.',
+        },
+        {
+          question: 'Qual é a área segura para dispositivos móveis e todos os ecrãs?',
+          answer: 'A área segura central para todos os dispositivos mede 1546 × 423 píxeis (centralizada horizontal e verticalmente). Nomes de canal, logótipos e textos devem ficar dentro deste espaço para exibição perfeita em telemóveis, tablets, computadores e televisores.',
+        },
+        {
+          question: 'Como funciona o conversor de tamanho de banner do YouTube?',
+          answer: 'Carregue qualquer imagem na ferramenta para dimensionar e posicionar na tela de 2560 × 1440. Pré-visualize o recorte exato para telemóvel, tablet e computador antes de exportar o ficheiro pronto para publicação.',
+        },
+        {
+          question: 'Porque é que o banner do YouTube é cortado ou fica desfocado no telemóvel?',
+          answer: 'O YouTube corta os banners consoante o ecrã: televisores mostram toda a tela de 2560 × 1440, enquanto os telemóveis mostram apenas a faixa central de 1546 × 423. Ficheiros enviados abaixo de 2560 × 1440 também sofrem compressão e desfoque.',
+        },
+        {
+          question: 'Como posso descarregar um modelo gratuito de banner do YouTube?',
+          answer: 'Descarregue o nosso modelo de sobreposição PNG transparente de 2560 × 1440 gratuito diretamente nesta página. Importe-o para o Canva, Photoshop, Premiere Pro ou DaVinci Resolve para um alinhamento perfeito.',
+        },
+      ],
       logoRemover: [
         {
           question: 'Como remover o fundo de um logótipo gratuitamente?',
@@ -608,6 +630,32 @@ export const messagesPt: Messages = {
       bannerSafeZone: 'Apenas a área central de 1235 × 338 píxeis é garantida como visível em telemóveis e tablets.',
       underSize: 'A imagem original é menor que as dimensões de saída. A ampliação pode reduzir a nitidez.',
     },
+  },
+  banner: {
+    title: 'Verificador e redimensionador de banner do YouTube',
+    dropzoneLabel: 'Selecionar imagem de banner para calibrar',
+    dropzoneHint: 'Carregue a imagem do banner do seu canal (JPEG, PNG ou WebP até 20 MB).',
+    deviceViewHeading: 'Pré-visualização por dispositivo',
+    viewAll: 'Guia para todos os dispositivos',
+    viewDesktop: 'Computador (2560 × 423)',
+    viewTablet: 'Tablet (1855 × 423)',
+    viewMobile: 'Área segura telemóvel (1546 × 423)',
+    viewTv: 'Televisão (2560 × 1440)',
+    fitModeHeading: 'Modo de enquadramento e ajuste',
+    fitCover: 'Preencher (Cobre toda a tela de 2560 × 1440)',
+    fitContain: 'Ajustar (Imagem completa com margens)',
+    zoomLabel: 'Zoom da imagem',
+    panXLabel: 'Deslocamento horizontal',
+    panYLabel: 'Deslocamento vertical',
+    guideToggle: 'Mostrar guias de área segura',
+    buttonExport: 'Descarregar banner (2560 × 1440)',
+    buttonExporting: 'A gerar banner de 2560 × 1440…',
+    buttonTemplate: 'Descarregar modelo PNG transparente',
+    buttonReset: 'Repor',
+    resultsHeading: 'Pré-visualização e calibragem do banner',
+    safeAreaNotice: 'Mantenha todos os logótipos, frases e textos essenciais na área segura central de 1546 × 423.',
+    warningSize: 'Este ficheiro excede 6 MB. Comprima antes de enviar para o YouTube.',
+    resultsPrompt: 'Selecione uma arte de banner para conferir o enquadramento em TV, computador, tablet e telemóvel.',
   },
   logoRemover: {
     title: 'Removedor de fundo de logótipo',

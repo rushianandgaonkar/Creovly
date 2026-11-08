@@ -23,6 +23,7 @@ import ThumbnailToolsContent from '@/components/pages/ThumbnailToolsContent';
 import ToolPageShell from '@/components/tools/ToolPageShell';
 import ThumbnailCompressor from '@/components/tools/ThumbnailCompressor';
 import ThumbnailResizer from '@/components/tools/ThumbnailResizer';
+import BannerResizer from '@/components/tools/BannerResizer';
 import styles from '@/components/ui/artwork.module.css';
 import LogoBackgroundRemover from '@/components/tools/LogoBackgroundRemover';
 import ShortsSafeZone from '@/components/tools/ShortsSafeZone';
@@ -43,6 +44,7 @@ const staticSlugs = [
   ['tools', 'logo-background-remover'],
   ['tools', 'youtube-thumbnail-compressor'],
   ['tools', 'youtube-thumbnail-resizer'],
+  ['tools', 'youtube-banner-size'],
   ['tools', 'youtube-shorts-safe-zone'],
   ['tools', 'youtube-title-checker'],
   ['tools', 'youtube-revenue-calculator'],
@@ -258,6 +260,19 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
             toolSlug={tool.slug}
           >
             <ThumbnailResizer />
+          </ToolPageShell>
+        );
+        break;
+      case 'youtube-banner-size':
+        toolComponent = (
+          <ToolPageShell
+            title={tool.title}
+            description={tool.description}
+            category="Thumbnail Tools"
+            categoryHref="/tools/thumbnail"
+            toolSlug={tool.slug}
+          >
+            <BannerResizer locale={loc} />
           </ToolPageShell>
         );
         break;

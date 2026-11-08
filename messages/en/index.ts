@@ -3,6 +3,7 @@ import { home } from './home';
 import { tools } from './tools';
 import { compressor } from './compressor';
 import { resizer } from './resizer';
+import { banner } from './banner';
 import { logoRemover } from './logoRemover';
 import { shorts } from './shorts';
 import { titleChecker } from './titleChecker';
@@ -18,6 +19,7 @@ export const messagesEn = {
   tools,
   compressor,
   resizer,
+  banner,
   logoRemover,
   shorts,
   titleChecker,

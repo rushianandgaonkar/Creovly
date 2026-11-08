@@ -91,11 +91,12 @@ test('getLanguageAlternates produces complete bidirectional hreflang mapping', (
   assert.equal(alts['x-default'], 'https://creovly.com/tools/youtube-thumbnail-compressor');
 });
 
-test('translations dictionary covers all 8 languages with all 9 tools', () => {
+test('translations dictionary covers all 8 languages with all 10 tools', () => {
   const tools = [
     'logo-background-remover',
     'youtube-thumbnail-compressor',
     'youtube-thumbnail-resizer',
+    'youtube-banner-size',
     'youtube-shorts-safe-zone',
     'youtube-title-checker',
     'youtube-revenue-calculator',

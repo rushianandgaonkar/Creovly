@@ -31,6 +31,7 @@ const LOCALES = ['en', 'es', 'ja', 'fr', 'de', 'pt', 'ko', 'it'];
 const TOOLS = [
   'youtube-thumbnail-compressor',
   'youtube-thumbnail-resizer',
+  'youtube-banner-size',
   'logo-background-remover',
   'youtube-shorts-safe-zone',
   'youtube-title-checker',
@@ -91,7 +92,7 @@ test('all 8 languages generate complete page metadata with canonical URLs and re
   }
 });
 
-test('all 9 tool pages generate unique, localized metadata across all 8 languages', () => {
+test('all 10 tool pages generate unique, localized metadata across all 8 languages', () => {
   for (const toolSlug of TOOLS) {
     for (const locale of LOCALES) {
       const meta = metadataLib.createToolMetadata(toolSlug, locale);

@@ -46,6 +46,7 @@ export const footerNavigation = {
       items: [
         { name: 'Thumbnail Compressor', href: '/tools/youtube-thumbnail-compressor' },
         { name: 'Thumbnail Resizer', href: '/tools/youtube-thumbnail-resizer' },
+        { name: 'Banner Size & Safe Zone', href: '/tools/youtube-banner-size' },
         { name: 'Remove Background from Logo', href: '/tools/logo-background-remover' },
         { name: 'Shorts Safe Zone', href: '/tools/youtube-shorts-safe-zone' },
       ],
@@ -122,6 +123,20 @@ export const toolRegistry: ToolDefinition[] = [
       'Free YouTube thumbnail resizer and size converter. Adjust images to 1280x720 or custom sizes, preview framing, and download ready-to-use files.',
     status: 'available',
     seoTarget: 'YouTube Thumbnail Resizer',
+  },
+  {
+    id: 'youtube-banner-size',
+    heroTone: 'blue',
+    title: 'YouTube Banner Size Checker & Resizer',
+    seoTitle: 'YouTube Banner Size: 2560x1440 Template',
+    slug: 'youtube-banner-size',
+    href: '/tools/youtube-banner-size',
+    category: 'thumbnail',
+    categoryLabel: 'Thumbnail Tools',
+    description:
+      'Check YouTube banner size and safe areas for TV, desktop, and mobile. Resize images to 2560x1440 and download free transparent banner overlay templates.',
+    status: 'available',
+    seoTarget: 'YouTube Banner Size',
   },
   {
     id: 'youtube-shorts-safe-zone',

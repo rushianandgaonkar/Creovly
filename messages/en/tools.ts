@@ -109,6 +109,28 @@ export const tools = {
         answer: 'Thumbnails appear blurry when exported below 1280 × 720 resolution, when heavily compressed below 50% quality, or when upscaled from lower-resolution video freeze frames.',
       },
     ],
+    banner: [
+      {
+        question: 'What is the official YouTube banner size?',
+        answer: 'The recommended YouTube banner size is 2560 × 1440 pixels with a 16:9 aspect ratio. The minimum upload dimension is 2048 × 1152 pixels, and the maximum file size is 6 MB.',
+      },
+      {
+        question: 'What is the YouTube banner size for all devices and mobile safe area?',
+        answer: 'The central safe area for all devices is 1546 × 423 pixels (centered horizontally and vertically). All channel names, logos, social links, and key text must sit inside this box so they remain visible across mobile phones, tablets, desktops, and TVs.',
+      },
+      {
+        question: 'How does the YouTube banner size converter work?',
+        answer: 'Upload any image into the banner tool to scale and reposition it on the 2560 × 1440 canvas. You can inspect exact crop previews for desktop, tablet, and mobile displays, then export a ready-to-upload banner.',
+      },
+      {
+        question: 'Why is my YouTube banner cropped or blurry on mobile?',
+        answer: 'YouTube crops banners differently by screen size: TVs show the full 2560 × 1440 canvas, while smartphones only show the central 1546 × 423 slice. Graphics outside this zone are cut off. Uploading below 2560 × 1440 also triggers compression blur.',
+      },
+      {
+        question: 'How can I download a free YouTube banner size template?',
+        answer: 'Download our free transparent 2560 × 1440 PNG overlay template directly from this tool page. Drop it onto your timeline or canvas in Canva, Photoshop, Premiere Pro, or DaVinci Resolve for pixel-perfect safe zone alignment.',
+      },
+    ],
     logoRemover: [
       {
         question: 'How to remove background from a logo?',

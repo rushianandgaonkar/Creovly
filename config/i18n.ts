@@ -287,6 +287,13 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: 'Thumbnail Tools',
         keywords: ['youtube thumbnail resizer', 'youtube thumbnail size converter', 'youtube thumbnail size', 'youtube thumbnail dimensions', 'youtube thumbnail aspect ratio', 'youtube banner resizer', '1280x720 thumbnail resize', 'youtube cover photo resizer', 'youtube image dimension tool'],
       },
+      'youtube-banner-size': {
+        title: 'YouTube Banner Size Checker & Resizer',
+        seoTitle: 'YouTube Banner Size: 2560x1440 Template',
+        description: 'Check YouTube banner size and safe areas for TV, desktop, and mobile. Resize images to 2560x1440 and download free transparent banner overlay templates.',
+        categoryLabel: 'Thumbnail Tools',
+        keywords: ['youtube banner size', 'youtube banner size for all devices', 'youtube banner size template', 'youtube banner size for mobile', 'youtube banner size converter'],
+      },
       'youtube-shorts-safe-zone': {
         title: 'YouTube Shorts Safe Zone Checker',
         seoTitle: 'YouTube Shorts Safe Zone Checker & Template',
@@ -434,6 +441,13 @@ export const translations: Record<Locale, I18nContent> = {
         description: 'Redimensiona miniaturas de YouTube gratis a 1280x720 o medidas personalizadas. Revisa el encuadre móvil y descarga archivos listos para publicar.',
         categoryLabel: 'Herramientas de miniaturas',
         keywords: ['redimensionar miniatura youtube', 'convertidor tamano miniatura youtube', 'medidas miniatura youtube 1280x720', 'tamano portada youtube', 'escalar imagen youtube', 'banner youtube medidas'],
+      },
+      'youtube-banner-size': {
+        title: 'Verificador y redimensionador de banner de YouTube',
+        seoTitle: 'Tamaño banner YouTube: Redimensionar y plantilla',
+        description: 'Verifica el tamaño de banner de YouTube y zonas seguras para móvil y PC. Redimensiona a 2560x1440 y descarga gratis la plantilla PNG transparente.',
+        categoryLabel: 'Herramientas de miniaturas',
+        keywords: ['tamano banner youtube', 'medidas banner youtube todos los dispositivos', 'plantilla banner youtube', 'banner youtube movil safe zone', 'convertidor tamano banner youtube'],
       },
       'youtube-shorts-safe-zone': {
         title: 'Verificador de zona segura de YouTube Shorts',
@@ -583,6 +597,13 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: 'サムネイルツール',
         keywords: ['YouTube サムネイル サイズ 変更', 'YouTube サムネイル サイズ 変換', 'サムネイル 1280 720 リサイズ', 'YouTube バナー サイズ 調整', 'サムネ 比率 16:9', 'チャンネルアート リサイズ'],
       },
+      'youtube-banner-size': {
+        title: 'YouTubeバナーサイズ確認・リサイズツール',
+        seoTitle: 'YouTubeバナーサイズ: 2560x1440リサイズ＆テンプレート',
+        description: 'YouTubeバナーサイズ規格とスマホ・PC対応セーフゾーンを確認。画像を2560x1440に自動リサイズし、無料の透過PNGテンプレートをダウンロード。',
+        categoryLabel: 'サムネイルツール',
+        keywords: ['youtube バナー サイズ', 'youtube チャンネルアート サイズ', 'youtube ヘッダー サイズ', 'youtube バナー テンプレート', 'youtube バナー セーフゾーン'],
+      },
       'youtube-shorts-safe-zone': {
         title: 'YouTube Shortsセーフゾーンチェッカー',
         seoTitle: 'YouTubeショート セーフゾーン確認＆PNGテンプレート',
@@ -730,6 +751,13 @@ export const translations: Record<Locale, I18nContent> = {
         description: 'Redimensionnez vos miniatures YouTube en 1280x720 ou dimensions sur mesure. Vérifiez le cadrage et téléchargez vos images prêtes pour YouTube.',
         categoryLabel: 'Outils de miniatures',
         keywords: ['redimensionner miniature youtube', 'convertisseur taille miniature youtube', 'taille miniature youtube 1280x720', 'dimensions banniere youtube', 'format image youtube', 'redimensionner photo profil'],
+      },
+      'youtube-banner-size': {
+        title: 'Vérificateur et redimensionneur de bannière YouTube',
+        seoTitle: 'Taille bannière YouTube: 2560x1440 et template',
+        description: 'Vérifiez la taille de bannière YouTube et sa zone de sécurité. Redimensionnez en 2560x1440 et téléchargez notre template PNG transparent gratuit.',
+        categoryLabel: 'Outils de miniatures',
+        keywords: ['taille banniere youtube', 'dimension banniere youtube tous appareils', 'template banniere youtube png', 'safe zone banniere youtube mobile', 'convertisseur taille banniere youtube'],
       },
       'youtube-shorts-safe-zone': {
         title: 'Vérificateur de zone sûre YouTube Shorts',
@@ -879,6 +907,13 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: 'Thumbnail-Tools',
         keywords: ['youtube thumbnail groesse aendern', 'thumbnail konverter groesse', 'thumbnail 1280x720 format', 'youtube banner massen', 'youtube bild skalieren', 'kanalbild zuschneiden'],
       },
+      'youtube-banner-size': {
+        title: 'YouTube-Banner-Größenprüfer & Resizer',
+        seoTitle: 'YouTube-Banner-Größe: 2560x1440 Vorlage',
+        description: 'Prüfe YouTube-Banner-Größe und Safe Zones für alle Geräte. Passe Bilder auf 2560x1440 an und lade die kostenlose transparente PNG-Vorlage herunter.',
+        categoryLabel: 'Thumbnail-Tools',
+        keywords: ['youtube banner groesse', 'youtube banner maße alle geraete', 'youtube banner vorlage png', 'youtube banner safe zone handy', 'youtube banner groesse aendern'],
+      },
       'youtube-shorts-safe-zone': {
         title: 'YouTube Shorts Safe-Zone-Prüfer',
         seoTitle: 'YouTube Shorts Safe Zone Prüfer & PNG Vorlage',
@@ -1026,6 +1061,13 @@ export const translations: Record<Locale, I18nContent> = {
         description: 'Redimensionador e conversor de tamanho de miniatura do YouTube grátis. Ajuste imagens para 1280x720 ou dimensões personalizadas e baixe prontas.',
         categoryLabel: 'Ferramentas de miniatura',
         keywords: ['redimensionar miniatura youtube', 'conversor tamanho miniatura youtube', 'tamanho miniatura youtube 1280x720', 'dimensoes banner youtube', 'mudar tamanho foto canal', 'escala imagem youtube'],
+      },
+      'youtube-banner-size': {
+        title: 'Verificador e redimensionador de banner do YouTube',
+        seoTitle: 'Tamanho de banner do YouTube: 2560x1440 e molde',
+        description: 'Confira o tamanho do banner do YouTube e a área segura para telemóveis e PC. Redimensione para 2560x1440 e baixe o modelo PNG transparente grátis.',
+        categoryLabel: 'Ferramentas de miniatura',
+        keywords: ['tamanho banner youtube', 'dimensoes banner youtube todos dispositivos', 'gabarito banner youtube', 'banner youtube safe zone celular', 'redimensionar banner youtube'],
       },
       'youtube-shorts-safe-zone': {
         title: 'Verificador de zona segura do YouTube Shorts',
@@ -1175,6 +1217,13 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: '썸네일 도구',
         keywords: ['유튜브 썸네일 크기 조절', '썸네일 1280 720 사이즈', '유튜브 배너 규격', '유튜브 채널아트 리사이즈', '유튜브 비율 16 9'],
       },
+      'youtube-banner-size': {
+        title: '유튜브 배너 사이즈 확인기 및 리사이저',
+        seoTitle: '유튜브 배너 사이즈: 2560x1440 크기 조절 & 템플릿',
+        description: 'YouTube 배너 규격과 모바일·PC 세이프존을 실시간 확인하세요. 2560x1440 해상도로 자동 조절하고 무료 투명 PNG 가이드 오버레이 템플릿을 다운로드하세요.',
+        categoryLabel: '썸네일 도구',
+        keywords: ['유튜브 배너 사이즈', '유튜브 채널아트 규격', '유튜브 배너 크기 조절', '유튜브 배너 세이프존 템플릿', '유튜브 헤더 사이즈'],
+      },
       'youtube-shorts-safe-zone': {
         title: '유튜브 쇼츠 안전 구역 검사기',
         seoTitle: '유튜브 쇼츠 세이프존 확인기 & 투명 PNG 템플릿',
@@ -1322,6 +1371,13 @@ export const translations: Record<Locale, I18nContent> = {
         description: 'Ridimensiona le miniature YouTube a 1280x720 e proporzioni 16:9. Verifica l\'anteprima su mobile per massimizzare il CTR del tuo prossimo video.',
         categoryLabel: 'Strumenti miniatura',
         keywords: ['ridimensionare miniatura youtube', 'dimensioni miniatura youtube 1280x720', 'formato copertina youtube', 'scalare immagine youtube', 'banner youtube misure'],
+      },
+      'youtube-banner-size': {
+        title: 'Verifica e ridimensiona banner YouTube',
+        seoTitle: 'Dimensioni banner YouTube: 2560x1440 e template',
+        description: 'Verifica le dimensioni del banner YouTube e la safe zone mobile. Ridimensiona a 2560x1440 ed esporta gratuitamente il template PNG overlay trasparente.',
+        categoryLabel: 'Strumenti miniatura',
+        keywords: ['dimensioni banner youtube', 'misure banner youtube tutti i dispositivi', 'template banner youtube', 'banner youtube safe zone cellulare', 'convertitore dimensioni banner youtube'],
       },
       'youtube-shorts-safe-zone': {
         title: 'Controllo zona sicura YouTube Shorts',

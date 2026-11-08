@@ -304,6 +304,28 @@ export const messagesDe: Messages = {
           answer: 'Das passiert häufig, wenn die Auflösung unter 1280 × 720 liegt, die Komprimierung unter 50 % gewählt wurde oder ein Screenshot aus einem Video hochskaliert wurde.',
         },
       ],
+      banner: [
+        {
+          question: 'Was ist die offizielle YouTube-Banner-Größe?',
+          answer: 'Die empfohlene YouTube-Banner-Größe beträgt 2560 × 1440 Pixel im 16:9-Format. Die Mindestabmessung für den Upload ist 2048 × 1152 Pixel, und die maximale Dateigröße liegt bei 6 MB.',
+        },
+        {
+          question: 'Was ist der sichere Bereich (Safe Zone) für alle Geräte und Mobiltelefone?',
+          answer: 'Der zentrale sichere Bereich für alle Endgeräte misst 1546 × 423 Pixel (horizontal und vertikal zentriert). Alle Texte, Kanalnamen und Logos müssen in diesem Kasten liegen, um auf Handys, Tablets, PCs und TVs sichtbar zu bleiben.',
+        },
+        {
+          question: 'Wie funktioniert der YouTube-Banner-Größenkonverter?',
+          answer: 'Lade ein beliebiges Bild hoch, um es auf der 2560 × 1440 Arbeitsfläche auszurichten. Prüfe die Zuschnitt-Vorschau für Desktop, Tablet und Handy vorab und exportiere das fertige Kanalbanner.',
+        },
+        {
+          question: 'Warum wird mein YouTube-Banner auf dem Handy abgeschnitten oder unscharf?',
+          answer: 'YouTube schneidet Banner je nach Bildschirm zu: Auf Fernsehern ist die volle 2560 × 1440 Fläche sichtbar, auf Mobilgeräten nur der 1546 × 423 Ausschnitt. Was außerhalb liegt, wird abgeschnitten. Uploads unter 2560 × 1440 führen zu Kompressionsunschärfe.',
+        },
+        {
+          question: 'Wo kann ich eine kostenlose YouTube-Banner-Vorlage herunterladen?',
+          answer: 'Lade unsere kostenlose transparente 2560 × 1440 PNG-Vorlage direkt auf dieser Seite herunter. Nutze sie in Canva, Photoshop, Premiere Pro oder DaVinci Resolve für perfekte Safe-Zone-Ausrichtung.',
+        },
+      ],
       logoRemover: [
         {
           question: 'Wie entferne ich den Hintergrund eines Logos kostenlos?',
@@ -608,6 +630,32 @@ export const messagesDe: Messages = {
       bannerSafeZone: 'Nur der zentrale Bereich von 1235 × 338 Pixeln ist auf Smartphones und Tablets garantiert sichtbar.',
       underSize: 'Das Ausgangsbild ist kleiner als das Zielformat. Ein Vergrößern kann zu Unschärfe führen.',
     },
+  },
+  banner: {
+    title: 'YouTube-Banner-Größenprüfer & Resizer',
+    dropzoneLabel: 'Banner-Grafik zum Anpassen auswählen',
+    dropzoneHint: 'Lade dein Kanalbanner-Bild hoch (JPEG, PNG oder WebP bis 20 MB).',
+    deviceViewHeading: 'Gerätespezifische Vorschau',
+    viewAll: 'Alle Geräte Hilfslinien',
+    viewDesktop: 'Desktop-Vorschau (2560 × 423)',
+    viewTablet: 'Tablet-Vorschau (1855 × 423)',
+    viewMobile: 'Smartphone Safe Zone (1546 × 423)',
+    viewTv: 'TV-Vollbild (2560 × 1440)',
+    fitModeHeading: 'Anpassung & Zuschnitt',
+    fitCover: 'Ausfüllen (2560 × 1440 komplett füllen)',
+    fitContain: 'Einpassen (Ganzes Bild mit Rändern)',
+    zoomLabel: 'Grafik-Zoom',
+    panXLabel: 'Horizontaler Versatz',
+    panYLabel: 'Vertikaler Versatz',
+    guideToggle: 'Safe-Zone-Hilfslinien einblenden',
+    buttonExport: 'Banner herunterladen (2560 × 1440)',
+    buttonExporting: '2560 × 1440 Banner wird erstellt…',
+    buttonTemplate: 'Transparente PNG-Vorlage laden',
+    buttonReset: 'Zurücksetzen',
+    resultsHeading: 'Banner-Vorschau & Überprüfung',
+    safeAreaNotice: 'Platziere alle Logos, Slogans und Namen im zentralen 1546 × 423 Safe-Bereich.',
+    warningSize: 'Diese Datei übersteigt 6 MB. Bitte vor dem Hochladen komprimieren.',
+    resultsPrompt: 'Wähle dein Banner-Design, um die Zuschnitte auf TV, PC, Tablet und Smartphone zu prüfen.',
   },
   logoRemover: {
     title: 'Logo-Hintergrund-Entferner',

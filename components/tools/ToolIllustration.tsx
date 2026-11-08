@@ -104,6 +104,45 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
         </div>
       );
 
+    case 'banner-size':
+      return (
+        <div className={`tool-preview preview-banner-size w-full h-full relative overflow-hidden select-none bg-zinc-950 flex items-center justify-center ${className}`} data-ui>
+          {/* Banner 16:9 Canvas */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/examples/thumbnail-source.png"
+            alt="YouTube banner 2560x1440 preview"
+            width={320}
+            height={180}
+            className="w-full h-full object-cover opacity-60"
+            loading="lazy"
+            decoding="async"
+          />
+          {/* Desktop/Tablet Horizontal Strip (423/1440 ≈ 29.4% height) */}
+          <div
+            className="absolute inset-x-0 border-y border-amber-400/60 bg-amber-500/10 flex items-center justify-center pointer-events-none"
+            style={{ top: '35.3%', height: '29.4%' }}
+          >
+            {/* Central Mobile Safe Zone (1546/2560 ≈ 60.4% width) */}
+            <div
+              className="h-full border-x-2 border-emerald-400 bg-emerald-500/20 flex flex-col items-center justify-center px-1 relative shadow-[0_0_12px_rgba(16,185,129,0.25)]"
+              style={{ width: '60.4%' }}
+            >
+              <span className="text-[9px] font-bold text-emerald-300 tracking-wider uppercase bg-black/60 px-1 py-0.5 rounded border border-emerald-400/40">
+                Safe Area (1546×423)
+              </span>
+            </div>
+          </div>
+          {/* TV Resolution Badge */}
+          <div className="absolute bottom-2 left-2 z-10 px-2 py-0.5 rounded bg-black/80 backdrop-blur-sm border border-zinc-700 text-[10px] font-semibold text-zinc-300">
+            2560 × 1440 TV
+          </div>
+          <div className="absolute top-2 right-2 z-10 px-1.5 py-0.5 rounded bg-amber-500/20 border border-amber-400/40 text-[9px] font-mono text-amber-300">
+            All Devices
+          </div>
+        </div>
+      );
+
     case 'shorts-safe-zone':
       return (
         <div className={`tool-preview preview-shorts w-full h-full relative overflow-hidden select-none bg-zinc-950 flex items-center justify-center p-2 ${className}`} data-ui>

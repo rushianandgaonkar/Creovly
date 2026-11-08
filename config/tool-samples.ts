@@ -105,6 +105,26 @@ export const toolSamples: Record<string, SampleImageOption[]> = {
       height: 600,
     },
   ],
+  'youtube-banner-size': [
+    {
+      id: 'creator-desk',
+      label: 'Creator Desk',
+      category: '1600 × 1000 · Landscape',
+      src: '/examples/thumbnail-source.png',
+      fileName: 'creator-desk.png',
+      width: 1600,
+      height: 1000,
+    },
+    {
+      id: 'vlog-still',
+      label: 'Studio Workspace',
+      category: '1600 × 1000 · Panorama',
+      src: '/examples/compressor-source.jpg',
+      fileName: 'studio-workspace.jpg',
+      width: 1600,
+      height: 1000,
+    },
+  ],
   'youtube-shorts-safe-zone': [
     {
       id: 'shorts-frame',
