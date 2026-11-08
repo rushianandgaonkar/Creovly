@@ -544,12 +544,109 @@ export const guides: GuideItem[] = [
       'youtube-shorts-safe-zone',
     ],
   },
+  {
+    slug: 'how-much-does-youtube-pay-per-1000-views',
+    title: 'How Much Does YouTube Pay Per 1,000 Views? (2026 Earnings Rates)',
+    seoTitle: 'How Much Does YouTube Pay Per 1,000 Views?',
+    category: 'Monetization & Economics',
+    readTime: '7 min read',
+    description:
+      'Discover how much YouTube pays per 1,000 views across niches, long-form vs Shorts, CPM vs RPM take-home rates, and calculate your channel earnings.',
+    lastVerified: 'November 2026',
+    officialSources: [
+      {
+        label: 'YouTube Help: Understand YouTube Analytics metrics: Revenue per mille (RPM)',
+        url: 'https://support.google.com/youtube/answer/9314357?hl=en',
+        description:
+          'Official definition and calculation breakdown of creator RPM, monetized playbacks, and take-home earnings.',
+      },
+      {
+        label: 'YouTube Help: YouTube Partner Program overview & monetization policies',
+        url: 'https://support.google.com/youtube/answer/72857?hl=en',
+        description:
+          'Official documentation on YouTube ad revenue sharing terms, YPP eligibility thresholds, and revenue splits.',
+      },
+    ],
+    contentSections: [
+      {
+        heading: '1. How much does YouTube pay per 1,000 views on average?',
+        body: 'On average, YouTube pays creators between $2.00 and $12.00 per 1,000 views for standard long-form videos in tier-1 geographic markets (such as the United States, United Kingdom, Canada, Australia, and Germany). This metric is known as your net Revenue Per Mille (RPM). Earnings vary widely by content niche: competitive commercial categories like personal finance, business software, real estate, and investing can achieve RPMs ranging from $15.00 to over $35.00 per 1,000 views. Conversely, broad entertainment, vlogs, and gaming channels typically earn between $1.50 and $4.50 per 1,000 views. For YouTube Shorts, monetization operates under a pooled revenue model, yielding significantly lower rates—typically between $0.02 and $0.07 per 1,000 views.',
+        keyTakeaway: 'Most long-form channels earn between $2.00 and $12.00 per 1,000 views, whereas YouTube Shorts typically generate $0.02 to $0.07 per 1,000 views.',
+      },
+      {
+        heading: '2. CPM vs. RPM: why advertisers pay more than you receive',
+        body: 'Many creators confuse advertiser CPM (Cost Per Mille) with creator RPM (Revenue Per Mille). CPM represents what an advertiser pays YouTube for every 1,000 commercial ad impressions. However, you do not receive that entire amount. First, YouTube retains a 45% platform share on video ads, giving the creator 55%. Second, not every video view serves an ad—viewer ad blockers, regional advertiser inventory limits, and short playbacks mean that ad impressions are lower than total video views. In contrast, RPM measures your actual take-home revenue divided by total views (times 1,000), including YouTube Premium payouts and channel memberships. Use our free YouTube RPM Calculator to calculate your true net earnings per 1,000 views directly from your analytics.',
+        keyTakeaway: 'Advertiser CPM is gross spend before platform fees; creator RPM is your actual take-home pay per 1,000 total views. Never subtract 45% from your YouTube Studio RPM twice.',
+      },
+      {
+        heading: '3. Top factors determining your pay per 1,000 views',
+        body: 'Five primary factors dictate your channel’s pay per 1,000 views: (1) Audience Geography: Viewers in countries with high advertiser spending (US, UK, Northern Europe) command ad rates 5x to 10x higher than viewers in developing ad markets. (2) Commercial Niche: Niches with high customer lifetime values (investing, B2B tools, legal, tech reviews) attract aggressive advertiser bidding. (3) Video Length & Mid-Rolls: Videos over 8 minutes qualify for mid-roll ads, enabling multiple ad breaks per viewer instead of just pre-roll and post-roll ads. (4) Viewer Demographics: Mature audiences (25–54) with disposable income command higher ad prices than teenage demographics. (5) Seasonality: Advertiser budgets surge during Q4 (October through December) for holiday shopping and contract resets, often doubling creator RPMs compared to January.',
+        keyTakeaway: 'Audience location, commercial topic intent, and video lengths over 8 minutes are the strongest levers creators control to maximize pay per 1,000 views.',
+      },
+      {
+        heading: '4. Pay rates by niche: finance, tech, gaming, and lifestyle',
+        body: 'Advertiser bidding density varies drastically across content genres. Here are verified typical RPM ranges for long-form content in primary markets: (1) Personal Finance, Crypto & Investing: $12.00 to $35.00+; (2) SaaS, Tech Reviews & Coding: $6.00 to $18.00; (3) Business & Digital Marketing: $7.00 to $22.00; (4) Education, Career & How-To: $4.00 to $10.00; (5) Fitness & Health: $3.00 to $8.00; (6) Lifestyle, Travel & Vlogs: $1.80 to $4.50; (7) Gaming & Esports: $1.20 to $3.50; (8) Comedy & Entertainment: $1.20 to $3.00. You can experiment with different niche RPM assumptions and view scenarios using our interactive YouTube Money Calculator.',
+        keyTakeaway: 'Commercial topics with high transaction values earn 5x to 10x more per view than casual entertainment and gaming channels.',
+      },
+      {
+        heading: '5. Projecting your income: from 1,000 to 1,000,000 views',
+        body: 'Understanding the mathematical progression from 1,000 views to 1,000,000 views helps creators set realistic milestones: At 1,000 views, expect $2.00 to $12.00 (Long-Form) or $0.02 to $0.07 (Shorts). At 10,000 views, earnings reach $20.00 to $120.00 (Long-Form) or $0.20 to $0.70 (Shorts). At 100,000 views, earnings scale to $200.00 to $1,200.00 (Long-Form) or $2.00 to $7.00 (Shorts). At 1,000,000 views, earnings reach $2,000.00 to $12,000.00+ (Long-Form) or $20.00 to $70.00 (Shorts). To account for total creator income beyond AdSense—including sponsorships, merchandise, and affiliate revenue—model your full financial picture with the YouTube Monetization Calculator.',
+        keyTakeaway: '1 million long-form views typically yields $2,000 to $12,000+ in ad revenue, whereas 1 million Shorts views yields approximately $20 to $70.',
+      },
+    ],
+    workedExample: {
+      title: 'Comparing Tech Tutorial vs. Gaming Highlight Earnings',
+      scenario:
+        'Two YouTube creators each upload 12-minute videos that each receive exactly 250,000 views over 30 days. Creator A runs a software tutorial channel with an audience primarily in the United States and Canada. Creator B operates a gaming highlights channel with a broad international audience.',
+      steps: [
+        'Analyze Creator A (Software Tutorial): High commercial advertiser demand yields a $9.20 net RPM. Total earnings: (250,000 / 1,000) × $9.20 = $2,300.00.',
+        'Analyze Creator B (Gaming Highlights): Broad global demographic and lower commercial bidding yield a $2.10 net RPM. Total earnings: (250,000 / 1,000) × $2.10 = $525.00.',
+        'Compare the revenue disparity: Despite achieving identical view counts (250,000 views each), Creator A earned $1,775.00 more (over 4.3x higher revenue) due to niche purchasing intent and audience geography.',
+      ],
+      conclusion:
+        'View count is only half of the revenue equation. High commercial intent and tier-1 audience geography dramatically multiply creator earnings per 1,000 views.',
+    },
+    checklist: [
+      {
+        title: 'Audit Your Studio 28-Day RPM',
+        detail:
+          'Open YouTube Studio Analytics > Revenue and review your true 28-day RPM across recent videos rather than relying on external CPM estimates.',
+      },
+      {
+        title: 'Optimize Video Duration for Mid-Rolls',
+        detail:
+          'Produce long-form content exceeding 8 minutes to unlock manual mid-roll ad placements at natural topic breaks.',
+      },
+      {
+        title: 'Target Commercial Intent Keywords',
+        detail:
+          'Incorporate software, tool, tutorial, or product comparison keywords that attract high-bidding advertisers.',
+      },
+      {
+        title: 'Differentiate Long-Form from Shorts',
+        detail:
+          'Use Shorts for audience acquisition and brand discovery, while funneling viewers to long-form videos for sustainable ad revenue.',
+      },
+      {
+        title: 'Model Financial Scenarios Locally',
+        detail:
+          'Use Creovly’s YouTube Money Calculator and RPM Calculator to project monthly income without uploading personal analytics data.',
+      },
+    ],
+    relatedToolIds: [
+      'youtube-rpm-calculator',
+      'youtube-revenue-calculator',
+      'youtube-monetization-calculator',
+      'youtube-watch-hours-calculator',
+    ],
+  },
 ];
 
 const GUIDE_OG_IMAGES: Record<string, string> = {
   'youtube-thumbnail-blueprint': '/og/youtube-thumbnail-blueprint.png',
   'decoding-youtube-rpm': '/og/decoding-youtube-rpm.png',
   'youtube-shorts-safe-zone': '/og/guide-youtube-shorts-safe-zone.png',
+  'how-much-does-youtube-pay-per-1000-views': '/og/how-much-does-youtube-pay-per-1000-views.png',
 };
 
 export function getGuideOgImage(slug: string): string {

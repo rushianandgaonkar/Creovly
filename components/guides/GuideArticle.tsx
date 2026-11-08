@@ -27,6 +27,7 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
   const displaySections = locGuide?.contentSections || guide.contentSections;
   const displayWorkedExample = locGuide?.workedExample || guide.workedExample;
   const displayChecklist = locGuide?.checklist || guide.checklist;
+  const displayFaqs = locGuide?.faqs || [];
 
   // Map official sources, using localized descriptions where available
   const displaySources = guide.officialSources.map((source, idx) => ({
@@ -145,6 +146,36 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
 
       {/* Actionable Pre-Publish Checklist */}
       <ActionChecklist items={displayChecklist} guideTitle={displayTitle} />
+
+      {/* Frequently Asked Questions */}
+      {displayFaqs.length > 0 && (
+        <section className="mt-14 pt-8 border-t border-[var(--border-hairline)]" aria-labelledby="guide-faqs-heading">
+          <div className="mb-6">
+            <span className="text-xs font-mono uppercase text-[var(--text-muted)]">
+              {t.tools.shell.faqBadge}
+            </span>
+            <h2 id="guide-faqs-heading" className="text-xl font-bold tracking-tight text-[var(--text-ink)] mt-1">
+              {t.tools.shell.faqHeading}
+            </h2>
+          </div>
+          <div className="space-y-3">
+            {displayFaqs.map((faq, idx) => (
+              <details
+                key={idx}
+                className="group rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] p-4 open:bg-[var(--bg-canvas-elevated)] transition-colors"
+              >
+                <summary className="cursor-pointer font-semibold text-sm sm:text-base text-[var(--text-ink)] flex items-center justify-between list-none">
+                  <span>{faq.question}</span>
+                  <span className="text-xs text-[var(--text-muted)] group-open:rotate-180 transition-transform ml-2">▼</span>
+                </summary>
+                <p className="mt-3 text-xs sm:text-sm text-[var(--text-body)] leading-relaxed border-t border-[var(--border-hairline)] pt-3">
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Related Tools Section */}
       {relatedTools.length > 0 && (

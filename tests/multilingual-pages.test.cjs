@@ -298,6 +298,7 @@ test('all 8 languages provide complete localized guide articles with sections, e
     'youtube-thumbnail-blueprint',
     'decoding-youtube-rpm',
     'youtube-shorts-safe-zone',
+    'how-much-does-youtube-pay-per-1000-views',
   ];
 
   for (const locale of LOCALES) {

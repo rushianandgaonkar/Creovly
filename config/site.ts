@@ -74,6 +74,7 @@ export const footerNavigation = {
         { name: 'Publish Studio', href: '/studio' },
         { name: 'Pre-Publish Checklist', href: '/checklist' },
         { name: 'Creator Guides', href: '/guides' },
+        { name: 'Pay per 1,000 Views Guide', href: '/guides/how-much-does-youtube-pay-per-1000-views' },
       ],
     },
   ],

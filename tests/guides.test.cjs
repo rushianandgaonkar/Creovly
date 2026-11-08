@@ -32,7 +32,7 @@ const VALID_TOOL_IDS = new Set([
 ]);
 
 test('guide registry contains approved guides with valid slugs and metadata', () => {
-  assert.equal(guides.length, 6);
+  assert.equal(guides.length, 7);
   const expectedSlugs = [
     'youtube-thumbnail-blueprint',
     'decoding-youtube-rpm',
@@ -40,6 +40,7 @@ test('guide registry contains approved guides with valid slugs and metadata', ()
     'youtube-banner-size',
     'youtube-monetization-requirements',
     'how-to-change-youtube-thumbnail',
+    'how-much-does-youtube-pay-per-1000-views',
   ];
   assert.deepEqual(guides.map((g) => g.slug), expectedSlugs);
 
@@ -66,6 +67,7 @@ test('getGuideBySlug returns the matching guide or undefined', () => {
   assert.equal(getGuideBySlug('youtube-banner-size')?.slug, 'youtube-banner-size');
   assert.equal(getGuideBySlug('youtube-monetization-requirements')?.slug, 'youtube-monetization-requirements');
   assert.equal(getGuideBySlug('how-to-change-youtube-thumbnail')?.slug, 'how-to-change-youtube-thumbnail');
+  assert.equal(getGuideBySlug('how-much-does-youtube-pay-per-1000-views')?.slug, 'how-much-does-youtube-pay-per-1000-views');
   assert.equal(getGuideBySlug('non-existent-guide'), undefined);
 });
 

@@ -431,6 +431,40 @@ const pages = [
     `,
   },
   {
+    filename: 'how-much-does-youtube-pay-per-1000-views.png',
+    category: 'CREATOR EDITORIAL GUIDE',
+    tone: '#0d9488',
+    glow: 'rgba(13, 148, 136, 0.25)',
+    title: 'How Much Does YouTube Pay Per 1,000 Views?',
+    description: 'Realistic earnings benchmarks: Long-Form $2–$12 net RPM vs. Shorts $0.02–$0.07, CPM differences, and niche rates.',
+    pills: ['Long-Form $2–$12', 'Shorts $0.02–$0.07', 'Niche RPM Benchmarks'],
+    visual: `
+      <div style="background:#112423;border:1px solid rgba(13,148,136,0.3);border-radius:18px;padding:24px;width:100%;height:100%;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 40px rgba(0,0,0,0.5);">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:12px;font-family:monospace;color:#5eead4;font-weight:700;letter-spacing:1px;">EARNINGS BENCHMARK</span>
+          <span style="background:rgba(13,148,136,0.2);color:#2dd4bf;font-size:11px;font-weight:700;padding:4px 8px;border-radius:6px;font-family:monospace;">2026 RATES</span>
+        </div>
+        <div style="background:#090d16;border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,0.06);">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+            <span style="font-size:11px;font-family:monospace;color:#94a3b8;">1,000 Long-Form Views</span>
+            <span style="font-size:14px;font-family:monospace;color:#34d399;font-weight:800;">$2.00 – $12.00</span>
+          </div>
+          <div style="width:100%;height:8px;background:#1e293b;border-radius:99px;overflow:hidden;margin-bottom:12px;">
+            <div style="width:75%;height:100%;background:linear-gradient(90deg,#0d9488,#10b981);"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:11px;font-family:monospace;color:#94a3b8;">1,000 Shorts Views</span>
+            <span style="font-size:12px;font-family:monospace;color:#f87171;font-weight:700;">$0.02 – $0.07</span>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;font-family:monospace;">
+          <span style="color:#5eead4;">Finance &amp; Tech: $15+ RPM</span>
+          <span style="color:#34d399;">Gaming: $2–$4 RPM</span>
+        </div>
+      </div>
+    `,
+  },
+  {
     filename: 'guide-youtube-shorts-safe-zone.png',
     category: 'CREATOR EDITORIAL GUIDE',
     tone: '#6366f1',

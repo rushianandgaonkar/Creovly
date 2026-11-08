@@ -370,6 +370,7 @@ const canonicalPages = [
   '/guides/youtube-thumbnail-blueprint',
   '/guides/decoding-youtube-rpm',
   '/guides/youtube-shorts-safe-zone',
+  '/guides/how-much-does-youtube-pay-per-1000-views',
   '/about',
   '/contact',
   '/privacy',

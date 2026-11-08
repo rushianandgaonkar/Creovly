@@ -95,6 +95,7 @@ const translatedGuideSlugs = [
   'youtube-thumbnail-blueprint',
   'decoding-youtube-rpm',
   'youtube-shorts-safe-zone',
+  'how-much-does-youtube-pay-per-1000-views',
 ];
 
 /**

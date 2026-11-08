@@ -485,6 +485,119 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         },
       ],
     },
+    'how-much-does-youtube-pay-per-1000-views': {
+      title: 'How Much Does YouTube Pay Per 1,000 Views? (2026 Earnings Rates)',
+      seoTitle: 'How Much Does YouTube Pay Per 1,000 Views?',
+      category: 'Monetization & Economics',
+      readTime: '7 min read',
+      description:
+        'Discover how much YouTube pays per 1,000 views across niches, long-form vs Shorts, CPM vs RPM take-home rates, and calculate your channel earnings.',
+      officialSources: [
+        {
+          label: 'YouTube Help: Understand YouTube Analytics metrics: Revenue per mille (RPM)',
+          description:
+            'Official definition and calculation breakdown of creator RPM, monetized playbacks, and take-home earnings.',
+        },
+        {
+          label: 'YouTube Help: YouTube Partner Program overview & monetization policies',
+          description:
+            'Official documentation on YouTube ad revenue sharing terms, YPP eligibility thresholds, and revenue splits.',
+        },
+      ],
+      contentSections: [
+        {
+          heading: '1. How much does YouTube pay per 1,000 views on average?',
+          body: 'On average, YouTube pays creators between $2.00 and $12.00 per 1,000 views for standard long-form videos in tier-1 geographic markets (such as the United States, United Kingdom, Canada, Australia, and Germany). This metric is known as your net Revenue Per Mille (RPM). Earnings vary widely by content niche: competitive commercial categories like personal finance, business software, real estate, and investing can achieve RPMs ranging from $15.00 to over $35.00 per 1,000 views. Conversely, broad entertainment, vlogs, and gaming channels typically earn between $1.50 and $4.50 per 1,000 views. For YouTube Shorts, monetization operates under a pooled revenue model, yielding significantly lower rates—typically between $0.02 and $0.07 per 1,000 views.',
+          keyTakeaway: 'Most long-form channels earn between $2.00 and $12.00 per 1,000 views, whereas YouTube Shorts typically generate $0.02 to $0.07 per 1,000 views.',
+        },
+        {
+          heading: '2. CPM vs. RPM: why advertisers pay more than you receive',
+          body: 'Many creators confuse advertiser CPM (Cost Per Mille) with creator RPM (Revenue Per Mille). CPM represents what an advertiser pays YouTube for every 1,000 commercial ad impressions. However, you do not receive that entire amount. First, YouTube retains a 45% platform share on video ads, giving the creator 55%. Second, not every video view serves an ad—viewer ad blockers, regional advertiser inventory limits, and short playbacks mean that ad impressions are lower than total video views. In contrast, RPM measures your actual take-home revenue divided by total views (times 1,000), including YouTube Premium payouts and channel memberships. Use our free YouTube RPM Calculator to calculate your true net earnings per 1,000 views directly from your analytics.',
+          keyTakeaway: 'Advertiser CPM is gross spend before platform fees; creator RPM is your actual take-home pay per 1,000 total views. Never subtract 45% from your YouTube Studio RPM twice.',
+        },
+        {
+          heading: '3. Top factors determining your pay per 1,000 views',
+          body: 'Five primary factors dictate your channel’s pay per 1,000 views: (1) Audience Geography: Viewers in countries with high advertiser spending (US, UK, Northern Europe) command ad rates 5x to 10x higher than viewers in developing ad markets. (2) Commercial Niche: Niches with high customer lifetime values (investing, B2B tools, legal, tech reviews) attract aggressive advertiser bidding. (3) Video Length & Mid-Rolls: Videos over 8 minutes qualify for mid-roll ads, enabling multiple ad breaks per viewer instead of just pre-roll and post-roll ads. (4) Viewer Demographics: Mature audiences (25–54) with disposable income command higher ad prices than teenage demographics. (5) Seasonality: Advertiser budgets surge during Q4 (October through December) for holiday shopping and contract resets, often doubling creator RPMs compared to January.',
+          keyTakeaway: 'Audience location, commercial topic intent, and video lengths over 8 minutes are the strongest levers creators control to maximize pay per 1,000 views.',
+        },
+        {
+          heading: '4. Pay rates by niche: finance, tech, gaming, and lifestyle',
+          body: 'Advertiser bidding density varies drastically across content genres. Here are verified typical RPM ranges for long-form content in primary markets: (1) Personal Finance, Crypto & Investing: $12.00 to $35.00+; (2) SaaS, Tech Reviews & Coding: $6.00 to $18.00; (3) Business & Digital Marketing: $7.00 to $22.00; (4) Education, Career & How-To: $4.00 to $10.00; (5) Fitness & Health: $3.00 to $8.00; (6) Lifestyle, Travel & Vlogs: $1.80 to $4.50; (7) Gaming & Esports: $1.20 to $3.50; (8) Comedy & Entertainment: $1.20 to $3.00. You can experiment with different niche RPM assumptions and view scenarios using our interactive YouTube Money Calculator.',
+          keyTakeaway: 'Commercial topics with high transaction values earn 5x to 10x more per view than casual entertainment and gaming channels.',
+        },
+        {
+          heading: '5. Projecting your income: from 1,000 to 1,000,000 views',
+          body: 'Understanding the mathematical progression from 1,000 views to 1,000,000 views helps creators set realistic milestones: At 1,000 views, expect $2.00 to $12.00 (Long-Form) or $0.02 to $0.07 (Shorts). At 10,000 views, earnings reach $20.00 to $120.00 (Long-Form) or $0.20 to $0.70 (Shorts). At 100,000 views, earnings scale to $200.00 to $1,200.00 (Long-Form) or $2.00 to $7.00 (Shorts). At 1,000,000 views, earnings reach $2,000.00 to $12,000.00+ (Long-Form) or $20.00 to $70.00 (Shorts). To account for total creator income beyond AdSense—including sponsorships, merchandise, and affiliate revenue—model your full financial picture with the YouTube Monetization Calculator.',
+          keyTakeaway: '1 million long-form views typically yields $2,000 to $12,000+ in ad revenue, whereas 1 million Shorts views yields approximately $20 to $70.',
+        },
+      ],
+      workedExample: {
+        title: 'Comparing Tech Tutorial vs. Gaming Highlight Earnings',
+        scenario:
+          'Two YouTube creators each upload 12-minute videos that each receive exactly 250,000 views over 30 days. Creator A runs a software tutorial channel with an audience primarily in the United States and Canada. Creator B operates a gaming highlights channel with a broad international audience.',
+        steps: [
+          'Analyze Creator A (Software Tutorial): High commercial advertiser demand yields a $9.20 net RPM. Total earnings: (250,000 / 1,000) × $9.20 = $2,300.00.',
+          'Analyze Creator B (Gaming Highlights): Broad global demographic and lower commercial bidding yield a $2.10 net RPM. Total earnings: (250,000 / 1,000) × $2.10 = $525.00.',
+          'Compare the revenue disparity: Despite achieving identical view counts (250,000 views each), Creator A earned $1,775.00 more (over 4.3x higher revenue) due to niche purchasing intent and audience geography.',
+        ],
+        conclusion:
+          'View count is only half of the revenue equation. High commercial intent and tier-1 audience geography dramatically multiply creator earnings per 1,000 views.',
+      },
+      checklist: [
+        {
+          title: 'Audit Your Studio 28-Day RPM',
+          detail:
+            'Open YouTube Studio Analytics > Revenue and review your true 28-day RPM across recent videos rather than relying on external CPM estimates.',
+        },
+        {
+          title: 'Optimize Video Duration for Mid-Rolls',
+          detail:
+            'Produce long-form content exceeding 8 minutes to unlock manual mid-roll ad placements at natural topic breaks.',
+        },
+        {
+          title: 'Target Commercial Intent Keywords',
+          detail:
+            'Incorporate software, tool, tutorial, or product comparison keywords that attract high-bidding advertisers.',
+        },
+        {
+          title: 'Differentiate Long-Form from Shorts',
+          detail:
+            'Use Shorts for audience acquisition and brand discovery, while funneling viewers to long-form videos for sustainable ad revenue.',
+        },
+        {
+          title: 'Model Financial Scenarios Locally',
+          detail:
+            'Use Creovly’s YouTube Money Calculator and RPM Calculator to project monthly income without uploading personal analytics data.',
+        },
+      ],
+      faqs: [
+        {
+          question: 'How much does YouTube pay per 1,000 views?',
+          answer:
+            'Most creators earn between $2.00 and $12.00 per 1,000 views on standard long-form videos in primary markets. High-intent niches like finance can reach $20.00 to $35.00+, while YouTube Shorts pay $0.02 to $0.07 per 1,000 views.',
+        },
+        {
+          question: 'How much does YouTube pay for 1 million views?',
+          answer:
+            'One million long-form views typically yields between $2,000 and $12,000 in ad revenue. In high-paying commercial categories, 1M views can reach $20,000 to $30,000+. For YouTube Shorts, 1 million views yields roughly $20 to $70.',
+        },
+        {
+          question: 'Why does my YouTube RPM differ from advertiser CPM?',
+          answer:
+            'Advertiser CPM is what brands pay before YouTube deducts its 45% revenue cut and excludes unmonetized views. RPM is your true net take-home pay per 1,000 total video views, already accounting for all deductions and including YouTube Premium.',
+        },
+        {
+          question: 'Does YouTube pay for every video view?',
+          answer:
+            'No. YouTube only monetizes playback sessions where an advertisement was served or where a YouTube Premium subscriber watched your video. Across most channels, between 40% and 70% of views are monetized.',
+        },
+        {
+          question: 'How can creators increase their YouTube RPM?',
+          answer:
+            'Creators can increase their RPM by targeting commercial search intent (software, business, finance), creating videos over 8 minutes with natural mid-roll ads, and building viewership in high-CPM countries like the US, UK, and Canada.',
+        },
+      ],
+    },
   },
 
   es: {
@@ -668,6 +781,119 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         },
       ],
     },
+    'how-much-does-youtube-pay-per-1000-views': {
+      title: '¿Cuánto Paga YouTube por 1.000 Visitas? (Tarifas y Calculadora 2026)',
+      seoTitle: '¿Cuánto Paga YouTube por 1.000 Visitas?',
+      category: 'Monetización y Economía',
+      readTime: '7 min de lectura',
+      description:
+        'Descubre cuánto paga YouTube por 1.000 visitas según temática, vídeos largos frente a Shorts, RPM neto y cómo calcular tus ingresos de creador.',
+      officialSources: [
+        {
+          label: 'Ayuda de YouTube: Métricas de YouTube Analytics (RPM)',
+          description:
+            'Definición oficial del RPM de creador, reproducciones monetizadas y desglose de ganancias netas.',
+        },
+        {
+          label: 'Ayuda de YouTube: Resumen y políticas del Programa para Partners de YouTube',
+          description:
+            'Condiciones oficiales del reparto de ingresos publicitarios, requisitos de acceso y división 55/45.',
+        },
+      ],
+      contentSections: [
+        {
+          heading: '1. ¿Cuánto paga YouTube por 1.000 visitas de media?',
+          body: 'De media, YouTube paga entre 2,00 $ y 12,00 $ por cada 1.000 visitas en vídeos tradicionales de formato largo en mercados de habla inglesa y economías líderes (Estados Unidos, Reino Unido, Canadá, Australia y Alemania). Esta métrica se denomina RPM neto (ingresos por cada mil reproducciones). Los ingresos varían enormemente según la temática: sectores comerciales como finanzas personales, software empresarial e inversión alcanzan RPMs de 15,00 $ a más de 35,00 $ por 1.000 visitas. En cambio, canales de entretenimiento general, vlogs o videojuegos suelen generar entre 1,50 $ y 4,50 $. Para YouTube Shorts, el modelo de fondo compartido produce tarifas sustancialmente menores, entre 0,02 $ y 0,07 $ por cada 1.000 visitas.',
+          keyTakeaway: 'La mayoría de vídeos largos generan entre 2 $ y 12 $ por cada 1.000 visitas, mientras que los Shorts producen de 0,02 $ a 0,07 $ por mil.',
+        },
+        {
+          heading: '2. CPM frente a RPM: por qué los anunciantes pagan más de lo que recibes',
+          body: 'Muchos creadores confunden el CPM del anunciante con el RPM del creador. El CPM representa lo que una marca paga a YouTube por 1.000 impresiones de anuncios. Sin embargo, tú no recibes esa cantidad íntegra: YouTube retiene el 45% de la publicidad y tú te quedas con el 55%. Además, no todas las reproducciones muestran anuncios debido a bloqueadores o falta de inventario publicitario. El RPM mide tus ingresos reales netos por cada 1.000 visualizaciones totales de vídeo, incluyendo suscripciones al canal y YouTube Premium. Utiliza nuestra Calculadora de RPM de YouTube para calcular tu tarifa neta real.',
+          keyTakeaway: 'El CPM es el gasto bruto del anunciante; el RPM es tu ganancia neta real por 1.000 visualizaciones totales. No descuentes el 45% dos veces.',
+        },
+        {
+          heading: '3. Factores determinantes en tus ingresos por 1.000 visitas',
+          body: 'Cinco factores clave determinan tu RPM: (1) Geografía de la audiencia: Países con mayor inversión publicitaria pagan hasta diez veces más que mercados emergentes. (2) Nicho temático: Audiencias con alta intención de compra (inversión, herramientas B2B, formación) atraen pujas publicitarias agresivas. (3) Duración del vídeo y anuncios intermedios: Los vídeos de más de 8 minutos permiten insertar anuncios mid-roll a lo largo del vídeo. (4) Demografía del público: Espectadores adultos (25–54 años) con poder adquisitivo generan mayores pujas que menores de edad. (5) Estacionalidad: El cuarto trimestre (octubre a diciembre) suele duplicar las tarifas habituales por la campaña navideña.',
+          keyTakeaway: 'La ubicación geográfica del espectador, la temática comercial y vídeos de más de 8 minutos son las mayores palancas para maximizar tus ingresos.',
+        },
+        {
+          heading: '4. Tarifas estimadas por temática: finanzas, tecnología, videojuegos y vlogs',
+          body: 'La inversión publicitaria varía de manera drástica según la categoría del contenido: (1) Finanzas personales, cripto e inversión: 12,00 $ a 35,00 $+; (2) Software, tutoriales y desarrollo: 6,00 $ a 18,00 $; (3) Negocios y marketing digital: 7,00 $ a 22,00 $; (4) Educación y tutoriales: 4,00 $ a 10,00 $; (5) Salud y fitness: 3,00 $ a 8,00 $; (6) Vlogs y estilo de vida: 1,80 $ a 4,50 $; (7) Gaming y videojuegos: 1,20 $ a 3,50 $; (8) Humor y comedia: 1,20 $ a 3,00 $. Puedes experimentar con distintas proyecciones usando nuestra Calculadora de Ingresos de YouTube.',
+          keyTakeaway: 'Los temas comerciales y técnicos generan de 5 a 10 veces más ingresos por visita que el entretenimiento informal.',
+        },
+        {
+          heading: '5. Proyección de ingresos: de 1.000 a 1.000.000 de visitas',
+          body: 'Comprender la escala matemática ayuda a planificar hitos reales: Con 1.000 visitas obtendrás entre 2,00 $ y 12,00 $ (vídeos largos) o 0,02 $ a 0,07 $ (Shorts). Con 10.000 visitas, de 20,00 $ a 120,00 $ (largos) o 0,20 $ a 0,70 $ (Shorts). Con 100.000 visitas, de 200,00 $ a 1.200,00 $ (largos) o 2,00 $ a 7,00 $ (Shorts). Con 1.000.000 de visitas, entre 2.000,00 $ y 12.000,00 $+ (largos) o de 20,00 $ a 70,00 $ (Shorts). Para calcular ingresos totales incluyendo patrocinios y membresías, modela tu escenario completo con la Calculadora de Monetización de YouTube.',
+          keyTakeaway: '1 millón de visitas en formato largo suele reportar de 2.000 $ a 12.000 $+ netos, frente a apenas 20 $ a 70 $ en Shorts.',
+        },
+      ],
+      workedExample: {
+        title: 'Comparativa de ingresos: Tutorial técnico vs. Jugadas de videojuegos',
+        scenario:
+          'Dos creadores publican vídeos de 12 minutos que reciben exactamente 250.000 visitas en 30 días. El Creador A gestiona un canal de tutoriales de programación con público en España y Estados Unidos. El Creador B administra un canal de resúmenes de videojuegos con audiencia global diversa.',
+        steps: [
+          'Analizar Creador A (Tutoriales de código): La fuerte demanda de anunciantes de software produce un RPM neto de 9,20 $. Ganancias: (250.000 / 1.000) × 9,20 $ = 2.300,00 $.',
+          'Analizar Creador B (Resúmenes de videojuegos): Una audiencia más joven y menor puja comercial rinden un RPM de 2,10 $. Ganancias: (250.000 / 1.000) × 2,10 $ = 525,00 $.',
+          'Comparar el diferencial: Pese a registrar exactamente las mismas visitas (250.000 cada uno), el Creador A generó 1.775,00 $ más (4,3 veces más dinero) debido al nicho y al perfil económico de su audiencia.',
+        ],
+        conclusion:
+          'El número de visualizaciones es solo una parte de la ecuación. La intención comercial de la temática y la geografía multiplican el rendimiento económico de cada visita.',
+      },
+      checklist: [
+        {
+          title: 'Audita el RPM real en YouTube Studio',
+          detail:
+            'Consulta YouTube Studio > Analíticas > Ingresos y revisa el RPM de los últimos 28 días en lugar de fiarte de estimaciones externas genéricas.',
+        },
+        {
+          title: 'Optimiza la duración para pausas intermedias',
+          detail:
+            'Produce vídeos largos de más de 8 minutos para habilitar la colocación estratégica de pausas publicitarias intermedias.',
+        },
+        {
+          title: 'Elige palabras clave de intención comercial',
+          detail:
+            'Integra términos sobre software, comparativas, productos y servicios que atraigan a anunciantes con presupuestos elevados.',
+        },
+        {
+          title: 'Diferencia el papel de Shorts y vídeos largos',
+          detail:
+            'Aprovecha los Shorts para captar nueva audiencia y canaliza a esos espectadores hacia vídeos largos para obtener ingresos sostenibles.',
+        },
+        {
+          title: 'Modela tus escenarios en local',
+          detail:
+            'Usa las calculadoras de Creovly para proyectar tus metas de ingresos con total privacidad sin subir datos personales a la nube.',
+        },
+      ],
+      faqs: [
+        {
+          question: '¿Cuánto paga YouTube por 1.000 visitas?',
+          answer:
+            'La mayoría de los creadores ganan entre 2,00 $ y 12,00 $ por cada 1.000 visitas en vídeos largos tradicionales. En nichos de alta intención como finanzas puede superar los 20,00 $, mientras que los Shorts pagan entre 0,02 $ y 0,07 $ por mil.',
+        },
+        {
+          question: '¿Cuánto se gana por 1 millón de visitas en YouTube?',
+          answer:
+            'Un millón de visitas en vídeos largos suele generar entre 2.000 $ y 12.000 $ en publicidad. En sectores de alta rentabilidad puede superar los 20.000 $. En YouTube Shorts, 1 millón de visitas genera entre 20 $ y 70 $.',
+        },
+        {
+          question: '¿Por qué mi RPM es diferente del CPM en YouTube?',
+          answer:
+            'El CPM es lo que pagan los anunciantes antes del 45% que retiene YouTube y excluye reproducciones sin anuncios. El RPM es tu ganancia neta real por cada 1.000 visitas totales, incluyendo YouTube Premium.',
+        },
+        {
+          question: '¿YouTube paga por absolutamente todas las visitas?',
+          answer:
+            'No. YouTube solo remunera las visitas monetizadas donde efectivamente se mostró un anuncio o donde el espectador cuenta con una suscripción activa a YouTube Premium.',
+        },
+        {
+          question: '¿Cómo puedo aumentar el RPM de mi canal de YouTube?',
+          answer:
+            'Puedes aumentar tu RPM orientando tu contenido hacia temas comerciales (finanzas, tecnología, empresa), creando vídeos de más de 8 minutos con mid-rolls y atrayendo audiencia de países con alto poder adquisitivo.',
+        },
+      ],
+    },
   },
 
   ja: {
@@ -845,6 +1071,114 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         {
           question: "動画タイトルの長さはShortsの表示領域にどう影響しますか？",
           answer: "タイトルが長くなると複数行に折り返され、下部のUIオーバーレイがさらに上へとせり出して映像領域を覆います。",
+        },
+      ],
+    },
+    'how-much-does-youtube-pay-per-1000-views': {
+      title: 'YouTubeの1,000回再生でいくら稼げる？（2026年最新単価・相場）',
+      seoTitle: 'YouTubeの1,000回再生の収益・単価',
+      category: '収益化と経済',
+      readTime: '読了目安 7分',
+      description:
+        'YouTubeの1,000回再生あたりの収益相場を解説。ジャンル別RPM、Shortsとの違い、CPMとの差、実際のクリエイター手取り計算方法を網羅。',
+      officialSources: [
+        {
+          label: 'YouTube ヘルプ：YouTube アナリティクスの指標（RPM）',
+          description:
+            'クリエイターの純手取り指標であるRPM、再生回数、および収益分配に関する公式定義。',
+        },
+        {
+          label: 'YouTube ヘルプ：YouTube パートナー プログラムの概要と収益化ポリシー',
+          description:
+            '広告収益の55/45分配比率、YPP参加要件、および規約に関する公式ドキュメント。',
+        },
+      ],
+      contentSections: [
+        {
+          heading: '1. YouTubeの1,000回再生あたりの平均収益相場',
+          body: '一般的な長編動画の場合、YouTubeの1,000回再生あたりのクリエイター手取り収益（RPM）は平均して200円〜1,500円（約2.00〜12.00ドル）程度です。動画ジャンルによってこの金額は大きく異なり、金融・投資・ビジネス・専門ソフトウェアなどの高単価分野では1,000回再生あたり2,000円〜5,000円以上（15〜35ドル以上）に達することもあります。一方、一般的なエンタメ、日常Vlog、ゲーム実況などは150円〜500円前後にとどまる傾向があります。なお、YouTube Shorts（ショート動画）はクリエイタープール方式で分配されるため単価が大幅に低く、1,000回再生あたり約3円〜10円（0.02〜0.07ドル）程度となります。',
+          keyTakeaway: '長編動画の多くは1,000回あたり200円〜1,500円前後、ショート動画は3円〜10円程度が相場です。',
+        },
+        {
+          heading: '2. CPMとRPMの違い：広告主の出稿額とクリエイターの手取り',
+          body: '多くの配信者がCPM（インプレッション単価）とRPM（インプレッション収益）を混同しがちです。CPMは広告主がYouTubeに支払う1,000回表示あたりの出稿金額ですが、そこからYouTubeのプラットフォーム手数料（45%）が差し引かれます。また、広告ブロッカーの使用や再生環境により、すべての再生で広告が表示されるわけではありません。これに対しRPMは、Premium収益やメンバーシップを含め、動画全体の再生回数1,000回あたりで実際にクリエイターの口座に振り込まれる「真の手取り金額」を示します。',
+          keyTakeaway: 'CPMは広告主の支払総額、RPMはクリエイターの純手取りです。YouTube StudioのRPMから二重に45%を引かないよう注意してください。',
+        },
+        {
+          heading: '3. 1,000回再生あたりの収益単価を左右する重要要素',
+          body: '主に次の5つの要因がRPMを左右します。(1) 視聴者の居住地域：広告出稿予算の潤沢な国（アメリカ、イギリス、日本など）の視聴者は、新興国の視聴者に比べて単価が数倍〜10倍高くなります。(2) コンテンツの商業的価値：購買力の高い視聴者が集まる分野（投資、ビジネス、ITツール）は広告主の入札が激化します。(3) 動画の長さとミッドロール広告：8分以上の動画は動画の途中に広告を追加できるため、1再生あたりの広告表示回数が増加します。(4) 視聴者層の年齢：可処分所得の多い20代〜50代をターゲットにすると単価が上昇します。(5) 季節要因：企業の決算やクリスマス商戦が重なる第4四半期（10〜12月）はRPMが跳ね上がります。',
+          keyTakeaway: '視聴者の国籍・地域、商業性の高いテーマ、8分以上の動画構成がRPMを高める最大のレバーです。',
+        },
+        {
+          heading: '4. ジャンル別RPM目安：金融・IT・ゲーム・Vlogの比較',
+          body: '広告主の入札意欲はジャンルごとに明確な差があります：(1) 個人財務・資産運用・暗号資産：1,500円〜4,500円以上；(2) プログラミング・IT製品・SaaS：800円〜2,500円；(3) ビジネス・起業・マーケティング：900円〜3,000円；(4) 教育・ノウハウ・学習：500円〜1,300円；(5) フィットネス・健康：400円〜1,000円；(6) 暮らし・旅行・日常Vlog：200円〜600円；(7) ゲーム実況・eスポーツ：150円〜450円；(8) お笑い・バラエティ：150円〜400円。CreovlyのYouTube収益計算ツールを使うと、想定再生数に応じた手取り月収をシミュレーションできます。',
+          keyTakeaway: '高額商品やビジネスに関連する専門ジャンルは、娯楽系ジャンルの5〜10倍の収益単価を誇ります。',
+        },
+        {
+          heading: '5. 再生数ごとの収益目安：1,000回から100万回再生まで',
+          body: '再生規模に応じた現実的な収益目標：1,000回再生＝200円〜1,500円（長編）／約3円〜10円（Shorts）。1万回再生＝2,000円〜15,000円（長編）／約30円〜100円（Shorts）。10万回再生＝20,000円〜150,000円（長編）／約300円〜1,000円（Shorts）。100万回再生＝200,000円〜1,500,000円以上（長編）／約3,000円〜10,000円（Shorts）。広告だけでなくスポンサー契約やメンバーシップを含めた総収益を把握するには、YouTube収益化計算ツールを活用してください。',
+          keyTakeaway: '長編動画の100万回再生は20万〜150万円以上の手取りになりますが、Shortsの100万回再生は数千円〜1万円程度です。',
+        },
+      ],
+      workedExample: {
+        title: '収益比較：ITプログラミング講座 vs ゲーム実況ハイライト',
+        scenario:
+          '2人のクリエイターがそれぞれ12分の動画を投稿し、公開後30日間でともに25万回再生を達成しました。クリエイターAは日本のビジネスマン向けにプログラミングチュートリアルを配信し、クリエイターBは幅広い若年層向けにゲーム実況を配信しています。',
+        steps: [
+          'クリエイターA（IT解説）の分析：ソフトウェア広告主の高額入札によりRPMは1,200円（約9.20ドル）。総収益：(250,000 / 1,000) × 1,200円 = 300,000円。',
+          'クリエイターB（ゲーム実況）の分析：若年層中心の視聴者層でRPMは280円（約2.10ドル）。総収益：(250,000 / 1,000) × 280円 = 70,000円。',
+          '格差の検証：再生回数は同じ25万回でも、購入意欲の高い視聴者層をターゲットにしたクリエイターAの方が230,000円（約4.3倍）多く稼ぎました。',
+        ],
+        conclusion:
+          '再生回数だけでなく、視聴者の購買意欲やジャンル特性が1,000回あたりの収益単価を決定づけます。',
+      },
+      checklist: [
+        {
+          title: 'YouTube Studioで過去28日間のRPMを確認',
+          detail: '大まかな推測ではなく、アナリティクスの「収益」タブで実際の動画別RPM実績を確認します。',
+        },
+        {
+          title: '動画の長さを8分以上に設定',
+          detail: '自然なチャプターの切れ目にミッドロール広告を挿入できるよう、動画構成を最適化します。',
+        },
+        {
+          title: '商業的価値の高いキーワードを取り入れる',
+          detail: 'ツール比較やノウハウ解説など、スポンサー入札が活発なテーマを企画に組み込みます。',
+        },
+        {
+          title: '長編動画とShortsの役割を分担する',
+          detail: 'Shortsで新規認知を獲得し、安定した広告収益を生む長編動画へと視聴者を誘導します。',
+        },
+        {
+          title: 'ブラウザ上で安全に収益試算を行う',
+          detail: 'Creovlyの各種計算ツールを活用し、個人データを外部送信することなく目標収益を試算します。',
+        },
+      ],
+      faqs: [
+        {
+          question: 'YouTubeの1,000回再生でいくら稼げますか？',
+          answer:
+            '一般的な長編動画では1,000回再生あたり約200円〜1,500円（2〜12ドル）程度です。金融やITなどの高単価ジャンルでは2,000円〜4,000円以上になることもあります。Shortsは約3円〜10円です。',
+        },
+        {
+          question: 'YouTubeで100万回再生されるといくらになりますか？',
+          answer:
+            '長編動画の場合、100万回再生でおよそ20万円〜150万円以上の広告手取り収入になります。Shortsの場合は約3,000円〜10,000円程度にとどまります。',
+        },
+        {
+          question: 'YouTubeのRPMとCPMの違いは何ですか？',
+          answer:
+            'CPMは広告主が1,000回広告表示に対して支払う総額（手数料控除前）です。RPMはYouTubeの手数料45%が引かれ、Premium収益等も含めたクリエイターの純手取り単価です。',
+        },
+        {
+          question: 'YouTubeはすべての再生回数にお金を支払ってくれますか？',
+          answer:
+            'いいえ。広告が実際に配信された「収益化対象の再生」またはYouTube Premium会員による視聴のみが収益対象となります。通常、全再生の40%〜70%程度です。',
+        },
+        {
+          question: 'YouTubeのRPM単価を上げるにはどうすればいいですか？',
+          answer:
+            '高単価な商業テーマ（ビジネス・金融・専門技術）を扱い、8分以上の動画でミッドロール広告を挿入し、購買力の高い大人の視聴者を増やすことが有効です。',
         },
       ],
     },
@@ -1031,6 +1365,114 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         },
       ],
     },
+    'how-much-does-youtube-pay-per-1000-views': {
+      title: 'Combien Paye YouTube Pour 1 000 Vues ? (Tarifs et Rémunération 2026)',
+      seoTitle: 'Combien Paye YouTube Pour 1 000 Vues ?',
+      category: 'Monétisation et Économie',
+      readTime: '7 min de lecture',
+      description:
+        'Découvrez combien paye YouTube pour 1 000 vues selon la thématique, vidéos longues vs Shorts, RPM net et comment calculer vos revenus de créateur.',
+      officialSources: [
+        {
+          label: 'Aide YouTube : Comprendre les statistiques YouTube Analytics (RPM)',
+          description:
+            'Définition officielle du RPM créateur, lectures monétisées et calcul des revenus nets.',
+        },
+        {
+          label: 'Aide YouTube : Présentation et règles du Programme Partenaire YouTube',
+          description:
+            'Documentation officielle sur le partage des revenus publicitaires, critères d’éligibilité et répartition 55/45.',
+        },
+      ],
+      contentSections: [
+        {
+          heading: '1. Combien paye YouTube pour 1 000 vues en moyenne ?',
+          body: 'En moyenne, YouTube verse aux créateurs entre 2,00 € et 12,00 € pour 1 000 vues sur les vidéos longues standards dans les pays occidentaux à fort pouvoir d’achat (France, États-Unis, Canada, Allemagne, Royaume-Uni). Cet indicateur est appelé le RPM net (Revenu Pour Mille vues). Ces gains oscillent fortement selon le sujet : les secteurs commerciaux comme la finance personnelle, l’investissement ou les logiciels professionnels atteignent des RPM de 15,00 € à plus de 35,00 € par tranche de 1 000 vues. À l’inverse, le divertissement généraliste, les vlogs et le gaming génèrent plutôt entre 1,50 € et 4,50 €. Sur les YouTube Shorts, le modèle de fonds partagé offre des tarifs nettement inférieurs, compris entre 0,02 € et 0,07 € pour 1 000 vues.',
+          keyTakeaway: 'La majorité des vidéos longues rapportent entre 2 € et 12 € pour 1 000 vues, contre seulement 0,02 € à 0,07 € sur les Shorts.',
+        },
+        {
+          heading: '2. CPM vs RPM : pourquoi les marques dépensent plus que vous ne touchez',
+          body: 'Beaucoup de vidéastes confondent le CPM (Coût Pour Mille) de l’annonceur avec le RPM (Revenu Pour Mille) du créateur. Le CPM représente ce qu’une entreprise paye à YouTube pour 1 000 impressions de sa publicité. Vous ne touchez pas l’intégralité de cette somme : d’une part, YouTube prélève 45 % de commission sur les annonces vidéo. D’autre part, chaque vue n’affiche pas systématiquement de pub (adblockers, limitations d’inventaire régional). Le RPM mesure ce qui arrive réellement sur votre compte bancaire pour 1 000 vues de vidéo, incluant également YouTube Premium et les souscriptions. Notre Calculateur de RPM YouTube vous permet de calculer ce revenu net exact.',
+          keyTakeaway: 'Le CPM est la dépense brute de l’annonceur ; le RPM est votre rémunération nette pour 1 000 vues totales. Ne retranchez pas 45 % deux fois.',
+        },
+        {
+          heading: '3. Les critères qui déterminent votre rémunération pour 1 000 vues',
+          body: 'Cinq critères majeurs fixent votre RPM : (1) La zone géographique de votre audience : des spectateurs situés en France, en Suisse ou aux États-Unis rapportent jusqu’à 10 fois plus que des vues issues de pays émergents. (2) La thématique et l’intention d’achat : les sujets financiers ou B2B attirent des enchères d’annonceurs très agressives. (3) La durée de la vidéo : au-delà de 8 minutes, vous pouvez placer des annonces mid-roll au cours du visionnage. (4) L’âge des spectateurs : les 25–54 ans disposant d’un pouvoir d’achat élevé valorisent les espaces publicitaires. (5) La saisonnalité : au 4e trimestre (octobre à décembre), les budgets publicitaires doublent souvent les tarifs par rapport à janvier.',
+          keyTakeaway: 'L’origine géographique, la valeur commerciale du sujet et des vidéos de plus de 8 minutes maximisent votre rémunération pour 1 000 vues.',
+        },
+        {
+          heading: '4. Grille de rémunération par thématique : finance, tech, gaming et vlogs',
+          body: 'Les enchères publicitaires diffèrent de manière spectaculaire selon la catégorie : (1) Finance personnelle, crypto et investissement : 12,00 € à 35,00 €+ ; (2) Tech, tutoriels informatiques et code : 6,00 € à 18,00 € ; (3) Entrepreneuriat et marketing digital : 7,00 € à 22,00 € ; (4) Éducation et développement personnel : 4,00 € à 10,00 € ; (5) Santé et musculation : 3,00 € à 8,00 € ; (6) Vlogs, voyages et style de vie : 1,80 € à 4,50 € ; (7) Gaming et jeux vidéo : 1,20 € à 3,50 € ; (8) Humour et sketchs : 1,20 € à 3,00 €. Vous pouvez estimer vos gains potentiels avec notre Calculateur d’Argent YouTube.',
+          keyTakeaway: 'Les contenus à forte valeur marchande rapportent 5 à 10 fois plus par vue que le divertissement grand public.',
+        },
+        {
+          heading: '5. Projeter vos revenus : de 1 000 à 1 000 000 de vues',
+          body: 'Calculer la progression financière permet de fixer des objectifs réalistes : 1 000 vues = 2,00 € à 12,00 € (longs) ou 0,02 € à 0,07 € (Shorts). 10 000 vues = 20,00 € à 120,00 € (longs) ou 0,20 € à 0,70 € (Shorts). 100 000 vues = 200,00 € à 1 200,00 € (longs) ou 2,00 € à 7,00 € (Shorts). 1 000 000 de vues = 2 000,00 € à 12 000,00 €+ (longs) ou 20,00 € à 70,00 € (Shorts). Pour intégrer l’ensemble de vos sources de revenus (sponsors, affiliations, abonnements), utilisez le Calculateur de Monétisation YouTube.',
+          keyTakeaway: '1 million de vues sur des vidéos longues rapporte généralement 2 000 € à 12 000 €+, contre seulement 20 € à 70 € pour 1 million de Shorts.',
+        },
+      ],
+      workedExample: {
+        title: 'Comparaison de revenus : Tutoriel de programmation vs Vidéo gaming',
+        scenario:
+          'Deux créateurs publient chacun une vidéo de 12 minutes cumulant exactement 250 000 vues en 30 jours. Le créateur A produit des tutoriels de code pour des développeurs. Le créateur B publie des temps forts de jeux vidéo destinés à une large audience jeune.',
+        steps: [
+          'Analyse du créateur A (Tutoriel code) : La forte demande des annonceurs de logiciels offre un RPM net de 9,20 €. Rémunération : (250 000 / 1 000) × 9,20 € = 2 300,00 €.',
+          'Analyse du créateur B (Gaming) : Un public plus jeune et des annonces génériques génèrent un RPM de 2,10 €. Rémunération : (250 000 / 1 000) × 2,10 € = 525,00 €.',
+          'Comparaison de l’écart : Pour un nombre de vues parfaitement égal (250 000 vues), le créateur A a généré 1 775,00 € de plus (soit 4,3 fois plus de revenus) grâce à l’intention d’achat de son audience.',
+        ],
+        conclusion:
+          'Le volume de vues n’est que la moitié de l’équation : le profil économique du public et le sujet multiplient votre rémunération par mille vues.',
+      },
+      checklist: [
+        {
+          title: 'Vérifier le RPM dans YouTube Studio',
+          detail: 'Consultez YouTube Studio > Données d’analyse > Revenus pour relever votre RPM net sur 28 jours plutôt que des estimations externes.',
+        },
+        {
+          title: 'Allonger les vidéos au-delà de 8 minutes',
+          detail: 'Structurez vos contenus longs pour activer l’insertion manuelle d’annonces intermédiaires au cours de la vidéo.',
+        },
+        {
+          title: 'Cibler des mots-clés à forte valeur commerciale',
+          detail: 'Traitez d’outils, de logiciels et de guides pratiques attirant des marques prêtes à enchérir lourdement.',
+        },
+        {
+          title: 'Articuler Shorts et vidéos longues',
+          detail: 'Utilisez la viralité des Shorts pour acquérir des abonnés, puis convertissez-les en spectateurs de vidéos longues pour un revenu pérenne.',
+        },
+        {
+          title: 'Modéliser vos objectifs en local',
+          detail: 'Utilisez les calculateurs gratuits de Creovly pour simuler vos prévisions financières sans partager vos données privées en ligne.',
+        },
+      ],
+      faqs: [
+        {
+          question: 'Combien paye YouTube pour 1 000 vues ?',
+          answer:
+            'En moyenne, les créateurs touchent entre 2,00 € et 12,00 € pour 1 000 vues sur des vidéos longues dans les pays francophones et occidentaux. Les niches comme la finance peuvent dépasser 20,00 €, tandis que les Shorts payent entre 0,02 € et 0,07 €.',
+        },
+        {
+          question: 'Combien rapporte 1 million de vues sur YouTube ?',
+          answer:
+            'Un million de vues sur une vidéo longue rapporte en général entre 2 000 € et 12 000 € net. En finance ou tech, ce montant peut dépasser 20 000 €. Sur les Shorts, 1 million de vues ne rapporte qu’environ 20 € à 70 €.',
+        },
+        {
+          question: 'Quelle est la différence entre CPM et RPM sur YouTube ?',
+          answer:
+            'Le CPM est le tarif brut payé par l’annonceur avant la commission de 45 % de YouTube. Le RPM est votre gain net par tranche de 1 000 vues globales, commissions déduites et abonnements Premium inclus.',
+        },
+        {
+          question: 'Est-ce que YouTube rémunère absolument chaque vue ?',
+          answer:
+            'Non. Seules les lectures ayant effectivement diffusé une publicité ou ayant été visionnées par un abonné YouTube Premium sont rémunérées, soit environ 40 % à 70 % des vues totales.',
+        },
+        {
+          question: 'Comment augmenter son RPM sur YouTube ?',
+          answer:
+            'Vous pouvez augmenter votre RPM en abordant des sujets professionnels ou financiers, en réalisant des vidéos de plus de 8 minutes avec des coupures publicitaires bien placées et en ciblant des pays à fort pouvoir d’achat.',
+        },
+      ],
+    },
   },
 
   de: {
@@ -1214,6 +1656,114 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         },
       ],
     },
+    'how-much-does-youtube-pay-per-1000-views': {
+      title: 'Wie Viel Zahlt YouTube Pro 1.000 Aufrufe? (Verdienst & RPM 2026)',
+      seoTitle: 'Wie Viel Zahlt YouTube Pro 1.000 Aufrufe?',
+      category: 'Monetarisierung & Finanzen',
+      readTime: '7 Min. Lesezeit',
+      description:
+        'Erfahre, wie viel YouTube pro 1.000 Aufrufe zahlt: Nischen-RPM, Shorts vs. Long-Form, Unterschied zu CPM und wie du deine Einnahmen berechnest.',
+      officialSources: [
+        {
+          label: 'YouTube-Hilfe: Metriken in YouTube Analytics verstehen (RPM)',
+          description:
+            'Offizielle Definition des Creator-RPMs, der monetarisierten Wiedergaben und der Netto-Auszahlungsberechnung.',
+        },
+        {
+          label: 'YouTube-Hilfe: Übersicht über das YouTube-Partnerprogramm',
+          description:
+            'Offizielle Bedingungen zur Werbeumsatzbeteiligung, YPP-Zugangskriterien und der 55/45-Aufteilung.',
+        },
+      ],
+      contentSections: [
+        {
+          heading: '1. Wie viel zahlt YouTube pro 1.000 Aufrufe im Durchschnitt?',
+          body: 'Im Durchschnitt zahlt YouTube für Standard-Videos im Langformat in wirtschaftsstarken Märkten (wie Deutschland, Österreich, Schweiz, USA und Großbritannien) zwischen 2,00 € und 12,00 € pro 1.000 Aufrufe. Diese Kennzahl wird als Netto-RPM (Revenue Per Mille) bezeichnet. Die Einnahmen variieren stark je nach Thema: Kommerzielle Nischen wie persönliche Finanzen, B2B-Software, Immobilien und Krypto erzielen RPM-Werte von 15,00 € bis über 35,00 € pro 1.000 Views. Kanäle für allgemeine Unterhaltung, Vlogs oder Gaming bewegen sich dagegen meist zwischen 1,50 € und 4,50 €. Bei YouTube Shorts liegt die Vergütung durch das Sammelpool-Modell deutlich niedriger – typischerweise bei nur 0,02 € bis 0,07 € pro 1.000 Aufrufen.',
+          keyTakeaway: 'Die meisten Langform-Kanäle erzielen 2 € bis 12 € pro 1.000 Aufrufe, während YouTube Shorts meist nur 0,02 € bis 0,07 € einbringen.',
+        },
+        {
+          heading: '2. CPM vs. RPM: Warum Werbekunden mehr zahlen, als du erhältst',
+          body: 'Viele YouTuber verwechseln den Werbekunden-CPM mit dem Creator-RPM. Der CPM ist der Betrag, den ein Werbetreibender an YouTube für 1.000 Werbeeinblendungen zahlt. Davon behält YouTube jedoch 45 % Plattformanteil ein, während der Creator 55 % erhält. Zudem wird nicht bei jedem Aufruf Werbung geschaltet (Adblocker, fehlendes Werbeinventar). Der RPM misst deine tatsächlichen Nettoeinnahmen pro 1.000 Gesamtaufrufe deines Videos – inklusive YouTube Premium-Ausschüttungen und Kanalmitgliedschaften. Mit unserem kostenlosen YouTube-RPM-Rechner ermittelst du deinen exakten Auszahlungsbetrag.',
+          keyTakeaway: 'CPM sind die Brutto-Ausgaben des Werbekunden; RPM ist dein tatsächlicher Nettoverdienst pro 1.000 Gesamtaufrufe. Ziehe 45 % nicht doppelt ab.',
+        },
+        {
+          heading: '3. Die wichtigsten Einflussfaktoren auf deine Einnahmen pro 1.000 Aufrufe',
+          body: 'Fünf Hauptfaktoren bestimmen deinen RPM: (1) Geografische Lage der Zuschauer: Zuschauer aus kaufkraftstarken Ländern zahlen bis zu 10-mal höhere Werbepreise als Zuschauer aus Schwellenländern. (2) Themenbereich & Kaufabsicht: Themen mit hohem Kundenwert (Finanzen, Software, Business) lösen aggressive Werbegebote aus. (3) Videolänge & Mid-Rolls: Videos über 8 Minuten qualifizieren sich für Mid-Roll-Werbung, wodurch mehrere Werbeunterbrechungen pro Zuschauer geschaltet werden können. (4) Demografie: Ältere Zielgruppen (25–54 Jahre) mit eigenem Einkommen erzielen höhere Werbepreise als minderjährige Zuschauer. (5) Saisonalität: Im 4. Quartal (Oktober bis Dezember) verdoppeln sich Werbebudgets wegen des Weihnachtsgeschäfts oft im Vergleich zum Januar.',
+          keyTakeaway: 'Zuschauerherkunft, kaufkräftige Themen und Videolängen über 8 Minuten sind die stärksten Stellschrauben für einen maximalen RPM.',
+        },
+        {
+          heading: '4. Vergütung nach Nische: Finanzen, Tech, Gaming und Vlogs',
+          body: 'Die Werbebudgets unterscheiden sich gravierend je nach Genre: (1) Finanzen, Krypto & Geldanlage: 12,00 € bis 35,00 €+; (2) Software, IT & Programmierung: 6,00 € bis 18,00 €; (3) Business & Online-Marketing: 7,00 € bis 22,00 €; (4) Bildung & Tutorials: 4,00 € bis 10,00 €; (5) Fitness & Gesundheit: 3,00 € bis 8,00 €; (6) Lifestyle, Reisen & Vlogs: 1,80 € bis 4,50 €; (7) Gaming & LetsPlays: 1,20 € bis 3,50 €; (8) Comedy & Unterhaltung: 1,20 € bis 3,00 €. Berechne verschiedene Nischen-Szenarien direkt mit unserem YouTube-Geld-Rechner.',
+          keyTakeaway: 'Geschäftliche und finanzielle Themen erzielen pro Aufruf das 5- bis 10-fache von reinen Gaming- oder Unterhaltungsvideos.',
+        },
+        {
+          heading: '5. Einnahmen hochrechnen: Von 1.000 bis 1.000.000 Aufrufen',
+          body: 'Die rechnerische Skalierung verdeutlicht realistische Meilensteine: 1.000 Aufrufe bringen 2,00 € bis 12,00 € (Langformat) oder 0,02 € bis 0,07 € (Shorts). 10.000 Aufrufe bringen 20,00 € bis 120,00 € (Langformat) oder 0,20 € bis 0,70 € (Shorts). 100.000 Aufrufe bringen 200,00 € bis 1.200,00 € (Langformat) oder 2,00 € bis 7,00 € (Shorts). 1.000.000 Aufrufe bringen 2.000,00 € bis 12.000,00 €+ (Langformat) oder 20,00 € bis 70,00 € (Shorts). Wenn du auch Sponsoring, Affiliate-Links und Mitgliedschaften einbeziehen möchtest, nutze unseren YouTube-Monetarisierungsrechner.',
+          keyTakeaway: '1 Million Aufrufe im Langformat bringen typischerweise 2.000 € bis über 12.000 € Nettoerlös, während 1 Million Shorts nur etwa 20 € bis 70 € erzielen.',
+        },
+      ],
+      workedExample: {
+        title: 'Verdienstvergleich: Programmier-Tutorial vs. Gaming-Highlights',
+        scenario:
+          'Zwei Creator veröffentlichen jeweils ein 12-minütiges Video, das innerhalb von 30 Tagen exakt 250.000 Aufrufe erzielt. Creator A betreibt einen Kanal für Programmiertutorials mit Zuschauern aus Deutschland und den USA. Creator B betreibt einen Gaming-Highlight-Kanal mit einer jüngeren, internationalen Zuschauerschaft.',
+        steps: [
+          'Analyse Creator A (Coding-Tutorial): Hohe Nachfrage von Softwareunternehmen führt zu einem Netto-RPM von 9,20 €. Gesamtertrag: (250.000 / 1.000) × 9,20 € = 2.300,00 €.',
+          'Analyse Creator B (Gaming-Highlights): Jüngere Zielgruppe und niedrigere Gebote führen zu einem Netto-RPM von 2,10 €. Gesamtertrag: (250.000 / 1.000) × 2,10 € = 525,00 €.',
+          'Vergleich des Unterschieds: Bei exakt gleicher Aufrufzahl (250.000 Views) verdiente Creator A 1.775,00 € mehr (über 4,3-mal so viel) aufgrund der Kaufkraft und Relevanz der Zielgruppe.',
+        ],
+        conclusion:
+          'Die reine Zahl der Aufrufe ist nur die halbe Wahrheit. Die Kaufabsicht der Nische und die Herkunft der Zuschauer multiplizieren deine Einnahmen pro 1.000 Aufrufe.',
+      },
+      checklist: [
+        {
+          title: 'Echten 28-Tage-RPM im Studio prüfen',
+          detail: 'Prüfe in YouTube Studio > Analytics > Einnahmen deinen tatsächlichen RPM der letzten 28 Tage statt Schätzungen aus dem Internet.',
+        },
+        {
+          title: 'Videolänge für Mid-Roll-Werbung optimieren',
+          detail: 'Erstelle Langformat-Inhalte von über 8 Minuten, um manuelle Werbeunterbrechungen an natürlichen Sprechpausen zu platzieren.',
+        },
+        {
+          title: 'Kommerzielle Suchbegriffe einbinden',
+          detail: 'Wähle Themen rund um Tools, Software, Vergleiche und Kaufberatung, die werbestarke Unternehmen anziehen.',
+        },
+        {
+          title: 'Shorts und Langformat strategisch trennen',
+          detail: 'Nutze Shorts zur Reichweitengewinnung und führe Zuschauer zu Langform-Inhalten für nachhaltige Werbeeinnahmen.',
+        },
+        {
+          title: 'Einnahmen lokal im Browser kalkulieren',
+          detail: 'Nutze die Rechner von Creovly, um deine Einkommensziele privat und ohne Cloud-Datenupload zu simulieren.',
+        },
+      ],
+      faqs: [
+        {
+          question: 'Wie viel zahlt YouTube pro 1.000 Aufrufe?',
+          answer:
+            'Die meisten Creator verdienen bei regulären Langformat-Videos zwischen 2,00 € und 12,00 € pro 1.000 Aufrufe. In lukrativen Nischen wie Finanzen können es 20,00 € bis 35,00 €+ sein, während Shorts 0,02 € bis 0,07 € zahlen.',
+        },
+        {
+          question: 'Wie viel verdient man mit 1 Million Aufrufen auf YouTube?',
+          answer:
+            'Eine Million Aufrufe eines Langvideos bringen in der Regel zwischen 2.000 € und 12.000 € Werbeeinnahmen ein. Bei Shorts sind es lediglich etwa 20 € bis 70 € pro Million Views.',
+        },
+        {
+          question: 'Was ist der Unterschied zwischen CPM und RPM bei YouTube?',
+          answer:
+            'Der CPM ist der Betrag, den Werbetreibende vor Abzug des 45%-Plattformanteils von YouTube zahlen. Der RPM ist dein tatsächlicher Nettoverdienst pro 1.000 Gesamtaufrufe inklusive aller Erlösquellen.',
+        },
+        {
+          question: 'Zahlt YouTube für jeden einzelnen Aufruf?',
+          answer:
+            'Nein. YouTube bezahlt nur Aufrufe, bei denen tatsächlich eine Werbeanzeige ausgespielt wurde oder die von einem YouTube-Premium-Mitglied angesehen wurden. Das betrifft meist 40 % bis 70 % der Views.',
+        },
+        {
+          question: 'Wie kann ich meinen YouTube-RPM steigern?',
+          answer:
+            'Steigere deinen RPM, indem du kaufkräftige Nischen bedienst (Finanzen, Software, Business), Videos von über 8 Minuten mit Mid-Rolls produzierst und Zuschauer aus wirtschaftsstarken Ländern anziehst.',
+        },
+      ],
+    },
   },
 
   pt: {
@@ -1393,7 +1943,115 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         },
         {
           question: "Como o tamanho do título afeta a interface do Shorts?",
-          answer: "Títulos longos com mais de 60 caracteres quebram em várias linhas no celular, empurrando os botões da base ainda mais para cima do seu vídeo.",
+          answer: "Títulos de 60 ou mais caracteres quebram em várias linhas no celular, empurrando os botões da base ainda mais para cima do seu vídeo.",
+        },
+      ],
+    },
+    'how-much-does-youtube-pay-per-1000-views': {
+      title: 'Quanto o YouTube Paga Por 1.000 Visualizações? (Tabela e RPM 2026)',
+      seoTitle: 'Quanto o YouTube Paga Por 1.000 Visualizações?',
+      category: 'Monetização e Economia',
+      readTime: '7 min de leitura',
+      description:
+        'Descubra quanto o YouTube paga por 1.000 visualizações por nicho, vídeos longos vs Shorts, RPM líquido e como calcular os ganhos do seu canal.',
+      officialSources: [
+        {
+          label: 'Ajuda do YouTube: Noções básicas sobre métricas do YouTube Analytics (RPM)',
+          description:
+            'Definição oficial do RPM do criador, reproduções monetizadas e cálculo dos ganhos líquidos.',
+        },
+        {
+          label: 'Ajuda do YouTube: Visão geral e políticas do Programa de Parcerias do YouTube',
+          description:
+            'Regras oficiais da divisão de receita de anúncios, requisitos de adesão e divisão 55/45.',
+        },
+      ],
+      contentSections: [
+        {
+          heading: '1. Quanto o YouTube paga por 1.000 visualizações em média?',
+          body: 'Em média, o YouTube paga aos criadores entre US$ 2,00 e US$ 12,00 por cada 1.000 visualizações em vídeos longos tradicionais nos principais mercados econômicos (como EUA, Reino Unido, Canadá e Brasil nas faixas locais proporcionais). Essa métrica é conhecida como RPM líquido (Receita Por Mil). Os ganhos variam muito conforme a temática: categorias comerciais como finanças pessoais, softwares para empresas, investimentos e negócios podem alcançar RPMs de US$ 15,00 a mais de US$ 35,00 por mil views. Por outro lado, canais de entretenimento geral, vlogs diários e games costumam ficar entre US$ 1,50 e US$ 4,50. No YouTube Shorts, a remuneração pelo fundo compartilhado é bem menor, variando em média entre US$ 0,02 e US$ 0,07 por 1.000 visualizações.',
+          keyTakeaway: 'A maioria dos vídeos longos rende de US$ 2 a US$ 12 por 1.000 visualizações, enquanto os Shorts rendem apenas de US$ 0,02 a US$ 0,07 por mil.',
+        },
+        {
+          heading: '2. CPM vs. RPM: por que as marcas pagam mais do que você recebe',
+          body: 'Muitos criadores confundem o CPM do anunciante com o RPM do canal. O CPM representa o valor bruto que a empresa paga ao YouTube por 1.000 impressões de anúncios. Você não recebe esse total: primeiro, o YouTube retém 45% do valor em anúncios de vídeo e repassa 55% ao criador. Segundo, nem toda visualização exibe anúncio (adblockers, falta de anunciantes na região). Já o RPM indica exatamente o seu ganho líquido real por cada 1.000 visualizações totais, incluindo YouTube Premium e assinaturas de membros. Use a nossa Calculadora de RPM do YouTube para saber seu valor real.',
+          keyTakeaway: 'O CPM é o investimento bruto da marca; o RPM é o seu salário líquido por 1.000 visualizações totais. Não desconte 45% duas vezes.',
+        },
+        {
+          heading: '3. Fatores que determinam seus ganhos por 1.000 visualizações',
+          body: 'Cinco pilares essenciais controlam seu RPM: (1) Localização do público: Espectadores de países com alto poder de compra geram lances até dez vezes maiores. (2) Nicho de conteúdo: Públicos com forte intenção de compra (finanças, tecnologia B2B, cursos) atraem anunciantes com orçamentos vultosos. (3) Duração do vídeo e anúncios intermediários: Vídeos com mais de 8 minutos permitem inserir anúncios no meio da reprodução (mid-rolls). (4) Idade e perfil da audiência: Adultos de 25 a 54 anos com renda própria atraem campanhas mais caras. (5) Sazonalidade: O último trimestre do ano (outubro a dezembro) chega a dobrar as tarifas de anúncios devido à Black Friday e ao Natal.',
+          keyTakeaway: 'Origem dos espectadores, conteúdo com intenção comercial e vídeos com mais de 8 minutos são as maiores alavancas para elevar seu RPM.',
+        },
+        {
+          heading: '4. Estimativa de ganhos por nicho: finanças, tech, games e vlogs',
+          body: 'O valor pago pelos anunciantes muda drasticamente conforme a categoria: (1) Finanças pessoais, cripto e investimentos: US$ 12,00 a US$ 35,00+; (2) Tecnologia, tutoriais de programação e software: US$ 6,00 a US$ 18,00; (3) Negócios e marketing digital: US$ 7,00 a US$ 22,00; (4) Educação e tutoriais práticos: US$ 4,00 a US$ 10,00; (5) Saúde e fitness: US$ 3,00 a US$ 8,00; (6) Vlogs e estilo de vida: US$ 1,80 a US$ 4,50; (7) Games e e-sports: US$ 1,20 a US$ 3,50; (8) Humor e pegadinhas: US$ 1,20 a US$ 3,00. Faça simulações personalizadas na Calculadora de Dinheiro do YouTube.',
+          keyTakeaway: 'Temas corporativos e financeiros rendem de 5 a 10 vezes mais por visualização do que canais puramente de entretenimento.',
+        },
+        {
+          heading: '5. Projeção de ganhos: de 1.000 a 1.000.000 de visualizações',
+          body: 'Entender os múltiplos de visualização ajuda a traçar metas sólidas: Com 1.000 views você recebe entre US$ 2,00 e US$ 12,00 (longos) ou US$ 0,02 a US$ 0,07 (Shorts). Com 10.000 views, de US$ 20,00 a US$ 120,00 (longos) ou US$ 0,20 a US$ 0,70 (Shorts). Com 100.000 views, de US$ 200,00 a US$ 1.200,00 (longos) ou US$ 2,00 a US$ 7,00 (Shorts). Com 1.000.000 de views, de US$ 2.000,00 a US$ 12.000,00+ (longos) ou US$ 20,00 a US$ 70,00 (Shorts). Para calcular todas as fontes conjuntas (patrocínios, produtos, afiliados), use a Calculadora de Monetização do YouTube.',
+          keyTakeaway: '1 milhão de visualizações em vídeos longos costuma render entre US$ 2.000 e US$ 12.000+, enquanto 1 milhão de Shorts rende cerca de US$ 20 a US$ 70.',
+        },
+      ],
+      workedExample: {
+        title: 'Comparativo de ganhos: Tutorial de programação vs. Melhores momentos de games',
+        scenario:
+          'Dois criadores postam vídeos de 12 minutos que alcançam exatamente 250.000 visualizações em 30 dias. O Criador A publica aulas de programação com público no Brasil e nos EUA. O Criador B mantém um canal de destaques de games com público jovem espalhado pelo mundo.',
+        steps: [
+          'Análise do Criador A (Tutorial de código): A disputa acirrada de empresas de tecnologia resulta em um RPM líquido de US$ 9,20. Total recebido: (250.000 / 1.000) × US$ 9,20 = US$ 2.300,00.',
+          'Análise do Criador B (Gaming): O perfil mais jovem e anúncios comuns resultam em um RPM de US$ 2,10. Total recebido: (250.000 / 1.000) × US$ 2,10 = US$ 525,00.',
+          'Diferença comprovada: Mesmo com o mesmo número de visualizações (250.000 cada), o Criador A faturou US$ 1.775,00 a mais (mais de 4,3 vezes) pela intenção de compra do nicho.',
+        ],
+        conclusion:
+          'O total de visualizações é apenas uma parte da conta. A intenção comercial do público multiplica o retorno financeiro por mil views.',
+      },
+      checklist: [
+        {
+          title: 'Verifique seu RPM real no YouTube Studio',
+          detail: 'Consulte a aba Analytics > Receita para ver o RPM dos últimos 28 dias em vez de confiar em palpites genéricos.',
+        },
+        {
+          title: 'Produza vídeos acima de 8 minutos',
+          detail: 'Crie vídeos com duração superior a 8 minutos para habilitar anúncios intermediários nos momentos mais naturais.',
+        },
+        {
+          title: 'Foque em palavras-chave comerciais',
+          detail: 'Aborde tutoriais de softwares, ferramentas e análises de produtos que atraiam empresas dispostas a investir pesado.',
+        },
+        {
+          title: 'Separe o papel dos Shorts e dos vídeos longos',
+          detail: 'Use os Shorts para atrair novos inscritos e direcione esse público para vídeos longos para gerar receita sustentável.',
+        },
+        {
+          title: 'Calcule seus cenários em modo privado',
+          detail: 'Utilize as ferramentas do Creovly para planejar suas metas de forma segura e 100% no seu navegador.',
+        },
+      ],
+      faqs: [
+        {
+          question: 'Quanto o YouTube paga por 1.000 visualizações?',
+          answer:
+            'A maioria dos criadores ganha entre US$ 2,00 e US$ 12,00 por 1.000 visualizações em vídeos longos convencionais. Em nichos de alta renda como finanças, pode passar de US$ 20,00, enquanto Shorts pagam de US$ 0,02 a US$ 0,07.',
+        },
+        {
+          question: 'Quanto rende 1 milhão de visualizações no YouTube?',
+          answer:
+            'Um milhão de visualizações em vídeos longos costuma render de US$ 2.000 a US$ 12.000 em anúncios. Em finanças ou tecnologia, pode ultrapassar US$ 20.000. Já no Shorts, 1 milhão de views rende apenas entre US$ 20 e US$ 70.',
+        },
+        {
+          question: 'Qual é a diferença entre CPM e RPM no YouTube?',
+          answer:
+            'O CPM é o valor bruto pago pelos anunciantes antes do desconto de 45% do YouTube. O RPM é o valor líquido final que entra no seu bolso por 1.000 visualizações totais, incluindo YouTube Premium.',
+        },
+        {
+          question: 'O YouTube paga por todas as visualizações do vídeo?',
+          answer:
+            'Não. O YouTube remunera apenas as visualizações monetizadas, onde um anúncio foi de fato exibido, ou visualizações de assinantes do YouTube Premium. Geralmente, isso corresponde a 40% a 70% das visualizações.',
+        },
+        {
+          question: 'Como aumentar o RPM do meu canal do YouTube?',
+          answer:
+            'Você pode aumentar o RPM escolhendo temas comerciais (finanças, negócios, software), criando vídeos com mais de 8 minutos com anúncios intermediários e atraindo público com maior renda.',
         },
       ],
     },
@@ -1577,6 +2235,114 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         },
       ],
     },
+    'how-much-does-youtube-pay-per-1000-views': {
+      title: '유튜브 조회수 1,000회당 수익은 얼마일까? (2026년 단가 분석)',
+      seoTitle: '유튜브 조회수 1,000회당 수익 단가 안내',
+      category: '수익 창출 및 경제',
+      readTime: '7분 읽기',
+      description:
+        '유튜브 조회수 1,000회당 실제 수익과 단가를 분석합니다. 분야별 RPM 차이, 쇼츠 수익 구조, 광고 CPM과 크리에이터 순수익 계산법.',
+      officialSources: [
+        {
+          label: 'YouTube 고객센터: YouTube 분석 측정항목 이해하기(RPM)',
+          description:
+            '크리에이터의 실질 순수익 지표인 RPM, 수익 창출 재생 횟수 및 배분 계산에 관한 공식 안내.',
+        },
+        {
+          label: 'YouTube 고객센터: YouTube 파트너 프로그램 개요 및 수익 창출 정책',
+          description:
+            '광고 수익 55/45 배분 기준, YPP 가입 조건 및 수익 창출 관련 공식 가이드라인.',
+        },
+      ],
+      contentSections: [
+        {
+          heading: '1. 유튜브 조회수 1,000회당 평균 수익은 얼마인가요?',
+          body: '일반적인 롱폼(긴 동영상) 기준, 유튜브 조회수 1,000회당 크리에이터가 실제로 수령하는 순수익(RPM)은 평균 2,500원〜15,000원(약 2.00〜12.00달러) 선입니다. 이 수치는 콘텐츠 주제에 따라 극명하게 달라집니다. 재테크, 주식, 부동산, B2B 소프트웨어 등 금융 및 비즈니스 분야는 1,000회당 20,000원〜50,000원(15〜35달러 이상)까지 치솟기도 합니다. 반면 일반 예능, 일상 브이로그, 게임 하이라이트 등은 1,500원〜5,000원 수준을 형성합니다. 유튜브 쇼츠(Shorts)의 경우 전 세계 풀링 배분 방식으로 인해 단가가 훨씬 낮아 1,000회당 약 25원〜90원(0.02〜0.07달러) 정도에 머뭅니다.',
+          keyTakeaway: '대부분의 롱폼 영상은 1,000회당 2,500원〜15,000원, 쇼츠는 25원〜90원 수준의 수익을 창출합니다.',
+        },
+        {
+          heading: '2. 광고주 CPM vs 크리에이터 RPM: 왜 지급액에 차이가 날까요?',
+          body: '많은 초보 유튜버들이 광고주의 CPM(1,000회 광고 노출당 비용)과 크리에이터의 RPM(1,000회 영상 조회당 수익)을 혼동합니다. CPM은 기업이 유튜브에 지불하는 총 광고비이며, 여기서 유튜브가 45%의 플랫폼 수수료를 차감하고 남은 55%를 크리에이터에게 지급합니다. 또한 애드블록 사용자나 광고 미노출 시청으로 인해 전체 조회수보다 광고 재생수가 적습니다. 반면 RPM은 YouTube Premium 배분금과 채널 멤버십을 포함해 실제 영상 총 조회수 1,000회당 정산되는 진짜 순수익을 나타냅니다. Creovly의 유튜브 RPM 계산기로 정확한 단가를 계산해 보세요.',
+          keyTakeaway: 'CPM은 광고주의 지출 총액이고, RPM은 내 통장에 들어오는 실수령액입니다. 스튜디오 RPM에서 45%를 중복 차감하지 마세요.',
+        },
+        {
+          heading: '3. 1,000회당 수익을 결정짓는 핵심 5대 요소',
+          body: '조회수 단가를 결정하는 5대 요소는 다음과 같습니다: (1) 시청자 국적 및 지역: 미국, 영국, 한국 등 광고비 집행이 활발한 국가의 시청자는 개발도상국 대비 몇 배에서 10배 이상 높은 단가를 만듭니다. (2) 콘텐츠의 상업적 가치: 금융, IT 툴 등 구매력이 연결되는 키워드는 광고주 간 입찰 경쟁을 촉발합니다. (3) 영상 길이와 중간 광고(미드롤): 8분 이상의 영상은 영상 중간에 광고를 추가 배치할 수 있어 1회 시청당 광고 노출이 배가됩니다. (4) 시청 연령대: 경제력을 갖춘 20~50대 타깃 영상이 미성년자 타깃 영상보다 단가가 높습니다. (5) 계절성: 연말 소비 시즌인 4분기(10~12월)에는 광고비가 1월 대비 최대 2배까지 상승합니다.',
+          keyTakeaway: '시청자 국가, 상업적 키워드 선정, 8분 이상의 동영상 구성이 RPM을 극대화하는 가장 강력한 수단입니다.',
+        },
+        {
+          heading: '4. 분야별 RPM 추정치: 금융, IT, 게임, 일상 브이로그 비교',
+          body: '분야별 1,000회당 예상 수익 범위는 다음과 같습니다: (1) 재테크, 주식, 암호화폐: 15,000원〜45,000원 이상; (2) 프로그래밍, IT 리뷰, 개발: 8,000원〜25,000원; (3) 비즈니스, 창업, 마케팅: 9,000원〜30,000원; (4) 어학, 교육, 자기계발: 5,000원〜13,000원; (5) 헬스, 피트니스, 건강: 4,000원〜10,000원; (6) 일상, 브이로그, 여행: 2,000원〜6,000원; (7) 게임 실황, e스포츠: 1,500원〜4,500원; (8) 유머, 엔터테인먼트: 1,500원〜4,000원. Creovly의 유튜브 수익 계산기로 목표 조회수별 월수익을 확인해 보세요.',
+          keyTakeaway: '상업적 거래가 수반되는 전문 지식 채널은 단순 오락 채널 대비 조회수당 5~10배 이상의 수익을 냅니다.',
+        },
+        {
+          heading: '5. 조회수 구간별 수익 시뮬레이션: 1천 회부터 100만 회까지',
+          body: '조회수 규모별 현실적인 수익 지표: 1,000회＝2,500원〜15,000원(롱폼) / 약 25원〜90원(쇼츠). 1만 회＝25,000원〜150,000원(롱폼) / 약 250원〜900원(쇼츠). 10만 회＝25만 원〜150만 원(롱폼) / 약 2,500원〜9,000원(쇼츠). 100만 회＝250만 원〜1,500만 원 이상(롱폼) / 약 2만 5천 원〜9만 원(쇼츠). 광고 외에도 브랜드 협찬, 제휴 마케팅, 멤버십 등 복합 수익 모델을 설계하려면 유튜브 수익화 계산기를 활용하세요.',
+          keyTakeaway: '롱폼 100만 회는 보통 250만~1,500만 원 이상의 수익을 창출하지만, 쇼츠 100만 회는 수만 원대에 그칩니다.',
+        },
+      ],
+      workedExample: {
+        title: '수익 비교: 개발 강좌 채널 vs 게임 하이라이트 채널',
+        scenario:
+          '두 크리에이터가 각각 12분 길이의 영상을 업로드하여 30일 동안 나란히 25만 회 조회를 달성했습니다. 크리에이터 A는 직장인 대상 소프트웨어 튜토리얼을 제작하고, 크리에이터 B는 젊은 층 대상 배틀로얄 게임 하이라이트를 게시했습니다.',
+        steps: [
+          '크리에이터 A(개발 강의) 분석: IT 소프트웨어 기업들의 높은 광고 입찰가로 순 RPM 12,000원 달성. 총수익: (250,000 / 1,000) × 12,000원 = 3,000,000원.',
+          '크리에이터 B(게임 영상) 분석: 폭넓은 저연령층과 범용 광고로 순 RPM 2,800원 기록. 총수익: (250,000 / 1,000) × 2,800원 = 700,000원.',
+          '수익 격차 분석: 정확히 같은 25만 조회수를 기록했음에도, 구매력이 높은 타깃층을 보유한 크리에이터 A가 2,300,000원(4.2배 이상)을 더 벌었습니다.',
+        ],
+        conclusion:
+          '단순 조회수보다 시청자의 구매력과 타깃 키워드의 상업성이 1,000회당 실수령액을 극적으로 좌우합니다.',
+      },
+      checklist: [
+        {
+          title: '스튜디오의 28일 기준 실제 RPM 확인',
+          detail: '단순 추측 대신 유튜브 스튜디오 > 분석 > 수익 탭에서 최근 28일간의 실제 RPM 지표를 확인하세요.',
+        },
+        {
+          title: '중간 광고 삽입을 위해 영상 8분 이상 기획',
+          detail: '자연스러운 흐름의 전환점에 수동 미드롤 광고를 배치할 수 있도록 롱폼 콘텐츠를 8분 이상으로 구성하세요.',
+        },
+        {
+          title: '상업적 검색 의도를 지닌 키워드 공략',
+          detail: '도구 비교, 소프트웨어 추천, 실전 튜토리얼 등 광고주들이 높은 입찰가를 책정하는 주제를 기획하세요.',
+        },
+        {
+          title: '쇼츠와 롱폼의 전략적 역할 분담',
+          detail: '쇼츠로 채널 인지도와 구독자를 끌어모으고, 안정적인 광고 수익은 롱폼 영상으로 전환해 회수하세요.',
+        },
+        {
+          title: '브라우저 환경에서 안전하게 수익 시뮬레이션',
+          detail: '개인 분석 데이터를 서버에 업로드하지 않고 Creovly의 로컬 계산기를 통해 안전하게 목표를 계획하세요.',
+        },
+      ],
+      faqs: [
+        {
+          question: '유튜브 조회수 1,000회당 얼마를 버나요?',
+          answer:
+            '일반적인 롱폼 영상 기준 1,000회당 약 2,500원〜15,000원(2~12달러) 선입니다. 금융, 재테크, IT 등 고단가 분야는 20,000원~40,000원 이상도 가능하며, 쇼츠는 약 25원~90원 수준입니다.',
+        },
+        {
+          question: '유튜브 조회수 100만 회 수익은 얼마인가요?',
+          answer:
+            '롱폼 영상 100만 회는 보통 250만 원에서 1,500만 원 이상의 광고 수입을 올립니다. 고수익 분야에서는 2,000만 원을 넘기도 합니다. 반면 쇼츠 100만 회는 약 2만 5천 원~9만 원 선에 그칩니다.',
+        },
+        {
+          question: '유튜브 CPM과 RPM의 차이는 무엇인가요?',
+          answer:
+            'CPM은 광고주가 1,000회 광고 표시에 지불한 총비용(수수료 차감 전)입니다. RPM은 유튜브 수수료 45%를 제외하고 Premium 수익 등을 더해 크리에이터가 실제로 손에 쥐는 1,000회당 순수익입니다.',
+        },
+        {
+          question: '유튜브는 모든 조회수에 대해 수익을 주나요?',
+          answer:
+            '아닙니다. 광고가 실제로 송출된 재생이나 YouTube Premium 구독자가 시청한 경우에만 수익이 발생합니다. 보통 전체 조회의 40%~70% 정도가 수익 창출 대상입니다.',
+        },
+        {
+          question: '유튜브 채널의 RPM 단가를 높이려면 어떻게 해야 하나요?',
+          answer:
+            '재테크, IT, 비즈니스 등 상업적 가치가 높은 주제를 다루고, 8분 이상의 영상으로 미드롤 광고를 배치하며, 구매력 있는 성인 시청자층을 확보해야 합니다.',
+        },
+      ],
+    },
   },
 
   it: {
@@ -1757,6 +2523,114 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         {
           question: "Come influisce la lunghezza del titolo sui margini dello Short?",
           answer: "I titoli con oltre 60 caratteri vanno a capo su più righe negli schermi mobile, spingendo la grafica inferiore ancora più in alto sui contenuti del video.",
+        },
+      ],
+    },
+    'how-much-does-youtube-pay-per-1000-views': {
+      title: 'Quanto Paga YouTube per 1.000 Visualizzazioni? (Guida e RPM 2026)',
+      seoTitle: 'Quanto Paga YouTube per 1.000 Visualizzazioni?',
+      category: 'Monetizzazione ed Economia',
+      readTime: '7 min di lettura',
+      description:
+        'Scopri quanto paga YouTube per 1.000 visualizzazioni in base alla nicchia, video lunghi vs Shorts, RPM netto e come calcolare le tue entrate.',
+      officialSources: [
+        {
+          label: 'Guida di YouTube: Informazioni sulle metriche di YouTube Analytics (RPM)',
+          description:
+            'Definizione ufficiale del parametro RPM per i creator, riproduzioni monetizzate e calcolo dei guadagni netti.',
+        },
+        {
+          label: 'Guida di YouTube: Panoramica e norme del Programma partner di YouTube',
+          description:
+            'Termini ufficiali di ripartizione delle entrate pubblicitarie, soglie di idoneità YPP e split 55/45.',
+        },
+      ],
+      contentSections: [
+        {
+          heading: '1. Quanto paga YouTube per 1.000 visualizzazioni in media?',
+          body: 'In media, YouTube corrisponde ai creator tra 2,00 € e 12,00 € ogni 1.000 visualizzazioni per video lunghi tradizionali nei mercati a forte inserzionismo (come Italia, Germania, Regno Unito e Stati Uniti). Questo parametro è noto come RPM netto (Entrate per mille visualizzazioni). Le cifre variano sensibilmente in base alla categoria: settori commerciali come finanza personale, software B2B, investimenti e immobiliare possono registrare RPM compresi tra 15,00 € e oltre 35,00 € per 1.000 views. Al contrario, canali di intrattenimento, vlog o videogiochi si attestano in genere tra 1,50 € e 4,50 €. Per quanto riguarda i YouTube Shorts, il modello a pool condiviso genera compensi sensibilmente inferiori, compresi tra 0,02 € e 0,07 € per 1.000 visualizzazioni.',
+          keyTakeaway: 'La maggior parte dei video lunghi genera tra 2 € e 12 € per 1.000 visualizzazioni, mentre gli Shorts rendono da 0,02 € a 0,07 € ogni mille views.',
+        },
+        {
+          heading: '2. CPM vs RPM: perché gli inserzionisti spendono più di quanto ricevi',
+          body: 'Molti creator confondono il CPM dell’inserzionista con l’RPM del creator. Il CPM rappresenta l’importo lordo che un’azienda paga a YouTube per 1.000 impressioni pubblicitarie. Il creator non riceve l’intera cifra: YouTube trattiene il 45% sui video standard e versa il restante 55%. Inoltre, non tutti i passaggi mostrano annunci (adblocker, limiti di inventario locale). L’RPM misura il guadagno netto reale sul tuo conto per ogni 1.000 visualizzazioni totali di video, includendo anche YouTube Premium e gli abbonamenti al canale. Calcola la tua tariffa effettiva con il Calcolatore RPM di YouTube.',
+          keyTakeaway: 'Il CPM è la spesa lorda dell’azienda inserzionista; l’RPM è il tuo guadagno netto reale per 1.000 views totali. Non sottrarre il 45% due volte.',
+        },
+        {
+          heading: '3. I principali fattori che determinano il compenso per 1.000 visualizzazioni',
+          body: 'Cinque fattori chiave determinano il tuo RPM: (1) Posizione geografica del pubblico: spettatori residenti in nazioni con alta spesa pubblicitaria fruttano fino a dieci volte di più rispetto a mercati emergenti. (2) Nicchia di contenuto e intento d’acquisto: argomenti ad alto valore transazionale (finanza, software professionale, corsi) generano aste pubblicitarie molto competitive. (3) Durata del video e annunci mid-roll: video oltre gli 8 minuti consentono di inserire annunci a metà riproduzione. (4) Fascia d’età della community: utenti adulti (25–54 anni) con reddito disponibile attraggono inserzioni più ricche. (5) Stagionalità: nel quarto trimestre (ottobre-dicembre), i budget pubblicitari raddoppiano spesso le tariffe per il periodo natalizio.',
+          keyTakeaway: 'Paese di visione, argomenti ad alta intenzione d’acquisto e video sopra gli 8 minuti sono le leve più decisive per massimizzare l’RPM.',
+        },
+        {
+          heading: '4. Compensi stimati per nicchia: finanza, tecnologia, gaming e vlog',
+          body: 'I budget degli inserzionisti cambiano radicalmente tra generi: (1) Finanza personale, crypto e investimenti: 12,00 € a 35,00 €+; (2) Software, recensioni tech e programmazione: 6,00 € a 18,00 €; (3) Business e marketing online: 7,00 € a 22,00 €; (4) Istruzione, carriera e tutorial: 4,00 € a 10,00 €; (5) Fitness e salute: 3,00 € a 8,00 €; (6) Viaggi, lifestyle e vlog: 1,80 € a 4,50 €; (7) Gaming ed esport: 1,20 € a 3,50 €; (8) Comicità e intrattenimento: 1,20 € a 3,00 €. Puoi simulare le tue stime con il nostro Calcolatore di Guadagni YouTube.',
+          keyTakeaway: 'I contenuti legati al mondo professionale e finanziario rendono da 5 a 10 volte più per visualizzazione rispetto all’intrattenimento generico.',
+        },
+        {
+          heading: '5. Proiezione dei guadagni: da 1.000 a 1.000.000 di visualizzazioni',
+          body: 'Comprendere la progressione matematica aiuta a stabilire traguardi raggiungibili: 1.000 visualizzazioni = 2,00 € a 12,00 € (lunghi) o 0,02 € a 0,07 € (Shorts). 10.000 visualizzazioni = 20,00 € a 120,00 € (lunghi) o 0,20 € a 0,70 € (Shorts). 100.000 visualizzazioni = 200,00 € a 1.200,00 € (lunghi) o 2,00 € a 7,00 € (Shorts). 1.000.000 di visualizzazioni = 2.000,00 € a 12.000,00 €+ (lunghi) o 20,00 € a 70,00 € (Shorts). Per stimare le entrate complessive comprensive di sponsor, affiliazioni e abbonamenti, utilizza il Calcolatore di Monetizzazione YouTube.',
+          keyTakeaway: '1 milione di visualizzazioni su video lunghi frutta in genere da 2.000 € a 12.000 €+ netti, contro solo 20 € - 70 € circa su 1 milione di Shorts.',
+        },
+      ],
+      workedExample: {
+        title: 'Confronto ricavi: Tutorial di programmazione vs Highlights gaming',
+        scenario:
+          'Due creator pubblicano ciascuno un video da 12 minuti che ottiene esattamente 250.000 visualizzazioni nell’arco di 30 giorni. Il Creator A realizza tutorial di sviluppo software per professionisti. Il Creator B pubblica sintesi di videogiochi per un vasto pubblico giovane.',
+        steps: [
+          'Analisi Creator A (Tutorial software): La forte concorrenza tra aziende tech garantisce un RPM netto di 9,20 €. Guadagno complessivo: (250.000 / 1.000) × 9,20 € = 2.300,00 €.',
+          'Analisi Creator B (Gaming): Un pubblico molto giovane e inserzioni generiche producono un RPM di 2,10 €. Guadagno complessivo: (250.000 / 1.000) × 2,10 € = 525,00 €.',
+          'Confronto del divario: Pur registrando esattamente le medesime visualizzazioni (250.000 ciascuno), il Creator A ha incassato 1.775,00 € in più (oltre 4,3 volte tanto) grazie al valore economico del suo pubblico.',
+        ],
+        conclusion:
+          'Il conteggio grezzo delle visualizzazioni è solo metà del quadro. L’intenzione d’acquisto del settore e il pubblico geografico moltiplicano il rendimento per mille views.',
+      },
+      checklist: [
+        {
+          title: 'Verifica l’RPM reale su YouTube Studio',
+          detail: 'Apri YouTube Studio > Analytics > Entrate e controlla l’RPM effettivo degli ultimi 28 giorni invece di affidarti a stime generiche.',
+        },
+        {
+          title: 'Struttura video oltre gli 8 minuti',
+          detail: 'Pianifica video lunghi superiori a 8 minuti per consentire il posizionamento manuale di annunci mid-roll nelle pause naturali.',
+        },
+        {
+          title: 'Usa parole chiave con intento commerciale',
+          detail: 'Tratta recensioni di strumenti, software e guide pratiche che spingono le aziende a fare offerte elevate.',
+        },
+        {
+          title: 'Differenzia la funzione di Shorts e video lunghi',
+          detail: 'Usa la viralità degli Shorts per farti scoprire e porta quegli utenti sui video lunghi per generare entrate pubblicitarie solide.',
+        },
+        {
+          title: 'Modella i tuoi scenari in locale',
+          detail: 'Utilizza i calcolatori gratuiti di Creovly per pianificare le tue entrate in totale riservatezza senza caricare dati sensibili online.',
+        },
+      ],
+      faqs: [
+        {
+          question: 'Quanto paga YouTube per 1.000 visualizzazioni?',
+          answer:
+            'La maggior parte dei creator guadagna tra 2,00 € e 12,00 € ogni 1.000 visualizzazioni sui video lunghi tradizionali. Nelle nicchie ad alto valore come la finanza si possono superare i 20,00 €, mentre gli Shorts pagano tra 0,02 € e 0,07 €.',
+        },
+        {
+          question: 'Quanto si guadagna con 1 milione di visualizzazioni su YouTube?',
+          answer:
+            'Un milione di visualizzazioni su un video lungo genera solitamente tra 2.000 € e 12.000 € di ricavi pubblicitari netti. Nelle nicchie tech o business può superare i 20.000 €. Con i YouTube Shorts, 1 milione di visualizzazioni frutta solo 20 € - 70 € circa.',
+        },
+        {
+          question: 'Qual è la differenza tra CPM e RPM su YouTube?',
+          answer:
+            'Il CPM è la spesa lorda pagata dall’inserzionista prima della commissione del 45% di YouTube. L’RPM è il tuo effettivo guadagno netto per 1.000 visualizzazioni totali, comprensivo di YouTube Premium e abbonamenti.',
+        },
+        {
+          question: 'YouTube paga per tutte le visualizzazioni di un video?',
+          answer:
+            'No. YouTube remunera solo le visualizzazioni monetizzate in cui è stato effettivamente trasmesso un annuncio pubblicitario o quelle effettuate da abbonati a YouTube Premium. Di solito riguarda il 40% - 70% delle visualizzazioni.',
+        },
+        {
+          question: 'Come aumentare il proprio RPM su YouTube?',
+          answer:
+            'Puoi aumentare il tuo RPM concentrandoti su argomenti commerciali (finanza, software, impresa), realizzando video oltre gli 8 minuti con annunci intermedi e attirando pubblico da Paesi ad alto potere d’acquisto.',
         },
       ],
     },
