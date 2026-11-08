@@ -198,6 +198,25 @@ html.dark {
     radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 0.18) 0px, transparent 50%);
 }
 
+/* Homepage hero band: pastel aurora across the top, fading into the canvas. Static. */
+.hero-aurora::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 36rem;
+  pointer-events: none;
+  background-image:
+    radial-gradient(ellipse 45% 55% at 12% 20%, hsla(256, 96%, 72%, 0.45), transparent 70%),
+    radial-gradient(ellipse 40% 50% at 40% 8%, hsla(215, 98%, 64%, 0.38), transparent 70%),
+    radial-gradient(ellipse 40% 55% at 72% 18%, hsla(335, 90%, 74%, 0.38), transparent 70%),
+    radial-gradient(ellipse 35% 50% at 95% 10%, hsla(32, 95%, 70%, 0.40), transparent 70%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 35%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 35%, transparent 100%);
+}
+.dark .hero-aurora::before {
+  opacity: 0.55;
+}
+
 /* Compact homepage introduction; decoration remains static. */
 .home-hero {
   position: relative;

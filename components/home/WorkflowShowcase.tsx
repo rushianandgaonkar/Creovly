@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Button from '@/components/ui/Button';
+import BeforeAfterDemo from './BeforeAfterDemo';
 import { useI18n, LocalizedLink } from '@/lib/i18n';
 
 export default function WorkflowShowcase() {
@@ -76,7 +77,7 @@ export default function WorkflowShowcase() {
       {/* Step Selector Tabs (Top on Mobile, Sidebar on Desktop) */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Step Navigation Cards */}
-        <div className="lg:col-span-5 space-y-3" role="tablist" aria-label="Workflow steps">
+        <div className="lg:col-span-5 space-y-3 lg:sticky lg:top-24" role="tablist" aria-label="Workflow steps">
           {steps.map((step, idx) => {
             const isActive = activeStepIndex === idx;
             return (
@@ -89,28 +90,36 @@ export default function WorkflowShowcase() {
                 className={`w-full text-left p-5 rounded-xl border transition-all duration-200 focus-ring ${
                   isActive
                     ? 'border-[var(--brand-accent)] bg-[var(--bg-canvas-elevated)] shadow-sm'
-                    : 'border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)]/60 hover:bg-[var(--bg-canvas-elevated)] hover:border-[var(--border-hairline-strong)]'
+                    : 'border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] hover:border-[var(--border-hairline-strong)]'
                 }`}
               >
-                <div className="flex items-center justify-between gap-2 mb-2">
+                <div className="flex items-start gap-4">
                   <span
-                    className={`text-xs font-semibold tracking-wide ${
-                      isActive ? 'text-[var(--brand-accent)]' : 'text-[var(--text-muted)]'
+                    aria-hidden="true"
+                    className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold [font-variant-numeric:tabular-nums] transition-colors ${
+                      isActive
+                        ? 'bg-[var(--brand-accent)] text-white'
+                        : 'bg-[var(--bg-canvas-subtle)] text-[var(--text-body)] border border-[var(--border-hairline)]'
                     }`}
                   >
-                    Stage {step.number} &bull; {step.tag}
+                    {step.number}
                   </span>
-                  {isActive && (
-                    <span className="w-2 h-2 rounded-full bg-[var(--brand-accent)]" />
-                  )}
+                  <span className="min-w-0">
+                    <span
+                      className={`block text-xs font-semibold tracking-wide mb-1 ${
+                        isActive ? 'text-[var(--brand-accent)]' : 'text-[var(--text-muted)]'
+                      }`}
+                    >
+                      Stage {step.number} &bull; {step.tag}
+                    </span>
+                    <span className="block text-base font-semibold tracking-tight text-[var(--text-ink)]">
+                      {step.title}
+                    </span>
+                    <span className="block mt-1 text-[13px] leading-relaxed text-[var(--text-body)] line-clamp-2">
+                      {step.description}
+                    </span>
+                  </span>
                 </div>
-                <span
-                  className={`block text-base font-semibold tracking-tight transition-colors ${
-                    isActive ? 'text-[var(--text-ink)]' : 'text-[var(--text-body)]'
-                  }`}
-                >
-                  {step.title}
-                </span>
               </button>
             );
           })}
@@ -144,82 +153,7 @@ export default function WorkflowShowcase() {
                 Illustrative example with sample media. Your results depend on your own files.
               </p>
               {activeStepIndex === 0 && (
-                /* Step 1 Graphic: Side-by-Side Before/After Visual Comparison */
-                <div className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {/* Before Frame: Raw Uncompressed Export with Alert */}
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between text-xs">
-                        <span className="font-semibold text-red-600 dark:text-red-400">
-                          Before: Raw Export
-                        </span>
-                        <span className="text-[11px] font-semibold text-red-700 dark:text-red-300 bg-red-500/10 px-2 py-0.5 rounded border border-red-500/20">
-                          4.2 MB &bull; Mobile Limit Exceeded
-                        </span>
-                      </div>
-                      <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-red-500/40 shadow-sm bg-black">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src="/examples/compressor-source.webp"
-                          alt="Before optimization uncompressed thumbnail"
-                          width={320}
-                          height={180}
-                          className="w-full h-full object-cover opacity-85"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                        {/* Danger Indicator covering critical words */}
-                        <div className="absolute bottom-2 right-2 bg-red-600/95 text-white text-[10px] font-semibold px-2 py-1 rounded shadow-md flex items-center gap-1">
-                          <span>14:20 Badge Covers Title Hook</span>
-                        </div>
-                      </div>
-                      <p className="text-[11px] text-[var(--text-muted)]">
-                        Exceeds YouTube Studio mobile 2 MB limit (desktop supports up to 50 MB). Critical text obscured behind timestamp.
-                      </p>
-                    </div>
-
-                    {/* After Frame: Creovly Verified & Compressed */}
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between text-xs">
-                        <span className="font-semibold text-emerald-600 dark:text-emerald-400">
-                          After: Optimized
-                        </span>
-                        <span className="text-[11px] font-semibold text-emerald-700 dark:text-emerald-300 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
-                          1.1 MB &bull; Ready
-                        </span>
-                      </div>
-                      <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-emerald-500/50 shadow-sm bg-black">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src="/examples/compressor-source.webp"
-                          alt="After optimization thumbnail example"
-                          width={320}
-                          height={180}
-                          className="w-full h-full object-cover"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                        {/* YouTube Timestamp badge placed safely */}
-                        <div className="absolute bottom-2 right-2 bg-black/90 text-white text-[10px] font-medium px-1.5 py-0.5 rounded shadow">
-                          14:20
-                        </div>
-                        {/* Verified Safe Zone Overlay Tag */}
-                        <div className="absolute top-2 left-2 bg-emerald-600 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded shadow">
-                          1280&times;720 HD Pass
-                        </div>
-                      </div>
-                      <p className="text-[11px] text-[var(--text-muted)]">
-                        Example: 74% smaller at 1.1 MB, with the timestamp moved clear of the title text.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Benchmark Bar */}
-                  <div className="p-3 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] flex items-center justify-between text-xs">
-                    <span className="text-[var(--text-muted)]">YouTube Mobile Limit: 2,000,000 bytes (≤ 50 MB Desktop)</span>
-                    <span className="text-emerald-600 dark:text-emerald-400 font-bold">1,153,433 bytes (Universal Mobile Compatibility)</span>
-                  </div>
-                </div>
+                <BeforeAfterDemo />
               )}
 
               {activeStepIndex === 1 && (
@@ -338,10 +272,7 @@ export default function WorkflowShowcase() {
 
             {/* Checklist Highlights */}
             <div className="space-y-2">
-              <span className="text-xs uppercase tracking-wider text-[var(--text-muted)] font-semibold block">
-                Pre-Publish Verification Standards:
-              </span>
-              <ul className="text-xs text-[var(--text-body)] space-y-1.5">
+              <ul className="text-[13px] text-[var(--text-body)] space-y-2">
                 {activeStep.highlights.map((item, idx) => (
                   <li key={idx} className="flex items-center gap-2">
                     <svg className="w-3.5 h-3.5 text-emerald-500 shrink-0" viewBox="0 0 20 20" fill="currentColor">

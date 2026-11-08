@@ -1,7 +1,6 @@
 'use client';
 
 import Button from '@/components/ui/Button';
-import RippleBackground from '@/components/ui/interactive-ripple-background';
 import { toolRegistry } from '@/config/site';
 import StudioHeroWorkspace from './StudioHeroWorkspace';
 import { useI18n, LocalizedLink } from '@/lib/i18n';
@@ -39,8 +38,8 @@ export default function CreatorHero({
   const resolvedExploreTools = exploreToolsText || t.home.hero.exploreToolsText.replace('{count}', String(count));
 
   return (
-    <section className="relative overflow-hidden pt-8 pb-4 sm:pt-14 sm:pb-10">
-      <RippleBackground className="py-2">
+    <section className="hero-aurora relative overflow-hidden pt-8 pb-4 sm:pt-16 sm:pb-10">
+      <div className="relative py-2">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center space-y-6">
           <div className="max-w-3xl mx-auto">
             {/* Ambient Floating Pill Badge */}
@@ -49,7 +48,7 @@ export default function CreatorHero({
               <span className="font-medium">{resolvedBadge}</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-[-0.035em] text-[var(--text-ink)] leading-[1.08]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-[-0.045em] text-[var(--text-ink)] leading-[1.05]">
               <span>{resolvedTitle}</span>
               <span className="sr-only"> &mdash; </span>
               <span className="block text-xl sm:text-3xl font-medium text-[var(--text-muted)] mt-2.5 tracking-normal">
@@ -86,7 +85,7 @@ export default function CreatorHero({
             <StudioHeroWorkspace />
           </div>
         </div>
-      </RippleBackground>
+      </div>
     </section>
   );
 }
