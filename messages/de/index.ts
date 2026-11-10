@@ -1342,10 +1342,10 @@ export const messagesDe: Messages = {
     },
     items: {
       'youtube-thumbnail-blueprint': {
-        title: 'Technischer Leitfaden für YouTube-Thumbnails: Maße, Limits und CTR',
+        title: 'YouTube-Thumbnail-Größe: 1280×720, 2-MB-Limit & Klickrate',
         category: 'Visuelle Gestaltung',
         readTime: '6 Min. Lesezeit',
-        description: 'Offizielle Vorgaben für 16:9-Format, 2-MB-Mobilgrenze und Lesbarkeit auf Smartphones zur Maximierung der Klickrate.',
+        description: 'Die YouTube-Thumbnail-Größe beträgt 1280×720 Pixel im Format 16:9, unter 2 MB, als JPG, PNG oder GIF. Offizielle Limits, sichere Zonen sowie Verkleinern und Komprimieren.',
       },
       'decoding-youtube-rpm': {
         title: 'YouTube RPM entschlüsselt: Was Creator 2026 wirklich verdienen',

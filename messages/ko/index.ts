@@ -1342,10 +1342,10 @@ export const messagesKo: Messages = {
     },
     items: {
       'youtube-thumbnail-blueprint': {
-        title: 'YouTube 썸네일 기술 규격 청사진: 파일 한도, 해상도 및 CTR 최적화',
+        title: '유튜브 썸네일 크기: 1280×720, 2MB 제한과 CTR 팁',
         category: '시각 디자인',
         readTime: '6분 분량',
-        description: '16:9 비율 권장 규격, 모바일 2MB 한도, 클릭률(CTR)을 극대화하는 스마트폰 화면 가독성 설계 공식 지침.',
+        description: '유튜브 썸네일 크기는 1280×720 픽셀, 비율 16:9, 2MB 미만, JPG·PNG·GIF 형식입니다. 공식 제한, 안전 영역, 리사이즈와 압축 방법을 안내합니다.',
       },
       'decoding-youtube-rpm': {
         title: 'YouTube RPM 완벽 분석: 2026년 크리에이터 정산 수익의 실제 구조',

@@ -1342,10 +1342,10 @@ export const messagesJa: Messages = {
     },
     items: {
       'youtube-thumbnail-blueprint': {
-        title: 'YouTubeサムネイル完全設計書: サイズ制限、解像度、CTR最大化',
+        title: 'YouTubeサムネイルのサイズ：1280×720、2MB制限とCTRのコツ',
         category: 'ビジュアル表現',
         readTime: '読了目安 6分',
-        description: '16:9比率、モバイル2MB上限、スマホ表示での視認性を考慮したクリック率（CTR）改善の公式指針。',
+        description: 'YouTubeサムネイルのサイズは1280×720ピクセル、比率16:9、2MB未満、JPG・PNG・GIF形式。公式の制限、セーフゾーン、リサイズと圧縮の方法を解説します。',
       },
       'decoding-youtube-rpm': {
         title: 'YouTube RPMの仕組みを解剖: クリエイターの真の手取り収益とは（2026年版）',

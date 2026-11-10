@@ -8,10 +8,12 @@ import { calculatorDefinitions, type CalculatorKind } from '@/lib/creator-calcul
 import { calculatorFaqs } from '@/config/calculator-faqs';
 import { useI18n, LocalizedLink } from '@/lib/i18n';
 import { toolSeoContent } from '@/config/tool-guidance-i18n';
+import { revenueExplainer } from '@/config/revenue-explainer';
 
 export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; slug: string }) {
   const { t, locale } = useI18n();
   const seo = toolSeoContent[locale] || toolSeoContent.en;
+  const rx = revenueExplainer[locale] || revenueExplainer.en;
   const tool = getTool(slug);
   const definition = calculatorDefinitions[kind];
   const watch = kind === 'watch-hours';
@@ -62,6 +64,29 @@ export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; s
               <p className="text-xs text-[var(--text-body)] mt-1 mb-2">
                 {seo.calculators.revenueDesc}
               </p>
+              <div className="space-y-3 mt-3">
+                <h2 className="text-base font-bold text-[var(--text-ink)]">{rx.rpmHeading}</h2>
+                <p>{rx.rpmBody}</p>
+                <h2 className="text-base font-bold text-[var(--text-ink)]">{rx.exampleHeading}</h2>
+                <p>{rx.exampleBody}</p>
+                <h2 className="text-base font-bold text-[var(--text-ink)]">{rx.relatedHeading}</h2>
+                <ul className="list-disc pl-5">
+                  {(
+                    [
+                      ['/tools/youtube-rpm-calculator', rx.rpm],
+                      ['/tools/youtube-monetization-calculator', rx.monetization],
+                      ['/tools/youtube-watch-hours-calculator', rx.watchHours],
+                    ] as const
+                  ).map(([href, item]) => (
+                    <li key={href}>
+                      <LocalizedLink href={href} className="text-[var(--brand-accent)] underline hover:no-underline font-medium">
+                        {item.label}
+                      </LocalizedLink>{' '}
+                      {item.note}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           )}
           {kind === 'rpm' && (

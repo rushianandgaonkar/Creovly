@@ -34,11 +34,11 @@ export const guides = {
   },
   items: {
     'youtube-thumbnail-blueprint': {
-      title: 'The YouTube Thumbnail Blueprint: File Limits, Dimensions & CTR',
+      title: 'YouTube Thumbnail Size: 1280×720 Dimensions, 2 MB Limit & CTR Tips',
       category: 'Visual Packaging',
       readTime: '6 min read',
       description:
-        'Verified platform guidelines for 1280×720 aspect ratios, 2 MB mobile upload limits, and mobile-first legibility to maximize visual clarity.',
+        'YouTube thumbnail size is 1280×720 pixels at 16:9, under 2 MB, in JPG, PNG or GIF. See the official limits, safe zones and how to resize or compress yours.',
     },
     'decoding-youtube-rpm': {
       title: 'Decoding YouTube RPM: How Creators Actually Get Paid in 2026',

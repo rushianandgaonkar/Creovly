@@ -41,12 +41,12 @@ export interface GuideItem {
 export const guides: GuideItem[] = [
   {
     slug: 'youtube-thumbnail-blueprint',
-    title: 'The YouTube Thumbnail Blueprint: File Limits, Dimensions & CTR',
+    title: 'YouTube Thumbnail Size: 1280×720 Dimensions, 2 MB Limit & CTR Tips',
     seoTitle: 'YouTube Thumbnail Size, Limits & CTR Guide',
     category: 'Visual Packaging',
     readTime: '6 min read',
     description:
-      'Verified platform guidelines for 1280×720 aspect ratios, 2 MB mobile upload limits, and mobile-first legibility to maximize visual clarity.',
+      'YouTube thumbnail size is 1280×720 pixels at 16:9, under 2 MB, in JPG, PNG or GIF. See the official limits, safe zones and how to resize or compress yours.',
     lastVerified: 'October 2026',
     officialSources: [
       {
@@ -72,12 +72,12 @@ export const guides: GuideItem[] = [
         keyTakeaway: 'Design for 180-pixel mobile rendered width. Use high-contrast silhouettes and bold typography that remain legible at thumbnail scale.',
       },
       {
-        heading: '3. Interface Dead Zones & The Timestamp Overlay',
+        heading: '4. Interface Dead Zones & The Timestamp Overlay',
         body: 'Every YouTube thumbnail is overlaid with native player interface elements when displayed in browse, search, and channel feeds. The most critical obstruction is the video duration badge in the bottom-right corner (e.g., "14:28"). If you place faces, primary hook text, branding logos, or punchline visual cues in the lower-right 20% width and 15% height of your canvas, YouTube will inevitably cover them with the timestamp box. Similarly, keep essential visual markers slightly inset from the extreme edges to prevent awkward clipping on various device border radiuses.',
         keyTakeaway: 'Keep the bottom-right 20% width and 15% height completely clear of text, faces, or essential storytelling details.',
       },
       {
-        heading: '4. Compression Without Visual Artifacts',
+        heading: '5. Compression Without Visual Artifacts',
         body: 'Large PNG exports from graphic design tools frequently reach 3 MB to 5 MB due to uncompressed photographic layers. Instead of downscaling your dimensions below 1280×720, use client-side lossy Canvas compression with high-efficiency JPEG encoding. Quality settings between 82% and 90% typically reduce file sizes by 60% to 80% with zero visible artifacting at standard viewing distances, easily clearing YouTube mobile upload caps.',
         keyTakeaway: 'Preserve full 1280×720 dimensions and achieve sub-2 MB file sizes through controlled JPEG encoder quality rather than canvas downscaling.',
       },

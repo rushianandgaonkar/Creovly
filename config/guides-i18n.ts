@@ -45,11 +45,11 @@ export interface LocalizedGuideData {
 export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>> = {
   en: {
     'youtube-thumbnail-blueprint': {
-      title: 'The YouTube Thumbnail Blueprint: File Limits, Dimensions & CTR',
+      title: 'YouTube Thumbnail Size: 1280×720 Dimensions, 2 MB Limit & CTR Tips',
       seoTitle: 'YouTube Thumbnail Size, Limits & CTR Guide',
       category: 'Visual Packaging',
       readTime: '6 min read',
-      description: 'Verified platform guidelines for 1280×720 aspect ratios, 2 MB mobile upload limits, and mobile-first legibility to maximize visual clarity.',
+      description: 'YouTube thumbnail size is 1280×720 pixels at 16:9, under 2 MB, in JPG, PNG or GIF. See the official limits, safe zones and how to resize or compress yours.',
       officialSources: [
         {
           label: 'YouTube Help: Add video thumbnails',
@@ -602,11 +602,11 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
 
   es: {
     'youtube-thumbnail-blueprint': {
-      title: 'Guía técnica de miniaturas de YouTube: Límites, dimensiones y CTR',
+      title: 'Tamaño de miniatura de YouTube: 1280×720, límite de 2 MB y CTR',
       seoTitle: 'Miniaturas de YouTube: tamaño, límites y CTR',
       category: 'Presentación visual',
       readTime: '6 min de lectura',
-      description: 'Pautas oficiales de la plataforma para proporciones 16:9, límite de 2 MB en móviles y legibilidad móvil para maximizar el CTR.',
+      description: 'El tamaño de miniatura de YouTube es 1280×720 píxeles en 16:9, menos de 2 MB, en JPG, PNG o GIF. Consulta límites oficiales, zonas seguras y cómo redimensionar o comprimir.',
       officialSources: [
         {
           label: 'Ayuda de YouTube: Añadir miniaturas de vídeo',
@@ -898,10 +898,10 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
 
   ja: {
     'youtube-thumbnail-blueprint': {
-      title: 'YouTubeサムネイル設計図：容量制限・推奨解像度・CTR最大化',
+      title: 'YouTubeサムネイルのサイズ：1280×720、2MB制限とCTRのコツ',
       category: 'ビジュアル設計',
       readTime: '読了目安 6分',
-      description: 'アスペクト比16:9、解像度1280×720、モバイル2MB上限、スマホ画面での視認性向上に関する公式ガイドライン。',
+      description: 'YouTubeサムネイルのサイズは1280×720ピクセル、比率16:9、2MB未満、JPG・PNG・GIF形式。公式の制限、セーフゾーン、リサイズと圧縮の方法を解説します。',
       officialSources: [
         {
           label: 'YouTubeヘルプ：動画のサムネイルを追加する',
@@ -1186,11 +1186,11 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
 
   fr: {
     'youtube-thumbnail-blueprint': {
-      title: 'Le guide des miniatures YouTube : dimensions, limites et CTR',
+      title: 'Taille de miniature YouTube : 1280×720, limite de 2 Mo et CTR',
       seoTitle: 'Miniatures YouTube : dimensions, limites et CTR',
       category: 'Packaging visuel',
       readTime: '6 min de lecture',
-      description: 'Spécifications officielles pour le ratio 16:9, la limite de 2 Mo sur mobile et la lisibilité smartphone afin de maximiser le taux de clics.',
+      description: 'La taille d’une miniature YouTube est de 1280×720 pixels en 16:9, sous 2 Mo, au format JPG, PNG ou GIF. Limites officielles, zones de sécurité, redimensionnement et compression.',
       officialSources: [
         {
           label: 'Aide YouTube : Ajouter des miniatures vidéo',
@@ -1477,11 +1477,11 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
 
   de: {
     'youtube-thumbnail-blueprint': {
-      title: 'Der YouTube-Thumbnail-Leitfaden: Dateilimits, Maße & Klickrate',
+      title: 'YouTube-Thumbnail-Größe: 1280×720, 2-MB-Limit & Klickrate',
       seoTitle: 'YouTube-Thumbnails: Maße, Limits & Klickrate',
       category: 'Visuelle Gestaltung',
       readTime: '6 Min. Lesezeit',
-      description: 'Offizielle Plattform-Richtlinien für 16:9-Format, 1280×720 Pixel, 2-MB-Upload-Limit auf Mobilgeräten und Lesbarkeit auf Smartphones.',
+      description: 'Die YouTube-Thumbnail-Größe beträgt 1280×720 Pixel im Format 16:9, unter 2 MB, als JPG, PNG oder GIF. Offizielle Limits, sichere Zonen sowie Verkleinern und Komprimieren.',
       officialSources: [
         {
           label: 'YouTube-Hilfe: Benutzerdefinierte Video-Thumbnails hinzufügen',
@@ -1768,11 +1768,11 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
 
   pt: {
     'youtube-thumbnail-blueprint': {
-      title: 'Guia definitivo de miniaturas do YouTube: limites, dimensões e CTR',
+      title: 'Tamanho da miniatura do YouTube: 1280×720, limite de 2 MB e CTR',
       seoTitle: 'Miniaturas do YouTube: tamanho, limites e CTR',
       category: 'Identidade visual',
       readTime: '6 min de leitura',
-      description: 'Diretrizes oficiais da plataforma para proporção 16:9, limite de 2 MB no celular e legibilidade móvel para maximizar sua taxa de cliques.',
+      description: 'O tamanho da miniatura do YouTube é 1280×720 pixels em 16:9, menos de 2 MB, em JPG, PNG ou GIF. Limites oficiais, zonas seguras e como redimensionar ou comprimir.',
       officialSources: [
         {
           label: 'Ajuda do YouTube: Adicionar miniaturas de vídeo',
@@ -2059,10 +2059,10 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
 
   ko: {
     'youtube-thumbnail-blueprint': {
-      title: '유튜브 썸네일 완벽 가이드: 용량 한도, 해상도 및 CTR 최적화',
+      title: '유튜브 썸네일 크기: 1280×720, 2MB 제한과 CTR 팁',
       category: '비주얼 패키징',
       readTime: '6분 분량',
-      description: '16:9 화면비, 1280×720 권장 해상도, 모바일 2MB 업로드 한도 및 모바일 가독성 향상을 위한 유튜브 공식 기준 가이드.',
+      description: '유튜브 썸네일 크기는 1280×720 픽셀, 비율 16:9, 2MB 미만, JPG·PNG·GIF 형식입니다. 공식 제한, 안전 영역, 리사이즈와 압축 방법을 안내합니다.',
       officialSources: [
         {
           label: 'YouTube 고객센터: 동영상 썸네일 추가',
@@ -2347,11 +2347,11 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
 
   it: {
     'youtube-thumbnail-blueprint': {
-      title: 'Guida definitiva alle miniature YouTube: limiti, dimensioni e CTR',
+      title: 'Dimensioni miniatura YouTube: 1280×720, limite 2 MB e CTR',
       seoTitle: 'Miniature YouTube: dimensioni, limiti e CTR',
       category: 'Packaging visivo',
       readTime: '6 min di lettura',
-      description: 'Linee guida ufficiali della piattaforma per proporzioni 16:9, limite di 2 MB su mobile e leggibilità su smartphone per massimizzare il CTR.',
+      description: 'Le dimensioni di una miniatura YouTube sono 1280×720 pixel in 16:9, meno di 2 MB, in JPG, PNG o GIF. Limiti ufficiali, zone sicure e come ridimensionare o comprimere.',
       officialSources: [
         {
           label: 'Guida di YouTube: Aggiungere miniature dei video',

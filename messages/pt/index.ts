@@ -1342,10 +1342,10 @@ export const messagesPt: Messages = {
     },
     items: {
       'youtube-thumbnail-blueprint': {
-        title: 'Guia técnico de miniaturas do YouTube: Limites, dimensões e CTR',
+        title: 'Tamanho da miniatura do YouTube: 1280×720, limite de 2 MB e CTR',
         category: 'Apresentação visual',
         readTime: '6 min de leitura',
-        description: 'Orientações oficiais sobre proporção 16:9, limite de 2 MB em telemóveis e legibilidade em ecrãs pequenos para elevar o CTR.',
+        description: 'O tamanho da miniatura do YouTube é 1280×720 pixels em 16:9, menos de 2 MB, em JPG, PNG ou GIF. Limites oficiais, zonas seguras e como redimensionar ou comprimir.',
       },
       'decoding-youtube-rpm': {
         title: 'Descodificar o RPM do YouTube: Como os criadores são realmente pagos em 2026',
