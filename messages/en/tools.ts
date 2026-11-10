@@ -203,8 +203,8 @@ export const tools = {
         answer: 'Enter your niche keywords, pick a content category, and choose a style archetype. The generator combines creative formulas, linguistic patterns, and brandable affixes locally in your browser to produce instant name suggestions.',
       },
       {
-        question: 'Can I use an AI YouTube channel name generator for free?',
-        answer: 'Yes! Creovly provides a free, AI-inspired algorithmic channel name generator with zero registration, no credits, and no paywalls. You can generate, remix, and copy unlimited channel name ideas.',
+        question: 'Is the YouTube channel name generator free to use?',
+        answer: 'Yes! Creovly provides a free, rule-based channel name generator with zero registration, no credits, and no paywalls. You can generate, remix, and copy unlimited channel name ideas.',
       },
       {
         question: 'What makes a good YouTube channel name?',

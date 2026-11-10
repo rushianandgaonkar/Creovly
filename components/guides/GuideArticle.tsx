@@ -10,6 +10,16 @@ import WorkedExampleCard from './WorkedExampleCard';
 import ActionChecklist from './ActionChecklist';
 import { useI18n, LocalizedLink } from '@/lib/i18n';
 import { getLocalizedGuide } from '@/config/guides-i18n';
+import { translations } from '@/config/i18n';
+import { toolSeoContent } from '@/config/tool-guidance-i18n';
+import { guideLinks } from '@/config/guide-links';
+
+// Guides that have a companion tool: slug -> CTA key and tool slugs.
+const companionTools: Record<string, { cta: 'thumbnail' | 'banner' | 'shorts'; tools: string[] }> = {
+  'youtube-thumbnail-blueprint': { cta: 'thumbnail', tools: ['youtube-thumbnail-resizer', 'youtube-thumbnail-compressor'] },
+  'youtube-banner-size': { cta: 'banner', tools: ['youtube-banner-size'] },
+  'youtube-shorts-safe-zone': { cta: 'shorts', tools: ['youtube-shorts-safe-zone'] },
+};
 
 interface GuideArticleProps {
   guide: GuideItem;
@@ -28,6 +38,8 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
   const displayWorkedExample = locGuide?.workedExample || guide.workedExample;
   const displayChecklist = locGuide?.checklist || guide.checklist;
   const displayFaqs = locGuide?.faqs || [];
+  const companion = companionTools[guide.slug];
+  const specs = (toolSeoContent[locale] || toolSeoContent.en).thumbnailSpecs;
 
   // Map official sources, using localized descriptions where available
   const displaySources = guide.officialSources.map((source, idx) => ({
@@ -80,6 +92,50 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
           {displayDesc}
         </p>
       </PageHero>
+
+      {companion && (
+        <p className="mb-8 -mt-4 text-sm text-[var(--text-body)]">
+          {guideLinks[locale]?.cta[companion.cta] ?? guideLinks.en.cta[companion.cta]}{' '}
+          {companion.tools.map((slug, i) => {
+            const entry = toolRegistry.find((tool) => tool.slug === slug);
+            if (!entry) return null;
+            return (
+              <React.Fragment key={slug}>
+                {i > 0 && ' · '}
+                <LocalizedLink href={entry.href} className="font-medium text-[var(--brand-accent)] underline hover:no-underline">
+                  {translations[locale]?.tools?.[slug]?.title || entry.title}
+                </LocalizedLink>
+              </React.Fragment>
+            );
+          })}
+        </p>
+      )}
+
+      {guide.slug === 'youtube-thumbnail-blueprint' && (
+        <section className="mb-10 overflow-x-auto" aria-labelledby="thumb-specs-heading">
+          <h2 id="thumb-specs-heading" className="text-lg font-bold tracking-tight text-[var(--text-ink)] mb-3">
+            {specs.heading}
+          </h2>
+          <table className="w-full text-sm border border-[var(--border-hairline)] rounded-xl overflow-hidden">
+            <tbody className="divide-y divide-[var(--border-hairline)]">
+              {[
+                [specs.recommendedSize, specs.recommendedSizeVal],
+                [specs.aspectRatio, specs.aspectRatioVal],
+                [specs.maxSize, specs.maxSizeVal],
+                [specs.formats, specs.formatsVal],
+              ].map(([label, value]) => (
+                <tr key={label}>
+                  <th scope="row" className="text-left font-medium text-[var(--text-muted)] bg-[var(--bg-canvas-subtle)] px-4 py-2.5 w-2/5">
+                    {label}
+                  </th>
+                  <td className="px-4 py-2.5 font-semibold text-[var(--text-ink)]">{value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p className="mt-2 text-xs text-[var(--text-muted)]">{specs.note}</p>
+        </section>
+      )}
 
       {/* Official Documentation Citations */}
       {displaySources.length > 0 && (

@@ -24,6 +24,7 @@ const VALID_TOOL_IDS = new Set([
   'youtube-thumbnail-resizer',
   'logo-background-remover',
   'youtube-shorts-safe-zone',
+  'youtube-banner-size',
   'youtube-title-checker',
   'youtube-revenue-calculator',
   'youtube-rpm-calculator',

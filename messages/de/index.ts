@@ -398,8 +398,8 @@ export const messagesDe: Messages = {
           answer: 'Gib deine Themen-Keywords ein, wähle Kategorie und Stil. Der Generator kombiniert kreative Formeln, linguistische Muster und einprägsame Begriffe direkt im Browser zu sofortigen Namensvorschlägen.',
         },
         {
-          question: 'Kann ich den KI-Kanalnamen-Generator kostenlos nutzen?',
-          answer: 'Ja! Creovly bietet einen kostenlosen, KI-inspirierten Generator ohne Anmeldung, ohne Guthaben und ohne Bezahlschranken. Du kannst unbegrenzt viele Namen generieren und kopieren.',
+          question: 'Kann ich den Kanalnamen-Generator kostenlos nutzen?',
+          answer: 'Ja! Creovly bietet einen kostenlosen, regelbasierten Generator ohne Anmeldung, ohne Guthaben und ohne Bezahlschranken. Du kannst unbegrenzt viele Namen generieren und kopieren.',
         },
         {
           question: 'Was macht einen guten YouTube-Kanalnamen aus?',

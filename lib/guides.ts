@@ -57,7 +57,7 @@ export const guides: GuideItem[] = [
     ],
     contentSections: [
       {
-        heading: '1. YouTube thumbnail size and dimensions: 1280×720',
+        heading: '1. YouTube thumbnail size in 2026: 1280×720 pixels, 16:9, under 2 MB',
         body: 'According to official YouTube platform specifications, the standard YouTube thumbnail size is 1280×720 pixels with a 16:9 aspect ratio and a minimum width of 640 pixels. Supported file formats include JPG, GIF, and PNG (with JPEG or PNG officially recommended). A critical distinction exists regarding upload file size: mobile video thumbnail uploads enforce a strict 2 MB ceiling, whereas desktop web uploads accommodate files up to 50 MB. For YouTube Shorts, thumbnails use a 9:16 vertical aspect ratio (1080×1920); custom uploads cannot be added after publishing, so you must select your preferred frame during mobile upload. To update existing videos, see our walkthrough on how to change a YouTube thumbnail.',
         keyTakeaway: 'Standardize on a YouTube thumbnail size of 1280×720 (16:9) in JPEG or PNG, keeping file weight under 2 MB for universal mobile and desktop upload compatibility.',
       },
@@ -371,6 +371,7 @@ export const guides: GuideItem[] = [
       },
     ],
     relatedToolIds: [
+      'youtube-banner-size',
       'youtube-thumbnail-resizer',
       'youtube-thumbnail-compressor',
       'logo-background-remover',

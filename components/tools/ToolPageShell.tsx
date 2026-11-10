@@ -14,6 +14,7 @@ import ToolSteps from './ToolSteps';
 import { useI18n, LocalizedLink } from '@/lib/i18n';
 import { translations } from '@/config/i18n';
 import { toolSeoContent } from '@/config/tool-guidance-i18n';
+import { guideLinks } from '@/config/guide-links';
 
 export interface ToolPageShellProps {
   title: string;
@@ -130,6 +131,16 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
   };
 
   const seo = toolSeoContent[locale] || toolSeoContent.en;
+  const gl = guideLinks[locale] || guideLinks.en;
+  const guideSentence = (href: string, text: { lead: string; link: string; end: string }) => (
+    <p className="text-xs pt-1">
+      {text.lead}{' '}
+      <LocalizedLink href={href} className="text-[var(--brand-accent)] underline hover:no-underline font-medium">
+        {text.link}
+      </LocalizedLink>
+      {text.end}
+    </p>
+  );
 
   const renderGuidance = () => {
     if (toolSlug === 'youtube-thumbnail-compressor' && t.tools.guidance?.compressor) {
@@ -185,12 +196,7 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
           <p>{g.p2}</p>
           <p>{g.p3}</p>
           <p>{g.p4}</p>
-          <p className="text-xs pt-1">
-            Need official dimension and file specifications? Read our guide to{' '}
-            <LocalizedLink href="/guides/youtube-thumbnail-blueprint" className="text-[var(--brand-accent)] underline hover:no-underline font-medium">
-              YouTube thumbnail size and dimensions
-            </LocalizedLink>.
-          </p>
+          {guideSentence('/guides/youtube-thumbnail-blueprint', gl.resizer)}
         </>
       );
     }
@@ -242,6 +248,7 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
               {specs.downloadTemplateBtn}
             </a>
           </div>
+          {guideSentence('/guides/youtube-banner-size', gl.banner)}
         </>
       );
     }
@@ -281,12 +288,7 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
           </div>
           <p>{g.p2}</p>
           <p>{g.p3}</p>
-          <p className="text-xs pt-1">
-            Learn UI overlay dimensions and button clear areas in our guide to the{' '}
-            <LocalizedLink href="/guides/youtube-shorts-safe-zone" className="text-[var(--brand-accent)] underline hover:no-underline font-medium">
-              YouTube Shorts safe zone
-            </LocalizedLink>.
-          </p>
+          {guideSentence('/guides/youtube-shorts-safe-zone', gl.shorts)}
         </>
       );
     }

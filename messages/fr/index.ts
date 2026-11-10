@@ -398,8 +398,8 @@ export const messagesFr: Messages = {
           answer: 'Saisissez vos mots-clés, sélectionnez une thématique et un style. L’outil combine des formules créatives, des motifs linguistiques et des affixes percutants directement dans votre navigateur pour vous proposer des noms originaux instantanément.',
         },
         {
-          question: 'Puis-je utiliser un générateur de nom YouTube avec IA gratuitement ?',
-          answer: 'Oui ! Creovly propose un générateur algorithmique inspiré de l’IA, sans inscription, sans crédits et totalement gratuit. Vous pouvez générer, varier et copier autant d’idées que vous le souhaitez.',
+          question: 'Puis-je utiliser un générateur de nom YouTube gratuitement ?',
+          answer: 'Oui ! Creovly propose un générateur basé sur des règles, sans inscription, sans crédits et totalement gratuit. Vous pouvez générer, varier et copier autant d’idées que vous le souhaitez.',
         },
         {
           question: 'Qu’est-ce qui caractérise un bon nom de chaîne YouTube ?',

@@ -226,7 +226,7 @@ export const translations: Record<Locale, I18nContent> = {
     },
     checklist: {
       title: 'Pre-Publish Creator Checklist',
-      description: 'Prepare your next YouTube upload with an interactive checklist that saves progress in your browser.',
+      description: 'Prepare your next YouTube upload with an interactive pre-publish checklist covering title, thumbnail, description, tags and settings. Progress is saved in your browser.',
       heading: 'Pre-Publish Creator Checklist',
       subheading: 'Systematic pre-flight verification for high-performing uploads',
     },
@@ -283,15 +283,15 @@ export const translations: Record<Locale, I18nContent> = {
       },
       'youtube-thumbnail-resizer': {
         title: 'YouTube Thumbnail Resizer',
-        seoTitle: 'YouTube Thumbnail Size: Free 1280x720 Resizer',
+        seoTitle: 'Free YouTube Thumbnail Resizer: Resize to 1280x720',
         description: 'YouTube thumbnail size is 1280x720 pixels (16:9, under 2 MB). Use this free thumbnail resizer to fit any image to that size, preview framing, and download it.',
         categoryLabel: 'Thumbnail Tools',
         keywords: ['youtube thumbnail resizer', 'youtube thumbnail size converter', 'youtube thumbnail size', 'youtube thumbnail dimensions', 'youtube thumbnail aspect ratio', 'youtube banner resizer', '1280x720 thumbnail resize', 'youtube cover photo resizer', 'youtube image dimension tool'],
       },
       'youtube-banner-size': {
         title: 'YouTube Banner Size Checker & Resizer',
-        seoTitle: 'YouTube Banner Size: 2560x1440 Template',
-        description: 'YouTube banner size: 2560x1440 px, 1546x423 px safe area, 6 MB max. Check TV, desktop and mobile crops, resize your image, and get a free overlay template.',
+        seoTitle: 'YouTube Banner Size Checker, Resizer & Template',
+        description: 'YouTube banner size checker and resizer: 2560x1440 px, 1546x423 px safe area, 6 MB max. Preview TV, desktop and mobile crops and get a free overlay template.',
         categoryLabel: 'Thumbnail Tools',
         keywords: ['youtube banner size', 'youtube banner size for all devices', 'youtube banner size template', 'youtube banner size for mobile', 'youtube banner size converter'],
       },
@@ -305,23 +305,23 @@ export const translations: Record<Locale, I18nContent> = {
       'youtube-channel-name-generator': {
         title: 'YouTube Channel Name Generator',
         seoTitle: 'Free YouTube Channel Name Generator',
-        description: 'Generate catchy YouTube channel names for gaming, vlogs, tech, and business. Free AI-inspired channel name generator running 100% in your browser.',
+        description: 'Generate catchy YouTube channel names for gaming, vlogs, tech, and business. Free channel name generator that runs 100% in your browser.',
         categoryLabel: 'Title Tools',
-        keywords: ['youtube channel name generator', 'ai youtube channel name generator', 'channel name ideas', 'youtube name maker', 'cool youtube names', 'gaming channel names', 'creative youtube channel name generator'],
+        keywords: ['youtube channel name generator', 'channel name ideas', 'youtube name maker', 'cool youtube names', 'gaming channel names', 'creative youtube channel name generator'],
       },
       'youtube-tag-generator': {
         title: 'YouTube Tag Generator',
         seoTitle: 'Free YouTube Tag Generator (SEO & Clusters)',
-        description: 'Generate optimized YouTube tags and keyword clusters within the 500-character limit. Free AI-powered tag generator with instant comma-separated copy.',
+        description: 'Generate optimized YouTube tags and keyword clusters within the 500-character limit. Free rule-based tag generator with instant comma-separated copy.',
         categoryLabel: 'Title Tools',
-        keywords: ['youtube tag generator', 'ai youtube tag generator', 'youtube tags generator', 'youtube tags for views', 'generate tags for youtube', 'youtube seo tags', 'youtube tag extractor and generator'],
+        keywords: ['youtube tag generator', 'youtube tags generator', 'youtube tags for views', 'generate tags for youtube', 'youtube seo tags', 'youtube tag extractor and generator'],
       },
       'youtube-description-generator': {
         title: 'YouTube Description Generator',
         seoTitle: 'Free YouTube Description Generator',
-        description: 'Generate optimized YouTube video descriptions with timestamps, above-the-fold hooks, and social links. Free AI-powered video description generator.',
+        description: 'Generate optimized YouTube video descriptions with timestamps, above-the-fold hooks, and social links. Free video description generator that runs in your browser.',
         categoryLabel: 'Title Tools',
-        keywords: ['youtube description generator', 'ai youtube description generator', 'youtube video description generator', 'youtube description template', 'free youtube description generator', 'youtube description maker'],
+        keywords: ['youtube description generator', 'youtube video description generator', 'youtube description template', 'free youtube description generator', 'youtube description maker'],
       },
       'youtube-title-checker': {
         title: 'YouTube Title Checker & Analyzer',
@@ -459,7 +459,7 @@ export const translations: Record<Locale, I18nContent> = {
       },
       'youtube-thumbnail-resizer': {
         title: 'Redimensionador de miniaturas de YouTube',
-        seoTitle: 'Tamaño de miniatura de YouTube: 1280x720 gratis',
+        seoTitle: 'Redimensionador de miniaturas de YouTube: 1280x720',
         description: 'El tamaño de miniatura de YouTube es 1280x720 píxeles (16:9, menos de 2 MB). Redimensiona cualquier imagen gratis, revisa el encuadre y descarga el archivo.',
         categoryLabel: 'Herramientas de miniaturas',
         keywords: ['redimensionar miniatura youtube', 'convertidor tamano miniatura youtube', 'medidas miniatura youtube 1280x720', 'tamano portada youtube', 'escalar imagen youtube', 'banner youtube medidas'],
@@ -483,7 +483,7 @@ export const translations: Record<Locale, I18nContent> = {
         seoTitle: 'Generador de nombres para canal de YouTube',
         description: 'Genera ideas creativas de nombres para tu canal de YouTube en gaming, vlogs y tecnología. Generador gratuito e instantáneo en tu navegador.',
         categoryLabel: 'Herramientas de títulos',
-        keywords: ['generador de nombres para canales de youtube', 'generador de nombres youtube ia', 'ideas de nombres para youtube', 'nombres para canales de gaming', 'creador de nombres youtube gratis'],
+        keywords: ['generador de nombres para canales de youtube', 'ideas de nombres para youtube', 'nombres para canales de gaming', 'creador de nombres youtube gratis'],
       },
       'youtube-tag-generator': {
         title: 'Generador de Etiquetas de YouTube',
@@ -497,7 +497,7 @@ export const translations: Record<Locale, I18nContent> = {
         seoTitle: 'Generador de Descripciones para YouTube',
         description: 'Genera descripciones optimizadas para videos de YouTube con marcas de tiempo, llamadas a la acción y enlaces. Herramienta SEO gratuita y en el navegador.',
         categoryLabel: 'Herramientas de títulos',
-        keywords: ['generador de descripciones de youtube', 'generador de descripcion youtube ia', 'plantilla descripcion youtube', 'generador de descripciones para videos de youtube', 'crear descripcion youtube'],
+        keywords: ['generador de descripciones de youtube', 'plantilla descripcion youtube', 'generador de descripciones para videos de youtube', 'crear descripcion youtube'],
       },
       'youtube-title-checker': {
         title: 'Analizador y comprobador de títulos de YouTube',
@@ -634,8 +634,8 @@ export const translations: Record<Locale, I18nContent> = {
         keywords: ['YouTube サムネイル 圧縮', 'サムネ 容量 減らす 2MB以下', 'サムネイル 画質 落とさず 圧縮', 'YouTube 画像 圧縮 無料', 'サムネイル PNG 圧縮'],
       },
       'youtube-thumbnail-resizer': {
-        title: 'YouTubeサムネイルリサイズツール',
-        seoTitle: 'YouTubeサムネイルのサイズ：1280x720リサイズ（無料）',
+        title: 'YouTubeサムネイルサイズ変更ツール',
+        seoTitle: 'YouTubeサムネイルリサイズツール：1280x720に無料変換',
         description: 'YouTubeサムネイルのサイズは1280x720ピクセル（16:9、2MB未満）。無料のリサイズツールで画像をこのサイズに合わせ、構図を確認してダウンロードできます。',
         categoryLabel: 'サムネイルツール',
         keywords: ['YouTube サムネイル サイズ 変更', 'YouTube サムネイル サイズ 変換', 'サムネイル 1280 720 リサイズ', 'YouTube バナー サイズ 調整', 'サムネ 比率 16:9', 'チャンネルアート リサイズ'],
@@ -659,7 +659,7 @@ export const translations: Record<Locale, I18nContent> = {
         seoTitle: 'YouTubeチャンネル名ジェネレーター: 無料作成',
         description: 'ゲーム、Vlog、ビジネス向けのYouTubeチャンネル名を即座に自動生成。ログイン不要、完全無料で使えるチャンネル名作成ツール。',
         categoryLabel: 'タイトルツール',
-        keywords: ['youtubeチャンネル名ジェネレーター', 'youtubeチャンネル名決め方', 'youtube名前ジェネレーターai', 'チャンネル名おすすめ', 'youtube名前自動生成'],
+        keywords: ['youtubeチャンネル名ジェネレーター', 'youtubeチャンネル名決め方', 'チャンネル名おすすめ', 'youtube名前自動生成'],
       },
       'youtube-tag-generator': {
         title: 'YouTubeタグジェネレーター',
@@ -683,8 +683,8 @@ export const translations: Record<Locale, I18nContent> = {
         keywords: ['YouTube タイトル 文字数 チェッカー', '動画 タイトル 切り捨て 確認', 'YouTube タイトル 付け方', 'クリック率 上がる タイトル', 'タイトル プレビュー'],
       },
       'youtube-revenue-calculator': {
-        title: 'YouTube収益・お金計算ツール',
-        seoTitle: 'YouTube収益計算ツール・お金計算ツール',
+        title: 'YouTube収益計算ツール',
+        seoTitle: 'YouTube収益計算・お金計算ツール',
         description: 'YouTubeの収益計算・お金計算ツール：再生回数とRPMの範囲から月間・年間の収益をブラウザ上で見積もれます。',
         categoryLabel: '収益と成長',
         keywords: ['YouTube 収益 計算', '再生回数 収益 計算 ツール', 'YouTube 月収 シミュレーション', 'YouTube いくら 稼げる', '動画 広告 収入 計算'],
@@ -811,7 +811,7 @@ export const translations: Record<Locale, I18nContent> = {
       },
       'youtube-thumbnail-resizer': {
         title: 'Redimensionneur de miniatures YouTube',
-        seoTitle: 'Taille miniature YouTube : redimensionner en 1280x720',
+        seoTitle: 'Redimensionneur de miniatures YouTube : 1280x720',
         description: 'La taille d’une miniature YouTube est de 1280x720 pixels (16:9, moins de 2 Mo). Redimensionnez gratuitement n’importe quelle image, vérifiez le cadrage et téléchargez-la.',
         categoryLabel: 'Outils de miniatures',
         keywords: ['redimensionner miniature youtube', 'convertisseur taille miniature youtube', 'taille miniature youtube 1280x720', 'dimensions banniere youtube', 'format image youtube', 'redimensionner photo profil'],
@@ -835,7 +835,7 @@ export const translations: Record<Locale, I18nContent> = {
         seoTitle: 'Générateur de nom de chaîne YouTube gratuit',
         description: 'Trouvez des idées de noms originales pour votre chaîne YouTube de gaming, vlog ou tech. Générateur gratuit et instantané dans votre navigateur.',
         categoryLabel: 'Outils de titres',
-        keywords: ['generateur de nom de chaine youtube', 'generateur nom youtube ia', 'idees nom chaine youtube', 'nom chaine youtube gaming', 'trouver nom youtube gratuit'],
+        keywords: ['generateur de nom de chaine youtube', 'idees nom chaine youtube', 'nom chaine youtube gaming', 'trouver nom youtube gratuit'],
       },
       'youtube-tag-generator': {
         title: 'Générateur de Tags YouTube',
@@ -849,7 +849,7 @@ export const translations: Record<Locale, I18nContent> = {
         seoTitle: 'Générateur de Description YouTube',
         description: 'Générez des descriptions YouTube percutantes avec chapitres horodatés, liens et accroches pour le SEO. Outil gratuit dans votre navigateur.',
         categoryLabel: 'Outils de titres',
-        keywords: ['générateur de description youtube', 'generateur description youtube ia', 'modele description youtube', 'description video youtube', 'chapitres youtube description'],
+        keywords: ['générateur de description youtube', 'modele description youtube', 'description video youtube', 'chapitres youtube description'],
       },
       'youtube-title-checker': {
         title: 'Vérificateur et analyseur de titres YouTube',
@@ -986,8 +986,8 @@ export const translations: Record<Locale, I18nContent> = {
         keywords: ['youtube thumbnail komprimieren', 'thumbnail unter 2mb verkleinern', 'youtube bild dateigroesse reduzieren', 'thumbnail optimizer kostenlos', 'png bild komprimieren'],
       },
       'youtube-thumbnail-resizer': {
-        title: 'YouTube-Thumbnail-Größenänderung',
-        seoTitle: 'YouTube-Thumbnail-Größe: 1280x720 kostenlos anpassen',
+        title: 'YouTube-Thumbnail-Größe anpassen (Resizer)',
+        seoTitle: 'YouTube-Thumbnail-Resizer: Auf 1280x720 skalieren',
         description: 'Die YouTube-Thumbnail-Größe beträgt 1280x720 Pixel (16:9, unter 2 MB). Passe jedes Bild kostenlos an, prüfe den Ausschnitt und lade die Datei herunter.',
         categoryLabel: 'Thumbnail-Tools',
         keywords: ['youtube thumbnail groesse aendern', 'thumbnail konverter groesse', 'thumbnail 1280x720 format', 'youtube banner massen', 'youtube bild skalieren', 'kanalbild zuschneiden'],
@@ -1011,7 +1011,7 @@ export const translations: Record<Locale, I18nContent> = {
         seoTitle: 'Kostenloser YouTube-Kanalnamen-Generator',
         description: 'Finde kreative Namen für deinen YouTube-Kanal in Gaming, Vlogs, Tech und Business. Kostenloser Kanalnamen-Generator direkt im Browser.',
         categoryLabel: 'Titel-Tools',
-        keywords: ['youtube kanalnamen generator', 'youtube namen generator ki', 'kanalname finden ideen', 'gaming kanal name generator', 'youtube name erstellen kostenlos'],
+        keywords: ['youtube kanalnamen generator', 'kanalname finden ideen', 'gaming kanal name generator', 'youtube name erstellen kostenlos'],
       },
       'youtube-tag-generator': {
         title: 'YouTube-Tag-Generator',
@@ -1023,7 +1023,7 @@ export const translations: Record<Locale, I18nContent> = {
       'youtube-description-generator': {
         title: 'YouTube-Videobeschreibungs-Generator',
         seoTitle: 'YouTube-Beschreibungs-Generator',
-        description: 'Erstelle optimierte YouTube-Videobeschreibungen mit Zeitstempeln, Hooks und Social-Links. Kostenloser KI-Beschreibungs-Generator ohne Anmeldung.',
+        description: 'Erstelle optimierte YouTube-Videobeschreibungen mit Zeitstempeln, Hooks und Social-Links. Kostenloser Beschreibungs-Generator ohne Anmeldung.',
         categoryLabel: 'Titel-Tools',
         keywords: ['youtube beschreibung generator', 'youtube videobeschreibung generator', 'youtube beschreibung vorlage', 'youtube beschreibung erstellen', 'youtube timestamps beschreibung'],
       },
@@ -1163,7 +1163,7 @@ export const translations: Record<Locale, I18nContent> = {
       },
       'youtube-thumbnail-resizer': {
         title: 'Redimensionador de miniaturas do YouTube',
-        seoTitle: 'Tamanho da miniatura do YouTube: 1280x720 grátis',
+        seoTitle: 'Redimensionador de miniaturas do YouTube: 1280x720',
         description: 'O tamanho da miniatura do YouTube é 1280x720 pixels (16:9, menos de 2 MB). Redimensione qualquer imagem grátis, confira o enquadramento e baixe o arquivo.',
         categoryLabel: 'Ferramentas de miniatura',
         keywords: ['redimensionar miniatura youtube', 'conversor tamanho miniatura youtube', 'tamanho miniatura youtube 1280x720', 'dimensoes banner youtube', 'mudar tamanho foto canal', 'escala imagem youtube'],
@@ -1187,7 +1187,7 @@ export const translations: Record<Locale, I18nContent> = {
         seoTitle: 'Gerador de nomes para canal do YouTube',
         description: 'Gere nomes criativos e marcantes para seu canal do YouTube em games, vlogs e negócios. Gerador gratuito e instantâneo no navegador.',
         categoryLabel: 'Ferramentas de títulos',
-        keywords: ['gerador de nomes para canais do youtube', 'gerador de nomes youtube ia', 'ideias de nomes para canal youtube', 'nomes para canal de jogos', 'criar nome para youtube gratis'],
+        keywords: ['gerador de nomes para canais do youtube', 'ideias de nomes para canal youtube', 'nomes para canal de jogos', 'criar nome para youtube gratis'],
       },
       'youtube-tag-generator': {
         title: 'Gerador de Tags para YouTube',
@@ -1201,7 +1201,7 @@ export const translations: Record<Locale, I18nContent> = {
         seoTitle: 'Gerador de Descrição para YouTube',
         description: 'Crie descrições completas para vídeos do YouTube com capítulos, links sociais e introduções otimizadas para SEO. Ferramenta gratuita no navegador.',
         categoryLabel: 'Ferramentas de títulos',
-        keywords: ['gerador de descricao para youtube', 'gerador de descricao youtube ia', 'modelo de descricao youtube', 'como fazer descricao youtube', 'timestamps descricao youtube'],
+        keywords: ['gerador de descricao para youtube', 'modelo de descricao youtube', 'como fazer descricao youtube', 'timestamps descricao youtube'],
       },
       'youtube-title-checker': {
         title: 'Verificador e analisador de títulos do YouTube',
@@ -1338,8 +1338,8 @@ export const translations: Record<Locale, I18nContent> = {
         keywords: ['유튜브 썸네일 압축', '썸네일 2mb 이하 줄이기', '유튜브 이미지 용량 줄이기', '썸네일 화질 손실없이 압축', 'png 무료 압축'],
       },
       'youtube-thumbnail-resizer': {
-        title: '유튜브 썸네일 리사이저',
-        seoTitle: '유튜브 썸네일 크기: 1280x720 무료 리사이저',
+        title: '유튜브 썸네일 크기 조절기 (리사이저)',
+        seoTitle: '유튜브 썸네일 리사이저: 1280x720 무료 변환',
         description: '유튜브 썸네일 크기는 1280x720 픽셀(16:9, 2MB 미만)입니다. 무료 리사이저로 이미지를 이 크기에 맞추고 구도를 확인한 뒤 다운로드하세요.',
         categoryLabel: '썸네일 도구',
         keywords: ['유튜브 썸네일 크기 조절', '썸네일 1280 720 사이즈', '유튜브 배너 규격', '유튜브 채널아트 리사이즈', '유튜브 비율 16 9'],
@@ -1363,7 +1363,7 @@ export const translations: Record<Locale, I18nContent> = {
         seoTitle: '유튜브 채널 이름 생성기: 무료 아이디어',
         description: '게임, 브이로그, 테크 등 다양한 분야의 유튜브 채널 이름을 무료로 추천받으세요. 브라우저에서 바로 작동하는 스마트 이름 생성기.',
         categoryLabel: '제목 도구',
-        keywords: ['유튜브 채널 이름 생성기', '유튜브 이름 추천', 'ai 유튜브 채널 이름', '유튜브 채널명 짓기', '유튜브 닉네임 생성기'],
+        keywords: ['유튜브 채널 이름 생성기', '유튜브 이름 추천', '유튜브 채널명 짓기', '유튜브 닉네임 생성기'],
       },
       'youtube-tag-generator': {
         title: '유튜브 태그 생성기',
@@ -1387,8 +1387,8 @@ export const translations: Record<Locale, I18nContent> = {
         keywords: ['유튜브 제목 글자수 검사기', '유튜브 제목 자르기 확인', '클릭률 높은 유튜브 제목', '유튜브 영상 제목 추천', '제목 바이트 계산'],
       },
       'youtube-revenue-calculator': {
-        title: '유튜브 수익·머니 계산기',
-        seoTitle: '유튜브 머니 계산기 & 수익 계산기',
+        title: '유튜브 수익 계산기',
+        seoTitle: '유튜브 수익 계산기 & 머니 계산기',
         description: '유튜브 머니 계산기이자 수익 계산기: 조회수와 RPM 범위로 월간·연간 예상 수익을 브라우저에서 바로 계산하세요.',
         categoryLabel: '수익 및 성장',
         keywords: ['유튜브 수익 계산기', '조회수당 수익 계산', '유튜브 조회수 10만 수익', '유튜브 돈 버는 법 계산', '유튜버 수입 시뮬레이터'],
@@ -1515,7 +1515,7 @@ export const translations: Record<Locale, I18nContent> = {
       },
       'youtube-thumbnail-resizer': {
         title: 'Ridimensionatore miniature YouTube',
-        seoTitle: 'Dimensioni miniatura YouTube: ridimensiona a 1280x720',
+        seoTitle: 'Ridimensionatore miniature YouTube: 1280x720',
         description: 'Le dimensioni di una miniatura YouTube sono 1280x720 pixel (16:9, meno di 2 MB). Ridimensiona gratis qualsiasi immagine, controlla l’inquadratura e scarica il file.',
         categoryLabel: 'Strumenti miniatura',
         keywords: ['ridimensionare miniatura youtube', 'dimensioni miniatura youtube 1280x720', 'formato copertina youtube', 'scalare immagine youtube', 'banner youtube misure'],
@@ -1539,7 +1539,7 @@ export const translations: Record<Locale, I18nContent> = {
         seoTitle: 'Generatore di nomi per canali YouTube',
         description: 'Trova idee originali per il nome del tuo canale YouTube in gaming, vlog e tecnologia. Generatore gratuito e immediato nel tuo browser.',
         categoryLabel: 'Strumenti titoli',
-        keywords: ['generatore di nomi per canali youtube', 'generatore nomi youtube ia', 'idee nome canale youtube', 'nomi canali youtube gaming', 'trovare nome canale youtube'],
+        keywords: ['generatore di nomi per canali youtube', 'idee nome canale youtube', 'nomi canali youtube gaming', 'trovare nome canale youtube'],
       },
       'youtube-tag-generator': {
         title: 'Generatore di Tag per YouTube',
@@ -1553,7 +1553,7 @@ export const translations: Record<Locale, I18nContent> = {
         seoTitle: 'Generatore Descrizioni YouTube',
         description: 'Crea descrizioni video YouTube ottimizzate con capitoli con timestamp, hook introduttivi e link social. Generatore gratuito attivo nel tuo browser.',
         categoryLabel: 'Strumenti titoli',
-        keywords: ['generatore di descrizioni per youtube', 'generatore descrizione youtube ia', 'template descrizione youtube', 'descrizione video youtube', 'timestamp descrizione youtube'],
+        keywords: ['generatore di descrizioni per youtube', 'template descrizione youtube', 'descrizione video youtube', 'timestamp descrizione youtube'],
       },
       'youtube-title-checker': {
         title: 'Analizzatore e verifica titoli YouTube',

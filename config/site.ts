@@ -118,7 +118,7 @@ export const toolRegistry: ToolDefinition[] = [
   {
     id: 'youtube-thumbnail-resizer',
     title: 'YouTube Thumbnail Resizer',
-    seoTitle: 'YouTube Thumbnail Size: Free 1280x720 Resizer',
+    seoTitle: 'Free YouTube Thumbnail Resizer: Resize to 1280x720',
     slug: 'youtube-thumbnail-resizer',
     href: '/tools/youtube-thumbnail-resizer',
     category: 'thumbnail',
@@ -132,13 +132,13 @@ export const toolRegistry: ToolDefinition[] = [
     id: 'youtube-banner-size',
     heroTone: 'blue',
     title: 'YouTube Banner Size Checker & Resizer',
-    seoTitle: 'YouTube Banner Size: 2560x1440 Template',
+    seoTitle: 'YouTube Banner Size Checker, Resizer & Template',
     slug: 'youtube-banner-size',
     href: '/tools/youtube-banner-size',
     category: 'thumbnail',
     categoryLabel: 'Thumbnail Tools',
     description:
-      'YouTube banner size: 2560x1440 px, 1546x423 px safe area, 6 MB max. Check TV, desktop and mobile crops, resize your image, and get a free overlay template.',
+      'YouTube banner size checker and resizer: 2560x1440 px, 1546x423 px safe area, 6 MB max. Preview TV, desktop and mobile crops and get a free overlay template.',
     status: 'available',
     seoTarget: 'YouTube Banner Size',
   },
@@ -166,7 +166,7 @@ export const toolRegistry: ToolDefinition[] = [
     category: 'title',
     categoryLabel: 'Title Tools',
     description:
-      'Generate catchy YouTube channel names for gaming, vlogs, tech, and business. Free AI-inspired channel name generator running 100% in your browser.',
+      'Generate catchy YouTube channel names for gaming, vlogs, tech, and business. Free channel name generator that runs 100% in your browser.',
     status: 'available',
     seoTarget: 'YouTube Channel Name Generator',
   },
@@ -180,7 +180,7 @@ export const toolRegistry: ToolDefinition[] = [
     category: 'title',
     categoryLabel: 'Title Tools',
     description:
-      'Generate optimized YouTube tags and keyword clusters within the 500-character limit. Free AI-powered tag generator with instant comma-separated copy.',
+      'Generate optimized YouTube tags and keyword clusters within the 500-character limit. Free rule-based tag generator with instant comma-separated copy.',
     status: 'available',
     seoTarget: 'YouTube Tag Generator',
   },
@@ -194,7 +194,7 @@ export const toolRegistry: ToolDefinition[] = [
     category: 'title',
     categoryLabel: 'Title Tools',
     description:
-      'Generate optimized YouTube video descriptions with timestamps, above-the-fold hooks, and social links. Free AI-powered video description generator.',
+      'Generate optimized YouTube video descriptions with timestamps, above-the-fold hooks, and social links. Free video description generator that runs in your browser.',
     status: 'available',
     seoTarget: 'YouTube Description Generator',
   },
