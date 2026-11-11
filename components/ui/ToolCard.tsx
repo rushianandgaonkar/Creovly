@@ -5,6 +5,7 @@ import Badge from './Badge';
 import type { ToolStatus } from '@/types';
 import ToolIllustration from '@/components/tools/ToolIllustration';
 import { useI18n, LocalizedLink } from '@/lib/i18n';
+import { getToolFeatureTag } from '@/config/i18n';
 
 export interface ToolCardProps {
   title: string;
@@ -24,22 +25,6 @@ const badgeVariants = {
   Free: 'free' as const,
 };
 
-const toolFeatureTags: Record<string, string> = {
-  'logo-background-remover': 'Transparent PNG • Canvas',
-  'youtube-thumbnail-compressor': '< 2MB Payload • JPEG/WebP',
-  'youtube-thumbnail-resizer': '1280×720 HD • 16:9',
-  'youtube-banner-size': '2560×1440 • All Devices Safe Area',
-  'youtube-shorts-safe-zone': '9:16 Safe Zone • Mask',
-  'youtube-channel-name-generator': 'AI Formulas • Niche Styles',
-  'youtube-tag-generator': '500-Char Limit • Smart Clusters',
-  'youtube-description-generator': '5,000-Char Limit • Smart Templates',
-  'youtube-title-checker': 'Mobile ~50 Chars • Truncation',
-  'youtube-revenue-calculator': 'Dynamic RPM • Modeler',
-  'youtube-rpm-calculator': 'Net Earnings / 1K Views',
-  'youtube-watch-hours-calculator': '4,000 Hr Goal • Pace',
-  'youtube-monetization-calculator': 'Multi-Stream Revenue',
-};
-
 export const ToolCard: React.FC<ToolCardProps> = ({
   title,
   description,
@@ -51,7 +36,8 @@ export const ToolCard: React.FC<ToolCardProps> = ({
   className = '',
   illustration,
 }) => {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
+  const featureTag = illustration ? getToolFeatureTag(locale, illustration) : undefined;
 
   const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -122,11 +108,11 @@ export const ToolCard: React.FC<ToolCardProps> = ({
         </p>
 
         {/* Feature Spec Chip */}
-        {illustration && toolFeatureTags[illustration] && (
+        {featureTag && (
           <div className="mt-3">
             <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-[10px] font-mono text-[var(--text-muted)] font-medium">
               <span className="w-1 h-1 rounded-full bg-[var(--brand-accent)]" />
-              {toolFeatureTags[illustration]}
+              {featureTag}
             </span>
           </div>
         )}
