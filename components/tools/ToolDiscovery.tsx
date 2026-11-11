@@ -6,6 +6,7 @@ import Button from '@/components/ui/Button';
 import ToolCard from '@/components/ui/ToolCard';
 import type { ToolDefinition } from '@/types';
 import { useI18n } from '@/lib/i18n';
+import { getToolDescription } from '@/config/i18n';
 
 export default function ToolDiscovery({
   tools,
@@ -14,7 +15,7 @@ export default function ToolDiscovery({
   tools: ToolDefinition[];
   visualCards?: boolean;
 }) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState('all');
 
@@ -79,7 +80,8 @@ export default function ToolDiscovery({
   const terms = query.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
   const matches = tools.filter((tool) => {
     const localizedTitle = getToolLocalizedTitle(tool.id, tool.title);
-    const text = `${localizedTitle} ${tool.title} ${tool.description} ${tool.categoryLabel}`.toLocaleLowerCase();
+    const localizedDescription = getToolDescription(locale, tool.id, tool.description);
+    const text = `${localizedTitle} ${tool.title} ${localizedDescription} ${tool.description} ${tool.categoryLabel}`.toLocaleLowerCase();
     return (
       (category === 'all' || tool.category === category) &&
       terms.every((term) => text.includes(term))
@@ -218,7 +220,7 @@ export default function ToolDiscovery({
                       illustration={visualCards ? tool.id : undefined}
                       headingAs="h4"
                       title={getToolLocalizedTitle(tool.id, tool.title)}
-                      description={tool.description}
+                      description={getToolDescription(locale, tool.id, tool.description)}
                       href={tool.href}
                       categoryLabel={group.label}
                       status={tool.status}

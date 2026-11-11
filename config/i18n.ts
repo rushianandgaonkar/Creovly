@@ -1594,3 +1594,10 @@ export const translations: Record<Locale, I18nContent> = {
   },
 };
 
+/**
+ * Returns the localized tool description for a locale, falling back to the
+ * English text from the tool registry when no translation exists.
+ */
+export function getToolDescription(locale: Locale, toolId: string, fallback: string): string {
+  return translations[locale]?.tools?.[toolId]?.description || fallback;
+}

@@ -6,9 +6,10 @@ import ToolCard from '@/components/ui/ToolCard';
 import Button from '@/components/ui/Button';
 import PageHero from '@/components/ui/PageHero';
 import { useI18n, LocalizedLink } from '@/lib/i18n';
+import { getToolDescription } from '@/config/i18n';
 
 export default function ThumbnailToolsContent() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const tools = toolRegistry.filter((tool) => tool.category === 'thumbnail');
 
   return (
@@ -83,7 +84,7 @@ export default function ThumbnailToolsContent() {
             <ToolCard
               key={tool.id}
               title={tool.title}
-              description={tool.description}
+              description={getToolDescription(locale, tool.id, tool.description)}
               href={tool.href}
               categoryLabel={tool.categoryLabel}
               status={tool.status}

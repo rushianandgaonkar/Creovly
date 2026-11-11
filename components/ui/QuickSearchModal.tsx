@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { toolRegistry } from '@/config/site';
 import { useI18n } from '@/lib/i18n';
+import { getToolDescription } from '@/config/i18n';
 import {
   Dialog,
   DialogContent,
@@ -32,7 +33,7 @@ export default function QuickSearchModal({
   const inputRef = useRef<HTMLInputElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
-  const { t, translateHref } = useI18n();
+  const { t, translateHref, locale } = useI18n();
 
   const getToolTitle = (id: string, fallback: string): string => {
     switch (id) {
@@ -89,7 +90,7 @@ export default function QuickSearchModal({
       title: getToolTitle(tool.id, tool.title),
       category: tool.categoryLabel,
       href: tool.href,
-      description: tool.description,
+      description: getToolDescription(locale, tool.id, tool.description),
       tag: tool.badge || t.common.badges.available,
     })),
   ];
