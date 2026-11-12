@@ -222,8 +222,8 @@ export default function TagGenerator({}: TagGeneratorProps) {
         <div className="space-y-6">
           {/* Header pill */}
           <div className="flex items-center justify-between">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-mono font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
-              <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" />
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-mono font-semibold bg-[var(--brand-accent-soft)] text-[var(--brand-accent-deep)] border border-[var(--brand-accent)]/20">
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)] animate-pulse" />
               {tg.aiBadge}
             </span>
           </div>
@@ -259,10 +259,10 @@ export default function TagGenerator({}: TagGeneratorProps) {
                     setInputTopic(topic);
                     handleGenerate(topic);
                   }}
-                  className={`text-[11px] px-2 py-0.5 rounded-md border transition-colors ${
+                  className={`text-[11px] px-2.5 py-1 rounded-md border transition-colors cursor-pointer ${
                     inputTopic === topic
-                      ? 'bg-indigo-500/20 text-indigo-300 border-indigo-500/40'
-                      : 'bg-[var(--bg-canvas-subtle)] text-[var(--text-muted)] border-[var(--border-hairline)] hover:text-[var(--text-ink)] hover:border-[var(--border-hairline-strong)]'
+                      ? 'border-[var(--brand-accent)] bg-[var(--brand-accent-soft)] text-[var(--brand-accent-deep)] font-semibold'
+                      : 'bg-[var(--bg-canvas-elevated)] text-[var(--text-muted)] border-[var(--border-hairline)] hover:text-[var(--text-ink)] hover:border-[var(--border-hairline-strong)]'
                   }`}
                 >
                   {topic}
@@ -285,10 +285,10 @@ export default function TagGenerator({}: TagGeneratorProps) {
                     setNiche(item.id);
                     handleGenerate(undefined, item.id);
                   }}
-                  className={`px-2.5 py-1.5 rounded-lg text-xs font-medium border text-left transition-all ${
+                  className={`px-2.5 py-1.5 rounded-lg text-xs font-medium border text-left transition-all cursor-pointer ${
                     niche === item.id
-                      ? 'bg-indigo-500/15 text-indigo-300 border-indigo-500/40 shadow-xs'
-                      : 'bg-[var(--bg-canvas-subtle)] text-[var(--text-muted)] border-[var(--border-hairline)] hover:border-[var(--border-hairline-strong)] hover:text-[var(--text-body)]'
+                      ? 'border-[var(--brand-accent)] bg-[var(--brand-accent-soft)] text-[var(--brand-accent-deep)] font-semibold shadow-xs'
+                      : 'bg-[var(--bg-canvas-elevated)] text-[var(--text-muted)] border-[var(--border-hairline)] hover:border-[var(--border-hairline-strong)] hover:text-[var(--text-ink)]'
                   }`}
                 >
                   {item.label}
@@ -301,7 +301,7 @@ export default function TagGenerator({}: TagGeneratorProps) {
           <Button
             type="button"
             variant="primary"
-            className="w-full justify-center text-sm py-2.5 font-semibold bg-indigo-600 hover:bg-indigo-500 text-white shadow-md shadow-indigo-600/20"
+            className="w-full justify-center text-sm py-2.5 font-semibold"
             onClick={() => handleGenerate()}
           >
             {tg.buttonGenerate}
@@ -331,26 +331,26 @@ export default function TagGenerator({}: TagGeneratorProps) {
       results={
         <div className="space-y-6">
           {/* 500-Character Capacity & Copy Bar */}
-          <div className="p-4 rounded-xl bg-zinc-950/60 border border-zinc-800 space-y-3">
+          <div className="p-4 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] shadow-[var(--shadow-whisper)] space-y-3">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <div>
-                <span className="text-[11px] font-mono text-zinc-400 block">
+                <span className="text-[11px] font-mono text-[var(--text-muted)] block">
                   {tg.charCountLabel}
                 </span>
                 <div className="flex items-baseline gap-2 mt-0.5">
                   <span
                     className={`text-2xl font-black font-mono tracking-tight ${
                       isOverLimit
-                        ? 'text-red-400'
+                        ? 'text-[var(--state-error-text)]'
                         : isWarningLimit
-                        ? 'text-amber-400'
-                        : 'text-emerald-400'
+                        ? 'text-[var(--state-warning-text)]'
+                        : 'text-[var(--brand-accent)]'
                     }`}
                   >
                     {totalCharacters}
                   </span>
-                  <span className="text-xs text-zinc-400 font-mono">/ 500 characters</span>
-                  <span className="text-xs text-zinc-500">
+                  <span className="text-xs text-[var(--text-muted)] font-mono">/ 500 characters</span>
+                  <span className="text-xs text-[var(--text-muted)]">
                     ({selectedTagStrings.length} {tg.totalTagsLabel})
                   </span>
                 </div>
@@ -361,12 +361,12 @@ export default function TagGenerator({}: TagGeneratorProps) {
                 <Button
                   type="button"
                   variant="primary"
-                  className={`text-xs py-2 px-4 font-semibold transition-all shadow-md ${
+                  className={`text-xs py-2 px-4 font-semibold transition-all ${
                     copied
-                      ? 'bg-emerald-600 hover:bg-emerald-500 text-white'
+                      ? 'bg-[var(--state-success)] hover:bg-[var(--state-success)] text-white'
                       : isOverLimit
-                      ? 'bg-amber-600 hover:bg-amber-500 text-white'
-                      : 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-indigo-600/20'
+                      ? 'bg-[var(--state-warning)] hover:bg-[var(--state-warning)] text-white'
+                      : ''
                   }`}
                   onClick={copyTags}
                   disabled={selectedTagStrings.length === 0}
@@ -392,26 +392,26 @@ export default function TagGenerator({}: TagGeneratorProps) {
 
             {/* Visual Capacity Meter Bar */}
             <div className="space-y-1">
-              <div className="w-full h-2 rounded-full bg-zinc-900 overflow-hidden border border-zinc-800">
+              <div className="w-full h-2 rounded-full bg-[var(--bg-canvas-inset)] overflow-hidden border border-[var(--border-hairline)]">
                 <div
                   className={`h-full transition-all duration-300 rounded-full ${
                     isOverLimit
-                      ? 'bg-red-500'
+                      ? 'bg-[var(--state-error)]'
                       : isWarningLimit
-                      ? 'bg-amber-400'
-                      : 'bg-indigo-500'
+                      ? 'bg-[var(--state-warning)]'
+                      : 'bg-[var(--brand-accent)]'
                   }`}
                   style={{ width: `${charLimitPercentage}%` }}
                 />
               </div>
-              <div className="flex justify-between items-center text-[10px] font-mono text-zinc-400">
+              <div className="flex justify-between items-center text-[10px] font-mono text-[var(--text-muted)]">
                 <span>0</span>
                 {isOverLimit ? (
-                  <span className="text-red-400 font-bold">{tg.charLimitExceeded}</span>
+                  <span className="text-[var(--state-error-text)] font-bold">{tg.charLimitExceeded}</span>
                 ) : isWarningLimit ? (
-                  <span className="text-amber-400 font-medium">{tg.charLimitWarning}</span>
+                  <span className="text-[var(--state-warning-text)] font-medium">{tg.charLimitWarning}</span>
                 ) : (
-                  <span className="text-emerald-400">
+                  <span className="text-[var(--brand-accent-deep)] font-medium">
                     {500 - totalCharacters} chars remaining
                   </span>
                 )}
@@ -420,22 +420,22 @@ export default function TagGenerator({}: TagGeneratorProps) {
             </div>
 
             {/* Sub-toolbar: Select all / Clear */}
-            <div className="pt-2 border-t border-zinc-800/80 flex items-center justify-between text-xs">
-              <span className="text-[11px] text-zinc-400 font-mono">
+            <div className="pt-2 border-t border-[var(--border-hairline)] flex items-center justify-between text-xs">
+              <span className="text-[11px] text-[var(--text-muted)] font-mono">
                 Click any tag chip below to toggle inclusion
               </span>
               <div className="flex items-center gap-3">
                 <button
                   type="button"
                   onClick={selectAll}
-                  className="text-[11px] text-indigo-400 hover:text-indigo-300 underline font-medium"
+                  className="text-[11px] text-[var(--brand-accent-deep)] hover:underline font-medium cursor-pointer"
                 >
                   {tg.buttonSelectAll}
                 </button>
                 <button
                   type="button"
                   onClick={clearAll}
-                  className="text-[11px] text-zinc-400 hover:text-zinc-300 underline font-medium"
+                  className="text-[11px] text-[var(--text-muted)] hover:text-[var(--text-ink)] hover:underline font-medium cursor-pointer"
                 >
                   {tg.buttonClear}
                 </button>
@@ -445,12 +445,12 @@ export default function TagGenerator({}: TagGeneratorProps) {
 
           {/* Formatted Paste Preview for YouTube Studio */}
           {selectedTagStrings.length > 0 && (
-            <div className="p-3 rounded-xl bg-zinc-950/40 border border-zinc-800/80 space-y-1.5">
-              <div className="flex items-center justify-between text-[11px] font-mono text-zinc-400">
+            <div className="p-3.5 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] shadow-[var(--shadow-whisper)] space-y-1.5">
+              <div className="flex items-center justify-between text-[11px] font-mono text-[var(--text-muted)]">
                 <span>YouTube Studio Comma-Separated Format</span>
-                <span className="text-zinc-500">Ready to paste</span>
+                <span className="text-[var(--text-muted)] font-medium">Ready to paste</span>
               </div>
-              <p className="text-xs font-mono text-zinc-300 bg-zinc-900/90 p-2.5 rounded-lg border border-zinc-800/80 break-words leading-relaxed max-h-24 overflow-y-auto">
+              <p className="text-xs font-mono text-[var(--text-body)] bg-[var(--bg-canvas-subtle)] p-2.5 rounded-lg border border-[var(--border-hairline)] break-words leading-relaxed max-h-24 overflow-y-auto">
                 {formatTagsForClipboard(selectedTagStrings)}
               </p>
             </div>
@@ -483,18 +483,18 @@ export default function TagGenerator({}: TagGeneratorProps) {
                           type="button"
                           onClick={() => toggleTag(tag.id)}
                           aria-pressed={isSelected}
-                          className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border transition-all ${
+                          className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border transition-all cursor-pointer ${
                             isSelected
-                              ? 'bg-indigo-600/20 text-indigo-300 border-indigo-500/50 hover:bg-indigo-600/30 shadow-xs'
-                              : 'bg-[var(--bg-canvas-subtle)] text-[var(--text-muted)] border-[var(--border-hairline)] hover:border-[var(--border-hairline-strong)] hover:text-[var(--text-ink)] opacity-60 hover:opacity-100'
+                              ? 'border-[var(--brand-accent)] bg-[var(--brand-accent-soft)] text-[var(--brand-accent-deep)] font-semibold shadow-xs'
+                              : 'bg-[var(--bg-canvas-elevated)] text-[var(--text-muted)] border-[var(--border-hairline)] hover:border-[var(--border-hairline-strong)] hover:text-[var(--text-ink)] opacity-70 hover:opacity-100'
                           }`}
                         >
                           <span>{tag.text}</span>
                           <span
-                            className={`text-[10px] font-mono px-1 py-0.2 rounded ${
+                            className={`text-[10px] font-mono px-1.5 py-0.5 rounded ${
                               isSelected
-                                ? 'bg-indigo-500/30 text-indigo-200'
-                                : 'bg-zinc-800 text-zinc-400'
+                                ? 'bg-[var(--brand-accent)]/15 text-[var(--brand-accent-deep)] font-semibold'
+                                : 'bg-[var(--bg-canvas-subtle)] text-[var(--text-muted)]'
                             }`}
                           >
                             {tag.charCount}
@@ -515,9 +515,9 @@ export default function TagGenerator({}: TagGeneratorProps) {
           )}
 
           {/* Official YouTube Guidance Notice Card */}
-          <div className="p-4 rounded-xl bg-amber-500/5 border border-amber-500/20 flex items-start gap-3">
+          <div className="p-4 rounded-xl bg-[var(--state-warning-bg)] border border-[var(--state-warning-border)] flex items-start gap-3">
             <svg
-              className="w-5 h-5 text-amber-400 shrink-0 mt-0.5"
+              className="w-5 h-5 text-[var(--state-warning)] shrink-0 mt-0.5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -530,10 +530,10 @@ export default function TagGenerator({}: TagGeneratorProps) {
               />
             </svg>
             <div className="space-y-1 text-xs">
-              <span className="font-semibold text-amber-300 block">
+              <span className="font-semibold text-[var(--state-warning-text)] block">
                 {tg.tagTipHeading}
               </span>
-              <p className="text-zinc-300 leading-relaxed">
+              <p className="text-[var(--text-body)] leading-relaxed">
                 {tg.tagTipBody}
               </p>
             </div>

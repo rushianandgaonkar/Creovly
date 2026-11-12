@@ -122,14 +122,14 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
         <div className="space-y-6">
           {/* Header pill */}
           <div className="flex items-center justify-between">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-mono font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
-              <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" />
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-mono font-semibold bg-[var(--brand-accent-soft)] text-[var(--brand-accent-deep)] border border-[var(--brand-accent)]/20">
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)] animate-pulse" />
               {dg.aiBadge}
             </span>
             <button
               type="button"
               onClick={handleReset}
-              className="text-[11px] text-[var(--text-muted)] hover:text-[var(--text-ink)] underline font-medium"
+              className="text-[11px] text-[var(--text-muted)] hover:text-[var(--text-ink)] underline font-medium cursor-pointer"
             >
               {dg.buttonReset}
             </button>
@@ -146,10 +146,10 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
                   key={tpl.id}
                   type="button"
                   onClick={() => handleSelectTemplate(tpl.id)}
-                  className={`px-3 py-2 rounded-xl text-xs font-medium border text-left transition-all ${
+                  className={`px-3 py-2 rounded-xl text-xs font-medium border text-left transition-all cursor-pointer ${
                     activeTemplate === tpl.id
-                      ? 'bg-indigo-500/15 text-indigo-300 border-indigo-500/40 shadow-xs'
-                      : 'bg-[var(--bg-canvas-subtle)] text-[var(--text-muted)] border-[var(--border-hairline)] hover:border-[var(--border-hairline-strong)] hover:text-[var(--text-body)]'
+                      ? 'border-[var(--brand-accent)] bg-[var(--brand-accent-soft)] text-[var(--brand-accent-deep)] font-semibold shadow-xs'
+                      : 'bg-[var(--bg-canvas-elevated)] text-[var(--text-muted)] border-[var(--border-hairline)] hover:border-[var(--border-hairline-strong)] hover:text-[var(--text-ink)]'
                   }`}
                 >
                   {tpl.label}
@@ -329,25 +329,25 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
       results={
         <div className="space-y-6">
           {/* 5,000-Character Capacity & Copy Bar */}
-          <div className="p-4 rounded-xl bg-zinc-950/60 border border-zinc-800 space-y-3">
+          <div className="p-4 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] shadow-[var(--shadow-whisper)] space-y-3">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <div>
-                <span className="text-[11px] font-mono text-zinc-400 block">
+                <span className="text-[11px] font-mono text-[var(--text-muted)] block">
                   {dg.charCountLabel}
                 </span>
                 <div className="flex items-baseline gap-2 mt-0.5">
                   <span
                     className={`text-2xl font-black font-mono tracking-tight ${
                       result.isOverLimit
-                        ? 'text-red-400'
+                        ? 'text-[var(--state-error-text)]'
                         : isWarningLimit
-                        ? 'text-amber-400'
-                        : 'text-emerald-400'
+                        ? 'text-[var(--state-warning-text)]'
+                        : 'text-[var(--brand-accent)]'
                     }`}
                   >
                     {result.totalChars.toLocaleString()}
                   </span>
-                  <span className="text-xs text-zinc-400 font-mono">/ 5,000 characters</span>
+                  <span className="text-xs text-[var(--text-muted)] font-mono">/ 5,000 characters</span>
                 </div>
               </div>
 
@@ -355,12 +355,12 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
               <Button
                 type="button"
                 variant="primary"
-                className={`text-xs py-2 px-4 font-semibold transition-all shadow-md ${
+                className={`text-xs py-2 px-4 font-semibold transition-all ${
                   copied
-                    ? 'bg-emerald-600 hover:bg-emerald-500 text-white'
+                    ? 'bg-[var(--state-success)] hover:bg-[var(--state-success)] text-white'
                     : result.isOverLimit
-                    ? 'bg-amber-600 hover:bg-amber-500 text-white'
-                    : 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-indigo-600/20'
+                    ? 'bg-[var(--state-warning)] hover:bg-[var(--state-warning)] text-white'
+                    : ''
                 }`}
                 onClick={handleCopy}
               >
@@ -384,24 +384,24 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
 
             {/* Visual Capacity Meter Bar */}
             <div className="space-y-1">
-              <div className="w-full h-2 rounded-full bg-zinc-900 overflow-hidden border border-zinc-800">
+              <div className="w-full h-2 rounded-full bg-[var(--bg-canvas-inset)] overflow-hidden border border-[var(--border-hairline)]">
                 <div
                   className={`h-full transition-all duration-300 rounded-full ${
                     result.isOverLimit
-                      ? 'bg-red-500'
+                      ? 'bg-[var(--state-error)]'
                       : isWarningLimit
-                      ? 'bg-amber-400'
-                      : 'bg-indigo-500'
+                      ? 'bg-[var(--state-warning)]'
+                      : 'bg-[var(--brand-accent)]'
                   }`}
                   style={{ width: `${charPercentage}%` }}
                 />
               </div>
-              <div className="flex justify-between items-center text-[10px] font-mono text-zinc-400">
+              <div className="flex justify-between items-center text-[10px] font-mono text-[var(--text-muted)]">
                 <span>0</span>
                 {result.isOverLimit ? (
-                  <span className="text-red-400 font-bold">{dg.charLimitExceeded}</span>
+                  <span className="text-[var(--state-error-text)] font-bold">{dg.charLimitExceeded}</span>
                 ) : (
-                  <span className="text-emerald-400">
+                  <span className="text-[var(--brand-accent-deep)] font-medium">
                     {(5000 - result.totalChars).toLocaleString()} chars remaining
                   </span>
                 )}
@@ -411,23 +411,23 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
           </div>
 
           {/* Above-The-Fold Preview Card */}
-          <div className="p-4 rounded-xl bg-zinc-950/40 border border-zinc-800/80 space-y-2">
-            <div className="flex items-center justify-between text-[11px] font-mono text-zinc-400">
-              <span className=" font-semibold text-indigo-400">
+          <div className="p-4 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] shadow-[var(--shadow-whisper)] space-y-2">
+            <div className="flex items-center justify-between text-[11px] font-mono">
+              <span className="font-semibold text-[var(--brand-accent-deep)]">
                 {dg.foldIndicatorLabel}
               </span>
-              <span className="text-zinc-500">Search &amp; Mobile Snippet</span>
+              <span className="text-[var(--text-muted)]">Search &amp; Mobile Snippet</span>
             </div>
-            <div className="p-3 rounded-lg bg-zinc-900/90 border border-zinc-800 text-xs text-zinc-200 leading-relaxed">
+            <div className="p-3.5 rounded-xl bg-[var(--bg-canvas-subtle)] border border-[var(--border-hairline)] text-xs text-[var(--text-ink)] leading-relaxed">
               <p className="line-clamp-3 font-sans">
                 {result.aboveTheFoldText}
-                <span className="text-sky-400 font-semibold cursor-pointer ml-1">...more</span>
+                <span className="text-[var(--brand-accent-deep)] font-semibold cursor-pointer ml-1">...more</span>
               </p>
             </div>
           </div>
 
           {/* Full Formatted Description Preview (YouTube Studio card style) */}
-          <div className="p-4 rounded-xl bg-zinc-950/60 border border-zinc-800 space-y-3">
+          <div className="p-4 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] shadow-[var(--shadow-whisper)] space-y-3">
             <div className="flex items-center justify-between">
               <span className="text-xs font-semibold text-[var(--text-ink)]">
                 {dg.previewHeading}
@@ -436,15 +436,15 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
                 YouTube Studio Ready
               </span>
             </div>
-            <pre className="p-4 rounded-xl bg-zinc-900/90 border border-zinc-800/80 text-xs font-mono text-zinc-300 whitespace-pre-wrap leading-relaxed max-h-[480px] overflow-y-auto selection:bg-indigo-500/30">
+            <pre className="p-4 rounded-xl bg-[var(--bg-canvas-subtle)] border border-[var(--border-hairline)] text-xs font-mono text-[var(--text-body)] whitespace-pre-wrap leading-relaxed max-h-[480px] overflow-y-auto selection:bg-[var(--brand-accent-soft)] selection:text-[var(--brand-accent-deep)]">
               {result.fullText}
             </pre>
           </div>
 
           {/* Best Practice Tip Card */}
-          <div className="p-4 rounded-xl bg-amber-500/5 border border-amber-500/20 flex items-start gap-3">
+          <div className="p-4 rounded-xl bg-[var(--state-warning-bg)] border border-[var(--state-warning-border)] flex items-start gap-3">
             <svg
-              className="w-5 h-5 text-amber-400 shrink-0 mt-0.5"
+              className="w-5 h-5 text-[var(--state-warning)] shrink-0 mt-0.5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -457,10 +457,10 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
               />
             </svg>
             <div className="space-y-1 text-xs">
-              <span className="font-semibold text-amber-300 block">
+              <span className="font-semibold text-[var(--state-warning-text)] block">
                 {dg.tipTitle}
               </span>
-              <p className="text-zinc-300 leading-relaxed">
+              <p className="text-[var(--text-body)] leading-relaxed">
                 {dg.tipBody}
               </p>
             </div>
