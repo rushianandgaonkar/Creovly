@@ -137,7 +137,7 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
 
           {/* Template Selector */}
           <div className="space-y-2">
-            <label className="block text-xs font-semibold text-[var(--text-ink)] uppercase tracking-wider">
+            <label className="block text-xs font-semibold text-[var(--text-ink)]">
               {dg.templateHeading}
             </label>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
@@ -174,7 +174,7 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
           {/* Hook & Summary (First 150-200 Chars) */}
           <div className="space-y-1.5">
             <div className="flex justify-between items-center">
-              <label className="text-xs font-semibold text-[var(--text-ink)] uppercase tracking-wider">
+              <label className="text-xs font-semibold text-[var(--text-ink)]">
                 {dg.hookSummaryLabel}
               </label>
               <span
@@ -190,13 +190,13 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
               value={options.hookSummary}
               onChange={(e) => setOptions((prev) => ({ ...prev, hookSummary: e.target.value }))}
               placeholder={dg.hookSummaryPlaceholder}
-              className="w-full px-3 py-2 text-xs rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-[var(--text-ink)] focus:outline-none focus:border-indigo-500 font-sans leading-relaxed"
+              className="w-full px-3 py-2 text-xs rounded-xl border border-[var(--border-control)] bg-[var(--bg-canvas-subtle)] text-[var(--text-ink)] focus:outline-none focus:border-[var(--brand-accent)] font-sans leading-relaxed"
             />
           </div>
 
           {/* Key Points / Highlights */}
           <div className="space-y-1.5">
-            <label className="text-xs font-semibold text-[var(--text-ink)] uppercase tracking-wider">
+            <label className="text-xs font-semibold text-[var(--text-ink)]">
               {dg.keyPointsLabel}
             </label>
             <textarea
@@ -209,13 +209,13 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
                 }))
               }
               placeholder={dg.keyPointsPlaceholder}
-              className="w-full px-3 py-2 text-xs rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-[var(--text-ink)] focus:outline-none focus:border-indigo-500 font-mono text-[11px] leading-relaxed"
+              className="w-full px-3 py-2 text-xs rounded-xl border border-[var(--border-control)] bg-[var(--bg-canvas-subtle)] text-[var(--text-ink)] focus:outline-none focus:border-[var(--brand-accent)] font-mono text-[11px] leading-relaxed"
             />
           </div>
 
           {/* Timestamps / Chapters */}
           <div className="space-y-1.5">
-            <label className="text-xs font-semibold text-[var(--text-ink)] uppercase tracking-wider">
+            <label className="text-xs font-semibold text-[var(--text-ink)]">
               {dg.timestampsHeading}
             </label>
             <textarea
@@ -223,13 +223,13 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
               value={options.timestamps}
               onChange={(e) => setOptions((prev) => ({ ...prev, timestamps: e.target.value }))}
               placeholder={dg.timestampsPlaceholder}
-              className="w-full px-3 py-2 text-xs rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-[var(--text-ink)] focus:outline-none focus:border-indigo-500 font-mono text-[11px] leading-relaxed"
+              className="w-full px-3 py-2 text-xs rounded-xl border border-[var(--border-control)] bg-[var(--bg-canvas-subtle)] text-[var(--text-ink)] focus:outline-none focus:border-[var(--brand-accent)] font-mono text-[11px] leading-relaxed"
             />
           </div>
 
           {/* Links & Resources */}
           <div className="space-y-3 pt-2 border-t border-[var(--border-hairline)]">
-            <span className="text-xs font-semibold text-[var(--text-ink)] uppercase tracking-wider block">
+            <span className="text-xs font-semibold text-[var(--text-ink)] block">
               {dg.linksHeading}
             </span>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -256,7 +256,7 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
 
           {/* Socials & Subscribe */}
           <div className="space-y-3 pt-2 border-t border-[var(--border-hairline)]">
-            <span className="text-xs font-semibold text-[var(--text-ink)] uppercase tracking-wider block">
+            <span className="text-xs font-semibold text-[var(--text-ink)] block">
               {dg.socialsHeading}
             </span>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -317,7 +317,7 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
                 onChange={(e) =>
                   setOptions((prev) => ({ ...prev, includeDisclaimer: e.target.checked }))
                 }
-                className="rounded border-[var(--border-hairline)] text-indigo-600 focus:ring-indigo-500"
+                className="rounded border-[var(--border-control)] accent-[var(--brand-accent)] focus-ring"
               />
               <span className="text-xs text-[var(--text-body)]">
                 {dg.disclaimerLabel}
@@ -332,7 +332,7 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
           <div className="p-4 rounded-xl bg-zinc-950/60 border border-zinc-800 space-y-3">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <div>
-                <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-400 block">
+                <span className="text-[11px] font-mono text-zinc-400 block">
                   {dg.charCountLabel}
                 </span>
                 <div className="flex items-baseline gap-2 mt-0.5">
@@ -413,7 +413,7 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
           {/* Above-The-Fold Preview Card */}
           <div className="p-4 rounded-xl bg-zinc-950/40 border border-zinc-800/80 space-y-2">
             <div className="flex items-center justify-between text-[11px] font-mono text-zinc-400">
-              <span className="uppercase tracking-wider font-semibold text-indigo-400">
+              <span className=" font-semibold text-indigo-400">
                 {dg.foldIndicatorLabel}
               </span>
               <span className="text-zinc-500">Search &amp; Mobile Snippet</span>
@@ -429,7 +429,7 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
           {/* Full Formatted Description Preview (YouTube Studio card style) */}
           <div className="p-4 rounded-xl bg-zinc-950/60 border border-zinc-800 space-y-3">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-semibold uppercase tracking-wider text-[var(--text-ink)]">
+              <span className="text-xs font-semibold text-[var(--text-ink)]">
                 {dg.previewHeading}
               </span>
               <span className="text-[11px] font-mono text-[var(--text-muted)]">

@@ -38,7 +38,7 @@ export default function ThumbnailToolsContent() {
 
       <PageHero tone="blue" className="mb-10">
         <div className="flex flex-wrap items-center gap-2 mb-3">
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono uppercase tracking-wider font-semibold border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)]">
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)]">
             <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
             Visual Packaging
           </span>
@@ -96,7 +96,7 @@ export default function ThumbnailToolsContent() {
       <section className="mt-14 pt-10 border-t border-[var(--border-hairline)] max-w-3xl">
         <div className="flex items-center gap-2 mb-2">
           <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
-          <span className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)]">
+          <span className="text-xs font-mono text-[var(--text-muted)]">
             Recommended Workflow
           </span>
         </div>

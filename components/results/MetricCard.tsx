@@ -25,7 +25,7 @@ export const MetricCard: React.FC<MetricCardProps> = ({
       className={`min-w-0 p-4 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] flex flex-col justify-between ${className}`}
     >
       <div className="flex items-center justify-between gap-2">
-        <span className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)] select-none">
+        <span className="text-xs font-mono text-[var(--text-muted)] select-none">
           {label}
         </span>
         {trendValue && (

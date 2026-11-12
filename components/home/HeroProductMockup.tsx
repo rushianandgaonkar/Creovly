@@ -50,7 +50,7 @@ export default function HeroProductMockup() {
             <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
           </div>
-          <span className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)] font-semibold flex items-center gap-1.5 pl-2 border-l border-[var(--border-hairline)]">
+          <span className="text-[11px] font-mono text-[var(--text-muted)] font-semibold flex items-center gap-1.5 pl-2 border-l border-[var(--border-hairline)]">
             <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)] animate-pulse" />
             Interactive Pre-Publish Simulator
           </span>
@@ -153,7 +153,7 @@ export default function HeroProductMockup() {
 
                   {/* Thumbnail Creator Graphic Visual */}
                   <div className="my-auto text-center space-y-2 py-4">
-                    <span className="inline-block px-3 py-1 rounded-full bg-indigo-500/25 border border-indigo-400/40 text-indigo-200 text-xs font-semibold tracking-wide uppercase">
+                    <span className="inline-block px-3 py-1 rounded-full bg-indigo-500/25 border border-indigo-400/40 text-indigo-200 text-xs font-semibold">
                       CREOVLY PRE-PUBLISH SUITE
                     </span>
                     <p className="text-xl sm:text-2xl font-black text-white tracking-tight drop-shadow-md">
@@ -174,7 +174,7 @@ export default function HeroProductMockup() {
                     <div className="relative">
                       {highlightOverlay && (
                         <div className="absolute -inset-2.5 rounded-lg border-2 border-dashed border-rose-500 bg-rose-500/20 backdrop-blur-xs flex items-center justify-center animate-pulse z-20 pointer-events-none">
-                          <span className="text-[10px] font-bold text-rose-200 uppercase tracking-wider px-1">
+                          <span className="text-[10px] font-bold text-rose-200 px-1">
                             DO NOT PUT TEXT HERE
                           </span>
                         </div>
@@ -190,7 +190,7 @@ export default function HeroProductMockup() {
               {/* Spec Checklist Sidebar */}
               <div className="lg:col-span-4 space-y-3">
                 <div className="p-3.5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] space-y-2">
-                  <span className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)] font-semibold">
+                  <span className="text-[11px] font-mono text-[var(--text-muted)] font-semibold">
                     Automated Readiness Specs
                   </span>
                   <ul className="text-xs space-y-2 text-[var(--text-body)]">
@@ -336,7 +336,7 @@ export default function HeroProductMockup() {
 
               {/* Character Distribution Ruler */}
               <div className="p-4 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] space-y-3">
-                <span className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)] font-semibold">
+                <span className="text-[11px] font-mono text-[var(--text-muted)] font-semibold">
                   Title Visibility Thresholds
                 </span>
 
@@ -427,7 +427,7 @@ export default function HeroProductMockup() {
 
                   {/* Video Center Safe Content */}
                   <div className="absolute inset-x-4 top-20 bottom-24 border border-dashed border-emerald-400/50 bg-emerald-500/10 rounded-xl flex flex-col items-center justify-center p-3 text-center">
-                    <span className="text-[10px] font-mono font-bold text-emerald-300 uppercase tracking-wider">
+                    <span className="text-[10px] font-mono font-bold text-emerald-300">
                       ✓ SAFE ZONE
                     </span>
                     <p className="text-xs font-bold text-white mt-1">
@@ -497,7 +497,7 @@ export default function HeroProductMockup() {
               {/* Safe Zone Guidance Notes */}
               <div className="sm:col-span-7 space-y-3">
                 <div className="p-4 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] space-y-2.5">
-                  <span className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)] font-semibold">
+                  <span className="text-[11px] font-mono text-[var(--text-muted)] font-semibold">
                     Why Shorts Safe Zones Matter
                   </span>
                   <p className="text-xs text-[var(--text-body)] leading-relaxed">

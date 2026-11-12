@@ -45,7 +45,7 @@ export default function LinkToUs() {
       title: 'Branded Dark Badge',
       description:
         'Visual badge styled with Creovly identity for creator toolkits, curated tool roundups, and standalone resource pages. Distributed embeds include rel="nofollow" per search engine guidelines. Never place as a sitewide footer embed.',
-      code: '<a href="https://creovly.com" target="_blank" rel="nofollow noopener" style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;background:#171717;color:#ffffff;border-radius:6px;text-decoration:none;font-family:system-ui,-apple-system,sans-serif;font-size:12px;font-weight:600;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#0070f3;"></span>Creovly</a>',
+      code: '<a href="https://creovly.com" target="_blank" rel="nofollow noopener" style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;background:#1a1714;color:#ffffff;border-radius:6px;text-decoration:none;font-family:system-ui,-apple-system,sans-serif;font-size:12px;font-weight:600;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#c2410c;"></span>Creovly</a>',
     },
   ];
 
@@ -54,7 +54,7 @@ export default function LinkToUs() {
       <div className="space-y-2">
         <div className="flex items-center gap-2">
           <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
-          <span className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)]">
+          <span className="text-xs font-mono text-[var(--text-muted)]">
             Media Kit &amp; Brand Assets
           </span>
         </div>
@@ -80,7 +80,7 @@ export default function LinkToUs() {
       {/* Official Brand Assets & Logo Showcase */}
       <div className="p-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-4">
         <div className="flex items-center justify-between">
-          <h3 className="text-sm font-semibold text-[var(--text-ink)] uppercase font-mono tracking-wider">
+          <h3 className="text-sm font-semibold text-[var(--text-ink)] font-mono">
             Official Logo &amp; Brand Mark
           </h3>
           <span className="text-[11px] font-mono text-[var(--text-muted)]">Vector &amp; High-Res</span>

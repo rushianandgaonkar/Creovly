@@ -45,7 +45,7 @@ export const Textarea: React.FC<TextareaProps> = ({
         aria-describedby={error ? `${id}-error` : undefined}
         onChange={onChange}
         className={`w-full p-3 rounded-md text-sm bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)] border ${
-          error ? 'border-red-500' : 'border-[var(--border-hairline)]'
+          error ? 'border-[var(--state-error)]' : 'border-[var(--border-control)]'
         } placeholder:text-[var(--text-faint)] focus-ring transition-colors resize-y leading-relaxed`}
         {...rest}
       />

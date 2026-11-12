@@ -70,7 +70,7 @@ export const Footer: React.FC = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
             </span>
-            <span className="font-mono text-[11px] font-semibold text-[var(--text-ink)] uppercase tracking-wider">
+            <span className="font-mono text-[11px] font-semibold text-[var(--text-ink)]">
               {t.common.footer.systemStatus}
             </span>
           </div>
@@ -114,7 +114,7 @@ export const Footer: React.FC = () => {
           {/* Category Columns */}
           {categories.map((col) => (
             <div key={col.title} className="flex flex-col gap-3">
-              <h2 className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-ink)] font-semibold">
+              <h2 className="text-[11px] font-mono text-[var(--text-ink)] font-semibold">
                 {col.title}
               </h2>
               <ul className="space-y-2 text-xs">

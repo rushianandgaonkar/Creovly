@@ -18,9 +18,9 @@ const baseStyles =
   'inline-flex items-center justify-center whitespace-nowrap font-medium transition-all duration-150 select-none focus-ring cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none';
 
 const variantStyles = {
-  // App & marketing primary (Obsidian pill with ambient shadow)
+  // App & marketing primary (tally-orange accent pill; one per view)
   primary:
-    'rounded-full bg-[var(--brand-primary)] text-[var(--brand-on-primary)] shadow-[var(--shadow-button-primary)] hover:shadow-[var(--shadow-button-primary-hover)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]',
+    'rounded-full bg-[var(--brand-accent)] text-[var(--brand-on-accent)] hover:bg-[var(--brand-accent-deep)] shadow-[var(--shadow-button-primary)] hover:shadow-[var(--shadow-button-primary-hover)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]',
   secondary:
     'rounded-full bg-[var(--bg-canvas-subtle)] text-[var(--text-ink)] border border-[var(--border-hairline)] hover:bg-[var(--border-hairline)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]',
   ghost:
@@ -31,7 +31,7 @@ const variantStyles = {
 
   // Backwards-compatible aliases
   'pill-primary':
-    'rounded-full bg-[var(--brand-primary)] text-[var(--brand-on-primary)] shadow-[var(--shadow-button-primary)] hover:shadow-[var(--shadow-button-primary-hover)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]',
+    'rounded-full bg-[var(--brand-accent)] text-[var(--brand-on-accent)] hover:bg-[var(--brand-accent-deep)] shadow-[var(--shadow-button-primary)] hover:shadow-[var(--shadow-button-primary-hover)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]',
   'pill-secondary':
     'rounded-full bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)] border border-[var(--border-hairline)] shadow-[var(--shadow-button-elevated)] hover:shadow-[var(--shadow-button-elevated-hover)] hover:border-[var(--border-hairline-strong)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]',
 };

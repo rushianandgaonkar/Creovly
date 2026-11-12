@@ -126,7 +126,7 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             placeholder={contact.form.namePlaceholder}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-hairline-strong)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition-all"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-control)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition-all"
           />
         </div>
 
@@ -141,7 +141,7 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             placeholder={contact.form.emailPlaceholder}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-hairline-strong)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition-all"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-control)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition-all"
           />
         </div>
       </div>
@@ -158,7 +158,7 @@ export default function ContactForm() {
             value={formData.channel}
             onChange={handleChange}
             placeholder={contact.form.channelPlaceholder}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-hairline-strong)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition-all"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-control)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition-all"
           />
         </div>
 
@@ -171,7 +171,7 @@ export default function ContactForm() {
             name="subject"
             value={formData.subject}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-hairline-strong)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition-all cursor-pointer"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-control)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition-all cursor-pointer"
           >
             <option value="Feedback">{contact.form.topics.feedback}</option>
             <option value="Bug">{contact.form.topics.bug}</option>
@@ -192,7 +192,7 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           placeholder={contact.form.messagePlaceholder}
-          className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-hairline-strong)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition-all leading-relaxed"
+          className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-control)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition-all leading-relaxed"
         />
       </div>
 

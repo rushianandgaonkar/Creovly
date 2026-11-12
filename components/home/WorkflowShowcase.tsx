@@ -63,7 +63,7 @@ export default function WorkflowShowcase() {
     >
       {/* Section Header */}
       <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 space-y-3">
-        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono uppercase tracking-wider font-semibold border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-[var(--text-muted)] mb-2">
+        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-semibold border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-[var(--text-muted)] mb-2">
           {t.home.workflow.badge}
         </div>
         <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--text-ink)]">
@@ -213,15 +213,15 @@ export default function WorkflowShowcase() {
                   {/* Metrics Row */}
                   <div className="grid grid-cols-3 gap-2 text-center text-xs">
                     <div className="p-2.5 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
-                      <span className="block text-[10px] text-[var(--text-muted)] uppercase tracking-wide">Character Count</span>
+                      <span className="block text-[10px] text-[var(--text-muted)]">Character Count</span>
                       <strong className="text-[var(--text-ink)] text-sm">48 / 100</strong>
                     </div>
                     <div className="p-2.5 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
-                      <span className="block text-[10px] text-[var(--text-muted)] uppercase tracking-wide">Mobile Feed</span>
+                      <span className="block text-[10px] text-[var(--text-muted)]">Mobile Feed</span>
                       <strong className="text-[var(--text-ink)] text-sm">Wrap preview</strong>
                     </div>
                     <div className="p-2.5 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
-                      <span className="block text-[10px] text-[var(--text-muted)] uppercase tracking-wide">Sample data</span>
+                      <span className="block text-[10px] text-[var(--text-muted)]">Sample data</span>
                       <strong className="text-[var(--text-muted)] text-sm">Illustrative</strong>
                     </div>
                   </div>

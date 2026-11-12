@@ -336,7 +336,7 @@ export default function ThumbnailCompressor() {
             )}
           </fieldset>
           <div className="flex flex-wrap gap-3">
-            <Button onClick={run} disabled={!items.length || locked}>
+            <Button variant={complete.length ? 'outline' : 'primary'} onClick={run} disabled={!items.length || locked}>
               {busy
                 ? t.compressor.buttonCompressing
                 : items.length > 1

@@ -144,7 +144,7 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
           className="mb-10 p-5 rounded-xl border border-[var(--border-hairline-strong)] bg-[var(--bg-canvas-subtle)]"
         >
           <div className="flex items-center gap-2 mb-2">
-            <span className="text-[11px] font-mono uppercase font-semibold text-[var(--brand-accent-deep)] dark:text-blue-400">
+            <span className="text-[11px] font-mono font-semibold text-[var(--brand-accent-deep)]">
               {t.guides.article.verifiedLabel}
             </span>
           </div>
@@ -207,7 +207,7 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
       {displayFaqs.length > 0 && (
         <section className="mt-14 pt-8 border-t border-[var(--border-hairline)]" aria-labelledby="guide-faqs-heading">
           <div className="mb-6">
-            <span className="text-xs font-mono uppercase text-[var(--text-muted)]">
+            <span className="text-xs font-mono text-[var(--text-muted)]">
               {t.tools.shell.faqBadge}
             </span>
             <h2 id="guide-faqs-heading" className="text-xl font-bold tracking-tight text-[var(--text-ink)] mt-1">
@@ -237,7 +237,7 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
       {relatedTools.length > 0 && (
         <section className="mt-16 pt-10 border-t border-[var(--border-hairline)]">
           <div className="mb-6">
-            <span className="text-xs font-mono uppercase text-[var(--text-muted)]">
+            <span className="text-xs font-mono text-[var(--text-muted)]">
               {t.guides.article.appliedUtilitiesBadge}
             </span>
             <h2 className="text-xl font-bold tracking-tight text-[var(--text-ink)] mt-1">

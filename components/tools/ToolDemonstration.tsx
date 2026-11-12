@@ -28,7 +28,7 @@ export default function ToolDemonstration({ slug }: { slug: string }) {
     >
       <div className="flex items-center gap-2 mb-2">
         <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
-        <span className="text-xs font-mono uppercase tracking-wider text-[var(--brand-accent)] font-medium">
+        <span className="text-xs font-mono text-[var(--brand-accent)] font-medium">
           {demoText.badge}
         </span>
       </div>
@@ -103,7 +103,7 @@ export default function ToolDemonstration({ slug }: { slug: string }) {
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono font-semibold uppercase tracking-wider text-[var(--text-ink)]">
+                    <span className="text-xs font-mono font-semibold text-[var(--text-ink)]">
                       {index === 0 ? demoText.beforeDraft : demoText.afterDraft}
                     </span>
                     <span
@@ -136,7 +136,7 @@ export default function ToolDemonstration({ slug }: { slug: string }) {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-6">
             <div className="min-w-0 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] p-5 sm:p-6 shadow-[var(--shadow-whisper)]">
               <div className="flex items-center justify-between mb-4 pb-2 border-b border-[var(--border-hairline-subtle)]">
-                <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-[var(--text-ink)]">
+                <h3 className="text-xs font-mono font-semibold text-[var(--text-ink)]">
                   Sample Inputs
                 </h3>
                 <span className="text-[10px] font-mono text-[var(--text-muted)]">BENCHMARK</span>
@@ -155,7 +155,7 @@ export default function ToolDemonstration({ slug }: { slug: string }) {
             </div>
             <div className="min-w-0 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] p-5 sm:p-6 shadow-[var(--shadow-whisper)]">
               <div className="flex items-center justify-between mb-4 pb-2 border-b border-[var(--border-hairline-subtle)]">
-                <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-[var(--text-ink)]">
+                <h3 className="text-xs font-mono font-semibold text-[var(--text-ink)]">
                   Calculated Output
                 </h3>
                 <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400">

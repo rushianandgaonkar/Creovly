@@ -349,7 +349,7 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
         className="mb-8"
       >
         <div className="flex flex-wrap items-center gap-2 mb-3">
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono uppercase tracking-wider font-semibold border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)] shadow-[var(--shadow-whisper)]">
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)] shadow-[var(--shadow-whisper)]">
             <span
               className={`w-1.5 h-1.5 rounded-full ${
                 tool?.status === 'available' ? 'bg-emerald-500' : 'bg-amber-500'
@@ -416,7 +416,7 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
       <section className="mt-14 pt-10 border-t border-[var(--border-hairline)]" aria-labelledby="guide-heading">
         <div className="flex items-center gap-2 mb-2">
           <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
-          <span className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)]">
+          <span className="text-xs font-mono text-[var(--text-muted)]">
             {t.tools.shell.guidanceLabel}
           </span>
         </div>
@@ -482,7 +482,7 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
         >
           <div className="flex items-center gap-2 mb-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
-            <span className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)]">
+            <span className="text-xs font-mono text-[var(--text-muted)]">
               {t.tools.shell.faqBadge}
             </span>
           </div>
@@ -529,7 +529,7 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
           <div>
             <div className="flex items-center gap-2 mb-1">
               <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
-              <span className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)]">
+              <span className="text-xs font-mono text-[var(--text-muted)]">
                 {t.tools.shell.relatedBadge}
               </span>
             </div>

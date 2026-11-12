@@ -190,7 +190,7 @@ export const ChecklistClient: React.FC = () => {
                         type="checkbox"
                         checked={isChecked}
                         onChange={() => toggleItem(item.id)}
-                        className="mt-0.5 w-4 h-4 rounded border-[var(--border-hairline-strong)] accent-[var(--brand-accent)] cursor-pointer"
+                        className="mt-0.5 w-4 h-4 rounded border-[var(--border-control)] accent-[var(--brand-accent)] cursor-pointer"
                       />
                       <div>
                         <span

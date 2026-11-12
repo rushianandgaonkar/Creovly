@@ -14,7 +14,7 @@ export default function WorkflowDestinations() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-[var(--border-hairline)] pt-8">
         <SpotlightCard as="article" className="p-6 space-y-4">
           <div className="flex items-center justify-between">
-            <span className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)] font-semibold">
+            <span className="text-[11px] font-mono text-[var(--text-muted)] font-semibold">
               {destinations.checklist.tag}
             </span>
             <span className="w-2 h-2 rounded-full bg-amber-500" aria-hidden="true" />
@@ -36,7 +36,7 @@ export default function WorkflowDestinations() {
 
         <SpotlightCard as="article" spotlightColor="rgba(0, 112, 243, 0.2)" className="p-6 space-y-4 border-[var(--brand-accent)]/30">
           <div className="flex items-center justify-between">
-            <span className="text-[11px] font-mono uppercase tracking-wider text-[var(--brand-accent)] font-semibold">
+            <span className="text-[11px] font-mono text-[var(--brand-accent)] font-semibold">
               {destinations.studio.tag}
             </span>
             <span className="w-2 h-2 rounded-full bg-[var(--brand-accent)] animate-pulse" aria-hidden="true" />

@@ -28,7 +28,7 @@ export default function ConsentSettings() {
     <div className="p-4 sm:p-5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] space-y-3">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
-          <h4 className="text-xs font-semibold uppercase tracking-wider text-[var(--text-ink)]">
+          <h4 className="text-xs font-semibold text-[var(--text-ink)]">
             {t.pages.privacy.consentSettingsHeading}
           </h4>
           <p className="text-xs text-[var(--text-muted)] mt-0.5">

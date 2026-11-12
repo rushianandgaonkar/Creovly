@@ -31,7 +31,7 @@ export const ScoreIndicator: React.FC<ScoreIndicatorProps> = ({
       className={`p-4 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] flex items-center justify-between gap-4 ${className}`}
     >
       <div>
-        <span className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)] select-none">
+        <span className="text-xs font-mono text-[var(--text-muted)] select-none">
           {label}
         </span>
         <div className="mt-1 flex items-baseline gap-2">

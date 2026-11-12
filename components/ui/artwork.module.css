@@ -1,16 +1,17 @@
+/* Scoped resizer wash, warm neutral per DESIGN.md §7 */
 .page {
-  --artwork-wash: #e6f3fc;
-  --artwork-warm: #f5f0e8;
-  --artwork-paper: #f7fbff;
-  --artwork-sheet: #b8d4ee;
+  --artwork-wash: #ebe5da;
+  --artwork-warm: #f8e8da;
+  --artwork-paper: #fbf9f5;
+  --artwork-sheet: #d9cdbb;
   background: radial-gradient(ellipse 65% 580px at 0 0, var(--artwork-wash), transparent), radial-gradient(ellipse 65% 650px at 100% 350px, var(--artwork-warm), transparent);
   border-radius: 24px;
 }
 :global(.dark) .page {
-  --artwork-wash: #10263a;
-  --artwork-warm: #242331;
-  --artwork-paper: #192a3b;
-  --artwork-sheet: #375975;
+  --artwork-wash: #24201c;
+  --artwork-warm: #2a1f16;
+  --artwork-paper: #1f1b17;
+  --artwork-sheet: #3d3832;
 }
 .picker { padding: 4px 0; }
 .presets { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }

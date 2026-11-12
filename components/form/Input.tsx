@@ -47,7 +47,7 @@ export const Input: React.FC<InputProps> = ({
         aria-describedby={error ? `${id}-error` : undefined}
         onChange={onChange}
         className={`h-9 px-3 rounded-md text-sm bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)] border ${
-          error ? 'border-red-500' : 'border-[var(--border-hairline)]'
+          error ? 'border-[var(--state-error)]' : 'border-[var(--border-control)]'
         } placeholder:text-[var(--text-faint)] focus-ring transition-colors disabled:opacity-50 disabled:bg-[var(--bg-canvas-subtle)]`}
         {...rest}
       />

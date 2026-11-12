@@ -55,7 +55,7 @@ export const NumberInput: React.FC<NumberInputProps> = ({
           defaultValue={defaultValue}
           placeholder={placeholder}
           onChange={onChange}
-          className={`h-9 w-full rounded-md text-sm bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)] border border-[var(--border-hairline)] placeholder:text-[var(--text-faint)] focus-ring transition-colors tabular-nums font-mono ${
+          className={`h-9 w-full rounded-md text-sm bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)] border border-[var(--border-control)] placeholder:text-[var(--text-faint)] focus-ring transition-colors tabular-nums font-mono ${
             prefix ? 'pl-8' : 'px-3'
           } ${suffix ? 'pr-12' : 'pr-3'}`}
           {...rest}

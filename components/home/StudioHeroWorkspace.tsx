@@ -118,7 +118,7 @@ export default function StudioHeroWorkspace() {
           </span>
           <LocalizedLink
             href="/studio"
-            className="text-[11px] font-semibold text-white bg-sky-600 hover:bg-sky-500 px-2.5 py-1 rounded transition-colors"
+            className="text-[11px] font-semibold text-white bg-orange-700 hover:bg-orange-800 px-2.5 py-1 rounded transition-colors"
           >
             {ws.openStudio}
           </LocalizedLink>
@@ -130,7 +130,7 @@ export default function StudioHeroWorkspace() {
         {/* Column 1: Metadata & Title Stress-Tester (4 cols) */}
         <div className="lg:col-span-4 p-5 space-y-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
+            <h2 className="text-xs font-semibold text-zinc-400">
               {ws.colTitle}
             </h2>
             <span
@@ -156,7 +156,7 @@ export default function StudioHeroWorkspace() {
                 setCustomTitle(e.target.value);
                 setSelectedTitleIdx(null);
               }}
-              className="w-full px-3 py-2 text-sm bg-zinc-900 border border-zinc-700/80 rounded-lg text-white focus:outline-none focus:border-sky-500 transition-colors"
+              className="w-full px-3 py-2 text-sm bg-zinc-900 border border-zinc-700/80 rounded-lg text-white focus:outline-none focus:border-orange-400 transition-colors"
               placeholder={ws.titlePlaceholder}
             />
             <p className="text-[11px] text-zinc-400 flex items-center justify-between">
@@ -185,7 +185,7 @@ export default function StudioHeroWorkspace() {
                   }}
                   className={`text-left text-xs px-2.5 py-1.5 rounded transition-colors truncate ${
                     activeTitle === preset
-                      ? 'bg-zinc-800 text-sky-300 border border-zinc-700'
+                      ? 'bg-zinc-800 text-orange-300 border border-zinc-700'
                       : 'bg-zinc-900/60 text-zinc-400 hover:bg-zinc-800 hover:text-zinc-200'
                   }`}
                 >
@@ -199,7 +199,7 @@ export default function StudioHeroWorkspace() {
         {/* Column 2: 16:9 Thumbnail Canvas (5 cols) */}
         <div className="lg:col-span-5 p-5 space-y-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
+            <h2 className="text-xs font-semibold text-zinc-400">
               {ws.colThumbnail}
             </h2>
             <span className="text-xs text-zinc-400">{activePreset.aspect}</span>
@@ -250,7 +250,7 @@ export default function StudioHeroWorkspace() {
                   onClick={() => setActivePresetId(preset.id)}
                   className={`text-xs px-2 py-1 rounded transition-colors ${
                     activePreset.id === preset.id
-                      ? 'bg-sky-600 text-white font-medium'
+                      ? 'bg-orange-700 text-white font-medium'
                       : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
                   }`}
                 >
@@ -265,7 +265,7 @@ export default function StudioHeroWorkspace() {
         <div className="lg:col-span-3 p-5 space-y-4 bg-zinc-900/40 flex flex-col justify-between">
           <div className="space-y-3">
             <div className="flex items-center justify-between">
-              <h2 className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
+              <h2 className="text-xs font-semibold text-zinc-400">
                 {ws.colChecklist}
               </h2>
               <span className="text-xs font-bold text-emerald-400">

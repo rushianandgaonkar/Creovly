@@ -29,7 +29,7 @@ export default function ToolsDirectoryContent() {
 
       <PageHero tone="indigo" className="mb-10">
         <div className="flex flex-wrap items-center gap-2 mb-3">
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono uppercase tracking-wider font-semibold border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)]">
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)]">
             <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
             {t.tools.directory.completeCatalog}
           </span>

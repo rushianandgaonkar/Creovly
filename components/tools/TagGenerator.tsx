@@ -273,7 +273,7 @@ export default function TagGenerator({}: TagGeneratorProps) {
 
           {/* Content Niche Selector */}
           <div className="space-y-2">
-            <label className="block text-xs font-semibold text-[var(--text-ink)] uppercase tracking-wider">
+            <label className="block text-xs font-semibold text-[var(--text-ink)]">
               {tg.nicheHeading}
             </label>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
@@ -319,7 +319,7 @@ export default function TagGenerator({}: TagGeneratorProps) {
                 value={customTagInput}
                 onChange={(e) => setCustomTagInput(e.target.value)}
                 placeholder="e.g., ios 18.2 update"
-                className="flex-1 px-3 py-1.5 text-xs rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-[var(--text-ink)] focus:outline-none focus:border-indigo-500"
+                className="flex-1 px-3 py-1.5 text-xs rounded-lg border border-[var(--border-control)] bg-[var(--bg-canvas-subtle)] text-[var(--text-ink)] focus:outline-none focus:border-[var(--brand-accent)]"
               />
               <Button type="submit" variant="secondary" className="text-xs py-1.5 px-3">
                 {tg.buttonAddCustom}
@@ -334,7 +334,7 @@ export default function TagGenerator({}: TagGeneratorProps) {
           <div className="p-4 rounded-xl bg-zinc-950/60 border border-zinc-800 space-y-3">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <div>
-                <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-400 block">
+                <span className="text-[11px] font-mono text-zinc-400 block">
                   {tg.charCountLabel}
                 </span>
                 <div className="flex items-baseline gap-2 mt-0.5">
@@ -466,7 +466,7 @@ export default function TagGenerator({}: TagGeneratorProps) {
               {clusters.map((cluster) => (
                 <div key={cluster.id} className="space-y-2.5">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-[var(--text-ink)]">
+                    <span className="text-xs font-semibold text-[var(--text-ink)]">
                       {getClusterTitle(cluster.id)}
                     </span>
                     <span className="text-[10px] font-mono text-[var(--text-muted)]">

@@ -20,7 +20,7 @@ export default function ToolSteps({ slug }: { slug: string }) {
     >
       <div className="flex items-center gap-2 mb-2">
         <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
-        <span className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)]">
+        <span className="text-xs font-mono text-[var(--text-muted)]">
           {playbook.badge}
         </span>
       </div>

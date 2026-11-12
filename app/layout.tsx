@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { siteConfig } from '@/config/site';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Bricolage_Grotesque, Geist, Geist_Mono } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import ConsentBanner from '@/components/feedback/ConsentBanner';
 import Footer from '@/components/layout/Footer';
@@ -15,6 +15,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
+  subsets: ['latin'],
+});
+
+const displayFont = Bricolage_Grotesque({
+  variable: '--font-display',
   subsets: ['latin'],
 });
 
@@ -202,7 +207,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans min-h-screen flex flex-col bg-[var(--bg-canvas)] text-[var(--text-ink)] antialiased selection:bg-[var(--brand-accent)] selection:text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} ${displayFont.variable} font-sans min-h-screen flex flex-col bg-[var(--bg-canvas)] text-[var(--text-ink)] antialiased selection:bg-[var(--brand-accent)] selection:text-[var(--brand-on-accent)]`}
       >
         <a href="#main-content" className="skip-link">
           Skip to main content

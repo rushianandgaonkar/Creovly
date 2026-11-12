@@ -33,7 +33,7 @@ export default function ToolWorkspaceLayout({
             />
             <span
               id="workspace-heading"
-              className="text-xs font-mono font-semibold uppercase tracking-wider text-[var(--text-ink)]"
+              className="text-xs font-mono font-semibold text-[var(--text-ink)]"
             >
               {shell.workbenchControls}
             </span>
@@ -60,7 +60,7 @@ export default function ToolWorkspaceLayout({
             />
             <span
               id="results-heading"
-              className="text-xs font-mono font-semibold uppercase tracking-wider text-[var(--text-ink)]"
+              className="text-xs font-mono font-semibold text-[var(--text-ink)]"
             >
               {preview ? shell.sampleResults : shell.outputInspection}
             </span>

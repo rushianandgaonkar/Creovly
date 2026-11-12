@@ -182,7 +182,7 @@ export default function PublishStudio() {
       <div className="flex flex-wrap items-center gap-2">
         <Button variant="ghost" size="sm" onClick={newProject}>{t.studio.toolbar.buttonNew}</Button>
         <Button variant="outline" size="sm" disabled={!hasSaved || !!busy} onClick={loadDraft}>{t.studio.toolbar.buttonLoadDraft}</Button>
-        <Button size="sm" disabled={!!busy} onClick={saveDraft}>
+        <Button variant="outline" size="sm" disabled={!!busy} onClick={saveDraft}>
           <span>{t.studio.exportSection.buttonSaveDraft}</span>
           <kbd className="ml-1 text-[10px] font-mono opacity-60">Ctrl+S</kbd>
         </Button>
@@ -237,7 +237,7 @@ export default function PublishStudio() {
         <StudioSection title={t.studio.sections.preview}>
           {draft.kind === 'video' && (
             <div className="flex items-center justify-between gap-2 border-b border-[var(--border-hairline)] pb-3 mb-4">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)] font-semibold">
+              <span className="text-[11px] font-mono text-[var(--text-muted)] font-semibold">
                 {t.studio.previewSection.simulatedView}
               </span>
               <Tabs

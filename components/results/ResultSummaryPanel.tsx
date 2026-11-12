@@ -53,7 +53,7 @@ export const ResultSummaryPanel: React.FC<ResultSummaryPanelProps> = ({
             {title}
           </h3>
           {badge && (
-            <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[var(--bg-canvas-subtle)] text-[var(--text-muted)] border border-[var(--border-hairline)]">
+            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[var(--bg-canvas-subtle)] text-[var(--text-muted)] border border-[var(--border-hairline)]">
               {badge}
             </span>
           )}

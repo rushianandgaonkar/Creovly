@@ -41,7 +41,7 @@ export const Select: React.FC<SelectProps> = ({
           value={value}
           defaultValue={defaultValue}
           onChange={onChange}
-          className="h-9 w-full px-3 pr-8 rounded-md text-sm bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)] border border-[var(--border-hairline)] focus-ring appearance-none cursor-pointer transition-colors"
+          className="h-9 w-full px-3 pr-8 rounded-md text-sm bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)] border border-[var(--border-control)] focus-ring appearance-none cursor-pointer transition-colors"
           {...rest}
         >
           {options.map((opt) => (

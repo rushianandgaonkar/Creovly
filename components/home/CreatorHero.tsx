@@ -66,15 +66,15 @@ export default function CreatorHero({
             </div>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-[var(--text-muted)]">
               <span className="inline-flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" aria-hidden="true" />
                 {t.home.hero.clientSide}
               </span>
               <span className="inline-flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-sky-500" aria-hidden="true" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" aria-hidden="true" />
                 {t.home.hero.noAccount}
               </span>
               <span className="inline-flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" aria-hidden="true" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" aria-hidden="true" />
                 {t.home.hero.zeroUploads}
               </span>
             </div>

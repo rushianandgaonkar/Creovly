@@ -149,7 +149,7 @@ export default function CreatorCalculator({ kind }: { kind: CalculatorKind }) {
           </div>
 
           <div className="flex items-center justify-between pb-2 border-b border-[var(--border-hairline-subtle)]">
-            <span className="text-xs font-mono font-medium uppercase tracking-wider text-[var(--text-ink)]">
+            <span className="text-xs font-mono font-medium text-[var(--text-ink)]">
               {t.calculator.shared.parametersHeading.replace('{title}', localizedTitle)}
             </span>
             <button

@@ -53,7 +53,7 @@ export default function AboutContent() {
         <section className="space-y-4">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
-            <span className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)]">
+            <span className="text-xs font-mono text-[var(--text-muted)]">
               {sections.missionTitle}
             </span>
           </div>
@@ -69,7 +69,7 @@ export default function AboutContent() {
         <section className="space-y-6">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
-            <span className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)]">
+            <span className="text-xs font-mono text-[var(--text-muted)]">
               {sections.principlesTag}
             </span>
           </div>
@@ -79,7 +79,7 @@ export default function AboutContent() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <SpotlightCard className="p-6 space-y-3">
-              <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-600 font-mono text-sm font-bold">
+              <div className="w-8 h-8 rounded-lg bg-[var(--brand-accent-soft)] border border-[var(--border-hairline)] flex items-center justify-center text-[var(--brand-accent-deep)] font-mono text-sm font-bold">
                 01
               </div>
               <h3 className="text-base font-semibold text-[var(--text-ink)]">
@@ -91,7 +91,7 @@ export default function AboutContent() {
             </SpotlightCard>
 
             <SpotlightCard className="p-6 space-y-3">
-              <div className="w-8 h-8 rounded-lg bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-600 font-mono text-sm font-bold">
+              <div className="w-8 h-8 rounded-lg bg-[var(--brand-accent-soft)] border border-[var(--border-hairline)] flex items-center justify-center text-[var(--brand-accent-deep)] font-mono text-sm font-bold">
                 02
               </div>
               <h3 className="text-base font-semibold text-[var(--text-ink)]">
@@ -103,7 +103,7 @@ export default function AboutContent() {
             </SpotlightCard>
 
             <SpotlightCard className="p-6 space-y-3">
-              <div className="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-600 font-mono text-sm font-bold">
+              <div className="w-8 h-8 rounded-lg bg-[var(--brand-accent-soft)] border border-[var(--border-hairline)] flex items-center justify-center text-[var(--brand-accent-deep)] font-mono text-sm font-bold">
                 03
               </div>
               <h3 className="text-base font-semibold text-[var(--text-ink)]">

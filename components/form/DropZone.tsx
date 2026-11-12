@@ -116,7 +116,7 @@ export const DropZone: React.FC<DropZoneProps> = ({
         onDragOver={acceptsFiles ? (event) => { event.preventDefault(); if (!disabled) setDragging(true); } : undefined}
         onDragLeave={() => setDragging(false)}
         onDrop={acceptsFiles ? (event) => { event.preventDefault(); setDragging(false); selectFiles(event.dataTransfer.files); } : undefined}
-        className={`relative flex flex-col items-center justify-center p-8 border-2 border-dashed ${dragging ? 'border-[var(--brand-accent)]' : 'border-[var(--border-hairline)]'} hover:border-[var(--brand-accent)] rounded-xl bg-[var(--bg-canvas-subtle)] hover:bg-[var(--bg-canvas-elevated)] transition-colors duration-200 cursor-pointer group text-center focus-within:outline-2 focus-within:outline-[var(--brand-accent)] focus-within:outline-offset-2 ${disabled ? 'opacity-50' : ''}`}
+        className={`relative flex flex-col items-center justify-center p-8 border-2 border-dashed ${dragging ? 'border-[var(--brand-accent)]' : 'border-[var(--border-control)]'} hover:border-[var(--brand-accent)] rounded-xl bg-[var(--bg-canvas-subtle)] hover:bg-[var(--bg-canvas-elevated)] transition-colors duration-200 cursor-pointer group text-center focus-within:outline-2 focus-within:outline-[var(--brand-accent)] focus-within:outline-offset-2 ${disabled ? 'opacity-50' : ''}`}
       >
         <input
           id={id}

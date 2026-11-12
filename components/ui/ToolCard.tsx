@@ -72,7 +72,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({
         {/* Card Header: Category + Optional Badge */}
         {(!illustration || status !== 'available' || badge) && (
           <div className="flex items-center justify-between gap-2 mb-3">
-            <span className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)]">
+            <span className="text-[11px] font-mono text-[var(--text-muted)]">
               {categoryLabel}
             </span>
             {status !== 'available' ? (

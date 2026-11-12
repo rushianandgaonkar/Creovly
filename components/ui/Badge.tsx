@@ -8,7 +8,7 @@ export interface BadgeProps {
 }
 
 const variantStyles = {
-  popular: 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20',
+  popular: 'bg-[var(--brand-accent-soft)] text-[var(--brand-accent-deep)] border-[var(--brand-accent)]/20',
   new: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20',
   free: 'bg-zinc-500/10 text-zinc-700 dark:text-zinc-300 border-zinc-500/20',
   neutral: 'bg-[var(--bg-canvas-subtle)] text-[var(--text-muted)] border-[var(--border-hairline)]',

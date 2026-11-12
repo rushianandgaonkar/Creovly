@@ -79,7 +79,7 @@ export const Alert: React.FC<AlertProps> = ({
 
       <div className="flex-1">
         {title && (
-          <h4 className={`text-xs font-semibold uppercase tracking-wider mb-1 ${current.titleColor}`}>
+          <h4 className={`text-xs font-semibold mb-1 ${current.titleColor}`}>
             {title}
           </h4>
         )}

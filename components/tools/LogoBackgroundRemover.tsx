@@ -165,7 +165,7 @@ export default function LogoBackgroundRemover() {
                   type="color"
                   value={color}
                   onChange={(e) => handleColorChange(e.target.value)}
-                  className="h-10 w-14 cursor-pointer rounded-lg border border-[var(--border-hairline)] p-0.5 bg-[var(--bg-canvas-elevated)] focus-ring shrink-0"
+                  className="h-10 w-14 cursor-pointer rounded-lg border border-[var(--border-control)] p-0.5 bg-[var(--bg-canvas-elevated)] focus-ring shrink-0"
                 />
                 <input
                   id="logo-hex-input"
@@ -187,7 +187,7 @@ export default function LogoBackgroundRemover() {
                     }
                   }}
                   placeholder="#ffffff"
-                  className="h-10 w-24 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] px-2.5 font-mono text-xs text-[var(--text-ink)] focus-ring uppercase"
+                  className="h-10 w-24 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] px-2.5 font-mono text-xs text-[var(--text-ink)] focus-ring"
                 />
                 <div className="flex items-center gap-1 overflow-x-auto">
                   {quickColors.map((item) => (
@@ -277,7 +277,7 @@ export default function LogoBackgroundRemover() {
                   id="logo-preview-background"
                   value={background}
                   onChange={(e) => setBackground(e.target.value)}
-                  className="w-full rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] p-2.5 text-xs font-mono focus-ring"
+                  className="w-full rounded-lg border border-[var(--border-control)] bg-[var(--bg-canvas-elevated)] p-2.5 text-xs font-mono focus-ring"
                 >
                   <option value="checkerboard">{t.logoRemover.backdropChecker}</option>
                   <option value="white">{t.logoRemover.backdropWhite}</option>
