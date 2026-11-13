@@ -315,6 +315,9 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
       'youtube-link-generator': t.linkGenerator,
       'youtube-profile-picture-resizer': t.profilePicture,
       'engagement-rate-calculator': t.engagement,
+      'youtube-tag-generator': t.tagGenerator,
+      'youtube-description-generator': t.descriptionGenerator,
+      'youtube-channel-name-generator': t.channelName,
     }[toolSlug];
     if (about) {
       return (

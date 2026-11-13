@@ -779,6 +779,8 @@ export const messagesPt: Messages = {
   },
   channelName: {
     title: 'Gerador de nomes para canais do YouTube',
+    about1: 'Digite um tema ou algumas palavras-chave, ou deixe o campo vazio para usar a sua categoria, e escolha estilo e tamanho. O gerador combina as suas palavras com prefixos e sufixos em inglês conforme o estilo e mostra até 20 ideias aleatórias, cada uma com o seu @handle. Das palavras-chave, só são usadas as letras A–Z (sem acentos) e os números.',
+    about2: 'O Creovly não verifica se um nome ou handle já está em uso: abra o link do @handle para procurá-lo no YouTube antes de decidir. Os nomes que você marcar ficam salvos como favoritos só neste navegador, e todas as ideias são geradas no seu dispositivo.',
     keywordLabel: 'Tema, nicho ou palavras-chave',
     keywordPlaceholder: 'ex.: análises tech, gameplay, vlogs diários, finanças',
     nicheHeading: 'Selecione a categoria de conteúdo',
@@ -816,6 +818,8 @@ export const messagesPt: Messages = {
   },
   tagGenerator: {
     title: 'Gerador de tags para YouTube',
+    about1: 'Este gerador transforma o tema do seu vídeo e a sua categoria em ideias de tags divididas em cinco grupos: correspondência exata, variações e sinônimos, long-tail e perguntas, tópicos abrangentes e erros ortográficos comuns. As tags vêm de padrões fixos em inglês (como "how to" ou "review"), não de um modelo de IA, e são geradas no seu navegador; confira se cada uma combina mesmo com o seu vídeo.',
+    about2: 'Clique em uma tag para adicioná-la ou removê-la. O contador soma as tags selecionadas e as vírgulas entre elas em relação ao limite de 500 caracteres do YouTube Studio, e o botão de copiar entrega uma lista separada por vírgulas pronta para colar. Segundo o YouTube, as tags ajudam principalmente em buscas com erros de digitação; título, miniatura e descrição pesam mais na descoberta.',
     inputLabel: 'Tema do vídeo, título ou palavras-chave',
     inputPlaceholder: 'ex.: análise iPhone 16, guia de sobrevivência Minecraft, finanças pessoais para iniciantes',
     nicheHeading: 'Categoria de conteúdo',
@@ -855,6 +859,8 @@ export const messagesPt: Messages = {
   },
   descriptionGenerator: {
     title: 'Gerador de descrição para YouTube',
+    about1: 'Escolha um modelo para começar com um conteúdo de exemplo, troque pelo seu e o gerador monta uma descrição pronta para colar: resumo de abertura, pontos principais, marcações de tempo dos capítulos, links, um link de inscrição, redes sociais, um aviso de afiliados opcional e hashtags. As seções que você deixar vazias ficam de fora.',
+    about2: 'O contador acompanha o limite de 5.000 caracteres da descrição no YouTube, e a prévia mostra os primeiros 180 caracteres, mais ou menos o que aparece antes de "...mais". Os títulos das seções são gerados em inglês, então traduza depois de colar se precisar. Tudo é montado no seu navegador e os campos não são salvos: copie o texto antes de sair da página.',
     templateHeading: 'Modelo de descrição',
     templateTutorial: 'Tutorial e passo a passo',
     templateReview: 'Análise de produto e tecnologia',

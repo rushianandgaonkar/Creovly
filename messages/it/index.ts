@@ -779,6 +779,8 @@ export const messagesIt: Messages = {
   },
   channelName: {
     title: 'Generatore di nomi per canali YouTube',
+    about1: 'Scrivi un argomento o qualche parola chiave, oppure lascia il campo vuoto per usare la tua categoria, poi scegli stile e lunghezza. Il generatore combina le tue parole con prefissi e suffissi inglesi in base allo stile e mostra fino a 20 idee casuali, ognuna con il suo @handle. Delle parole chiave vengono usate solo le lettere A–Z (senza accenti) e i numeri.',
+    about2: 'Creovly non verifica se un nome o un handle è già occupato: apri il link dell’@handle per cercarlo su YouTube prima di decidere. I nomi che salvi nei preferiti restano solo in questo browser, e tutte le idee vengono generate sul tuo dispositivo.',
     keywordLabel: 'Argomento, nicchia o parole chiave',
     keywordPlaceholder: 'es. recensioni tech, cozy gaming, vlog quotidiani, finanza',
     nicheHeading: 'Seleziona la categoria di contenuti',
@@ -816,6 +818,8 @@ export const messagesIt: Messages = {
   },
   tagGenerator: {
     title: 'Generatore di tag per YouTube',
+    about1: 'Questo generatore trasforma l’argomento del tuo video e la tua categoria in idee di tag divise in cinque gruppi: corrispondenza esatta, varianti e sinonimi, long-tail e domande, argomenti ampi ed errori di digitazione frequenti. I tag nascono da schemi fissi in inglese (come «how to» o «review»), non da un modello di IA, e vengono generati nel tuo browser: controlla che ognuno si adatti davvero al tuo video.',
+    about2: 'Clicca su un tag per aggiungerlo o toglierlo. Il contatore somma i tag selezionati e le virgole che li separano rispetto al limite di 500 caratteri di YouTube Studio, e il pulsante di copia ti dà un elenco separato da virgole pronto da incollare. Secondo YouTube, i tag servono soprattutto per le ricerche scritte male; titolo, miniatura e descrizione contano di più per farti trovare.',
     inputLabel: 'Argomento del video, titolo o parole chiave',
     inputPlaceholder: 'es.: recensione iPhone 16, guida sopravvivenza Minecraft, finanza personale per principianti',
     nicheHeading: 'Categoria di contenuto',
@@ -855,6 +859,8 @@ export const messagesIt: Messages = {
   },
   descriptionGenerator: {
     title: 'Generatore di descrizioni per YouTube',
+    about1: 'Scegli un template per partire da un contenuto di esempio, sostituiscilo con il tuo e il generatore compone una descrizione pronta da incollare: riepilogo iniziale, punti chiave, timestamp dei capitoli, link, un link di iscrizione, profili social, un avviso di affiliazione facoltativo e hashtag. Le sezioni che lasci vuote vengono escluse.',
+    about2: 'Il contatore tiene d’occhio il limite di 5.000 caratteri della descrizione su YouTube, e l’anteprima mostra i primi 180 caratteri, più o meno ciò che si vede prima di «...mostra altro». I titoli delle sezioni vengono generati in inglese, quindi traducili dopo averli incollati se serve. Tutto viene composto nel tuo browser e i campi non vengono salvati: copia il testo prima di lasciare la pagina.',
     templateHeading: 'Template di descrizione',
     templateTutorial: 'Tutorial e guide passo passo',
     templateReview: 'Recensione prodotto e tecnologia',

@@ -1,5 +1,7 @@
 export const tagGenerator = {
   title: 'YouTube Tag Generator',
+  about1: 'This generator turns your video topic and content category into tag ideas in five groups: exact match, variants and synonyms, long-tail questions, broad topic tags and common misspellings. The tags come from fixed patterns, not an AI model, and are generated in your browser, so check that each one really fits your video.',
+  about2: 'Click a tag to add or remove it. The counter adds up your selected tags and the commas between them against YouTube Studio\'s 500-character limit, and the copy button gives you a comma-separated list to paste into Studio. YouTube says tags matter most for commonly misspelled search terms; your title, thumbnail and description do more for discovery.',
   inputLabel: 'Video topic, title, or keywords',
   inputPlaceholder: 'e.g., iPhone 16 review, Minecraft survival guide, personal finance for beginners',
   nicheHeading: 'Content Category',

@@ -1,5 +1,7 @@
 export const descriptionGenerator = {
   title: 'YouTube Description Generator',
+  about1: 'Pick a template to start from example content, replace it with your own, and the generator assembles a ready-to-paste description: opening summary, key points, chapter timestamps, links, a subscribe link, social profiles, an optional affiliate disclaimer and hashtags. Sections you leave empty are left out.',
+  about2: 'The counter tracks YouTube\'s 5,000-character description limit, and the preview shows the first 180 characters, roughly what viewers see before they tap "...more". The description is built in your browser and the fields are not saved, so copy the text before you leave the page.',
   templateHeading: 'Description Template',
   templateTutorial: 'Tutorial & How-To',
   templateReview: 'Product Review & Tech',

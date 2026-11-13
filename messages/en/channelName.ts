@@ -1,5 +1,7 @@
 export const channelName = {
   title: 'YouTube Channel Name Generator',
+  about1: 'Enter a topic or a few keywords, or leave the box empty to use your content category, then pick a naming style and length. The generator mixes your words with style-based English prefixes and suffixes and shows up to 20 ideas at random, each with a matching @handle. Only the letters A–Z and numbers from your keywords are used.',
+  about2: 'Creovly does not check whether a name or handle is already taken: open the @handle link to look it up on YouTube before you commit. Names you bookmark are saved as favorites in this browser only, and all ideas are generated on your device.',
   keywordLabel: 'Topic, niche, or keywords',
   keywordPlaceholder: 'e.g., tech reviews, cozy gaming, daily vlogs, finance',
   nicheHeading: 'Select content category',

@@ -779,6 +779,8 @@ export const messagesDe: Messages = {
   },
   channelName: {
     title: 'YouTube-Kanalnamen-Generator',
+    about1: 'Geben Sie ein Thema oder einige Stichwörter ein oder lassen Sie das Feld leer, um Ihre Kategorie zu verwenden, und wählen Sie Stil und Länge. Der Generator kombiniert Ihre Wörter je nach Stil mit englischen Präfixen und Suffixen und zeigt bis zu 20 zufällige Vorschläge, jeweils mit passendem @Handle. Aus Ihren Stichwörtern werden nur die Buchstaben A–Z (ohne Umlaute) und Ziffern verwendet.',
+    about2: 'Creovly prüft nicht, ob ein Name oder Handle bereits vergeben ist: Öffnen Sie den @Handle-Link, um ihn auf YouTube nachzuschlagen, bevor Sie sich entscheiden. Mit einem Lesezeichen markierte Namen werden nur in diesem Browser als Favoriten gespeichert, und alle Vorschläge entstehen auf Ihrem Gerät.',
     keywordLabel: 'Thema, Nische oder Schlagwörter',
     keywordPlaceholder: 'z. B. Technik-Tests, Gaming, Daily Vlogs, Finanzen',
     nicheHeading: 'Inhaltskategorie auswählen',
@@ -816,6 +818,8 @@ export const messagesDe: Messages = {
   },
   tagGenerator: {
     title: 'YouTube-Tag-Generator',
+    about1: 'Dieser Generator macht aus Ihrem Videothema und Ihrer Kategorie Tag-Ideen in fünf Gruppen: exakte Treffer, Varianten und Synonyme, Long-Tail und Fragen, übergeordnete Themen sowie häufige Tippfehler. Die Tags entstehen aus festen englischen Mustern (etwa „how to“ oder „review“), nicht durch ein KI-Modell, und werden in Ihrem Browser erzeugt. Prüfen Sie daher, ob jeder Tag wirklich zu Ihrem Video passt.',
+    about2: 'Klicken Sie auf einen Tag, um ihn hinzuzufügen oder zu entfernen. Der Zähler rechnet die ausgewählten Tags samt trennender Kommas gegen das 500-Zeichen-Limit von YouTube Studio, und über die Kopierschaltfläche erhalten Sie eine kommagetrennte Liste zum Einfügen. Laut YouTube helfen Tags vor allem bei häufig falsch geschriebenen Suchbegriffen; Titel, Thumbnail und Beschreibung tragen mehr zur Auffindbarkeit bei.',
     inputLabel: 'Videothema, Titel oder Keywords',
     inputPlaceholder: 'z. B. iPhone 16 Test, Minecraft Survival Guide, Finanzen für Einsteiger',
     nicheHeading: 'Content-Kategorie',
@@ -855,6 +859,8 @@ export const messagesDe: Messages = {
   },
   descriptionGenerator: {
     title: 'YouTube-Videobeschreibungs-Generator',
+    about1: 'Wählen Sie eine Vorlage mit Beispielinhalt als Ausgangspunkt, ersetzen Sie ihn durch Ihre eigenen Angaben, und der Generator setzt eine fertige Beschreibung zum Einfügen zusammen: Einleitung, Kernpunkte, Kapitel-Zeitstempel, Links, einen Abo-Link, Social-Media-Profile, einen optionalen Affiliate-Hinweis und Hashtags. Leere Abschnitte werden weggelassen.',
+    about2: 'Der Zähler prüft das Limit von 5.000 Zeichen für YouTube-Beschreibungen, und die Vorschau zeigt die ersten 180 Zeichen, also ungefähr das, was vor „...mehr“ sichtbar ist. Die Abschnittsüberschriften werden auf Englisch erzeugt; übersetzen Sie sie bei Bedarf nach dem Einfügen. Alles wird in Ihrem Browser erstellt und die Felder werden nicht gespeichert – kopieren Sie den Text daher, bevor Sie die Seite verlassen.',
     templateHeading: 'Beschreibungs-Vorlage',
     templateTutorial: 'Tutorial & Anleitung',
     templateReview: 'Produkttest & Technik',
