@@ -17,8 +17,8 @@ export function validateResize(options: ResizeOptions) {
 }
 
 // Position is a percentage of the available crop travel, not of the source image.
-export function resizeGeometry(sourceWidth: number, sourceHeight: number, width: number, height: number, fit: FitMode, x = 50, y = 50) {
-  const scale = fit === 'cover' ? Math.max(width / sourceWidth, height / sourceHeight) : Math.min(width / sourceWidth, height / sourceHeight);
+export function resizeGeometry(sourceWidth: number, sourceHeight: number, width: number, height: number, fit: FitMode, x = 50, y = 50, zoom = 1) {
+  const scale = (fit === 'cover' ? Math.max(width / sourceWidth, height / sourceHeight) : Math.min(width / sourceWidth, height / sourceHeight)) * zoom;
   const drawWidth = sourceWidth * scale; const drawHeight = sourceHeight * scale;
   return { scale, drawWidth, drawHeight, left: (width - drawWidth) * (fit === 'cover' ? x / 100 : .5), top: (height - drawHeight) * (fit === 'cover' ? y / 100 : .5) };
 }

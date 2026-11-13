@@ -432,6 +432,72 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
         </div>
       );
 
+    case 'link-generator':
+      return (
+        <div className={`tool-preview preview-link-generator w-full h-full p-3.5 bg-zinc-900 text-zinc-100 flex flex-col justify-between select-none ${className}`} data-ui>
+          <div className="flex items-center justify-between text-[10px] text-zinc-400">
+            <span className="font-medium">Timestamp link</span>
+            <span className="px-1.5 py-0.5 rounded bg-zinc-700/60 text-zinc-300 text-[9px] font-semibold">Example</span>
+          </div>
+          <div className="space-y-1.5">
+            <div className="flex items-center gap-2 rounded bg-zinc-950/70 border border-zinc-800 px-2 py-1.5 font-mono text-[10px]">
+              <span className="truncate text-zinc-200">youtu.be/dQw4w9WgXcQ<span className="text-orange-400">?t=90</span></span>
+              <span className="ml-auto shrink-0 rounded bg-orange-500/20 px-1 text-orange-300">1:30</span>
+            </div>
+            <div className="flex items-center gap-2 rounded bg-zinc-950/70 border border-zinc-800 px-2 py-1.5 font-mono text-[10px]">
+              <span className="truncate text-zinc-200">youtube.com/@channel<span className="text-emerald-400">?sub_confirmation=1</span></span>
+            </div>
+          </div>
+          <div className="flex items-center justify-between text-[10px] text-zinc-400 pt-1 border-t border-zinc-800">
+            <span>Timestamp · Subscribe</span>
+            <span className="text-zinc-200 font-medium">QR PNG</span>
+          </div>
+        </div>
+      );
+
+    case 'profile-picture-resizer':
+      return (
+        <div className={`tool-preview preview-profile-picture w-full h-full relative overflow-hidden flex items-center justify-center gap-4 select-none bg-zinc-950 ${className}`} data-ui>
+          <div className="relative w-24 h-24 border border-dashed border-zinc-500 overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/examples/avatar-vlog.png" alt="Square profile picture crop with circle guide" width={128} height={128} className="w-full h-full object-cover" loading="lazy" decoding="async" />
+            <span className="absolute inset-0" style={{ background: 'radial-gradient(circle closest-side, transparent 99%, rgba(0,0,0,0.6) 100%)' }} />
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/examples/avatar-vlog.png" alt="" width={48} height={48} className="w-12 h-12 rounded-full" loading="lazy" decoding="async" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/examples/avatar-vlog.png" alt="" width={24} height={24} className="w-6 h-6 rounded-full" loading="lazy" decoding="async" />
+          </div>
+          <div className="absolute bottom-2.5 left-2.5 px-2 py-0.5 rounded bg-black/80 border border-orange-400/40 text-[10px] font-semibold text-orange-200">
+            1:1 • 800 × 800
+          </div>
+        </div>
+      );
+
+    case 'engagement-rate-calculator':
+      return (
+        <div className={`tool-preview preview-engagement w-full h-full p-3.5 bg-zinc-900 text-zinc-100 flex flex-col justify-between select-none ${className}`} data-ui>
+          <div>
+            <div className="flex items-center justify-between text-[10px] text-zinc-400 mb-1">
+              <span className="font-medium">Engagement rate · by views</span>
+              <span className="text-zinc-400 font-semibold">Example</span>
+            </div>
+            <div className="text-2xl font-bold text-white tracking-tight">5.00%</div>
+          </div>
+          <div className="space-y-1">
+            {[['Likes', 80, 'bg-orange-400'], ['Comments', 10, 'bg-emerald-400'], ['Shares', 10, 'bg-sky-400']].map(([name, share, color]) => (
+              <div key={name} className="flex items-center gap-2 text-[10px] text-zinc-300">
+                <span className="w-14">{name}</span>
+                <span className="h-1.5 flex-1 rounded-full bg-zinc-800 overflow-hidden"><span className={`block h-full ${color}`} style={{ width: `${share}%` }} /></span>
+                <span className="w-7 text-right">{share}%</span>
+              </div>
+            ))}
+          </div>
+          <div className="text-[10px] text-zinc-400 pt-1 border-t border-zinc-800">YouTube · Instagram · TikTok</div>
+        </div>
+      );
+
     default:
       return null;
   }

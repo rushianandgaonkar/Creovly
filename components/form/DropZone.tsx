@@ -19,6 +19,8 @@ export interface DropZoneProps {
   samples?: SampleImageOption[];
 }
 
+const formatNames: Record<string, string> = { 'image/jpeg': 'JPG', 'image/png': 'PNG', 'image/webp': 'WebP', 'image/gif': 'GIF', 'image/bmp': 'BMP' };
+
 export const DropZone: React.FC<DropZoneProps> = ({
   id,
   label,
@@ -154,7 +156,7 @@ export const DropZone: React.FC<DropZoneProps> = ({
           )}
         </p>
         <p className="mt-1 text-xs text-[var(--text-muted)]">
-          JPG, PNG, WebP · {t.common.dropzone.maxSize} {maxSizeMB} MB
+          {accept.split(',').map((type) => formatNames[type.trim()] ?? type).join(', ')} · {t.common.dropzone.maxSize} {maxSizeMB} MB
         </p>
       </label>
 

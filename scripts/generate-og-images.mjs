@@ -24,7 +24,7 @@ function getBrowserPath() {
 const browserPath = getBrowserPath();
 console.log(`Using browser for OG generation: ${browserPath}`);
 
-const pages = [
+const allPages = [
   {
     filename: 'youtube-thumbnail-compressor.png',
     category: 'THUMBNAILS & SHORTS',
@@ -433,6 +433,81 @@ const pages = [
           <span style="font-size:12px;color:#94a3b8;font-family:monospace;">Total Monthly Deposit:</span>
           <span style="font-size:24px;font-weight:900;color:#2dd4bf;font-family:monospace;">$2,310.00</span>
         </div>
+      </div>
+    `,
+  },
+  {
+    filename: 'youtube-link-generator.png',
+    category: 'TITLE TOOLS',
+    tone: '#6366f1',
+    glow: 'rgba(99, 102, 241, 0.25)',
+    title: 'YouTube Link Generator',
+    description: 'Timestamp links that start at the exact second, plus subscribe links with ?sub_confirmation=1 and a QR code.',
+    pills: ['?t=90 Short & Full Links', 'Embed ?start=', 'Subscribe QR PNG'],
+    visual: `
+      <div style="background:#191836;border:1px solid rgba(99,102,241,0.3);border-radius:18px;padding:24px;width:100%;height:100%;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 40px rgba(0,0,0,0.5);">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:12px;font-family:monospace;color:#a5b4fc;font-weight:700;letter-spacing:1px;">LINK OUTPUT</span>
+          <span style="background:rgba(99,102,241,0.2);color:#818cf8;font-size:11px;font-weight:700;padding:4px 8px;border-radius:6px;font-family:monospace;">1:30 → t=90</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="background:#090d16;padding:12px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);font-size:14px;font-family:monospace;color:#f8fafc;">youtu.be/VIDEO_ID<span style="color:#fb923c;">?t=90</span></div>
+          <div style="background:#090d16;padding:12px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);font-size:14px;font-family:monospace;color:#f8fafc;">watch?v=VIDEO_ID<span style="color:#fb923c;">&amp;t=90s</span></div>
+          <div style="background:#090d16;padding:12px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);font-size:13px;font-family:monospace;color:#f8fafc;">@channel<span style="color:#34d399;">?sub_confirmation=1</span></div>
+        </div>
+        <div style="font-size:11px;font-family:monospace;color:#94a3b8;text-align:center;">Watch · youtu.be · Shorts · Live · Embed · Mobile</div>
+      </div>
+    `,
+  },
+  {
+    filename: 'youtube-profile-picture-resizer.png',
+    category: 'THUMBNAILS & SHORTS',
+    tone: '#0070f3',
+    glow: 'rgba(0, 112, 243, 0.25)',
+    title: 'YouTube Profile Picture Size & Resizer',
+    description: '800 × 800 px, 1:1, up to 4 MB, shown as a circle. Crop, preview light and dark, and export locally.',
+    pills: ['800 × 800 · 1:1', 'Circle Crop Preview', 'PNG or JPG < 4 MB'],
+    visual: `
+      <div style="background:#131b2e;border:1px solid rgba(0,112,243,0.3);border-radius:18px;padding:24px;width:100%;height:100%;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 40px rgba(0,0,0,0.5);">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:12px;font-family:monospace;color:#93c5fd;font-weight:700;letter-spacing:1px;">CHANNEL ICON</span>
+          <span style="background:rgba(0,112,243,0.2);color:#60a5fa;font-size:11px;font-weight:700;padding:4px 8px;border-radius:6px;font-family:monospace;">800 × 800</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;gap:24px;">
+          <div style="width:150px;height:150px;border:2px dashed #60a5fa;display:flex;align-items:center;justify-content:center;">
+            <div style="width:146px;height:146px;border-radius:50%;background:linear-gradient(135deg,#fb923c,#6366f1);"></div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+            <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#fb923c,#6366f1);"></div>
+            <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#fb923c,#6366f1);"></div>
+          </div>
+        </div>
+        <div style="font-size:11px;font-family:monospace;color:#94a3b8;text-align:center;">Min 98 × 98 · JPG, PNG, BMP, GIF (not animated)</div>
+      </div>
+    `,
+  },
+  {
+    filename: 'engagement-rate-calculator.png',
+    category: 'MONEY & GROWTH',
+    tone: '#0d9488',
+    glow: 'rgba(13, 148, 136, 0.25)',
+    title: 'Engagement Rate Calculator',
+    description: 'Engagement rate for YouTube, Instagram and TikTok by views, followers or reach, with the formula shown.',
+    pills: ['YouTube · Instagram · TikTok', 'Views / Followers / Reach', 'Average of 20 Posts'],
+    visual: `
+      <div style="background:#112423;border:1px solid rgba(13,148,136,0.3);border-radius:18px;padding:24px;width:100%;height:100%;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 40px rgba(0,0,0,0.5);">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:12px;font-family:monospace;color:#5eead4;font-weight:700;letter-spacing:1px;">EXAMPLE</span>
+          <span style="background:rgba(13,148,136,0.2);color:#2dd4bf;font-size:11px;font-weight:700;padding:4px 8px;border-radius:6px;font-family:monospace;">BY VIEWS</span>
+        </div>
+        <div style="background:#090d16;border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,0.06);">
+          <div style="font-size:16px;font-weight:800;color:#f8fafc;font-family:monospace;">(400 + 50 + 50) ÷ 10,000 × 100</div>
+          <div style="margin-top:12px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:baseline;">
+            <span style="font-size:11px;color:#64748b;font-family:monospace;">Engagement rate</span>
+            <span style="font-size:28px;font-weight:900;color:#2dd4bf;font-family:monospace;">5.00%</span>
+          </div>
+        </div>
+        <div style="font-size:10px;font-family:monospace;color:#94a3b8;text-align:center;">Likes 80% · Comments 10% · Shares 10%</div>
       </div>
     `,
   },
@@ -905,6 +980,9 @@ function generateHtml(page) {
 }
 
 async function generateAll() {
+  // Optional filenames limit the run, e.g. `npm run generate:og -- engagement-rate-calculator.png`.
+  const only = process.argv.slice(2);
+  const pages = only.length ? allPages.filter((page) => only.includes(page.filename)) : allPages;
   console.log(`\nGenerating ${pages.length} unique Open Graph images in /public/og/...`);
   const tempHtmlPath = path.resolve('temp-og.html');
 

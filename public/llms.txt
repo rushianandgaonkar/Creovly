@@ -16,6 +16,8 @@ Creovly is a private, in-browser workspace for YouTube creators. Compress thumbn
 - [Remove Background from Logo](https://creovly.com/tools/logo-background-remover): Local flood-fill edge detection algorithm removing solid backgrounds from channel avatars and logos into transparent PNGs.
 - [YouTube Shorts Safe Zone Checker](https://creovly.com/tools/youtube-shorts-safe-zone): Overlay inspector simulating YouTube UI elements (subscribe button, sound icon, title overlay) over 9:16 vertical video frames.
 - [YouTube Title Checker & Analyzer](https://creovly.com/tools/youtube-title-checker): Real-time title length, character count, mobile truncation warning, and power word analysis.
+- [YouTube Link Generator](https://creovly.com/tools/youtube-link-generator): Builds timestamp links (youtu.be/ID?t=90, watch?v=ID&t=90s, embed ?start=) from any video URL form, plus subscribe links with ?sub_confirmation=1 and a downloadable QR code.
+- [YouTube Profile Picture Resizer](https://creovly.com/tools/youtube-profile-picture-resizer): Crops any image to an 800 × 800 channel icon with a circle overlay, light and dark previews at real display sizes, and PNG or JPG export under 4 MB.
 
 ## Creator Monetization & Mathematics Calculators
 
@@ -23,6 +25,7 @@ Creovly is a private, in-browser workspace for YouTube creators. Compress thumbn
 - [YouTube RPM Calculator](https://creovly.com/tools/youtube-rpm-calculator): Calculate precise revenue per mille (1,000 views) from existing YouTube Studio revenue and view data.
 - [YouTube Watch Hours Calculator](https://creovly.com/tools/youtube-watch-hours-calculator): Milestone projection calculator for reaching 4,000 public watch hours needed for YouTube Partner Program (YPP).
 - [YouTube Monetization Calculator](https://creovly.com/tools/youtube-monetization-calculator): Comprehensive scenario builder incorporating ad revenue, channel memberships, sponsorship deals, and operating expenses.
+- [Engagement Rate Calculator](https://creovly.com/tools/engagement-rate-calculator): Engagement rate for YouTube, Instagram and TikTok by views, followers or reach, with the formula shown, interaction shares, comment-to-like ratio and a multi-post average.
 
 ## Verified Creator Guides
 

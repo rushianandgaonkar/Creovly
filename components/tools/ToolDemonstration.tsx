@@ -15,7 +15,7 @@ export default function ToolDemonstration({ slug }: { slug: string }) {
   const demoText = playbook.demonstration;
 
   const guidance = toolGuidance[slug];
-  if (!guidance) return null;
+  if (!guidance || !(guidance.image || guidance.titleExample || guidance.calculator)) return null;
   const example = guidance.image;
   const definition = guidance.calculator ? calculatorDefinitions[guidance.calculator] : undefined;
   const calculation = guidance.calculator && definition ? calculateCreator(guidance.calculator, definition.example) : undefined;

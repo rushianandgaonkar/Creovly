@@ -79,6 +79,9 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
     'youtube-rpm-calculator': 'rpm',
     'youtube-watch-hours-calculator': 'watchHours',
     'youtube-monetization-calculator': 'monetization',
+    'youtube-link-generator': 'linkGenerator',
+    'youtube-profile-picture-resizer': 'profilePicture',
+    'engagement-rate-calculator': 'engagement',
   };
 
   const localizedFaqs = slugToFaqKey[toolSlug] ? t.tools.faqs[slugToFaqKey[toolSlug]] : undefined;
@@ -125,6 +128,12 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
         return t.calculator.watchHours.title;
       case 'youtube-monetization-calculator':
         return t.calculator.monetization.title;
+      case 'youtube-link-generator':
+        return t.linkGenerator.title;
+      case 'youtube-profile-picture-resizer':
+        return t.profilePicture.title;
+      case 'engagement-rate-calculator':
+        return t.engagement.title;
       default:
         return fallback;
     }
@@ -299,6 +308,19 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
           <p>{g.p1}</p>
           <p>{g.p2}</p>
           <p>{g.p3}</p>
+        </>
+      );
+    }
+    const about = {
+      'youtube-link-generator': t.linkGenerator,
+      'youtube-profile-picture-resizer': t.profilePicture,
+      'engagement-rate-calculator': t.engagement,
+    }[toolSlug];
+    if (about) {
+      return (
+        <>
+          <p>{about.about1}</p>
+          <p>{about.about2}</p>
         </>
       );
     }

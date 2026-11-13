@@ -63,6 +63,12 @@ export default function QuickSearchModal({
         return t.calculator.watchHours.title;
       case 'youtube-monetization-calculator':
         return t.calculator.monetization.title;
+      case 'youtube-link-generator':
+        return t.linkGenerator.title;
+      case 'youtube-profile-picture-resizer':
+        return t.profilePicture.title;
+      case 'engagement-rate-calculator':
+        return t.engagement.title;
       default:
         return fallback;
     }

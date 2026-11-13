@@ -9,6 +9,26 @@ export interface SampleImageOption {
 }
 
 export const toolSamples: Record<string, SampleImageOption[]> = {
+  'youtube-profile-picture-resizer': [
+    {
+      id: 'creator-desk',
+      label: 'Creator Desk',
+      category: '1600 × 1000 · Photo',
+      src: '/examples/thumbnail-source.png',
+      fileName: 'creator-desk.png',
+      width: 1600,
+      height: 1000,
+    },
+    {
+      id: 'podcast-logo',
+      label: 'Podcast Studio',
+      category: '800 × 600 · Transparent',
+      src: '/examples/sample-podcast-logo-transparent.png',
+      fileName: 'podcast-studio.png',
+      width: 800,
+      height: 600,
+    },
+  ],
   'logo-background-remover': [
     {
       id: 'gaming-badge',

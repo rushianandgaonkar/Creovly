@@ -10,7 +10,7 @@ export interface PlaybookI18n {
   heading: string;
   subheading: string;
   stepPrefix: string;
-  tools: Record<string, [PlaybookStep, PlaybookStep, PlaybookStep]>;
+  tools: Record<string, PlaybookStep[]>;
   demonstration: {
     badge: string;
     inspectionHeading: string;
@@ -115,6 +115,24 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Add chapters & resource links', body: 'Set up timeline timestamps (00:00 Intro, etc.), social media handles, affiliate links, and community channels.' },
         { title: 'Review & copy to Studio', body: 'Inspect the above-the-fold snippet and 5,000-character count, then click Copy Description to paste directly into YouTube Studio.' },
       ],
+      'youtube-link-generator': [
+        { title: 'Timestamp · Paste the video link', body: 'Copy the URL from the address bar or the Share button. Watch, youtu.be, Shorts, live, embed and mobile links all work.' },
+        { title: 'Timestamp · Enter the start time', body: 'Type 90, 1:30, 1:02:03 or 1m30s. Check the parsed time, and add more timestamps if you need a list.' },
+        { title: 'Timestamp · Copy and test', body: 'Copy the short link, full link or embed code, then open the link once to confirm it starts where you expect.' },
+        { title: 'Subscribe · Enter your channel', body: 'Paste your channel URL or type your @handle. Channel IDs (UC…) and older /c/ and /user/ URLs also work.' },
+        { title: 'Subscribe · Copy the link', body: 'Copy the link with ?sub_confirmation=1 added. Signed-in viewers who open it are asked to confirm the subscription.' },
+        { title: 'Subscribe · Share or print', body: 'Add it to descriptions, pinned comments and link-in-bio pages, or download the QR code for print and stream overlays.' },
+      ],
+      'youtube-profile-picture-resizer': [
+        { title: 'Upload your image', body: 'Drop or choose a JPG, PNG, WebP, GIF or BMP. It is processed in your browser and never uploaded.' },
+        { title: 'Frame the circle', body: 'Drag and zoom inside the square. Keep your face, logo or text inside the circle and check the light and dark previews.' },
+        { title: 'Export at 800 × 800', body: 'Choose PNG or JPG, add a background colour for transparent logos if needed, then export and upload it in the Customization section of YouTube Studio.' },
+      ],
+      'engagement-rate-calculator': [
+        { title: 'Pick the platform', body: 'Choose YouTube, Instagram or TikTok. Likes and comments stay filled in when you switch.' },
+        { title: 'Enter the numbers', body: 'Copy views, likes, comments and the other counts from your analytics. Blank optional fields count as 0, or paste up to 20 posts to get an average.' },
+        { title: 'Read the result', body: 'Check the rate, the formula used and the share of each interaction. Compare a single post with your own average.' },
+      ],
     },
   },
   es: {
@@ -202,6 +220,24 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Elige formato e introduce datos', body: 'Selecciona el estilo de video (tutorial, reseña, vlog, gaming o podcast) y escribe título, gancho inicial y puntos clave.' },
         { title: 'Añade marcas de tiempo y enlaces', body: 'Configura capítulos de tiempo (00:00 Inicio, etc.), redes sociales, enlaces de afiliados y comunidad.' },
         { title: 'Revisa y copia en YouTube Studio', body: 'Comprueba el fragmento visible antes del corte y el límite de 5.000 caracteres, y copia la descripción con un solo clic.' },
+      ],
+      'youtube-link-generator': [
+        { title: 'Minuto · Pega el enlace del vídeo', body: 'Copia la URL de la barra de direcciones o del botón Compartir. Funcionan enlaces watch, youtu.be, Shorts, directos, embed y móviles.' },
+        { title: 'Minuto · Escribe el inicio', body: 'Escribe 90, 1:30, 1:02:03 o 1m30s. Revisa el tiempo interpretado y añade más marcas si necesitas una lista.' },
+        { title: 'Minuto · Copia y prueba', body: 'Copia el enlace corto, el completo o el código para insertar, y ábrelo una vez para comprobar que empieza donde esperas.' },
+        { title: 'Suscripción · Introduce tu canal', body: 'Pega la URL de tu canal o escribe tu @identificador. También valen los ID de canal (UC…) y las URL antiguas /c/ y /user/.' },
+        { title: 'Suscripción · Copia el enlace', body: 'Copia el enlace con ?sub_confirmation=1. Quien lo abra con la sesión iniciada verá la confirmación de suscripción.' },
+        { title: 'Suscripción · Compártelo o imprímelo', body: 'Añádelo a descripciones, comentarios fijados y enlaces en la biografía, o descarga el código QR para impresos y overlays de directo.' },
+      ],
+      'youtube-profile-picture-resizer': [
+        { title: 'Sube tu imagen', body: 'Arrastra o elige un JPG, PNG, WebP, GIF o BMP. Se procesa en tu navegador y nunca se sube.' },
+        { title: 'Encuadra el círculo', body: 'Arrastra y haz zoom dentro del cuadrado. Mantén tu cara, logo o texto dentro del círculo y revisa las vistas previas en modo claro y oscuro.' },
+        { title: 'Exporta a 800 × 800', body: 'Elige PNG o JPG, añade un color de fondo si tu logo es transparente y exporta. Después súbelo en la sección Personalización de YouTube Studio.' },
+      ],
+      'engagement-rate-calculator': [
+        { title: 'Elige la plataforma', body: 'Selecciona YouTube, Instagram o TikTok. Los me gusta y los comentarios se mantienen al cambiar.' },
+        { title: 'Introduce los datos', body: 'Copia visualizaciones, me gusta, comentarios y demás cifras de tus estadísticas. Los campos opcionales vacíos cuentan como 0; también puedes pegar hasta 20 publicaciones para obtener la media.' },
+        { title: 'Lee el resultado', body: 'Revisa la tasa, la fórmula usada y el peso de cada interacción. Compara una publicación con tu propia media.' },
       ],
     },
   },
@@ -291,6 +327,24 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: '目次タイムスタンプとリンク設定', body: '00:00開始のチャプター目次、SNSリンク、紹介アイテムのアフィリエイトリンクを整えます。' },
         { title: '折りたたみ表示を確認してコピー', body: '「もっと見る」ボタン前の表示プレビューと5,000文字制限を確認し、ワンクリックでコピーしてYouTube Studioへ貼り付けます。' },
       ],
+      'youtube-link-generator': [
+        { title: '時間指定 · 動画リンクを貼る', body: 'アドレスバーや「共有」ボタンからURLをコピーします。watch、youtu.be、ショート、ライブ、埋め込み、モバイルのリンクに対応しています。' },
+        { title: '時間指定 · 開始時間を入力', body: '90、1:30、1:02:03、1m30s のように入力し、表示される時間を確認します。一覧が必要ならタイムスタンプを追加します。' },
+        { title: '時間指定 · コピーして確認', body: '短縮リンク、通常リンク、埋め込みコードをコピーし、一度開いて狙った位置から再生されるか確認します。' },
+        { title: '登録リンク · チャンネルを入力', body: 'チャンネルURLを貼るか @ハンドルを入力します。チャンネルID（UC…）や古い /c/・/user/ のURLにも対応しています。' },
+        { title: '登録リンク · リンクをコピー', body: '?sub_confirmation=1 付きのリンクをコピーします。ログイン中の視聴者が開くと、登録の確認画面が表示されます。' },
+        { title: '登録リンク · 共有・印刷', body: '概要欄、固定コメント、プロフィールのリンク集に追加するか、QRコードをダウンロードして印刷物や配信オーバーレイに使います。' },
+      ],
+      'youtube-profile-picture-resizer': [
+        { title: '画像をアップロード', body: 'JPG、PNG、WebP、GIF、BMPをドロップまたは選択します。処理はブラウザ内で行われ、アップロードされません。' },
+        { title: '円に合わせて配置', body: '正方形の中でドラッグとズームを調整します。顔・ロゴ・文字を円の中に収め、ライト・ダークのプレビューを確認します。' },
+        { title: '800 × 800で書き出し', body: 'PNGかJPGを選び、透過ロゴなら背景色を加えて書き出します。YouTube Studioの「カスタマイズ」からアップロードしてください。' },
+      ],
+      'engagement-rate-calculator': [
+        { title: 'プラットフォームを選ぶ', body: 'YouTube、Instagram、TikTokから選びます。切り替えても、いいねやコメントの値はそのまま残ります。' },
+        { title: '数値を入力', body: 'アナリティクスから再生数、いいね、コメントなどをコピーします。任意項目の空欄は0として計算し、最大20投稿を貼り付けて平均も出せます。' },
+        { title: '結果を確認', body: '率、使った計算式、各インタラクションの割合を確認し、1投稿をあなたの平均と比べます。' },
+      ],
     },
   },
   fr: {
@@ -378,6 +432,24 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Choisissez le format et les détails', body: "Sélectionnez votre style de vidéo (tutoriel, test, vlog, gaming ou podcast) et saisissez le titre, l'accroche et les points clés." },
         { title: 'Ajoutez chapitres et liens utiles', body: "Intégrez les repères temporels (00:00 Intro, etc.), vos réseaux sociaux, liens affiliés et espaces communautaires." },
         { title: 'Vérifiez et copiez dans Studio', body: "Contrôlez l'aperçu au-dessus du pli et la limite des 5 000 caractères, puis cliquez sur Copier la description pour YouTube Studio." },
+      ],
+      'youtube-link-generator': [
+        { title: 'Timestamp · Collez le lien', body: 'Copiez l’URL depuis la barre d’adresse ou le bouton Partager. Les liens watch, youtu.be, Shorts, live, embed et mobiles fonctionnent.' },
+        { title: 'Timestamp · Saisissez le départ', body: 'Tapez 90, 1:30, 1:02:03 ou 1m30s. Vérifiez le temps interprété et ajoutez d’autres timestamps si vous voulez une liste.' },
+        { title: 'Timestamp · Copiez et testez', body: 'Copiez le lien court, le lien complet ou le code d’intégration, puis ouvrez le lien une fois pour vérifier le point de départ.' },
+        { title: 'Abonnement · Saisissez votre chaîne', body: 'Collez l’URL de votre chaîne ou tapez votre @identifiant. Les ID de chaîne (UC…) et les anciennes URL /c/ et /user/ fonctionnent aussi.' },
+        { title: 'Abonnement · Copiez le lien', body: 'Copiez le lien avec ?sub_confirmation=1. Les spectateurs connectés qui l’ouvrent doivent confirmer l’abonnement.' },
+        { title: 'Abonnement · Partagez ou imprimez', body: 'Ajoutez-le aux descriptions, aux commentaires épinglés et aux liens en bio, ou téléchargez le QR code pour vos imprimés et overlays de live.' },
+      ],
+      'youtube-profile-picture-resizer': [
+        { title: 'Importez votre image', body: 'Déposez ou choisissez un JPG, PNG, WebP, GIF ou BMP. Il est traité dans votre navigateur et jamais envoyé.' },
+        { title: 'Cadrez le cercle', body: 'Faites glisser et zoomez dans le carré. Gardez visage, logo ou texte dans le cercle et vérifiez les aperçus clair et sombre.' },
+        { title: 'Exportez en 800 × 800', body: 'Choisissez PNG ou JPG, ajoutez une couleur de fond pour un logo transparent, puis exportez et importez l’image dans la section Personnalisation de YouTube Studio.' },
+      ],
+      'engagement-rate-calculator': [
+        { title: 'Choisissez la plateforme', body: 'Sélectionnez YouTube, Instagram ou TikTok. Les j’aime et les commentaires restent saisis quand vous changez.' },
+        { title: 'Saisissez les chiffres', body: 'Copiez vues, j’aime, commentaires et autres chiffres depuis vos statistiques. Les champs facultatifs vides comptent pour 0 ; vous pouvez aussi coller jusqu’à 20 publications pour obtenir une moyenne.' },
+        { title: 'Lisez le résultat', body: 'Vérifiez le taux, la formule utilisée et la part de chaque interaction. Comparez une publication à votre propre moyenne.' },
       ],
     },
   },
@@ -467,6 +539,24 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Kapitel-Timestamps & Links ergänzen', body: 'Erstelle Zeitstempel (00:00 Intro etc.), trage Social-Media-Handles, Affiliate-Links und Community-Verlinkungen ein.' },
         { title: 'Prüfen & in Studio einfügen', body: 'Überprüfe den sichtbaren Vorschautext vor dem "Mehr anzeigen"-Umbruch sowie das 5.000-Zeichen-Limit und kopiere die Beschreibung.' },
       ],
+      'youtube-link-generator': [
+        { title: 'Zeitstempel · Videolink einfügen', body: 'Kopieren Sie die URL aus der Adressleiste oder über Teilen. watch-, youtu.be-, Shorts-, Live-, Embed- und Mobil-Links funktionieren.' },
+        { title: 'Zeitstempel · Startzeit eingeben', body: 'Geben Sie 90, 1:30, 1:02:03 oder 1m30s ein. Prüfen Sie die erkannte Zeit und fügen Sie weitere Zeitstempel hinzu, wenn Sie eine Liste brauchen.' },
+        { title: 'Zeitstempel · Kopieren und testen', body: 'Kopieren Sie Kurzlink, vollständigen Link oder Einbettungscode und öffnen Sie den Link einmal, um den Startpunkt zu prüfen.' },
+        { title: 'Abo-Link · Kanal eingeben', body: 'Fügen Sie Ihre Kanal-URL ein oder geben Sie Ihr @Handle ein. Kanal-IDs (UC…) und alte /c/- und /user/-URLs funktionieren ebenfalls.' },
+        { title: 'Abo-Link · Link kopieren', body: 'Kopieren Sie den Link mit ?sub_confirmation=1. Angemeldete Zuschauer werden beim Öffnen gebeten, das Abo zu bestätigen.' },
+        { title: 'Abo-Link · Teilen oder drucken', body: 'Fügen Sie ihn in Beschreibungen, angepinnte Kommentare und Link-in-Bio-Seiten ein oder laden Sie den QR-Code für Drucksachen und Stream-Overlays herunter.' },
+      ],
+      'youtube-profile-picture-resizer': [
+        { title: 'Bild hochladen', body: 'Ziehen Sie ein JPG, PNG, WebP, GIF oder BMP hierher oder wählen Sie es aus. Es wird in Ihrem Browser verarbeitet und nie hochgeladen.' },
+        { title: 'Kreis ausrichten', body: 'Verschieben und zoomen Sie im Quadrat. Halten Sie Gesicht, Logo oder Text im Kreis und prüfen Sie die helle und dunkle Vorschau.' },
+        { title: 'In 800 × 800 exportieren', body: 'Wählen Sie PNG oder JPG, ergänzen Sie bei transparenten Logos eine Hintergrundfarbe, exportieren Sie und laden Sie das Bild in YouTube Studio unter Anpassung hoch.' },
+      ],
+      'engagement-rate-calculator': [
+        { title: 'Plattform wählen', body: 'Wählen Sie YouTube, Instagram oder TikTok. Likes und Kommentare bleiben beim Wechsel erhalten.' },
+        { title: 'Zahlen eingeben', body: 'Kopieren Sie Aufrufe, Likes, Kommentare und weitere Werte aus Ihren Statistiken. Leere optionale Felder zählen als 0; für einen Durchschnitt können Sie bis zu 20 Beiträge einfügen.' },
+        { title: 'Ergebnis lesen', body: 'Prüfen Sie die Rate, die verwendete Formel und den Anteil jeder Interaktion. Vergleichen Sie einen Beitrag mit Ihrem eigenen Durchschnitt.' },
+      ],
     },
   },
   pt: {
@@ -554,6 +644,24 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Escolha o formato e dados do vídeo', body: 'Selecione o estilo do vídeo (tutorial, análise, vlog, games ou podcast) e insira título, gancho inicial e tópicos principais.' },
         { title: 'Adicione capítulos e links úteis', body: 'Insira os marcadores de tempo (00:00 Início, etc.), redes sociais, links de afiliados e canais da comunidade.' },
         { title: 'Verifique e copie para o Studio', body: 'Confira a prévia antes do botão "Mostrar mais" e o limite de 5.000 caracteres, copiando a descrição com um clique para o YouTube Studio.' },
+      ],
+      'youtube-link-generator': [
+        { title: 'Minuto · Cole o link do vídeo', body: 'Copie a URL da barra de endereços ou do botão Compartilhar. Links watch, youtu.be, Shorts, lives, embed e mobile funcionam.' },
+        { title: 'Minuto · Digite o início', body: 'Digite 90, 1:30, 1:02:03 ou 1m30s. Confira o tempo interpretado e adicione outros minutos se precisar de uma lista.' },
+        { title: 'Minuto · Copie e teste', body: 'Copie o link curto, o completo ou o código de incorporação e abra o link uma vez para conferir onde ele começa.' },
+        { title: 'Inscrição · Digite seu canal', body: 'Cole a URL do canal ou digite seu @identificador. IDs de canal (UC…) e URLs antigas /c/ e /user/ também funcionam.' },
+        { title: 'Inscrição · Copie o link', body: 'Copie o link com ?sub_confirmation=1. Quem abrir com a conta conectada verá a confirmação de inscrição.' },
+        { title: 'Inscrição · Compartilhe ou imprima', body: 'Adicione em descrições, comentários fixados e link na bio, ou baixe o QR code para impressos e overlays de live.' },
+      ],
+      'youtube-profile-picture-resizer': [
+        { title: 'Envie sua imagem', body: 'Arraste ou escolha um JPG, PNG, WebP, GIF ou BMP. Ele é processado no seu navegador e nunca enviado.' },
+        { title: 'Ajuste o círculo', body: 'Arraste e dê zoom dentro do quadrado. Mantenha rosto, logo ou texto dentro do círculo e confira as prévias clara e escura.' },
+        { title: 'Exporte em 800 × 800', body: 'Escolha PNG ou JPG, adicione uma cor de fundo para logos transparentes, exporte e envie na seção Personalização do YouTube Studio.' },
+      ],
+      'engagement-rate-calculator': [
+        { title: 'Escolha a plataforma', body: 'Selecione YouTube, Instagram ou TikTok. Curtidas e comentários continuam preenchidos quando você troca.' },
+        { title: 'Digite os números', body: 'Copie visualizações, curtidas, comentários e outros números das suas estatísticas. Campos opcionais vazios contam como 0; você também pode colar até 20 posts para ter a média.' },
+        { title: 'Leia o resultado', body: 'Confira a taxa, a fórmula usada e a fatia de cada interação. Compare um post com a sua própria média.' },
       ],
     },
   },
@@ -643,6 +751,24 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: '타임스탬프 챕터 및 링크 설정', body: '00:00 시작 챕터 타임스탬프, SNS 계정, 추천 장비 제휴 링크 및 커뮤니티 링크를 체계적으로 구성합니다.' },
         { title: '더보기 접힘선 점검 후 복사', body: "모바일 '더보기' 전 노출되는 3줄 요약과 5,000자 제한을 확인한 뒤 설명란 전체를 한 번에 복사하여 YouTube Studio에 등록합니다." },
       ],
+      'youtube-link-generator': [
+        { title: '시간 지정 · 동영상 링크 붙여 넣기', body: '주소창이나 공유 버튼에서 URL을 복사하세요. watch, youtu.be, 쇼츠, 라이브, 퍼가기, 모바일 링크를 지원합니다.' },
+        { title: '시간 지정 · 시작 시간 입력', body: '90, 1:30, 1:02:03 또는 1m30s로 입력하고 표시된 시간을 확인하세요. 목록이 필요하면 타임스탬프를 추가합니다.' },
+        { title: '시간 지정 · 복사 후 확인', body: '짧은 링크, 전체 링크 또는 퍼가기 코드를 복사하고 링크를 한 번 열어 원하는 지점에서 시작하는지 확인하세요.' },
+        { title: '구독 · 채널 입력', body: '채널 URL을 붙여 넣거나 @핸들을 입력하세요. 채널 ID(UC…)와 예전 /c/, /user/ URL도 사용할 수 있습니다.' },
+        { title: '구독 · 링크 복사', body: '?sub_confirmation=1이 붙은 링크를 복사하세요. 로그인한 시청자가 열면 구독 확인 창이 나타납니다.' },
+        { title: '구독 · 공유 또는 인쇄', body: '설명란, 고정 댓글, 프로필 링크에 추가하거나 QR 코드를 다운로드해 인쇄물과 방송 오버레이에 사용하세요.' },
+      ],
+      'youtube-profile-picture-resizer': [
+        { title: '이미지 업로드', body: 'JPG, PNG, WebP, GIF, BMP를 끌어다 놓거나 선택하세요. 브라우저 안에서 처리되며 업로드되지 않습니다.' },
+        { title: '원에 맞춰 배치', body: '정사각형 안에서 드래그하고 확대하세요. 얼굴, 로고, 글자를 원 안에 두고 라이트·다크 미리보기를 확인합니다.' },
+        { title: '800 × 800으로 내보내기', body: 'PNG나 JPG를 고르고, 투명 로고라면 배경색을 넣어 내보낸 뒤 YouTube 스튜디오의 맞춤설정에서 업로드하세요.' },
+      ],
+      'engagement-rate-calculator': [
+        { title: '플랫폼 선택', body: '유튜브, 인스타그램, 틱톡 중에서 고르세요. 바꿔도 좋아요와 댓글 값은 그대로 남습니다.' },
+        { title: '숫자 입력', body: '분석 화면에서 조회수, 좋아요, 댓글 등을 복사하세요. 비워 둔 선택 항목은 0으로 계산되며, 최대 20개 게시물을 붙여 넣어 평균을 낼 수도 있습니다.' },
+        { title: '결과 확인', body: '참여율, 사용한 공식, 반응별 비중을 확인하고 게시물 하나를 내 평균과 비교하세요.' },
+      ],
     },
   },
   it: {
@@ -730,6 +856,24 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Scegli il format e inserisci i dettagli', body: 'Seleziona lo stile video (tutorial, recensione, vlog, gaming o podcast) e digita titolo, hook iniziale e punti chiave.' },
         { title: 'Aggiungi capitoli e link utili', body: 'Configura i timestamp orari (00:00 Intro, ecc.), canali social, link di affiliazione e community.' },
         { title: 'Controlla e copia in YouTube Studio', body: 'Verifica l\'anteprima prima del pulsante "Mostra altro" e il limite di 5.000 caratteri, copiando la descrizione con un click.' },
+      ],
+      'youtube-link-generator': [
+        { title: 'Minuto · Incolla il link del video', body: 'Copia l’URL dalla barra degli indirizzi o dal pulsante Condividi. Funzionano link watch, youtu.be, Shorts, live, embed e mobile.' },
+        { title: 'Minuto · Inserisci l’inizio', body: 'Scrivi 90, 1:30, 1:02:03 o 1m30s. Controlla il tempo interpretato e aggiungi altri minuti se ti serve un elenco.' },
+        { title: 'Minuto · Copia e verifica', body: 'Copia il link breve, quello completo o il codice di incorporamento e apri il link una volta per verificare da dove parte.' },
+        { title: 'Iscrizione · Inserisci il canale', body: 'Incolla l’URL del canale o scrivi il tuo @handle. Funzionano anche gli ID canale (UC…) e i vecchi URL /c/ e /user/.' },
+        { title: 'Iscrizione · Copia il link', body: 'Copia il link con ?sub_confirmation=1. Chi lo apre con l’accesso effettuato vede la conferma di iscrizione.' },
+        { title: 'Iscrizione · Condividi o stampa', body: 'Aggiungilo a descrizioni, commenti fissati e link in bio, oppure scarica il codice QR per stampe e overlay delle dirette.' },
+      ],
+      'youtube-profile-picture-resizer': [
+        { title: 'Carica l’immagine', body: 'Trascina o scegli un JPG, PNG, WebP, GIF o BMP. Viene elaborato nel browser e non viene mai caricato.' },
+        { title: 'Inquadra il cerchio', body: 'Trascina e ingrandisci dentro il quadrato. Tieni volto, logo o testo dentro il cerchio e controlla le anteprime chiara e scura.' },
+        { title: 'Esporta a 800 × 800', body: 'Scegli PNG o JPG, aggiungi un colore di sfondo per i loghi trasparenti, esporta e carica l’immagine nella sezione Personalizzazione di YouTube Studio.' },
+      ],
+      'engagement-rate-calculator': [
+        { title: 'Scegli la piattaforma', body: 'Seleziona YouTube, Instagram o TikTok. Mi piace e commenti restano compilati quando cambi.' },
+        { title: 'Inserisci i numeri', body: 'Copia visualizzazioni, mi piace, commenti e gli altri dati dalle statistiche. I campi facoltativi vuoti valgono 0; puoi anche incollare fino a 20 post per avere la media.' },
+        { title: 'Leggi il risultato', body: 'Controlla il tasso, la formula usata e il peso di ogni interazione. Confronta un post con la tua media.' },
       ],
     },
   },

@@ -19,6 +19,7 @@ export const Footer: React.FC = () => {
         { name: t.compressor.title, href: '/tools/youtube-thumbnail-compressor' },
         { name: t.resizer.title, href: '/tools/youtube-thumbnail-resizer' },
         { name: t.logoRemover.title, href: '/tools/logo-background-remover' },
+        { name: t.profilePicture.title, href: '/tools/youtube-profile-picture-resizer' },
         { name: t.shorts.title, href: '/tools/youtube-shorts-safe-zone' },
       ],
     },
@@ -26,6 +27,7 @@ export const Footer: React.FC = () => {
       title: t.common.footer.categories.title,
       items: [
         { name: t.titleChecker.title, href: '/tools/youtube-title-checker' },
+        { name: t.linkGenerator.title, href: '/tools/youtube-link-generator' },
         { name: t.common.nav.checklist, href: '/checklist' },
       ],
     },
@@ -36,6 +38,7 @@ export const Footer: React.FC = () => {
         { name: t.calculator.rpm.title, href: '/tools/youtube-rpm-calculator' },
         { name: t.calculator.watchHours.title, href: '/tools/youtube-watch-hours-calculator' },
         { name: t.calculator.monetization.title, href: '/tools/youtube-monetization-calculator' },
+        { name: t.engagement.title, href: '/tools/engagement-rate-calculator' },
       ],
     },
     {

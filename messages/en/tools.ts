@@ -351,6 +351,60 @@ export const tools = {
         answer: 'Gross revenue misleads creators. Factoring in editing, equipment depreciation, software subscriptions, and taxes reveals your actual take-home profit per upload.',
       },
     ],
+    linkGenerator: [
+      {
+        question: 'How do I link to a specific time in a YouTube video?',
+        answer: 'Paste the video URL, enter the start time (90, 1:30 or 1m30s) and copy the short or full link. Both add the time in seconds: youtu.be/ID?t=90 or youtube.com/watch?v=ID&t=90s. On desktop you can also click Share on YouTube and tick “Start at”.',
+      },
+      {
+        question: 'Does ?t= work on YouTube Shorts?',
+        answer: 'Shorts links (youtube.com/shorts/…) open in the Shorts player, which plays from the beginning and ignores t=. This tool builds a regular watch link from the same video ID: on desktop it opens the standard player, where the start time applies, but the YouTube app may still switch it to the Shorts player.',
+      },
+      {
+        question: 'Where should I put a subscribe link?',
+        answer: 'Anywhere people can click: video descriptions, pinned comments, your channel links, newsletters, your website and link-in-bio pages. For posters, cards and stream overlays, download the QR code.',
+      },
+      {
+        question: 'Does the subscribe link work on mobile?',
+        answer: 'In a mobile browser, signed-in viewers see the subscribe confirmation. If the link opens in the YouTube app instead, the app may show the channel page without the confirmation, so viewers tap Subscribe themselves. Test it on your own phone before you share it.',
+      },
+    ],
+    profilePicture: [
+      {
+        question: 'What size is a YouTube profile picture?',
+        answer: 'Upload a square 800 × 800 px image (1:1). YouTube accepts files from 98 × 98 px and up to 4 MB in JPG, PNG, BMP or non-animated GIF, then shows the picture as a circle.',
+      },
+      {
+        question: 'Why is my profile picture blurry?',
+        answer: 'Usually the source is smaller than 800 px, or you zoomed into a small part of it, so it gets stretched on high-resolution screens. Start from a larger image, zoom out and export at 800 × 800. Heavy JPG compression also softens edges, so use PNG for logos and text.',
+      },
+      {
+        question: 'Why does YouTube crop my picture to a circle?',
+        answer: 'YouTube shows every channel icon as a circle and hides the corners of your square image. Keep faces, logos and text inside the circle in the crop box: the corners stay in the file, but YouTube does not show them.',
+      },
+      {
+        question: 'Does changing my YouTube profile picture change my Google Account photo too?',
+        answer: 'Yes. Your channel icon and your Google Account profile picture are linked, so changing one changes the other. If the channel uses a Brand Account, the change applies to that Brand Account, not to your personal account.',
+      },
+    ],
+    engagement: [
+      {
+        question: 'What is a good engagement rate?',
+        answer: 'There is no single number. Rates depend on niche, audience size, platform, format and whether you divide by views, followers or reach, and smaller accounts often see higher rates than large ones. Published benchmarks vary widely by source, so Creovly compares a post with your own multi-post average instead.',
+      },
+      {
+        question: 'Views or followers: which should I use?',
+        answer: 'Use views to learn how people who saw a post reacted. It is the default for YouTube and TikTok, where many views come from recommendations rather than followers. Use followers to compare against your audience size, the common Instagram method. Reach, when you have it, counts the accounts that actually saw the post. Only compare rates calculated the same way.',
+      },
+      {
+        question: 'Why is YouTube engagement lower than Instagram?',
+        answer: 'YouTube rates are usually divided by views, and videos collect many views from people who watch without liking or commenting. Instagram rates are often divided by followers, a number that is frequently smaller than the views a post reaches, which pushes the percentage up. The formulas differ; the audiences are not necessarily better.',
+      },
+      {
+        question: 'Do Shorts count differently?',
+        answer: 'The formula is the same: interactions divided by views. But YouTube counts a Shorts view each time a Short starts or replays, so Shorts rates can differ a lot from long-form videos. Calculate Shorts and long-form separately and compare each with its own average.',
+      },
+    ],
   },
   guidance: {
     compressor: {

@@ -42,6 +42,8 @@ export interface ToolDefinition {
   badge?: 'Popular' | 'New' | 'Free';
   status: ToolStatus;
   seoTarget: string;
+  /** schema.org SoftwareApplication category; defaults to UtilitiesApplication. */
+  applicationCategory?: 'UtilitiesApplication' | 'MultimediaApplication';
 }
 
 export interface SEOProps {

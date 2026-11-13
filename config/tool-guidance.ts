@@ -1,7 +1,8 @@
 import type { CalculatorKind } from '@/lib/creator-calculators';
 
 export interface ToolGuidance {
-  steps: [ { title: string; body: string }, { title: string; body: string }, { title: string; body: string } ];
+  /** English fallback; localized steps live in tool-guidance-i18n. */
+  steps?: [ { title: string; body: string }, { title: string; body: string }, { title: string; body: string } ];
   related: [string, string, string];
   image?: { before: string; after: string; beforeLabel: string; afterLabel: string; note: string; transparent?: boolean; portrait?: boolean };
   calculator?: CalculatorKind;
@@ -16,6 +17,9 @@ const revenue = 'youtube-revenue-calculator';
 const rpm = 'youtube-rpm-calculator';
 const watch = 'youtube-watch-hours-calculator';
 const income = 'youtube-monetization-calculator';
+const banner = 'youtube-banner-size';
+const description = 'youtube-description-generator';
+const tags = 'youtube-tag-generator';
 
 export const toolGuidance: Record<string, ToolGuidance> = {
   [logo]: {
@@ -85,6 +89,9 @@ export const toolGuidance: Record<string, ToolGuidance> = {
       { title: 'Review the totals', body: 'Calculate monthly income and the amount after costs, before taxes. Annual results repeat the monthly scenario.' },
     ], related: [revenue, rpm, watch], calculator: 'monetization',
   },
+  'youtube-link-generator': { related: [description, tags, title] },
+  'youtube-profile-picture-resizer': { related: [banner, logo, resizer] },
+  'engagement-rate-calculator': { related: [rpm, revenue, income] },
 };
 
 export const titleDemonstration = {

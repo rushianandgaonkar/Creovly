@@ -105,7 +105,7 @@ export function toolSoftwareApplicationJsonLd(
     name: title,
     url,
     description,
-    applicationCategory: 'UtilityApplication',
+    applicationCategory: tool.applicationCategory ?? 'UtilitiesApplication',
     operatingSystem: 'Any',
     browserRequirements: 'Requires JavaScript. Requires HTML5.',
     offers: {
@@ -139,6 +139,9 @@ const slugToFaqKey: Record<string, string> = {
   'youtube-rpm-calculator': 'rpm',
   'youtube-watch-hours-calculator': 'watchHours',
   'youtube-monetization-calculator': 'monetization',
+  'youtube-link-generator': 'linkGenerator',
+  'youtube-profile-picture-resizer': 'profilePicture',
+  'engagement-rate-calculator': 'engagement',
 };
 
 /**

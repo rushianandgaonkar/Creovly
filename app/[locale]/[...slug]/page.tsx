@@ -32,6 +32,9 @@ import ChannelNameGenerator from '@/components/tools/ChannelNameGenerator';
 import TagGenerator from '@/components/tools/TagGenerator';
 import DescriptionGenerator from '@/components/tools/DescriptionGenerator';
 import CalculatorPage from '@/components/tools/CalculatorPage';
+import YouTubeLinkGenerator from '@/components/tools/YouTubeLinkGenerator';
+import ProfilePictureResizer from '@/components/tools/ProfilePictureResizer';
+import EngagementRateCalculator from '@/components/tools/EngagementRateCalculator';
 import GuidesContent from '@/components/guides/GuidesContent';
 import GuideArticle from '@/components/guides/GuideArticle';
 import AboutPage from '@/app/about/page';
@@ -57,6 +60,9 @@ const staticSlugs = [
   ['tools', 'youtube-rpm-calculator'],
   ['tools', 'youtube-watch-hours-calculator'],
   ['tools', 'youtube-monetization-calculator'],
+  ['tools', 'youtube-link-generator'],
+  ['tools', 'youtube-profile-picture-resizer'],
+  ['tools', 'engagement-rate-calculator'],
   ['guides'],
   ...guides.map((g) => ['guides', g.slug]),
   ['about'],
@@ -371,6 +377,45 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
         break;
       case 'youtube-monetization-calculator':
         toolComponent = <CalculatorPage kind="monetization" slug="youtube-monetization-calculator" />;
+        break;
+      case 'youtube-link-generator':
+        toolComponent = (
+          <ToolPageShell
+            title={tool.title}
+            description={tool.description}
+            category="Title Tools"
+            categoryHref="/tools#title"
+            toolSlug={tool.slug}
+          >
+            <YouTubeLinkGenerator />
+          </ToolPageShell>
+        );
+        break;
+      case 'youtube-profile-picture-resizer':
+        toolComponent = (
+          <ToolPageShell
+            title={tool.title}
+            description={tool.description}
+            category="Thumbnail Tools"
+            categoryHref="/tools/thumbnail"
+            toolSlug={tool.slug}
+          >
+            <ProfilePictureResizer />
+          </ToolPageShell>
+        );
+        break;
+      case 'engagement-rate-calculator':
+        toolComponent = (
+          <ToolPageShell
+            title={tool.title}
+            description={tool.description}
+            category="Money & Growth"
+            categoryHref="/tools"
+            toolSlug={tool.slug}
+          >
+            <EngagementRateCalculator />
+          </ToolPageShell>
+        );
         break;
       default:
         notFound();

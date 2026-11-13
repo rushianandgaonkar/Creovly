@@ -15,6 +15,9 @@ import { studio } from './studio';
 import { checklist } from './checklist';
 import { guides } from './guides';
 import { pages } from './pages';
+import { linkGenerator } from './linkGenerator';
+import { profilePicture } from './profilePicture';
+import { engagement } from './engagement';
 
 export const messagesEn = {
   common,
@@ -34,6 +37,9 @@ export const messagesEn = {
   checklist,
   guides,
   pages,
+  linkGenerator,
+  profilePicture,
+  engagement,
 };
 
 export type Messages = typeof messagesEn;

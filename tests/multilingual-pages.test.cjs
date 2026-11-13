@@ -42,6 +42,9 @@ const TOOLS = [
   'youtube-rpm-calculator',
   'youtube-watch-hours-calculator',
   'youtube-monetization-calculator',
+  'youtube-link-generator',
+  'youtube-profile-picture-resizer',
+  'engagement-rate-calculator',
 ];
 
 const OG_LOCALES = {
