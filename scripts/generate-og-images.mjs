@@ -559,6 +559,57 @@ const allPages = [
     `,
   },
   {
+    filename: 'youtube-timestamp-generator.png',
+    category: 'TITLE TOOLS',
+    tone: '#6366f1',
+    glow: 'rgba(99, 102, 241, 0.25)',
+    title: 'YouTube Chapters & Timestamp Generator',
+    description: 'Turn your notes into YouTube chapters, check the 0:00, 3-chapter and 10-second rules, and copy a clean list.',
+    pills: ['Starts at 0:00', '3+ Chapters', '10 s Minimum'],
+    visual: `
+      <div style="background:#191836;border:1px solid rgba(99,102,241,0.3);border-radius:18px;padding:24px;width:100%;height:100%;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 40px rgba(0,0,0,0.5);">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:12px;font-family:monospace;color:#a5b4fc;font-weight:700;letter-spacing:1px;">CHAPTERS</span>
+          <span style="background:rgba(16,185,129,0.2);color:#34d399;font-size:11px;font-weight:700;padding:4px 8px;border-radius:6px;font-family:monospace;">RULES OK</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;font-family:monospace;font-size:15px;">
+          <div><span style="color:#fb923c;">0:00</span> <span style="color:#f8fafc;">Intro</span></div>
+          <div><span style="color:#fb923c;">0:42</span> <span style="color:#f8fafc;">What you need</span></div>
+          <div><span style="color:#fb923c;">2:15</span> <span style="color:#f8fafc;">Set up the camera</span></div>
+          <div><span style="color:#fb923c;">5:30</span> <span style="color:#f8fafc;">Lighting</span></div>
+        </div>
+        <div style="display:flex;gap:4px;height:8px;border-radius:4px;overflow:hidden;">
+          <div style="flex:6;background:#818cf8;"></div><div style="flex:9;background:#818cf8;"></div><div style="flex:20;background:#818cf8;"></div><div style="flex:30;background:#818cf8;"></div>
+        </div>
+      </div>
+    `,
+  },
+  {
+    filename: 'words-to-minutes-calculator.png',
+    category: 'TITLE TOOLS',
+    tone: '#6366f1',
+    glow: 'rgba(99, 102, 241, 0.25)',
+    title: 'Words to Minutes Calculator',
+    description: 'See how long your script takes to read aloud and how many words a 5- or 10-minute video needs.',
+    pills: ['Slow · Average · Fast', 'Words or Characters', 'Target Length'],
+    visual: `
+      <div style="background:#191836;border:1px solid rgba(99,102,241,0.3);border-radius:18px;padding:24px;width:100%;height:100%;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 40px rgba(0,0,0,0.5);">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:12px;font-family:monospace;color:#a5b4fc;font-weight:700;letter-spacing:1px;">EXAMPLE</span>
+          <span style="background:rgba(99,102,241,0.2);color:#818cf8;font-size:11px;font-weight:700;padding:4px 8px;border-radius:6px;font-family:monospace;">150 WPM</span>
+        </div>
+        <div style="background:#090d16;border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,0.06);">
+          <div style="font-size:16px;font-weight:800;color:#f8fafc;font-family:monospace;">1,500 words ÷ 150 per min</div>
+          <div style="margin-top:12px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:baseline;">
+            <span style="font-size:11px;color:#64748b;font-family:monospace;">Speaking time</span>
+            <span style="font-size:28px;font-weight:900;color:#a5b4fc;font-family:monospace;">10:00</span>
+          </div>
+        </div>
+        <div style="font-size:10px;font-family:monospace;color:#94a3b8;text-align:center;">Slow 12:30 · Fast 8:20 · Japanese & Korean by characters</div>
+      </div>
+    `,
+  },
+  {
     filename: 'youtube-thumbnail-blueprint.png',
     category: 'CREATOR EDITORIAL GUIDE',
     tone: '#6366f1',

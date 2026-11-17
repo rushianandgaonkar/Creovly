@@ -94,6 +94,8 @@ export const toolGuidance: Record<string, ToolGuidance> = {
   'engagement-rate-calculator': { related: [rpm, revenue, income] },
   'youtube-thumbnail-downloader': { related: ['youtube-thumbnail-tester', resizer, compressor] },
   'youtube-thumbnail-tester': { related: [title, resizer, compressor] },
+  'youtube-timestamp-generator': { related: [description, 'words-to-minutes-calculator', 'youtube-link-generator'] },
+  'words-to-minutes-calculator': { related: ['youtube-timestamp-generator', title, description] },
 };
 
 export const titleDemonstration = {

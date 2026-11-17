@@ -47,6 +47,8 @@ const TOOLS = [
   'engagement-rate-calculator',
   'youtube-thumbnail-downloader',
   'youtube-thumbnail-tester',
+  'youtube-timestamp-generator',
+  'words-to-minutes-calculator',
 ];
 
 const OG_LOCALES = {

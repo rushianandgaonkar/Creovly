@@ -19,6 +19,8 @@ Creovly is a private, in-browser workspace for YouTube creators. Compress thumbn
 - [YouTube Link Generator](https://creovly.com/tools/youtube-link-generator): Builds timestamp links (youtu.be/ID?t=90, watch?v=ID&t=90s, embed ?start=) from any video URL form, plus subscribe links with ?sub_confirmation=1 and a downloadable QR code.
 - [YouTube Thumbnail Downloader](https://creovly.com/tools/youtube-thumbnail-downloader): Reads the video ID from any YouTube link and shows every published thumbnail size (max resolution 1280 × 720, SD, HQ, medium, small) with JPG download and image URL copy.
 - [YouTube Thumbnail Tester & Preview](https://creovly.com/tools/youtube-thumbnail-tester): Places a local thumbnail in home feed, search, suggested and mobile layouts in light and dark mode, with an optional second version for side-by-side comparison.
+- [YouTube Chapters & Timestamp Generator](https://creovly.com/tools/youtube-timestamp-generator): Reads a chapter list with times before or after each title, checks YouTube's chapter rules (first at 0:00, at least 3, ascending, 10 s minimum), shows each chapter's length and outputs a clean description-ready list.
+- [Words to Minutes Calculator](https://creovly.com/tools/words-to-minutes-calculator): Estimates speaking time for a script from words (or characters for Japanese and Korean) at slow, average, fast or custom paces, with paragraph pauses and words needed for a target video length.
 - [YouTube Profile Picture Resizer](https://creovly.com/tools/youtube-profile-picture-resizer): Crops any image to an 800 × 800 channel icon with a circle overlay, light and dark previews at real display sizes, and PNG or JPG export under 4 MB.
 
 ## Creator Monetization & Mathematics Calculators

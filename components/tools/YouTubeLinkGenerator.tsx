@@ -17,9 +17,9 @@ export const segmentListClass =
 export const segmentTriggerClass =
   'h-auto px-4 py-2 text-sm font-medium rounded-lg text-[var(--text-muted)] data-[state=active]:bg-[var(--bg-canvas-elevated)] data-[state=active]:text-[var(--text-ink)] data-[state=active]:shadow-xs';
 
-interface CopyLabels { copy: string; copied: string; copyFailed: string; testLink: string }
+export interface CopyLabels { copy: string; copied: string; copyFailed: string; testLink: string }
 
-function CopyField({ id, label, value, hint, multiline, openable, labels }: { id: string; label: string; value: string; hint?: string; multiline?: boolean; openable?: boolean; labels: CopyLabels }) {
+export function CopyField({ id, label, value, hint, multiline, openable, labels }: { id: string; label: string; value: string; hint?: string; multiline?: boolean; openable?: boolean; labels: CopyLabels }) {
   const [state, setState] = useState<'idle' | 'copied' | 'failed'>('idle');
   const copy = async () => {
     try {

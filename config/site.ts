@@ -61,6 +61,8 @@ export const footerNavigation = {
         { name: 'Tag Generator', href: '/tools/youtube-tag-generator' },
         { name: 'Description Generator', href: '/tools/youtube-description-generator' },
         { name: 'Link Generator', href: '/tools/youtube-link-generator' },
+        { name: 'Chapters & Timestamp Generator', href: '/tools/youtube-timestamp-generator' },
+        { name: 'Words to Minutes Calculator', href: '/tools/words-to-minutes-calculator' },
         { name: 'Title Checker & Analyzer', href: '/tools/youtube-title-checker' },
         { name: 'Pre-Publish Checklist', href: '/checklist' },
       ],
@@ -336,6 +338,34 @@ export const toolRegistry: ToolDefinition[] = [
     status: 'available',
     seoTarget: 'YouTube Thumbnail Tester',
     applicationCategory: 'MultimediaApplication',
+  },
+  {
+    id: 'youtube-timestamp-generator',
+    heroTone: 'indigo',
+    title: 'YouTube Chapters & Timestamp Generator',
+    seoTitle: 'YouTube Timestamp Generator – Make & Check Chapters',
+    slug: 'youtube-timestamp-generator',
+    href: '/tools/youtube-timestamp-generator',
+    category: 'title',
+    categoryLabel: 'Title Tools',
+    description:
+      'Make YouTube chapters from your notes: check the 0:00, 3-chapter and 10-second rules, see each chapter’s length and copy a clean timestamp list. Free, in your browser.',
+    status: 'available',
+    seoTarget: 'YouTube Timestamp Generator',
+  },
+  {
+    id: 'words-to-minutes-calculator',
+    heroTone: 'indigo',
+    title: 'Words to Minutes Calculator',
+    seoTitle: 'Words to Minutes Calculator – Script Length for Videos',
+    slug: 'words-to-minutes-calculator',
+    href: '/tools/words-to-minutes-calculator',
+    category: 'title',
+    categoryLabel: 'Title Tools',
+    description:
+      'Find out how long your script takes to read aloud. Paste text or enter a word count, pick a speaking pace, and see how many words a 5- or 10-minute video needs.',
+    status: 'available',
+    seoTarget: 'Words to Minutes Calculator',
   },
 ];
 

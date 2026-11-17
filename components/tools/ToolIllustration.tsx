@@ -542,6 +542,48 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
         </div>
       );
 
+    case 'timestamp-generator':
+      return (
+        <div className={`tool-preview preview-timestamp-generator w-full h-full p-3.5 bg-zinc-900 text-zinc-100 flex flex-col justify-between select-none ${className}`} data-ui>
+          <div className="flex items-center justify-between text-[10px] text-zinc-400">
+            <span className="font-medium">Chapters</span>
+            <span className="px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[9px] font-semibold">Rules OK</span>
+          </div>
+          <div className="space-y-1 font-mono text-[10px]">
+            {[['0:00', 'Intro'], ['0:42', 'What you need'], ['2:15', 'Set up the camera'], ['5:30', 'Lighting']].map(([time, title]) => (
+              <div key={time} className="flex gap-2">
+                <span className="text-orange-300">{time}</span>
+                <span className="truncate text-zinc-200">{title}</span>
+              </div>
+            ))}
+          </div>
+          <div className="flex h-1.5 gap-0.5 overflow-hidden rounded-full">
+            {[8, 18, 30, 44].map((width, index) => (
+              <span key={index} className="bg-orange-400/80" style={{ width: `${width}%` }} />
+            ))}
+          </div>
+        </div>
+      );
+
+    case 'words-to-minutes-calculator':
+      return (
+        <div className={`tool-preview preview-words-to-minutes w-full h-full p-3.5 bg-zinc-900 text-zinc-100 flex flex-col justify-between select-none ${className}`} data-ui>
+          <div className="flex items-center justify-between text-[10px] text-zinc-400 mb-1">
+            <span className="font-medium">1,500 words · 150/min</span>
+            <span className="text-zinc-400 font-semibold">Example</span>
+          </div>
+          <div className="text-2xl font-bold text-white tracking-tight font-mono">10:00</div>
+          <div className="space-y-1">
+            {[['Slow', 120, '12:30'], ['Fast', 180, '8:20']].map(([name, rate, time]) => (
+              <div key={name as string} className="flex items-center justify-between text-[10px] text-zinc-300">
+                <span>{name} · {rate}/min</span>
+                <span className="font-mono text-zinc-100">{time}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+
     default:
       return null;
   }

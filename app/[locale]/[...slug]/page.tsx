@@ -37,6 +37,8 @@ import ProfilePictureResizer from '@/components/tools/ProfilePictureResizer';
 import EngagementRateCalculator from '@/components/tools/EngagementRateCalculator';
 import ThumbnailDownloader from '@/components/tools/ThumbnailDownloader';
 import ThumbnailTester from '@/components/tools/ThumbnailTester';
+import ChapterGenerator from '@/components/tools/ChapterGenerator';
+import ScriptLengthCalculator from '@/components/tools/ScriptLengthCalculator';
 import GuidesContent from '@/components/guides/GuidesContent';
 import GuideArticle from '@/components/guides/GuideArticle';
 import AboutPage from '@/app/about/page';
@@ -67,6 +69,8 @@ const staticSlugs = [
   ['tools', 'engagement-rate-calculator'],
   ['tools', 'youtube-thumbnail-downloader'],
   ['tools', 'youtube-thumbnail-tester'],
+  ['tools', 'youtube-timestamp-generator'],
+  ['tools', 'words-to-minutes-calculator'],
   ['guides'],
   ...guides.map((g) => ['guides', g.slug]),
   ['about'],
@@ -444,6 +448,32 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
             toolSlug={tool.slug}
           >
             <ThumbnailTester />
+          </ToolPageShell>
+        );
+        break;
+      case 'youtube-timestamp-generator':
+        toolComponent = (
+          <ToolPageShell
+            title={tool.title}
+            description={tool.description}
+            category="Title Tools"
+            categoryHref="/tools#title"
+            toolSlug={tool.slug}
+          >
+            <ChapterGenerator />
+          </ToolPageShell>
+        );
+        break;
+      case 'words-to-minutes-calculator':
+        toolComponent = (
+          <ToolPageShell
+            title={tool.title}
+            description={tool.description}
+            category="Title Tools"
+            categoryHref="/tools#title"
+            toolSlug={tool.slug}
+          >
+            <ScriptLengthCalculator />
           </ToolPageShell>
         );
         break;

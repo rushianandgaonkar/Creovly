@@ -73,6 +73,10 @@ export default function QuickSearchModal({
         return t.thumbnailDownloader.title;
       case 'youtube-thumbnail-tester':
         return t.thumbnailTester.title;
+      case 'youtube-timestamp-generator':
+        return t.chapterGenerator.title;
+      case 'words-to-minutes-calculator':
+        return t.scriptLength.title;
       default:
         return fallback;
     }

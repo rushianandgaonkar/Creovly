@@ -386,6 +386,20 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: 'Thumbnail Tools',
         keywords: ['youtube thumbnail tester', 'youtube thumbnail preview', 'thumbnail preview tool', 'youtube thumbnail checker', 'test youtube thumbnail', 'compare youtube thumbnails'],
       },
+      'youtube-timestamp-generator': {
+        title: 'YouTube Timestamp & Chapters Generator',
+        seoTitle: 'YouTube Timestamp Generator – Make & Check Chapters',
+        description: 'Make YouTube chapters from your notes: check the 0:00, 3-chapter and 10-second rules, see each chapter’s length and copy a clean timestamp list. Free, in your browser.',
+        categoryLabel: 'Title Tools',
+        keywords: ['youtube timestamp generator', 'youtube chapter generator', 'youtube chapters', 'youtube timestamps in description', 'how to add chapters to youtube video', 'youtube chapters not showing'],
+      },
+      'words-to-minutes-calculator': {
+        title: 'Words to Minutes Calculator – Script Length & Speaking Time',
+        seoTitle: 'Words to Minutes Calculator – Script Length for Videos',
+        description: 'Find out how long your script takes to read aloud. Paste text or enter a word count, pick a speaking pace, and see how many words a 5- or 10-minute video needs.',
+        categoryLabel: 'Title Tools',
+        keywords: ['words to minutes calculator', 'script length calculator', 'how many words per minute speaking', 'how many words for a 10 minute video', 'speech length calculator', 'script timer'],
+      },
       'engagement-rate-calculator': {
         title: 'Engagement Rate Calculator for YouTube, Instagram & TikTok',
         seoTitle: 'Engagement Rate Calculator – YouTube, Instagram, TikTok',
@@ -596,6 +610,20 @@ export const translations: Record<Locale, I18nContent> = {
         description: 'Previsualiza tu miniatura de YouTube en el inicio, la búsqueda, los sugeridos y el móvil, en modo claro y oscuro. Compara dos versiones. Gratis y sin subir nada.',
         categoryLabel: 'Herramientas de miniaturas',
         keywords: ['vista previa miniatura youtube', 'probar miniatura youtube', 'probador de miniaturas', 'comparar miniaturas youtube', 'cómo se ve mi miniatura en youtube'],
+      },
+      'youtube-timestamp-generator': {
+        title: 'Generador de capítulos y marcas de tiempo para YouTube',
+        seoTitle: 'Capítulos de YouTube – Generador de marcas de tiempo',
+        description: 'Crea capítulos de YouTube a partir de tus notas: comprueba las reglas de 0:00, 3 capítulos y 10 segundos, ve la duración de cada uno y copia una lista limpia. Gratis.',
+        categoryLabel: 'Herramientas de títulos',
+        keywords: ['capítulos youtube', 'marcas de tiempo youtube', 'cómo poner capítulos en youtube', 'generador de capítulos youtube', 'capítulos de youtube no aparecen'],
+      },
+      'words-to-minutes-calculator': {
+        title: 'Calculadora de palabras a minutos para guiones',
+        seoTitle: 'Palabras a minutos – Calculadora de duración de guion',
+        description: 'Calcula cuánto dura tu guion leído en voz alta. Pega el texto o escribe las palabras, elige un ritmo y descubre cuántas palabras necesita un vídeo de 5 o 10 minutos.',
+        categoryLabel: 'Herramientas de títulos',
+        keywords: ['palabras a minutos', 'calcular duración de un texto', 'cuántas palabras por minuto se hablan', 'duración de un guion', 'calculadora de tiempo de lectura'],
       },
       'engagement-rate-calculator': {
         title: 'Calculadora de engagement para YouTube, Instagram y TikTok',
@@ -808,6 +836,20 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: 'サムネイルツール',
         keywords: ['youtube サムネイル プレビュー', 'サムネイル 確認', 'youtube サムネイル テスト', 'サムネイル 比較', 'サムネ 見え方'],
       },
+      'youtube-timestamp-generator': {
+        title: 'YouTube タイムスタンプ・チャプター作成ツール',
+        seoTitle: 'YouTube タイムスタンプ作成 – チャプターの付け方を自動チェック',
+        description: 'メモからYouTubeのチャプターを作成。0:00・3つ以上・10秒以上のルールをチェックし、各チャプターの長さを表示して、概要欄に貼れる一覧をコピーできます。無料です。',
+        categoryLabel: 'タイトル・SEOツール',
+        keywords: ['youtube タイムスタンプ', 'youtube チャプター', 'youtube チャプター 付け方', 'タイムスタンプ 作成', 'youtube チャプター 表示されない'],
+      },
+      'words-to-minutes-calculator': {
+        title: '原稿の文字数・時間計算ツール（読み上げ時間）',
+        seoTitle: '原稿 文字数 時間計算 – 何文字で何分？読み上げ時間',
+        description: '原稿を読み上げると何分かかるかを計算。原稿を貼るか文字数を入力し、話す速さを選ぶと、5分・10分の動画に必要な文字数もわかります。',
+        categoryLabel: 'タイトル・SEOツール',
+        keywords: ['原稿 文字数 時間', '文字数 秒数', '原稿 何文字 何分', '読み上げ時間 計算', 'ナレーション 文字数'],
+      },
       'engagement-rate-calculator': {
         title: 'エンゲージメント率計算ツール（YouTube・Instagram・TikTok）',
         seoTitle: 'エンゲージメント率 計算ツール｜YouTube・Instagram・TikTok',
@@ -1018,6 +1060,20 @@ export const translations: Record<Locale, I18nContent> = {
         description: 'Prévisualisez votre miniature YouTube sur l’accueil, la recherche, les suggestions et le mobile, en mode clair et sombre. Comparez deux versions. Gratuit, rien n’est envoyé.',
         categoryLabel: 'Outils de miniatures',
         keywords: ['aperçu miniature youtube', 'tester miniature youtube', 'testeur de miniature', 'comparer miniatures youtube', 'prévisualiser miniature youtube'],
+      },
+      'youtube-timestamp-generator': {
+        title: 'Générateur de chapitres et d’horodatages YouTube',
+        seoTitle: 'Chapitres YouTube – Générateur d’horodatages gratuit',
+        description: 'Créez des chapitres YouTube à partir de vos notes : vérifiez les règles 0:00, 3 chapitres et 10 secondes, voyez la durée de chacun et copiez une liste propre. Gratuit.',
+        categoryLabel: 'Outils de titres',
+        keywords: ['chapitres youtube', 'horodatage youtube', 'comment mettre des chapitres sur youtube', 'générateur chapitres youtube', 'chapitres youtube ne s’affichent pas'],
+      },
+      'words-to-minutes-calculator': {
+        title: 'Calculateur de mots par minute – durée d’un script',
+        seoTitle: 'Mots par minute – Calcul du temps de lecture d’un script',
+        description: 'Calculez le temps de lecture à voix haute de votre script. Collez le texte ou saisissez le nombre de mots, choisissez un débit et voyez combien de mots il faut pour 5 ou 10 minutes.',
+        categoryLabel: 'Outils de titres',
+        keywords: ['mots par minute', 'calcul temps de lecture', 'combien de mots par minute à l’oral', 'durée d’un discours', 'calculateur temps de parole'],
       },
       'engagement-rate-calculator': {
         title: 'Calcul du taux d’engagement pour YouTube, Instagram et TikTok',
@@ -1230,6 +1286,20 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: 'Thumbnail-Tools',
         keywords: ['youtube thumbnail vorschau', 'youtube thumbnail testen', 'thumbnail tester', 'youtube thumbnails vergleichen', 'youtube vorschaubild testen'],
       },
+      'youtube-timestamp-generator': {
+        title: 'YouTube Kapitel & Zeitstempel erstellen',
+        seoTitle: 'YouTube Kapitel erstellen – Zeitstempel-Generator',
+        description: 'Erstelle YouTube-Kapitel aus deinen Notizen: Prüfe die Regeln 0:00, 3 Kapitel und 10 Sekunden, sieh die Länge jedes Kapitels und kopiere eine saubere Liste. Kostenlos.',
+        categoryLabel: 'Titel-Tools',
+        keywords: ['youtube kapitel erstellen', 'youtube zeitstempel', 'youtube kapitel', 'youtube kapitel werden nicht angezeigt', 'youtube zeitstempel beschreibung'],
+      },
+      'words-to-minutes-calculator': {
+        title: 'Wörter pro Minute Rechner – Redezeit berechnen',
+        seoTitle: 'Redezeit berechnen – Wörter pro Minute für Skripte',
+        description: 'Berechne, wie lange dein Skript laut gelesen dauert. Text einfügen oder Wortzahl eingeben, Tempo wählen und sehen, wie viele Wörter ein 5- oder 10-Minuten-Video braucht.',
+        categoryLabel: 'Titel-Tools',
+        keywords: ['wörter pro minute', 'redezeit berechnen', 'wie viele wörter pro minute sprechen', 'sprechzeit rechner', 'skript länge berechnen'],
+      },
       'engagement-rate-calculator': {
         title: 'Engagement Rate berechnen für YouTube, Instagram & TikTok',
         seoTitle: 'Engagement Rate berechnen – YouTube, Instagram, TikTok',
@@ -1440,6 +1510,20 @@ export const translations: Record<Locale, I18nContent> = {
         description: 'Veja sua thumbnail do YouTube na página inicial, na busca, nos sugeridos e no celular, nos modos claro e escuro. Compare duas versões. Grátis, nada é enviado.',
         categoryLabel: 'Ferramentas de miniatura',
         keywords: ['prévia thumbnail youtube', 'testar thumbnail youtube', 'testador de thumbnail', 'comparar thumbnails youtube', 'como fica minha thumbnail no youtube'],
+      },
+      'youtube-timestamp-generator': {
+        title: 'Gerador de capítulos e timestamps do YouTube',
+        seoTitle: 'Capítulos do YouTube – Gerador de timestamps grátis',
+        description: 'Crie capítulos do YouTube a partir das suas anotações: confira as regras de 0:00, 3 capítulos e 10 segundos, veja a duração de cada um e copie uma lista limpa. Grátis.',
+        categoryLabel: 'Ferramentas de títulos',
+        keywords: ['capítulos youtube', 'timestamps youtube', 'como colocar capítulos no youtube', 'gerador de capítulos youtube', 'capítulos do youtube não aparecem'],
+      },
+      'words-to-minutes-calculator': {
+        title: 'Calculadora de palavras por minuto e tempo de leitura',
+        seoTitle: 'Palavras por minuto – Calcular tempo de leitura do roteiro',
+        description: 'Calcule quanto tempo seu roteiro leva lido em voz alta. Cole o texto ou digite as palavras, escolha um ritmo e veja quantas palavras um vídeo de 5 ou 10 minutos precisa.',
+        categoryLabel: 'Ferramentas de títulos',
+        keywords: ['palavras por minuto', 'calcular tempo de leitura', 'quantas palavras por minuto falamos', 'tempo de leitura de texto', 'duração de roteiro'],
       },
       'engagement-rate-calculator': {
         title: 'Calculadora de engajamento para YouTube, Instagram e TikTok',
@@ -1652,6 +1736,20 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: '썸네일 도구',
         keywords: ['유튜브 썸네일 미리보기', '썸네일 테스트', '유튜브 썸네일 확인', '썸네일 비교', '썸네일 미리보기 사이트'],
       },
+      'youtube-timestamp-generator': {
+        title: '유튜브 타임스탬프·챕터 생성기',
+        seoTitle: '유튜브 타임스탬프 만들기 – 챕터 규칙 자동 확인',
+        description: '메모로 유튜브 챕터를 만드세요. 0:00, 3개 이상, 10초 이상 규칙을 확인하고, 챕터별 길이를 보고, 설명란에 넣을 깔끔한 목록을 복사할 수 있습니다. 무료입니다.',
+        categoryLabel: '제목 및 검색 도구',
+        keywords: ['유튜브 타임스탬프', '유튜브 챕터', '유튜브 챕터 만들기', '유튜브 타임스탬프 만들기', '유튜브 챕터 안 나옴'],
+      },
+      'words-to-minutes-calculator': {
+        title: '대본 글자수·시간 계산기',
+        seoTitle: '대본 글자수 시간 계산기 – 몇 자면 몇 분?',
+        description: '대본을 소리 내어 읽는 데 걸리는 시간을 계산하세요. 대본을 붙여 넣거나 글자수를 입력하고 속도를 고르면 5분, 10분 동영상에 필요한 분량도 알 수 있습니다.',
+        categoryLabel: '제목 및 검색 도구',
+        keywords: ['글자수 시간 계산', '대본 시간 계산', '발표 시간 계산', '말하기 속도 계산', '대본 분량'],
+      },
       'engagement-rate-calculator': {
         title: '참여율 계산기 – 유튜브·인스타그램·틱톡 인게이지먼트',
         seoTitle: '참여율 계산기 – 유튜브, 인스타그램, 틱톡',
@@ -1863,6 +1961,20 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: 'Strumenti miniatura',
         keywords: ['anteprima miniatura youtube', 'testare miniatura youtube', 'tester miniature', 'confrontare miniature youtube', 'come appare la miniatura su youtube'],
       },
+      'youtube-timestamp-generator': {
+        title: 'Generatore di capitoli e timestamp YouTube',
+        seoTitle: 'Capitoli YouTube – Generatore di timestamp gratis',
+        description: 'Crea i capitoli YouTube dai tuoi appunti: controlla le regole 0:00, 3 capitoli e 10 secondi, vedi la durata di ogni capitolo e copia un elenco pulito. Gratis.',
+        categoryLabel: 'Strumenti titoli',
+        keywords: ['capitoli youtube', 'timestamp youtube', 'come mettere i capitoli su youtube', 'generatore capitoli youtube', 'capitoli youtube non compaiono'],
+      },
+      'words-to-minutes-calculator': {
+        title: 'Calcolatore parole al minuto e tempo di lettura',
+        seoTitle: 'Calcolo tempo di lettura – Parole al minuto per copioni',
+        description: 'Calcola quanto dura il tuo copione letto ad alta voce. Incolla il testo o inserisci le parole, scegli un ritmo e scopri quante parole servono per un video di 5 o 10 minuti.',
+        categoryLabel: 'Strumenti titoli',
+        keywords: ['calcolo tempo di lettura', 'parole al minuto', 'quante parole al minuto si parla', 'durata di un discorso', 'calcolatore tempo di lettura'],
+      },
       'engagement-rate-calculator': {
         title: 'Calcolo engagement rate per YouTube, Instagram e TikTok',
         seoTitle: 'Calcolo engagement rate – YouTube, Instagram, TikTok',
@@ -1904,6 +2016,8 @@ export const toolFeatureTags: Record<Locale, Record<string, string>> = {
     'youtube-profile-picture-resizer': '800×800 • Circle Preview',
     'youtube-thumbnail-downloader': 'Max res 1280×720 • JPG',
     'youtube-thumbnail-tester': 'Home • Search • Mobile • A/B',
+    'youtube-timestamp-generator': '0:00 • 3+ chapters • 10 s rule',
+    'words-to-minutes-calculator': 'Words → minutes • Target length',
     'engagement-rate-calculator': 'Views • Followers • Reach',
   },
   es: {
@@ -1924,6 +2038,8 @@ export const toolFeatureTags: Record<Locale, Record<string, string>> = {
     'youtube-profile-picture-resizer': '800×800 • Vista circular',
     'youtube-thumbnail-downloader': 'Máx. 1280×720 • JPG',
     'youtube-thumbnail-tester': 'Inicio • Búsqueda • Móvil • A/B',
+    'youtube-timestamp-generator': '0:00 • 3+ capítulos • regla de 10 s',
+    'words-to-minutes-calculator': 'Palabras → minutos • Duración objetivo',
     'engagement-rate-calculator': 'Vistas • Seguidores • Alcance',
   },
   ja: {
@@ -1944,6 +2060,8 @@ export const toolFeatureTags: Record<Locale, Record<string, string>> = {
     'youtube-profile-picture-resizer': '800×800 • 円形プレビュー',
     'youtube-thumbnail-downloader': '最大1280×720 • JPG',
     'youtube-thumbnail-tester': 'ホーム • 検索 • スマホ • A/B',
+    'youtube-timestamp-generator': '0:00 • 3つ以上 • 10秒ルール',
+    'words-to-minutes-calculator': '文字数 → 分 • 目標の長さ',
     'engagement-rate-calculator': '再生数 • フォロワー • リーチ',
   },
   fr: {
@@ -1964,6 +2082,8 @@ export const toolFeatureTags: Record<Locale, Record<string, string>> = {
     'youtube-profile-picture-resizer': '800×800 • Aperçu en cercle',
     'youtube-thumbnail-downloader': 'Max 1280×720 • JPG',
     'youtube-thumbnail-tester': 'Accueil • Recherche • Mobile • A/B',
+    'youtube-timestamp-generator': '0:00 • 3+ chapitres • règle des 10 s',
+    'words-to-minutes-calculator': 'Mots → minutes • Durée visée',
     'engagement-rate-calculator': 'Vues • Abonnés • Portée',
   },
   de: {
@@ -1984,6 +2104,8 @@ export const toolFeatureTags: Record<Locale, Record<string, string>> = {
     'youtube-profile-picture-resizer': '800×800 • Kreisvorschau',
     'youtube-thumbnail-downloader': 'Max. 1280×720 • JPG',
     'youtube-thumbnail-tester': 'Start • Suche • Handy • A/B',
+    'youtube-timestamp-generator': '0:00 • 3+ Kapitel • 10-s-Regel',
+    'words-to-minutes-calculator': 'Wörter → Minuten • Ziellänge',
     'engagement-rate-calculator': 'Aufrufe • Follower • Reichweite',
   },
   pt: {
@@ -2004,6 +2126,8 @@ export const toolFeatureTags: Record<Locale, Record<string, string>> = {
     'youtube-profile-picture-resizer': '800×800 • Prévia em círculo',
     'youtube-thumbnail-downloader': 'Máx. 1280×720 • JPG',
     'youtube-thumbnail-tester': 'Início • Busca • Celular • A/B',
+    'youtube-timestamp-generator': '0:00 • 3+ capítulos • regra de 10 s',
+    'words-to-minutes-calculator': 'Palavras → minutos • Duração desejada',
     'engagement-rate-calculator': 'Views • Seguidores • Alcance',
   },
   ko: {
@@ -2024,6 +2148,8 @@ export const toolFeatureTags: Record<Locale, Record<string, string>> = {
     'youtube-profile-picture-resizer': '800×800 • 원형 미리보기',
     'youtube-thumbnail-downloader': '최대 1280×720 • JPG',
     'youtube-thumbnail-tester': '홈 • 검색 • 모바일 • A/B',
+    'youtube-timestamp-generator': '0:00 • 3개 이상 • 10초 규칙',
+    'words-to-minutes-calculator': '글자수 → 분 • 목표 길이',
     'engagement-rate-calculator': '조회수 • 팔로워 • 도달',
   },
   it: {
@@ -2044,6 +2170,8 @@ export const toolFeatureTags: Record<Locale, Record<string, string>> = {
     'youtube-profile-picture-resizer': '800×800 • Anteprima cerchio',
     'youtube-thumbnail-downloader': 'Max 1280×720 • JPG',
     'youtube-thumbnail-tester': 'Home • Ricerca • Mobile • A/B',
+    'youtube-timestamp-generator': '0:00 • 3+ capitoli • regola dei 10 s',
+    'words-to-minutes-calculator': 'Parole → minuti • Durata desiderata',
     'engagement-rate-calculator': 'Visualizzazioni • Follower • Copertura',
   },
 };

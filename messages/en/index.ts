@@ -18,6 +18,8 @@ import { pages } from './pages';
 import { linkGenerator } from './linkGenerator';
 import { profilePicture } from './profilePicture';
 import { engagement } from './engagement';
+import { chapterGenerator } from './chapterGenerator';
+import { scriptLength } from './scriptLength';
 import { thumbnailDownloader } from './thumbnailDownloader';
 import { thumbnailTester } from './thumbnailTester';
 
@@ -44,6 +46,8 @@ export const messagesEn = {
   engagement,
   thumbnailDownloader,
   thumbnailTester,
+  chapterGenerator,
+  scriptLength,
 };
 
 export type Messages = typeof messagesEn;

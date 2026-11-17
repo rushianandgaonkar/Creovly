@@ -138,6 +138,16 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Add your title and channel', body: 'Type the title you plan to publish, your channel name, the video length and a views line.' },
         { title: 'Check every layout', body: 'Switch between Home, Search, Suggested and Mobile in light and dark mode, and make sure the subject and text still read at small sizes.' },
       ],
+      'youtube-timestamp-generator': [
+        { title: 'Paste your chapter notes', body: 'Type or paste one chapter per line with its start time, for example 0:00 Intro. The time can come before or after the title.' },
+        { title: 'Fix what the checker flags', body: 'Make sure the list starts at 0:00, has at least three chapters, runs in order and keeps every chapter at 10 seconds or longer.' },
+        { title: 'Copy into YouTube Studio', body: 'Pick a separator and time format, copy the list and paste it into your video description, then save.' },
+      ],
+      'words-to-minutes-calculator': [
+        { title: 'Paste your script', body: 'Paste the script or enter a word count. Japanese and Korean scripts switch to a character count automatically.' },
+        { title: 'Choose a pace', body: 'Pick slow, average or fast, or enter your own pace after timing a one-minute read.' },
+        { title: 'Plan the length', body: 'Read the estimated time, compare paces and set a target length to see how many words to write.' },
+      ],
       'engagement-rate-calculator': [
         { title: 'Pick the platform', body: 'Choose YouTube, Instagram or TikTok. Likes and comments stay filled in when you switch.' },
         { title: 'Enter the numbers', body: 'Copy views, likes, comments and the other counts from your analytics. Blank optional fields count as 0, or paste up to 20 posts to get an average.' },
@@ -253,6 +263,16 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Sube tu miniatura', body: 'Arrastra o elige un JPG, PNG, WebP o GIF. Añade una segunda versión si quieres comparar dos diseños.' },
         { title: 'Añade título y canal', body: 'Escribe el título que vas a publicar, el nombre de tu canal, la duración y una línea de visualizaciones.' },
         { title: 'Revisa cada diseño', body: 'Cambia entre Inicio, Búsqueda, Sugeridos y Móvil en modo claro y oscuro, y comprueba que el sujeto y el texto se leen en pequeño.' },
+      ],
+      'youtube-timestamp-generator': [
+        { title: 'Pega tus notas de capítulos', body: 'Escribe o pega un capítulo por línea con su tiempo de inicio, por ejemplo 0:00 Introducción. El tiempo puede ir antes o después del título.' },
+        { title: 'Corrige lo que se marca', body: 'Asegúrate de que la lista empieza en 0:00, tiene al menos tres capítulos, va en orden y cada capítulo dura 10 segundos o más.' },
+        { title: 'Cópiala en YouTube Studio', body: 'Elige separador y formato de tiempo, copia la lista, pégala en la descripción del vídeo y guarda.' },
+      ],
+      'words-to-minutes-calculator': [
+        { title: 'Pega tu guion', body: 'Pega el guion o escribe el número de palabras. Los guiones en japonés y coreano pasan a contar caracteres automáticamente.' },
+        { title: 'Elige un ritmo', body: 'Selecciona lento, medio o rápido, o escribe tu propio ritmo tras cronometrar un minuto de lectura.' },
+        { title: 'Planifica la duración', body: 'Mira el tiempo estimado, compara ritmos y fija una duración objetivo para saber cuántas palabras escribir.' },
       ],
       'engagement-rate-calculator': [
         { title: 'Elige la plataforma', body: 'Selecciona YouTube, Instagram o TikTok. Los me gusta y los comentarios se mantienen al cambiar.' },
@@ -370,6 +390,16 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'タイトルとチャンネル名を入力', body: '公開予定のタイトル、チャンネル名、動画の長さ、再生回数の表示を入力します。' },
         { title: '各レイアウトを確認', body: 'ホーム、検索、関連動画、モバイルをライト・ダークで切り替え、小さいサイズでも被写体と文字が伝わるか確かめます。' },
       ],
+      'youtube-timestamp-generator': [
+        { title: 'チャプターのメモを貼る', body: '1行に1チャプター、開始時間と一緒に入力または貼り付けます（例：0:00 オープニング）。時間はタイトルの前でも後でもかまいません。' },
+        { title: '指摘された箇所を直す', body: '0:00から始まり、3つ以上あり、時間順で、どのチャプターも10秒以上になっているか確認します。' },
+        { title: 'YouTube Studioに貼る', body: '区切りと時間の表記を選んで一覧をコピーし、動画の概要欄に貼り付けて保存します。' },
+      ],
+      'words-to-minutes-calculator': [
+        { title: '原稿を貼る', body: '原稿を貼り付けるか、文字数を入力します。日本語の原稿は自動で文字数カウントになります。' },
+        { title: '速さを選ぶ', body: 'ゆっくり・標準・速めから選ぶか、1分間音読して測った自分の速さを入力します。' },
+        { title: '長さを計画する', body: '読み上げ時間を確認し、ほかの速さと比べ、目標の長さを入れて必要な文字数を確認します。' },
+      ],
       'engagement-rate-calculator': [
         { title: 'プラットフォームを選ぶ', body: 'YouTube、Instagram、TikTokから選びます。切り替えても、いいねやコメントの値はそのまま残ります。' },
         { title: '数値を入力', body: 'アナリティクスから再生数、いいね、コメントなどをコピーします。任意項目の空欄は0として計算し、最大20投稿を貼り付けて平均も出せます。' },
@@ -485,6 +515,16 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Importez votre miniature', body: 'Déposez ou choisissez un JPG, PNG, WebP ou GIF. Ajoutez une seconde version pour comparer deux designs.' },
         { title: 'Ajoutez titre et chaîne', body: 'Saisissez le titre prévu, le nom de votre chaîne, la durée de la vidéo et une ligne de vues.' },
         { title: 'Vérifiez chaque affichage', body: 'Passez d’Accueil à Recherche, Suggestions et Mobile, en clair et en sombre, et vérifiez que le sujet et le texte restent lisibles en petit.' },
+      ],
+      'youtube-timestamp-generator': [
+        { title: 'Collez vos notes de chapitres', body: 'Saisissez ou collez un chapitre par ligne avec son heure de début, par exemple 0:00 Intro. Le temps peut précéder ou suivre le titre.' },
+        { title: 'Corrigez ce qui est signalé', body: 'Vérifiez que la liste commence à 0:00, compte au moins trois chapitres, suit l’ordre et que chaque chapitre dure 10 secondes ou plus.' },
+        { title: 'Copiez dans YouTube Studio', body: 'Choisissez un séparateur et un format de temps, copiez la liste, collez-la dans la description de la vidéo et enregistrez.' },
+      ],
+      'words-to-minutes-calculator': [
+        { title: 'Collez votre script', body: 'Collez le script ou saisissez un nombre de mots. Les scripts en japonais et en coréen passent automatiquement en caractères.' },
+        { title: 'Choisissez un débit', body: 'Sélectionnez lent, moyen ou rapide, ou saisissez votre propre débit après une lecture chronométrée d’une minute.' },
+        { title: 'Planifiez la durée', body: 'Lisez le temps estimé, comparez les débits et indiquez une durée visée pour savoir combien de mots écrire.' },
       ],
       'engagement-rate-calculator': [
         { title: 'Choisissez la plateforme', body: 'Sélectionnez YouTube, Instagram ou TikTok. Les j’aime et les commentaires restent saisis quand vous changez.' },
@@ -602,6 +642,16 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Titel und Kanal eintragen', body: 'Gib den geplanten Titel, deinen Kanalnamen, die Videolänge und eine Aufrufzeile ein.' },
         { title: 'Jede Ansicht prüfen', body: 'Wechsle zwischen Startseite, Suche, Vorschlägen und Handy in Hell und Dunkel und prüfe, ob Motiv und Text auch klein lesbar sind.' },
       ],
+      'youtube-timestamp-generator': [
+        { title: 'Kapitelnotizen einfügen', body: 'Tippe oder füge ein Kapitel pro Zeile mit Startzeit ein, zum Beispiel 0:00 Intro. Die Zeit kann vor oder nach dem Titel stehen.' },
+        { title: 'Markierte Probleme beheben', body: 'Achte darauf, dass die Liste bei 0:00 beginnt, mindestens drei Kapitel hat, aufsteigend ist und jedes Kapitel 10 Sekunden oder länger dauert.' },
+        { title: 'In YouTube Studio kopieren', body: 'Wähle Trennzeichen und Zeitformat, kopiere die Liste, füge sie in die Videobeschreibung ein und speichere.' },
+      ],
+      'words-to-minutes-calculator': [
+        { title: 'Skript einfügen', body: 'Füge das Skript ein oder gib eine Wortzahl ein. Japanische und koreanische Skripte wechseln automatisch zur Zeichenzählung.' },
+        { title: 'Tempo wählen', body: 'Wähle langsam, mittel oder schnell oder gib nach einer gestoppten Lesminute dein eigenes Tempo ein.' },
+        { title: 'Länge planen', body: 'Lies die geschätzte Zeit ab, vergleiche Tempi und setze eine Ziellänge, um zu sehen, wie viele Wörter du schreiben musst.' },
+      ],
       'engagement-rate-calculator': [
         { title: 'Plattform wählen', body: 'Wählen Sie YouTube, Instagram oder TikTok. Likes und Kommentare bleiben beim Wechsel erhalten.' },
         { title: 'Zahlen eingeben', body: 'Kopieren Sie Aufrufe, Likes, Kommentare und weitere Werte aus Ihren Statistiken. Leere optionale Felder zählen als 0; für einen Durchschnitt können Sie bis zu 20 Beiträge einfügen.' },
@@ -717,6 +767,16 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Envie sua thumbnail', body: 'Arraste ou escolha um JPG, PNG, WebP ou GIF. Adicione uma segunda versão para comparar dois designs.' },
         { title: 'Adicione título e canal', body: 'Digite o título que vai publicar, o nome do canal, a duração do vídeo e uma linha de visualizações.' },
         { title: 'Confira cada layout', body: 'Alterne entre Início, Busca, Sugeridos e Celular nos modos claro e escuro e confira se o assunto e o texto continuam legíveis em tamanho pequeno.' },
+      ],
+      'youtube-timestamp-generator': [
+        { title: 'Cole suas anotações', body: 'Digite ou cole um capítulo por linha com o tempo de início, por exemplo 0:00 Introdução. O tempo pode vir antes ou depois do título.' },
+        { title: 'Corrija o que for apontado', body: 'Confira se a lista começa em 0:00, tem pelo menos três capítulos, está em ordem e se cada capítulo dura 10 segundos ou mais.' },
+        { title: 'Copie para o YouTube Studio', body: 'Escolha o separador e o formato do tempo, copie a lista, cole na descrição do vídeo e salve.' },
+      ],
+      'words-to-minutes-calculator': [
+        { title: 'Cole seu roteiro', body: 'Cole o roteiro ou digite o número de palavras. Roteiros em japonês e coreano passam a contar caracteres automaticamente.' },
+        { title: 'Escolha um ritmo', body: 'Selecione lento, médio ou rápido, ou digite seu próprio ritmo depois de cronometrar um minuto de leitura.' },
+        { title: 'Planeje a duração', body: 'Veja o tempo estimado, compare ritmos e defina uma duração desejada para saber quantas palavras escrever.' },
       ],
       'engagement-rate-calculator': [
         { title: 'Escolha a plataforma', body: 'Selecione YouTube, Instagram ou TikTok. Curtidas e comentários continuam preenchidos quando você troca.' },
@@ -834,6 +894,16 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: '제목과 채널 입력', body: '게시할 제목, 채널 이름, 동영상 길이, 조회수 줄을 입력하세요.' },
         { title: '레이아웃별로 확인', body: '홈, 검색, 추천, 모바일을 라이트·다크 모드로 바꿔 보며 작은 크기에서도 주제와 글자가 잘 보이는지 확인하세요.' },
       ],
+      'youtube-timestamp-generator': [
+        { title: '챕터 메모 붙여 넣기', body: '한 줄에 챕터 하나를 시작 시간과 함께 입력하거나 붙여 넣으세요. 예: 0:00 인트로. 시간은 제목 앞이나 뒤에 와도 됩니다.' },
+        { title: '표시된 문제 고치기', body: '0:00으로 시작하는지, 챕터가 3개 이상인지, 시간순인지, 모든 챕터가 10초 이상인지 확인하세요.' },
+        { title: 'YouTube 스튜디오에 복사', body: '구분 기호와 시간 표기를 고르고 목록을 복사해 동영상 설명란에 붙여 넣은 뒤 저장하세요.' },
+      ],
+      'words-to-minutes-calculator': [
+        { title: '대본 붙여 넣기', body: '대본을 붙여 넣거나 분량을 입력하세요. 한국어와 일본어 대본은 자동으로 글자수로 계산합니다.' },
+        { title: '속도 고르기', body: '느리게, 보통, 빠르게 중에서 고르거나, 1분 동안 읽어 보고 잰 내 속도를 입력하세요.' },
+        { title: '길이 계획하기', body: '예상 시간을 확인하고, 속도별로 비교하고, 목표 길이를 넣어 필요한 분량을 확인하세요.' },
+      ],
       'engagement-rate-calculator': [
         { title: '플랫폼 선택', body: '유튜브, 인스타그램, 틱톡 중에서 고르세요. 바꿔도 좋아요와 댓글 값은 그대로 남습니다.' },
         { title: '숫자 입력', body: '분석 화면에서 조회수, 좋아요, 댓글 등을 복사하세요. 비워 둔 선택 항목은 0으로 계산되며, 최대 20개 게시물을 붙여 넣어 평균을 낼 수도 있습니다.' },
@@ -949,6 +1019,16 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Carica la miniatura', body: 'Trascina o scegli un JPG, PNG, WebP o GIF. Aggiungi una seconda versione per confrontare due design.' },
         { title: 'Aggiungi titolo e canale', body: 'Scrivi il titolo che pubblicherai, il nome del canale, la durata del video e una riga di visualizzazioni.' },
         { title: 'Controlla ogni layout', body: 'Passa da Home a Ricerca, Suggeriti e Mobile in chiaro e scuro, e verifica che soggetto e testo si leggano anche in piccolo.' },
+      ],
+      'youtube-timestamp-generator': [
+        { title: 'Incolla gli appunti dei capitoli', body: 'Scrivi o incolla un capitolo per riga con il tempo di inizio, per esempio 0:00 Intro. Il tempo può stare prima o dopo il titolo.' },
+        { title: 'Correggi ciò che viene segnalato', body: 'Controlla che l’elenco parta da 0:00, abbia almeno tre capitoli, sia in ordine e che ogni capitolo duri 10 secondi o più.' },
+        { title: 'Copialo in YouTube Studio', body: 'Scegli separatore e formato del tempo, copia l’elenco, incollalo nella descrizione del video e salva.' },
+      ],
+      'words-to-minutes-calculator': [
+        { title: 'Incolla il copione', body: 'Incolla il copione o inserisci il numero di parole. I copioni in giapponese e coreano passano automaticamente al conteggio dei caratteri.' },
+        { title: 'Scegli un ritmo', body: 'Seleziona lento, medio o veloce, oppure inserisci il tuo ritmo dopo aver cronometrato un minuto di lettura.' },
+        { title: 'Pianifica la durata', body: 'Leggi il tempo stimato, confronta i ritmi e imposta una durata desiderata per sapere quante parole scrivere.' },
       ],
       'engagement-rate-calculator': [
         { title: 'Scegli la piattaforma', body: 'Seleziona YouTube, Instagram o TikTok. Mi piace e commenti restano compilati quando cambi.' },

@@ -423,6 +423,42 @@ export const tools = {
         answer: 'YouTube shows up to two lines of title in the home feed, search results and suggested videos, and ends longer titles with “…”. Put the words that matter first. The Title Checker shows where a title is cut on mobile.',
       },
     ],
+    chapterGenerator: [
+      {
+        question: 'How do I add chapters to a YouTube video?',
+        answer: 'In YouTube Studio, open the video’s details and paste a timestamp list into the description, one chapter per line. The first timestamp must be 0:00, you need at least three, they must run in order and each chapter has to last at least 10 seconds. Save, and YouTube splits the progress bar into chapters.',
+      },
+      {
+        question: 'Why aren’t my YouTube chapters showing?',
+        answer: 'Usually one rule is broken: the list doesn’t start at 0:00, it has fewer than three timestamps, a time is out of order, or one chapter is shorter than 10 seconds. Paste your list here to see which line is the problem. After you fix and save it, chapters can take a little while to appear.',
+      },
+      {
+        question: 'What is the difference between timestamps and chapters?',
+        answer: 'Any time like 2:15 in a description or comment becomes a link that jumps to that moment. When the description has a list that follows the chapter rules, YouTube also splits the progress bar into named sections, which are the chapters.',
+      },
+      {
+        question: 'Can chapters show up in Google Search?',
+        answer: 'Google can show a video’s chapters as “key moments” under the result, linking straight to each section. Short, descriptive chapter titles make those links clearer for people searching.',
+      },
+    ],
+    scriptLength: [
+      {
+        question: 'How many words is a 10-minute video?',
+        answer: 'At an average pace of about 150 words per minute, a 10-minute video needs around 1,500 words of script. Slower delivery (120 words per minute) needs about 1,200 words and faster delivery (180) about 1,800. Pauses, B-roll and on-screen demos add time without adding words.',
+      },
+      {
+        question: 'What speaking pace should I use?',
+        answer: 'About 150 words per minute fits most relaxed narration. Tutorials and explainers often run slower, around 120, while energetic or comedy videos can reach 180 or more. For the most accurate estimate, time yourself reading one minute of your script and enter that number as a custom pace.',
+      },
+      {
+        question: 'How are Japanese and Korean scripts counted?',
+        answer: 'They are counted by characters, without spaces, because word counts don’t work the same way. Around 300 characters per minute is a common estimate for Japanese narration; adjust the custom pace to match your own delivery.',
+      },
+      {
+        question: 'Does the estimate include pauses and editing?',
+        answer: 'It includes only the pause per paragraph you set. Cuts, B-roll, music breaks and screen recordings change the final length, so use the estimate for planning and check it with a read-through.',
+      },
+    ],
     engagement: [
       {
         question: 'What is a good engagement rate?',

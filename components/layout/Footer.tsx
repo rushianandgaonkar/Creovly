@@ -30,6 +30,8 @@ export const Footer: React.FC = () => {
       items: [
         { name: t.titleChecker.title, href: '/tools/youtube-title-checker' },
         { name: t.linkGenerator.title, href: '/tools/youtube-link-generator' },
+        { name: t.chapterGenerator.title, href: '/tools/youtube-timestamp-generator' },
+        { name: t.scriptLength.title, href: '/tools/words-to-minutes-calculator' },
         { name: t.common.nav.checklist, href: '/checklist' },
       ],
     },

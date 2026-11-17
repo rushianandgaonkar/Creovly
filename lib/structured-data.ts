@@ -144,6 +144,8 @@ const slugToFaqKey: Record<string, string> = {
   'engagement-rate-calculator': 'engagement',
   'youtube-thumbnail-downloader': 'thumbnailDownloader',
   'youtube-thumbnail-tester': 'thumbnailTester',
+  'youtube-timestamp-generator': 'chapterGenerator',
+  'words-to-minutes-calculator': 'scriptLength',
 };
 
 /**
