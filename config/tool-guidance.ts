@@ -92,6 +92,8 @@ export const toolGuidance: Record<string, ToolGuidance> = {
   'youtube-link-generator': { related: [description, tags, title] },
   'youtube-profile-picture-resizer': { related: [banner, logo, resizer] },
   'engagement-rate-calculator': { related: [rpm, revenue, income] },
+  'youtube-thumbnail-downloader': { related: ['youtube-thumbnail-tester', resizer, compressor] },
+  'youtube-thumbnail-tester': { related: [title, resizer, compressor] },
 };
 
 export const titleDemonstration = {

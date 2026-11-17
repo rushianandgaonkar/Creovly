@@ -498,6 +498,50 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
         </div>
       );
 
+    case 'thumbnail-downloader':
+      return (
+        <div className={`tool-preview preview-thumbnail-downloader w-full h-full p-3.5 bg-zinc-900 text-zinc-100 flex flex-col justify-between select-none ${className}`} data-ui>
+          <div className="flex items-center justify-between text-[10px] text-zinc-400">
+            <span className="font-mono truncate">youtu.be/VIDEO_ID</span>
+            <span className="px-1.5 py-0.5 rounded bg-zinc-700/60 text-zinc-300 text-[9px] font-semibold">Example</span>
+          </div>
+          <div className="flex items-end gap-2">
+            {[['w-[46%]', '1280×720'], ['w-[30%]', '640×480'], ['w-[18%]', '480×360']].map(([width, label]) => (
+              <div key={label} className={`${width} space-y-1`}>
+                <div className="aspect-video rounded bg-gradient-to-br from-orange-400 via-rose-500 to-indigo-500" />
+                <span className="block text-[9px] font-mono text-zinc-400">{label}</span>
+              </div>
+            ))}
+          </div>
+          <div className="flex items-center justify-between text-[10px] text-zinc-400 pt-1 border-t border-zinc-800">
+            <span>Max res · SD · HQ</span>
+            <span className="text-zinc-200 font-medium">JPG</span>
+          </div>
+        </div>
+      );
+
+    case 'thumbnail-tester':
+      return (
+        <div className={`tool-preview preview-thumbnail-tester w-full h-full p-3.5 bg-white text-zinc-900 flex gap-3 select-none ${className}`} data-ui>
+          {['A', 'B'].map((version, index) => (
+            <div key={version} className="flex-1 min-w-0 space-y-1.5">
+              <div className={`relative aspect-video rounded-lg bg-gradient-to-br ${index ? 'from-sky-400 to-emerald-500' : 'from-orange-400 to-rose-500'}`}>
+                <span className="absolute bottom-1 right-1 rounded bg-black/80 px-1 text-[8px] font-medium text-white">10:24</span>
+                <span className="absolute top-1 left-1 rounded bg-white/90 px-1 text-[8px] font-bold">{version}</span>
+              </div>
+              <div className="flex gap-1.5">
+                <span className="h-4 w-4 shrink-0 rounded-full bg-[#065fd4]" />
+                <div className="flex-1 space-y-1">
+                  <span className="block h-1.5 rounded bg-zinc-800" />
+                  <span className="block h-1.5 w-3/4 rounded bg-zinc-800" />
+                  <span className="block h-1 w-1/2 rounded bg-zinc-400" />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      );
+
     default:
       return null;
   }

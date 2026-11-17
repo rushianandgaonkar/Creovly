@@ -372,6 +372,20 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: 'Thumbnail Tools',
         keywords: ['youtube profile picture size', 'youtube profile picture resizer', 'youtube channel icon size', 'youtube pfp size', 'youtube profile picture 800x800'],
       },
+      'youtube-thumbnail-downloader': {
+        title: 'YouTube Thumbnail Downloader – Max Resolution & HD',
+        seoTitle: 'YouTube Thumbnail Downloader – Save HD & Max Res Images',
+        description: 'Download any YouTube video thumbnail in max resolution (1280 × 720), SD, HQ and smaller sizes. Paste a video, Shorts or youtu.be link. Free, no sign-up.',
+        categoryLabel: 'Thumbnail Tools',
+        keywords: ['youtube thumbnail downloader', 'download youtube thumbnail', 'youtube thumbnail download hd', 'youtube thumbnail grabber', 'get youtube thumbnail', 'youtube shorts thumbnail download'],
+      },
+      'youtube-thumbnail-tester': {
+        title: 'YouTube Thumbnail Tester & Preview',
+        seoTitle: 'YouTube Thumbnail Tester – Preview Home, Search & Mobile',
+        description: 'Preview your YouTube thumbnail in the home feed, search, suggested and mobile layouts, in light and dark mode. Compare two versions. Free, nothing is uploaded.',
+        categoryLabel: 'Thumbnail Tools',
+        keywords: ['youtube thumbnail tester', 'youtube thumbnail preview', 'thumbnail preview tool', 'youtube thumbnail checker', 'test youtube thumbnail', 'compare youtube thumbnails'],
+      },
       'engagement-rate-calculator': {
         title: 'Engagement Rate Calculator for YouTube, Instagram & TikTok',
         seoTitle: 'Engagement Rate Calculator – YouTube, Instagram, TikTok',
@@ -568,6 +582,20 @@ export const translations: Record<Locale, I18nContent> = {
         description: 'Tamaño de la foto de perfil de YouTube: 800 × 800 px, 1:1, hasta 4 MB, mostrada en círculo. Recorta, previsualiza en modo claro y oscuro y exporta gratis.',
         categoryLabel: 'Herramientas de miniaturas',
         keywords: ['tamaño foto de perfil youtube', 'tamaño icono youtube', 'foto de perfil youtube 800x800', 'redimensionar foto de perfil youtube', 'medidas foto de perfil youtube'],
+      },
+      'youtube-thumbnail-downloader': {
+        title: 'Descargar miniatura de YouTube en HD y máxima resolución',
+        seoTitle: 'Descargar miniatura de YouTube – HD y máxima resolución',
+        description: 'Descarga la miniatura de cualquier vídeo de YouTube en máxima resolución (1280 × 720), SD, HQ y tamaños menores. Pega un enlace de vídeo, Shorts o youtu.be. Gratis.',
+        categoryLabel: 'Herramientas de miniaturas',
+        keywords: ['descargar miniatura de youtube', 'descargar miniaturas de youtube', 'miniatura youtube hd', 'descargar portada de video youtube', 'descargar thumbnail youtube'],
+      },
+      'youtube-thumbnail-tester': {
+        title: 'Probador y vista previa de miniaturas de YouTube',
+        seoTitle: 'Vista previa de miniaturas de YouTube – Inicio y móvil',
+        description: 'Previsualiza tu miniatura de YouTube en el inicio, la búsqueda, los sugeridos y el móvil, en modo claro y oscuro. Compara dos versiones. Gratis y sin subir nada.',
+        categoryLabel: 'Herramientas de miniaturas',
+        keywords: ['vista previa miniatura youtube', 'probar miniatura youtube', 'probador de miniaturas', 'comparar miniaturas youtube', 'cómo se ve mi miniatura en youtube'],
       },
       'engagement-rate-calculator': {
         title: 'Calculadora de engagement para YouTube, Instagram y TikTok',
@@ -766,6 +794,20 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: 'サムネイルツール',
         keywords: ['youtube アイコン サイズ', 'youtube アイコン 作成', 'youtube プロフィール画像 サイズ', 'youtube アイコン 800x800', 'youtube アイコン 丸 切り抜き'],
       },
+      'youtube-thumbnail-downloader': {
+        title: 'YouTube サムネイル ダウンロード（最大解像度・HD）',
+        seoTitle: 'YouTube サムネイル ダウンロード – HD・最大解像度で保存',
+        description: 'YouTube動画のサムネイルを最大解像度（1280 × 720）、SD、HQなど各サイズで無料ダウンロード。動画・ショート・youtu.beのリンクを貼るだけ。登録不要です。',
+        categoryLabel: 'サムネイルツール',
+        keywords: ['youtube サムネイル ダウンロード', 'youtube サムネイル 保存', 'サムネイル 取得', 'youtube サムネ 保存', 'youtube サムネイル 高画質'],
+      },
+      'youtube-thumbnail-tester': {
+        title: 'YouTube サムネイル テスター＆プレビュー',
+        seoTitle: 'YouTube サムネイル プレビュー – ホーム・検索・スマホで確認',
+        description: 'YouTubeのホーム、検索、関連動画、モバイルでのサムネイルの見え方をライト・ダークで確認。2つの案を比較できます。無料で、画像はアップロードされません。',
+        categoryLabel: 'サムネイルツール',
+        keywords: ['youtube サムネイル プレビュー', 'サムネイル 確認', 'youtube サムネイル テスト', 'サムネイル 比較', 'サムネ 見え方'],
+      },
       'engagement-rate-calculator': {
         title: 'エンゲージメント率計算ツール（YouTube・Instagram・TikTok）',
         seoTitle: 'エンゲージメント率 計算ツール｜YouTube・Instagram・TikTok',
@@ -962,6 +1004,20 @@ export const translations: Record<Locale, I18nContent> = {
         description: 'Taille de la photo de profil YouTube : 800 × 800 px, 1:1, 4 Mo maximum, affichée en cercle. Recadrez, prévisualisez en mode clair et sombre, exportez gratuitement.',
         categoryLabel: 'Outils de miniatures',
         keywords: ['taille photo de profil youtube', 'taille icône chaîne youtube', 'photo de profil youtube 800x800', 'redimensionner photo de profil youtube', 'format photo de profil youtube'],
+      },
+      'youtube-thumbnail-downloader': {
+        title: 'Télécharger une miniature YouTube en HD et résolution max',
+        seoTitle: 'Télécharger une miniature YouTube – HD et résolution max',
+        description: 'Téléchargez la miniature de n’importe quelle vidéo YouTube en résolution maximale (1280 × 720), SD, HQ et tailles plus petites. Collez un lien vidéo, Shorts ou youtu.be.',
+        categoryLabel: 'Outils de miniatures',
+        keywords: ['télécharger miniature youtube', 'miniature youtube hd', 'récupérer miniature youtube', 'télécharger thumbnail youtube', 'miniature vidéo youtube'],
+      },
+      'youtube-thumbnail-tester': {
+        title: 'Testeur et aperçu de miniatures YouTube',
+        seoTitle: 'Aperçu de miniature YouTube – Accueil, recherche et mobile',
+        description: 'Prévisualisez votre miniature YouTube sur l’accueil, la recherche, les suggestions et le mobile, en mode clair et sombre. Comparez deux versions. Gratuit, rien n’est envoyé.',
+        categoryLabel: 'Outils de miniatures',
+        keywords: ['aperçu miniature youtube', 'tester miniature youtube', 'testeur de miniature', 'comparer miniatures youtube', 'prévisualiser miniature youtube'],
       },
       'engagement-rate-calculator': {
         title: 'Calcul du taux d’engagement pour YouTube, Instagram et TikTok',
@@ -1160,6 +1216,20 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: 'Thumbnail-Tools',
         keywords: ['youtube profilbild größe', 'youtube kanalbild größe', 'youtube profilbild 800x800', 'youtube profilbild zuschneiden', 'youtube profilbild format'],
       },
+      'youtube-thumbnail-downloader': {
+        title: 'YouTube Thumbnail herunterladen – HD & maximale Auflösung',
+        seoTitle: 'YouTube Thumbnail herunterladen – HD & max. Auflösung',
+        description: 'Lade das Thumbnail jedes YouTube-Videos in maximaler Auflösung (1280 × 720), SD, HQ und kleineren Größen herunter. Video-, Shorts- oder youtu.be-Link einfügen. Kostenlos.',
+        categoryLabel: 'Thumbnail-Tools',
+        keywords: ['youtube thumbnail herunterladen', 'youtube thumbnail downloader', 'youtube vorschaubild herunterladen', 'youtube thumbnail speichern', 'youtube thumbnail hd'],
+      },
+      'youtube-thumbnail-tester': {
+        title: 'YouTube Thumbnail Tester & Vorschau',
+        seoTitle: 'YouTube Thumbnail Vorschau – Startseite, Suche & Handy',
+        description: 'Sieh dein YouTube-Thumbnail auf Startseite, Suche, Vorschlägen und Handy, im hellen und dunklen Design. Vergleiche zwei Versionen. Kostenlos, nichts wird hochgeladen.',
+        categoryLabel: 'Thumbnail-Tools',
+        keywords: ['youtube thumbnail vorschau', 'youtube thumbnail testen', 'thumbnail tester', 'youtube thumbnails vergleichen', 'youtube vorschaubild testen'],
+      },
       'engagement-rate-calculator': {
         title: 'Engagement Rate berechnen für YouTube, Instagram & TikTok',
         seoTitle: 'Engagement Rate berechnen – YouTube, Instagram, TikTok',
@@ -1356,6 +1426,20 @@ export const translations: Record<Locale, I18nContent> = {
         description: 'Tamanho da foto de perfil do YouTube: 800 × 800 px, 1:1, até 4 MB, exibida em círculo. Recorte, veja o círculo no modo claro e escuro e exporte grátis.',
         categoryLabel: 'Ferramentas de miniatura',
         keywords: ['tamanho foto de perfil youtube', 'tamanho ícone youtube', 'foto de perfil youtube 800x800', 'redimensionar foto de perfil youtube', 'medidas foto de perfil youtube'],
+      },
+      'youtube-thumbnail-downloader': {
+        title: 'Baixar thumbnail do YouTube em HD e resolução máxima',
+        seoTitle: 'Baixar thumbnail do YouTube – HD e resolução máxima',
+        description: 'Baixe a thumbnail de qualquer vídeo do YouTube em resolução máxima (1280 × 720), SD, HQ e tamanhos menores. Cole um link de vídeo, Shorts ou youtu.be. Grátis.',
+        categoryLabel: 'Ferramentas de miniatura',
+        keywords: ['baixar thumbnail do youtube', 'baixar miniatura do youtube', 'thumbnail youtube hd', 'baixar capa de video do youtube', 'pegar thumbnail do youtube'],
+      },
+      'youtube-thumbnail-tester': {
+        title: 'Testador e prévia de thumbnail do YouTube',
+        seoTitle: 'Prévia de thumbnail do YouTube – início, busca e celular',
+        description: 'Veja sua thumbnail do YouTube na página inicial, na busca, nos sugeridos e no celular, nos modos claro e escuro. Compare duas versões. Grátis, nada é enviado.',
+        categoryLabel: 'Ferramentas de miniatura',
+        keywords: ['prévia thumbnail youtube', 'testar thumbnail youtube', 'testador de thumbnail', 'comparar thumbnails youtube', 'como fica minha thumbnail no youtube'],
       },
       'engagement-rate-calculator': {
         title: 'Calculadora de engajamento para YouTube, Instagram e TikTok',
@@ -1554,6 +1638,20 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: '썸네일 도구',
         keywords: ['유튜브 프로필 사진 크기', '유튜브 프로필 사진 사이즈', '유튜브 채널 아이콘 크기', '유튜브 프로필 800x800', '유튜브 프로필 사진 자르기'],
       },
+      'youtube-thumbnail-downloader': {
+        title: '유튜브 썸네일 다운로드 (최대 해상도·HD)',
+        seoTitle: '유튜브 썸네일 다운로드 – HD·최대 해상도로 저장',
+        description: '모든 유튜브 동영상의 썸네일을 최대 해상도(1280 × 720), SD, HQ 등 여러 크기로 무료 다운로드하세요. 동영상, 쇼츠, youtu.be 링크만 붙여 넣으면 됩니다.',
+        categoryLabel: '썸네일 도구',
+        keywords: ['유튜브 썸네일 다운로드', '유튜브 썸네일 추출', '유튜브 썸네일 저장', '유튜브 썸네일 고화질', '썸네일 다운로드 사이트'],
+      },
+      'youtube-thumbnail-tester': {
+        title: '유튜브 썸네일 테스터 & 미리 보기',
+        seoTitle: '유튜브 썸네일 미리 보기 – 홈·검색·모바일에서 확인',
+        description: '유튜브 홈, 검색, 추천, 모바일에서 썸네일이 어떻게 보이는지 라이트·다크 모드로 확인하세요. 두 버전을 비교할 수 있습니다. 무료이며 업로드되지 않습니다.',
+        categoryLabel: '썸네일 도구',
+        keywords: ['유튜브 썸네일 미리보기', '썸네일 테스트', '유튜브 썸네일 확인', '썸네일 비교', '썸네일 미리보기 사이트'],
+      },
       'engagement-rate-calculator': {
         title: '참여율 계산기 – 유튜브·인스타그램·틱톡 인게이지먼트',
         seoTitle: '참여율 계산기 – 유튜브, 인스타그램, 틱톡',
@@ -1751,6 +1849,20 @@ export const translations: Record<Locale, I18nContent> = {
         categoryLabel: 'Strumenti miniatura',
         keywords: ['dimensioni immagine profilo youtube', 'dimensioni foto profilo youtube', 'icona canale youtube dimensioni', 'immagine profilo youtube 800x800', 'ridimensionare foto profilo youtube'],
       },
+      'youtube-thumbnail-downloader': {
+        title: 'Scarica miniatura YouTube in HD e risoluzione massima',
+        seoTitle: 'Scarica miniatura YouTube – HD e risoluzione massima',
+        description: 'Scarica la miniatura di qualsiasi video YouTube in risoluzione massima (1280 × 720), SD, HQ e dimensioni minori. Incolla un link video, Shorts o youtu.be. Gratis.',
+        categoryLabel: 'Strumenti miniatura',
+        keywords: ['scaricare miniatura youtube', 'scarica miniatura youtube', 'miniatura youtube hd', 'scaricare copertina video youtube', 'scaricare thumbnail youtube'],
+      },
+      'youtube-thumbnail-tester': {
+        title: 'Tester e anteprima miniature YouTube',
+        seoTitle: 'Anteprima miniatura YouTube – home, ricerca e mobile',
+        description: 'Guarda la tua miniatura YouTube nella home, nella ricerca, nei suggeriti e su mobile, in modalità chiara e scura. Confronta due versioni. Gratis, non si carica nulla.',
+        categoryLabel: 'Strumenti miniatura',
+        keywords: ['anteprima miniatura youtube', 'testare miniatura youtube', 'tester miniature', 'confrontare miniature youtube', 'come appare la miniatura su youtube'],
+      },
       'engagement-rate-calculator': {
         title: 'Calcolo engagement rate per YouTube, Instagram e TikTok',
         seoTitle: 'Calcolo engagement rate – YouTube, Instagram, TikTok',
@@ -1790,6 +1902,8 @@ export const toolFeatureTags: Record<Locale, Record<string, string>> = {
     'youtube-monetization-calculator': 'Multi-Stream Revenue',
     'youtube-link-generator': 'Timestamp • Subscribe • QR',
     'youtube-profile-picture-resizer': '800×800 • Circle Preview',
+    'youtube-thumbnail-downloader': 'Max res 1280×720 • JPG',
+    'youtube-thumbnail-tester': 'Home • Search • Mobile • A/B',
     'engagement-rate-calculator': 'Views • Followers • Reach',
   },
   es: {
@@ -1808,6 +1922,8 @@ export const toolFeatureTags: Record<Locale, Record<string, string>> = {
     'youtube-monetization-calculator': 'Ingresos multifuente',
     'youtube-link-generator': 'Minuto exacto • Suscripción • QR',
     'youtube-profile-picture-resizer': '800×800 • Vista circular',
+    'youtube-thumbnail-downloader': 'Máx. 1280×720 • JPG',
+    'youtube-thumbnail-tester': 'Inicio • Búsqueda • Móvil • A/B',
     'engagement-rate-calculator': 'Vistas • Seguidores • Alcance',
   },
   ja: {
@@ -1826,6 +1942,8 @@ export const toolFeatureTags: Record<Locale, Record<string, string>> = {
     'youtube-monetization-calculator': '複数収益源の合算',
     'youtube-link-generator': '時間指定 • 登録リンク • QR',
     'youtube-profile-picture-resizer': '800×800 • 円形プレビュー',
+    'youtube-thumbnail-downloader': '最大1280×720 • JPG',
+    'youtube-thumbnail-tester': 'ホーム • 検索 • スマホ • A/B',
     'engagement-rate-calculator': '再生数 • フォロワー • リーチ',
   },
   fr: {
@@ -1844,6 +1962,8 @@ export const toolFeatureTags: Record<Locale, Record<string, string>> = {
     'youtube-monetization-calculator': 'Revenus multi-sources',
     'youtube-link-generator': 'Timestamp • Abonnement • QR',
     'youtube-profile-picture-resizer': '800×800 • Aperçu en cercle',
+    'youtube-thumbnail-downloader': 'Max 1280×720 • JPG',
+    'youtube-thumbnail-tester': 'Accueil • Recherche • Mobile • A/B',
     'engagement-rate-calculator': 'Vues • Abonnés • Portée',
   },
   de: {
@@ -1862,6 +1982,8 @@ export const toolFeatureTags: Record<Locale, Record<string, string>> = {
     'youtube-monetization-calculator': 'Einnahmen aus mehreren Quellen',
     'youtube-link-generator': 'Zeitstempel • Abo-Link • QR',
     'youtube-profile-picture-resizer': '800×800 • Kreisvorschau',
+    'youtube-thumbnail-downloader': 'Max. 1280×720 • JPG',
+    'youtube-thumbnail-tester': 'Start • Suche • Handy • A/B',
     'engagement-rate-calculator': 'Aufrufe • Follower • Reichweite',
   },
   pt: {
@@ -1880,6 +2002,8 @@ export const toolFeatureTags: Record<Locale, Record<string, string>> = {
     'youtube-monetization-calculator': 'Receita de várias fontes',
     'youtube-link-generator': 'Minuto exato • Inscrição • QR',
     'youtube-profile-picture-resizer': '800×800 • Prévia em círculo',
+    'youtube-thumbnail-downloader': 'Máx. 1280×720 • JPG',
+    'youtube-thumbnail-tester': 'Início • Busca • Celular • A/B',
     'engagement-rate-calculator': 'Views • Seguidores • Alcance',
   },
   ko: {
@@ -1898,6 +2022,8 @@ export const toolFeatureTags: Record<Locale, Record<string, string>> = {
     'youtube-monetization-calculator': '다중 수익원 합산',
     'youtube-link-generator': '시간 지정 • 구독 • QR',
     'youtube-profile-picture-resizer': '800×800 • 원형 미리보기',
+    'youtube-thumbnail-downloader': '최대 1280×720 • JPG',
+    'youtube-thumbnail-tester': '홈 • 검색 • 모바일 • A/B',
     'engagement-rate-calculator': '조회수 • 팔로워 • 도달',
   },
   it: {
@@ -1916,6 +2042,8 @@ export const toolFeatureTags: Record<Locale, Record<string, string>> = {
     'youtube-monetization-calculator': 'Ricavi multi-fonte',
     'youtube-link-generator': 'Minuto esatto • Iscrizione • QR',
     'youtube-profile-picture-resizer': '800×800 • Anteprima cerchio',
+    'youtube-thumbnail-downloader': 'Max 1280×720 • JPG',
+    'youtube-thumbnail-tester': 'Home • Ricerca • Mobile • A/B',
     'engagement-rate-calculator': 'Visualizzazioni • Follower • Copertura',
   },
 };

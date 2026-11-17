@@ -9,6 +9,26 @@ export interface SampleImageOption {
 }
 
 export const toolSamples: Record<string, SampleImageOption[]> = {
+  'youtube-thumbnail-tester': [
+    {
+      id: 'creator-desk-hd',
+      label: 'Creator Desk',
+      category: '1280 × 720 · 16:9',
+      src: '/examples/thumbnail-resized.jpg',
+      fileName: 'creator-desk-1280x720.jpg',
+      width: 1280,
+      height: 720,
+    },
+    {
+      id: 'studio-vlog',
+      label: 'Studio Vlog',
+      category: '1280 × 800 · Not 16:9',
+      src: '/examples/compressor-source.webp',
+      fileName: 'studio-vlog.webp',
+      width: 1280,
+      height: 800,
+    },
+  ],
   'youtube-profile-picture-resizer': [
     {
       id: 'creator-desk',

@@ -18,6 +18,8 @@ import { pages } from './pages';
 import { linkGenerator } from './linkGenerator';
 import { profilePicture } from './profilePicture';
 import { engagement } from './engagement';
+import { thumbnailDownloader } from './thumbnailDownloader';
+import { thumbnailTester } from './thumbnailTester';
 
 export const messagesEn = {
   common,
@@ -40,6 +42,8 @@ export const messagesEn = {
   linkGenerator,
   profilePicture,
   engagement,
+  thumbnailDownloader,
+  thumbnailTester,
 };
 
 export type Messages = typeof messagesEn;

@@ -45,6 +45,8 @@ const TOOLS = [
   'youtube-link-generator',
   'youtube-profile-picture-resizer',
   'engagement-rate-calculator',
+  'youtube-thumbnail-downloader',
+  'youtube-thumbnail-tester',
 ];
 
 const OG_LOCALES = {

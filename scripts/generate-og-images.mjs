@@ -14,6 +14,9 @@ function getBrowserPath() {
     'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
     'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
     'C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe',
+    '/usr/bin/google-chrome',
+    '/usr/bin/chromium',
+    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
   ];
   for (const c of candidates) {
     if (fs.existsSync(c)) return c;
@@ -508,6 +511,50 @@ const allPages = [
           </div>
         </div>
         <div style="font-size:10px;font-family:monospace;color:#94a3b8;text-align:center;">Likes 80% · Comments 10% · Shares 10%</div>
+      </div>
+    `,
+  },
+  {
+    filename: 'youtube-thumbnail-downloader.png',
+    category: 'THUMBNAILS & SHORTS',
+    tone: '#ea580c',
+    glow: 'rgba(234, 88, 12, 0.25)',
+    title: 'YouTube Thumbnail Downloader',
+    description: 'Paste any video, Shorts or youtu.be link and save its thumbnail in max resolution, SD, HQ or smaller sizes.',
+    pills: ['Max Res 1280 × 720', 'SD · HQ · MQ', 'JPG Download'],
+    visual: `
+      <div style="background:#2a1a12;border:1px solid rgba(234,88,12,0.3);border-radius:18px;padding:24px;width:100%;height:100%;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 40px rgba(0,0,0,0.5);">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:12px;font-family:monospace;color:#fdba74;font-weight:700;letter-spacing:1px;">i.ytimg.com/vi/VIDEO_ID</span>
+          <span style="background:rgba(234,88,12,0.2);color:#fb923c;font-size:11px;font-weight:700;padding:4px 8px;border-radius:6px;font-family:monospace;">5 SIZES</span>
+        </div>
+        <div style="display:flex;align-items:flex-end;gap:14px;">
+          <div style="flex:46;"><div style="aspect-ratio:16/9;border-radius:10px;background:linear-gradient(135deg,#fb923c,#e11d48,#6366f1);"></div><div style="margin-top:6px;font-size:12px;font-family:monospace;color:#f8fafc;">1280 × 720</div></div>
+          <div style="flex:30;"><div style="aspect-ratio:16/9;border-radius:8px;background:linear-gradient(135deg,#fb923c,#e11d48,#6366f1);opacity:.85;"></div><div style="margin-top:6px;font-size:11px;font-family:monospace;color:#cbd5e1;">640 × 480</div></div>
+          <div style="flex:20;"><div style="aspect-ratio:16/9;border-radius:6px;background:linear-gradient(135deg,#fb923c,#e11d48,#6366f1);opacity:.7;"></div><div style="margin-top:6px;font-size:10px;font-family:monospace;color:#94a3b8;">480 × 360</div></div>
+        </div>
+        <div style="font-size:11px;font-family:monospace;color:#94a3b8;text-align:center;">Watch · youtu.be · Shorts · Live · Embed · Mobile</div>
+      </div>
+    `,
+  },
+  {
+    filename: 'youtube-thumbnail-tester.png',
+    category: 'THUMBNAILS & SHORTS',
+    tone: '#0070f3',
+    glow: 'rgba(0, 112, 243, 0.25)',
+    title: 'YouTube Thumbnail Tester & Preview',
+    description: 'See your thumbnail in home feed, search, suggested and mobile layouts, light and dark, and compare two versions.',
+    pills: ['Home · Search · Mobile', 'Light & Dark', 'A/B Compare'],
+    visual: `
+      <div style="background:#ffffff;border:1px solid rgba(0,112,243,0.3);border-radius:18px;padding:24px;width:100%;height:100%;display:flex;gap:18px;box-shadow:0 20px 40px rgba(0,0,0,0.5);">
+        <div style="flex:1;display:flex;flex-direction:column;gap:10px;">
+          <div style="position:relative;aspect-ratio:16/9;border-radius:12px;background:linear-gradient(135deg,#fb923c,#e11d48);"><span style="position:absolute;top:8px;left:8px;background:#fff;color:#0f0f0f;font-size:12px;font-weight:800;padding:2px 6px;border-radius:4px;font-family:monospace;">A</span><span style="position:absolute;bottom:6px;right:6px;background:rgba(0,0,0,.8);color:#fff;font-size:11px;padding:1px 4px;border-radius:4px;">10:24</span></div>
+          <div style="display:flex;gap:8px;"><div style="width:28px;height:28px;border-radius:50%;background:#065fd4;flex-shrink:0;"></div><div style="flex:1;"><div style="height:9px;border-radius:4px;background:#0f0f0f;"></div><div style="height:9px;width:70%;margin-top:5px;border-radius:4px;background:#0f0f0f;"></div><div style="height:7px;width:50%;margin-top:6px;border-radius:4px;background:#909090;"></div></div></div>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;gap:10px;">
+          <div style="position:relative;aspect-ratio:16/9;border-radius:12px;background:linear-gradient(135deg,#38bdf8,#10b981);"><span style="position:absolute;top:8px;left:8px;background:#fff;color:#0f0f0f;font-size:12px;font-weight:800;padding:2px 6px;border-radius:4px;font-family:monospace;">B</span><span style="position:absolute;bottom:6px;right:6px;background:rgba(0,0,0,.8);color:#fff;font-size:11px;padding:1px 4px;border-radius:4px;">10:24</span></div>
+          <div style="display:flex;gap:8px;"><div style="width:28px;height:28px;border-radius:50%;background:#065fd4;flex-shrink:0;"></div><div style="flex:1;"><div style="height:9px;border-radius:4px;background:#0f0f0f;"></div><div style="height:9px;width:70%;margin-top:5px;border-radius:4px;background:#0f0f0f;"></div><div style="height:7px;width:50%;margin-top:6px;border-radius:4px;background:#909090;"></div></div></div>
+        </div>
       </div>
     `,
   },

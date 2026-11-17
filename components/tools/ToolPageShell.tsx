@@ -82,6 +82,8 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
     'youtube-link-generator': 'linkGenerator',
     'youtube-profile-picture-resizer': 'profilePicture',
     'engagement-rate-calculator': 'engagement',
+    'youtube-thumbnail-downloader': 'thumbnailDownloader',
+    'youtube-thumbnail-tester': 'thumbnailTester',
   };
 
   const localizedFaqs = slugToFaqKey[toolSlug] ? t.tools.faqs[slugToFaqKey[toolSlug]] : undefined;
@@ -134,6 +136,10 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
         return t.profilePicture.title;
       case 'engagement-rate-calculator':
         return t.engagement.title;
+      case 'youtube-thumbnail-downloader':
+        return t.thumbnailDownloader.title;
+      case 'youtube-thumbnail-tester':
+        return t.thumbnailTester.title;
       default:
         return fallback;
     }
@@ -315,6 +321,8 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
       'youtube-link-generator': t.linkGenerator,
       'youtube-profile-picture-resizer': t.profilePicture,
       'engagement-rate-calculator': t.engagement,
+      'youtube-thumbnail-downloader': t.thumbnailDownloader,
+      'youtube-thumbnail-tester': t.thumbnailTester,
       'youtube-tag-generator': t.tagGenerator,
       'youtube-description-generator': t.descriptionGenerator,
       'youtube-channel-name-generator': t.channelName,

@@ -142,6 +142,8 @@ const slugToFaqKey: Record<string, string> = {
   'youtube-link-generator': 'linkGenerator',
   'youtube-profile-picture-resizer': 'profilePicture',
   'engagement-rate-calculator': 'engagement',
+  'youtube-thumbnail-downloader': 'thumbnailDownloader',
+  'youtube-thumbnail-tester': 'thumbnailTester',
 };
 
 /**

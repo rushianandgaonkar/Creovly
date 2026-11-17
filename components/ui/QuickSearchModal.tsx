@@ -69,6 +69,10 @@ export default function QuickSearchModal({
         return t.profilePicture.title;
       case 'engagement-rate-calculator':
         return t.engagement.title;
+      case 'youtube-thumbnail-downloader':
+        return t.thumbnailDownloader.title;
+      case 'youtube-thumbnail-tester':
+        return t.thumbnailTester.title;
       default:
         return fallback;
     }

@@ -128,6 +128,16 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Frame the circle', body: 'Drag and zoom inside the square. Keep your face, logo or text inside the circle and check the light and dark previews.' },
         { title: 'Export at 800 × 800', body: 'Choose PNG or JPG, add a background colour for transparent logos if needed, then export and upload it in the Customization section of YouTube Studio.' },
       ],
+      'youtube-thumbnail-downloader': [
+        { title: 'Paste the video link', body: 'Copy the URL from the address bar or the Share button. Watch, youtu.be, Shorts, live, embed and mobile links all work.' },
+        { title: 'Pick a size', body: 'Each size the video has is shown with its dimensions. Max resolution (1280 × 720) is the sharpest when it exists.' },
+        { title: 'Download or copy', body: 'Click Download JPG to save it, or copy the image URL. If the download is blocked, save the image from the tab that opens.' },
+      ],
+      'youtube-thumbnail-tester': [
+        { title: 'Upload your thumbnail', body: 'Drop or choose a JPG, PNG, WebP or GIF. Add a second version if you want to compare two designs.' },
+        { title: 'Add your title and channel', body: 'Type the title you plan to publish, your channel name, the video length and a views line.' },
+        { title: 'Check every layout', body: 'Switch between Home, Search, Suggested and Mobile in light and dark mode, and make sure the subject and text still read at small sizes.' },
+      ],
       'engagement-rate-calculator': [
         { title: 'Pick the platform', body: 'Choose YouTube, Instagram or TikTok. Likes and comments stay filled in when you switch.' },
         { title: 'Enter the numbers', body: 'Copy views, likes, comments and the other counts from your analytics. Blank optional fields count as 0, or paste up to 20 posts to get an average.' },
@@ -233,6 +243,16 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Sube tu imagen', body: 'Arrastra o elige un JPG, PNG, WebP, GIF o BMP. Se procesa en tu navegador y nunca se sube.' },
         { title: 'Encuadra el círculo', body: 'Arrastra y haz zoom dentro del cuadrado. Mantén tu cara, logo o texto dentro del círculo y revisa las vistas previas en modo claro y oscuro.' },
         { title: 'Exporta a 800 × 800', body: 'Elige PNG o JPG, añade un color de fondo si tu logo es transparente y exporta. Después súbelo en la sección Personalización de YouTube Studio.' },
+      ],
+      'youtube-thumbnail-downloader': [
+        { title: 'Pega el enlace del vídeo', body: 'Copia la URL de la barra de direcciones o del botón Compartir. Funcionan enlaces watch, youtu.be, Shorts, directos, embed y móviles.' },
+        { title: 'Elige un tamaño', body: 'Cada tamaño disponible aparece con sus medidas. La resolución máxima (1280 × 720) es la más nítida cuando existe.' },
+        { title: 'Descarga o copia', body: 'Pulsa Descargar JPG para guardarla o copia la URL de la imagen. Si la descarga se bloquea, guárdala desde la pestaña que se abre.' },
+      ],
+      'youtube-thumbnail-tester': [
+        { title: 'Sube tu miniatura', body: 'Arrastra o elige un JPG, PNG, WebP o GIF. Añade una segunda versión si quieres comparar dos diseños.' },
+        { title: 'Añade título y canal', body: 'Escribe el título que vas a publicar, el nombre de tu canal, la duración y una línea de visualizaciones.' },
+        { title: 'Revisa cada diseño', body: 'Cambia entre Inicio, Búsqueda, Sugeridos y Móvil en modo claro y oscuro, y comprueba que el sujeto y el texto se leen en pequeño.' },
       ],
       'engagement-rate-calculator': [
         { title: 'Elige la plataforma', body: 'Selecciona YouTube, Instagram o TikTok. Los me gusta y los comentarios se mantienen al cambiar.' },
@@ -340,6 +360,16 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: '円に合わせて配置', body: '正方形の中でドラッグとズームを調整します。顔・ロゴ・文字を円の中に収め、ライト・ダークのプレビューを確認します。' },
         { title: '800 × 800で書き出し', body: 'PNGかJPGを選び、透過ロゴなら背景色を加えて書き出します。YouTube Studioの「カスタマイズ」からアップロードしてください。' },
       ],
+      'youtube-thumbnail-downloader': [
+        { title: '動画リンクを貼る', body: 'アドレスバーや「共有」ボタンからURLをコピーします。watch、youtu.be、ショート、ライブ、埋め込み、モバイルのリンクに対応しています。' },
+        { title: 'サイズを選ぶ', body: '動画にあるサイズが寸法つきで表示されます。最大解像度（1280 × 720）がある場合はそれがいちばん鮮明です。' },
+        { title: 'ダウンロードかコピー', body: '「JPGをダウンロード」で保存するか、画像URLをコピーします。ダウンロードがブロックされたら、開いたタブから画像を保存してください。' },
+      ],
+      'youtube-thumbnail-tester': [
+        { title: 'サムネイルをアップロード', body: 'JPG、PNG、WebP、GIFをドロップまたは選択します。2つの案を比べたいときは2枚目を追加します。' },
+        { title: 'タイトルとチャンネル名を入力', body: '公開予定のタイトル、チャンネル名、動画の長さ、再生回数の表示を入力します。' },
+        { title: '各レイアウトを確認', body: 'ホーム、検索、関連動画、モバイルをライト・ダークで切り替え、小さいサイズでも被写体と文字が伝わるか確かめます。' },
+      ],
       'engagement-rate-calculator': [
         { title: 'プラットフォームを選ぶ', body: 'YouTube、Instagram、TikTokから選びます。切り替えても、いいねやコメントの値はそのまま残ります。' },
         { title: '数値を入力', body: 'アナリティクスから再生数、いいね、コメントなどをコピーします。任意項目の空欄は0として計算し、最大20投稿を貼り付けて平均も出せます。' },
@@ -445,6 +475,16 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Importez votre image', body: 'Déposez ou choisissez un JPG, PNG, WebP, GIF ou BMP. Il est traité dans votre navigateur et jamais envoyé.' },
         { title: 'Cadrez le cercle', body: 'Faites glisser et zoomez dans le carré. Gardez visage, logo ou texte dans le cercle et vérifiez les aperçus clair et sombre.' },
         { title: 'Exportez en 800 × 800', body: 'Choisissez PNG ou JPG, ajoutez une couleur de fond pour un logo transparent, puis exportez et importez l’image dans la section Personnalisation de YouTube Studio.' },
+      ],
+      'youtube-thumbnail-downloader': [
+        { title: 'Collez le lien de la vidéo', body: 'Copiez l’URL depuis la barre d’adresse ou le bouton Partager. Les liens watch, youtu.be, Shorts, live, embed et mobiles fonctionnent.' },
+        { title: 'Choisissez une taille', body: 'Chaque taille disponible s’affiche avec ses dimensions. La résolution maximale (1280 × 720) est la plus nette quand elle existe.' },
+        { title: 'Téléchargez ou copiez', body: 'Cliquez sur Télécharger le JPG pour l’enregistrer ou copiez l’URL de l’image. Si le téléchargement est bloqué, enregistrez l’image depuis l’onglet ouvert.' },
+      ],
+      'youtube-thumbnail-tester': [
+        { title: 'Importez votre miniature', body: 'Déposez ou choisissez un JPG, PNG, WebP ou GIF. Ajoutez une seconde version pour comparer deux designs.' },
+        { title: 'Ajoutez titre et chaîne', body: 'Saisissez le titre prévu, le nom de votre chaîne, la durée de la vidéo et une ligne de vues.' },
+        { title: 'Vérifiez chaque affichage', body: 'Passez d’Accueil à Recherche, Suggestions et Mobile, en clair et en sombre, et vérifiez que le sujet et le texte restent lisibles en petit.' },
       ],
       'engagement-rate-calculator': [
         { title: 'Choisissez la plateforme', body: 'Sélectionnez YouTube, Instagram ou TikTok. Les j’aime et les commentaires restent saisis quand vous changez.' },
@@ -552,6 +592,16 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Kreis ausrichten', body: 'Verschieben und zoomen Sie im Quadrat. Halten Sie Gesicht, Logo oder Text im Kreis und prüfen Sie die helle und dunkle Vorschau.' },
         { title: 'In 800 × 800 exportieren', body: 'Wählen Sie PNG oder JPG, ergänzen Sie bei transparenten Logos eine Hintergrundfarbe, exportieren Sie und laden Sie das Bild in YouTube Studio unter Anpassung hoch.' },
       ],
+      'youtube-thumbnail-downloader': [
+        { title: 'Videolink einfügen', body: 'Kopiere die URL aus der Adressleiste oder über „Teilen“. Watch-, youtu.be-, Shorts-, Live-, Embed- und Mobil-Links funktionieren.' },
+        { title: 'Größe wählen', body: 'Jede vorhandene Größe wird mit ihren Maßen angezeigt. Die maximale Auflösung (1280 × 720) ist am schärfsten, wenn es sie gibt.' },
+        { title: 'Herunterladen oder kopieren', body: 'Klicke auf „JPG herunterladen“ oder kopiere die Bild-URL. Wird der Download blockiert, speichere das Bild aus dem geöffneten Tab.' },
+      ],
+      'youtube-thumbnail-tester': [
+        { title: 'Thumbnail hochladen', body: 'Ziehe ein JPG, PNG, WebP oder GIF hinein oder wähle es aus. Füge eine zweite Version hinzu, um zwei Designs zu vergleichen.' },
+        { title: 'Titel und Kanal eintragen', body: 'Gib den geplanten Titel, deinen Kanalnamen, die Videolänge und eine Aufrufzeile ein.' },
+        { title: 'Jede Ansicht prüfen', body: 'Wechsle zwischen Startseite, Suche, Vorschlägen und Handy in Hell und Dunkel und prüfe, ob Motiv und Text auch klein lesbar sind.' },
+      ],
       'engagement-rate-calculator': [
         { title: 'Plattform wählen', body: 'Wählen Sie YouTube, Instagram oder TikTok. Likes und Kommentare bleiben beim Wechsel erhalten.' },
         { title: 'Zahlen eingeben', body: 'Kopieren Sie Aufrufe, Likes, Kommentare und weitere Werte aus Ihren Statistiken. Leere optionale Felder zählen als 0; für einen Durchschnitt können Sie bis zu 20 Beiträge einfügen.' },
@@ -657,6 +707,16 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Envie sua imagem', body: 'Arraste ou escolha um JPG, PNG, WebP, GIF ou BMP. Ele é processado no seu navegador e nunca enviado.' },
         { title: 'Ajuste o círculo', body: 'Arraste e dê zoom dentro do quadrado. Mantenha rosto, logo ou texto dentro do círculo e confira as prévias clara e escura.' },
         { title: 'Exporte em 800 × 800', body: 'Escolha PNG ou JPG, adicione uma cor de fundo para logos transparentes, exporte e envie na seção Personalização do YouTube Studio.' },
+      ],
+      'youtube-thumbnail-downloader': [
+        { title: 'Cole o link do vídeo', body: 'Copie a URL da barra de endereço ou do botão Compartilhar. Links watch, youtu.be, Shorts, lives, embed e mobile funcionam.' },
+        { title: 'Escolha um tamanho', body: 'Cada tamanho disponível aparece com as medidas. A resolução máxima (1280 × 720) é a mais nítida quando existe.' },
+        { title: 'Baixe ou copie', body: 'Clique em Baixar JPG para salvar ou copie a URL da imagem. Se o download for bloqueado, salve a imagem pela aba que abrir.' },
+      ],
+      'youtube-thumbnail-tester': [
+        { title: 'Envie sua thumbnail', body: 'Arraste ou escolha um JPG, PNG, WebP ou GIF. Adicione uma segunda versão para comparar dois designs.' },
+        { title: 'Adicione título e canal', body: 'Digite o título que vai publicar, o nome do canal, a duração do vídeo e uma linha de visualizações.' },
+        { title: 'Confira cada layout', body: 'Alterne entre Início, Busca, Sugeridos e Celular nos modos claro e escuro e confira se o assunto e o texto continuam legíveis em tamanho pequeno.' },
       ],
       'engagement-rate-calculator': [
         { title: 'Escolha a plataforma', body: 'Selecione YouTube, Instagram ou TikTok. Curtidas e comentários continuam preenchidos quando você troca.' },
@@ -764,6 +824,16 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: '원에 맞춰 배치', body: '정사각형 안에서 드래그하고 확대하세요. 얼굴, 로고, 글자를 원 안에 두고 라이트·다크 미리보기를 확인합니다.' },
         { title: '800 × 800으로 내보내기', body: 'PNG나 JPG를 고르고, 투명 로고라면 배경색을 넣어 내보낸 뒤 YouTube 스튜디오의 맞춤설정에서 업로드하세요.' },
       ],
+      'youtube-thumbnail-downloader': [
+        { title: '동영상 링크 붙여 넣기', body: '주소창이나 공유 버튼에서 URL을 복사하세요. watch, youtu.be, 쇼츠, 라이브, 퍼가기, 모바일 링크를 모두 지원합니다.' },
+        { title: '크기 선택', body: '동영상에 있는 크기가 치수와 함께 표시됩니다. 최대 해상도(1280 × 720)가 있으면 가장 선명합니다.' },
+        { title: '다운로드 또는 복사', body: 'JPG 다운로드를 클릭해 저장하거나 이미지 URL을 복사하세요. 다운로드가 막히면 새로 열린 탭에서 이미지를 저장하세요.' },
+      ],
+      'youtube-thumbnail-tester': [
+        { title: '썸네일 업로드', body: 'JPG, PNG, WebP, GIF를 끌어 놓거나 선택하세요. 두 디자인을 비교하려면 두 번째 버전을 추가하세요.' },
+        { title: '제목과 채널 입력', body: '게시할 제목, 채널 이름, 동영상 길이, 조회수 줄을 입력하세요.' },
+        { title: '레이아웃별로 확인', body: '홈, 검색, 추천, 모바일을 라이트·다크 모드로 바꿔 보며 작은 크기에서도 주제와 글자가 잘 보이는지 확인하세요.' },
+      ],
       'engagement-rate-calculator': [
         { title: '플랫폼 선택', body: '유튜브, 인스타그램, 틱톡 중에서 고르세요. 바꿔도 좋아요와 댓글 값은 그대로 남습니다.' },
         { title: '숫자 입력', body: '분석 화면에서 조회수, 좋아요, 댓글 등을 복사하세요. 비워 둔 선택 항목은 0으로 계산되며, 최대 20개 게시물을 붙여 넣어 평균을 낼 수도 있습니다.' },
@@ -869,6 +939,16 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Carica l’immagine', body: 'Trascina o scegli un JPG, PNG, WebP, GIF o BMP. Viene elaborato nel browser e non viene mai caricato.' },
         { title: 'Inquadra il cerchio', body: 'Trascina e ingrandisci dentro il quadrato. Tieni volto, logo o testo dentro il cerchio e controlla le anteprime chiara e scura.' },
         { title: 'Esporta a 800 × 800', body: 'Scegli PNG o JPG, aggiungi un colore di sfondo per i loghi trasparenti, esporta e carica l’immagine nella sezione Personalizzazione di YouTube Studio.' },
+      ],
+      'youtube-thumbnail-downloader': [
+        { title: 'Incolla il link del video', body: 'Copia l’URL dalla barra degli indirizzi o dal pulsante Condividi. Funzionano link watch, youtu.be, Shorts, live, embed e mobile.' },
+        { title: 'Scegli una dimensione', body: 'Ogni dimensione disponibile appare con le sue misure. La risoluzione massima (1280 × 720) è la più nitida quando esiste.' },
+        { title: 'Scarica o copia', body: 'Fai clic su Scarica JPG per salvarla o copia l’URL dell’immagine. Se il download è bloccato, salva l’immagine dalla scheda che si apre.' },
+      ],
+      'youtube-thumbnail-tester': [
+        { title: 'Carica la miniatura', body: 'Trascina o scegli un JPG, PNG, WebP o GIF. Aggiungi una seconda versione per confrontare due design.' },
+        { title: 'Aggiungi titolo e canale', body: 'Scrivi il titolo che pubblicherai, il nome del canale, la durata del video e una riga di visualizzazioni.' },
+        { title: 'Controlla ogni layout', body: 'Passa da Home a Ricerca, Suggeriti e Mobile in chiaro e scuro, e verifica che soggetto e testo si leggano anche in piccolo.' },
       ],
       'engagement-rate-calculator': [
         { title: 'Scegli la piattaforma', body: 'Seleziona YouTube, Instagram o TikTok. Mi piace e commenti restano compilati quando cambi.' },

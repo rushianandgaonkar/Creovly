@@ -20,6 +20,8 @@ export const Footer: React.FC = () => {
         { name: t.resizer.title, href: '/tools/youtube-thumbnail-resizer' },
         { name: t.logoRemover.title, href: '/tools/logo-background-remover' },
         { name: t.profilePicture.title, href: '/tools/youtube-profile-picture-resizer' },
+        { name: t.thumbnailDownloader.title, href: '/tools/youtube-thumbnail-downloader' },
+        { name: t.thumbnailTester.title, href: '/tools/youtube-thumbnail-tester' },
         { name: t.shorts.title, href: '/tools/youtube-shorts-safe-zone' },
       ],
     },

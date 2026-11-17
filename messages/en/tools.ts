@@ -387,6 +387,42 @@ export const tools = {
         answer: 'Yes. Your channel icon and your Google Account profile picture are linked, so changing one changes the other. If the channel uses a Brand Account, the change applies to that Brand Account, not to your personal account.',
       },
     ],
+    thumbnailDownloader: [
+      {
+        question: 'How do I download a YouTube thumbnail?',
+        answer: 'Paste the video link, find the largest size the video has and click Download JPG. The image comes straight from YouTube’s image server (i.ytimg.com). If your browser blocks the direct download, the image opens in a new tab, where you can right-click or long-press it and save it.',
+      },
+      {
+        question: 'Why is the max resolution version missing?',
+        answer: 'YouTube creates the 1280 × 720 version only for some videos, usually ones uploaded in HD or with an HD custom thumbnail. Older and low-resolution videos stop at 640 × 480 or 480 × 360. Those two sizes are 4:3, so a 16:9 thumbnail appears with black bars at the top and bottom.',
+      },
+      {
+        question: 'Can I use someone else’s YouTube thumbnail?',
+        answer: 'Thumbnails are images owned by the creator, and copyright applies to them like any other artwork. Saving one for reference, research or commentary is common, but reusing it in your own videos, ads or products needs the owner’s permission. This is general information, not legal advice.',
+      },
+      {
+        question: 'Does it work with Shorts and live streams?',
+        answer: 'Yes. Paste a Shorts, live, embed or youtu.be link and the tool reads the same video ID. Shorts thumbnails are stored in the same sizes, so a vertical video’s image may include bars or show a cropped frame.',
+      },
+    ],
+    thumbnailTester: [
+      {
+        question: 'What size should a YouTube thumbnail be?',
+        answer: 'Upload 1280 × 720 px (16:9) with a minimum width of 640 px, as a JPG, PNG or GIF under 2 MB. YouTube shows the same image from about 168 px wide in suggested videos to full width on phones, so test it small before you publish.',
+      },
+      {
+        question: 'Is my thumbnail uploaded anywhere?',
+        answer: 'No. The tester shows your image from a local copy in your browser. Nothing is sent to Creovly or to YouTube, and the preview is gone when you close or reset the page.',
+      },
+      {
+        question: 'How do I A/B test thumbnails on YouTube itself?',
+        answer: 'Where it is available, YouTube Studio on desktop has Test & compare: you add up to three thumbnails to one video, YouTube shows them to different viewers and keeps the one with the highest share of watch time. Use this tester first to shortlist the versions worth testing.',
+      },
+      {
+        question: 'Why is my title cut off in the preview?',
+        answer: 'YouTube shows up to two lines of title in the home feed, search results and suggested videos, and ends longer titles with “…”. Put the words that matter first. The Title Checker shows where a title is cut on mobile.',
+      },
+    ],
     engagement: [
       {
         question: 'What is a good engagement rate?',

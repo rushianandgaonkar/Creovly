@@ -49,6 +49,8 @@ export const footerNavigation = {
         { name: 'Banner Size & Safe Zone', href: '/tools/youtube-banner-size' },
         { name: 'Remove Background from Logo', href: '/tools/logo-background-remover' },
         { name: 'Profile Picture Resizer', href: '/tools/youtube-profile-picture-resizer' },
+        { name: 'Thumbnail Downloader', href: '/tools/youtube-thumbnail-downloader' },
+        { name: 'Thumbnail Tester & Preview', href: '/tools/youtube-thumbnail-tester' },
         { name: 'Shorts Safe Zone', href: '/tools/youtube-shorts-safe-zone' },
       ],
     },
@@ -306,6 +308,34 @@ export const toolRegistry: ToolDefinition[] = [
       'Free engagement rate calculator for YouTube, Instagram and TikTok. Calculate by views, followers or reach, see the formula, and average up to 20 posts.',
     status: 'available',
     seoTarget: 'Engagement Rate Calculator',
+  },
+  {
+    id: 'youtube-thumbnail-downloader',
+    title: 'YouTube Thumbnail Downloader',
+    seoTitle: 'YouTube Thumbnail Downloader – Save HD & Max Res Images',
+    slug: 'youtube-thumbnail-downloader',
+    href: '/tools/youtube-thumbnail-downloader',
+    category: 'thumbnail',
+    categoryLabel: 'Thumbnail Tools',
+    description:
+      'Download any YouTube video thumbnail in max resolution (1280 × 720), SD, HQ and smaller sizes. Paste a video, Shorts or youtu.be link. Free, no sign-up.',
+    status: 'available',
+    seoTarget: 'YouTube Thumbnail Downloader',
+    applicationCategory: 'MultimediaApplication',
+  },
+  {
+    id: 'youtube-thumbnail-tester',
+    title: 'YouTube Thumbnail Tester & Preview',
+    seoTitle: 'YouTube Thumbnail Tester – Preview Home, Search & Mobile',
+    slug: 'youtube-thumbnail-tester',
+    href: '/tools/youtube-thumbnail-tester',
+    category: 'thumbnail',
+    categoryLabel: 'Thumbnail Tools',
+    description:
+      'Preview your YouTube thumbnail in the home feed, search, suggested and mobile layouts, in light and dark mode. Compare two versions. Free, nothing is uploaded.',
+    status: 'available',
+    seoTarget: 'YouTube Thumbnail Tester',
+    applicationCategory: 'MultimediaApplication',
   },
 ];
 
