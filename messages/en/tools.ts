@@ -177,10 +177,6 @@ export const tools = {
     ],
     titleChecker: [
       {
-        question: 'Why should creators use a Title Checker before publishing?',
-        answer: 'A Title Checker tests whether your headline will cut off on mobile devices (the 50–60 character truncation cutoff), checks keyword prominence in the first 40 characters, and flags formatting issues like all-caps shouting or excessive punctuation that lower viewer trust and CTR.',
-      },
-      {
         question: 'How long should a YouTube title be?',
         answer: 'Aim for 50–60 characters. While YouTube permits up to 100 characters in YouTube Studio, mobile search feeds and suggested rails frequently truncate titles after 50–60 characters. Place your primary hook and keywords upfront before the cutoff.',
       },
@@ -193,8 +189,8 @@ export const tools = {
         answer: 'Front-load your primary target keyword within the first 40 characters, address user search intent clearly, and eliminate filler words to balance search indexing with high mobile click-through rates.',
       },
       {
-        question: 'How to check if a YouTube title is too long?',
-        answer: 'Paste your title draft into Creovly’s Title Checker to inspect the character count and preview mobile two-line truncation widths before finalizing your metadata.',
+        question: 'Why should creators use a Title Checker before publishing?',
+        answer: 'A Title Checker tests whether your headline will cut off on mobile devices (the 50–60 character truncation cutoff), checks keyword prominence in the first 40 characters, and flags formatting issues like all-caps shouting or excessive punctuation that lower viewer trust and CTR.',
       },
       {
         question: 'Do emojis in YouTube titles hurt SEO?',

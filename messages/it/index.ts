@@ -384,8 +384,8 @@ export const messagesIt: Messages = {
           answer: 'Inserisci la parola chiave principale nei primi 40 caratteri, rispondi con chiarezza all’intento di ricerca dell’utente ed elimina le parole di riempimento.',
         },
         {
-          question: 'Come verificare se un titolo di YouTube è troppo lungo?',
-          answer: 'Incolla la tua bozza nell’analizzatore di Creovly per visualizzare il conteggio esatto dei caratteri e l’anteprima del troncamento su smartphone.',
+          question: 'Perché i creator dovrebbero usare un verificatore di titoli prima di pubblicare?',
+          answer: 'Un verificatore di titoli controlla se il tuo titolo verrà troncato su smartphone (la soglia critica di 50-60 caratteri), verifica la presenza di keyword gancio all’inizio ed evita errori di punteggiatura che riducono il CTR.',
         },
         {
           question: 'Gli emoji nei titoli dei video danneggiano il posizionamento SEO?',

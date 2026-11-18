@@ -384,8 +384,8 @@ export const messagesFr: Messages = {
           answer: 'Placez votre mot-clé principal dans les 40 premiers caractères, répondez clairement à l’intention de recherche du spectateur et éliminez les mots superflus.',
         },
         {
-          question: 'Comment vérifier si un titre de vidéo est trop long ?',
-          answer: 'Collez votre texte dans l’analyseur de Creovly pour obtenir le décompte exact et visualiser le rendu sur un écran de smartphone classique.',
+          question: 'Pourquoi les créateurs doivent-ils utiliser un testeur de titre avant publication ?',
+          answer: 'Un testeur de titre vérifie si votre titre sera tronqué sur mobile (la limite de 50 à 60 caractères), évalue l’accroche des mots-clés et prévient les erreurs de mise en forme qui nuisent au CTR.',
         },
         {
           question: 'Les emojis dans les titres YouTube pénalisent-ils le référencement ?',

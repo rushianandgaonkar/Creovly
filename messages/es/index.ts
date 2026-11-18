@@ -384,8 +384,8 @@ export const messagesEs: Messages = {
           answer: 'Coloca tu palabra clave principal en los primeros 40 caracteres, responde claramente a la intención de búsqueda y elimina palabras de relleno.',
         },
         {
-          question: '¿Cómo comprobar si un título de YouTube es demasiado largo?',
-          answer: 'Pega tu borrador en el analizador de Creovly para ver el recuento exacto de caracteres y previsualizar cómo se corta en pantallas móviles.',
+          question: '¿Por qué los creadores deben usar un comprobador de títulos antes de publicar?',
+          answer: 'Un comprobador de títulos verifica si tu titular se cortará en móviles (el límite de 50–60 caracteres), comprueba la presencia de palabras clave al inicio y detecta problemas de formato que reducen el CTR.',
         },
         {
           question: '¿Los emojis en los títulos de YouTube perjudican el SEO?',

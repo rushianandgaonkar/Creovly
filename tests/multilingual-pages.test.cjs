@@ -157,6 +157,20 @@ test('all 11 tool pages generate unique, localized metadata across all 8 languag
   }
 });
 
+test('all tool pages have localized shell metadata and content in all 7 non-default locales', () => {
+  const i18n = loadTsModule('config/i18n.ts');
+  const NON_DEFAULT = ['es', 'ja', 'fr', 'de', 'pt', 'ko', 'it'];
+  for (const loc of NON_DEFAULT) {
+    const locTools = i18n.translations[loc]?.tools;
+    assert.ok(locTools, `Missing tools for ${loc}`);
+    for (const [slug, data] of Object.entries(locTools)) {
+      assert.ok(data.title && data.title.length > 3, `Title too short for ${slug} in ${loc}`);
+      assert.ok(data.description && data.description.length > 10, `Description too short for ${slug} in ${loc}`);
+      assert.ok(data.categoryLabel && data.categoryLabel.length > 2, `Category label too short for ${slug} in ${loc}`);
+    }
+  }
+});
+
 test('all 8 languages render complete Privacy content with verified legal disclosures', () => {
   const REQUIRED_STORAGE_KEYS = [
     'creovly-studio-draft-v1',

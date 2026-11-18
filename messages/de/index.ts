@@ -384,8 +384,8 @@ export const messagesDe: Messages = {
           answer: 'Platzieren Sie das Haupt-Keyword in den ersten 40 Zeichen, beantworten Sie die Suchintention klar und verzichten Sie auf Füllwörter.',
         },
         {
-          question: 'Wie prüfe ich, ob mein YouTube-Titel zu lang ist?',
-          answer: 'Fügen Sie den Entwurf in Creovly ein, um die exakte Zeichenanzahl und eine Vorschau des mobilen Zeilenumbruchs zu sehen.',
+          question: 'Warum sollten Creator vor der Veröffentlichung einen Titel-Checker nutzen?',
+          answer: 'Ein Titel-Checker prüft, ob Ihre Überschrift auf Mobilgeräten abgeschnitten wird (50–60-Zeichen-Grenze), analysiert Keyword-Hooks am Anfang und warnt vor Formatierungsfehlern, die Klicks und CTR senken.',
         },
         {
           question: 'Schaden Emojis im YouTube-Titel dem SEO-Ranking?',

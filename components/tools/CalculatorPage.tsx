@@ -9,6 +9,7 @@ import { calculatorFaqs } from '@/config/calculator-faqs';
 import { useI18n, LocalizedLink } from '@/lib/i18n';
 import { toolSeoContent } from '@/config/tool-guidance-i18n';
 import { revenueExplainer } from '@/config/revenue-explainer';
+import { translations } from '@/config/i18n';
 
 export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; slug: string }) {
   const { t, locale } = useI18n();
@@ -47,7 +48,7 @@ export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; s
   return (
     <ToolPageShell
       title={getLocalizedTitle()}
-      description={tool.description}
+      description={translations[locale]?.tools[slug]?.description || tool.description}
       category={t.tools.categories.moneyGrowth.label}
       categoryHref="/tools"
       toolSlug={slug}

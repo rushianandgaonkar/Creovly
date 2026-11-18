@@ -245,12 +245,17 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
     const tool = toolRegistry.find((t) => t.slug === toolSlug);
     if (!tool) notFound();
 
+    const locTool = translations[loc]?.tools?.[toolSlug];
+    const localizedTitle = locTool?.title || tool.title;
+    const localizedDesc = locTool?.description || tool.description;
+    const localizedCategory = locTool?.categoryLabel || tool.categoryLabel;
+
     const schemas = [
       toolSoftwareApplicationJsonLd(toolSlug, loc),
       toolFaqJsonLd(toolSlug, loc),
       breadcrumbJsonLd([
         { name: content.nav.tools, href: '/tools' },
-        { name: translations[loc]?.tools?.[toolSlug]?.title || toolSlug, href: `/tools/${toolSlug}` },
+        { name: localizedTitle, href: `/tools/${toolSlug}` },
       ], loc),
     ].filter(Boolean);
 
@@ -259,9 +264,9 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
       case 'youtube-thumbnail-compressor':
         toolComponent = (
           <ToolPageShell
-            title={tool.title}
-            description={tool.description}
-            category={tool.categoryLabel}
+            title={localizedTitle}
+            description={localizedDesc}
+            category={localizedCategory}
             categoryHref="/tools/thumbnail"
             toolSlug={tool.slug}
           >
@@ -273,9 +278,9 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
         toolComponent = (
           <ToolPageShell
             className={styles.page}
-            title={tool.title}
-            description={tool.description}
-            category="Thumbnail Tools"
+            title={localizedTitle}
+            description={localizedDesc}
+            category={localizedCategory}
             categoryHref="/tools/thumbnail"
             toolSlug={tool.slug}
           >
@@ -286,9 +291,9 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
       case 'youtube-banner-size':
         toolComponent = (
           <ToolPageShell
-            title={tool.title}
-            description={tool.description}
-            category="Thumbnail Tools"
+            title={localizedTitle}
+            description={localizedDesc}
+            category={localizedCategory}
             categoryHref="/tools/thumbnail"
             toolSlug={tool.slug}
           >
@@ -299,9 +304,9 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
       case 'logo-background-remover':
         toolComponent = (
           <ToolPageShell
-            title={tool.title}
-            description={tool.description}
-            category="Thumbnail Tools"
+            title={localizedTitle}
+            description={localizedDesc}
+            category={localizedCategory}
             categoryHref="/tools/thumbnail"
             toolSlug={tool.slug}
           >
@@ -312,9 +317,9 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
       case 'youtube-shorts-safe-zone':
         toolComponent = (
           <ToolPageShell
-            title={tool.title}
-            description={tool.description}
-            category="Thumbnail Tools"
+            title={localizedTitle}
+            description={localizedDesc}
+            category={localizedCategory}
             categoryHref="/tools/thumbnail"
             toolSlug={tool.slug}
           >
@@ -325,9 +330,9 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
       case 'youtube-title-checker':
         toolComponent = (
           <ToolPageShell
-            title={tool.title}
-            description={tool.description}
-            category="Title Tools"
+            title={localizedTitle}
+            description={localizedDesc}
+            category={localizedCategory}
             categoryHref="/tools#title"
             toolSlug={tool.slug}
           >
@@ -338,9 +343,9 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
       case 'youtube-channel-name-generator':
         toolComponent = (
           <ToolPageShell
-            title={tool.title}
-            description={tool.description}
-            category="Title Tools"
+            title={localizedTitle}
+            description={localizedDesc}
+            category={localizedCategory}
             categoryHref="/tools#title"
             toolSlug={tool.slug}
           >
@@ -351,9 +356,9 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
       case 'youtube-tag-generator':
         toolComponent = (
           <ToolPageShell
-            title={tool.title}
-            description={tool.description}
-            category="Title Tools"
+            title={localizedTitle}
+            description={localizedDesc}
+            category={localizedCategory}
             categoryHref="/tools#title"
             toolSlug={tool.slug}
           >
@@ -364,9 +369,9 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
       case 'youtube-description-generator':
         toolComponent = (
           <ToolPageShell
-            title={tool.title}
-            description={tool.description}
-            category="Title Tools"
+            title={localizedTitle}
+            description={localizedDesc}
+            category={localizedCategory}
             categoryHref="/tools#title"
             toolSlug={tool.slug}
           >
@@ -389,9 +394,9 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
       case 'youtube-link-generator':
         toolComponent = (
           <ToolPageShell
-            title={tool.title}
-            description={tool.description}
-            category="Title Tools"
+            title={localizedTitle}
+            description={localizedDesc}
+            category={localizedCategory}
             categoryHref="/tools#title"
             toolSlug={tool.slug}
           >
@@ -402,9 +407,9 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
       case 'youtube-profile-picture-resizer':
         toolComponent = (
           <ToolPageShell
-            title={tool.title}
-            description={tool.description}
-            category="Thumbnail Tools"
+            title={localizedTitle}
+            description={localizedDesc}
+            category={localizedCategory}
             categoryHref="/tools/thumbnail"
             toolSlug={tool.slug}
           >
@@ -415,9 +420,9 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
       case 'engagement-rate-calculator':
         toolComponent = (
           <ToolPageShell
-            title={tool.title}
-            description={tool.description}
-            category="Money & Growth"
+            title={localizedTitle}
+            description={localizedDesc}
+            category={localizedCategory}
             categoryHref="/tools"
             toolSlug={tool.slug}
           >
@@ -428,9 +433,9 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
       case 'youtube-thumbnail-downloader':
         toolComponent = (
           <ToolPageShell
-            title={tool.title}
-            description={tool.description}
-            category="Thumbnail Tools"
+            title={localizedTitle}
+            description={localizedDesc}
+            category={localizedCategory}
             categoryHref="/tools/thumbnail"
             toolSlug={tool.slug}
           >
@@ -441,9 +446,9 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
       case 'youtube-thumbnail-tester':
         toolComponent = (
           <ToolPageShell
-            title={tool.title}
-            description={tool.description}
-            category="Thumbnail Tools"
+            title={localizedTitle}
+            description={localizedDesc}
+            category={localizedCategory}
             categoryHref="/tools/thumbnail"
             toolSlug={tool.slug}
           >
@@ -454,9 +459,9 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
       case 'youtube-timestamp-generator':
         toolComponent = (
           <ToolPageShell
-            title={tool.title}
-            description={tool.description}
-            category="Title Tools"
+            title={localizedTitle}
+            description={localizedDesc}
+            category={localizedCategory}
             categoryHref="/tools#title"
             toolSlug={tool.slug}
           >
@@ -467,9 +472,9 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
       case 'words-to-minutes-calculator':
         toolComponent = (
           <ToolPageShell
-            title={tool.title}
-            description={tool.description}
-            category="Title Tools"
+            title={localizedTitle}
+            description={localizedDesc}
+            category={localizedCategory}
             categoryHref="/tools#title"
             toolSlug={tool.slug}
           >

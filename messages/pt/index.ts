@@ -384,8 +384,8 @@ export const messagesPt: Messages = {
           answer: 'Coloque a sua palavra-chave principal nos primeiros 40 carateres, corresponda diretamente à intenção de pesquisa do espectador e evite palavras vazias.',
         },
         {
-          question: 'Como verificar se um título do YouTube está demasiado longo?',
-          answer: 'Cole o rascunho no analisador da Creovly para visualizar a contagem de carateres e a pré-visualização exata de como ele quebra nos telemóveis.',
+          question: 'Por que os criadores devem usar um verificador de títulos antes de publicar?',
+          answer: 'Um verificador de títulos avalia se a sua manchete será cortada em celulares (o limite de 50 a 60 caracteres), verifica o gancho inicial e previne erros de pontuação e maiúsculas que diminuem cliques.',
         },
         {
           question: 'Usar emojis no título do YouTube prejudica o alcance?',
