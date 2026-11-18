@@ -65,6 +65,21 @@ test('title heuristics report actual issues and case-insensitive exact phrases',
   assert.ok(analyzeTitle('A calm title','absent').notes.some(n=>n.includes('not found')));
   assert.equal(analyzeTitle('A calm title').notes.length,1);
 });
+test('youtube-title-checker targets both "Title Checker" and "YouTube Title Checker"', () => {
+  const siteConfig = load('config/site.ts', { '@/types': {} });
+  const tool = siteConfig.toolRegistry.find((t) => t.slug === 'youtube-title-checker');
+  assert.ok(tool);
+  assert.ok(tool.seoTitle.includes('Title Checker'));
+  assert.equal(tool.seoTarget, 'Title Checker');
+  assert.ok(tool.description.toLowerCase().includes('free title checker'), 'Description must include "free title checker"');
+
+  const i18n = load('config/i18n.ts');
+  for (const loc of ['en', 'es', 'ja', 'fr', 'de', 'pt', 'ko', 'it']) {
+    const t = i18n.translations[loc]?.tools['youtube-title-checker'];
+    assert.ok(t, `Missing title checker translation in ${loc}`);
+    assert.ok(t.keywords.length >= 5);
+  }
+});
 test('Shorts guide checks the marked rectangle, including all sides and exact boundary', () => {
   assert.equal(checkShortsGuide(starterMargins,starterBox).overlaps.length,0);
   assert.deepEqual(checkShortsGuide(starterMargins,{x:0,y:0,width:100,height:100}).overlaps,['left','top','right','bottom']);

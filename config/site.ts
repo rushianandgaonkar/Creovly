@@ -208,15 +208,15 @@ export const toolRegistry: ToolDefinition[] = [
   {
     id: 'youtube-title-checker',
     title: 'YouTube Title Checker & Analyzer',
-    seoTitle: 'Free YouTube Title Checker: Length and Truncation',
+    seoTitle: 'Title Checker: Free YouTube Title Length, Hook & Truncation Analyzer',
     slug: 'youtube-title-checker',
     href: '/tools/youtube-title-checker',
     category: 'title',
     categoryLabel: 'Title Tools',
     description:
-      'Free YouTube title checker. Analyze title length, punctuation, keyword placement and mobile truncation before you publish your next video.',
+      'Free title checker and YouTube headline analyzer. Check title length, 50-character mobile truncation cutoff, keyword hooks, and CTR preview before you publish.',
     status: 'available',
-    seoTarget: 'YouTube Title Checker',
+    seoTarget: 'Title Checker',
   },
   {
     id: 'youtube-revenue-calculator',
