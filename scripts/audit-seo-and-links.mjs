@@ -59,7 +59,11 @@ async function runAudit() {
       const locRegex = /<loc>(.*?)<\/loc>/g;
       let match;
       while ((match = locRegex.exec(sitemap.text)) !== null) {
-        sitemapUrls.push(match[1]);
+        const locUrl = match[1].trim();
+        if (locUrl.includes('www.creovly.com')) {
+          issues.push(`Sitemap contains forbidden www subdomain: ${locUrl}`);
+        }
+        sitemapUrls.push(locUrl);
       }
       console.log(`   ✓ Found ${sitemapUrls.length} URLs in canonical sitemap.xml`);
       if (sitemapUrls.length < 15) {
@@ -152,6 +156,13 @@ async function runAudit() {
       const canonicalMatch = page.text.match(/<link[^>]*rel=["']canonical["'][^>]*href=["']([^"']*)["']/i);
       if (!canonicalMatch) {
         issues.push(`[${pagePath}] Missing <link rel="canonical">`);
+      } else if (canonicalMatch[1].includes('www.creovly.com')) {
+        issues.push(`[${pagePath}] Canonical URL contains forbidden www subdomain: ${canonicalMatch[1]}`);
+      }
+
+      // Check for forbidden www links
+      if (page.text.includes('href="https://www.creovly.com') || page.text.includes("href='https://www.creovly.com")) {
+        issues.push(`[${pagePath}] Page contains internal link with forbidden www subdomain`);
       }
 
       // Check OpenGraph

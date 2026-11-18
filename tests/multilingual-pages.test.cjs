@@ -21,6 +21,7 @@ function loadTsModule(filePath, customRequire = null) {
       if (id === '@/types') return {};
       if (id === '@/config/i18n') return loadTsModule('config/i18n.ts', req);
       if (id === '@/config/site') return loadTsModule('config/site.ts', req);
+      if (id === '@/lib/guides') return loadTsModule('lib/guides.ts', req);
       return {};
     });
   fn(mod.exports, req, mod);
@@ -64,6 +65,23 @@ const OG_LOCALES = {
 
 const i18nConfig = loadTsModule('config/i18n.ts');
 const metadataLib = loadTsModule('lib/metadata.ts');
+
+test('all canonical and alternate URLs use https://creovly.com and never www.creovly.com', () => {
+  const metaMod = loadTsModule('lib/metadata.ts');
+  const sitemapMod = loadTsModule('app/sitemap.ts');
+  const meta = metaMod.createPageMetadata({ title: 'Test', description: 'Test', path: '/tools/youtube-rpm-calculator' });
+  assert.ok(meta.alternates.canonical.startsWith('https://creovly.com/'));
+  assert.ok(!meta.alternates.canonical.includes('www.creovly.com'));
+  for (const [lang, url] of Object.entries(meta.alternates.languages)) {
+    assert.ok(url.startsWith('https://creovly.com'), `Alternate ${lang} must not use www: ${url}`);
+    assert.ok(!url.includes('www.creovly.com'));
+  }
+  const sitemapEntries = sitemapMod.default();
+  for (const entry of sitemapEntries) {
+    assert.ok(entry.url.startsWith('https://creovly.com'), `Sitemap URL must not use www: ${entry.url}`);
+    assert.ok(!entry.url.includes('www.creovly.com'));
+  }
+});
 
 function getMessages(locale) {
   const dict = loadTsModule(`messages/${locale}/index.ts`);
