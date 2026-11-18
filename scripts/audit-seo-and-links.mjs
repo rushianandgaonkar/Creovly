@@ -1,6 +1,61 @@
 import http from 'http';
+import fs from 'fs';
+import path from 'path';
 
 const BASE_URL = 'http://localhost:3001';
+
+function createStaticServer(port = 3001) {
+  const mimeTypes = {
+    '.html': 'text/html',
+    '.js': 'text/javascript',
+    '.css': 'text/css',
+    '.json': 'application/json',
+    '.png': 'image/png',
+    '.jpg': 'image/jpeg',
+    '.svg': 'image/svg+xml',
+    '.xml': 'application/xml',
+    '.txt': 'text/plain',
+    '.ico': 'image/x-icon',
+    '.webmanifest': 'application/manifest+json',
+  };
+
+  return new Promise((resolve) => {
+    const server = http.createServer((req, res) => {
+      const parsedUrl = new URL(req.url, `http://localhost:${port}`);
+      let reqPath = decodeURIComponent(parsedUrl.pathname);
+      if (reqPath === '/') reqPath = '/index.html';
+
+      const basePath = path.join(process.cwd(), 'out');
+      let targetFile = null;
+
+      if (fs.existsSync(path.join(basePath, reqPath + '.html'))) {
+        targetFile = path.join(basePath, reqPath + '.html');
+      } else if (fs.existsSync(path.join(basePath, reqPath)) && fs.statSync(path.join(basePath, reqPath)).isFile()) {
+        targetFile = path.join(basePath, reqPath);
+      } else if (fs.existsSync(path.join(basePath, reqPath, 'index.html'))) {
+        targetFile = path.join(basePath, reqPath, 'index.html');
+      }
+
+      if (targetFile) {
+        const ext = path.extname(targetFile).toLowerCase();
+        const contentType = mimeTypes[ext] || 'application/octet-stream';
+        res.writeHead(200, { 'Content-Type': contentType });
+        fs.createReadStream(targetFile).pipe(res);
+      } else {
+        res.writeHead(404, { 'Content-Type': 'text/plain' });
+        res.end('Not Found');
+      }
+    });
+
+    server.listen(port, () => {
+      resolve(server);
+    });
+    server.on('error', () => {
+      // Port might already be in use
+      resolve(null);
+    });
+  });
+}
 
 async function fetchUrl(path) {
   const url = path.startsWith('http') ? path : `${BASE_URL}${path.startsWith('/') ? '' : '/'}${path}`;
@@ -14,6 +69,7 @@ function isAssetPath(pathname) {
 }
 
 async function runAudit() {
+  const server = await createStaticServer(3001);
   console.log('=============================================');
   console.log('   CREOVLY SEO & LINK VERIFICATION AUDIT     ');
   console.log('=============================================\n');
@@ -280,6 +336,8 @@ async function runAudit() {
   console.log(`Total Assets / Images Checked: ${checkedAssets.size}`);
   console.log(`Total Issues / 404s:          ${issues.length}`);
   console.log('=============================================');
+
+  if (server) server.close();
 
   if (issues.length > 0) {
     console.error('\nIssues Detected:');
