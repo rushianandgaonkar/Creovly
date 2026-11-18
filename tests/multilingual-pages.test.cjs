@@ -339,12 +339,15 @@ test('all 8 languages provide complete localized guide articles with sections, e
     'youtube-thumbnail-blueprint',
     'decoding-youtube-rpm',
     'youtube-shorts-safe-zone',
+    'youtube-banner-size',
+    'youtube-monetization-requirements',
+    'how-to-change-youtube-thumbnail',
     'how-much-does-youtube-pay-per-1000-views',
   ];
 
   for (const locale of LOCALES) {
     for (const slug of GUIDE_SLUGS) {
-      const guide = guidesConfig.getLocalizedGuide(slug, locale);
+      const guide = guidesConfig.localizedGuides[locale]?.[slug];
       assert.ok(guide, `Guide ${slug} missing in ${locale}`);
       assert.ok(guide.title && guide.title.length > 5, `Title missing for ${slug} in ${locale}`);
       assert.ok(guide.description && guide.description.length > 10, `Description missing for ${slug} in ${locale}`);

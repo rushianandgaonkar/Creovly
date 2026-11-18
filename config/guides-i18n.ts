@@ -902,6 +902,259 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         },
       ],
     },
+    'youtube-banner-size': {
+        "title": "Tamaño del banner de YouTube: Dimensiones, zona segura y plantilla",
+        "seoTitle": "Tamaño del banner de YouTube: Dimensiones y zona segura",
+        "category": "Identidad del canal",
+        "readTime": "5 min de lectura",
+        "description": "Guía verificada del tamaño del banner de YouTube: resolución 2560×1440, zona segura central de 1235×338 para móvil y escritorio, límite de 6 MB y plantillas.",
+        "officialSources": [
+            {
+                "label": "Ayuda de YouTube: Gestionar la imagen de marca de tu canal",
+                "description": "Especificaciones oficiales de YouTube sobre dimensiones del banner, zona segura para texto y logotipos, formatos compatibles y límites de subida."
+            }
+        ],
+        "contentSections": [
+            {
+                "heading": "1. Tamaño y dimensiones recomendadas para el banner: 2560×1440",
+                "body": "Según las especificaciones oficiales de YouTube, el tamaño estándar de la cabecera del canal es de 2560 × 1440 píxeles con una relación de aspecto de 16:9. Las dimensiones mínimas de subida son 2048 × 1152 píxeles. Subir la imagen a 2560 × 1440 garantiza máxima nitidez en pantallas de alta densidad y televisores 4K sin pixelación.",
+                "keyTakeaway": "Usa un lienzo de 2560 × 1440 (16:9) con al menos 2048 × 1152 píxeles para ser aceptado por YouTube."
+            },
+            {
+                "heading": "2. Zona segura central para textos y logotipos: 1235×338",
+                "body": "Debido a que YouTube muestra el banner en móviles, tabletas, ordenadores y televisiones, la imagen se recorta según el dispositivo. Para evitar que el nombre del canal, eslogan, redes o rostros se corten, mantén todo el contenido vital dentro de la zona segura central de 1235 × 338 píxeles (centrada horizontal y verticalmente).",
+                "keyTakeaway": "Sitúa toda la tipografía crítica, logotipos y elementos principales dentro de la zona segura de 1235 × 338."
+            },
+            {
+                "heading": "3. Tamaño máximo de archivo y formatos compatibles",
+                "body": "YouTube impone un límite máximo de 6 MB para los banners de canal. Los formatos admitidos son JPG, PNG, BMP y GIF sin animación. Para diseños fotográficos, un JPEG optimizado ofrece el mejor equilibrio entre peso y calidad. Para logotipos o gráficos vectoriales, usa PNG.",
+                "keyTakeaway": "Mantén los archivos en 6 MB o menos en formato JPG o PNG para subir sin errores en YouTube Studio."
+            },
+            {
+                "heading": "4. Diseña tu cabecera con el redimensionador de Creovly",
+                "body": "Puedes comprobar el encuadre de tu cabecera con el Redimensionador de Miniaturas de YouTube de Creovly. La plantilla de banner 2560 × 1440 incluye una guía visual interactiva con la zona segura central de 1235 × 338 para previsualizar antes de publicar.",
+                "keyTakeaway": "Usa el ajuste 2560 × 1440 en la herramienta para previsualizar el recorte móvil y de escritorio."
+            }
+        ],
+        "workedExample": {
+            "title": "Centrado de la cabecera para evitar cortes en teléfonos móviles",
+            "scenario": "Un creador diseña un banner de 2560×1440. En móviles, su logotipo y horario de subida quedan cortados porque se colocaron fuera de la zona segura central.",
+            "steps": [
+                "Identificar el área de recorte móvil: La app móvil de YouTube solo muestra la franja central de 1235 × 338 píxeles.",
+                "Reubicar textos y logotipos: Mueve la marca y el horario dentro del límite central de 1235 × 338.",
+                "Mantener el fondo completo: Extiende texturas y degradados por todo el lienzo de 2560 × 1440 para que en televisiones se vea completo.",
+                "Comprimir por debajo de 6 MB: Exporta la imagen en JPG optimizado por debajo de 6 MB con las herramientas de Creovly."
+            ],
+            "conclusion": "El banner muestra los textos y logotipos clave con total claridad en móviles y se expande con elegancia en ordenadores y televisores."
+        },
+        "checklist": [
+            {
+                "title": "Tamaño del lienzo maestro",
+                "detail": "Configura la resolución a 2560 × 1440 píxeles (mínimo 2048 × 1152)."
+            },
+            {
+                "title": "Zona segura central",
+                "detail": "Mantén texto, logos y elementos clave dentro de los 1235 × 338 píxeles centrales."
+            },
+            {
+                "title": "Límite de peso del archivo",
+                "detail": "Verifica que la imagen pese estrictamente 6 MB o menos en JPG o PNG."
+            },
+            {
+                "title": "Revisión multidispositivo",
+                "detail": "Comprueba el banner tanto en la app móvil de YouTube como en el navegador web tras subirlo."
+            }
+        ],
+        "faqs": [
+            {
+                "question": "¿Cuál es el tamaño recomendado del banner de YouTube?",
+                "answer": "El tamaño oficial recomendado es de 2560 × 1440 píxeles con una relación de aspecto de 16:9 y unas dimensiones mínimas de 2048 × 1152 píxeles."
+            },
+            {
+                "question": "¿Cuál es la zona segura del banner de YouTube?",
+                "answer": "La zona segura para texto y logotipos es de 1235 × 338 píxeles centrada vertical y horizontalmente. Cualquier elemento dentro de esta área se verá en móviles, tabletas, ordenadores y televisores."
+            },
+            {
+                "question": "¿Cuál es el tamaño máximo de archivo para el banner de YouTube?",
+                "answer": "Los archivos de banner deben pesar 6 MB o menos y estar en formato JPG, PNG, BMP o GIF no animado."
+            }
+        ]
+    },
+    'youtube-monetization-requirements': {
+        "title": "Requisitos para monetizar en YouTube explicados",
+        "seoTitle": "Requisitos para monetizar en YouTube explicados",
+        "category": "Monetización",
+        "readTime": "7 min de lectura",
+        "description": "Desglose detallado de los requisitos de monetización de YouTube: niveles de 500 y 1.000 suscriptores, 4.000 horas de visualización, 10M de vistas en Shorts y políticas del YPP.",
+        "officialSources": [
+            {
+                "label": "Ayuda de YouTube: Resumen y requisitos del Programa de socios de YouTube",
+                "description": "Criterios oficiales para unirse al YPP, hitos de suscriptores y horas de visualización, y políticas de monetización del canal."
+            },
+            {
+                "label": "Ayuda de YouTube: Monetizar con YouTube Shorts",
+                "description": "Pautas oficiales de la plataforma sobre el fondo común para creadores de Shorts y reparto de ingresos."
+            }
+        ],
+        "contentSections": [
+            {
+                "heading": "1. Los dos niveles del Programa de socios de YouTube (YPP)",
+                "body": "YouTube cuenta con dos niveles de acceso al YPP. El nivel inicial (financiación de fans) desbloquea Super Thanks, Super Chat, Super Stickers, miembros del canal y YouTube Shopping. Exige: 500 suscriptores, 3 vídeos públicos válidos en los últimos 90 días, y 3.000 horas de visualización en 12 meses o 3 millones de vistas en Shorts en 90 días. El nivel completo desbloquea anuncios en vídeos largos y Shorts. Exige: 1.000 suscriptores y 4.000 horas públicas en 12 meses o 10 millones de vistas en Shorts en 90 días.",
+                "keyTakeaway": "Puedes comenzar a ganar con donaciones de fans a los 500 suscriptores y 3.000 horas; el reparto publicitario completo requiere 1.000 suscriptores y 4.000 horas."
+            },
+            {
+                "heading": "2. Horas públicas válidas frente a tiempo no computable",
+                "body": "Solo cuentan las horas públicas de vídeos de formato largo. El tiempo de visualización de los Shorts en el feed vertical NO cuenta para las 4.000 horas (los Shorts se evalúan por la vía separada de 10M de visualizaciones). Además, vídeos privados, ocultos, eliminados o campañas de Google Ads no computan.",
+                "keyTakeaway": "Las horas deben proceder de vídeos públicos de formato largo vistos de forma orgánica en un periodo móvil de 365 días."
+            },
+            {
+                "heading": "3. Requisitos técnicos y de cumplimiento normativo",
+                "body": "Además de suscriptores y horas, los creadores deben activar la verificación en dos pasos en su cuenta de Google, vincular una cuenta activa de Google AdSense y no tener advertencias activas por faltas a las Normas de la Comunidad.",
+                "keyTakeaway": "Protege tu canal con verificación en dos pasos, vincula AdSense y mantén tu canal limpio de sanciones de políticas."
+            },
+            {
+                "heading": "4. Seguimiento de objetivos con los calculadores de Creovly",
+                "body": "Calcula cuánto te falta para las 4.000 horas con nuestra Calculadora de Horas de Visualización según tu duración media. Usa la Calculadora de Monetización de YouTube para proyectar ingresos de anuncios, membresías y marcas.",
+                "keyTakeaway": "Utiliza calculadoras especializadas para modelar el ritmo de publicación y visualizaciones necesarias."
+            }
+        ],
+        "workedExample": {
+            "title": "Planificación para alcanzar el hito de las 4.000 horas de visualización",
+            "scenario": "Un creador tiene 850 suscriptores y 2.400 horas públicas. Desea calcular cuántas visitas necesita para las 1.600 horas restantes antes de que las horas más antiguas comiencen a vencer en el periodo móvil de 12 meses.",
+            "steps": [
+                "Calcular horas restantes: 4.000 objetivo − 2.400 actuales = 1.600 horas necesarias.",
+                "Determinar visualizaciones: Con 4 minutos de retención media por visita, cada visita genera 0,067 horas. 1.600 ÷ 0,067 = 24.000 visitas requeridas.",
+                "Fijar ritmo de publicación: 2 vídeos por semana con 2.000 visitas de media generan 16.000 visitas (aprox. 1.067 horas) al mes.",
+                "Verificar estado de cuenta: Confirmar verificación en dos pasos activa y cero infracciones de normas."
+            ],
+            "conclusion": "Con este ritmo de producción, el creador alcanzará el umbral de 4.000 horas en 6–7 semanas, accediendo a la monetización publicitaria completa."
+        },
+        "checklist": [
+            {
+                "title": "Umbral de suscriptores",
+                "detail": "Alcanza 500 suscriptores (apoyo de fans) o 1.000 suscriptores (ingresos publicitarios)."
+            },
+            {
+                "title": "Horas o visitas de Shorts",
+                "detail": "Acumula 4.000 horas públicas en 12 meses o 10 millones de vistas en Shorts en 90 días."
+            },
+            {
+                "title": "Verificación en dos pasos",
+                "detail": "Activa la verificación en dos pasos en tu cuenta de Google."
+            },
+            {
+                "title": "Cuenta de AdSense vinculada",
+                "detail": "Vincula una cuenta de Google AdSense aprobada para recibir los pagos."
+            },
+            {
+                "title": "Canal sin infracciones",
+                "detail": "Asegúrate de no tener faltas activas a las Normas de la Comunidad."
+            }
+        ],
+        "faqs": [
+            {
+                "question": "¿Cuáles son los requisitos para monetizar un canal de YouTube?",
+                "answer": "Para monetización completa con anuncios se necesitan 1.000 suscriptores y 4.000 horas públicas de visualización en 12 meses, o 10 millones de vistas en Shorts en 90 días. Hay un nivel inicial de donaciones a los 500 suscriptores y 3.000 horas."
+            },
+            {
+                "question": "¿Las horas de YouTube Shorts cuentan para las 4.000 horas?",
+                "answer": "No, las horas del feed de Shorts no computan para el requisito de 4.000 horas. Los Shorts tienen su propia vía de 10 millones de vistas en 90 días."
+            },
+            {
+                "question": "¿Cuánto tiempo tienes para conseguir las 4.000 horas?",
+                "answer": "Las 4.000 horas deben conseguirse en una ventana móvil de los últimos 365 días consecutivos. Las horas generadas hace más de un año van caducando del cómputo."
+            }
+        ]
+    },
+    'how-to-change-youtube-thumbnail': {
+        "title": "Cómo cambiar la miniatura de YouTube paso a paso",
+        "seoTitle": "Cómo cambiar la miniatura de YouTube (Paso a paso)",
+        "category": "Identidad visual",
+        "readTime": "5 min de lectura",
+        "description": "Tutorial paso a paso para cambiar la miniatura en YouTube: desde YouTube Studio en PC, app móvil, verificación de cuenta telefónica y miniaturas en Shorts.",
+        "officialSources": [
+            {
+                "label": "Ayuda de YouTube: Añadir o cambiar miniaturas de vídeos",
+                "description": "Documentación oficial de YouTube sobre cómo subir, cambiar y seleccionar miniaturas personalizadas en ordenador y móviles."
+            }
+        ],
+        "contentSections": [
+            {
+                "heading": "1. Verificación telefónica: desbloqueo de miniaturas personalizadas",
+                "body": "Para poder subir miniaturas personalizadas en YouTube, tu canal debe tener el estado de teléfono verificado. Si no está verificado, YouTube solo te permitirá elegir entre tres fotogramas automáticos. Para desbloquearlas, ve a Configuración en YouTube Studio > Canal > Funciones intermedias y completa la verificación telefónica.",
+                "keyTakeaway": "Completa la verificación telefónica en YouTube Studio para habilitar la subida de miniaturas personalizadas."
+            },
+            {
+                "heading": "2. Cómo cambiar la miniatura en ordenador (YouTube Studio)",
+                "body": "Para cambiar la miniatura desde tu PC, entra en YouTube Studio. Haz clic en \"Contenido\", selecciona el vídeo, sitúate sobre la miniatura actual, pulsa en Opciones (tres puntos verticales) y elige \"Cambiar\". Selecciona tu nueva imagen 1280 × 720 y pulsa \"Guardar\".",
+                "keyTakeaway": "En YouTube Studio > Contenido > Detalles, pulsa los tres puntos en la miniatura y selecciona \"Cambiar\"."
+            },
+            {
+                "heading": "3. Cómo cambiar la miniatura en la app móvil de YouTube Studio",
+                "body": "Abre la app YouTube Studio en iOS o Android. Ve a \"Contenido\", selecciona el vídeo y pulsa el icono de lápiz (Editar). Luego pulsa el icono de lápiz sobre la miniatura, toca \"Cambiar\", selecciona la imagen de tu galería y guarda los cambios. Recuerda que el límite en móvil es de 2 MB.",
+                "keyTakeaway": "Usa el icono del lápiz en la app móvil de YouTube Studio para cambiar miniaturas estés donde estés."
+            },
+            {
+                "heading": "4. Cómo seleccionar o cambiar la miniatura en YouTube Shorts",
+                "body": "Los Shorts gestionan las miniaturas de forma distinta. Actualmente no es posible subir una miniatura personalizada desde ordenador para Shorts ya publicados. Debes elegir el fotograma durante el proceso de subida en la app móvil de YouTube tocando el lápiz en la vista previa del vídeo.",
+                "keyTakeaway": "Elige el fotograma de tu miniatura de Shorts durante la subida móvil; actualmente no se puede sustituir desde PC en Shorts ya publicados."
+            },
+            {
+                "heading": "5. Preparación técnica: dimensiones y compresión",
+                "body": "Para una visualización nítida, prepara tu imagen a 1280 × 720 (16:9) usando el Redimensionador de Miniaturas de Creovly. Asegúrate de que pese menos de 2 MB con nuestro Compresor de Miniaturas para evitar errores de subida en móviles.",
+                "keyTakeaway": "Configura las miniaturas en 1280 × 720 y comprímelas por debajo de 2 MB antes de subirlas."
+            }
+        ],
+        "workedExample": {
+            "title": "Sustitución de una miniatura con bajo rendimiento para subir el CTR",
+            "scenario": "Un creador nota que un vídeo publicado hace 48 horas tiene un CTR bajo del 2,1%. Diseña una miniatura con mayor contraste y texto focal y desea cambiarla sin perder visitas ni estadísticas.",
+            "steps": [
+                "Preparar el archivo: Exportar la nueva miniatura en 1280 × 720 píxeles en formato JPG.",
+                "Comprimir a menos de 2 MB: Pasar la imagen por el Compresor de Creovly, reduciendo el peso a 510 KB.",
+                "Abrir YouTube Studio: Ir a Contenido, seleccionar el vídeo y localizar el panel de Miniatura.",
+                "Efectuar el cambio: Pulsar en Opciones de la miniatura, elegir \"Cambiar\", subir la imagen y hacer clic en \"Guardar\".",
+                "Supervisar resultados: Revisar el CTR en YouTube Studio Analytics en las siguientes 72 horas."
+            ],
+            "conclusion": "La nueva miniatura entra en vigor al instante en búsquedas y recomendaciones sin reiniciar estadísticas de visitas ni comentarios."
+        },
+        "checklist": [
+            {
+                "title": "Verificación de cuenta",
+                "detail": "Confirma la verificación telefónica en las opciones de canal de YouTube Studio."
+            },
+            {
+                "title": "Dimensiones recomendadas",
+                "detail": "Ajusta la imagen a 1280 × 720 píxeles con relación 16:9."
+            },
+            {
+                "title": "Límite de tamaño de archivo",
+                "detail": "Asegura que el archivo pese menos de 2 MB para admitir subidas móviles."
+            },
+            {
+                "title": "Formato admitido",
+                "detail": "Utiliza formato JPG o PNG con perfil de color sRGB."
+            },
+            {
+                "title": "Comprobar guardado",
+                "detail": "Haz clic en Guardar y comprueba la visualización en la página pública del vídeo."
+            }
+        ],
+        "faqs": [
+            {
+                "question": "¿Cómo cambiar la miniatura de un vídeo de YouTube tras publicarlo?",
+                "answer": "Inicia sesión en YouTube Studio, ve a Contenido y selecciona el vídeo. En la sección Miniatura, haz clic en el menú de tres puntos, selecciona Cambiar, sube la nueva imagen y pulsa Guardar."
+            },
+            {
+                "question": "¿Se puede cambiar la miniatura de un YouTube Short ya publicado?",
+                "answer": "Actualmente no se pueden subir miniaturas personalizadas desde ordenador para Shorts publicados. El fotograma debe seleccionarse desde la app móvil durante la subida."
+            },
+            {
+                "question": "¿Por qué no puedo subir miniaturas personalizadas en YouTube?",
+                "answer": "La subida de miniaturas personalizadas requiere completar la verificación por teléfono en las funciones intermedias de YouTube Studio. Los canales sin verificar solo pueden elegir fotogramas automáticos."
+            }
+        ]
+    },
+
   },
 
   ja: {
@@ -1194,6 +1447,259 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         },
       ],
     },
+    'youtube-banner-size': {
+        "title": "YouTubeバナーサイズ：推奨寸法・セーフゾーン・テンプレート",
+        "seoTitle": "YouTubeバナーサイズ：寸法とセーフゾーン",
+        "category": "チャンネルブランディング",
+        "readTime": "読了目安 5分",
+        "description": "YouTubeバナー推奨サイズ公式解説：2560×1440解像度、スマホ・PC共通の中央セーフゾーン1235×338、ファイル容量6MB制限とテンプレート。",
+        "officialSources": [
+            {
+                "label": "YouTube ヘルプ: チャンネルのブランディングの管理",
+                "description": "バナー画像の推奨サイズ、テキストやロゴの最小セーフエリア、対応ファイル形式、アップロード容量制限に関する公式仕様。"
+            }
+        ],
+        "contentSections": [
+            {
+                "heading": "1. 推奨YouTubeバナーサイズと寸法：2560×1440",
+                "body": "YouTube公式仕様によると、チャンネルヘッダーの標準バナーサイズは2560 × 1440ピクセル（アスペクト比16:9）です。アップロード可能な最小解像度は2048 × 1152ピクセルです。2560 × 1440のフル解像度で作成することで、高解像度ディスプレイや4KスマートTVでも粗くならず鮮明に表示されます。",
+                "keyTakeaway": "2560 × 1440（16:9）のキャンバスサイズで作成し、最低2048 × 1152ピクセル以上を確保します。"
+            },
+            {
+                "heading": "2. テキストとロゴの中央セーフエリア：1235×338",
+                "body": "YouTubeはスマホ、タブレット、PC、テレビなど多様な機器で閲覧されるため、機器に応じてバナーの外側が切り取られます。チャンネル名、キャッチコピー、アイコン、顔写真などの重要要素が見切れないよう、中央の1235 × 338ピクセルのセーフエリア内に配置してください。",
+                "keyTakeaway": "重要な文字、ロゴ、デザイン要素は中央1235 × 338ピクセルのセーフゾーン内に収めます。"
+            },
+            {
+                "heading": "3. 最大ファイル容量と対応画像形式：6MB以下",
+                "body": "YouTubeバナーのファイル容量制限は最大6MBです。対応形式はJPG、PNG、BMP、静止GIFです。写真主体のヘッダー画像には最適化されたJPEG、ロゴや文字主体のデザインにはエッジがにじまないPNGが推奨されます。",
+                "keyTakeaway": "ファイルサイズを6MB以下に抑え、JPGまたはPNG形式で書き出してください。"
+            },
+            {
+                "heading": "4. Creovlyのリサイズツールでバナーを整える",
+                "body": "CreovlyのYouTubeサムネイルリサイズツールを使えば、バナーの切り取り枠をリアルタイムでシミュレーションできます。2560 × 1440プリセットには1235 × 338のセーフエリア枠が表示され、アップロード前に見切れをチェックできます。",
+                "keyTakeaway": "リサイズツールの2560 × 1440プリセットを活用して、スマホとPCでの見え方を確認します。"
+            }
+        ],
+        "workedExample": {
+            "title": "スマホ表示での見切れを防ぐ中央セーフゾーン配置",
+            "scenario": "2560×1440でバナーを作成したクリエイターが、スマホアプリで確認したところ、ロゴと更新スケジュールが左右で見切れてしまっていた事例。",
+            "steps": [
+                "スマホの切り取り範囲を確認：スマホ版YouTubeアプリでは中央の1235 × 338ピクセルのみが表示されます。",
+                "文字とロゴを中央へ移動：チャンネルロゴや告知テキストを中央1235 × 338の枠内に再配置します。",
+                "キャンバス全体に背景を配置：テレビ画面で全体が見えるよう、背景のテクスチャやグラデーションは2560 × 1440全体に拡張します。",
+                "6MB以下に圧縮：Creovlyの圧縮ツールで品質を保ったまま容量を6MB以下に落とします。"
+            ],
+            "conclusion": "スマホでも文字やロゴが欠けず、PCやテレビでは迫力あるフル画面ヘッダーとして表示されるようになりました。"
+        },
+        "checklist": [
+            {
+                "title": "マスターキャンバス解像度",
+                "detail": "2560 × 1440ピクセル（最小2048 × 1152）で設定。"
+            },
+            {
+                "title": "中央セーフエリアの遵守",
+                "detail": "文字やロゴを中央の1235 × 338ピクセル内に配置。"
+            },
+            {
+                "title": "ファイル容量6MB上限",
+                "detail": "書き出し画像が確実に6MB以下であることを確認。"
+            },
+            {
+                "title": "実機での複数デバイス確認",
+                "detail": "公開後にYouTubeアプリとPCブラウザの双方で表示を確認。"
+            }
+        ],
+        "faqs": [
+            {
+                "question": "YouTubeバナーの推奨サイズは何ピクセルですか？",
+                "answer": "公式の推奨サイズは2560 × 1440ピクセル（アスペクト比16:9）、最小アップロードサイズは2048 × 1152ピクセルです。"
+            },
+            {
+                "question": "YouTubeバナーのセーフエリアとは？",
+                "answer": "セーフエリアとは、中央の1235 × 338ピクセルの領域です。この中に配置された文字やロゴは、スマホ、タブレット、PC、テレビの全端末で確実に表示されます。"
+            },
+            {
+                "question": "YouTubeバナーの最大ファイル容量は？",
+                "answer": "最大ファイル容量は6MBです。JPG、PNG、BMP、非アニメーションGIF形式に対応しています。"
+            }
+        ]
+    },
+    'youtube-monetization-requirements': {
+        "title": "YouTube収益化条件の完全解説（登録者数・総再生時間・Shorts）",
+        "seoTitle": "YouTube収益化条件の解説",
+        "category": "収益化",
+        "readTime": "読了目安 7分",
+        "description": "YouTubeパートナープログラム(YPP)の収益化条件を分かりやすく解説：500人＆1,000人の登録者基準、4,000時間、Shorts1,000万回再生、審査ポリシー。",
+        "officialSources": [
+            {
+                "label": "YouTube ヘルプ: YouTube パートナー プログラムの概要と利用資格",
+                "description": "YPP参加要件、チャンネル収益化基準、登録者数・総再生時間マイルストーンに関する公式案内。"
+            },
+            {
+                "label": "YouTube ヘルプ: YouTube ショートで収益を得る",
+                "description": "縦型動画ショートフィード広告のクリエイタープール分配に関する公式基準。"
+            }
+        ],
+        "contentSections": [
+            {
+                "heading": "1. YouTubeパートナープログラム（YPP）の2つの参加基準",
+                "body": "YouTubeには2段階の収益化基準があります。第1段階（ファンファンディング早期解放）では、Super Thanks、Super Chat、メンバーシップ、YouTubeショッピングが利用可能になります。条件は「チャンネル登録者500人」「過去90日間で公開動画3本以上」「過去12か月で有効な公開再生時間3,000時間、または過去90日間でショート1,000万回再生」です。第2段階（広告収益の完全解放）では、長編動画とショートフィードの広告収益を受け取れるようになります。条件は「登録者1,000人」かつ「公開再生時間4,000時間またはショート1,000万回再生」です。",
+                "keyTakeaway": "登録者500人・3,000時間で投げ銭機能が解放され、広告収益分配には登録者1,000人・4,000時間が必要です。"
+            },
+            {
+                "heading": "2. カウント対象となる有効な公開再生時間と対象外の時間",
+                "body": "4,000時間の基準にカウントされるのは、長編動画の「有効な公開総再生時間」のみです。Shortsフィードでの再生時間は4,000時間にはカウントされません（Shortsは90日間で1,000万回再生の別枠で判定されます）。また、非公開動画、限定公開動画、削除済み動画、Google広告キャンペーンによる再生時間も対象外です。",
+                "keyTakeaway": "過去365日間のローリング期間内に、オーガニックに再生された公開長編動画の時間のみが加算されます。"
+            },
+            {
+                "heading": "3. アカウントセキュリティと規約遵守の必須前提条件",
+                "body": "登録者数や再生時間に加え、Googleアカウントの「2段階認証プロセスの有効化」、有効な「Google AdSenseアカウントのリンク」、およびチャンネルに「コミュニティガイドラインの有効な警告がないこと」が必須条件です。",
+                "keyTakeaway": "2段階認証をオンにし、AdSenseを連携させ、ガイドライン違反の警告を受けない健全な運営を維持してください。"
+            },
+            {
+                "heading": "4. Creovlyの計算ツールで収益化進捗をシミュレーション",
+                "body": "平均視聴維持時間に基づいて4,000時間達成までの期間をCreovlyの「YouTube総再生時間計算ツール」で試算できます。また、広告やメンバーシップの推定月収は「YouTube収益計算ツール」でモデル化できます。",
+                "keyTakeaway": "感覚値ではなく計算ツールを用いて、必要な投稿頻度と再生ペースを逆算しましょう。"
+            }
+        ],
+        "workedExample": {
+            "title": "公開再生時間4,000時間達成に向けた投稿計画シミュレーション",
+            "scenario": "現在登録者850人、総再生時間2,400時間のクリエイター。12か月のローリング期限切れで古い時間が消える前に、残り1,600時間を達成するための必要再生数を算出する事例。",
+            "steps": [
+                "残り時間を計算：目標4,000時間 − 現在2,400時間 = 残り1,600時間。",
+                "必要再生回数を逆算：平均視聴時間4分の場合、1再生あたり0.067時間。1,600 ÷ 0.067 = 約24,000回の総再生数が必要。",
+                "週間投稿ペースを設定：平均2,000再生の動画を週2本投稿すれば、月間16,000再生（約1,067時間）を蓄積可能。",
+                "アカウントの前提条件確認：2段階認証が有効でコミュニティ警告が0件であることをStudioで確認。"
+            ],
+            "conclusion": "このペースを維持すれば約6〜7週間で4,000時間に到達し、YPP広告収益化の申請資格を満たすことができます。"
+        },
+        "checklist": [
+            {
+                "title": "チャンネル登録者基準",
+                "detail": "500人（ファン支援）または1,000人（広告収益）を達成。"
+            },
+            {
+                "title": "再生時間またはShorts再生数",
+                "detail": "直近12か月で4,000時間、または直近90日でShorts 1,000万回再生。"
+            },
+            {
+                "title": "2段階認証の有効化",
+                "detail": "Googleアカウントで2段階認証プロセスを設定。"
+            },
+            {
+                "title": "Google AdSense連携",
+                "detail": "収益受け取り用の有効なAdSenseアカウントをリンク。"
+            },
+            {
+                "title": "コミュニティガイドライン違反なし",
+                "detail": "チャンネルに有効な警告が1件もないことを確認。"
+            }
+        ],
+        "faqs": [
+            {
+                "question": "YouTubeの収益化条件は何ですか？",
+                "answer": "広告収益を得るには「チャンネル登録者1,000人」と「過去12か月間で4,000時間の公開総再生時間（または過去90日間でショート1,000万回再生）」が必要です。登録者500人・3,000時間でのファン支援早期アクセスも存在します。"
+            },
+            {
+                "question": "YouTubeショートの再生時間は4,000時間に含まれますか？",
+                "answer": "いいえ、ショートフィードでの再生時間は4,000時間には含まれません。ショートは「90日間で1,000万回再生」という独立した条件枠で判定されます。"
+            },
+            {
+                "question": "4,000時間はいつからいつまでの期間で計算されますか？",
+                "answer": "常に「直近365日間」のローリング期間で計算されます。365日より前の過去の再生時間は順次カウント対象から外れていきます。"
+            }
+        ]
+    },
+    'how-to-change-youtube-thumbnail': {
+        "title": "YouTubeサムネイルの変更方法・設定手順（PC＆スマホ対応）",
+        "seoTitle": "YouTubeサムネイル変更方法（ステップ解説）",
+        "category": "ビジュアルパッケージング",
+        "readTime": "読了目安 5分",
+        "description": "YouTubeサムネイルの変更・設定手順を初心者向けに解説：PC版YouTube Studio、スマホアプリ、電話番号認証によるカスタムサムネイル解放、Shortsの仕様。",
+        "officialSources": [
+            {
+                "label": "YouTube ヘルプ: 動画のサムネイルの追加と変更",
+                "description": "PCおよびモバイルでのカスタムサムネイルのアップロード、変更、選択に関する公式ヘルプ。"
+            }
+        ],
+        "contentSections": [
+            {
+                "heading": "1. 電話番号認証：カスタムサムネイル機能の解放",
+                "body": "自作のカスタムサムネイルを設定するには、チャンネルの「電話番号確認（中級機能）」が完了している必要があります。未認証の場合、動画から自動抽出された3枚のスチル画像からしか選べません。YouTube Studioの「設定」>「チャンネル」>「機能の利用資格」からSMS認証を完了させてください。",
+                "keyTakeaway": "YouTube Studioのチャンネル設定から電話番号認証を済ませることで、自作サムネイルのアップロードが解放されます。"
+            },
+            {
+                "heading": "2. パソコン（YouTube Studio）でサムネイルを変更する手順",
+                "body": "PCから変更する場合、YouTube Studioにログインし、左メニューの「コンテンツ」をクリックして対象動画を選択します。「動画の詳細」画面の「サムネイル」欄にマウスを合わせ、縦の3点リーダーアイコンから「変更」をクリックし、新しい1280×720画像を選択して右上の「保存」を押します。",
+                "keyTakeaway": "YouTube Studio > コンテンツ > 動画の詳細画面で、サムネイル枠の3点メニューから「変更」を選択します。"
+            },
+            {
+                "heading": "3. スマホアプリ（YouTube Studio）でサムネイルを変更する手順",
+                "body": "iOSまたはAndroidの「YouTube Studioアプリ」を開きます。「コンテンツ」から該当動画をタップし、画面上部の鉛筆アイコン（編集）を押します。さらにサムネイル左上の鉛筆アイコンをタップし、「変更」からスマホ内の画像を選択して「完了」>「保存」をタップします。スマホからのアップロードは2MB制限が厳格に適用されます。",
+                "keyTakeaway": "スマホのYouTube Studioアプリで鉛筆アイコンをタップすれば、外出先でもサムネイルを差し替え可能です。"
+            },
+            {
+                "heading": "4. YouTubeショート動画のサムネイル変更・指定方法",
+                "body": "YouTube Shortsは通常の動画と仕様が異なります。現在、公開済みのショート動画に対してPCからカスタム画像を差し替えることはできません。スマホアプリからの初回動画アップロード時に、動画プレビュー上の鉛筆アイコンをタップしてベストなコマ（フレーム）を指定する必要があります。",
+                "keyTakeaway": "ショート動画のサムネイルは初回アップロード時にアプリ内で指定します（公開後のPC差し替えは現在非対応）。"
+            },
+            {
+                "heading": "5. 技術仕様：解像度1280×720とファイル容量2MBの事前準備",
+                "body": "高画質な表示のために、Creovlyのサムネイルリサイズツールで1280 × 720（16:9）に整え、Creovlyのサムネイル圧縮ツールで2MB以下に圧縮してからアップロードしてください。モバイルアプリでのアップロード失敗を防げます。",
+                "keyTakeaway": "1280 × 720ピクセルにリサイズし、2MB以下に圧縮してからアップロードするのが鉄則です。"
+            }
+        ],
+        "workedExample": {
+            "title": "クリック率向上のための不振サムネイル差し替え実践例",
+            "scenario": "公開後48時間のクリック率が2.1%と低迷していたため、コントラストを高め文字フックを強調した新サムネイルを作成し、再生数やコメントをリセットせずに差し替える事例。",
+            "steps": [
+                "新画像の作成・書き出し：1280 × 720ピクセル、JPG形式で新サムネイルを書き出し。",
+                "2MB以下に圧縮：Creovly圧縮ツールに通し、画質を保ちながらファイル容量を510KBに軽量化。",
+                "YouTube Studioを開く：コンテンツ一覧から対象動画を選択し、サムネイルパネルを表示。",
+                "差し替えを実行：3点メニューから「変更」を選んで新画像をアップロードし、「保存」をクリック。",
+                "効果測定：差し替え後72時間の「インプレッションのクリック率」の変化をStudioアナリティクスで追跡。"
+            ],
+            "conclusion": "動画の再生回数やコメント、URLを一切損なうことなく、検索やおすすめ欄の表示が即座に新サムネイルに更新されました。"
+        },
+        "checklist": [
+            {
+                "title": "チャンネル電話確認の完了",
+                "detail": "YouTube Studioの中級機能で電話番号確認が完了していることを確認。"
+            },
+            {
+                "title": "1280×720解像度（16:9）",
+                "detail": "サムネイル画像が公式推奨の16:9比率になっているか確認。"
+            },
+            {
+                "title": "ファイル容量2MB以下",
+                "detail": "スマホ Studioでのアップロードを想定し、2MB以下に圧縮。"
+            },
+            {
+                "title": "カラープロファイルsRGB",
+                "detail": "ブラウザでの色化けを防ぐためsRGBプロファイルのJPGまたはPNGを使用。"
+            },
+            {
+                "title": "保存後の実機表示確認",
+                "detail": "保存後に公開動画ページを開き、サムネイルが更新されていることを確認。"
+            }
+        ],
+        "faqs": [
+            {
+                "question": "公開済みの動画のサムネイルは後から変更できますか？",
+                "answer": "はい、いつでも変更可能です。YouTube Studioの動画詳細画面からサムネイル右上の3点メニューをクリックし、「変更」を選んで新しい画像をアップロードして保存するだけです。"
+            },
+            {
+                "question": "公開後のYouTubeショートのサムネイルは変更できますか？",
+                "answer": "現在のところ、一度公開されたYouTubeショートのサムネイルをPCからカスタム画像に変更することはできません。アップロード時にスマホアプリ上でフレームを選択する必要があります。"
+            },
+            {
+                "question": "カスタムサムネイルがアップロードできない原因は？",
+                "answer": "アカウントの電話番号確認（中級機能）が完了していない場合、自作サムネイルはアップロードできません。また、ファイルサイズが上限（モバイル2MB、PC 50MB）を超えている場合もエラーになります。"
+            }
+        ]
+    },
+
   },
 
   fr: {
@@ -1489,6 +1995,259 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         },
       ],
     },
+    'youtube-banner-size': {
+        "title": "Taille Bannière YouTube : Dimensions, Zone Sécurisée & Modèle",
+        "seoTitle": "Taille Bannière YouTube : Dimensions & Gabarit",
+        "category": "Image de marque",
+        "readTime": "5 min de lecture",
+        "description": "Guide vérifié de la taille de bannière YouTube : résolution 2560×1440, zone sécurisée centrale 1235×338 pour mobile et ordinateur, limite de 6 Mo et modèles.",
+        "officialSources": [
+            {
+                "label": "Aide YouTube : Gérer les éléments de branding de votre chaîne",
+                "description": "Spécifications officielles pour les dimensions de bannière, la zone sécurisée centrale pour textes et logos, les formats compatibles et la limite de poids."
+            }
+        ],
+        "contentSections": [
+            {
+                "heading": "1. Dimensions recommandées pour la bannière YouTube : 2560×1440",
+                "body": "Selon les normes officielles de YouTube, la taille idéale d’une bannière de chaîne est de 2560 × 1440 pixels avec un ratio 16:9. La dimension minimale d’importation est de 2048 × 1152 pixels. Importer votre visuel à 2560 × 1440 garantit une netteté irréprochable sur les écrans haute densité et les téléviseurs 4K sans pixelisation.",
+                "keyTakeaway": "Créez votre visuel sur un canevas de 2560 × 1440 (16:9) avec un minimum de 2048 × 1152 pixels."
+            },
+            {
+                "heading": "2. Zone sécurisée centrale pour textes et logos : 1235×338",
+                "body": "YouTube affiche votre bannière sur smartphones, tablettes, ordinateurs et téléviseurs. L’image est rognée selon l’appareil. Pour éviter que le nom de votre chaîne, votre slogan ou votre visage ne soient coupés, placez tous les éléments essentiels dans la zone centrale sécurisée de 1235 × 338 pixels.",
+                "keyTakeaway": "Concentrez tous les textes, logos et éléments graphiques majeurs dans le rectangle central de 1235 × 338 pixels."
+            },
+            {
+                "heading": "3. Taille maximale de fichier et formats compatibles",
+                "body": "YouTube impose un plafond strict de 6 Mo pour les bannières. Les formats acceptés sont le JPG, le PNG, le BMP et le GIF non animé. Pour les photographies, un JPEG optimisé offre le meilleur compromis poids/qualité. Pour les graphismes épurés et typographies, préférez le PNG.",
+                "keyTakeaway": "Maintenez vos fichiers sous la barre des 6 Mo en format JPG ou PNG pour un enregistrement sans erreur."
+            },
+            {
+                "heading": "4. Formatez votre bannière avec l’outil de redimensionnement Creovly",
+                "body": "Testez le cadrage de votre bannière grâce au Redimensionneur de Miniatures YouTube de Creovly. Le préréglage bannière 2560 × 1440 intègre une grille visuelle affichant la zone sécurisée 1235 × 338 pour valider votre mise en page avant publication.",
+                "keyTakeaway": "Utilisez le préréglage 2560 × 1440 pour prévisualiser les bordures de rognage mobile et bureau."
+            }
+        ],
+        "workedExample": {
+            "title": "Centrage de la bannière pour éviter la troncature sur smartphone",
+            "scenario": "Un créateur conçoit une bannière 2560×1440. Sur mobile, son logo et son calendrier de publication sont coupés car ils ont été positionnés trop près des bords extérieurs.",
+            "steps": [
+                "Identifier la fenêtre mobile : L’application mobile YouTube n’affiche que la bande centrale de 1235 × 338 pixels.",
+                "Recentrer les éléments clés : Déplacer le logo et les textes dans la zone centrale de 1235 × 338.",
+                "Conserver un arrière-plan complet : Étendre les textures et visuels sur la totalité des 2560 × 1440 pour l’affichage TV.",
+                "Compresser sous 6 Mo : Exporter l’image en JPEG optimisé à moins de 6 Mo avec les outils Creovly."
+            ],
+            "conclusion": "La bannière présente des textes parfaitement lisibles sur smartphone tout en s’adaptant magnifiquement aux écrans de PC et téléviseurs."
+        },
+        "checklist": [
+            {
+                "title": "Résolution du canevas maître",
+                "detail": "2560 × 1440 pixels (minimum 2048 × 1152 pixels)."
+            },
+            {
+                "title": "Zone sécurisée centrale",
+                "detail": "Textes et logos strictement contenus dans les 1235 × 338 pixels centraux."
+            },
+            {
+                "title": "Poids du fichier sous 6 Mo",
+                "detail": "Exportez en JPG ou PNG en vérifiant la taille du fichier."
+            },
+            {
+                "title": "Validation multi-appareils",
+                "detail": "Vérifiez le rendu final sur l’application mobile et le site web YouTube."
+            }
+        ],
+        "faqs": [
+            {
+                "question": "Quelle est la taille recommandée pour une bannière YouTube ?",
+                "answer": "La dimension officielle recommandée est de 2560 × 1440 pixels avec un ratio 16:9 et un minimum de 2048 × 1152 pixels."
+            },
+            {
+                "question": "Qu’est-ce que la zone sécurisée d’une bannière YouTube ?",
+                "answer": "La zone sécurisée est le rectangle central de 1235 × 338 pixels centré verticalement et horizontalement. Tout élément situé dans cette zone reste visible sur tous les écrans (mobiles, tablettes, ordinateurs, téléviseurs)."
+            },
+            {
+                "question": "Quel est le poids maximal autorisé pour une bannière YouTube ?",
+                "answer": "Le fichier ne doit pas dépasser 6 Mo et doit être au format JPG, PNG, BMP ou GIF non animé."
+            }
+        ]
+    },
+    'youtube-monetization-requirements': {
+        "title": "Conditions de Monétisation YouTube Expliquées",
+        "seoTitle": "Conditions de Monétisation YouTube Expliquées",
+        "category": "Monétisation",
+        "readTime": "7 min de lecture",
+        "description": "Synthèse claire des critères d’éligibilité à la monétisation YouTube : paliers 500 et 1 000 abonnés, 4 000 heures de visionnage, 10M de vues Shorts et règles YPP.",
+        "officialSources": [
+            {
+                "label": "Aide YouTube : Présentation et critères d’éligibilité au Programme Partenaire YouTube",
+                "description": "Critères officiels pour rejoindre le Programme Partenaire YouTube (YPP), seuils d’abonnés et d’heures, et politiques de monétisation."
+            },
+            {
+                "label": "Aide YouTube : Monétiser des contenus YouTube Shorts",
+                "description": "Règles officielles sur le partage des revenus publicitaires issus du flux Shorts."
+            }
+        ],
+        "contentSections": [
+            {
+                "heading": "1. Les deux paliers du Programme Partenaire YouTube (YPP)",
+                "body": "YouTube propose deux paliers d’accès à la monétisation. Le premier palier (financement par les fans) débloque les Super Thanks, Super Chat, souscriptions et YouTube Shopping. Il exige : 500 abonnés, 3 vidéos publiques récentes et 3 000 heures de visionnage sur 12 mois ou 3 millions de vues Shorts sur 90 jours. Le second palier (partage complet des recettes publicitaires) débloque les annonces sur vidéos longues et Shorts. Il requiert : 1 000 abonnés et 4 000 heures de visionnage sur 12 mois ou 10 millions de vues Shorts sur 90 jours.",
+                "keyTakeaway": "Débloquez les dons dès 500 abonnés et 3 000 heures ; le partage publicitaire complet s’active à 1 000 abonnés et 4 000 heures."
+            },
+            {
+                "heading": "2. Heures de visionnage publiques valides vs temps non comptabilisé",
+                "body": "Seules les heures de visionnage publiques sur des vidéos longues sont comptabilisées pour les 4 000 heures. Le temps passé sur le flux vertical Shorts ne compte PAS pour les 4 000 heures (les Shorts disposent de leur propre critère de 10 millions de vues). Les vidéos privées, non répertoriées ou issues de campagnes Google Ads sont exclues.",
+                "keyTakeaway": "Les heures doivent provenir de vidéos longues publiques vues de manière organique au cours des 365 derniers jours."
+            },
+            {
+                "heading": "3. Sécurité du compte et respect des règles communautaires",
+                "body": "Au-delà des seuils chiffrés, vous devez activer la validation en deux étapes sur votre compte Google, associer un compte Google AdSense actif et ne faire l’objet d’aucun avertissement pour non-respect des règles de la communauté.",
+                "keyTakeaway": "Sécurisez votre compte en 2 étapes, reliez AdSense et maintenez un canal exempt de sanctions."
+            },
+            {
+                "heading": "4. Suivre votre progression avec les calculateurs Creovly",
+                "body": "Modélisez votre trajectoire vers les 4 000 heures grâce à notre Calculateur d’Heures de Visionnage YouTube en fonction de votre rétention moyenne. Évaluez vos futurs gains avec le Calculateur de Monétisation YouTube.",
+                "keyTakeaway": "Utilisez des simulateurs dédiés pour planifier votre cadence de publication plutôt que des estimations vagues."
+            }
+        ],
+        "workedExample": {
+            "title": "Planifier la trajectoire vers le palier des 4 000 heures",
+            "scenario": "Un créateur compte 850 abonnés et 2 400 heures publiques. Il souhaite calculer le volume de vues nécessaire pour boucler les 1 600 heures restantes avant l’expiration de ses heures les plus anciennes sur la fenêtre mobile de 12 mois.",
+            "steps": [
+                "Calculer les heures restantes : 4 000 objectif − 2 400 actuelles = 1 600 heures.",
+                "Convertir en vues requises : Avec une durée moyenne de 4 minutes (0,067 h/vue), 1 600 ÷ 0,067 = 24 000 vues requises.",
+                "Planifier la publication : Publier 2 vidéos par semaine à 2 000 vues en moyenne génère 16 000 vues (env. 1 067 heures) par mois.",
+                "Vérifier les prérequis : Confirmer la double validation Google et l’absence d’avertissements."
+            ],
+            "conclusion": "À ce rythme, le créateur atteindra le palier des 4 000 heures en environ 6 à 7 semaines."
+        },
+        "checklist": [
+            {
+                "title": "Seuil d’abonnés",
+                "detail": "500 abonnés (dons des fans) ou 1 000 abonnés (revenus publicitaires)."
+            },
+            {
+                "title": "Heures ou vues Shorts",
+                "detail": "4 000 heures publiques sur 12 mois ou 10 millions de vues Shorts sur 90 jours."
+            },
+            {
+                "title": "Validation en 2 étapes",
+                "detail": "Activer la validation en deux étapes sur votre compte Google."
+            },
+            {
+                "title": "Compte Google AdSense lié",
+                "detail": "Associer un compte AdSense valide pour la perception des revenus."
+            },
+            {
+                "title": "Zéro avertissement actif",
+                "detail": "Vérifier la parfaite conformité aux Règles de la Communauté."
+            }
+        ],
+        "faqs": [
+            {
+                "question": "Quelles sont les conditions pour monétiser une chaîne YouTube ?",
+                "answer": "Pour la monétisation publicitaire complète, vous devez réunir 1 000 abonnés et 4 000 heures de visionnage publiques sur 12 mois (ou 10 millions de vues Shorts sur 90 jours). Un palier intermédiaire pour les dons existe dès 500 abonnés et 3 000 heures."
+            },
+            {
+                "question": "Les heures passées sur les Shorts comptent-elles pour les 4 000 heures ?",
+                "answer": "Non, les heures de visionnage du flux Shorts ne sont pas comptabilisées dans le seuil des 4 000 heures. Les Shorts sont évalués uniquement sur le critère de 10 millions de vues en 90 jours."
+            },
+            {
+                "question": "Sur quelle période les 4 000 heures sont-elles calculées ?",
+                "answer": "Le calcul s’effectue sur une fenêtre glissante des 365 derniers jours consécutifs. Les heures accumulées il y a plus d’un an expirent au fil de l’eau."
+            }
+        ]
+    },
+    'how-to-change-youtube-thumbnail': {
+        "title": "Comment Changer une Miniature YouTube Pas à Pas",
+        "seoTitle": "Changer une Miniature YouTube (Tutoriel Pas à Pas)",
+        "category": "Image de marque",
+        "readTime": "5 min de lecture",
+        "description": "Tutoriel complet pour changer une miniature sur YouTube : depuis YouTube Studio sur ordinateur, l’application mobile, la validation par téléphone et le cas des Shorts.",
+        "officialSources": [
+            {
+                "label": "Aide YouTube : Ajouter ou modifier les miniatures d’une vidéo",
+                "description": "Guide officiel sur l’importation, la modification et la sélection de miniatures personnalisées sur PC et mobile."
+            }
+        ],
+        "contentSections": [
+            {
+                "heading": "1. Validation du compte par téléphone : débloquer les miniatures personnalisées",
+                "body": "Pour importer une miniature personnalisée, votre chaîne doit être validée par numéro de téléphone. Sans cela, YouTube vous limite aux 3 images extraites automatiquement de la vidéo. Pour débloquer cette fonction, rendez-vous dans YouTube Studio > Paramètres > Chaîne > Accès aux fonctionnalités et validez les Fonctionnalités intermédiaires par SMS.",
+                "keyTakeaway": "Validez votre numéro de téléphone dans YouTube Studio pour autoriser l’import de miniatures personnalisées."
+            },
+            {
+                "heading": "2. Changer une miniature sur ordinateur dans YouTube Studio",
+                "body": "Connectez-vous à YouTube Studio sur votre ordinateur. Cliquez sur \"Contenu\", sélectionnez la vidéo puis, dans la section \"Miniature\", survolez l’image actuelle, cliquez sur les 3 points verticaux et sélectionnez \"Modifier\". Choisissez votre fichier 1280 × 720 et cliquez sur \"Enregistrer\" en haut à droite.",
+                "keyTakeaway": "Dans YouTube Studio > Contenu > Détails, cliquez sur les 3 points de la miniature et choisissez \"Modifier\"."
+            },
+            {
+                "heading": "3. Changer une miniature sur l’application mobile YouTube Studio",
+                "body": "Ouvrez l’application YouTube Studio sur iOS ou Android. Allez dans \"Contenu\", sélectionnez la vidéo, appuyez sur l’icône Crayon (Modifier) en haut, puis à nouveau sur le crayon en haut à gauche de la miniature. Choisissez \"Modifier\", sélectionnez votre image dans votre galerie et validez.",
+                "keyTakeaway": "Appuyez sur l’icône Crayon dans l’application mobile YouTube Studio pour mettre à jour votre visuel à tout moment."
+            },
+            {
+                "heading": "4. Sélectionner ou modifier la miniature d’un YouTube Short",
+                "body": "Les Shorts fonctionnent différemment : il n’est pas possible d’importer une miniature personnalisée depuis un ordinateur pour un Short déjà publié. Vous devez obligatoirement choisir l’image clé lors de l’importation sur l’application mobile YouTube en appuyant sur le crayon sur la prévisualisation.",
+                "keyTakeaway": "Choisissez votre image de Short lors de l’importation mobile ; le remplacement après publication n’est pas supporté sur PC."
+            },
+            {
+                "heading": "5. Caractéristiques techniques : 1280×720 et moins de 2 Mo",
+                "body": "Pour un rendu parfait, formatez votre visuel en 1280 × 720 pixels (ratio 16:9) avec le Redimensionneur de Miniatures Creovly. Réduisez le poids sous 2 Mo avec le Compresseur de Miniatures Creovly pour éviter tout blocage sur mobile.",
+                "keyTakeaway": "Respectez le format 1280 × 720 et compressez le fichier sous 2 Mo avant importation."
+            }
+        ],
+        "workedExample": {
+            "title": "Remplacer une miniature peu performante pour dynamiser le CTR",
+            "scenario": "Une vidéo publiée depuis 48 heures enregistre un faible taux de clic de 2,1%. Le créateur réalise une nouvelle miniature plus contrastée avec un texte accrocheur et souhaite la remplacer sans perdre ses vues.",
+            "steps": [
+                "Exporter la nouvelle image : Format 1280 × 720 en JPEG.",
+                "Compresser sous 2 Mo : Utiliser le compresseur Creovly pour réduire le fichier à 510 Ko.",
+                "Accéder à YouTube Studio : Ouvrir les détails de la vidéo dans l’onglet Contenu.",
+                "Effectuer le remplacement : Cliquer sur le menu 3 points de la miniature, choisir \"Modifier\", importer le fichier et enregistrer.",
+                "Analyser les retombées : Suivre l’évolution du taux de clic dans Analytics au cours des 72 heures suivantes."
+            ],
+            "conclusion": "La nouvelle miniature s’affiche immédiatement sans impacter le nombre de vues ni les commentaires existants."
+        },
+        "checklist": [
+            {
+                "title": "Validation téléphonique effectuée",
+                "detail": "Valider le compte dans les fonctionnalités intermédiaires de Studio."
+            },
+            {
+                "title": "Résolution recommandée",
+                "detail": "1280 × 720 pixels avec ratio 16:9."
+            },
+            {
+                "title": "Poids du fichier sous 2 Mo",
+                "detail": "Assurer la compatibilité avec l’application Studio mobile."
+            },
+            {
+                "title": "Format de fichier JPG/PNG",
+                "detail": "Utiliser un profil sRGB pour des couleurs fidèles."
+            },
+            {
+                "title": "Confirmation d’enregistrement",
+                "detail": "Vérifier la bonne prise en compte sur la page publique de la vidéo."
+            }
+        ],
+        "faqs": [
+            {
+                "question": "Peut-on changer la miniature d’une vidéo YouTube après sa mise en ligne ?",
+                "answer": "Oui, à tout moment. Ouvrez YouTube Studio, accédez aux détails de la vidéo, cliquez sur les trois points de la miniature actuelle, sélectionnez Modifier, chargez le nouveau fichier et enregistrez."
+            },
+            {
+                "question": "Peut-on modifier la miniature d’un YouTube Short déjà publié ?",
+                "answer": "Non, les Shorts publiés ne permettent pas le remplacement de miniature depuis un PC. Vous devez sélectionner l’image lors de la mise en ligne initiale sur l’application mobile."
+            },
+            {
+                "question": "Pourquoi l’importation de miniatures personnalisées m’est-elle refusée ?",
+                "answer": "L’importation nécessite d’avoir validé son compte par téléphone dans les fonctionnalités intermédiaires de YouTube Studio. Les comptes non vérifiés ne peuvent choisir que des images extraites automatiquement."
+            }
+        ]
+    },
+
   },
 
   de: {
@@ -1784,6 +2543,259 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         },
       ],
     },
+    'youtube-banner-size': {
+        "title": "YouTube-Banner-Größe: Maße, Safe-Zone & Vorlage",
+        "seoTitle": "YouTube-Banner-Größe: Maße & Safe-Zone",
+        "category": "Kanal-Branding",
+        "readTime": "5 Min. Lesezeit",
+        "description": "Geprüfter Leitfaden zur YouTube-Banner-Größe: 2560×1440 Auflösung, 1235×338 zentrale Safe-Zone für Smartphone und PC, 6 MB Limit und Vorlagen.",
+        "officialSources": [
+            {
+                "label": "YouTube-Hilfe: Branding für deinen Kanal verwalten",
+                "description": "Offizielle Vorgaben für Bannerabmessungen, Safe-Zone für Text und Logos, unterstützte Dateiformate und Upload-Limits."
+            }
+        ],
+        "contentSections": [
+            {
+                "heading": "1. Empfohlene YouTube-Bannergröße: 2560×1440 Pixel",
+                "body": "Laut den offiziellen YouTube-Vorgaben beträgt die ideale Bannergröße 2560 × 1440 Pixel im 16:9-Format. Das Mindestmaß für den Upload liegt bei 2048 × 1152 Pixeln. Ein Upload in voller 2560 × 1440 Auflösung garantiert gestochen scharfe Darstellung auf hochauflösenden Bildschirmen und 4K-Fernsehern.",
+                "keyTakeaway": "Erstellen Sie Ihr Banner mit 2560 × 1440 Pixeln (16:9) und mindestens 2048 × 1152 Pixeln."
+            },
+            {
+                "heading": "2. Zentrale Safe-Zone für Text und Logos: 1235×338",
+                "body": "Da YouTube-Banner auf Mobilgeräten, Tablets, Desktop-PCs und Fernsehern angezeigt werden, variiert der sichtbare Bildausschnitt. Platzieren Sie Kanalnamen, Slogans und Logos unbedingt im zentralen Bereich von 1235 × 338 Pixeln, damit sie auf Smartphones nicht abgeschnitten werden.",
+                "keyTakeaway": "Alle wichtigen Texte und Grafikelemente gehören in die zentrale 1235 × 338 Safe-Zone."
+            },
+            {
+                "heading": "3. Maximale Dateigröße und unterstützte Bildformate",
+                "body": "YouTube beschränkt die Dateigröße von Kanalbannern auf maximal 6 MB. Unterstützt werden JPG, PNG, BMP und nicht-animierte GIFs. Für Fotobanner empfiehlt sich optimiertes JPG, für Logos und Grafiken PNG.",
+                "keyTakeaway": "Dateien dürfen höchstens 6 MB groß sein und sollten als JPG oder PNG gespeichert werden."
+            },
+            {
+                "heading": "4. Banner formatieren mit dem Creovly Resizer",
+                "body": "Testen Sie Ihren Bildausschnitt mit dem YouTube Thumbnail Resizer von Creovly. Die 2560 × 1440 Banner-Vorlage blendet die 1235 × 338 Safe-Zone direkt ein, damit Sie den mobilen Beschnitt vor dem Upload prüfen können.",
+                "keyTakeaway": "Nutzen Sie die 2560 × 1440 Vorlage, um Zuschnitte für Mobil- und Desktopgeräte zu visualisieren."
+            }
+        ],
+        "workedExample": {
+            "title": "Kanalbanner zentrieren, um mobile Zuschnitte zu verhindern",
+            "scenario": "Ein Creator erstellt ein Banner mit 2560×1440. Auf Smartphones werden Logo und Upload-Tage abgeschnitten, weil sie zu nah am Rand platziert wurden.",
+            "steps": [
+                "Mobilen Anzeigebereich ermitteln: Die YouTube-App zeigt nur den mittleren Streifen von 1235 × 338 Pixeln.",
+                "Texte und Logos zentrieren: Alle wichtigen Markenelemente in den 1235 × 338 Bereich verschieben.",
+                "Hintergrund vollflächig anlegen: Farben und Texturen über die gesamten 2560 × 1440 Pixel spannen.",
+                "Unter 6 MB komprimieren: Mit Creovly-Tools als optimiertes JPG exportieren."
+            ],
+            "conclusion": "Das Banner ist auf Smartphones perfekt lesbar und entfaltet auf Fernsehern seine volle visuelle Wirkung."
+        },
+        "checklist": [
+            {
+                "title": "Master-Auflösung",
+                "detail": "2560 × 1440 Pixel (Mindestmaß 2048 × 1152)."
+            },
+            {
+                "title": "Zentrale Safe-Zone",
+                "detail": "Alle Texte und Logos strikt innerhalb von 1235 × 338 Pixeln halten."
+            },
+            {
+                "title": "Dateigrößenlimit 6 MB",
+                "detail": "Dateigröße unter 6 MB im JPG- oder PNG-Format sicherstellen."
+            },
+            {
+                "title": "Geräteübergreifende Prüfung",
+                "detail": "Nach dem Upload auf Smartphone und Desktop-PC kontrollieren."
+            }
+        ],
+        "faqs": [
+            {
+                "question": "Welche Bannergröße empfiehlt YouTube?",
+                "answer": "Die offizielle Empfehlung lautet 2560 × 1440 Pixel im 16:9-Seitenverhältnis mit einem Mindestmaß von 2048 × 1152 Pixeln."
+            },
+            {
+                "question": "Was ist die YouTube-Banner-Safe-Zone?",
+                "answer": "Die Safe-Zone ist der zentrale Bereich von 1235 × 338 Pixeln. Inhalte in diesem Bereich sind auf Smartphones, Tablets, Computern und Fernsehern garantiert sichtbar."
+            },
+            {
+                "question": "Wie groß darf die Bannerdatei maximal sein?",
+                "answer": "Die Datei darf höchstens 6 MB groß sein und muss im Format JPG, PNG, BMP oder statisches GIF vorliegen."
+            }
+        ]
+    },
+    'youtube-monetization-requirements': {
+        "title": "YouTube-Monetarisierungsvoraussetzungen im Detail",
+        "seoTitle": "YouTube-Monetarisierungsvoraussetzungen im Detail",
+        "category": "Monetarisierung",
+        "readTime": "7 Min. Lesezeit",
+        "description": "Übersicht der YouTube-Monetarisierungsbedingungen: 500 & 1.000 Abonnenten, 4.000 Wiedergabestunden, 10 Mio. Shorts-Aufrufe und YPP-Richtlinien.",
+        "officialSources": [
+            {
+                "label": "YouTube-Hilfe: Übersicht und Teilnahmevoraussetzungen für das YouTube-Partnerprogramm",
+                "description": "Offizielle Kriterien für den Beitritt zum YPP, Abonnenten- und Stundenmeilensteine sowie Monetarisierungsrichtlinien."
+            },
+            {
+                "label": "YouTube-Hilfe: Mit YouTube Shorts Geld verdienen",
+                "description": "Offizielle Richtlinien zur Beteiligung an den Werbeeinnahmen aus dem Shorts-Feed."
+            }
+        ],
+        "contentSections": [
+            {
+                "heading": "1. Die zwei Stufen des YouTube-Partnerprogramms (YPP)",
+                "body": "YouTube unterscheidet zwei Stufen: Die Einstiegsstufe (Fan-Finanzierung) schaltet Super Thanks, Super Chat, Kanalmitgliedschaften und Shopping frei. Bedingungen: 500 Abonnenten, 3 öffentliche Uploads in 90 Tagen und entweder 3.000 Wiedergabestunden in 12 Monaten oder 3 Mio. Shorts-Aufrufe in 90 Tagen. Die Vollstufe schaltet Werbung auf langen Videos und Shorts frei: 1.000 Abonnenten und entweder 4.000 Wiedergabestunden in 12 Monaten oder 10 Mio. Shorts-Aufrufe in 90 Tagen.",
+                "keyTakeaway": "Fan-Finanzierung startet bei 500 Abonnenten und 3.000 Stunden; volle Werbeeinnahmen erfordern 1.000 Abonnenten und 4.000 Stunden."
+            },
+            {
+                "heading": "2. Gültige Wiedergabestunden vs. nicht anrechenbare Zeit",
+                "body": "Nur Wiedergabestunden von öffentlichen, langen Videos zählen für die 4.000 Stunden. Watchtime aus dem Shorts-Feed zählt NICHT zu den 4.000 Stunden (hierfür gilt die separate 10-Mio.-Shorts-Aufrufe-Schwelle). Private, ungelistete oder gelöschte Videos sowie Google-Ads-Kampagnen werden nicht gewertet.",
+                "keyTakeaway": "Stunden müssen aus regulären, öffentlichen Videos innerhalb eines fortlaufenden 365-Tage-Zeitraums stammen."
+            },
+            {
+                "heading": "3. Kontosicherheit und Richtlinienkonformität",
+                "body": "Neben Abonnenten und Watchtime sind die Bestätigung in zwei Schritten für Ihr Google-Konto, ein verknüpftes Google AdSense-Konto und null aktive Verwarnungen wegen Verstoßes gegen die Community-Richtlinien erforderlich.",
+                "keyTakeaway": "Aktivieren Sie die 2-Faktor-Authentifizierung, verknüpfen Sie AdSense und halten Sie den Kanal frei von Richtlinienverwarnungen."
+            },
+            {
+                "heading": "4. Fortschritt verfolgen mit Creovly-Rechnern",
+                "body": "Berechnen Sie Ihre verbleibende Zeit bis zu 4.000 Stunden mit unserem YouTube Watch Hours Rechner. Nutzen Sie den YouTube Monetization Rechner, um Gesamteinnahmen aus Werbung und Mitgliedschaften zu prognostizieren.",
+                "keyTakeaway": "Modellieren Sie die benötigte Upload- und Aufrufgeschwindigkeit gezielt mit passenden Kalkulatoren."
+            }
+        ],
+        "workedExample": {
+            "title": "Meilenstein-Planung für 4.000 Wiedergabestunden",
+            "scenario": "Ein Creator hat 850 Abonnenten und 2.400 Stunden gesammelt und möchte die fehlenden 1.600 Stunden erreichen, bevor frühere Stunden aus dem 12-Monats-Fenster verfallen.",
+            "steps": [
+                "Fehlende Stunden berechnen: 4.000 Ziel − 2.400 = 1.600 Stunden benötigt.",
+                "Benötigte Aufrufe kalkulieren: Bei 4 Min. durchschnittlicher Wiedergabedauer (0,067 Std./View) werden 1.600 ÷ 0,067 = 24.000 Aufrufe gebraucht.",
+                "Upload-Rhythmus festlegen: 2 Videos pro Woche mit je 2.000 Aufrufen ergeben 16.000 Aufrufe (ca. 1.067 Std.) pro Monat.",
+                "Kontovoraussetzungen prüfen: 2-Faktor-Authentifizierung aktiv und 0 Verwarnungen in YouTube Studio."
+            ],
+            "conclusion": "In ca. 6 bis 7 Wochen wird die Schwelle von 4.000 Stunden erreicht und die Vollmonetarisierung freigeschaltet."
+        },
+        "checklist": [
+            {
+                "title": "Abonnentenschwelle",
+                "detail": "500 Abonnenten (Fan-Support) oder 1.000 Abonnenten (Werbeeinnahmen)."
+            },
+            {
+                "title": "Wiedergabestunden oder Shorts-Views",
+                "detail": "4.000 Stunden in 12 Monaten oder 10 Mio. Shorts-Aufrufe in 90 Tagen."
+            },
+            {
+                "title": "Bestätigung in 2 Schritten",
+                "detail": "Sicherheitsprüfung im Google-Konto aktivieren."
+            },
+            {
+                "title": "Verknüpftes AdSense-Konto",
+                "detail": "Aktives Google AdSense-Konto für Auszahlungen hinterlegen."
+            },
+            {
+                "title": "Keine Verwarnungen",
+                "detail": "Null aktive Strikes gegen die Community-Richtlinien."
+            }
+        ],
+        "faqs": [
+            {
+                "question": "Was sind die Voraussetzungen für die YouTube-Monetarisierung?",
+                "answer": "Für reguläre Werbeeinnahmen benötigen Sie 1.000 Abonnenten und 4.000 gültige öffentliche Wiedergabestunden in 12 Monaten (oder 10 Mio. Shorts-Aufrufe in 90 Tagen). Für Fan-Finanzierung reichen 500 Abonnenten und 3.000 Stunden."
+            },
+            {
+                "question": "Zählen YouTube Shorts zu den 4.000 Wiedergabestunden?",
+                "answer": "Nein, Wiedergabezeit aus dem Shorts-Feed zählt nicht zu den 4.000 Stunden. Shorts qualifizieren sich ausschließlich über die Schwelle von 10 Millionen Aufrufen in 90 Tagen."
+            },
+            {
+                "question": "In welchem Zeitraum müssen die 4.000 Stunden gesammelt werden?",
+                "answer": "Es gilt ein fortlaufender Zeitraum von 365 Tagen. Stunden, die älter als ein Jahr sind, verfallen kontinuierlich aus der Zählung."
+            }
+        ]
+    },
+    'how-to-change-youtube-thumbnail': {
+        "title": "YouTube-Thumbnail ändern: Schritt-für-Schritt-Anleitung",
+        "seoTitle": "YouTube-Thumbnail ändern (Schritt für Schritt)",
+        "category": "Kanal-Branding",
+        "readTime": "5 Min. Lesezeit",
+        "description": "Schritt-für-Schritt-Tutorial zum Ändern von YouTube-Thumbnails: PC-Studio, mobile App, Telefonverifizierung und Shorts-Besonderheiten.",
+        "officialSources": [
+            {
+                "label": "YouTube-Hilfe: Video-Thumbnails hinzufügen oder ändern",
+                "description": "Offizielle Anleitung zum Hochladen, Ändern und Auswählen benutzerdefinierter Thumbnails auf Desktop und Mobilgeräten."
+            }
+        ],
+        "contentSections": [
+            {
+                "heading": "1. Telefonverifizierung: Benutzerdefinierte Thumbnails freischalten",
+                "body": "Um eigene Thumbnails hochzuladen, muss Ihr Kanal per Telefonnummer bestätigt sein. Andernfalls können Sie nur aus drei automatisch generierten Standbildern wählen. Öffnen Sie in YouTube Studio die Einstellungen > Kanal > Verfügbarkeit der Funktionen und bestätigen Sie Ihre Telefonnummer bei den Standardfunktionen.",
+                "keyTakeaway": "Aktivieren Sie die Telefonverifizierung in YouTube Studio, um individuelle Thumbnails hochladen zu können."
+            },
+            {
+                "heading": "2. Thumbnail am PC in YouTube Studio ändern",
+                "body": "Melden Sie sich am Computer in YouTube Studio an. Klicken Sie links auf \"Inhalte\" und wählen Sie das Video aus. Fahren Sie im Bereich \"Thumbnail\" mit der Maus über das aktuelle Bild, klicken Sie auf das Drei-Punkte-Menü und wählen Sie \"Ändern\". Wählen Sie Ihr neues 1280 × 720 Bild aus und klicken Sie oben rechts auf \"Speichern\".",
+                "keyTakeaway": "Klicken Sie unter Inhalte > Videodetails auf die drei Punkte am Thumbnail und wählen Sie \"Ändern\"."
+            },
+            {
+                "heading": "3. Thumbnail in der mobilen YouTube Studio App ändern",
+                "body": "Öffnen Sie die YouTube Studio App auf iOS oder Android. Tippen Sie auf \"Inhalte\", wählen Sie das Video und tippen Sie oben auf das Stiftsymbol. Tippen Sie auf das Stiftsymbol in der Thumbnail-Vorschau, wählen Sie \"Ändern\", suchen Sie das neue Bild aus Ihrer Galerie aus und tippen Sie auf \"Speichern\". Beachten Sie das mobile 2 MB Dateilimit.",
+                "keyTakeaway": "Nutzen Sie das Stiftsymbol in der YouTube Studio App, um Thumbnails unterwegs anzupassen."
+            },
+            {
+                "heading": "4. YouTube Shorts Thumbnails festlegen oder ändern",
+                "body": "Für YouTube Shorts gelten andere Regeln: Eigene Thumbnails können für bereits veröffentlichte Shorts am PC nicht hochgeladen werden. Das Titelbild muss beim Hochladen in der mobilen YouTube-App über das Stiftsymbol auf der Videovorschau als Frame ausgewählt werden.",
+                "keyTakeaway": "Wählen Sie das Shorts-Vorschaubild beim Upload in der App; am PC ist ein nachträglicher Tausch derzeit nicht möglich."
+            },
+            {
+                "heading": "5. Technische Vorbereitung: 1280×720 und unter 2 MB komprimieren",
+                "body": "Bringen Sie Ihr Bild mit dem Creovly YouTube Thumbnail Resizer auf 1280 × 720 Pixel (16:9). Komprimieren Sie die Datei mit dem Creovly Thumbnail Compressor auf unter 2 MB, um Fehler beim mobilen Upload zu vermeiden.",
+                "keyTakeaway": "Auf 1280 × 720 formatieren und auf unter 2 MB komprimieren, um Upload-Fehler zu vermeiden."
+            }
+        ],
+        "workedExample": {
+            "title": "Ersetzen eines schwachen Thumbnails zur Steigerung der Klickrate",
+            "scenario": "Ein vor 48 Stunden veröffentlichtes Video hat eine niedrige Klickrate von 2,1%. Der Creator erstellt ein kontrastreicheres Thumbnail und tauscht es aus, ohne Aufrufe oder Kommentare zu verlieren.",
+            "steps": [
+                "Neues Thumbnail vorbereiten: 1280 × 720 Pixel im JPG-Format exportieren.",
+                "Unter 2 MB komprimieren: Mit dem Creovly-Kompressor auf 510 KB reduzieren.",
+                "YouTube Studio öffnen: In den Inhalten die Videodetails aufrufen.",
+                "Austausch durchführen: Drei-Punkte-Menü am Thumbnail anklicken, \"Ändern\" wählen, Datei hochladen und speichern.",
+                "Klickrate überwachen: Den Verlauf der Impressionen-Klickrate in den Studio Analytics der nächsten 72 Stunden prüfen."
+            ],
+            "conclusion": "Das neue Thumbnail wird sofort in Suche und Empfehlungen ausgespielt, ohne dass Statistiken zurückgesetzt werden."
+        },
+        "checklist": [
+            {
+                "title": "Telefonbestätigung erfolgt",
+                "detail": "Prüfen, ob der Kanal für benutzerdefinierte Thumbnails freigeschaltet ist."
+            },
+            {
+                "title": "Empfohlene Auflösung",
+                "detail": "1280 × 720 Pixel im Seitenverhältnis 16:9."
+            },
+            {
+                "title": "Dateigröße unter 2 MB",
+                "detail": "Kompatibilität mit mobilen Uploads sicherstellen."
+            },
+            {
+                "title": "Format JPG oder PNG",
+                "detail": "sRGB-Farbprofil für einheitliche Farbdarstellung verwenden."
+            },
+            {
+                "title": "Erfolgreich gespeichert",
+                "detail": "Speichern und die Anzeige auf der öffentlichen Videoseite kontrollieren."
+            }
+        ],
+        "faqs": [
+            {
+                "question": "Kann man ein YouTube-Thumbnail nach dem Upload noch ändern?",
+                "answer": "Ja, jederzeit. Gehen Sie in YouTube Studio auf die Videodetails, klicken Sie am Thumbnail auf das Drei-Punkte-Menü, wählen Sie \"Ändern\", laden Sie das neue Bild hoch und speichern Sie ab."
+            },
+            {
+                "question": "Kann man das Thumbnail eines veröffentlichten Shorts nachträglich ändern?",
+                "answer": "Nein, für bereits veröffentlichte Shorts ist ein Austausch am PC derzeit nicht möglich. Das Vorschaubild muss beim Hochladen in der Smartphone-App festgelegt werden."
+            },
+            {
+                "question": "Warum kann ich keine benutzerdefinierten Thumbnails hochladen?",
+                "answer": "Dafür muss die Telefonnummernbestätigung in den YouTube Studio Kanaleinstellungen abgeschlossen sein. Unbestätigte Kanäle können nur automatische Standbilder auswählen."
+            }
+        ]
+    },
+
   },
 
   pt: {
@@ -2079,6 +3091,259 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         },
       ],
     },
+    'youtube-banner-size': {
+        "title": "Tamanho do Banner do YouTube: Dimensões, Área Segura e Molde",
+        "seoTitle": "Tamanho do Banner do YouTube: Dimensões & Área Segura",
+        "category": "Identidade do canal",
+        "readTime": "5 min de leitura",
+        "description": "Guia verificado de tamanho de banner do YouTube: resolução 2560×1440, área segura central de 1235×338 para celular e PC, limite de 6 MB e modelos.",
+        "officialSources": [
+            {
+                "label": "Ajuda do YouTube: Gerenciar o branding do canal",
+                "description": "Especificações oficiais sobre dimensões da imagem do banner, área segura mínima para textos e logotipos, formatos aceitos e limites de envio."
+            }
+        ],
+        "contentSections": [
+            {
+                "heading": "1. Tamanho e dimensões recomendadas para o banner: 2560×1440",
+                "body": "Conforme as diretrizes oficiais do YouTube, o tamanho padrão da capa do canal é 2560 × 1440 pixels na proporção 16:9. A dimensão mínima aceita é 2048 × 1152 pixels. Usar a resolução completa de 2560 × 1440 garante nitidez máxima em monitores de alta resolução e televisores 4K.",
+                "keyTakeaway": "Crie sua arte em 2560 × 1440 (16:9) com pelo menos 2048 × 1152 pixels para upload."
+            },
+            {
+                "heading": "2. Área segura central para textos e logotipos: 1235×338",
+                "body": "Como os banners do YouTube são visualizados em celulares, tablets, computadores e televisões, o corte varia conforme o aparelho. Para que nome do canal, slogans, links ou fotos não sejam cortados, mantenha todo o conteúdo fundamental dentro da área segura central de 1235 × 338 pixels.",
+                "keyTakeaway": "Concentre tipografia, logotipos e elementos cruciais na área segura de 1235 × 338 pixels."
+            },
+            {
+                "heading": "3. Limite de tamanho de arquivo e formatos aceitos",
+                "body": "O YouTube impõe um limite máximo de 6 MB por banner. Os formatos permitidos são JPG, PNG, BMP e GIF não animado. Para fotos, JPEG otimizado oferece o melhor equilíbrio de peso e qualidade. Para ilustrações e textos, utilize PNG.",
+                "keyTakeaway": "Mantenha os arquivos com até 6 MB nos formatos JPG ou PNG para evitar erros no envio."
+            },
+            {
+                "heading": "4. Ajuste seu banner com o redimensionador Creovly",
+                "body": "Você pode testar e ajustar sua capa com o Redimensionador de Miniaturas do YouTube da Creovly. O modelo 2560 × 1440 inclui uma grade interativa mostrando a área segura central de 1235 × 338 para pré-visualizar antes de publicar.",
+                "keyTakeaway": "Use o modelo 2560 × 1440 para verificar o corte no celular e no computador."
+            }
+        ],
+        "workedExample": {
+            "title": "Centralização de arte para evitar corte em celulares",
+            "scenario": "Um criador fez um banner 2560×1440, mas no celular o logotipo e os dias de novos vídeos foram cortados por estarem fora da área segura.",
+            "steps": [
+                "Verificar área do celular: O app do YouTube exibe apenas a faixa central de 1235 × 338 pixels.",
+                "Mover textos e marcas: Reposicionar logotipo e textos essenciais para dentro do limite de 1235 × 338.",
+                "Estender fundo da arte: Preencher toda a tela de 2560 × 1440 com texturas para exibição em TVs.",
+                "Comprimir para menos de 6 MB: Exportar o arquivo final em JPG com menos de 6 MB usando Creovly."
+            ],
+            "conclusion": "O banner agora mantém textos nítidos em celulares e expande perfeitamente em telas de computadores e TVs."
+        },
+        "checklist": [
+            {
+                "title": "Tamanho mestre do arquivo",
+                "detail": "2560 × 1440 pixels (mínimo de 2048 × 1152)."
+            },
+            {
+                "title": "Área segura central",
+                "detail": "Textos e logotipos restritos a 1235 × 338 pixels centrais."
+            },
+            {
+                "title": "Teto de 6 MB",
+                "detail": "Certifique-se de que a imagem final tem 6 MB ou menos em JPG/PNG."
+            },
+            {
+                "title": "Revisão em múltiplos aparelhos",
+                "detail": "Teste a visualização no app móvel e no navegador do computador."
+            }
+        ],
+        "faqs": [
+            {
+                "question": "Qual o tamanho recomendado para o banner do YouTube?",
+                "answer": "O tamanho oficial recomendado é 2560 × 1440 pixels na proporção 16:9, com dimensões mínimas de 2048 × 1152 pixels."
+            },
+            {
+                "question": "O que é a área segura do banner do YouTube?",
+                "answer": "A área segura é o retângulo central de 1235 × 338 pixels. Qualquer conteúdo dentro desse espaço será exibido em celulares, tablets, computadores e televisores."
+            },
+            {
+                "question": "Qual é o tamanho máximo do arquivo de banner?",
+                "answer": "O tamanho máximo é 6 MB, nos formatos JPG, PNG, BMP ou GIF estático."
+            }
+        ]
+    },
+    'youtube-monetization-requirements': {
+        "title": "Requisitos de Monetização do YouTube Explicados",
+        "seoTitle": "Requisitos de Monetização do YouTube Explicados",
+        "category": "Monetização",
+        "readTime": "7 min de leitura",
+        "description": "Entenda os requisitos de monetização do YouTube: níveis de 500 e 1.000 inscritos, 4.000 horas de exibição, 10M de visualizações nos Shorts e regras do YPP.",
+        "officialSources": [
+            {
+                "label": "Ajuda do YouTube: Visão geral e qualificação para o Programa de Parcerias do YouTube",
+                "description": "Critérios oficiais para entrar no YPP, metas de inscritos e horas de exibição, e políticas de monetização."
+            },
+            {
+                "label": "Ajuda do YouTube: Monetizar nos YouTube Shorts",
+                "description": "Regras oficiais para divisão de receita publicitária nos vídeos verticais do feed de Shorts."
+            }
+        ],
+        "contentSections": [
+            {
+                "heading": "1. Os dois níveis do Programa de Parcerias do YouTube (YPP)",
+                "body": "O YouTube oferece dois níveis de qualificação. O nível inicial (financiamento por fãs) desbloqueia Valeu Demais, Super Chat, Clubes dos canais e YouTube Shopping. Exige: 500 inscritos, 3 envios públicos nos últimos 90 dias e 3.000 horas públicas em 12 meses ou 3 milhões de views nos Shorts em 90 dias. O nível completo desbloqueia anúncios nos vídeos longos e Shorts. Exige: 1.000 inscritos e 4.000 horas públicas em 12 meses ou 10 milhões de views nos Shorts em 90 dias.",
+                "keyTakeaway": "Você pode começar com apoio de fãs com 500 inscritos e 3.000 horas; a receita de anúncios completa exige 1.000 inscritos e 4.000 horas."
+            },
+            {
+                "heading": "2. Horas públicas válidas vs tempo não contabilizado",
+                "body": "Apenas horas públicas de vídeos longos contam para as 4.000 horas. O tempo assistido no feed de Shorts NÃO conta para a meta de 4.000 horas (Shorts se qualificam pela meta separada de 10M de views). Vídeos privados, não listados ou campanhas do Google Ads também não contam.",
+                "keyTakeaway": "As horas devem vir de vídeos longos públicos assistidos de forma orgânica em uma janela móvel de 365 dias."
+            },
+            {
+                "heading": "3. Segurança da conta e conformidade com as diretrizes",
+                "body": "Além de inscritos e horas, é obrigatório ativar a Verificação em duas etapas na conta Google, vincular uma conta do Google AdSense ativa e ter zero avisos ativos de Diretrizes da Comunidade.",
+                "keyTakeaway": "Proteja seu canal com 2 etapas, vincule o AdSense e mantenha o canal sem penalidades ativas."
+            },
+            {
+                "heading": "4. Acompanhe seu progresso com as calculadoras Creovly",
+                "body": "Calcule o tempo restante até as 4.000 horas com a Calculadora de Horas do YouTube Creovly com base na sua retenção média. Use a Calculadora de Monetização para estimar receitas combinadas.",
+                "keyTakeaway": "Utilize calculadoras dedicadas para planejar sua frequência de postagem com precisão."
+            }
+        ],
+        "workedExample": {
+            "title": "Planejamento para atingir as 4.000 horas de exibição",
+            "scenario": "Um criador tem 850 inscritos e 2.400 horas públicas e precisa alcançar as 1.600 horas restantes antes que as horas antigas comecem a expirar no prazo de 12 meses.",
+            "steps": [
+                "Calcular horas restantes: 4.000 meta − 2.400 atuais = 1.600 horas necessárias.",
+                "Calcular visualizações: Com duração média de 4 minutos (0,067 h/view), 1.600 ÷ 0,067 = 24.000 visualizações necessárias.",
+                "Definir ritmo de postagem: Postar 2 vídeos por semana com média de 2.000 views gera 16.000 views (cerca de 1.067 horas) por mês.",
+                "Verificar pré-requisitos: Confirmar verificação em duas etapas e zero avisos no YouTube Studio."
+            ],
+            "conclusion": "Nesse ritmo, o criador alcançará as 4.000 horas em cerca de 6 a 7 semanas, qualificando-se para o YPP completo."
+        },
+        "checklist": [
+            {
+                "title": "Meta de inscritos",
+                "detail": "500 inscritos (apoio de fãs) ou 1.000 inscritos (anúncios)."
+            },
+            {
+                "title": "Horas ou views nos Shorts",
+                "detail": "4.000 horas públicas em 12 meses ou 10M de views nos Shorts em 90 dias."
+            },
+            {
+                "title": "Verificação em duas etapas",
+                "detail": "Ative a segurança em 2 etapas na conta Google associada."
+            },
+            {
+                "title": "Conta do AdSense vinculada",
+                "detail": "Vincule uma conta aprovada do Google AdSense para receber pagamentos."
+            },
+            {
+                "title": "Canal sem advertências",
+                "detail": "Garanta zero avisos ativos por violação das diretrizes."
+            }
+        ],
+        "faqs": [
+            {
+                "question": "Quais são os requisitos para monetizar o canal no YouTube?",
+                "answer": "Para monetização completa com anúncios, são necessários 1.000 inscritos e 4.000 horas públicas de exibição em 12 meses (ou 10 milhões de views nos Shorts em 90 dias). Existe um nível inicial aos 500 inscritos e 3.000 horas para apoio de fãs."
+            },
+            {
+                "question": "As horas dos YouTube Shorts contam para as 4.000 horas?",
+                "answer": "Não, o tempo do feed de Shorts não conta para as 4.000 horas. Os Shorts se qualificam pela meta independente de 10 milhões de visualizações em 90 dias."
+            },
+            {
+                "question": "Quanto tempo tenho para conseguir as 4.000 horas?",
+                "answer": "O cálculo considera uma janela móvel de 365 dias consecutivos. As horas acumuladas há mais de um ano expiram continuamente."
+            }
+        ]
+    },
+    'how-to-change-youtube-thumbnail': {
+        "title": "Como Mudar a Miniatura do YouTube Passo a Passo",
+        "seoTitle": "Como Mudar a Miniatura do YouTube (Passo a Passo)",
+        "category": "Identidade visual",
+        "readTime": "5 min de leitura",
+        "description": "Tutorial passo a passo de como mudar a miniatura no YouTube: pelo YouTube Studio no computador, app móvel, verificação por telefone e miniaturas de Shorts.",
+        "officialSources": [
+            {
+                "label": "Ajuda do YouTube: Adicionar ou alterar miniaturas de vídeos",
+                "description": "Documentação oficial para enviar, alterar e selecionar miniaturas personalizadas no computador e celular."
+            }
+        ],
+        "contentSections": [
+            {
+                "heading": "1. Verificação por telefone: desbloqueio de miniaturas personalizadas",
+                "body": "Para poder enviar miniaturas personalizadas, seu canal deve ter a verificação por número de telefone concluída. Sem isso, o YouTube só permite escolher entre três imagens automáticas do vídeo. Vá em Configurações no YouTube Studio > Canal > Qualificação para recursos e conclua a verificação por SMS.",
+                "keyTakeaway": "Conclua a verificação por telefone no YouTube Studio para liberar o envio de miniaturas personalizadas."
+            },
+            {
+                "heading": "2. Como mudar a miniatura no computador pelo YouTube Studio",
+                "body": "Acesse o YouTube Studio no computador. Clique em \"Conteúdo\" no menu lateral e selecione o vídeo. Na seção \"Miniatura\" da página de detalhes, passe o mouse sobre a imagem atual, clique nos três pontos verticais e escolha \"Alterar\". Selecione seu arquivo 1280 × 720 e clique em \"Salvar\".",
+                "keyTakeaway": "Em YouTube Studio > Conteúdo > Detalhes, clique nos três pontos da miniatura e escolha \"Alterar\"."
+            },
+            {
+                "heading": "3. Como mudar a miniatura no aplicativo YouTube Studio para celular",
+                "body": "Abra o app YouTube Studio no iOS ou Android. Toque em \"Conteúdo\", escolha o vídeo e toque no ícone de lápis (Editar). Toque no lápis no canto da miniatura, escolha \"Alterar\", selecione a foto da sua galeria e toque em \"Salvar\". Lembre-se do limite de 2 MB no celular.",
+                "keyTakeaway": "Use o ícone de lápis no aplicativo YouTube Studio para atualizar sua miniatura de qualquer lugar."
+            },
+            {
+                "heading": "4. Como escolher ou mudar a miniatura de YouTube Shorts",
+                "body": "Os Shorts funcionam de forma diferente: não é possível enviar miniaturas personalizadas pelo computador para Shorts já publicados. A imagem de capa deve ser escolhida durante o envio no app móvel do YouTube, tocando no ícone de lápis na pré-visualização do vídeo.",
+                "keyTakeaway": "Escolha a imagem de capa do Short durante o envio pelo celular; o YouTube não permite alteração via computador após a publicação."
+            },
+            {
+                "heading": "5. Especificações técnicas: 1280×720 e compressão abaixo de 2 MB",
+                "body": "Para máxima nitidez, crie sua arte em 1280 × 720 pixels (16:9) usando o Redimensionador de Miniaturas Creovly. Certifique-se de que o arquivo tenha menos de 2 MB com o Compressor de Miniaturas Creovly para evitar falhas no envio móvel.",
+                "keyTakeaway": "Formate em 1280 × 720 e comprima abaixo de 2 MB antes do envio."
+            }
+        ],
+        "workedExample": {
+            "title": "Troca de miniatura com baixo CTR para aumentar visualizações",
+            "scenario": "Um vídeo publicado há 48 horas tem taxa de cliques baixa de 2,1%. O criador faz uma nova capa com maior contraste e texto chamativo e quer substituir a imagem sem perder métricas.",
+            "steps": [
+                "Exportar nova arte: 1280 × 720 pixels em formato JPG.",
+                "Comprimir para menos de 2 MB: Reduzir tamanho para 510 KB usando o compressor Creovly.",
+                "Abrir YouTube Studio: Acessar Conteúdo e clicar nos detalhes do vídeo.",
+                "Substituir a imagem: Clicar nos três pontos da miniatura, selecionar \"Alterar\", escolher o novo arquivo e salvar.",
+                "Acompanhar resultados: Monitorar a taxa de cliques (CTR) no Analytics pelas próximas 72 horas."
+            ],
+            "conclusion": "A nova miniatura entra no ar imediatamente nas buscas e recomendações sem resetar contagens de visualizações ou comentários."
+        },
+        "checklist": [
+            {
+                "title": "Verificação por telefone",
+                "detail": "Confirmar recurso intermediário liberado no YouTube Studio."
+            },
+            {
+                "title": "Dimensões recomendadas",
+                "detail": "1280 × 720 pixels na proporção 16:9."
+            },
+            {
+                "title": "Arquivo abaixo de 2 MB",
+                "detail": "Garantir compatibilidade com o app móvel."
+            },
+            {
+                "title": "Formato JPG ou PNG",
+                "detail": "Usar perfil de cores sRGB."
+            },
+            {
+                "title": "Salvar e conferir",
+                "detail": "Salvar alterações e checar a exibição na página pública do vídeo."
+            }
+        ],
+        "faqs": [
+            {
+                "question": "Posso mudar a miniatura de um vídeo do YouTube depois de publicado?",
+                "answer": "Sim, a qualquer momento. Entre no YouTube Studio, acerte os detalhes do vídeo, clique no menu de três pontos da miniatura, selecione Alterar, suba o novo arquivo e salve."
+            },
+            {
+                "question": "É possível mudar a miniatura de um Short do YouTube já publicado?",
+                "answer": "Atualmente não é possível enviar miniaturas personalizadas pelo computador em Shorts já publicados. A capa deve ser selecionada no app móvel durante o envio."
+            },
+            {
+                "question": "Por que não consigo enviar miniaturas personalizadas no YouTube?",
+                "answer": "O envio de miniaturas personalizadas exige a verificação por número de telefone nas configurações do canal. Canais não verificados só podem usar miniaturas automáticas."
+            }
+        ]
+    },
+
   },
 
   ko: {
@@ -2371,6 +3636,259 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         },
       ],
     },
+    'youtube-banner-size': {
+        "title": "유튜브 배너 사이즈: 권장 규격, 안전 영역 및 템플릿 가이드",
+        "seoTitle": "유튜브 배너 사이즈: 권장 규격 및 안전 영역",
+        "category": "채널 브랜딩",
+        "readTime": "5분 읽기",
+        "description": "공식 유튜브 배너 사이즈 완벽 가이드: 2560×1440 해상도, 스마트폰과 PC 공통 1235×338 중앙 안전 영역, 6MB 용량 제한 및 제작 템플릿.",
+        "officialSources": [
+            {
+                "label": "YouTube 고객센터: 채널 브랜딩 관리하기",
+                "description": "배너 이미지 권장 규격, 텍스트 및 로고를 위한 최소 안전 영역, 지원 파일 형식, 업로드 용량 한도 공식 사양."
+            }
+        ],
+        "contentSections": [
+            {
+                "heading": "1. 권장 유튜브 배너 크기 및 해상도: 2560×1440",
+                "body": "유튜브 공식 가이드라인에 따른 표준 채널 아트 배너 크기는 2560 × 1440 픽셀(16:9 비율)입니다. 업로드 가능한 최소 크기는 2048 × 1152 픽셀입니다. 전체 2560 × 1440 해상도로 제작해야 고해상도 모니터와 4K 스마트 TV에서도 선명하게 표시됩니다.",
+                "keyTakeaway": "2560 × 1440(16:9) 캔버스 크기를 기준으로 작업하며 최소 2048 × 1152 픽셀 이상을 유지하세요."
+            },
+            {
+                "heading": "2. 텍스트와 로고를 위한 중앙 안전 영역: 1235×338",
+                "body": "유튜브 배너는 스마트폰, 태블릿, PC, 스마트 TV 등 기기에 따라 외곽이 잘려서 표시됩니다. 채널명, 핵심 문구, 로고, 인물 얼굴이 잘리지 않도록 모든 중요 콘텐츠는 중앙의 1235 × 338 픽셀 안전 영역 안에 배치해야 합니다.",
+                "keyTakeaway": "핵심 텍스트와 로고는 반드시 중앙 1235 × 338 픽셀 안전 영역 내에 위치시키세요."
+            },
+            {
+                "heading": "3. 최대 파일 크기 및 지원 이미지 형식: 6MB 이하",
+                "body": "유튜브 배너 파일 용량은 최대 6MB로 제한됩니다. 지원 형식은 JPG, PNG, BMP, 정지 GIF입니다. 사진 중심의 배너는 압축된 JPG가 유리하며, 로고와 텍스트 위주의 그래픽은 선명한 PNG 형식을 권장합니다.",
+                "keyTakeaway": "JPG 또는 PNG 형식으로 저장하고 파일 크기가 6MB 이하인지 확인하세요."
+            },
+            {
+                "heading": "4. Creovly 리사이즈 도구로 배너 비율 맞추기",
+                "body": "Creovly 유튜브 썸네일 리사이즈 도구를 이용하면 1235 × 338 안전 영역 가이드라인이 표시되어 모바일과 PC에서 어떻게 잘리는지 미리 확인하고 제작할 수 있습니다.",
+                "keyTakeaway": "2560 × 1440 프리셋을 통해 모바일과 데스크톱 화면 잘림을 사전에 점검하세요."
+            }
+        ],
+        "workedExample": {
+            "title": "모바일 화면 잘림을 방지하기 위한 배너 중앙 안전 영역 정렬",
+            "scenario": "2560×1440 크기로 배너를 제작했으나 스마트폰 유튜브 앱에서 채널 로고와 업로드 일정이 양옆으로 잘려 보이는 문제 해결.",
+            "steps": [
+                "모바일 노출 영역 확인: 스마트폰 유튜브 앱에서는 중앙 1235 × 338 픽셀 영역만 노출됩니다.",
+                "텍스트 및 로고 재배치: 브랜드 로고와 주요 안내 문구를 중앙 1235 × 338 픽셀 안으로 이동합니다.",
+                "전체 캔버스 배경 유지: TV 화면 대응을 위해 배경 패턴과 질감은 2560 × 1440 전체에 유지합니다.",
+                "6MB 이하로 압축: Creovly 이미지 도구로 고화질을 유지하며 6MB 이하로 최적화하여 내보냅니다."
+            ],
+            "conclusion": "스마트폰 화면에서도 텍스트가 잘리지 않고 선명하게 표시되며 PC와 TV에서도 깔끔한 레이아웃을 완성했습니다."
+        },
+        "checklist": [
+            {
+                "title": "마스터 해상도 설정",
+                "detail": "2560 × 1440 픽셀 (최소 2048 × 1152)."
+            },
+            {
+                "title": "중앙 안전 영역 준수",
+                "detail": "텍스트와 로고를 중앙 1235 × 338 픽셀 안에 배치."
+            },
+            {
+                "title": "파일 용량 6MB 한도",
+                "detail": "최종 이미지 파일 크기가 6MB 이하인지 확인."
+            },
+            {
+                "title": "기기별 표시 점검",
+                "detail": "업로드 후 모바일 앱과 PC 웹 브라우저에서 동시 확인."
+            }
+        ],
+        "faqs": [
+            {
+                "question": "유튜브 배너의 공식 권장 사이즈는 몇 픽셀인가요?",
+                "answer": "공식 권장 사이즈는 16:9 비율의 2560 × 1440 픽셀이며, 최소 업로드 가능 크기는 2048 × 1152 픽셀입니다."
+            },
+            {
+                "question": "유튜브 배너의 안전 영역(Safe Area)이란 무엇인가요?",
+                "answer": "안전 영역은 중앙의 1235 × 338 픽셀 공간입니다. 이 영역 안에 들어간 텍스트와 로고는 모바일, 태블릿, PC, TV 등 모든 기기에서 잘리지 않고 표시됩니다."
+            },
+            {
+                "question": "배너 이미지의 최대 파일 크기는 얼마인가요?",
+                "answer": "파일 크기는 6MB 이하여야 하며, JPG, PNG, BMP 또는 움직이지 않는 GIF 형식을 지원합니다."
+            }
+        ]
+    },
+    'youtube-monetization-requirements': {
+        "title": "유튜브 수익 창출 조건 완벽 해설 (구독자·시청 시간·쇼츠)",
+        "seoTitle": "유튜브 수익 창출 조건 완벽 해설",
+        "category": "수익 창출",
+        "readTime": "7분 읽기",
+        "description": "유튜브 파트너 프로그램(YPP) 수익 창출 요건 총정리: 500명 및 1,000명 구독자 기준, 시청 시간 4,000시간, 쇼츠 1,000만 회 및 승인 정책.",
+        "officialSources": [
+            {
+                "label": "YouTube 고객센터: YouTube 파트너 프로그램 개요 및 자격 요건",
+                "description": "YPP 가입 자격 기준, 구독자 수 및 시청 시간 목표, 채널 수익 창출 정책 공식 안내."
+            },
+            {
+                "label": "YouTube 고객센터: YouTube Shorts로 수익 창출하기",
+                "description": "세로형 쇼츠 피드 광고 수익 크리에이터 풀 분배에 관한 공식 정책."
+            }
+        ],
+        "contentSections": [
+            {
+                "heading": "1. 유튜브 파트너 프로그램(YPP) 2단계 승인 기준",
+                "body": "유튜브는 2단계의 YPP 가입 기준을 제공합니다. 1단계(팬 후원 조기 이용)는 Super Thanks, Super Chat, 채널 멤버십, 쇼핑 기능을 지원합니다. 조건은「구독자 500명」「최근 90일간 공개 동영상 3편 이상」「최근 12개월간 공개 시청 시간 3,000시간 또는 최근 90일간 쇼츠 300만 회」입니다. 2단계(광고 수익 완전 개방)는 동영상 및 쇼츠 광고 수익을 제공하며, 조건은「구독자 1,000명」과「공개 시청 시간 4,000시간 또는 쇼츠 1,000만 회」입니다.",
+                "keyTakeaway": "500명·3,000시간에서 팬 후원 기능이 열리고, 정규 광고 수익은 1,000명·4,000시간이 필요합니다."
+            },
+            {
+                "heading": "2. 유효한 공개 시청 시간과 제외 대상 시간",
+                "body": "4,000시간 기준에는 롱폼 동영상의「유효한 공개 시청 시간」만 반영됩니다. 쇼츠 피드에서 발생한 시청 시간은 4,000시간에 합산되지 않습니다(쇼츠는 90일간 1,000만 회의 별도 경로로 인정). 또한 비공개, 일부 공개, 삭제된 영상 및 Google Ads 광고 유입 시청 시간도 제외됩니다.",
+                "keyTakeaway": "최근 365일 연속 기간 동안 자연 발생한 공개 롱폼 동영상의 시청 시간만 인정됩니다."
+            },
+            {
+                "heading": "3. 계정 보안 및 커뮤니티 가이드라인 준수 필수 요건",
+                "body": "구독자와 시청 시간 외에도 Google 계정의「2단계 인증 활성화」, 유효한「Google AdSense 계정 연결」, 채널에 활성 상태의「커뮤니티 가이드라인 경고가 없을 것」이 필수 조건입니다.",
+                "keyTakeaway": "2단계 인증을 켜고, AdSense를 연결하며, 정책 위반 경고가 없는 채널 상태를 유지하세요."
+            },
+            {
+                "heading": "4. Creovly 계산기로 달성 일정 시뮬레이션하기",
+                "body": "평균 시청 지속 시간을 기반으로 4,000시간 도달 예상 시점을 Creovly「유튜브 시청 시간 계산기」로 예측할 수 있습니다. 또한 광고와 멤버십 예상 수입은「유튜브 수익 계산기」로 시뮬레이션할 수 있습니다.",
+                "keyTakeaway": "막연한 추측 대신 계산기를 사용하여 필요한 주간 업로드 수와 조회수 목표를 수립하세요."
+            }
+        ],
+        "workedExample": {
+            "title": "시청 시간 4,000시간 목표 달성을 위한 업로드 계획",
+            "scenario": "구독자 850명, 시청 시간 2,400시간을 보유한 크리에이터가 12개월 경과로 이전 시간이 소멸되기 전에 남은 1,600시간을 달성하기 위한 계획.",
+            "steps": [
+                "남은 시간 계산: 목표 4,000시간 − 현재 2,400시간 = 필요 시간 1,600시간.",
+                "필요 조회수 산출: 영상당 평균 시청 시간이 4분(0.067시간)인 경우, 1,600 ÷ 0.067 = 약 24,000회 조회수 필요.",
+                "업로드 속도 수립: 평균 2,000회 조회수를 기록하는 영상을 주 2회 업로드하면 월 16,000회(약 1,067시간) 축적 가능.",
+                "계정 조건 점검: 2단계 인증 활성화 및 커뮤니티 경고 0건을 Studio에서 확인."
+            ],
+            "conclusion": "이 속도를 유지하면 약 6~7주 만에 4,000시간 목표를 달성하여 정규 광고 수익 창출을 신청할 수 있습니다."
+        },
+        "checklist": [
+            {
+                "title": "구독자 수 목표",
+                "detail": "500명(팬 후원 기능) 또는 1,000명(광고 수익 공유)."
+            },
+            {
+                "title": "시청 시간 또는 쇼츠 조회수",
+                "detail": "최근 12개월간 4,000시간 또는 최근 90일간 쇼츠 1,000만 회."
+            },
+            {
+                "title": "Google 계정 2단계 인증",
+                "detail": "채널 관리 계정의 보안 2단계 인증 켜기."
+            },
+            {
+                "title": "Google AdSense 계정 연동",
+                "detail": "수익 정산을 위한 승인된 AdSense 계정 연결."
+            },
+            {
+                "title": "커뮤니티 경고 0건",
+                "detail": "활성 상태의 커뮤니티 가이드라인 경고가 없어야 함."
+            }
+        ],
+        "faqs": [
+            {
+                "question": "유튜브 수익 창출 자격 요건은 무엇인가요?",
+                "answer": "완전한 광고 수익 창출을 위해서는 구독자 1,000명과 최근 12개월간 4,000시간의 유효 공개 시청 시간(또는 90일간 쇼츠 1,000만 회)이 필요합니다. 팬 후원 기능은 500명·3,000시간부터 지원됩니다."
+            },
+            {
+                "question": "유튜브 쇼츠 시청 시간도 4,000시간에 포함되나요?",
+                "answer": "아닙니다. 쇼츠 피드의 시청 시간은 4,000시간에 합산되지 않습니다. 쇼츠는 90일간 1,000만 회 조회수라는 독립적인 기준으로 평가됩니다."
+            },
+            {
+                "question": "4,000시간은 언제부터 언제까지의 기록인가요?",
+                "answer": "항상 직전 365일 연속 기간을 기준으로 집계됩니다. 1년이 지난 과거 시청 시간은 집계 대상에서 자동으로 제외됩니다."
+            }
+        ]
+    },
+    'how-to-change-youtube-thumbnail': {
+        "title": "유튜브 썸네일 변경 방법: 단계별 가이드 (PC & 모바일)",
+        "seoTitle": "유튜브 썸네일 변경 방법 (단계별 안내)",
+        "category": "비ジュアル 패키징",
+        "readTime": "5분 읽기",
+        "description": "유튜브 썸네일 변경 및 설정 방법 가이드: PC 유튜브 스튜디오, 모바일 앱, 전화번호 인증을 통한 맞춤 썸네일 활성화, 쇼츠 썸네일 지정법.",
+        "officialSources": [
+            {
+                "label": "YouTube 고객센터: 동영상 썸네일 추가 또는 변경하기",
+                "description": "PC 및 모바일 기기에서 맞춤 동영상 썸네일을 업로드, 변경 및 선택하는 공식 안내."
+            }
+        ],
+        "contentSections": [
+            {
+                "heading": "1. 전화번호 인증: 맞춤 썸네일 업로드 기능 활성화",
+                "body": "원하는 이미지로 맞춤 썸네일을 업로드하려면 채널의「전화번호 인증(중급 기능)」이 완료되어 있어야 합니다. 미인증 상태에서는 동영상에서 자동 추출된 3장의 스틸컷 중에서만 선택할 수 있습니다. 유튜브 스튜디오 설정 > 채널 > 기능 사용 자격에서 SMS 인증을 진행하세요.",
+                "keyTakeaway": "유튜브 스튜디오 설정에서 전화번호 인증을 마쳐야 맞춤 썸네일 등록이 가능합니다."
+            },
+            {
+                "heading": "2. PC 유튜브 스튜디오에서 썸네일 변경하는 방법",
+                "body": "컴퓨터에서 유튜브 스튜디오에 접속합니다. 왼쪽 메뉴의「콘텐츠」에서 수정할 영상을 클릭합니다.「동영상 세부정보」페이지의「썸네일」영역에 마우스를 올리고 3점 아이콘을 눌러「변경」을 선택한 뒤, 새 1280×720 이미지를 선택하고 오른쪽 상단의「저장」을 누릅니다.",
+                "keyTakeaway": "YouTube Studio > 콘텐츠 > 세부정보에서 썸네일의 3점 메뉴를 눌러「변경」을 선택하세요."
+            },
+            {
+                "heading": "3. 모바일 유튜브 스튜디오 앱에서 썸네일 변경하는 방법",
+                "body": "스마트폰에서 YouTube Studio 앱을 실행합니다.「콘텐츠」에서 영상을 탭하고 상단의 연필 아이콘(수정)을 누릅니다. 썸네일 미리보기 좌측 상단의 연필 아이콘을 누른 뒤「변경」을 탭하여 갤러리의 새 이미지를 선택하고 저장합니다. 모바일에서는 2MB 용량 제한이 적용됩니다.",
+                "keyTakeaway": "모바일 Studio 앱의 연필 아이콘을 이용하면 이동 중에도 간편하게 썸네일을 교체할 수 있습니다."
+            },
+            {
+                "heading": "4. 유튜브 쇼츠(Shorts) 썸네일 지정 및 변경 방법",
+                "body": "쇼츠 영상은 일반 동영상과 방식이 다릅니다. 현재 이미 공개된 쇼츠 영상은 PC에서 맞춤 썸네일로 교체할 수 없습니다. 모바일 유튜브 앱에서 쇼츠를 업로드하는 과정에서 미리보기 화면의 연필 아이콘을 눌러 영상 내 최고의 프레임을 썸네일로 직접 지정해야 합니다.",
+                "keyTakeaway": "쇼츠 썸네일은 모바일 앱 업로드 시점에 지정해야 합니다(게시 후 PC 교체 불가)."
+            },
+            {
+                "heading": "5. 기술 사양: 1280×720 규격 및 2MB 이하 압축",
+                "body": "선명한 노출을 위해 Creovly 썸네일 리사이즈 도구로 1280 × 720(16:9) 비율을 맞추고, Creovly 썸네일 압축 도구로 2MB 이하로 용량을 줄여 업로드하세요. 모바일 업로드 시 발생할 수 있는 오류를 사전에 차단할 수 있습니다.",
+                "keyTakeaway": "1280 × 720 픽셀로 맞추고 2MB 이하로 용량을 압축한 뒤 업로드하세요."
+            }
+        ],
+        "workedExample": {
+            "title": "클릭률(CTR) 개선을 위한 부진 썸네일 교체 실전 예시",
+            "scenario": "게시 후 48시간 동안 CTR이 2.1%로 저조하여, 대비와 텍스트 전달력을 높인 새 썸네일로 교체하고 통계 손실 없이 노출을 개선하는 사례.",
+            "steps": [
+                "새 이미지 제작: 1280 × 720 픽셀, JPG 형식으로 새 썸네일 내보내기.",
+                "2MB 이하로 압축: Creovly 압축기를 이용해 510KB로 용량 최적화.",
+                "YouTube Studio 접속: 콘텐츠 목록에서 해당 영상의 세부정보 열기.",
+                "썸네일 교체: 3점 메뉴에서「변경」을 클릭하여 새 이미지 업로드 후 저장.",
+                "성과 추적: 교체 후 72시간 동안 Studio 분석에서 노출 클릭률 추이 모니터링."
+            ],
+            "conclusion": "조회수, 댓글, 영상 링크에 아무런 영향 없이 검색 및 추천 피드에 즉각 새 썸네일이 적용되었습니다."
+        },
+        "checklist": [
+            {
+                "title": "전화번호 인증 확인",
+                "detail": "YouTube Studio 채널 설정에서 중급 기능 인증 여부 확인."
+            },
+            {
+                "title": "권장 해상도 규격",
+                "detail": "16:9 비율의 1280 × 720 픽셀 준수."
+            },
+            {
+                "title": "파일 용량 2MB 이하",
+                "detail": "모바일 Studio 업로드 호환성을 위해 2MB 이하로 압축."
+            },
+            {
+                "title": "JPG 또는 PNG 형식",
+                "detail": "일관된 색감 표현을 위해 sRGB 색상 프로필 사용."
+            },
+            {
+                "title": "저장 후 노출 확인",
+                "detail": "저장 후 실제 영상 시청 페이지에서 썸네일 반영 확인."
+            }
+        ],
+        "faqs": [
+            {
+                "question": "업로드한 영상의 썸네일을 나중에 바꿀 수 있나요?",
+                "answer": "네, 언제든지 변경할 수 있습니다. YouTube Studio 영상 세부정보에서 기존 썸네일의 3점 메뉴를 누르고「변경」을 선택하여 새 이미지를 올린 뒤 저장하면 됩니다."
+            },
+            {
+                "question": "이미 게시된 유튜브 쇼츠의 썸네일도 변경할 수 있나요?",
+                "answer": "현재 게시 완료된 쇼츠의 썸네일은 PC에서 교체할 수 없습니다. 업로드 시 스마트폰 앱에서 프레임을 지정해야 합니다."
+            },
+            {
+                "question": "맞춤 썸네일이 업로드되지 않는 이유는 무엇인가요?",
+                "answer": "채널의 전화번호 인증(중급 기능)이 완료되지 않은 경우 맞춤 이미지를 등록할 수 없습니다. 또한 파일 용량이 한도(모바일 2MB, PC 50MB)를 초과한 경우에도 등록되지 않습니다."
+            }
+        ]
+    },
+
   },
 
   it: {
@@ -2666,6 +4184,259 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         },
       ],
     },
+    'youtube-banner-size': {
+        "title": "Dimensioni Banner YouTube: Misure, Safe Area e Modello",
+        "seoTitle": "Dimensioni Banner YouTube: Misure e Safe Area",
+        "category": "Branding del canale",
+        "readTime": "5 min di lettura",
+        "description": "Guida verificata alle dimensioni del banner YouTube: risoluzione 2560×1440, safe area centrale di 1235×338 per smartphone e PC, limite di 6 MB e modelli.",
+        "officialSources": [
+            {
+                "label": "Guida di YouTube: Gestire il branding del canale",
+                "description": "Specifiche ufficiali di YouTube per le dimensioni dell’immagine del banner, safe area minima per testi e loghi, formati supportati e limiti di caricamento."
+            }
+        ],
+        "contentSections": [
+            {
+                "heading": "1. Dimensioni consigliate per il banner di YouTube: 2560×1440",
+                "body": "In base alle specifiche ufficiali di YouTube, la dimensione standard per la copertina del canale è 2560 × 1440 pixel con proporzioni 16:9. La dimensione minima di caricamento è 2048 × 1152 pixel. Caricare l’immagine a 2560 × 1440 assicura la massima nitidezza sui display ad alta densità e sulle Smart TV 4K senza sgranature.",
+                "keyTakeaway": "Usa una tela di 2560 × 1440 pixel (16:9) e almeno 2048 × 1152 pixel per l’accettazione."
+            },
+            {
+                "heading": "2. Safe area centrale per testi e loghi: 1235×338",
+                "body": "Poiché YouTube visualizza il banner su smartphone, tablet, computer e TV, l’inquadratura cambia in base al dispositivo. Per evitare che nome del canale, slogan, social o volti vengano tagliati, mantieni tutti i contenuti essenziali all’interno della safe area centrale di 1235 × 338 pixel.",
+                "keyTakeaway": "Posiziona tutti i testi critici, i loghi e i punti focali nell’area sicura centrale di 1235 × 338."
+            },
+            {
+                "heading": "3. Dimensione massima del file e formati supportati",
+                "body": "YouTube impone un limite massimo di 6 MB per i banner. I formati supportati sono JPG, PNG, BMP e GIF non animate. Per grafiche fotografiche, un JPEG ottimizzato offre il miglior equilibrio tra peso e qualità. Per loghi e scritte vettoriali, usa il formato PNG.",
+                "keyTakeaway": "Mantieni i file entro i 6 MB in formato JPG o PNG per caricare senza intoppi su YouTube Studio."
+            },
+            {
+                "heading": "4. Formatta il tuo banner con il ridimensionatore Creovly",
+                "body": "Puoi collaudare l’inquadratura con il Ridimensionatore di Miniature YouTube di Creovly. Il modello preimpostato 2560 × 1440 include una guida interattiva con la safe area centrale 1235 × 338 per controllare i tagli prima di pubblicare.",
+                "keyTakeaway": "Sfrutta il preset 2560 × 1440 per verificare i margini di ritaglio su mobile e desktop."
+            }
+        ],
+        "workedExample": {
+            "title": "Centratura della copertina per evitare tagli su smartphone",
+            "scenario": "Un creator realizza un banner 2560×1440. Su smartphone, il logo e i giorni di pubblicazione risultano tagliati perché posizionati fuori dalla safe area centrale.",
+            "steps": [
+                "Individuare la finestra mobile: L’app YouTube per smartphone mostra unicamente la fascia centrale di 1235 × 338 pixel.",
+                "Riposizionare testi e loghi: Spostare il marchio e i testi all’interno del riquadro di 1235 × 338.",
+                "Estendere lo sfondo completo: Mantenere texture ed effetti visivi su tutti i 2560 × 1440 pixel per gli schermi TV.",
+                "Comprimere sotto i 6 MB: Esportare l’immagine finale in JPG ottimizzato sotto i 6 MB con Creovly."
+            ],
+            "conclusion": "Il banner visualizza chiaramente testi e loghi su mobile e si espande magnificamente su schermi di PC e TV."
+        },
+        "checklist": [
+            {
+                "title": "Risoluzione master tela",
+                "detail": "2560 × 1440 pixel (minimo 2048 × 1152)."
+            },
+            {
+                "title": "Safe area centrale",
+                "detail": "Testi e loghi confinati entro i 1235 × 338 pixel centrali."
+            },
+            {
+                "title": "Limite di peso 6 MB",
+                "detail": "Verifica che il file finale pesi 6 MB o meno in JPG o PNG."
+            },
+            {
+                "title": "Controllo multi-dispositivo",
+                "detail": "Controlla l’aspetto sia sull’app mobile che sul browser web dopo il caricamento."
+            }
+        ],
+        "faqs": [
+            {
+                "question": "Qual è la dimensione consigliata per il banner di YouTube?",
+                "answer": "La dimensione ufficiale raccomandata è 2560 × 1440 pixel in formato 16:9, con dimensioni minime pari a 2048 × 1152 pixel."
+            },
+            {
+                "question": "Cos’è la safe area del banner di YouTube?",
+                "answer": "La safe area è il rettangolo centrale di 1235 × 338 pixel. Qualsiasi elemento collocato in questo spazio sarà visibile su telefoni, tablet, PC e televisori."
+            },
+            {
+                "question": "Qual è il peso massimo consentito per il file del banner?",
+                "answer": "Il file deve pesare al massimo 6 MB e può essere in formato JPG, PNG, BMP o GIF non animata."
+            }
+        ]
+    },
+    'youtube-monetization-requirements': {
+        "title": "Requisiti di Monetizzazione YouTube Spiegati",
+        "seoTitle": "Requisiti di Monetizzazione YouTube Spiegati",
+        "category": "Monetizzazione",
+        "readTime": "7 min di lettura",
+        "description": "Panoramica chiara dei requisiti per monetizzare su YouTube: soglie di 500 e 1.000 iscritti, 4.000 ore di visualizzazione, 10M di visualizzazioni Shorts e norme YPP.",
+        "officialSources": [
+            {
+                "label": "Guida di YouTube: Panoramica e idoneità per il Programma partner di YouTube",
+                "description": "Criteri ufficiali per l’accesso a YPP, traguardi di iscritti e ore di visualizzazione, e norme sulla monetizzazione dei canali."
+            },
+            {
+                "label": "Guida di YouTube: Monetizzare con YouTube Shorts",
+                "description": "Linee guida ufficiali sulla condivisione dei ricavi pubblicitari generati dai video verticali nel feed di Shorts."
+            }
+        ],
+        "contentSections": [
+            {
+                "heading": "1. I due livelli di accesso al Programma partner di YouTube (YPP)",
+                "body": "YouTube prevede due livelli per il programma YPP. Il livello introduttivo (finanziamento dei fan) sblocca Super Grazie, Super Chat, Super Sticker, abbonamenti al canale e YouTube Shopping. Richiede: 500 iscritti, 3 caricamenti pubblici validi negli ultimi 90 giorni e 3.000 ore di visualizzazione pubbliche in 12 mesi o 3 milioni di visualizzazioni Shorts in 90 giorni. Il livello completo sblocca gli annunci sui video lunghi e su Shorts. Richiede: 1.000 iscritti e 4.000 ore di visualizzazione pubbliche in 12 mesi o 10 milioni di visualizzazioni Shorts in 90 giorni.",
+                "keyTakeaway": "Puoi iniziare con il supporto dei fan a 500 iscritti e 3.000 ore; la monetizzazione pubblicitaria completa richiede 1.000 iscritti e 4.000 ore."
+            },
+            {
+                "heading": "2. Ore di visualizzazione pubbliche valide e tempo non conteggiato",
+                "body": "Solo le ore pubbliche generate dai video tradizionali lunghi valgono per le 4.000 ore. Il tempo visualizzato nel feed di Shorts NON viene conteggiato per le 4.000 ore (gli Shorts si qualificano mediante la soglia separata di 10M di visualizzazioni). I video privati, non in elenco, eliminati o derivanti da campagne promozionali Google Ads sono esclusi.",
+                "keyTakeaway": "Le ore devono provenire da video lunghi pubblici guardati in modo organico in un periodo continuativo di 365 giorni."
+            },
+            {
+                "heading": "3. Sicurezza dell’account e conformità alle linee guida",
+                "body": "Oltre a iscritti e ore, è obbligatorio attivare la Verifica in due passaggi sull’account Google, collegare un account Google AdSense attivo e avere zero avvertimenti attivi per violazione delle Norme della Community.",
+                "keyTakeaway": "Proteggi l’account con la verifica in 2 passaggi, collega AdSense e mantieni il canale privo di violazioni."
+            },
+            {
+                "heading": "4. Monitora il tuo percorso con i calcolatori Creovly",
+                "body": "Pianifica il tempo necessario per raggiungere le 4.000 ore con il Calcolatore di Ore di Visualizzazione YouTube di Creovly. Simula i ricavi combinati con il Calcolatore di Monetizzazione YouTube.",
+                "keyTakeaway": "Utilizza calcolatori dedicati per pianificare la frequenza di pubblicazione e le visualizzazioni necessarie."
+            }
+        ],
+        "workedExample": {
+            "title": "Pianificazione per raggiungere il traguardo delle 4.000 ore",
+            "scenario": "Un creator ha 850 iscritti e 2.400 ore di visualizzazione pubbliche e vuole colmare le 1.600 ore rimanenti prima che le ore più vecchie scadano nella finestra mobile di 12 mesi.",
+            "steps": [
+                "Calcolare le ore mancanti: 4.000 obiettivo − 2.400 attuali = 1.600 ore necessarie.",
+                "Stimare le visualizzazioni: Con una durata media di 4 minuti (0,067 h/view), servono 1.600 ÷ 0,067 = 24.000 visualizzazioni.",
+                "Stabilire il ritmo: Pubblicare 2 video a settimana con una media di 2.000 visualizzazioni produce 16.000 visualizzazioni (circa 1.067 ore) al mese.",
+                "Verificare i requisiti di sistema: Controllare la verifica in 2 passaggi e verificare zero avvertimenti attivi."
+            ],
+            "conclusion": "Con questo ritmo, il creator raggiungerà le 4.000 ore in circa 6-7 settimane, qualificandosi per la monetizzazione completa."
+        },
+        "checklist": [
+            {
+                "title": "Soglia iscritti",
+                "detail": "500 iscritti (supporto dei fan) o 1.000 iscritti (ricavi pubblicitari)."
+            },
+            {
+                "title": "Ore o visualizzazioni Shorts",
+                "detail": "4.000 ore pubbliche in 12 mesi o 10M di visualizzazioni Shorts in 90 giorni."
+            },
+            {
+                "title": "Verifica in due passaggi",
+                "detail": "Attivare la verifica in due passaggi sull’account Google del canale."
+            },
+            {
+                "title": "Account AdSense collegato",
+                "detail": "Collegare un account Google AdSense approvato per la ricezione dei pagamenti."
+            },
+            {
+                "title": "Nessun avvertimento attivo",
+                "detail": "Assicurarsi che il canale non abbia strike attivi per violazione delle norme."
+            }
+        ],
+        "faqs": [
+            {
+                "question": "Quali sono i requisiti per monetizzare su YouTube?",
+                "answer": "Per la monetizzazione pubblicitaria completa occorrono 1.000 iscritti e 4.000 ore di visualizzazione pubbliche negli ultimi 12 mesi (o 10 milioni di visualizzazioni Shorts in 90 giorni). Esiste una soglia introduttiva a 500 iscritti e 3.000 ore per il supporto dei fan."
+            },
+            {
+                "question": "Le ore di visualizzazione degli Shorts contano per le 4.000 ore?",
+                "answer": "No, le ore del feed di Shorts non concorrono al traguardo delle 4.000 ore. Gli Shorts vengono valutati unicamente sul requisito separato di 10 milioni di visualizzazioni in 90 giorni."
+            },
+            {
+                "question": "In quanto tempo bisogna accumulare le 4.000 ore?",
+                "answer": "Il calcolo si basa su una finestra mobile degli ultimi 365 giorni consecutivi. Le ore accumulate più di un anno fa scadono progressivamente dal conteggio."
+            }
+        ]
+    },
+    'how-to-change-youtube-thumbnail': {
+        "title": "Come Cambiare la Miniatura di YouTube Passo Passo",
+        "seoTitle": "Come Cambiare la Miniatura di YouTube (Guida Passo Passo)",
+        "category": "Branding del canale",
+        "readTime": "5 min di lettura",
+        "description": "Tutorial passo passo su come cambiare la miniatura su YouTube: da YouTube Studio su computer, app per smartphone, verifica telefonica dell’account e miniature Shorts.",
+        "officialSources": [
+            {
+                "label": "Guida di YouTube: Aggiungere o modificare le miniature dei video",
+                "description": "Documentazione ufficiale per caricare, modificare e selezionare miniature video personalizzate su computer e dispositivi mobili."
+            }
+        ],
+        "contentSections": [
+            {
+                "heading": "1. Verifica telefonica: sbloccare il caricamento di miniature personalizzate",
+                "body": "Per poter caricare una miniatura personalizzata su YouTube, il tuo canale deve avere completato la verifica del numero di telefono. Senza verifica, YouTube consente di scegliere unicamente tra tre fotogrammi estratti in automatico dal video. Apri le Impostazioni in YouTube Studio > Canale > Idoneità alle funzionalità e completa la verifica telefonica.",
+                "keyTakeaway": "Effettua la verifica del numero di telefono in YouTube Studio per sbloccare le miniature personalizzate."
+            },
+            {
+                "heading": "2. Come cambiare la miniatura da PC in YouTube Studio",
+                "body": "Per cambiare la miniatura dal computer, accedi a YouTube Studio. Clicca su \"Contenuti\" nel menu a sinistra e seleziona il video. Nella sezione \"Miniatura\" della pagina dei dettagli, passa il mouse sull’immagine corrente, clicca sui tre puntini verticali e seleziona \"Modifica\". Scegli il tuo file 1280 × 720 e clicca su \"Salva\" in alto a destra.",
+                "keyTakeaway": "In YouTube Studio > Contenuti > Dettagli, clicca sui tre puntini del riquadro miniatura e scegli \"Modifica\"."
+            },
+            {
+                "heading": "3. Come cambiare la miniatura dall’app mobile di YouTube Studio",
+                "body": "Apri l’app YouTube Studio su iOS o Android. Tocca \"Contenuti\", seleziona il video e tocca l’icona a forma di matita (Modifica) in alto. Tocca l’icona a matita sopra l’anteprima della miniatura, scegli \"Modifica\", seleziona la foto dalla tua galleria e tocca \"Salva\". Ricorda che su mobile vige il limite di 2 MB.",
+                "keyTakeaway": "Tocca l’icona a matita nell’app mobile di YouTube Studio per sostituire la miniatura ovunque ti trovi."
+            },
+            {
+                "heading": "4. Come selezionare o cambiare la miniatura di un video YouTube Shorts",
+                "body": "I video Shorts gestiscono le miniature diversamente dai video lunghi. Attualmente non è possibile caricare una miniatura personalizzata da PC per uno Short già pubblicato. Il fotogramma di copertina va scelto obbligatoriamente durante il caricamento iniziale dall’app mobile di YouTube toccando l’icona della matita sull’anteprima del video.",
+                "keyTakeaway": "Scegli il fotograma di copertina del tuo Short durante il caricamento mobile; la sostituzione successiva da PC non è supportata."
+            },
+            {
+                "heading": "5. Specifiche tecniche: 1280×720 e compressione sotto i 2 MB",
+                "body": "Per una visualizzazione impeccabile, formatta la tua grafica a 1280 × 720 pixel (16:9) con il Ridimensionatore di Miniature di Creovly. Assicurati che il file pesi meno di 2 MB con il Compressore di Miniature di Creovly per evitare errori durante l’upload mobile.",
+                "keyTakeaway": "Imposta le miniature a 1280 × 720 e comprimile sotto i 2 MB prima di effettuare il caricamento."
+            }
+        ],
+        "workedExample": {
+            "title": "Sostituzione di una miniatura poco performante per rilanciare il CTR",
+            "scenario": "Un video pubblicato da 48 ore registra un CTR basso pari al 2,1%. Il creator crea una nuova miniatura con maggior contrasto e testo di aggancio e desidera sostituire il visivo senza azzerare visualizzazioni o commenti.",
+            "steps": [
+                "Esportare la nuova grafica: 1280 × 720 pixel in formato JPG.",
+                "Comprimere sotto i 2 MB: Utilizzare il compressore Creovly per portare il peso a 510 KB.",
+                "Accedere a YouTube Studio: Aprire la scheda Contenuti e i dettagli del video.",
+                "Eseguire la sostituzione: Cliccare sui tre puntini della miniatura, scegliere \"Modifica\", caricare il nuovo file e salvare.",
+                "Monitorare la reazione: Monitorare l’andamento della percentuale di clic (CTR) negli Analytics nelle 72 ore successive."
+            ],
+            "conclusion": "La nuova miniatura viene recepita istantaneamente nella ricerca e nei consigli senza azzerare il conteggio delle visualizzazioni o i commenti."
+        },
+        "checklist": [
+            {
+                "title": "Verifica telefonica effettuata",
+                "detail": "Conferma l’abilitazione delle funzionalità intermedie in YouTube Studio."
+            },
+            {
+                "title": "Dimensioni raccomandate",
+                "detail": "Imposta il file a 1280 × 720 pixel in formato 16:9."
+            },
+            {
+                "title": "Peso file sotto i 2 MB",
+                "detail": "Garantisci la piena compatibilità con i caricamenti da smartphone."
+            },
+            {
+                "title": "Formato JPG o PNG",
+                "detail": "Utilizza un profilo colore sRGB per una resa cromatica accurata."
+            },
+            {
+                "title": "Salvataggio confermato",
+                "detail": "Clicca su Salva e verifica il rendering sulla pagina pubblica del video."
+            }
+        ],
+        "faqs": [
+            {
+                "question": "Si può cambiare la miniatura di un video YouTube dopo averlo pubblicato?",
+                "answer": "Sì, in qualsiasi momento. Apri YouTube Studio, vai nei dettagli del video, clicca sul menu a tre puntini sulla miniatura, scegli Modifica, carica la nuova immagine e clicca su Salva."
+            },
+            {
+                "question": "Si può modificare la miniatura di uno Short di YouTube già pubblicato?",
+                "answer": "Attualmente non è possibile caricare miniature personalizzate da PC per Shorts già pubblicati. Il fotogramma va scelto nell’app mobile durante il caricamento."
+            },
+            {
+                "question": "Perché non riesco a caricare miniature personalizzate su YouTube?",
+                "answer": "Il caricamento di miniature personalizzate richiede di aver completato la verifica telefonica dell’account in YouTube Studio. I canali non verificati possono scegliere solo fotogrammi estratti automaticamente."
+            }
+        ]
+    },
+
   },
 };
 
