@@ -160,6 +160,10 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       ],
       faqs: [
         {
+          question: "What is RPM on YouTube?",
+          answer: "RPM (Revenue Per Mille) on YouTube is the metric showing how much net money a creator earns per 1,000 total video views across all monetization sources (ads, YouTube Premium, Channel Memberships, Super Chats) after YouTube's 45% platform cut. The official formula is: RPM = (Estimated Total Revenue / Total Views) × 1,000.",
+        },
+        {
           question: "What is the difference between CPM and RPM on YouTube?",
           answer: "CPM (Cost Per Mille) is what advertisers pay per 1,000 ad impressions before YouTube takes its 45% cut. RPM (Revenue Per Mille) is your net take-home earnings per 1,000 total video views.",
         },
@@ -708,6 +712,10 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       ],
       faqs: [
         {
+          question: "¿Qué es el RPM en YouTube?",
+          answer: "El RPM (Ingresos por cada mil visitas) en YouTube mide cuánto dinero neto gana un creador por cada 1.000 visualizaciones totales en todas las fuentes de monetización (anuncios, YouTube Premium, Miembros del canal, Super Chat) tras el 45% de YouTube. La fórmula oficial es: RPM = (Ingresos Totales Estimados / Visitas Totales) × 1.000.",
+        },
+        {
           question: "¿Cuál es la diferencia entre CPM y RPM en YouTube?",
           answer: "El CPM es lo que pagan los anunciantes por cada 1.000 impresiones de anuncios antes del 45% de YouTube. El RPM son tus ingresos netos reales por cada 1.000 visualizaciones totales del vídeo.",
         },
@@ -1002,6 +1010,10 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       ],
       faqs: [
         {
+          question: "YouTubeにおけるRPMとは何ですか？",
+          answer: "YouTubeのRPM（1,000回再生あたりの収益）は、YouTubeの45%の手数料控除後に、広告、YouTube Premium、メンバーシップ、Super Chatなどのすべての収益源からクリエイターが1,000回再生あたりに得る実際の純収益を示す指標です。公式の計算式は「RPM = (推定総収益 / 総再生回数) × 1,000」です。",
+        },
+        {
           question: "YouTubeにおけるCPMとRPMの違いは何ですか？",
           answer: "CPMは広告主が1,000回表示ごとに支払う総額です。RPMはYouTubeの手数料45%が差し引かれた後、総再生数1,000回あたりでクリエイターの手元に入る純収益です。",
         },
@@ -1291,6 +1303,10 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         { title: 'Calculer le RPM composite', detail: 'Additionnez pub, abonnements et dons pour déterminer votre RPM global effectif.' },
       ],
       faqs: [
+        {
+          question: "Qu'est-ce que le RPM sur YouTube ?",
+          answer: "Le RPM (Revenu pour mille vues) sur YouTube mesure les revenus nets réels qu'un créateur gagne pour 1 000 vues totales, toutes sources de monétisation confondues (annonces, YouTube Premium, souscriptions, Super Chat), après la déduction des 45% de YouTube. La formule officielle est : RPM = (Revenu total estimé / Vues totales) × 1 000.",
+        },
         {
           question: "Quelle est la différence entre le CPM et le RPM sur YouTube ?",
           answer: "Le CPM est le coût payé par les annonceurs pour 1 000 impressions publicitaires. Le RPM est votre gain net réel pour 1 000 vues totales après la part de 45% de YouTube.",
@@ -1583,6 +1599,10 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       ],
       faqs: [
         {
+          question: "Was ist die RPM auf YouTube?",
+          answer: "Die RPM (Revenue Per Mille / Einnahmen pro 1.000 Aufrufe) auf YouTube ist die Metrik, die angibt, wie viel Nettoeinkommen ein Creator pro 1.000 Gesamtaufrufe über alle Einnahmequellen (Werbung, YouTube Premium, Kanalmitgliedschaften, Super Chat) nach Abzug des 45%-Anteils von YouTube tatsächlich verdient. Die offizielle Formel lautet: RPM = (Geschätzte Gesamteinnahmen / Gesamtaufrufe) × 1.000.",
+        },
+        {
           question: "Was ist der Unterschied zwischen CPM und RPM auf YouTube?",
           answer: "CPM sind die Kosten, die Werbekunden für 1.000 Werbeeinblendungen vor dem YouTube-Anteil zahlen. RPM ist Ihr tatsächlicher Nettoerlös pro 1.000 Gesamtaufrufe nach Abzug der 45 % Plattformgebühr.",
         },
@@ -1874,6 +1894,10 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       ],
       faqs: [
         {
+          question: "O que é RPM no YouTube?",
+          answer: "O RPM (Receita por Mil Visualizações) no YouTube é a métrica que mede quanto dinheiro líquido um criador ganha por 1.000 visualizações totais em todas as fontes de monetização (anúncios, YouTube Premium, Clubes dos canais, Super Chat) após o corte de 45% do YouTube. A fórmula oficial é: RPM = (Receita Total Estimada / Visualizações Totais) × 1.000.",
+        },
+        {
           question: "Qual a diferença entre CPM e RPM no YouTube?",
           answer: "O CPM é o valor que anunciantes pagam por 1.000 impressões de anúncios antes da fatia de 45% do YouTube. O RPM é o que o criador realmente recebe por 1.000 visualizações totais.",
         },
@@ -2162,6 +2186,10 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         { title: '복합 RPM 산출', detail: '광고, 멤버십, 슈퍼챗을 합산하여 진정한 채널 단가를 계산합니다.' },
       ],
       faqs: [
+        {
+          question: "유튜브에서 RPM이란 무엇인가요?",
+          answer: "유튜브 RPM(1,000회 조회당 수익)은 유튜브의 45% 플랫폼 수수료를 공제한 후, 광고, YouTube Premium, 채널 멤버십, Super Chat 등 모든 수익원에서 크리에이터가 1,000회 조회수당 실제로 벌어들이는 순수익을 나타내는 지표입니다. 공식 계산 공식은: RPM = (예상 총 수익 / 총 조회수) × 1,000 입니다.",
+        },
         {
           question: "유튜브에서 CPM과 RPM의 차이는 무엇인가요?",
           answer: "CPM은 광고주가 1,000회 광고 노출당 지불하는 금액입니다. RPM은 유튜브의 45% 수수료 차감 후 전체 1,000회 조회수당 크리에이터가 정산받는 순수익입니다.",
@@ -2452,6 +2480,10 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         { title: 'Calcolare l’RPM complessivo', detail: 'Somma pubblicità, abbonamenti e donazioni per conoscere l’RPM globale effettivo.' },
       ],
       faqs: [
+        {
+          question: "Che cos'è l'RPM su YouTube?",
+          answer: "L'RPM (Entrate per mille) su YouTube è la metrica che indica quanto guadagno netto reale ottiene un creator per ogni 1.000 visualizzazioni totali attraverso tutte le fonti di monetizzazione (annunci, YouTube Premium, abbonamenti, Super Chat) dopo il 45% di quota trattenuta da YouTube. La formula ufficiale è: RPM = (Entrate Totali Stimate / Visualizzazioni Totali) × 1.000.",
+        },
         {
           question: "Qual è la differenza tra CPM e RPM su YouTube?",
           answer: "Il CPM è quanto spendono gli inserzionisti per 1.000 impressioni di annunci prima della quota di YouTube. L'RPM è il guadagno netto reale per 1.000 visualizzazioni totali dopo la detrazione del 45%.",

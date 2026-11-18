@@ -111,6 +111,27 @@ test('RPM guide prevents double revenue share deduction and distinguishes Shorts
   assert.ok(guide.officialSources.some((s) => s.url.includes('support.google.com/youtube/answer/9314357')));
 });
 
+test('RPM guide addresses "what is rpm on youtube" search intent with definition, formula and FAQ', () => {
+  const guide = getGuideBySlug('decoding-youtube-rpm');
+  assert.ok(guide);
+
+  // Direct H2 heading for search query
+  const firstSection = guide.contentSections[0];
+  assert.ok(firstSection.heading.toLowerCase().includes('what is rpm on youtube'), `Heading must contain 'what is rpm on youtube': ${firstSection.heading}`);
+  assert.ok(firstSection.body.includes('(Estimated Total Revenue / Total Views) × 1,000'));
+  assert.ok(firstSection.body.includes('/tools/youtube-rpm-calculator') || firstSection.body.includes('YouTube RPM Calculator'));
+
+  // FAQ entity in config/guides-i18n.ts across locales
+  const guidesConfig = load('config/guides-i18n.ts');
+  const enGuide = guidesConfig.getLocalizedGuide('decoding-youtube-rpm', 'en');
+  assert.ok(enGuide.faqs.some((f) => f.question.toLowerCase().includes('what is rpm on youtube')), 'en FAQ missing "what is rpm on youtube"');
+
+  for (const loc of ['es', 'ja', 'fr', 'de', 'pt', 'ko', 'it']) {
+    const locGuide = guidesConfig.getLocalizedGuide('decoding-youtube-rpm', loc);
+    assert.ok(locGuide.faqs.length >= 4, `Expected at least 4 FAQs for decoding-youtube-rpm in ${loc}`);
+  }
+});
+
 test('Shorts guide labels margins as recommendations and notes interface variations', () => {
   const guide = getGuideBySlug('youtube-shorts-safe-zone');
   const allText = JSON.stringify(guide).toLowerCase();

@@ -151,9 +151,9 @@ export const guides: GuideItem[] = [
     ],
     contentSections: [
       {
-        heading: '1. The Mathematical Reality: CPM vs. RPM',
-        body: 'Many creators misunderstand YouTube earnings by conflating gross CPM with take-home RPM. CPM (Cost Per Mille) measures what advertisers pay for every 1,000 ad impressions served on your video before YouTube takes its 45% platform share. In contrast, RPM (Revenue Per Mille) is a creator-focused metric measuring your actual net earnings per 1,000 total video views. The official platform formula is: RPM = (Estimated Total Revenue / Total Views) × 1,000. Because not every view triggers an ad impression, your RPM will virtually always be lower than your playback-based CPM.',
-        keyTakeaway: 'CPM measures gross advertiser ad spend; RPM measures your net take-home earnings per 1,000 total views.',
+        heading: '1. What is RPM on YouTube? (Definition & CPM vs. RPM)',
+        body: 'RPM on YouTube stands for Revenue Per Mille (revenue per 1,000 views). It is the definitive creator-focused metric in YouTube Analytics that measures your actual net take-home earnings per 1,000 total video views across all monetized streams—after YouTube has already deducted its 45% platform cut. The official YouTube formula is: RPM = (Estimated Total Revenue / Total Views) × 1,000. To model your channel\'s exact numbers, use our free [YouTube RPM Calculator](/tools/youtube-rpm-calculator). Many creators misunderstand YouTube earnings by conflating gross CPM with take-home RPM. CPM (Cost Per Mille) measures what advertisers pay for every 1,000 ad impressions served on your video before YouTube takes its 45% platform share. In contrast, RPM reflects what you actually take home. Because not every view triggers an ad impression, your RPM will virtually always be lower than your playback-based CPM.',
+        keyTakeaway: 'RPM measures your net take-home earnings per 1,000 total views across all native monetization features; CPM measures gross advertiser spend.',
       },
       {
         heading: '2. Avoiding the Double-Deduction Modeling Error',
