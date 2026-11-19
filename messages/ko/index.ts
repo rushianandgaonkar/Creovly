@@ -1883,7 +1883,13 @@ export const messagesKo: Messages = {
           analyticsConsentDesc: '쿠키 동의 배너에 대한 사용자의 명시적인 분석 쿠키 허용 여부(granted 또는 denied)를 저장합니다.',
         },
         analyticsTitle: '4. 분석 도구, 쿠키 및 동의 관리',
-        analyticsBody: 'Creovly는 IP 익명화가 적용된 Google Analytics 4(GA4)를 사용하여 일일 활성 사용자 수, 주요 사용 도구, 기기 해상도 분류 등 통계적 트래픽 지표만을 집계 측정합니다.',
+        analyticsBody:
+          'Creovly는 Google 태그 관리자(Google Tag Manager)를 사용하여 Google Analytics 4(GA4)를 포함한 분석 도구를 로드하며, 이러한 도구는 통계적 트래픽 지표(일일 활성 사용자 수, 주요 크리에이터 도구, 화면 해상도 등)를 측정하기 위해 쿠키를 사용할 수 있습니다. 또한 브라우저 화면 유지를 위해 테마(라이트/다크 모드)와 같은 사용자 환경설정을 기기 로컬에 저장합니다. 분석 쿠키는 아래 설정에서 언제든지 변경하거나 취소할 수 있습니다.',
+        optOutPrefix:
+          '모든 웹사이트에서 Google Analytics의 데이터 수집을 차단하려면 ',
+        optOutLinkText:
+          'Google Analytics 차단 브라우저 부가기능',
+        optOutSuffix: '을(를) 설치하여 사용하실 수 있습니다.',
         platformTitle: '5. 독립적 플랫폼 지위 및 공정 이용 안내',
         platformBody: 'Creovly는 독립적인 소프트웨어 제품이며 YouTube, Google LLC, Alphabet Inc. 또는 그 계열사와 제휴, 후원, 보증 또는 파트너십 관계가 없습니다. YouTube™ 및 YouTube 로고는 Google LLC의 등록 상표입니다.',
         contactTitle: '6. 개인정보 보호 담당자 문의',

@@ -1883,7 +1883,13 @@ export const messagesPt: Messages = {
           analyticsConsentDesc: 'Registra sua decisão explícita sobre cookies de análise (granted ou denied) ao responder ao aviso de consentimento.',
         },
         analyticsTitle: '4. Análise de tráfego, cookies e consentimento',
-        analyticsBody: 'O Creovly utiliza o Google Analytics 4 (GA4) com anonimização de IP ativada unicamente para acompanhar estatísticas agregadas de tráfego (como usuários ativos diários, utilitários mais acessados e categorias de resolução de tela).',
+        analyticsBody:
+          'O Creovly utiliza o Google Tag Manager para carregar ferramentas de análise, incluindo o Google Analytics 4 (GA4), que podem utilizar cookies para medir estatísticas agregadas de tráfego (como usuários ativos diários, utilitários mais populares e resoluções de ecrã). Também guardamos preferências memorizadas, como o seu tema (modo claro ou escuro), localmente no seu navegador. Pode gerir ou revogar os cookies de análise a qualquer momento através das opções abaixo.',
+        optOutPrefix:
+          'Também pode desativar a recolha de dados pelo Google Analytics em todos os sites instalando o ',
+        optOutLinkText:
+          'Extensão do navegador para desativação do Google Analytics',
+        optOutSuffix: '.',
         platformTitle: '5. Estatuto independente e uso legítimo',
         platformBody: 'O Creovly é uma ferramenta de software independente e não tem vínculo, patrocínio, aprovação ou associação com YouTube, Google LLC, Alphabet Inc. ou suas subsidiárias. YouTube™ e o logotipo do YouTube são marcas registradas da Google LLC.',
         contactTitle: '6. Fale com o encarregado de proteção de dados',

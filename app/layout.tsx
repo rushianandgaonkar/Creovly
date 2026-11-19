@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import { siteConfig } from '@/config/site';
 import { Bricolage_Grotesque, Geist, Geist_Mono } from 'next/font/google';
 import Header from '@/components/layout/Header';
@@ -175,16 +174,18 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Google tag (gtag.js) with Google Consent Mode v2 */}
+        {/* Google Tag Manager */}
+        {/* eslint-disable-next-line @next/next/next-script-for-ga */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}var sc=null;try{sc=localStorage.getItem('creovly-consent');}catch(e){}gtag('consent','default',{'analytics_storage':sc==='granted'?'granted':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied'});gtag('js', new Date());gtag('config', 'G-0JBY0X9MY4', { anonymize_ip: true });`,
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WFXB723W');`,
           }}
         />
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-0JBY0X9MY4"
-        />
+        {/* End Google Tag Manager */}
         <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="shortcut icon" href="/favicon.ico" />
@@ -209,6 +210,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${displayFont.variable} font-sans min-h-screen flex flex-col bg-[var(--bg-canvas)] text-[var(--text-ink)] antialiased selection:bg-[var(--brand-accent)] selection:text-[var(--brand-on-accent)]`}
       >
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WFXB723W"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>

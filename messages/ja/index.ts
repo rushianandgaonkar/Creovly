@@ -1883,7 +1883,13 @@ export const messagesJa: Messages = {
           analyticsConsentDesc: '同意バナーに対するアナリティクスクッキーの明示的な選択（grantedまたはdenied）を保存します。',
         },
         analyticsTitle: '4. アナリティクス、クッキーおよび同意管理',
-        analyticsBody: 'Creovlyは全体のトラフィック傾向（日間アクティブユーザー数、人気ツール、端末画面サイズなど）を測定する目的でのみ、IP匿名化を有効にしたGoogle Analytics 4（GA4）を使用しています。',
+        analyticsBody:
+          'Creovlyでは、Googleタグマネージャー（Google Tag Manager）を使用してGoogleアナリティクス4（GA4）などの分析ツールを読み込んでおり、これらは全体的な利用状況（1日のアクティブユーザー数、人気ツール、画面解像度など）を測定するためにCookieを使用する場合があります。また、画面表示を維持するためにテーマ設定（ライト／ダークモード）などのユーザー設定をブラウザのローカルストレージに保存しています。分析Cookieは以下の設定からいつでも管理・無効化できます。',
+        optOutPrefix:
+          'すべてのウェブサイトでGoogleアナリティクスによるデータ収集を無効にするには、',
+        optOutLinkText:
+          'Google アナリティクス オプトアウト アドオン',
+        optOutSuffix: 'をご利用ください。',
         platformTitle: '5. 独立したプラットフォームとしての地位および公正利用',
         platformBody: 'Creovlyは独立したソフトウェアツールであり、YouTube、Google LLC、Alphabet Inc.またはその子会社との提携、承認、後援、パートナーシップ関係はありません。YouTube™およびYouTubeロゴはGoogle LLCの登録商標です。',
         contactTitle: '6. データ保護に関するお問い合わせ',

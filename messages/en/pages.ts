@@ -128,7 +128,11 @@ export const pages = {
       },
       analyticsTitle: '4. Analytics, Cookies & Consent Management',
       analyticsBody:
-        'Creovly uses Google Analytics 4 (GA4) with IP anonymization enabled strictly to measure aggregate traffic metrics (e.g. daily active users, top-performing creator utilities, and device viewport categories).',
+        'Creovly uses Google Tag Manager to deploy analytics tools, including Google Analytics 4 (GA4), which may use cookies to measure aggregate traffic metrics (such as daily active visitors, popular creator utilities, and device screen categories). We also store remembered user preferences such as your theme (light or dark mode) locally in your browser. You can manage or revoke analytics cookies at any time using the preferences below.',
+      optOutPrefix:
+        'You can also prevent your data from being used by Google Analytics across all websites by installing the ',
+      optOutLinkText: 'Google Analytics Opt-out Browser Add-on',
+      optOutSuffix: '.',
       platformTitle: '5. Independent Platform Status & Fair Use',
       platformBody:
         'Creovly is an independent software tool and is not affiliated with, endorsed by, sponsored by, or partner with YouTube, Google LLC, Alphabet Inc., or any of their subsidiaries. YouTube™ and the YouTube logo are registered trademarks of Google LLC.',

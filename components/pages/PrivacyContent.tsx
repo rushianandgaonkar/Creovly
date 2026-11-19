@@ -114,6 +114,18 @@ export default function PrivacyContent() {
             {sections.analyticsTitle}
           </h2>
           <p>{sections.analyticsBody}</p>
+          <p className="text-xs text-[var(--text-muted)]">
+            {sections.optOutPrefix}
+            <a
+              href="https://tools.google.com/dlpage/gaoptout"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--brand-accent)] font-medium hover:underline"
+            >
+              {sections.optOutLinkText}
+            </a>
+            {sections.optOutSuffix}
+          </p>
           <div className="pt-2">
             <ConsentSettings />
           </div>
