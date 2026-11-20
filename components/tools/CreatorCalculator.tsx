@@ -53,6 +53,8 @@ export default function CreatorCalculator({ kind }: { kind: CalculatorKind }) {
         return t.calculator.watchHours.title;
       case 'monetization':
         return t.calculator.monetization.title;
+      case 'cpm':
+        return t.calculator.cpm.title;
       default:
         return definition.title;
     }
@@ -68,6 +70,8 @@ export default function CreatorCalculator({ kind }: { kind: CalculatorKind }) {
         return t.calculator.watchHours.note;
       case 'monetization':
         return t.calculator.monetization.note;
+      case 'cpm':
+        return t.calculator.cpm.note;
       default:
         return definition.note;
     }
@@ -85,6 +89,9 @@ export default function CreatorCalculator({ kind }: { kind: CalculatorKind }) {
       if (f) return { label: f.label, suffix: f.suffix || fallbackSuffix };
     } else if (kind === 'monetization') {
       const f = (t.calculator.monetization.fields as any)[fieldKey];
+      if (f) return { label: f.label, suffix: f.suffix || fallbackSuffix };
+    } else if (kind === 'cpm') {
+      const f = (t.calculator.cpm.fields as any)[fieldKey];
       if (f) return { label: f.label, suffix: f.suffix || fallbackSuffix };
     }
     return { label: fallbackLabel, suffix: fallbackSuffix };
@@ -114,6 +121,11 @@ export default function CreatorCalculator({ kind }: { kind: CalculatorKind }) {
       if (label.includes('Other Revenue')) return t.calculator.monetization.metrics.other;
       if (label.includes('Costs')) return t.calculator.monetization.metrics.costs;
       if (label.includes('Annual Net')) return t.calculator.monetization.metrics.annualNet;
+    } else if (kind === 'cpm') {
+      if (label.includes('Estimated creator') || label.includes('Estimated Creator')) return t.calculator.cpm.metrics.creator;
+      if (label.includes('Gross ad') || label.includes('Gross Ad')) return t.calculator.cpm.metrics.gross;
+      if (label.includes('Monetized playback') || label.includes('Monetized Playback')) return t.calculator.cpm.metrics.playbacks;
+      if (label.includes('Effective ad') || label.includes('Effective Ad')) return t.calculator.cpm.metrics.rpm;
     }
     return label;
   };

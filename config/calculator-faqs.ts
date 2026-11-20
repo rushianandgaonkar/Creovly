@@ -1,6 +1,6 @@
 import type { FAQItem } from '@/types';
 import type { CalculatorKind } from '@/lib/creator-calculators';
-import { toolContent } from './tool-content';
+import { messagesEn } from '@/messages/en';
 
 export const calculatorFaqs: Record<CalculatorKind, FAQItem[]> = {
   revenue: [
@@ -111,5 +111,5 @@ export const calculatorFaqs: Record<CalculatorKind, FAQItem[]> = {
         'Yes. With 500 subscribers (plus 3 public uploads in 90 days and 3,000 watch hours or 3M Shorts views), you can unlock fan funding, Super Chats, and channel memberships.',
     },
   ],
-  cpm: toolContent['youtube-cpm-calculator'].faqs,
+  cpm: messagesEn.tools.faqs.cpm,
 };

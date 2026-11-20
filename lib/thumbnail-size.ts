@@ -10,7 +10,18 @@ export const THUMBNAIL_SPECS = {
 
 export type ThumbnailMode = 'video' | 'shorts';
 export type CheckLevel = 'pass' | 'info' | 'warn' | 'fail';
-export interface ThumbnailCheck { id: 'minimum' | 'ratio' | 'resolution' | 'format' | 'size'; label: string; level: CheckLevel; detail: string }
+export interface ThumbnailCheck {
+  id: 'minimum' | 'ratio' | 'resolution' | 'format' | 'size';
+  level: CheckLevel;
+  side?: number;
+  minSide?: 'width' | 'height';
+  actualRatio?: string;
+  targetRatio?: string;
+  targetWidth?: number;
+  targetHeight?: number;
+  format?: string;
+  bytes?: number;
+}
 
 export const formatBytes = (bytes: number) =>
   bytes >= 1024 * 1024 ? `${(bytes / 1024 / 1024).toFixed(2)} MB` : `${Math.max(1, Math.round(bytes / 1024))} KB`;
@@ -23,7 +34,10 @@ export function describeRatio(width: number, height: number): string {
   return w <= 32 && h <= 32 ? `${w}:${h}` : `${(width / height).toFixed(2)}:1`;
 }
 
-export function checkThumbnail(image: { width: number; height: number; bytes: number; type: string }, mode: ThumbnailMode): ThumbnailCheck[] {
+export function checkThumbnail(
+  image: { width: number; height: number; bytes: number; type: string },
+  mode: ThumbnailMode
+): ThumbnailCheck[] {
   const spec = THUMBNAIL_SPECS[mode];
   const { width, height, bytes, type } = image;
   const side = spec.minSide === 'width' ? width : height;
@@ -31,27 +45,43 @@ export function checkThumbnail(image: { width: number; height: number; bytes: nu
   const off = Math.abs(width / height - target) / target;
   const checks: ThumbnailCheck[] = [];
 
-  checks.push(side >= THUMBNAIL_SPECS.minPixels
-    ? { id: 'minimum', label: 'Minimum size', level: 'pass', detail: `${side} px ${spec.minSide} meets the 640 px minimum.` }
-    : { id: 'minimum', label: 'Minimum size', level: 'fail', detail: `${side} px ${spec.minSide} is below YouTube’s 640 px minimum. Use a larger image.` });
+  checks.push({
+    id: 'minimum',
+    level: side >= THUMBNAIL_SPECS.minPixels ? 'pass' : 'fail',
+    side,
+    minSide: spec.minSide,
+  });
 
-  checks.push(off <= 0.01
-    ? { id: 'ratio', label: 'Aspect ratio', level: 'pass', detail: `${describeRatio(width, height)} matches ${spec.ratio}.` }
-    : { id: 'ratio', label: 'Aspect ratio', level: 'warn', detail: `${describeRatio(width, height)} is not ${spec.ratio}, so it will not fill the frame exactly. Crop or pad it to ${spec.ratio}.` });
+  checks.push({
+    id: 'ratio',
+    level: off <= 0.01 ? 'pass' : 'warn',
+    actualRatio: describeRatio(width, height),
+    targetRatio: spec.ratio,
+  });
 
-  checks.push(width >= spec.width && height >= spec.height
-    ? { id: 'resolution', label: 'Resolution', level: 'pass', detail: `At or above the recommended ${spec.width} × ${spec.height}.` }
-    : { id: 'resolution', label: 'Resolution', level: 'info', detail: `YouTube recommends ${spec.width} × ${spec.height}. Smaller images still upload if they meet the minimum.` });
+  checks.push({
+    id: 'resolution',
+    level: width >= spec.width && height >= spec.height ? 'pass' : 'info',
+    targetWidth: spec.width,
+    targetHeight: spec.height,
+  });
 
-  checks.push(THUMBNAIL_SPECS.formats.includes(type)
-    ? { id: 'format', label: 'File format', level: 'pass', detail: `${type === 'image/png' ? 'PNG' : 'JPG'} is a format YouTube lists.` }
-    : { id: 'format', label: 'File format', level: 'warn', detail: 'YouTube’s help page lists JPG and PNG. Convert the file before uploading.' });
+  checks.push({
+    id: 'format',
+    level: THUMBNAIL_SPECS.formats.includes(type) ? 'pass' : 'warn',
+    format: type === 'image/png' ? 'PNG' : 'JPG',
+  });
 
-  checks.push(bytes <= THUMBNAIL_SPECS.mobileMaxBytes
-    ? { id: 'size', label: 'File size', level: 'pass', detail: `${formatBytes(bytes)} is under the 2 MB mobile limit.` }
-    : bytes <= THUMBNAIL_SPECS.desktopMaxBytes
-      ? { id: 'size', label: 'File size', level: 'warn', detail: `${formatBytes(bytes)} is over the 2 MB limit in the mobile app. It is under the 50 MB desktop limit.` }
-      : { id: 'size', label: 'File size', level: 'fail', detail: `${formatBytes(bytes)} is over the 50 MB desktop limit.` });
+  checks.push({
+    id: 'size',
+    level:
+      bytes <= THUMBNAIL_SPECS.mobileMaxBytes
+        ? 'pass'
+        : bytes <= THUMBNAIL_SPECS.desktopMaxBytes
+          ? 'warn'
+          : 'fail',
+    bytes,
+  });
 
   return checks;
 }
