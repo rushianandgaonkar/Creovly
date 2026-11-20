@@ -96,6 +96,41 @@ export const toolGuidance: Record<string, ToolGuidance> = {
   'youtube-thumbnail-tester': { related: [title, resizer, compressor] },
   'youtube-timestamp-generator': { related: [description, 'words-to-minutes-calculator', 'youtube-link-generator'] },
   'words-to-minutes-calculator': { related: ['youtube-timestamp-generator', title, description] },
+  'youtube-banner-maker': {
+    steps: [
+      { title: 'Add your name', body: 'Type your channel name and an optional tagline. The text sizes itself to fit the safe area.' },
+      { title: 'Style the background', body: 'Pick colours and a font, or add your own photo and darken it until the text reads clearly.' },
+      { title: 'Check and download', body: 'Switch between TV, desktop and phone previews, then download the 2560 x 1440 banner.' },
+    ], related: [banner, 'youtube-profile-picture-resizer', logo],
+  },
+  'youtube-thumbnail-size': {
+    steps: [
+      { title: 'Choose video or Shorts', body: 'The recommended size, minimum, ratio and file limits update for the thumbnail type you pick.' },
+      { title: 'Add your thumbnail', body: 'Drop in a JPG, PNG, WebP or GIF. Your browser reads its size and type; nothing is uploaded.' },
+      { title: 'Fix what fails', body: 'Each rule shows pass, note, check or fix. Resize or compress the image if a rule needs it.' },
+    ], related: [resizer, compressor, 'youtube-thumbnail-tester'],
+  },
+  'best-time-to-post-on-youtube': {
+    steps: [
+      { title: 'Find your peak hour', body: 'In YouTube Studio, open Analytics, then Audience, and read “When your viewers are on YouTube.”' },
+      { title: 'Set your lead time', body: 'Choose how long before the peak the video should go live, and check both time zones.' },
+      { title: 'Schedule the week', body: 'Use the publish times in the table when you schedule videos in YouTube Studio.' },
+    ], related: [title, 'youtube-timestamp-generator', description],
+  },
+  'youtube-hashtag-generator': {
+    steps: [
+      { title: 'Describe your video', body: 'Type the topic and a few keywords, separated by commas or new lines.' },
+      { title: 'Keep the relevant ones', body: 'Select a hashtag to leave it out. Add #Shorts if you want it.' },
+      { title: 'Copy into your description', body: 'Copy the hashtags and paste them at the end of your description.' },
+    ], related: [tags, description, title],
+  },
+  'youtube-cpm-calculator': {
+    steps: [
+      { title: 'Open the Revenue tab', body: 'In YouTube Analytics, note views, playback-based CPM and the share of playbacks that showed ads.' },
+      { title: 'Enter your figures', body: 'Add them with your revenue share. Long-form ads in the Partner Program pay creators 55%.' },
+      { title: 'Review the estimate', body: 'See gross ad revenue, your share and the ad RPM it implies.' },
+    ], related: [rpm, revenue, income], calculator: 'cpm',
+  },
 };
 
 export const titleDemonstration = {

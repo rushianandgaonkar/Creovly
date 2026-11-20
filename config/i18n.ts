@@ -287,7 +287,7 @@ export const translations: Record<Locale, I18nContent> = {
       'youtube-thumbnail-resizer': {
         title: 'YouTube Thumbnail Resizer',
         seoTitle: 'Free YouTube Thumbnail Resizer: Resize to 1280x720',
-        description: 'YouTube thumbnail size is 1280x720 pixels (16:9, under 2 MB). Use this free thumbnail resizer to fit any image to that size, preview framing, and download it.',
+        description: "Resize any image to a YouTube thumbnail size: 1280x720 or the recommended 3840x2160, both 16:9. Preview the framing and download it free in your browser.",
         categoryLabel: 'Thumbnail Tools',
         keywords: ['youtube thumbnail resizer', 'youtube thumbnail size converter', 'youtube thumbnail size', 'youtube thumbnail dimensions', 'youtube thumbnail aspect ratio', 'youtube banner resizer', '1280x720 thumbnail resize', 'youtube cover photo resizer', 'youtube image dimension tool'],
       },
@@ -512,7 +512,7 @@ export const translations: Record<Locale, I18nContent> = {
       'youtube-thumbnail-resizer': {
         title: 'Redimensionador de miniaturas de YouTube',
         seoTitle: 'Redimensionador de miniaturas de YouTube: 1280x720',
-        description: 'El tamaño de miniatura de YouTube es 1280x720 píxeles (16:9, menos de 2 MB). Redimensiona cualquier imagen gratis, revisa el encuadre y descarga el archivo.',
+        description: "Redimensiona cualquier imagen a un tamaño de miniatura de YouTube: 1280x720 o el recomendado 3840x2160, ambos 16:9. Revisa el encuadre y descárgala gratis en tu navegador.",
         categoryLabel: 'Herramientas de miniaturas',
         keywords: ['redimensionar miniatura youtube', 'convertidor tamano miniatura youtube', 'medidas miniatura youtube 1280x720', 'tamano portada youtube', 'escalar imagen youtube', 'banner youtube medidas'],
       },
@@ -737,7 +737,7 @@ export const translations: Record<Locale, I18nContent> = {
       'youtube-thumbnail-resizer': {
         title: 'YouTubeサムネイルサイズ変更ツール',
         seoTitle: 'YouTubeサムネイルリサイズツール：1280x720に無料変換',
-        description: 'YouTubeサムネイルのサイズは1280x720ピクセル（16:9、2MB未満）。無料のリサイズツールで画像をこのサイズに合わせ、構図を確認してダウンロードできます。',
+        description: "画像をYouTubeサムネイルのサイズにリサイズ：1280x720または推奨の3840x2160（どちらも16:9）。構図を確認して、ブラウザ上で無料ダウンロード。",
         categoryLabel: 'サムネイルツール',
         keywords: ['YouTube サムネイル サイズ 変更', 'YouTube サムネイル サイズ 変換', 'サムネイル 1280 720 リサイズ', 'YouTube バナー サイズ 調整', 'サムネ 比率 16:9', 'チャンネルアート リサイズ'],
       },
@@ -962,7 +962,7 @@ export const translations: Record<Locale, I18nContent> = {
       'youtube-thumbnail-resizer': {
         title: 'Redimensionneur de miniatures YouTube',
         seoTitle: 'Redimensionneur de miniatures YouTube : 1280x720',
-        description: 'La taille d’une miniature YouTube est de 1280x720 pixels (16:9, moins de 2 Mo). Redimensionnez gratuitement n’importe quelle image, vérifiez le cadrage et téléchargez-la.',
+        description: "Redimensionnez n’importe quelle image à une taille de miniature YouTube : 1280x720 ou 3840x2160 recommandé, tous deux en 16:9. Vérifiez le cadrage et téléchargez gratuitement dans votre navigateur.",
         categoryLabel: 'Outils de miniatures',
         keywords: ['redimensionner miniature youtube', 'convertisseur taille miniature youtube', 'taille miniature youtube 1280x720', 'dimensions banniere youtube', 'format image youtube', 'redimensionner photo profil'],
       },
@@ -1187,7 +1187,7 @@ export const translations: Record<Locale, I18nContent> = {
       'youtube-thumbnail-resizer': {
         title: 'YouTube-Thumbnail-Größe anpassen (Resizer)',
         seoTitle: 'YouTube-Thumbnail-Resizer: Auf 1280x720 skalieren',
-        description: 'Die YouTube-Thumbnail-Größe beträgt 1280x720 Pixel (16:9, unter 2 MB). Passe jedes Bild kostenlos an, prüfe den Ausschnitt und lade die Datei herunter.',
+        description: "Skaliere jedes Bild auf eine YouTube-Thumbnail-Größe: 1280x720 oder empfohlene 3840x2160, beide 16:9. Prüfe den Ausschnitt und lade es kostenlos im Browser herunter.",
         categoryLabel: 'Thumbnail-Tools',
         keywords: ['youtube thumbnail groesse aendern', 'thumbnail konverter groesse', 'thumbnail 1280x720 format', 'youtube banner massen', 'youtube bild skalieren', 'kanalbild zuschneiden'],
       },
@@ -1412,7 +1412,7 @@ export const translations: Record<Locale, I18nContent> = {
       'youtube-thumbnail-resizer': {
         title: 'Redimensionador de miniaturas do YouTube',
         seoTitle: 'Redimensionador de miniaturas do YouTube: 1280x720',
-        description: 'O tamanho da miniatura do YouTube é 1280x720 pixels (16:9, menos de 2 MB). Redimensione qualquer imagem grátis, confira o enquadramento e baixe o arquivo.',
+        description: "Redimensione qualquer imagem para um tamanho de miniatura do YouTube: 1280x720 ou o recomendado 3840x2160, ambos 16:9. Confira o enquadramento e baixe grátis no navegador.",
         categoryLabel: 'Ferramentas de miniatura',
         keywords: ['redimensionar miniatura youtube', 'conversor tamanho miniatura youtube', 'tamanho miniatura youtube 1280x720', 'dimensoes banner youtube', 'mudar tamanho foto canal', 'escala imagem youtube'],
       },
@@ -1637,7 +1637,7 @@ export const translations: Record<Locale, I18nContent> = {
       'youtube-thumbnail-resizer': {
         title: '유튜브 썸네일 크기 조절기 (리사이저)',
         seoTitle: '유튜브 썸네일 리사이저: 1280x720 무료 변환',
-        description: '유튜브 썸네일 크기는 1280x720 픽셀(16:9, 2MB 미만)입니다. 무료 리사이저로 이미지를 이 크기에 맞추고 구도를 확인한 뒤 다운로드하세요.',
+        description: "이미지를 유튜브 썸네일 크기로 조정하세요: 1280x720 또는 권장 3840x2160, 모두 16:9. 구도를 확인하고 브라우저에서 무료로 다운로드하세요.",
         categoryLabel: '썸네일 도구',
         keywords: ['유튜브 썸네일 크기 조절', '썸네일 1280 720 사이즈', '유튜브 배너 규격', '유튜브 채널아트 리사이즈', '유튜브 비율 16 9'],
       },
@@ -1862,7 +1862,7 @@ export const translations: Record<Locale, I18nContent> = {
       'youtube-thumbnail-resizer': {
         title: 'Ridimensionatore miniature YouTube',
         seoTitle: 'Ridimensionatore miniature YouTube: 1280x720',
-        description: 'Le dimensioni di una miniatura YouTube sono 1280x720 pixel (16:9, meno di 2 MB). Ridimensiona gratis qualsiasi immagine, controlla l’inquadratura e scarica il file.',
+        description: "Ridimensiona qualsiasi immagine a una dimensione di miniatura YouTube: 1280x720 o il consigliato 3840x2160, entrambi 16:9. Controlla l’inquadratura e scaricala gratis nel browser.",
         categoryLabel: 'Strumenti miniatura',
         keywords: ['ridimensionare miniatura youtube', 'dimensioni miniatura youtube 1280x720', 'formato copertina youtube', 'scalare immagine youtube', 'banner youtube misure'],
       },

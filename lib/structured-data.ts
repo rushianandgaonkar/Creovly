@@ -4,6 +4,7 @@ import { defaultLocale, translatePath, translations } from '@/config/i18n';
 import { getMessages } from '@/messages';
 import { tools as enTools } from '@/messages/en/tools';
 import { getLocalizedGuide } from '@/config/guides-i18n';
+import { toolContent } from '@/config/tool-content';
 import { getGuideOgImage } from '@/lib/guides';
 
 interface BreadcrumbItem {
@@ -153,11 +154,11 @@ const slugToFaqKey: Record<string, string> = {
  */
 export function toolFaqJsonLd(toolSlug: string, locale: Locale = defaultLocale) {
   const faqKey = slugToFaqKey[toolSlug];
-  if (!faqKey) return null;
-
   const messages = getMessages(locale);
-  const faqs = (messages.tools?.faqs as Record<string, { question: string; answer: string }[]>)?.[faqKey]
-    || (enTools.faqs as Record<string, { question: string; answer: string }[]>)[faqKey];
+  const faqs = faqKey
+    ? (messages.tools?.faqs as Record<string, { question: string; answer: string }[]>)?.[faqKey]
+      || (enTools.faqs as Record<string, { question: string; answer: string }[]>)[faqKey]
+    : toolContent[toolSlug]?.faqs;
 
   if (!faqs || !Array.isArray(faqs) || faqs.length === 0) return null;
 

@@ -275,7 +275,7 @@ export const messagesJa: Messages = {
         },
         {
           question: 'YouTubeサムネイルの最大ファイルサイズは？',
-          answer: '公式仕様では、モバイルアプリからのアップロード時は最大2MB、デスクトップブラウザからのアップロード時は最大50MBです。対応形式はJPEG、PNG、GIFです。',
+          answer: "カスタムサムネイルは、YouTube Studioモバイルアプリからは2MBまで、パソコンのブラウザからは50MBまでアップロードできます。形式はJPGとPNGが案内されています。",
         },
         {
           question: 'PNGのサムネイルを圧縮するには？',
@@ -285,7 +285,7 @@ export const messagesJa: Messages = {
       resizer: [
         {
           question: '2026年現在のYouTube推奨サムネイルサイズは？',
-          answer: '標準的な動画サムネイルは解像度1280×720ピクセル（アスペクト比16:9）、最小幅640ピクセル、ファイルサイズ2MB未満が推奨されています。',
+          answer: "YouTubeの推奨は3840 × 2160ピクセル（16:9）、最小幅640ピクセルです。1280 × 720も一般的なサイズで、どちらの条件も満たします。モバイルからのアップロードは2MB未満（パソコンは50MBまで）にし、JPGまたはPNGで保存してください。",
         },
         {
           question: 'サムネイル用に画像をリサイズする方法は？',
@@ -603,7 +603,7 @@ export const messagesJa: Messages = {
       thumbnailTester: [
         {
           question: 'YouTubeのサムネイルの推奨サイズは？',
-          answer: '1280 × 720ピクセル（16:9）、幅は最低640ピクセルで、JPG・PNG・GIF形式の2MB未満の画像をアップロードします。同じ画像が関連動画では幅約168ピクセル、スマホでは画面幅いっぱいに表示されるので、公開前に小さいサイズで確認しましょう。',
+          answer: "16:9、幅は最低640 pxにしてください。YouTubeの推奨は3840 × 2160で、1280 × 720も使えます。JPGまたはPNGで保存し、スマホからアップロードするなら2MB未満（パソコンは50MBまで）に。同じ画像が関連動画では幅約168 px、スマホでは全幅で表示されるので、公開前に小さいサイズでも確認しましょう。",
         },
         {
           question: 'サムネイルはどこかにアップロードされる？',
@@ -1581,7 +1581,7 @@ export const messagesJa: Messages = {
       checkTitle: 'タイトル文字数が100文字以内に収まっている',
       checkMobile: '重要なフックが冒頭50文字以内に収まっている（モバイル対応）',
       checkImage: 'サムネイル画像が正しく設定されている',
-      checkSize: '画像サイズがYouTube上限の2MB未満である',
+      checkSize: "画像サイズがモバイルアップロード上限の2MB未満である",
       checkSafeZone: 'ShortsのセーフゾーンにUI被りがない（縦型の場合）',
       checkDisclosure: 'プロモーション表記やアフィリエイト開示が含まれている',
       confirmAccuracy: 'タイトルとサムネイルは動画の内容を正確に表している',
@@ -1649,7 +1649,7 @@ export const messagesJa: Messages = {
           {
             id: 'thumb-size',
             title: 'サムネイルの解像度、比率、ファイルサイズが適合している',
-            description: '比率16:9（推奨1280×720、最小幅640px）、JPEGまたはPNG形式。YouTube Studioモバイルアプリの上限は2MB厳格です。',
+            description: "比率16:9（YouTubeの推奨は3840×2160、1280×720も可、最小幅640px）、JPGまたはPNG形式。YouTube Studioモバイルアプリは2MBまで、パソコンからは50MBまでアップロードできます。",
           },
           {
             id: 'thumb-mobile',
@@ -1761,7 +1761,7 @@ export const messagesJa: Messages = {
         title: 'YouTubeサムネイルのサイズ：1280×720、2MB制限とCTRのコツ',
         category: 'ビジュアル表現',
         readTime: '読了目安 6分',
-        description: 'YouTubeサムネイルのサイズは1280×720ピクセル、比率16:9、2MB未満、JPG・PNG・GIF形式。公式の制限、セーフゾーン、リサイズと圧縮の方法を解説します。',
+        description: "YouTubeが推奨するサムネイルは3840×2160（16:9）で、1280×720も使えます。容量はモバイル2MB、パソコン50MBまで、形式はJPGまたはPNG。セーフゾーンやリサイズ・圧縮の方法も解説します。",
       },
       'decoding-youtube-rpm': {
         title: 'YouTube RPMの仕組みを解剖: クリエイターの真の手取り収益とは（2026年版）',

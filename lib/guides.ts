@@ -46,7 +46,7 @@ export const guides: GuideItem[] = [
     category: 'Visual Packaging',
     readTime: '6 min read',
     description:
-      'YouTube thumbnail size is 1280×720 pixels at 16:9, under 2 MB, in JPG, PNG or GIF. See the official limits, safe zones and how to resize or compress yours.',
+      "YouTube recommends 3840×2160 thumbnails at 16:9, and 1280×720 still works. Files can be 2 MB on mobile and 50 MB on desktop, in JPG or PNG. See safe zones and how to resize or compress yours.",
     lastVerified: 'October 2026',
     officialSources: [
       {
@@ -57,9 +57,9 @@ export const guides: GuideItem[] = [
     ],
     contentSections: [
       {
-        heading: '1. YouTube thumbnail size in 2026: 1280×720 pixels, 16:9, under 2 MB',
-        body: 'According to official YouTube platform specifications, the standard YouTube thumbnail size is 1280×720 pixels with a 16:9 aspect ratio and a minimum width of 640 pixels. Supported file formats include JPG, GIF, and PNG (with JPEG or PNG officially recommended). A critical distinction exists regarding upload file size: mobile video thumbnail uploads enforce a strict 2 MB ceiling, whereas desktop web uploads accommodate files up to 50 MB. For YouTube Shorts, thumbnails use a 9:16 vertical aspect ratio (1080×1920); custom uploads cannot be added after publishing, so you must select your preferred frame during mobile upload. To update existing videos, see our walkthrough on how to change a YouTube thumbnail.',
-        keyTakeaway: 'Standardize on a YouTube thumbnail size of 1280×720 (16:9) in JPEG or PNG, keeping file weight under 2 MB for universal mobile and desktop upload compatibility.',
+        heading: "1. YouTube thumbnail size in 2026: 3840×2160 recommended, 1280×720 still works",
+        body: "YouTube’s help page recommends 3840×2160 pixels for video thumbnails, at a 16:9 aspect ratio, with a minimum width of 640 pixels. 1280×720 is still a common size and meets both rules, so existing templates keep working. Upload as JPG or PNG. The file size limit depends on where you upload: 2 MB in the YouTube Studio mobile app and 50 MB on desktop. Shorts thumbnails use 9:16, with 2160×3840 recommended and a minimum height of 640 pixels.",
+        keyTakeaway: "Design at 16:9, export at 3840×2160 if you can (1280×720 also works), save as JPG or PNG, and stay under 2 MB if you upload from your phone.",
       },
       {
         heading: '2. YouTube thumbnail aspect ratio and framing standards',

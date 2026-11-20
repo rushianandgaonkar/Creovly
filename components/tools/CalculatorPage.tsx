@@ -9,6 +9,7 @@ import { useI18n, LocalizedLink } from '@/lib/i18n';
 import { toolSeoContent } from '@/config/tool-guidance-i18n';
 import { revenueExplainer } from '@/config/revenue-explainer';
 import { translations } from '@/config/i18n';
+import { ToolAbout } from './ContentToolPage';
 
 export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; slug: string }) {
   const { t, locale } = useI18n();
@@ -28,6 +29,8 @@ export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; s
         return t.calculator.watchHours.title;
       case 'monetization':
         return t.calculator.monetization.title;
+      default:
+        return definition.title;
     }
   };
 
@@ -41,12 +44,14 @@ export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; s
         return t.calculator.watchHours.note;
       case 'monetization':
         return t.calculator.monetization.note;
+      default:
+        return definition.note;
     }
   };
 
   return (
     <ToolPageShell
-      title={getLocalizedTitle()}
+      title={kind === 'cpm' ? tool.title : getLocalizedTitle()}
       description={translations[locale]?.tools[slug]?.description || tool.description}
       category={t.tools.categories.moneyGrowth.label}
       categoryHref="/tools"
@@ -115,6 +120,7 @@ export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; s
               </p>
             </div>
           )}
+          {kind === 'cpm' && <ToolAbout slug={slug} />}
           {kind === 'watch-hours' && (
             <div>
               <p className="text-xs">

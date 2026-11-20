@@ -610,6 +610,89 @@ const allPages = [
     `,
   },
   {
+    filename: 'youtube-banner-maker.png',
+    category: 'THUMBNAILS & SHORTS',
+    tone: '#0070f3',
+    glow: 'rgba(0, 112, 243, 0.25)',
+    title: 'YouTube Banner Maker',
+    description: 'Add your channel name, colours or a photo, preview TV, desktop and phone crops, and download a 2560 x 1440 banner.',
+    pills: ['2560x1440 Export', 'Safe Area Guide', 'TV, Desktop, Phone'],
+    visual: `
+      <div style="background:#131b2e;border:1px solid rgba(0,112,243,0.3);border-radius:18px;padding:24px;width:100%;height:100%;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 40px rgba(0,0,0,0.5);">
+        <div style="font-size:13px;font-family:monospace;color:#93c5fd;font-weight:700;">Example banner, 2560 x 1440</div>
+        <div style="position:relative;width:100%;aspect-ratio:16/9;background:#431407;border-radius:10px;display:flex;align-items:center;justify-content:center;">
+          <div style="position:absolute;left:19.8%;right:19.8%;top:35.3%;bottom:35.3%;border:2px dashed #fdba74;"></div>
+          <span style="font-size:28px;font-weight:900;color:#f8fafc;">Your Channel</span>
+        </div>
+        <div style="display:flex;gap:16px;font-size:14px;font-family:monospace;color:#94a3b8;"><span>TV</span><span>Desktop</span><span style="color:#fdba74;">Phone 1546 x 423</span></div>
+      </div>
+    `,
+  },
+  {
+    filename: 'youtube-thumbnail-size.png',
+    category: 'THUMBNAILS & SHORTS',
+    tone: '#0070f3',
+    glow: 'rgba(0, 112, 243, 0.25)',
+    title: 'YouTube Thumbnail Size Checker',
+    description: 'The current YouTube thumbnail size, ratio and file limits, with a checker that reads your image locally.',
+    pills: ['3840×2160 Recommended', '16:9 and 9:16', '2 MB Mobile, 50 MB Desktop'],
+    visual: `
+      <div style="background:#131b2e;border:1px solid rgba(0,112,243,0.3);border-radius:18px;padding:24px;width:100%;height:100%;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 40px rgba(0,0,0,0.5);">
+        <div style="font-size:13px;font-family:monospace;color:#93c5fd;font-weight:700;">Video thumbnail</div>
+        <div style="font-size:40px;font-weight:900;color:#f8fafc;font-family:monospace;">3840 × 2160</div>
+        <div style="display:flex;flex-direction:column;gap:8px;"><div style="display:flex;justify-content:space-between;font-size:14px;font-family:monospace;"><span style="color:#94a3b8;">Minimum width</span><span style="color:#f8fafc;">640 px</span></div><div style="display:flex;justify-content:space-between;font-size:14px;font-family:monospace;"><span style="color:#94a3b8;">Ratio</span><span style="color:#f8fafc;">16:9</span></div><div style="display:flex;justify-content:space-between;font-size:14px;font-family:monospace;"><span style="color:#94a3b8;">Formats</span><span style="color:#f8fafc;">JPG or PNG</span></div></div>
+      </div>
+    `,
+  },
+  {
+    filename: 'best-time-to-post-on-youtube.png',
+    category: 'TITLE TOOLS',
+    tone: '#6366f1',
+    glow: 'rgba(99, 102, 241, 0.25)',
+    title: 'Best Time to Post on YouTube',
+    description: "Turn your audience's peak hour into a week of publish times, in your time zone and theirs.",
+    pills: ['From Your Studio Data', 'Any Two Time Zones', 'Daylight Saving Aware'],
+    visual: `
+      <div style="background:#191836;border:1px solid rgba(99,102,241,0.3);border-radius:18px;padding:24px;width:100%;height:100%;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 40px rgba(0,0,0,0.5);">
+        <div style="font-size:13px;font-family:monospace;color:#a5b4fc;font-weight:700;">Example: 2 hours before a 6 PM peak</div>
+        <div style="font-size:40px;font-weight:900;color:#f8fafc;font-family:monospace;">4:00 PM</div>
+        <div style="display:flex;flex-direction:column;gap:8px;"><div style="display:flex;justify-content:space-between;font-size:14px;font-family:monospace;"><span style="color:#94a3b8;">Fri</span><span style="color:#f8fafc;">4:00 PM</span></div><div style="display:flex;justify-content:space-between;font-size:14px;font-family:monospace;"><span style="color:#94a3b8;">Sat</span><span style="color:#f8fafc;">4:00 PM</span></div><div style="display:flex;justify-content:space-between;font-size:14px;font-family:monospace;"><span style="color:#94a3b8;">Sun</span><span style="color:#f8fafc;">4:00 PM</span></div></div>
+      </div>
+    `,
+  },
+  {
+    filename: 'youtube-hashtag-generator.png',
+    category: 'TITLE TOOLS',
+    tone: '#6366f1',
+    glow: 'rgba(99, 102, 241, 0.25)',
+    title: 'YouTube Hashtag Generator',
+    description: 'Turn your video topic into clean YouTube hashtags, pick the ones you want and copy them.',
+    pills: ['No Spaces, No Duplicates', 'Optional #Shorts', 'Capped at 15'],
+    visual: `
+      <div style="background:#191836;border:1px solid rgba(99,102,241,0.3);border-radius:18px;padding:24px;width:100%;height:100%;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 40px rgba(0,0,0,0.5);">
+        <div style="font-size:13px;font-family:monospace;color:#a5b4fc;font-weight:700;">Example: home workout, no equipment</div>
+        <div style="font-size:40px;font-weight:900;color:#f8fafc;font-family:monospace;">#HomeWorkout</div>
+        <div style="display:flex;flex-direction:column;gap:8px;"><div style="display:flex;justify-content:space-between;font-size:14px;font-family:monospace;"><span style="color:#94a3b8;">#NoEquipment</span><span style="color:#f8fafc;"></span></div><div style="display:flex;justify-content:space-between;font-size:14px;font-family:monospace;"><span style="color:#94a3b8;">#Workout</span><span style="color:#f8fafc;"></span></div><div style="display:flex;justify-content:space-between;font-size:14px;font-family:monospace;"><span style="color:#94a3b8;">#Fitness</span><span style="color:#f8fafc;"></span></div></div>
+      </div>
+    `,
+  },
+  {
+    filename: 'youtube-cpm-calculator.png',
+    category: 'MONEY & GROWTH',
+    tone: '#0d9488',
+    glow: 'rgba(13, 148, 136, 0.25)',
+    title: 'YouTube CPM Calculator',
+    description: 'Estimate ad earnings from views, monetized playback rate and playback-based CPM after the creator share.',
+    pills: ['Playback-Based CPM', '55% Long-Form Share', 'Gross and Net'],
+    visual: `
+      <div style="background:#112423;border:1px solid rgba(13,148,136,0.3);border-radius:18px;padding:24px;width:100%;height:100%;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 40px rgba(0,0,0,0.5);">
+        <div style="font-size:13px;font-family:monospace;color:#5eead4;font-weight:700;">Example: 100,000 views at $8 CPM</div>
+        <div style="font-size:40px;font-weight:900;color:#f8fafc;font-family:monospace;">$264</div>
+        <div style="display:flex;flex-direction:column;gap:8px;"><div style="display:flex;justify-content:space-between;font-size:14px;font-family:monospace;"><span style="color:#94a3b8;">Monetized playbacks</span><span style="color:#f8fafc;">60,000</span></div><div style="display:flex;justify-content:space-between;font-size:14px;font-family:monospace;"><span style="color:#94a3b8;">Gross ad revenue</span><span style="color:#f8fafc;">$480</span></div><div style="display:flex;justify-content:space-between;font-size:14px;font-family:monospace;"><span style="color:#94a3b8;">Creator share</span><span style="color:#f8fafc;">55%</span></div></div>
+      </div>
+    `,
+  },
+  {
     filename: 'youtube-thumbnail-blueprint.png',
     category: 'CREATOR EDITORIAL GUIDE',
     tone: '#6366f1',

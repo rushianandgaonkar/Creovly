@@ -49,7 +49,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       seoTitle: 'YouTube Thumbnail Size, Limits & CTR Guide',
       category: 'Visual Packaging',
       readTime: '6 min read',
-      description: 'YouTube thumbnail size is 1280×720 pixels at 16:9, under 2 MB, in JPG, PNG or GIF. See the official limits, safe zones and how to resize or compress yours.',
+      description: "YouTube recommends 3840×2160 thumbnails at 16:9, and 1280×720 still works. Files can be 2 MB on mobile and 50 MB on desktop, in JPG or PNG. See safe zones and how to resize or compress yours.",
       officialSources: [
         {
           label: 'YouTube Help: Add video thumbnails',
@@ -58,9 +58,9 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       ],
       contentSections: [
         {
-          heading: '1. YouTube thumbnail size in 2026: 1280×720 pixels, 16:9, under 2 MB',
-          body: 'According to official YouTube platform specifications, the standard YouTube thumbnail size is 1280×720 pixels with a 16:9 aspect ratio and a minimum width of 640 pixels. Supported file formats include JPG, GIF, and PNG (with JPEG or PNG officially recommended). A critical distinction exists regarding upload file size: mobile video thumbnail uploads enforce a strict 2 MB ceiling, whereas desktop web uploads accommodate files up to 50 MB. For YouTube Shorts, thumbnails use a 9:16 vertical aspect ratio (1080×1920); custom uploads cannot be added after publishing, so you must select your preferred frame during mobile upload. To update existing videos, see our walkthrough on how to change a YouTube thumbnail.',
-          keyTakeaway: 'Standardize on a YouTube thumbnail size of 1280×720 (16:9) in JPEG or PNG, keeping file weight under 2 MB for universal mobile and desktop upload compatibility.',
+          heading: "1. YouTube thumbnail size in 2026: 3840×2160 recommended, 1280×720 still works",
+          body: "YouTube’s help page recommends 3840×2160 pixels for video thumbnails, at a 16:9 aspect ratio, with a minimum width of 640 pixels. 1280×720 is still a common size and meets both rules, so existing templates keep working. Upload as JPG or PNG. The file size limit depends on where you upload: 2 MB in the YouTube Studio mobile app and 50 MB on desktop. Shorts thumbnails use 9:16, with 2160×3840 recommended and a minimum height of 640 pixels.",
+          keyTakeaway: "Design at 16:9, export at 3840×2160 if you can (1280×720 also works), save as JPG or PNG, and stay under 2 MB if you upload from your phone.",
         },
         {
           heading: '2. YouTube thumbnail aspect ratio and framing standards',
@@ -97,11 +97,11 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       faqs: [
         {
           question: 'What size is a YouTube thumbnail?',
-          answer: 'The recommended YouTube thumbnail size is 1280 × 720 pixels with a 16:9 aspect ratio and a minimum width of 640 pixels. Files must remain under 2 MB for mobile Studio uploads and under 50 MB on desktop, formatted as JPG, PNG, or GIF.',
+          answer: "YouTube recommends 3840 × 2160 pixels at 16:9, with a minimum width of 640 pixels; 1280 × 720 also works. Use JPG or PNG. The mobile app accepts files up to 2 MB and desktop uploads up to 50 MB.",
         },
         {
           question: "What are YouTube's official thumbnail dimensions and file size limits?",
-          answer: "YouTube recommends a 16:9 aspect ratio with 1280×720 pixels (minimum width 640px) in JPG, PNG, or WebP format. Mobile uploads enforce a strict 2 MB ceiling, while desktop web uploads allow up to 50 MB.",
+          answer: "YouTube recommends 3840 × 2160 pixels at 16:9, with a minimum width of 640 pixels; 1280 × 720 also works. Use JPG or PNG. The mobile app accepts files up to 2 MB and desktop uploads up to 50 MB.",
         },
         {
           question: "Where is the thumbnail timestamp dead zone?",
@@ -610,7 +610,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       seoTitle: 'Miniaturas de YouTube: tamaño, límites y CTR',
       category: 'Presentación visual',
       readTime: '6 min de lectura',
-      description: 'El tamaño de miniatura de YouTube es 1280×720 píxeles en 16:9, menos de 2 MB, en JPG, PNG o GIF. Consulta límites oficiales, zonas seguras y cómo redimensionar o comprimir.',
+      description: "YouTube recomienda miniaturas de 3840×2160 en 16:9, y 1280×720 sigue funcionando. Hasta 2 MB en móvil y 50 MB en ordenador, en JPG o PNG. Consulta zonas seguras y cómo redimensionar o comprimir.",
       officialSources: [
         {
           label: 'Ayuda de YouTube: Añadir miniaturas de vídeo',
@@ -619,9 +619,9 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       ],
       contentSections: [
         {
-          heading: '1. Tamaño de miniatura de YouTube en 2026: dimensiones oficiales y peso máximo',
-          body: 'Según la documentación oficial de YouTube, las miniaturas personalizadas deben utilizar una relación de aspecto 16:9 con una resolución recomendada de 1280×720 píxeles y un ancho mínimo de 640 píxeles. Los formatos admitidos son JPG, GIF y PNG. Para subidas, YouTube recomienda JPEG o PNG. Existe una distinción operativa crucial respecto al tamaño: la subida desde la aplicación móvil YouTube Studio impone un límite estricto de 2 MB, mientras que desde la web de escritorio se admiten archivos de hasta 50 MB. Mantener tus exportaciones por debajo de 2 MB con perfil sRGB garantiza la compatibilidad universal en cualquier dispositivo.',
-          keyTakeaway: 'Estandariza en resolución 1280×720 (16:9) en formato JPEG o PNG, manteniéndote por debajo de 2 MB para compatibilidad universal.',
+          heading: "1. Tamaño de miniatura de YouTube en 2026: 3840×2160 recomendado, 1280×720 sigue funcionando",
+          body: "La ayuda de YouTube recomienda 3840×2160 píxeles para las miniaturas de vídeo, con relación 16:9 y un ancho mínimo de 640 píxeles. 1280×720 sigue siendo un tamaño habitual y cumple ambas reglas, así que tus plantillas siguen sirviendo. Súbela en JPG o PNG. El límite de peso depende de dónde la subas: 2 MB en la app móvil de YouTube Studio y 50 MB en ordenador. Las miniaturas de Shorts usan 9:16, con 2160×3840 recomendado y una altura mínima de 640 píxeles.",
+          keyTakeaway: "Diseña en 16:9, exporta a 3840×2160 si puedes (1280×720 también vale), guarda en JPG o PNG y no superes 2 MB si subes desde el móvil.",
         },
         {
           heading: '2. Legibilidad pensada para móvil y prueba a escala reducida',
@@ -653,7 +653,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       faqs: [
         {
           question: "¿Cuáles son las dimensiones y límites de peso oficiales para miniaturas de YouTube?",
-          answer: "YouTube recomienda una relación 16:9 con resolución de 1280×720 píxeles (mínimo 640px) en formato JPG, PNG o WebP. Las subidas móviles exigen un límite estricto de 2 MB, mientras que en escritorio se admiten hasta 50 MB.",
+          answer: "YouTube recomienda 3840 × 2160 píxeles en 16:9, con un ancho mínimo de 640 píxeles; 1280 × 720 también funciona. Usa JPG o PNG. La app móvil acepta hasta 2 MB y el ordenador hasta 50 MB.",
         },
         {
           question: "¿Dónde está la zona muerta de la marca de tiempo en la miniatura?",
@@ -1162,7 +1162,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       title: 'YouTubeサムネイルのサイズ：1280×720、2MB制限とCTRのコツ',
       category: 'ビジュアル設計',
       readTime: '読了目安 6分',
-      description: 'YouTubeサムネイルのサイズは1280×720ピクセル、比率16:9、2MB未満、JPG・PNG・GIF形式。公式の制限、セーフゾーン、リサイズと圧縮の方法を解説します。',
+      description: "YouTubeが推奨するサムネイルは3840×2160（16:9）で、1280×720も使えます。容量はモバイル2MB、パソコン50MBまで、形式はJPGまたはPNG。セーフゾーンやリサイズ・圧縮の方法も解説します。",
       officialSources: [
         {
           label: 'YouTubeヘルプ：動画のサムネイルを追加する',
@@ -1171,9 +1171,9 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       ],
       contentSections: [
         {
-          heading: '1. 2026年のYouTubeサムネイルサイズ：公式解像度とファイルサイズ上限',
-          body: 'YouTubeの公式規定によると、カスタムサムネイルはアスペクト比16:9、推奨解像度1280×720ピクセル（最小幅640ピクセル）を使用する必要があります。対応形式はJPG、GIF、PNGです。運用上の重要事項として、YouTube Studioモバイルアプリからのアップロードでは厳格な2MB上限が適用されます（デスクトップWebは最大50MB）。2MB以下かつsRGBエンコーディングを保つことが、あらゆる環境で失敗しない基準です。',
-          keyTakeaway: '解像度1280×720（16:9）、JPEGまたはPNG形式、ファイルサイズ2MB以下を徹底します。',
+          heading: "1. 2026年のYouTubeサムネイルサイズ：推奨は3840×2160、1280×720も可",
+          body: "YouTubeのヘルプでは、動画のサムネイルに3840×2160ピクセル、アスペクト比16:9、最小幅640ピクセルを推奨しています。1280×720も一般的なサイズで両方の条件を満たすため、既存のテンプレートはそのまま使えます。形式はJPGまたはPNGです。容量の上限はアップロード方法で異なり、YouTube Studioモバイルアプリでは2MB、パソコンでは50MBです。ショートのサムネイルは9:16で、推奨は2160×3840、最小の高さは640ピクセルです。",
+          keyTakeaway: "16:9で作成し、可能なら3840×2160で書き出し（1280×720も可）、JPGまたはPNGで保存。スマホからアップロードするなら2MB未満に抑えましょう。",
         },
         {
           heading: '2. モバイルファーストの視認性と縮小表示テスト',
@@ -1205,7 +1205,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       faqs: [
         {
           question: "YouTubeサムネイルの公式推奨サイズとファイル容量上限は？",
-          answer: "推奨解像度は1280×720ピクセル（16:9、最小幅640px）、形式はJPG・PNG・WebPです。モバイルアプリ経由は2MB上限、PCブラウザは最大50MBまで対応しています。",
+          answer: "YouTubeの推奨は3840 × 2160ピクセル（16:9）、最小幅640ピクセルで、1280 × 720も使えます。形式はJPGまたはPNG。モバイルアプリは2MBまで、パソコンからは50MBまでアップロードできます。",
         },
         {
           question: "サムネイルの右下デッドゾーンとは何ですか？",
@@ -1708,7 +1708,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       seoTitle: 'Miniatures YouTube : dimensions, limites et CTR',
       category: 'Packaging visuel',
       readTime: '6 min de lecture',
-      description: 'La taille d’une miniature YouTube est de 1280×720 pixels en 16:9, sous 2 Mo, au format JPG, PNG ou GIF. Limites officielles, zones de sécurité, redimensionnement et compression.',
+      description: "YouTube recommande des miniatures de 3840×2160 en 16:9, et 1280×720 fonctionne toujours. Jusqu’à 2 Mo sur mobile et 50 Mo sur ordinateur, en JPG ou PNG. Zones sûres, redimensionnement et compression.",
       officialSources: [
         {
           label: 'Aide YouTube : Ajouter des miniatures vidéo',
@@ -1717,9 +1717,9 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       ],
       contentSections: [
         {
-          heading: '1. Taille de miniature YouTube en 2026 : dimensions officielles et poids maximal',
-          body: 'Selon la documentation officielle de YouTube, les miniatures personnalisées doivent utiliser un format 16:9 avec une résolution recommandée de 1280×720 pixels et une largeur minimale de 640 pixels. Les formats pris en charge sont JPG, GIF et PNG. Un point critique concerne le poids : l’application mobile YouTube Studio impose une limite stricte de 2 Mo, alors que la version web pour ordinateur accepte jusqu’à 50 Mo. Conservez vos fichiers sous 2 Mo en sRGB pour une compatibilité universelle.',
-          keyTakeaway: 'Adoptez une résolution de 1280×720 (16:9) en JPEG ou PNG sous 2 Mo pour garantir la compatibilité mobile et ordinateur.',
+          heading: "1. Taille de miniature YouTube en 2026 : 3840×2160 recommandé, 1280×720 toujours valable",
+          body: "L’aide YouTube recommande 3840×2160 pixels pour les miniatures de vidéo, au ratio 16:9, avec une largeur minimale de 640 pixels. 1280×720 reste une taille courante et respecte ces deux règles, vos modèles existants restent donc valables. Importez en JPG ou PNG. La limite de poids dépend de l’endroit d’où vous importez : 2 Mo dans l’application mobile YouTube Studio et 50 Mo sur ordinateur. Les miniatures de Shorts sont en 9:16, avec 2160×3840 recommandé et une hauteur minimale de 640 pixels.",
+          keyTakeaway: "Créez en 16:9, exportez en 3840×2160 si possible (1280×720 convient aussi), enregistrez en JPG ou PNG et restez sous 2 Mo si vous importez depuis votre téléphone.",
         },
         {
           heading: '2. Lisibilité mobile et test à échelle réduite',
@@ -1751,7 +1751,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       faqs: [
         {
           question: "Quelles sont les dimensions et limites de taille officielles pour une miniature YouTube ?",
-          answer: "YouTube recommande un ratio 16:9 avec 1280×720 pixels (largeur minimale 640px) en JPG, PNG ou WebP. Les imports mobiles imposent une limite stricte de 2 Mo, tandis que le bureau autorise jusqu'à 50 Mo.",
+          answer: "YouTube recommande 3840 × 2160 pixels en 16:9, avec une largeur minimale de 640 pixels ; 1280 × 720 fonctionne aussi. Utilisez JPG ou PNG. L’application mobile accepte jusqu’à 2 Mo et l’ordinateur jusqu’à 50 Mo.",
         },
         {
           question: "Où se trouve la zone masquée par le minuteur sur la miniature ?",
@@ -2256,7 +2256,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       seoTitle: 'YouTube-Thumbnails: Maße, Limits & Klickrate',
       category: 'Visuelle Gestaltung',
       readTime: '6 Min. Lesezeit',
-      description: 'Die YouTube-Thumbnail-Größe beträgt 1280×720 Pixel im Format 16:9, unter 2 MB, als JPG, PNG oder GIF. Offizielle Limits, sichere Zonen sowie Verkleinern und Komprimieren.',
+      description: "YouTube empfiehlt Thumbnails mit 3840×2160 im Format 16:9, 1280×720 funktioniert weiterhin. Bis 2 MB mobil und 50 MB am Computer, als JPG oder PNG. Mit sicheren Bereichen, Skalieren und Komprimieren.",
       officialSources: [
         {
           label: 'YouTube-Hilfe: Benutzerdefinierte Video-Thumbnails hinzufügen',
@@ -2265,9 +2265,9 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       ],
       contentSections: [
         {
-          heading: '1. YouTube-Thumbnail-Größe 2026: offizielle Abmessungen und Dateigröße',
-          body: 'Laut offizieller YouTube-Dokumentation sollten benutzerdefinierte Thumbnails ein Seitenverhältnis von 16:9 mit einer empfohlenen Auflösung von 1280×720 Pixeln und einer Mindestbreite von 640 Pixeln aufweisen. Als Dateiformate werden JPG, GIF und PNG unterstützt. Ein entscheidender Unterschied besteht bei der Dateigröße: Uploads über die YouTube Studio App auf Mobilgeräten erzwingen ein striktes Limit von 2 MB, während Desktop-Uploads bis zu 50 MB erlauben. Ein Export unter 2 MB mit sRGB-Farbprofil gewährleistet universelle Kompatibilität.',
-          keyTakeaway: '1280×720 Pixel (16:9) in JPEG oder PNG unter 2 MB ist der Standard für reibungslose Uploads auf Desktop und Smartphone.',
+          heading: "1. YouTube-Thumbnail-Größe 2026: 3840×2160 empfohlen, 1280×720 funktioniert weiter",
+          body: "Die YouTube-Hilfe empfiehlt für Video-Thumbnails 3840×2160 Pixel im Seitenverhältnis 16:9 und eine Mindestbreite von 640 Pixeln. 1280×720 ist weiterhin eine gängige Größe und erfüllt beide Regeln, bestehende Vorlagen funktionieren also weiter. Lade das Bild als JPG oder PNG hoch. Das Größenlimit hängt davon ab, wo du hochlädst: 2 MB in der YouTube Studio App und 50 MB am Computer. Shorts-Thumbnails nutzen 9:16, empfohlen sind 2160×3840 bei mindestens 640 Pixeln Höhe.",
+          keyTakeaway: "Gestalte in 16:9, exportiere wenn möglich in 3840×2160 (1280×720 geht auch), speichere als JPG oder PNG und bleib unter 2 MB, wenn du vom Handy hochlädst.",
         },
         {
           heading: '2. Mobile-First-Lesbarkeit und Verkleinerungstest',
@@ -2299,7 +2299,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       faqs: [
         {
           question: "Welche Maße und Dateigrößen gelten offiziell für YouTube-Thumbnails?",
-          answer: "YouTube empfiehlt ein 16:9-Format mit 1280×720 Pixeln (Mindestbreite 640px) in JPG, PNG oder WebP. Mobile Uploads sind auf maximal 2 MB beschränkt, im Desktop-Browser auf 50 MB.",
+          answer: "YouTube empfiehlt 3840 × 2160 Pixel im Format 16:9 bei mindestens 640 Pixeln Breite; 1280 × 720 funktioniert auch. Nutze JPG oder PNG. Die mobile App akzeptiert bis 2 MB, am Computer sind bis 50 MB möglich.",
         },
         {
           question: "Wo befindet sich der tote Winkel durch den Zeitstempel?",
@@ -2804,7 +2804,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       seoTitle: 'Miniaturas do YouTube: tamanho, limites e CTR',
       category: 'Identidade visual',
       readTime: '6 min de leitura',
-      description: 'O tamanho da miniatura do YouTube é 1280×720 pixels em 16:9, menos de 2 MB, em JPG, PNG ou GIF. Limites oficiais, zonas seguras e como redimensionar ou comprimir.',
+      description: "O YouTube recomenda miniaturas de 3840×2160 em 16:9, e 1280×720 continua funcionando. Até 2 MB no celular e 50 MB no computador, em JPG ou PNG. Veja zonas seguras e como redimensionar ou comprimir.",
       officialSources: [
         {
           label: 'Ajuda do YouTube: Adicionar miniaturas de vídeo',
@@ -2813,9 +2813,9 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       ],
       contentSections: [
         {
-          heading: '1. Tamanho da miniatura do YouTube em 2026: dimensões oficiais e limite de upload',
-          body: 'De acordo com as normas oficiais do YouTube, as miniaturas personalizadas devem ter proporção 16:9 com resolução recomendada de 1280×720 pixels e largura mínima de 640 pixels nos formatos JPG, GIF ou PNG. Uma distinção crítica: o app YouTube Studio para celular restringe envios a no máximo 2 MB, enquanto o navegador para desktop aceita até 50 MB. Manter suas imagens abaixo de 2 MB em sRGB garante envios confiáveis em qualquer dispositivo.',
-          keyTakeaway: 'Exporte em 1280×720 (16:9) em JPEG ou PNG abaixo de 2 MB para compatibilidade universal.',
+          heading: "1. Tamanho da miniatura do YouTube em 2026: 3840×2160 recomendado, 1280×720 ainda funciona",
+          body: "A ajuda do YouTube recomenda 3840×2160 pixels para miniaturas de vídeo, na proporção 16:9, com largura mínima de 640 pixels. 1280×720 continua sendo um tamanho comum e cumpre as duas regras, então seus modelos atuais continuam valendo. Envie em JPG ou PNG. O limite de tamanho depende de onde você envia: 2 MB no app YouTube Studio para celular e 50 MB no computador. Miniaturas de Shorts usam 9:16, com 2160×3840 recomendado e altura mínima de 640 pixels.",
+          keyTakeaway: "Crie em 16:9, exporte em 3840×2160 se puder (1280×720 também serve), salve em JPG ou PNG e fique abaixo de 2 MB se enviar pelo celular.",
         },
         {
           heading: '2. Foco em dispositivos móveis e teste em escala reduzida',
@@ -2847,7 +2847,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       faqs: [
         {
           question: "Quais são as dimensões e limites de tamanho oficiais para miniaturas do YouTube?",
-          answer: "O YouTube recomenda proporção 16:9 com 1280×720 pixels (mínimo de 640px) em JPG, PNG ou WebP. Uploads via app móvel têm limite estrito de 2 MB, enquanto no desktop o limite é de 50 MB.",
+          answer: "O YouTube recomenda 3840 × 2160 pixels em 16:9, com largura mínima de 640 pixels; 1280 × 720 também funciona. Use JPG ou PNG. O app para celular aceita até 2 MB e o computador até 50 MB.",
         },
         {
           question: "Onde fica a zona morta do marcador de tempo na miniatura?",
@@ -3351,7 +3351,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       title: '유튜브 썸네일 크기: 1280×720, 2MB 제한과 CTR 팁',
       category: '비주얼 패키징',
       readTime: '6분 분량',
-      description: '유튜브 썸네일 크기는 1280×720 픽셀, 비율 16:9, 2MB 미만, JPG·PNG·GIF 형식입니다. 공식 제한, 안전 영역, 리사이즈와 압축 방법을 안내합니다.',
+      description: "유튜브 권장 썸네일 크기는 3840×2160(16:9)이며 1280×720도 사용할 수 있습니다. 모바일 2MB, PC 50MB까지, JPG 또는 PNG. 안전 영역과 크기 조정·압축 방법도 확인하세요.",
       officialSources: [
         {
           label: 'YouTube 고객센터: 동영상 썸네일 추가',
@@ -3360,9 +3360,9 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       ],
       contentSections: [
         {
-          heading: '1. 2026년 유튜브 썸네일 크기: 공식 해상도 및 파일 용량 제한',
-          body: '유튜브 공식 규정에 따르면 맞춤 썸네일은 16:9 화면비, 권장 해상도 1280×720 픽셀(최소 너비 640픽셀)을 사용해야 합니다. 지원 파일 형식은 JPG, GIF, PNG입니다. 실무에서 가장 중요한 차이는 용량입니다: 모바일 YouTube Studio 앱을 통한 업로드는 2MB 이하로 엄격히 제한되며, 데스크톱 웹에서는 최대 50MB까지 허용됩니다. sRGB 색상 프로필과 함께 2MB 이하로 저장하는 것이 모든 환경에서 업로드 실패를 방지하는 표준입니다.',
-          keyTakeaway: '해상도 1280×720(16:9), JPEG 또는 PNG 형식, 용량 2MB 이하를 유지하여 모든 기기에서 안정적으로 업로드하세요.',
+          heading: "1. 2026년 유튜브 썸네일 크기: 권장 3840×2160, 1280×720도 사용 가능",
+          body: "유튜브 고객센터는 동영상 썸네일에 3840×2160 픽셀, 16:9 비율, 최소 너비 640픽셀을 권장합니다. 1280×720도 여전히 널리 쓰이는 크기로 두 조건을 모두 충족하므로 기존 템플릿을 그대로 쓸 수 있습니다. 파일은 JPG 또는 PNG로 업로드하세요. 용량 제한은 업로드 위치에 따라 달라서 YouTube Studio 모바일 앱은 2MB, PC는 50MB입니다. 쇼츠 썸네일은 9:16이며 권장 크기는 2160×3840, 최소 높이는 640픽셀입니다.",
+          keyTakeaway: "16:9로 디자인하고 가능하면 3840×2160으로 내보내세요(1280×720도 가능). JPG 또는 PNG로 저장하고 휴대폰에서 올린다면 2MB 미만으로 맞추세요.",
         },
         {
           heading: '2. 모바일 중심 가독성과 15% 축소 테스트',
@@ -3394,7 +3394,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       faqs: [
         {
           question: "유튜브 썸네일 공식 권장 해상도와 파일 용량 한도는?",
-          answer: "유튜브는 16:9 화면비의 1280×720 픽셀(최소 너비 640px), JPG/PNG/WebP 형식을 권장합니다. 모바일 앱 업로드는 2MB 이하로 엄격히 제한되며 데스크톱 웹은 최대 50MB까지 가능합니다.",
+          answer: "유튜브 권장 크기는 3840 × 2160픽셀(16:9), 최소 너비 640픽셀이며 1280 × 720도 사용할 수 있습니다. JPG 또는 PNG를 쓰세요. 모바일 앱은 2MB, PC는 50MB까지 업로드할 수 있습니다.",
         },
         {
           question: "썸네일 우측 하단 데드존이란 무엇인가요?",
@@ -3897,7 +3897,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       seoTitle: 'Miniature YouTube: dimensioni, limiti e CTR',
       category: 'Packaging visivo',
       readTime: '6 min di lettura',
-      description: 'Le dimensioni di una miniatura YouTube sono 1280×720 pixel in 16:9, meno di 2 MB, in JPG, PNG o GIF. Limiti ufficiali, zone sicure e come ridimensionare o comprimere.',
+      description: "YouTube consiglia miniature da 3840×2160 in 16:9, e 1280×720 funziona ancora. Fino a 2 MB da smartphone e 50 MB da computer, in JPG o PNG. Scopri zone sicure e come ridimensionare o comprimere.",
       officialSources: [
         {
           label: 'Guida di YouTube: Aggiungere miniature dei video',
@@ -3906,9 +3906,9 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       ],
       contentSections: [
         {
-          heading: '1. Dimensioni miniatura YouTube nel 2026: misure ufficiali e peso massimo',
-          body: 'Secondo le specifiche ufficiali di YouTube, le miniature personalizzate devono adottare un rapporto 16:9 con risoluzione raccomandata di 1280×720 pixel e larghezza minima di 640 pixel. I formati supportati sono JPG, GIF e PNG. Esiste una distinzione operativa determinante per il peso: l’app mobile YouTube Studio impone un limite rigido di 2 MB, mentre il caricamento da desktop consente fino a 50 MB. Mantenere l’esportazione sotto i 2 MB con spazio colore sRGB garantisce il caricamento immediato su ogni dispositivo.',
-          keyTakeaway: 'Adotta la risoluzione 1280×720 (16:9) in formato JPEG o PNG sotto i 2 MB per una compatibilità universale su PC e smartphone.',
+          heading: "1. Dimensioni miniature YouTube nel 2026: consigliato 3840×2160, 1280×720 funziona ancora",
+          body: "La guida di YouTube consiglia 3840×2160 pixel per le miniature dei video, in formato 16:9, con una larghezza minima di 640 pixel. 1280×720 resta una dimensione comune e rispetta entrambe le regole, quindi i modelli che usi già restano validi. Caricala in JPG o PNG. Il limite di peso dipende da dove carichi: 2 MB nell’app mobile di YouTube Studio e 50 MB da computer. Le miniature degli Shorts sono in 9:16, con 2160×3840 consigliato e un’altezza minima di 640 pixel.",
+          keyTakeaway: "Progetta in 16:9, esporta in 3840×2160 se puoi (va bene anche 1280×720), salva in JPG o PNG e resta sotto i 2 MB se carichi dallo smartphone.",
         },
         {
           heading: '2. Leggibilità mobile e test in scala ridotta',
@@ -3940,7 +3940,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       faqs: [
         {
           question: "Quali sono le dimensioni e i limiti di peso ufficiali per le miniature di YouTube?",
-          answer: "YouTube consiglia un rapporto 16:9 con risoluzione di 1280×720 pixel (larghezza minima 640px) in formato JPG, PNG o WebP. Da mobile il limite è di 2 MB, mentre da desktop si arriva fino a 50 MB.",
+          answer: "YouTube consiglia 3840 × 2160 pixel in 16:9, con una larghezza minima di 640 pixel; anche 1280 × 720 funziona. Usa JPG o PNG. L’app mobile accetta fino a 2 MB e il computer fino a 50 MB.",
         },
         {
           question: "Dove si trova la zona d'ombra del minutaggio sulla miniatura?",
