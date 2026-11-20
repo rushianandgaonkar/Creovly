@@ -96,6 +96,13 @@ export const toolGuidance: Record<string, ToolGuidance> = {
   'youtube-thumbnail-tester': { related: [title, resizer, compressor] },
   'youtube-timestamp-generator': { related: [description, 'words-to-minutes-calculator', 'youtube-link-generator'] },
   'words-to-minutes-calculator': { related: ['youtube-timestamp-generator', title, description] },
+  'youtube-banner-maker': {
+    steps: [
+      { title: 'Add your name', body: 'Type your channel name and an optional tagline. The text sizes itself to fit the safe area.' },
+      { title: 'Style the background', body: 'Pick colours and a font, or add your own photo and darken it until the text reads clearly.' },
+      { title: 'Check and download', body: 'Switch between TV, desktop and phone previews, then download the 2560 x 1440 banner.' },
+    ], related: [banner, 'youtube-profile-picture-resizer', logo],
+  },
   'youtube-thumbnail-size': {
     steps: [
       { title: 'Choose video or Shorts', body: 'The recommended size, minimum, ratio and file limits update for the thumbnail type you pick.' },

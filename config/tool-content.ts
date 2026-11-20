@@ -7,6 +7,21 @@ import type { FAQItem } from '@/types';
 export interface ToolContent { about: string[]; source?: { href: string; label: string }; faqs: FAQItem[] }
 
 export const toolContent: Record<string, ToolContent> = {
+  'youtube-banner-maker': {
+    about: [
+      'YouTube recommends a 2560 × 1440 banner, at least 2048 × 1152, and 6 MB or smaller. TVs show the whole image, desktops show a 2560 × 423 strip across the middle, and phones show only the centre 1546 × 423. That centre box is the safe area: put your channel name and anything important there.',
+      'This banner maker lays your name and tagline inside the safe area automatically and shrinks the text to fit. Add a background colour or your own photo, preview each device, then download a 2560 × 1440 image ready to upload in YouTube Studio under Customization, Branding.',
+    ],
+    source: { href: 'https://support.google.com/youtube/answer/10456525', label: 'Read YouTube’s banner requirements' },
+    faqs: [
+      { question: 'What size should a YouTube banner be?', answer: '2560 × 1440 pixels is recommended. The minimum is 2048 × 1152 at 16:9, and the file must be 6 MB or smaller. This maker always exports 2560 × 1440.' },
+      { question: 'What is the YouTube banner safe area?', answer: 'The centre 1546 × 423 pixels of a 2560 × 1440 banner (1235 × 338 at the minimum size). It is the only part every device shows, so keep text and logos inside it.' },
+      { question: 'Why is my banner cropped on mobile?', answer: 'Phones show only the safe area in the middle of the banner. Anything outside it, including text near the edges, is cut off. Use the Phone preview to check.' },
+      { question: 'Can I use my own photo?', answer: 'Yes. Add a JPG, PNG or WebP and it fills the banner like a cover image. Use Darken photo to keep your text readable on busy pictures.' },
+      { question: 'What format does the banner download in?', answer: 'PNG at 2560 × 1440. If a detailed photo makes the PNG larger than 6 MB, the maker saves a JPG instead so it stays under YouTube’s limit.' },
+      { question: 'Is my photo uploaded anywhere?', answer: 'No. The banner is drawn in your browser and downloaded straight to your device.' },
+    ],
+  },
   'youtube-thumbnail-size': {
     about: [
       'YouTube’s help page recommends 3840 × 2160 pixels for video thumbnails and 2160 × 3840 for Shorts thumbnails. Use a 16:9 ratio for videos and 9:16 for Shorts. Video thumbnails must be at least 640 pixels wide. 1280 × 720 is the long-standing thumbnail size and still meets both rules.',

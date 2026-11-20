@@ -79,3 +79,22 @@ test('cpm calculator: playbacks, gross, creator share and RPM', () => {
   assert.ok(Math.abs(v['Effective ad RPM'] - 2.64) < 1e-9);
   assert.throws(() => calc.calculateCreator('cpm', { views: '100', rate: '101', cpm: '1', share: '55' }));
 });
+
+const banner = load('lib/banner-maker.ts');
+
+test('banner maker: safe area, cover fit and text fitting', () => {
+  assert.deepEqual(banner.centeredRect(1546, 423), { x: 507, y: 508.5, width: 1546, height: 423 });
+  const square = banner.coverRect(1000, 1000);
+  assert.equal(square.width, 2560); assert.equal(square.x, 0); assert.equal(square.y, (1440 - 2560) / 2);
+  const wide = banner.coverRect(4000, 1000);
+  assert.equal(wide.height, 1440); assert.equal(wide.y, 0);
+  assert.equal(banner.fitFontSize((s) => s * 10, 1000, 150), 100);
+  assert.equal(banner.fitFontSize(() => 99999, 1000, 150, 24), 24);
+  const measure = (text, size) => text.length * size * 0.6;
+  const long = banner.textLayout({ ...banner.DEFAULT_DESIGN, title: 'A very long channel name that will not fit', align: 'left' }, measure);
+  assert.ok(long.titleSize < 150 && long.titleSize * 0.6 * 42 <= long.maxWidth);
+  assert.equal(long.x, 507 + 48);
+  const none = banner.textLayout({ ...banner.DEFAULT_DESIGN, tagline: '' }, measure);
+  assert.equal(none.taglineSize, 0);
+  assert.equal(none.titleY, 720 - none.titleSize / 2);
+});

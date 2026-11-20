@@ -53,6 +53,7 @@ export const footerNavigation = {
         { name: 'Thumbnail Tester & Preview', href: '/tools/youtube-thumbnail-tester' },
         { name: 'Shorts Safe Zone', href: '/tools/youtube-shorts-safe-zone' },
         { name: 'Thumbnail Size Checker', href: '/tools/youtube-thumbnail-size' },
+        { name: 'Banner Maker', href: '/tools/youtube-banner-maker' },
       ],
     },
     {
@@ -370,6 +371,20 @@ export const toolRegistry: ToolDefinition[] = [
       'Find out how long your script takes to read aloud. Paste text or enter a word count, pick a speaking pace, and see how many words a 5- or 10-minute video needs.',
     status: 'available',
     seoTarget: 'Words to Minutes Calculator',
+  },
+  {
+    id: 'youtube-banner-maker',
+    title: 'YouTube Banner Maker',
+    seoTitle: 'Free YouTube Banner Maker (2560 x 1440)',
+    slug: 'youtube-banner-maker',
+    href: '/tools/youtube-banner-maker',
+    category: 'thumbnail',
+    categoryLabel: 'Thumbnail Tools',
+    description:
+      'Make a YouTube banner in your browser: add your channel name, tagline, colours or a photo, preview TV, desktop and phone crops, and download a 2560 x 1440 image.',
+    status: 'available',
+    seoTarget: 'YouTube Banner Maker',
+    applicationCategory: 'MultimediaApplication',
   },
   {
     id: 'youtube-thumbnail-size',

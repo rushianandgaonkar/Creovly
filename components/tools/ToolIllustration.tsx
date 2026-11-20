@@ -580,6 +580,21 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
         </div>
       );
 
+    case 'banner-maker':
+      return (
+        <div className={`tool-preview preview-banner-maker w-full h-full p-3.5 bg-zinc-900 text-zinc-100 flex flex-col justify-between select-none ${className}`} data-ui>
+          <div className="flex items-center justify-between text-[10px] text-zinc-400">
+            <span className="font-medium">2560 × 1440</span>
+            <span className="text-zinc-400 font-semibold">Example</span>
+          </div>
+          <div className="relative w-full aspect-video rounded bg-orange-950 flex items-center justify-center">
+            <div className="absolute inset-x-[19.8%] inset-y-[35.3%] border border-dashed border-orange-300/80" />
+            <span className="text-[11px] font-bold text-white">Your Channel</span>
+          </div>
+          <div className="flex gap-2 text-[10px] text-zinc-400"><span>TV</span><span>Desktop</span><span className="text-orange-300">Phone</span></div>
+        </div>
+      );
+
     case 'thumbnail-size':
       return (
         <div className={`tool-preview preview-thumbnail-size w-full h-full p-3.5 bg-zinc-900 text-zinc-100 flex flex-col justify-between select-none ${className}`} data-ui>

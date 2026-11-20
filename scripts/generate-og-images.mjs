@@ -610,6 +610,25 @@ const allPages = [
     `,
   },
   {
+    filename: 'youtube-banner-maker.png',
+    category: 'THUMBNAILS & SHORTS',
+    tone: '#0070f3',
+    glow: 'rgba(0, 112, 243, 0.25)',
+    title: 'YouTube Banner Maker',
+    description: 'Add your channel name, colours or a photo, preview TV, desktop and phone crops, and download a 2560 x 1440 banner.',
+    pills: ['2560x1440 Export', 'Safe Area Guide', 'TV, Desktop, Phone'],
+    visual: `
+      <div style="background:#131b2e;border:1px solid rgba(0,112,243,0.3);border-radius:18px;padding:24px;width:100%;height:100%;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 40px rgba(0,0,0,0.5);">
+        <div style="font-size:13px;font-family:monospace;color:#93c5fd;font-weight:700;">Example banner, 2560 x 1440</div>
+        <div style="position:relative;width:100%;aspect-ratio:16/9;background:#431407;border-radius:10px;display:flex;align-items:center;justify-content:center;">
+          <div style="position:absolute;left:19.8%;right:19.8%;top:35.3%;bottom:35.3%;border:2px dashed #fdba74;"></div>
+          <span style="font-size:28px;font-weight:900;color:#f8fafc;">Your Channel</span>
+        </div>
+        <div style="display:flex;gap:16px;font-size:14px;font-family:monospace;color:#94a3b8;"><span>TV</span><span>Desktop</span><span style="color:#fdba74;">Phone 1546 x 423</span></div>
+      </div>
+    `,
+  },
+  {
     filename: 'youtube-thumbnail-size.png',
     category: 'THUMBNAILS & SHORTS',
     tone: '#0070f3',

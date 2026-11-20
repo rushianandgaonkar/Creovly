@@ -43,6 +43,7 @@ import ContentToolPage from '@/components/tools/ContentToolPage';
 import ThumbnailSizeChecker from '@/components/tools/ThumbnailSizeChecker';
 import BestTimeToPost from '@/components/tools/BestTimeToPost';
 import HashtagGenerator from '@/components/tools/HashtagGenerator';
+import BannerMaker from '@/components/tools/BannerMaker';
 import GuidesContent from '@/components/guides/GuidesContent';
 import GuideArticle from '@/components/guides/GuideArticle';
 import AboutPage from '@/app/about/page';
@@ -79,6 +80,7 @@ const staticSlugs = [
   ['tools', 'best-time-to-post-on-youtube'],
   ['tools', 'youtube-hashtag-generator'],
   ['tools', 'youtube-cpm-calculator'],
+  ['tools', 'youtube-banner-maker'],
   ['guides'],
   ...guides.map((g) => ['guides', g.slug]),
   ['about'],
@@ -498,6 +500,9 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
         break;
       case 'youtube-hashtag-generator':
         toolComponent = <ContentToolPage slug={tool.slug}><HashtagGenerator /></ContentToolPage>;
+        break;
+      case 'youtube-banner-maker':
+        toolComponent = <ContentToolPage slug={tool.slug}><BannerMaker /></ContentToolPage>;
         break;
       case 'youtube-cpm-calculator':
         toolComponent = <CalculatorPage kind="cpm" slug="youtube-cpm-calculator" />;
