@@ -20,6 +20,11 @@ import { profilePicture } from './profilePicture';
 import { engagement } from './engagement';
 import { chapterGenerator } from './chapterGenerator';
 import { scriptLength } from './scriptLength';
+import { thumbnailSize } from './thumbnailSize';
+import { bestTimeToPost } from './bestTimeToPost';
+import { hashtagGenerator } from './hashtagGenerator';
+import { bannerMaker } from './bannerMaker';
+
 import { thumbnailDownloader } from './thumbnailDownloader';
 import { thumbnailTester } from './thumbnailTester';
 
@@ -48,6 +53,11 @@ export const messagesEn = {
   thumbnailTester,
   chapterGenerator,
   scriptLength,
+  thumbnailSize,
+  bestTimeToPost,
+  hashtagGenerator,
+  bannerMaker,
+
 };
 
 export type Messages = typeof messagesEn;

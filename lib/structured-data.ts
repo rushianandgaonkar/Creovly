@@ -147,6 +147,11 @@ const slugToFaqKey: Record<string, string> = {
   'youtube-thumbnail-tester': 'thumbnailTester',
   'youtube-timestamp-generator': 'chapterGenerator',
   'words-to-minutes-calculator': 'scriptLength',
+  'youtube-thumbnail-size': 'thumbnailSize',
+  'best-time-to-post-on-youtube': 'bestTimeToPost',
+  'youtube-hashtag-generator': 'hashtagGenerator',
+  'youtube-cpm-calculator': 'cpm',
+  'youtube-banner-maker': 'bannerMaker',
 };
 
 /**

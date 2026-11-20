@@ -85,6 +85,11 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
     'youtube-thumbnail-tester': 'thumbnailTester',
     'youtube-timestamp-generator': 'chapterGenerator',
     'words-to-minutes-calculator': 'scriptLength',
+    'youtube-thumbnail-size': 'thumbnailSize',
+    'best-time-to-post-on-youtube': 'bestTimeToPost',
+    'youtube-hashtag-generator': 'hashtagGenerator',
+    'youtube-cpm-calculator': 'cpm',
+    'youtube-banner-maker': 'bannerMaker',
   };
 
   const localizedFaqs = slugToFaqKey[toolSlug] ? t.tools.faqs[slugToFaqKey[toolSlug]] : undefined;
@@ -145,6 +150,16 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
         return t.chapterGenerator.title;
       case 'words-to-minutes-calculator':
         return t.scriptLength.title;
+      case 'youtube-thumbnail-size':
+        return t.thumbnailSize.title;
+      case 'best-time-to-post-on-youtube':
+        return t.bestTimeToPost.title;
+      case 'youtube-hashtag-generator':
+        return t.hashtagGenerator.title;
+      case 'youtube-cpm-calculator':
+        return t.calculator.cpm.title;
+      case 'youtube-banner-maker':
+        return t.bannerMaker.title;
       default:
         return fallback;
     }
@@ -333,12 +348,28 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
       'youtube-tag-generator': t.tagGenerator,
       'youtube-description-generator': t.descriptionGenerator,
       'youtube-channel-name-generator': t.channelName,
+      'youtube-thumbnail-size': t.thumbnailSize,
+      'best-time-to-post-on-youtube': t.bestTimeToPost,
+      'youtube-hashtag-generator': t.hashtagGenerator,
+      'youtube-banner-maker': t.bannerMaker,
     }[toolSlug];
     if (about) {
+      const source = {
+        'youtube-banner-maker': { href: 'https://support.google.com/youtube/answer/10456525', label: (about as any).sourceLabel },
+        'youtube-thumbnail-size': { href: 'https://support.google.com/youtube/answer/72431', label: (about as any).sourceLabel },
+        'youtube-hashtag-generator': { href: 'https://support.google.com/youtube/answer/6390658', label: (about as any).sourceLabel },
+      }[toolSlug];
       return (
         <>
           <p>{about.about1}</p>
           <p>{about.about2}</p>
+          {source && source.label && (
+            <p>
+              <a href={source.href} target="_blank" rel="noopener noreferrer" className="text-[var(--brand-accent-deep)] underline hover:no-underline font-medium focus-ring">
+                {source.label}
+              </a>
+            </p>
+          )}
         </>
       );
     }

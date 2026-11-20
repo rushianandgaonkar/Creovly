@@ -77,6 +77,16 @@ export default function QuickSearchModal({
         return t.chapterGenerator.title;
       case 'words-to-minutes-calculator':
         return t.scriptLength.title;
+      case 'youtube-thumbnail-size':
+        return t.thumbnailSize.title;
+      case 'best-time-to-post-on-youtube':
+        return t.bestTimeToPost.title;
+      case 'youtube-hashtag-generator':
+        return t.hashtagGenerator.title;
+      case 'youtube-cpm-calculator':
+        return t.calculator.cpm.title;
+      case 'youtube-banner-maker':
+        return t.bannerMaker.title;
       default:
         return fallback;
     }

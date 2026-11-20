@@ -102,5 +102,24 @@ export const calculator = {
     explanationLoss: 'Your entered costs exceed your income scenario. Negative amounts represent a loss before taxes.',
     explanationNormal: 'This adds your assumptions; it does not predict deals, revenue, eligibility, or taxes.',
   },
+  cpm: {
+    title: 'CPM earnings estimate',
+    about1: 'CPM is what advertisers pay for 1,000 ad impressions before YouTube takes its share. Playback-based CPM is the same cost for 1,000 monetized playbacks, meaning views where at least one ad was shown. Both appear in YouTube Analytics on the Revenue tab.',
+    about2: 'This calculator turns your views, monetized playback rate and playback-based CPM into gross ad revenue, then applies your revenue share. For long-form videos in the YouTube Partner Program, creators receive 55% of net ad revenue. The result is your estimated ad income and the RPM it implies.',
+    sourceLabel: 'Read YouTube’s guide to CPM and RPM',
+    fields: {
+      views: { label: 'Views', suffix: 'views' },
+      rate: { label: 'Monetized playback rate', suffix: '%' },
+      cpm: { label: 'Playback-based CPM (USD)', suffix: 'USD' },
+      share: { label: 'Your revenue share', suffix: '%' },
+    },
+    note: 'Take playback-based CPM and the monetized playback rate from YouTube Analytics (Revenue tab). CPM is what advertisers pay before YouTube’s share. Long-form ad revenue share in the YouTube Partner Program is 55% to the creator; change it if your terms differ. Ad revenue only; memberships, Premium and other sources are not included.',
+    metrics: {
+      creator: 'Estimated creator ad revenue',
+      gross: 'Gross ad revenue',
+      playbacks: 'Monetized playbacks',
+      rpm: 'Effective ad RPM',
+    },
+  },
 };
 
