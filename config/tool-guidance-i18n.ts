@@ -153,6 +153,31 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Enter the numbers', body: 'Copy views, likes, comments and the other counts from your analytics. Blank optional fields count as 0, or paste up to 20 posts to get an average.' },
         { title: 'Read the result', body: 'Check the rate, the formula used and the share of each interaction. Compare a single post with your own average.' },
       ],
+      'youtube-banner-maker': [
+        { title: "Add your name", body: "Type your channel name and an optional tagline. The text sizes itself to fit the safe area." },
+        { title: "Style the background", body: "Pick colours and a font, or add your own photo and darken it until the text reads clearly." },
+        { title: "Check and download", body: "Switch between TV, desktop and phone previews, then download the 2560 x 1440 banner." },
+      ],
+      'youtube-thumbnail-size': [
+        { title: "Choose video or Shorts", body: "The recommended size, minimum, ratio and file limits update for the thumbnail type you pick." },
+        { title: "Add your thumbnail", body: "Drop in a JPG, PNG, WebP or GIF. Your browser reads its size and type; nothing is uploaded." },
+        { title: "Fix what fails", body: "Each rule shows pass, note, check or fix. Resize or compress the image if a rule needs it." },
+      ],
+      'best-time-to-post-on-youtube': [
+        { title: "Find your peak hour", body: "In YouTube Studio, open Analytics, then Audience, and read “When your viewers are on YouTube.”" },
+        { title: "Set your lead time", body: "Choose how long before the peak the video should go live, and check both time zones." },
+        { title: "Schedule the week", body: "Use the publish times in the table when you schedule videos in YouTube Studio." },
+      ],
+      'youtube-hashtag-generator': [
+        { title: "Describe your video", body: "Type the topic and a few keywords, separated by commas or new lines." },
+        { title: "Keep the relevant ones", body: "Select a hashtag to leave it out. Add #Shorts if you want it." },
+        { title: "Copy into your description", body: "Copy the hashtags and paste them at the end of your description." },
+      ],
+      'youtube-cpm-calculator': [
+        { title: "Open the Revenue tab", body: "In YouTube Analytics, note views, playback-based CPM and the share of playbacks that showed ads." },
+        { title: "Enter your figures", body: "Add them with your revenue share. Long-form ads in the Partner Program pay creators 55%." },
+        { title: "Review the estimate", body: "See gross ad revenue, your share and the ad RPM it implies." },
+      ],
     },
   },
   es: {
@@ -278,6 +303,31 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Elige la plataforma', body: 'Selecciona YouTube, Instagram o TikTok. Los me gusta y los comentarios se mantienen al cambiar.' },
         { title: 'Introduce los datos', body: 'Copia visualizaciones, me gusta, comentarios y demás cifras de tus estadísticas. Los campos opcionales vacíos cuentan como 0; también puedes pegar hasta 20 publicaciones para obtener la media.' },
         { title: 'Lee el resultado', body: 'Revisa la tasa, la fórmula usada y el peso de cada interacción. Compara una publicación con tu propia media.' },
+      ],
+      'youtube-banner-maker': [
+        { title: "Añade tu nombre", body: "Escribe el nombre de tu canal y un lema opcional. El texto se ajusta automáticamente al área segura." },
+        { title: "Personaliza el fondo", body: "Elige colores y tipografía, o sube tu propia foto y oscurécela para que el texto se lea con nitidez." },
+        { title: "Revisa y descarga", body: "Alterna entre las vistas de TV, ordenador y móvil, y descarga el banner en 2560 × 1440." },
+      ],
+      'youtube-thumbnail-size': [
+        { title: "Elige vídeo o Shorts", body: "Las dimensiones recomendadas, el mínimo, la proporción y el peso se actualizan según el tipo de miniatura." },
+        { title: "Añade tu miniatura", body: "Arrastra un JPG, PNG, WebP o GIF. Tu navegador lee el tamaño y formato de forma local sin subir nada." },
+        { title: "Corrige las alertas", body: "Cada comprobación indica aprobado, nota, verificar o corregir. Redimensiona o comprime si es necesario." },
+      ],
+      'best-time-to-post-on-youtube': [
+        { title: "Localiza tu hora pico", body: "En YouTube Studio, ve a Estadísticas, selecciona Audiencia y consulta \"Cuándo están tus usuarios en YouTube\"." },
+        { title: "Configura el margen", body: "Elige cuánto tiempo antes del pico debe publicarse el vídeo y revisa ambas zonas horarias." },
+        { title: "Programa la semana", body: "Utiliza los horarios de la tabla al programar tus vídeos en YouTube Studio." },
+      ],
+      'youtube-hashtag-generator': [
+        { title: "Describe tu vídeo", body: "Escribe el tema y algunas palabras clave, separadas por comas o saltos de línea." },
+        { title: "Conserva los relevantes", body: "Selecciona cualquier hashtag para excluirlo de la lista. Añade #Shorts si lo deseas." },
+        { title: "Cópialos a la descripción", body: "Copia los hashtags generados y pégalos al final de la descripción de tu vídeo." },
+      ],
+      'youtube-cpm-calculator': [
+        { title: "Abre la pestaña Ingresos", body: "En Estadísticas de YouTube, anota las vistas, el CPM basado en reproducciones y el porcentaje de reproducciones monetizadas." },
+        { title: "Introduce tus datos", body: "Indica los valores junto con tu cuota de ingresos. Los anuncios de vídeos largos del Programa de socios pagan el 55% al creador." },
+        { title: "Revisa la estimación", body: "Consulta los ingresos publicitarios brutos, tu parte neta y el RPM publicitario equivalente." },
       ],
     },
   },
@@ -405,6 +455,31 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: '数値を入力', body: 'アナリティクスから再生数、いいね、コメントなどをコピーします。任意項目の空欄は0として計算し、最大20投稿を貼り付けて平均も出せます。' },
         { title: '結果を確認', body: '率、使った計算式、各インタラクションの割合を確認し、1投稿をあなたの平均と比べます。' },
       ],
+      'youtube-banner-maker': [
+        { title: "チャンネル名を入力", body: "チャンネル名と任意のタグラインを入力します。テキストはセーフエリアに合わせて自動縮小されます。" },
+        { title: "背景とスタイルを設定", body: "色やフォントを選ぶか、手持ちの写真を追加して文字がはっきり読めるよう暗さを調整します。" },
+        { title: "確認してダウンロード", body: "テレビ・PC・スマホのプレビューを切り替えて確認し、2560 × 1440のバナーを保存します。" },
+      ],
+      'youtube-thumbnail-size': [
+        { title: "通常動画またはShortsを選択", body: "選んだタイプに応じて、推奨解像度、最小幅、アスペクト比、最大ファイル容量が切り替わります。" },
+        { title: "サムネイルを追加", body: "JPG、PNG、WebP、GIFをドロップ。ブラウザ上でサイズと形式を読み取り、サーバーへは送信されません。" },
+        { title: "要修正箇所を確認", body: "各項目に適合・参考・確認・要修正が表示されます。必要に応じてリサイズや圧縮を行ってください。" },
+      ],
+      'best-time-to-post-on-youtube': [
+        { title: "視聴者のピーク時間を調べる", body: "YouTube Studioの「アナリティクス」から「視聴者」タブを開き、「視聴者が YouTube にアクセスしている時間帯」を確認します。" },
+        { title: "公開リードタイムを設定", body: "ピークの何時間前に公開するかを選択し、視聴者と自分のタイムゾーンを確認します。" },
+        { title: "週間スケジュールを計画", body: "一覧表の日時を参考に、YouTube Studioで動画の予約公開を設定します。" },
+      ],
+      'youtube-hashtag-generator': [
+        { title: "動画のテーマを入力", body: "動画のトピックやキーワードをカンマまたは改行で区切って入力します。" },
+        { title: "必要なタグを選択", body: "除外したいハッシュタグをクリックして外します。必要に応じて#Shortsも含められます。" },
+        { title: "概要欄にコピー", body: "生成されたハッシュタグをコピーし、動画の概要欄の末尾に貼り付けます。" },
+      ],
+      'youtube-cpm-calculator': [
+        { title: "収益タブを確認", body: "YouTubeアナリティクスで、視聴回数、再生ベースのCPM、広告が表示された再生率を確認します。" },
+        { title: "数値を入力", body: "収益配分率とともに入力します。パートナープログラムの長尺動画広告ではクリエイターに55%が支払われます。" },
+        { title: "試算結果を確認", body: "広告の総売上、クリエイターの受取額、および有効広告RPMをひと目で確認できます。" },
+      ],
     },
   },
   fr: {
@@ -530,6 +605,31 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Choisissez la plateforme', body: 'Sélectionnez YouTube, Instagram ou TikTok. Les j’aime et les commentaires restent saisis quand vous changez.' },
         { title: 'Saisissez les chiffres', body: 'Copiez vues, j’aime, commentaires et autres chiffres depuis vos statistiques. Les champs facultatifs vides comptent pour 0 ; vous pouvez aussi coller jusqu’à 20 publications pour obtenir une moyenne.' },
         { title: 'Lisez le résultat', body: 'Vérifiez le taux, la formule utilisée et la part de chaque interaction. Comparez une publication à votre propre moyenne.' },
+      ],
+      'youtube-banner-maker': [
+        { title: "Ajoutez votre nom", body: "Saisissez le nom de votre chaîne et un slogan facultatif. Le texte s’adapte automatiquement à la zone de sécurité." },
+        { title: "Personnalisez l’arrière-plan", body: "Choisissez les couleurs et la police, ou ajoutez votre photo et assombrissez-la pour assurer la lisibilité." },
+        { title: "Vérifiez et téléchargez", body: "Basculez entre les aperçus TV, ordinateur et mobile, puis téléchargez la bannière en 2560 × 1440." },
+      ],
+      'youtube-thumbnail-size': [
+        { title: "Choisissez vidéo ou Shorts", body: "Les dimensions recommandées, le minimum, le ratio et les limites de taille s’adaptent au type choisi." },
+        { title: "Ajoutez votre miniature", body: "Glissez un fichier JPG, PNG, WebP ou GIF. Le navigateur analyse la taille en local sans aucun envoi en ligne." },
+        { title: "Corrigez les erreurs", body: "Chaque règle indique valide, remarque, à vérifier ou à corriger. Redimensionnez ou compressez si besoin." },
+      ],
+      'best-time-to-post-on-youtube': [
+        { title: "Trouvez l’heure de pointe", body: "Dans YouTube Studio, ouvrez Données d’analyse, onglet Public, puis consultez \"Heures auxquelles vos spectateurs regardent des vidéos sur YouTube\"." },
+        { title: "Définissez l’anticipation", body: "Choisissez combien de temps avant le pic publier la vidéo, et vérifiez les deux fuseaux horaires." },
+        { title: "Planifiez la semaine", body: "Utilisez les horaires du tableau pour programmer vos publications dans YouTube Studio." },
+      ],
+      'youtube-hashtag-generator': [
+        { title: "Décrivez votre vidéo", body: "Indiquez le sujet et quelques mots-clés, séparés par des virgules ou des retours à la ligne." },
+        { title: "Gardez les plus pertinents", body: "Cliquez sur un hashtag pour le retirer de la sélection. Activez #Shorts si nécessaire." },
+        { title: "Copiez dans la description", body: "Copiez les hashtags sélectionnés et collez-les à la fin de votre description." },
+      ],
+      'youtube-cpm-calculator': [
+        { title: "Ouvrez l’onglet Revenus", body: "Dans YouTube Analytics, notez les vues, le CPM basé sur les lectures et le taux de lectures monétisées." },
+        { title: "Indiquez vos chiffres", body: "Renseignez les valeurs avec votre part de revenus. Les annonces sur vidéos longues rapportent 55 % au créateur." },
+        { title: "Consultez l’estimation", body: "Visualisez les revenus bruts, votre part estimée et le RPM publicitaire équivalent." },
       ],
     },
   },
@@ -657,6 +757,31 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Zahlen eingeben', body: 'Kopieren Sie Aufrufe, Likes, Kommentare und weitere Werte aus Ihren Statistiken. Leere optionale Felder zählen als 0; für einen Durchschnitt können Sie bis zu 20 Beiträge einfügen.' },
         { title: 'Ergebnis lesen', body: 'Prüfen Sie die Rate, die verwendete Formel und den Anteil jeder Interaktion. Vergleichen Sie einen Beitrag mit Ihrem eigenen Durchschnitt.' },
       ],
+      'youtube-banner-maker': [
+        { title: "Kanalnamen eingeben", body: "Geben Sie Ihren Kanalnamen und optional eine Tagline ein. Der Text passt sich automatisch an die Safe Area an." },
+        { title: "Hintergrund gestalten", body: "Wählen Sie Farben und Schriftart, oder fügen Sie ein eigenes Foto hinzu und dunkeln es für gute Lesbarkeit ab." },
+        { title: "Prüfen und herunterladen", body: "Wechseln Sie zwischen TV-, Desktop- und Smartphone-Vorschau und laden Sie das Banner in 2560 × 1440 herunter." },
+      ],
+      'youtube-thumbnail-size': [
+        { title: "Video oder Shorts wählen", body: "Empfohlene Maße, Mindestgröße, Seitenverhältnis und Dateilimits passen sich dem gewählten Format an." },
+        { title: "Thumbnail hinzufügen", body: "Legen Sie ein JPG, PNG, WebP oder GIF ab. Ihr Browser liest Größe und Format lokal aus; nichts wird hochgeladen." },
+        { title: "Probleme beheben", body: "Jede Regel zeigt Bestanden, Hinweis, Prüfen oder Fehler. Passen Sie die Maße an oder komprimieren Sie das Bild." },
+      ],
+      'best-time-to-post-on-youtube': [
+        { title: "Hauptzeit ermitteln", body: "Öffnen Sie in YouTube Studio die Analytics, wechseln Sie zu Zielgruppe und lesen Sie \"Wann deine Zuschauer auf YouTube online sind\"." },
+        { title: "Vorlaufzeit festlegen", body: "Wählen Sie, wie lange vor der Hauptzeit das Video online gehen soll, und prüfen Sie beide Zeitzonen." },
+        { title: "Woche planen", body: "Nutzen Sie die Veröffentlichungszeiten aus der Tabelle für geplante Uploads in YouTube Studio." },
+      ],
+      'youtube-hashtag-generator': [
+        { title: "Thema beschreiben", body: "Geben Sie Thema und einige Keywords ein, getrennt durch Kommas oder Zeilenumbrüche." },
+        { title: "Passende auswählen", body: "Klicken Sie auf einen Hashtag, um ihn auszuschließen. Fügen Sie bei Bedarf #Shorts hinzu." },
+        { title: "In Beschreibung einfügen", body: "Kopieren Sie die Hashtags und fügen Sie sie am Ende Ihrer Videobeschreibung ein." },
+      ],
+      'youtube-cpm-calculator': [
+        { title: "Einnahmen-Tab öffnen", body: "Notieren Sie in YouTube Analytics Aufrufe, wiedergabebasierten CPM und den Anteil monetarisierter Wiedergaben." },
+        { title: "Zahlen eintragen", body: "Geben Sie die Werte samt Creator-Anteil ein. Bei langen Videos im Partnerprogramm erhalten Creator 55 %." },
+        { title: "Schätzung prüfen", body: "Erfahren Sie die Brutto-Werbeeinnahmen, Ihren Anteil und den daraus resultierenden Werbe-RPM." },
+      ],
     },
   },
   pt: {
@@ -782,6 +907,31 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Escolha a plataforma', body: 'Selecione YouTube, Instagram ou TikTok. Curtidas e comentários continuam preenchidos quando você troca.' },
         { title: 'Digite os números', body: 'Copie visualizações, curtidas, comentários e outros números das suas estatísticas. Campos opcionais vazios contam como 0; você também pode colar até 20 posts para ter a média.' },
         { title: 'Leia o resultado', body: 'Confira a taxa, a fórmula usada e a fatia de cada interação. Compare um post com a sua própria média.' },
+      ],
+      'youtube-banner-maker': [
+        { title: "Adicione seu nome", body: "Digite o nome do canal e um slogan opcional. O texto se redimensiona automaticamente para caber na área segura." },
+        { title: "Personalize o fundo", body: "Escolha cores e fonte, ou adicione sua própria foto e escureça até o texto ficar perfeitamente legível." },
+        { title: "Confira e baixe", body: "Alterne entre as prévias de TV, computador e celular e baixe a imagem calibrada em 2560 × 1440." },
+      ],
+      'youtube-thumbnail-size': [
+        { title: "Escolha vídeo ou Shorts", body: "Tamanho recomendado, mínimo, proporção e limite de peso se ajustam ao tipo de miniatura escolhido." },
+        { title: "Adicione sua miniatura", body: "Solte um arquivo JPG, PNG, WebP ou GIF. O navegador analisa dimensões e formato localmente sem enviar nada." },
+        { title: "Corrija o que falhar", body: "Cada regra indica aprovado, nota, verificar ou corrigir. Redimensione ou comprima a imagem se necessário." },
+      ],
+      'best-time-to-post-on-youtube': [
+        { title: "Encontre o horário de pico", body: "No YouTube Studio, abra Estatísticas, acesse a aba Público e confira \"Quando seus espectadores estão no YouTube\"." },
+        { title: "Defina a antecedência", body: "Escolha quanto tempo antes do pico o vídeo deve ir ao ar e confira ambos os fusos horários." },
+        { title: "Programe a semana", body: "Use os horários da tabela ao agendar as estreias dos seus vídeos no YouTube Studio." },
+      ],
+      'youtube-hashtag-generator': [
+        { title: "Descreva seu vídeo", body: "Digite o assunto e algumas palavras-chave, separadas por vírgulas ou quebras de linha." },
+        { title: "Mantenha as relevantes", body: "Toque em qualquer hashtag para excluí-la da seleção. Adicione #Shorts se desejar." },
+        { title: "Copie para a descrição", body: "Copie as hashtags selecionadas e cole no final da descrição do seu vídeo." },
+      ],
+      'youtube-cpm-calculator': [
+        { title: "Abra a aba Receita", body: "No YouTube Analytics, anote as visualizações, o CPM baseado em reproduções e a taxa de reproduções monetizadas." },
+        { title: "Insira seus números", body: "Informe os dados junto com sua fatia de repasse. Anúncios de vídeos longos no Programa de Parcerias pagam 55% aos criadores." },
+        { title: "Analise a estimativa", body: "Veja a receita bruta de anúncios, sua parte líquida estimada e o RPM de anúncios equivalente." },
       ],
     },
   },
@@ -909,6 +1059,31 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: '숫자 입력', body: '분석 화면에서 조회수, 좋아요, 댓글 등을 복사하세요. 비워 둔 선택 항목은 0으로 계산되며, 최대 20개 게시물을 붙여 넣어 평균을 낼 수도 있습니다.' },
         { title: '결과 확인', body: '참여율, 사용한 공식, 반응별 비중을 확인하고 게시물 하나를 내 평균과 비교하세요.' },
       ],
+      'youtube-banner-maker': [
+        { title: "채널명 입력", body: "채널명과 선택적 슬로건을 입력하세요. 텍스트는 안전 영역에 맞춰 자동으로 크기가 조절됩니다." },
+        { title: "배경 및 스타일 지정", body: "색상과 글꼴을 선택하거나 직접 사진을 추가하고 텍스트가 잘 보이도록 어둡기를 조절하세요." },
+        { title: "확인 및 다운로드", body: "TV, 데스크톱, 모바일 화면별 미리보기를 확인하고 2560 × 1440 배너 이미지를 다운로드하세요." },
+      ],
+      'youtube-thumbnail-size': [
+        { title: "동영상 또는 쇼츠 선택", body: "선택한 썸네일 유형에 맞춰 권장 규격, 최소 크기, 가로세로 비율, 파일 용량 제한이 바뀝니다." },
+        { title: "썸네일 이미지 추가", body: "JPG, PNG, WebP, GIF 이미지를 놓으세요. 브라우저에서 직접 검사하며 파일이 외부로 전송되지 않습니다." },
+        { title: "부적합 항목 수정", body: "각 규정마다 통과, 참고, 확인, 수정 필요 상태를 보여줍니다. 필요 시 크기 조절이나 압축을 진행하세요." },
+      ],
+      'best-time-to-post-on-youtube': [
+        { title: "시청자 피크 시간 확인", body: "YouTube 스튜디오의 분석에서 시청자 탭을 열고 \"시청자가 YouTube를 이용하는 시간대\"를 확인하세요." },
+        { title: "업로드 여유 시간 설정", body: "피크 몇 시간 전에 영상을 게시할지 고르고 크리에이터와 시청자의 시간대를 확인하세요." },
+        { title: "주간 공개 일정 예약", body: "표에 안내된 게시 시간을 참고하여 YouTube 스튜디오에서 예약 업로드를 설정하세요." },
+      ],
+      'youtube-hashtag-generator': [
+        { title: "영상 주제 입력", body: "영상의 주제와 핵심 키워드를 쉼표나 줄바꿈으로 구분하여 입력하세요." },
+        { title: "적합한 해시태그 선별", body: "제외하고 싶은 해시태그를 클릭하여 끌 수 있습니다. 필요하면 #Shorts 태그도 추가하세요." },
+        { title: "설명란에 복사 및 부착", body: "선별된 해시태그를 복사하여 유튜브 영상 설명란 하단에 붙여넣으세요." },
+      ],
+      'youtube-cpm-calculator': [
+        { title: "수익 탭 수치 확인", body: "YouTube 분석에서 조회수, 재생 기반 CPM, 광고가 표시된 재생률을 확인하세요." },
+        { title: "수치 및 정산율 입력", body: "수익 배분율과 함께 입력합니다. 파트너 프로그램의 롱폼 영상 광고는 크리에이터에게 55%를 지급합니다." },
+        { title: "예상 수익 검토", body: "총 광고 수익과 크리에이터 예상 정산액, 유효 광고 RPM을 한눈에 검토하세요." },
+      ],
     },
   },
   it: {
@@ -1034,6 +1209,31 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
         { title: 'Scegli la piattaforma', body: 'Seleziona YouTube, Instagram o TikTok. Mi piace e commenti restano compilati quando cambi.' },
         { title: 'Inserisci i numeri', body: 'Copia visualizzazioni, mi piace, commenti e gli altri dati dalle statistiche. I campi facoltativi vuoti valgono 0; puoi anche incollare fino a 20 post per avere la media.' },
         { title: 'Leggi il risultato', body: 'Controlla il tasso, la formula usata e il peso di ogni interazione. Confronta un post con la tua media.' },
+      ],
+      'youtube-banner-maker': [
+        { title: "Aggiungi il tuo nome", body: "Digita il nome del tuo canale e uno slogan facoltativo. Il testo si adatta automaticamente all’area di sicurezza." },
+        { title: "Personalizza lo sfondo", body: "Scegli colori e font, oppure carica una tua foto e scuriscila per far risaltare il testo." },
+        { title: "Controlla e scarica", body: "Passa tra le anteprime per TV, desktop e smartphone, poi scarica il banner in 2560 × 1440." },
+      ],
+      'youtube-thumbnail-size': [
+        { title: "Scegli video o Shorts", body: "Dimensioni consigliate, minimo, proporzioni e limiti di peso si aggiornano per il tipo selezionato." },
+        { title: "Aggiungi la miniatura", body: "Trascina un file JPG, PNG, WebP o GIF. Il browser legge dimensioni e formato in locale senza caricare nulla." },
+        { title: "Correggi gli errori", body: "Ogni controllo mostra superato, nota, verificare o correggere. Ridimensiona o comprimi se necessario." },
+      ],
+      'best-time-to-post-on-youtube': [
+        { title: "Trova l’ora di punta", body: "In YouTube Studio, apri Analytics, vai sulla scheda Pubblico e cerca \"Quando i tuoi spettatori sono su YouTube\"." },
+        { title: "Imposta l’anticipo", body: "Scegli quanto tempo prima del picco pubblicare il video e controlla entrambi i fusi orari." },
+        { title: "Pianifica la settimana", body: "Usa gli orari della tabella per programmare i tuoi video in YouTube Studio." },
+      ],
+      'youtube-hashtag-generator': [
+        { title: "Descrivi il video", body: "Scrivi l’argomento e alcune parole chiave, separate da virgole o a capo." },
+        { title: "Tieni quelli rilevanti", body: "Fai clic su un hashtag per escluderlo. Aggiungi #Shorts se desiderato." },
+        { title: "Copia nella descrizione", body: "Copia gli hashtag generati e incollali alla fine della descrizione del tuo video." },
+      ],
+      'youtube-cpm-calculator': [
+        { title: "Apri la scheda Entrate", body: "In YouTube Analytics, rileva visualizzazioni, CPM basato sulle riproduzioni e percentuale di riproduzioni monetizzate." },
+        { title: "Inserisci i tuoi dati", body: "Inserisci i valori con la tua quota di ripartizione. Gli annunci su video lunghi riconoscono il 55% ai creator." },
+        { title: "Controlla la stima", body: "Visualizza le entrate pubblicitarie lorde, la tua quota stimata e l’RPM pubblicitario risultante." },
       ],
     },
   },

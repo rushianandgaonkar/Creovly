@@ -9,7 +9,6 @@ import { useI18n, LocalizedLink } from '@/lib/i18n';
 import { toolSeoContent } from '@/config/tool-guidance-i18n';
 import { revenueExplainer } from '@/config/revenue-explainer';
 import { translations } from '@/config/i18n';
-import { ToolAbout } from './ContentToolPage';
 
 export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; slug: string }) {
   const { t, locale } = useI18n();
@@ -29,6 +28,8 @@ export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; s
         return t.calculator.watchHours.title;
       case 'monetization':
         return t.calculator.monetization.title;
+      case 'cpm':
+        return t.calculator.cpm.title;
       default:
         return definition.title;
     }
@@ -44,6 +45,8 @@ export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; s
         return t.calculator.watchHours.note;
       case 'monetization':
         return t.calculator.monetization.note;
+      case 'cpm':
+        return t.calculator.cpm.note;
       default:
         return definition.note;
     }
@@ -51,7 +54,7 @@ export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; s
 
   return (
     <ToolPageShell
-      title={kind === 'cpm' ? tool.title : getLocalizedTitle()}
+      title={getLocalizedTitle()}
       description={translations[locale]?.tools[slug]?.description || tool.description}
       category={t.tools.categories.moneyGrowth.label}
       categoryHref="/tools"
@@ -120,7 +123,22 @@ export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; s
               </p>
             </div>
           )}
-          {kind === 'cpm' && <ToolAbout slug={slug} />}
+          {kind === 'cpm' && (
+            <div>
+              <p>{t.calculator.cpm.about1}</p>
+              <p>{t.calculator.cpm.about2}</p>
+              <p>
+                <a
+                  href="https://support.google.com/youtube/answer/9314357"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--brand-accent-deep)] underline hover:no-underline font-medium focus-ring text-xs"
+                >
+                  {t.calculator.cpm.sourceLabel}
+                </a>
+              </p>
+            </div>
+          )}
           {kind === 'watch-hours' && (
             <div>
               <p className="text-xs">
