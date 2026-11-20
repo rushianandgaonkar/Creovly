@@ -50,6 +50,11 @@ const TOOLS = [
   'youtube-thumbnail-tester',
   'youtube-timestamp-generator',
   'words-to-minutes-calculator',
+  'youtube-thumbnail-size',
+  'best-time-to-post-on-youtube',
+  'youtube-hashtag-generator',
+  'youtube-cpm-calculator',
+  'youtube-banner-maker',
 ];
 
 const OG_LOCALES = {
