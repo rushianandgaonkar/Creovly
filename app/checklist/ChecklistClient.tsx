@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Button from '@/components/ui/Button';
-import Badge from '@/components/ui/Badge';
 import PageHero from '@/components/ui/PageHero';
 import { useI18n, LocalizedLink } from '@/lib/i18n';
 
@@ -80,10 +79,6 @@ export const ChecklistClient: React.FC = () => {
       <PageHero tone="amber" className="mb-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 mb-2">
-              <Badge variant="new">{t.checklist.hero.badge}</Badge>
-              <span className="text-xs font-mono text-[var(--text-muted)]">{t.checklist.hero.tag}</span>
-            </div>
             <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-[var(--text-ink)]">
               {t.checklist.hero.heading}
             </h1>
@@ -106,7 +101,7 @@ export const ChecklistClient: React.FC = () => {
             <button
               type="button"
               onClick={handleExportText}
-              className="text-xs text-[var(--brand-accent)] hover:underline cursor-pointer font-medium"
+              className="text-xs text-[var(--brand-accent-deep)] hover:underline cursor-pointer font-medium"
             >
               {t.checklist.status.exportButton}
             </button>
@@ -120,13 +115,13 @@ export const ChecklistClient: React.FC = () => {
           <span className="text-[var(--text-body)]">
             {t.checklist.status.auditReadiness} <strong className="text-[var(--text-ink)]">{t.checklist.status.completed.replace('{count}', String(completedCount)).replace('{total}', String(totalItems))}</strong>
           </span>
-          <span className={completedCount === totalItems ? 'text-emerald-600 dark:text-emerald-400 font-bold' : 'text-[var(--brand-accent)] font-bold'}>
+          <span className={completedCount === totalItems ? 'text-emerald-600 dark:text-emerald-400 font-bold' : 'text-[var(--brand-accent-deep)] font-bold'}>
             {totalItems > 0 ? Math.round((completedCount / totalItems) * 100) : 0}%
           </span>
         </div>
         <div className="w-full h-2 rounded-full bg-[var(--bg-canvas-subtle)] border border-[var(--border-hairline-subtle)] overflow-hidden">
           <div
-            className={`h-full transition-all duration-300 ${
+            className={`h-full ${
               completedCount === totalItems && totalItems > 0 ? 'bg-emerald-500' : 'bg-[var(--brand-accent)]'
             }`}
             style={{ width: `${totalItems > 0 ? (completedCount / totalItems) * 100 : 0}%` }}
@@ -138,7 +133,6 @@ export const ChecklistClient: React.FC = () => {
       {isLoaded && completedCount === totalItems && totalItems > 0 && (
         <div className="p-4 rounded-xl border border-emerald-500/30 bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 flex flex-wrap items-center justify-between gap-3 mb-6 animate-fade-in-up">
           <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
             <strong className="text-xs sm:text-sm font-semibold">{t.checklist.status.allComplete}</strong>
           </div>
           <LocalizedLink href="/studio">
@@ -157,7 +151,7 @@ export const ChecklistClient: React.FC = () => {
           return (
             <div
               key={section.title}
-              className={`rounded-xl border transition-all duration-200 bg-[var(--bg-canvas-elevated)] p-6 shadow-2xs ${
+              className={`rounded-xl border transition duration-200 bg-[var(--bg-canvas-elevated)] p-6 shadow-2xs ${
                 isGroupAllDone
                   ? 'border-emerald-500/30 ring-1 ring-emerald-500/15'
                   : 'border-[var(--border-hairline)]'
@@ -197,7 +191,7 @@ export const ChecklistClient: React.FC = () => {
                           className={`text-sm font-medium transition-colors ${
                             isChecked
                               ? 'line-through text-[var(--text-muted)]'
-                              : 'text-[var(--text-ink)] group-hover:text-[var(--brand-accent)]'
+                              : 'text-[var(--text-ink)] group-hover:text-[var(--brand-accent-deep)]'
                           }`}
                         >
                           {item.title}

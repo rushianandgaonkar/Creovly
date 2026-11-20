@@ -1,4 +1,3 @@
-/* Hallmark · genre: modern-minimal · macrostructure: Workbench */
 'use client';
 
 import { useState, useId, useMemo } from 'react';
@@ -122,8 +121,7 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
         <div className="space-y-6">
           {/* Header pill */}
           <div className="flex items-center justify-between">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-mono font-semibold bg-[var(--brand-accent-soft)] text-[var(--brand-accent-deep)] border border-[var(--brand-accent)]/20">
-              <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)] animate-pulse" />
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-[var(--brand-accent-soft)] text-[var(--brand-accent-deep)] border border-[var(--brand-accent)]/20">
               {dg.aiBadge}
             </span>
             <button
@@ -146,7 +144,7 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
                   key={tpl.id}
                   type="button"
                   onClick={() => handleSelectTemplate(tpl.id)}
-                  className={`px-3 py-2 rounded-xl text-xs font-medium border text-left transition-all cursor-pointer ${
+                  className={`px-3 py-2 rounded-xl text-xs font-medium border text-left transition cursor-pointer ${
                     activeTemplate === tpl.id
                       ? 'border-[var(--brand-accent)] bg-[var(--brand-accent-soft)] text-[var(--brand-accent-deep)] font-semibold shadow-xs'
                       : 'bg-[var(--bg-canvas-elevated)] text-[var(--text-muted)] border-[var(--border-hairline)] hover:border-[var(--border-hairline-strong)] hover:text-[var(--text-ink)]'
@@ -342,7 +340,7 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
                         ? 'text-[var(--state-error-text)]'
                         : isWarningLimit
                         ? 'text-[var(--state-warning-text)]'
-                        : 'text-[var(--brand-accent)]'
+                        : 'text-[var(--brand-accent-deep)]'
                     }`}
                   >
                     {result.totalChars.toLocaleString()}
@@ -355,7 +353,7 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
               <Button
                 type="button"
                 variant="primary"
-                className={`text-xs py-2 px-4 font-semibold transition-all ${
+                className={`text-xs py-2 px-4 font-semibold transition ${
                   copied
                     ? 'bg-[var(--state-success)] hover:bg-[var(--state-success)] text-white'
                     : result.isOverLimit
@@ -386,7 +384,7 @@ export default function DescriptionGenerator({}: DescriptionGeneratorProps) {
             <div className="space-y-1">
               <div className="w-full h-2 rounded-full bg-[var(--bg-canvas-inset)] overflow-hidden border border-[var(--border-hairline)]">
                 <div
-                  className={`h-full transition-all duration-300 rounded-full ${
+                  className={`h-full rounded-full ${
                     result.isOverLimit
                       ? 'bg-[var(--state-error)]'
                       : isWarningLimit

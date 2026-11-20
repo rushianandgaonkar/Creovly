@@ -2,7 +2,6 @@
 
 import React from 'react';
 import PageHero from '@/components/ui/PageHero';
-import Badge from '@/components/ui/Badge';
 import ContactForm from '@/components/contact/ContactForm';
 import { useI18n, LocalizedLink } from '@/lib/i18n';
 
@@ -14,7 +13,7 @@ export default function ContactContent() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
       {/* Precision Breadcrumb */}
-      <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-[var(--text-muted)] mb-6">
+      <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[var(--text-muted)] mb-6">
         <LocalizedLink href="/" className="hover:text-[var(--text-ink)] transition-colors">
           {t.tools.shell.breadcrumbHome}
         </LocalizedLink>
@@ -25,16 +24,12 @@ export default function ContactContent() {
       </nav>
 
       <PageHero tone="blue" className="mb-12">
-        <div className="inline-flex items-center gap-2 mb-2">
-          <Badge variant="neutral">{contact.heroBadge}</Badge>
-          <span className="text-xs font-mono text-[var(--text-muted)]">{contact.heroTag}</span>
-        </div>
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-[var(--text-ink)]">
           {contact.heading}
         </h1>
         <p className="mt-3 text-sm sm:text-base text-[var(--text-body)] leading-relaxed">
           {contact.subheading}{' '}
-          <a href="mailto:support@creovly.com" className="text-[var(--brand-accent)] font-semibold underline">
+          <a href="mailto:support@creovly.com" className="text-[var(--brand-accent-deep)] font-semibold underline">
             support@creovly.com
           </a>.
         </p>
@@ -57,7 +52,7 @@ export default function ContactContent() {
             </p>
             <a
               href="mailto:support@creovly.com"
-              className="text-[var(--brand-accent)] font-medium font-mono text-xs hover:underline block pt-1"
+              className="text-[var(--brand-accent-deep)] font-medium font-mono text-xs hover:underline block pt-1"
             >
               support@creovly.com
             </a>

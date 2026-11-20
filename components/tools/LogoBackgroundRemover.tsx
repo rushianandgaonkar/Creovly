@@ -1,4 +1,3 @@
-/* Hallmark · genre: modern-minimal · macrostructure: Workbench */
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
@@ -195,7 +194,7 @@ export default function LogoBackgroundRemover() {
                       key={item.hex}
                       type="button"
                       onClick={() => handleColorChange(item.hex)}
-                      className={`px-2 py-1.5 rounded-md text-[10px] font-mono border transition-all cursor-pointer ${
+                      className={`px-2 py-1.5 rounded-md text-[10px] font-mono border transition cursor-pointer ${
                         color.toLowerCase() === item.hex.toLowerCase()
                           ? 'border-[var(--brand-accent)] bg-[var(--brand-accent-soft)] text-[var(--brand-accent-deep)] font-semibold'
                           : 'border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-body)] hover:border-[var(--brand-accent)]'

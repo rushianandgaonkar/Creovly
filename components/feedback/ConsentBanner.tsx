@@ -31,7 +31,7 @@ export default function ConsentBanner() {
       <p className="flex-1 text-xs text-[var(--text-body)] leading-snug">
         <span className="sr-only">{t.common.consentBanner.title}. </span>
         {t.common.consentBanner.description}{' '}
-        <LocalizedLink href="/privacy" className="text-[var(--brand-accent)] underline hover:no-underline font-medium">
+        <LocalizedLink href="/privacy" className="text-[var(--brand-accent-deep)] underline hover:no-underline font-medium">
           {t.common.consentBanner.privacyLink}
         </LocalizedLink>.
       </p>

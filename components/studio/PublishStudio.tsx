@@ -1,7 +1,6 @@
-/* Hallmark · genre: modern-minimal · macrostructure: Workbench · theme: Cobalt */
-/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 */
 'use client';
 
+import { Monitor, Smartphone } from 'lucide-react';
 import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import Image from 'next/image';
 import Input from '@/components/form/Input';
@@ -171,14 +170,13 @@ export default function PublishStudio() {
 
   return <div className="space-y-6">
     <PageHero className="mb-8">
-      <p className="text-xs font-medium text-[var(--text-body)] mb-2">{t.studio.hero.badge}</p>
       <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">{t.studio.hero.heading}</h1>
       <p className="mt-3 text-sm sm:text-base text-[var(--text-body)] leading-relaxed">{t.studio.hero.subheading}</p>
       <p className="mt-3 text-xs text-[var(--text-body)]">{t.studio.hero.footnote}</p>
     </PageHero>
 
     <div className="flex flex-wrap items-center justify-between gap-3">
-      <p className="text-xs text-[var(--text-body)]">{t.studio.toolbar.oneLocalProject} <span aria-hidden="true">·</span> {dirty ? t.studio.toolbar.unsavedChanges : t.studio.toolbar.saveExplicitly}</p>
+      <p className="text-xs text-[var(--text-body)]">{t.studio.toolbar.oneLocalProject}<span className="mx-2 inline-block h-3 w-px align-middle bg-[var(--border-hairline-strong)]" aria-hidden="true" />{dirty ? t.studio.toolbar.unsavedChanges : t.studio.toolbar.saveExplicitly}</p>
       <div className="flex flex-wrap items-center gap-2">
         <Button variant="ghost" size="sm" onClick={newProject}>{t.studio.toolbar.buttonNew}</Button>
         <Button variant="outline" size="sm" disabled={!hasSaved || !!busy} onClick={loadDraft}>{t.studio.toolbar.buttonLoadDraft}</Button>
@@ -236,26 +234,27 @@ export default function PublishStudio() {
       <div className="space-y-6 min-w-0">
         <StudioSection title={t.studio.sections.preview}>
           {draft.kind === 'video' && (
-            <div className="flex items-center justify-between gap-2 border-b border-[var(--border-hairline)] pb-3 mb-4">
-              <span className="text-[11px] font-mono text-[var(--text-muted)] font-semibold">
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[var(--border-hairline)] pb-3 mb-4">
+              <span className="text-xs font-medium text-[var(--text-muted)]">
                 {t.studio.previewSection.simulatedView}
               </span>
               <Tabs
+                className="max-w-full shrink-0"
                 value={previewSurface}
                 onValueChange={(val) => setPreviewSurface(val as 'mobile' | 'desktop')}
               >
-                <TabsList className="h-7 p-0.5 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)]">
+                <TabsList className="h-7 max-w-full p-0.5 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)]">
                   <TabsTrigger
                     value="mobile"
-                    className="px-2.5 py-1 text-[11px] font-medium rounded-md data-[state=active]:bg-[var(--bg-canvas-elevated)] data-[state=active]:text-[var(--text-ink)] data-[state=active]:shadow-xs"
+                    className="min-w-0 px-2.5 py-1 text-xs font-medium rounded-md data-[state=active]:bg-[var(--bg-canvas-elevated)] data-[state=active]:text-[var(--text-ink)] data-[state=active]:shadow-xs"
                   >
-                    📱 {t.studio.tabs.mobilePreview}
+                    <Smartphone className="size-3.5 shrink-0" aria-hidden="true" /><span className="truncate">{t.studio.tabs.mobilePreview}</span>
                   </TabsTrigger>
                   <TabsTrigger
                     value="desktop"
-                    className="px-2.5 py-1 text-[11px] font-medium rounded-md data-[state=active]:bg-[var(--bg-canvas-elevated)] data-[state=active]:text-[var(--text-ink)] data-[state=active]:shadow-xs"
+                    className="min-w-0 px-2.5 py-1 text-xs font-medium rounded-md data-[state=active]:bg-[var(--bg-canvas-elevated)] data-[state=active]:text-[var(--text-ink)] data-[state=active]:shadow-xs"
                   >
-                    💻 {t.studio.tabs.desktopPreview}
+                    <Monitor className="size-3.5 shrink-0" aria-hidden="true" /><span className="truncate">{t.studio.tabs.desktopPreview}</span>
                   </TabsTrigger>
                 </TabsList>
               </Tabs>
@@ -279,9 +278,9 @@ export default function PublishStudio() {
                   <h4 className="text-xs sm:text-sm font-bold text-[var(--text-ink)] line-clamp-2 leading-snug">
                     {draft.title || t.studio.previewSection.titlePlaceholder}
                   </h4>
-                  <p className="text-[10px] text-[var(--text-muted)] flex items-center gap-1.5 font-mono">
+                  <p className="text-[11px] text-[var(--text-muted)] flex items-center gap-1.5">
                     <span className="font-semibold text-[var(--text-body)]">{draft.channel || t.studio.previewSection.channelDefault}</span>
-                    <span className="w-1 h-1 rounded-full bg-emerald-500" />
+                    <span aria-hidden="true">·</span>
                     <span>{t.studio.previewSection.viewsDefault}</span>
                   </p>
                   <p className="text-[11px] text-[var(--text-body)] line-clamp-2 leading-relaxed">
@@ -332,13 +331,13 @@ export default function PublishStudio() {
           <div className="space-y-2 p-3.5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)]">
             <div className="flex items-center justify-between text-xs font-mono">
               <span className="font-semibold text-[var(--text-ink)]">{t.studio.checksSection.heading}</span>
-              <span className={completed === checks.length ? 'text-emerald-600 dark:text-emerald-400 font-bold' : 'text-[var(--brand-accent)] font-bold'}>
+              <span className={completed === checks.length ? 'text-emerald-600 dark:text-emerald-400 font-bold' : 'text-[var(--brand-accent-deep)] font-bold'}>
                 {t.studio.checksSection.scoreLabel.replace('{completed}', String(completed)).replace('{total}', String(checks.length))} ({Math.round((completed / checks.length) * 100)}%)
               </span>
             </div>
             <div className="h-2 w-full rounded-full bg-[var(--bg-canvas-inset)] overflow-hidden">
               <div
-                className={`h-full transition-all duration-300 ${
+                className={`h-full ${
                   completed === checks.length ? 'bg-emerald-500' : 'bg-[var(--brand-accent)]'
                 }`}
                 style={{ width: `${(completed / checks.length) * 100}%` }}
@@ -393,7 +392,6 @@ export default function PublishStudio() {
       <div className="rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] p-4 text-xs text-[var(--text-body)] space-y-2">
         <h3 className="font-semibold text-[var(--text-ink)] flex items-center justify-between">
           <span>{t.studio.resources.storageTitle}</span>
-          <span className="text-[10px] font-mono text-[var(--text-muted)]">{t.studio.resources.storageBadge}</span>
         </h3>
         <p className="leading-relaxed">{t.studio.resources.storageBody}</p>
         {hasSaved && (
@@ -408,11 +406,10 @@ export default function PublishStudio() {
       <div className="rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] p-4 text-xs text-[var(--text-body)] space-y-2">
         <h3 className="font-semibold text-[var(--text-ink)] flex items-center justify-between">
           <span>{t.studio.resources.packageTitle}</span>
-          <span className="text-[10px] font-mono text-[var(--text-muted)]">{t.studio.resources.packageBadge}</span>
         </h3>
         <p className="leading-relaxed">{t.studio.resources.packageBody}</p>
         <p className="pt-1">
-          <LocalizedLink href="/checklist" className="underline font-medium text-[var(--brand-accent)] focus-ring">
+          <LocalizedLink href="/checklist" className="underline font-medium text-[var(--brand-accent-deep)] focus-ring">
             {t.studio.resources.packageLink}
           </LocalizedLink>
         </p>
@@ -421,14 +418,13 @@ export default function PublishStudio() {
       <div className="rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] p-4 text-xs text-[var(--text-body)] space-y-2">
         <h3 className="font-semibold text-[var(--text-ink)] flex items-center justify-between">
           <span>{t.studio.resources.guidelinesTitle}</span>
-          <span className="text-[10px] font-mono text-[var(--text-muted)]">{t.studio.resources.guidelinesBadge}</span>
         </h3>
         <p className="leading-relaxed">{t.studio.resources.guidelinesBody}</p>
         <div className="pt-1 flex flex-col gap-1">
-          <a href="https://support.google.com/youtube/answer/72431?hl=en" target="_blank" rel="noreferrer" className="underline text-[var(--brand-accent)] focus-ring">
+          <a href="https://support.google.com/youtube/answer/72431?hl=en" target="_blank" rel="noreferrer" className="underline text-[var(--brand-accent-deep)] focus-ring">
             {t.studio.resources.guidelinesThumb}
           </a>
-          <a href="https://support.google.com/youtube/answer/57407?hl=en" target="_blank" rel="noreferrer" className="underline text-[var(--brand-accent)] focus-ring">
+          <a href="https://support.google.com/youtube/answer/57407?hl=en" target="_blank" rel="noreferrer" className="underline text-[var(--brand-accent-deep)] focus-ring">
             {t.studio.resources.guidelinesUpload}
           </a>
         </div>

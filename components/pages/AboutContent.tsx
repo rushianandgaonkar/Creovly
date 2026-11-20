@@ -2,7 +2,6 @@
 
 import React from 'react';
 import PageHero from '@/components/ui/PageHero';
-import Badge from '@/components/ui/Badge';
 import Button from '@/components/ui/Button';
 import SpotlightCard from '@/components/ui/SpotlightCard';
 import LinkToUs from '@/components/ui/LinkToUs';
@@ -16,7 +15,7 @@ export default function AboutContent() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
       {/* Precision Breadcrumb */}
-      <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-[var(--text-muted)] mb-6">
+      <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[var(--text-muted)] mb-6">
         <LocalizedLink href="/" className="hover:text-[var(--text-ink)] transition-colors">
           {t.tools.shell.breadcrumbHome}
         </LocalizedLink>
@@ -28,10 +27,6 @@ export default function AboutContent() {
 
       {/* Hero Section */}
       <PageHero tone="violet" className="mb-14">
-        <div className="inline-flex items-center gap-2 mb-2">
-          <Badge variant="neutral">{about.heroBadge}</Badge>
-          <span className="text-xs font-mono text-[var(--text-muted)]">{about.heroTag}</span>
-        </div>
         <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-[var(--text-ink)] leading-tight">
           {about.heading}
         </h1>
@@ -51,12 +46,6 @@ export default function AboutContent() {
       <div className="space-y-16">
         {/* Mission Section */}
         <section className="space-y-4">
-          <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
-            <span className="text-xs font-mono text-[var(--text-muted)]">
-              {sections.missionTitle}
-            </span>
-          </div>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[var(--text-ink)]">
             {sections.missionTitle}
           </h2>
@@ -67,12 +56,6 @@ export default function AboutContent() {
 
         {/* 3 Core Pillars */}
         <section className="space-y-6">
-          <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
-            <span className="text-xs font-mono text-[var(--text-muted)]">
-              {sections.principlesTag}
-            </span>
-          </div>
           <h2 className="text-2xl font-bold tracking-tight text-[var(--text-ink)]">
             {sections.differenceTitle}
           </h2>
@@ -122,7 +105,6 @@ export default function AboutContent() {
         {/* Independent Status Disclaimer & Legal Transparency */}
         <section className="p-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] space-y-3">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-zinc-400" aria-hidden="true" />
             <h2 className="text-base font-semibold text-[var(--text-ink)]">
               {sections.disclaimerTitle}
             </h2>
@@ -135,7 +117,6 @@ export default function AboutContent() {
         {/* Contact and Support */}
         <section className="p-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-3">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-500" aria-hidden="true" />
             <h2 className="text-base font-semibold text-[var(--text-ink)]">
               {sections.supportTitle}
             </h2>
@@ -146,9 +127,9 @@ export default function AboutContent() {
           <div className="flex flex-wrap items-center gap-4 pt-1">
             <a
               href="mailto:support@creovly.com"
-              className="text-xs font-semibold text-[var(--brand-accent)] hover:underline inline-flex items-center gap-1.5"
+              className="text-xs font-semibold text-[var(--brand-accent-deep)] hover:underline inline-flex items-center gap-1.5"
             >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg aria-hidden="true" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
               support@creovly.com

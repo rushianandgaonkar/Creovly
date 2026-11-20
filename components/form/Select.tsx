@@ -51,7 +51,7 @@ export const Select: React.FC<SelectProps> = ({
           ))}
         </select>
         <div className="absolute inset-y-0 right-2.5 flex items-center pointer-events-none text-[var(--text-muted)]">
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <svg aria-hidden="true" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
           </svg>
         </div>

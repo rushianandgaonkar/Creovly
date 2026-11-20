@@ -26,11 +26,11 @@ export const pages = {
       supportTitle: 'Get in Touch',
       supportBody:
         'Have feedback on our tools, noticed an update in YouTube platform specifications, or need technical assistance? Our team is here to help:',
-      contactFormLink: 'Contact Form →',
+      contactFormLink: 'Contact Form',
       ctaHeading: 'Ready to streamline your pre-publish workflow?',
       ctaBody:
         'Open Publish Studio to consolidate your title, thumbnail, and checklist into a complete, upload-ready package.',
-      ctaButton: 'Launch Studio →',
+      ctaButton: 'Launch Studio',
     },
   },
   contact: {
@@ -71,7 +71,7 @@ export const pages = {
       submittedHeading: 'Message Prepared',
       submittedBody:
         'Your email application should have opened. If it didn’t, you can copy your prepared message and email it directly to',
-      launchEmailApp: 'Launch Email App →',
+      launchEmailApp: 'Launch Email App',
       copiedNotification: '✓ Copied!',
     },
     errors: {

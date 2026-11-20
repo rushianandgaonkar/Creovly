@@ -2,7 +2,6 @@
 
 import React from 'react';
 import PageHero from '@/components/ui/PageHero';
-import Badge from '@/components/ui/Badge';
 import ConsentSettings from '@/components/privacy/ConsentSettings';
 import { useI18n, LocalizedLink } from '@/lib/i18n';
 
@@ -13,7 +12,7 @@ export default function PrivacyContent() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
-      <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-[var(--text-muted)] mb-6">
+      <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[var(--text-muted)] mb-6">
         <LocalizedLink href="/" className="hover:text-[var(--text-ink)] transition-colors">
           {t.tools.shell.breadcrumbHome}
         </LocalizedLink>
@@ -24,10 +23,7 @@ export default function PrivacyContent() {
       </nav>
 
       <PageHero tone="teal" className="mb-12">
-        <div className="inline-flex items-center gap-2 mb-2">
-          <Badge variant="neutral">{privacy.heroBadge}</Badge>
-          <span className="text-xs font-mono text-[var(--text-muted)]">{privacy.lastUpdated}</span>
-        </div>
+        <p className="text-xs text-[var(--text-muted)] mb-2">{privacy.lastUpdated}</p>
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-[var(--text-ink)]">
           {privacy.heading}
         </h1>
@@ -40,7 +36,6 @@ export default function PrivacyContent() {
         {/* Core Architecture */}
         <section className="p-6 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-3">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-500" aria-hidden="true" />
             <h2 className="text-base font-semibold text-[var(--text-ink)]">
               {sections.clientSideTitle}
             </h2>
@@ -120,7 +115,7 @@ export default function PrivacyContent() {
               href="https://tools.google.com/dlpage/gaoptout"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--brand-accent)] font-medium hover:underline"
+              className="text-[var(--brand-accent-deep)] font-medium hover:underline"
             >
               {sections.optOutLinkText}
             </a>
@@ -146,11 +141,11 @@ export default function PrivacyContent() {
           </h2>
           <p>
             {sections.contactBodyPrefix}
-            <a href="mailto:support@creovly.com" className="text-[var(--brand-accent)] font-medium hover:underline">
+            <a href="mailto:support@creovly.com" className="text-[var(--brand-accent-deep)] font-medium hover:underline">
               support@creovly.com
             </a>
             {sections.contactBodyMid}
-            <LocalizedLink href="/contact" className="text-[var(--brand-accent)] font-medium hover:underline">
+            <LocalizedLink href="/contact" className="text-[var(--brand-accent-deep)] font-medium hover:underline">
               {sections.contactFormLink}
             </LocalizedLink>
             .

@@ -93,7 +93,7 @@ export const DropZone: React.FC<DropZoneProps> = ({
           {effectiveLabel}
         </span>
         {effectivePrivacyNote && (
-          <span className="inline-flex items-center gap-1 text-[11px] text-emerald-600 dark:text-emerald-400 font-medium">
+          <span className="inline-flex items-center gap-1 text-xs text-[var(--state-success-text)] font-medium">
             <svg
               className="w-3.5 h-3.5"
               fill="none"
@@ -131,7 +131,7 @@ export const DropZone: React.FC<DropZoneProps> = ({
           className="sr-only"
         />
 
-        <div className="w-10 h-10 mb-3 rounded-full bg-[var(--bg-canvas-elevated)] border border-[var(--border-hairline)] flex items-center justify-center text-[var(--text-muted)] group-hover:text-[var(--brand-accent)] group-hover:scale-105 transition-all">
+        <div className="w-10 h-10 mb-3 rounded-full bg-[var(--bg-canvas-elevated)] border border-[var(--border-hairline)] flex items-center justify-center text-[var(--text-muted)] group-hover:text-[var(--brand-accent-deep)] group-hover:scale-105 transition">
           <svg
             className="w-5 h-5"
             fill="none"
@@ -167,7 +167,7 @@ export const DropZone: React.FC<DropZoneProps> = ({
             <span className="text-xs font-medium text-[var(--text-body)]">
               {t.common.dropzone.sampleButtonPrefix}
             </span>
-            <span className="text-[10px] font-mono text-[var(--brand-accent)] font-medium">
+            <span className="text-[10px] font-mono text-[var(--brand-accent-deep)] font-medium">
               {t.common.dropzone.oneClickTest}
             </span>
           </div>
@@ -181,7 +181,7 @@ export const DropZone: React.FC<DropZoneProps> = ({
                   disabled={disabled || loadingSampleId !== null}
                   onClick={() => handleSampleClick(sample)}
                   aria-label={`${t.common.dropzone.sampleButtonPrefix} ${sample.label}`}
-                  className="flex items-center gap-2 p-1.5 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] hover:border-[var(--brand-accent)] hover:bg-[var(--bg-canvas-subtle)] transition-all text-left focus-ring disabled:opacity-50 group cursor-pointer"
+                  className="flex items-center gap-2 p-1.5 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] hover:border-[var(--brand-accent)] hover:bg-[var(--bg-canvas-subtle)] transition text-left focus-ring disabled:opacity-50 group cursor-pointer"
                 >
                   <div className="w-8 h-8 rounded bg-[var(--bg-canvas-subtle)] border border-[var(--border-hairline-subtle)] shrink-0 overflow-hidden flex items-center justify-center p-0.5">
                     <Image
@@ -194,7 +194,7 @@ export const DropZone: React.FC<DropZoneProps> = ({
                     />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <span className="block text-xs font-medium text-[var(--text-ink)] truncate group-hover:text-[var(--brand-accent)]">
+                    <span className="block text-xs font-medium text-[var(--text-ink)] truncate group-hover:text-[var(--brand-accent-deep)]">
                       {isCurrentLoading ? 'Loading…' : sample.label}
                     </span>
                     {sample.category && (

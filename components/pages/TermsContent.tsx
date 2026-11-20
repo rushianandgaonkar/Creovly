@@ -2,7 +2,6 @@
 
 import React from 'react';
 import PageHero from '@/components/ui/PageHero';
-import Badge from '@/components/ui/Badge';
 import { useI18n, LocalizedLink } from '@/lib/i18n';
 
 export default function TermsContent() {
@@ -12,7 +11,7 @@ export default function TermsContent() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
-      <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-[var(--text-muted)] mb-6">
+      <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[var(--text-muted)] mb-6">
         <LocalizedLink href="/" className="hover:text-[var(--text-ink)] transition-colors">
           {t.tools.shell.breadcrumbHome}
         </LocalizedLink>
@@ -23,10 +22,7 @@ export default function TermsContent() {
       </nav>
 
       <PageHero tone="indigo" className="mb-12">
-        <div className="inline-flex items-center gap-2 mb-2">
-          <Badge variant="neutral">{terms.heroBadge}</Badge>
-          <span className="text-xs font-mono text-[var(--text-muted)]">{terms.lastUpdated}</span>
-        </div>
+        <p className="text-xs text-[var(--text-muted)] mb-2">{terms.lastUpdated}</p>
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-[var(--text-ink)]">
           {terms.heading}
         </h1>
@@ -94,11 +90,11 @@ export default function TermsContent() {
           </h2>
           <p>
             {sections.contactBodyPrefix}
-            <a href="mailto:support@creovly.com" className="text-[var(--brand-accent)] font-medium hover:underline">
+            <a href="mailto:support@creovly.com" className="text-[var(--brand-accent-deep)] font-medium hover:underline">
               support@creovly.com
             </a>
             {sections.contactBodyMid}
-            <LocalizedLink href="/contact" className="text-[var(--brand-accent)] font-medium hover:underline">
+            <LocalizedLink href="/contact" className="text-[var(--brand-accent-deep)] font-medium hover:underline">
               {sections.contactFormLink}
             </LocalizedLink>
             .

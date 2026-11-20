@@ -6,7 +6,6 @@ import StudioHeroWorkspace from './StudioHeroWorkspace';
 import { useI18n, LocalizedLink } from '@/lib/i18n';
 
 interface CreatorHeroProps {
-  badge?: string;
   title?: string;
   subtitle?: string;
   description?: string;
@@ -18,7 +17,6 @@ interface CreatorHeroProps {
 }
 
 export default function CreatorHero({
-  badge,
   title,
   subtitle,
   description,
@@ -30,7 +28,6 @@ export default function CreatorHero({
   const { t } = useI18n();
   const count = toolRegistry.filter(tool => tool.status === 'available').length;
 
-  const resolvedBadge = badge || t.home.hero.badge;
   const resolvedTitle = title || t.home.hero.title;
   const resolvedSubtitle = subtitle || t.home.hero.subtitle;
   const resolvedDescription = description || t.home.hero.description;
@@ -42,12 +39,6 @@ export default function CreatorHero({
       <div className="relative py-2">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center space-y-6">
           <div className="max-w-3xl mx-auto">
-            {/* Ambient Floating Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]/90 backdrop-blur shadow-[var(--shadow-button-elevated)] text-xs text-[var(--text-body)] mb-5">
-              <span className="w-2 h-2 rounded-full bg-[var(--brand-accent)]" aria-hidden="true" />
-              <span className="font-medium">{resolvedBadge}</span>
-            </div>
-
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-[-0.045em] text-[var(--text-ink)] leading-[1.05]">
               <span>{resolvedTitle}</span>
               <span className="sr-only"> &mdash; </span>
@@ -64,20 +55,11 @@ export default function CreatorHero({
                 <Button variant="outline" size="lg">{resolvedLaunchStudio}</Button>
               </LocalizedLink>
             </div>
-            <div className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-[var(--text-muted)]">
-              <span className="inline-flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" aria-hidden="true" />
-                {t.home.hero.clientSide}
-              </span>
-              <span className="inline-flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" aria-hidden="true" />
-                {t.home.hero.noAccount}
-              </span>
-              <span className="inline-flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" aria-hidden="true" />
-                {t.home.hero.zeroUploads}
-              </span>
-            </div>
+            <p className="mt-4 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs text-[var(--text-muted)]">
+              <span>{t.home.hero.clientSide}</span>
+              <span className="h-3 w-px bg-[var(--border-hairline-strong)]" aria-hidden="true" />
+              <span>{t.home.hero.noAccount}</span>
+            </p>
           </div>
 
           {/* Flagship Interactive Studio Workspace Fragment */}

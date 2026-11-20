@@ -395,7 +395,7 @@ export default function ThumbnailCompressor() {
                         <button
                           type="button"
                           onClick={() => setPreview(index)}
-                          className="text-xs text-[var(--brand-accent)] underline focus-ring cursor-pointer"
+                          className="text-xs text-[var(--brand-accent-deep)] underline focus-ring cursor-pointer"
                           aria-pressed={preview === index}
                         >
                           {t.compressor.buttonReviewImage.replace('{index}', String(index + 1))}

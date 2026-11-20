@@ -14,7 +14,7 @@ export default function ToolsDirectoryContent() {
       {/* Precision Breadcrumb */}
       <nav
         aria-label="Breadcrumb"
-        className="flex items-center gap-2 text-xs font-mono text-[var(--text-muted)] mb-6"
+        className="flex items-center gap-2 text-xs text-[var(--text-muted)] mb-6"
       >
         <LocalizedLink href="/" className="hover:text-[var(--text-ink)] transition-colors">
           {t.tools.shell.breadcrumbHome}
@@ -28,15 +28,6 @@ export default function ToolsDirectoryContent() {
       </nav>
 
       <PageHero tone="indigo" className="mb-10">
-        <div className="flex flex-wrap items-center gap-2 mb-3">
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
-            {t.tools.directory.completeCatalog}
-          </span>
-          <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-mono text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 bg-emerald-500/5">
-            {t.tools.shell.badgeInBrowser}
-          </span>
-        </div>
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-[var(--text-ink)]">
           {t.tools.directory.heading}
         </h1>

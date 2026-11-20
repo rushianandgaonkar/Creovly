@@ -65,9 +65,8 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
             decoding="async"
           />
           {/* Compression Badge */}
-          <div className="absolute top-2.5 left-2.5 z-10 flex items-center gap-1.5 px-2 py-0.5 rounded bg-black/75 backdrop-blur-sm border border-emerald-500/40 text-[10px] font-semibold text-emerald-300">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-            Example: 1.1 MB • &lt; 2 MB
+          <div className="absolute bottom-2.5 left-2.5 z-10 flex items-center gap-1.5 px-2 py-0.5 rounded bg-black/80 border border-emerald-500/40 text-[10px] font-semibold text-emerald-300">
+            Example: 1.1 MB, under 2 MB
           </div>
           {/* YouTube Video Timestamp in bottom-right */}
           <div className="absolute bottom-2.5 right-2.5 z-10 px-1.5 py-0.5 rounded bg-black/85 text-white font-medium text-[10px] tracking-tight">
@@ -230,20 +229,20 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
         <div className={`tool-preview preview-channel-name w-full h-full p-3 bg-zinc-950 text-zinc-100 flex flex-col justify-between select-none ${className}`} data-ui>
           <div className="flex items-center justify-between text-[10px] text-zinc-400">
             <span className="uppercase tracking-wide font-medium text-indigo-400">Smart Archetypes</span>
-            <span className="px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-300 text-[9px] font-semibold border border-indigo-500/30">AI Formula</span>
+            <span className="px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-300 text-[9px] font-semibold border border-indigo-500/30">Name patterns</span>
           </div>
           <div className="bg-zinc-900/90 rounded-lg p-2.5 border border-zinc-800 space-y-1.5 my-auto">
             <div className="flex items-center justify-between">
               <span className="text-[9px] font-mono uppercase text-emerald-400 font-bold tracking-wider">Modern &amp; Punchy</span>
-              <span className="text-[9px] font-mono text-zinc-400 bg-zinc-800/80 px-1 py-0.2 rounded">17 chars</span>
+              <span className="text-[9px] font-mono text-zinc-400 bg-zinc-800/80 px-1 py-0.2 rounded">16 chars</span>
             </div>
             <div className="text-sm font-bold text-white tracking-tight flex items-center justify-between">
-              <span>NexusCraft Studio</span>
+              <span>Weekend Woodshop</span>
               <span className="text-indigo-400 text-xs">★</span>
             </div>
             <div className="text-[10px] text-zinc-400 font-mono flex items-center gap-1">
               <span className="text-zinc-500">@</span>
-              <span className="text-zinc-300">NexusCraftStudio</span>
+              <span className="text-zinc-300">WeekendWoodshop</span>
             </div>
           </div>
           <div className="flex items-center justify-between text-[9px] text-zinc-400 pt-1.5 border-t border-zinc-800/80">
@@ -292,14 +291,12 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
             <span className="px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-300 text-[9px] font-semibold border border-indigo-500/30">Above-the-Fold</span>
           </div>
           <div className="bg-zinc-900/90 rounded-lg p-2.5 border border-zinc-800 space-y-1.5 my-auto">
-            <div className="text-[11px] font-medium text-zinc-200 line-clamp-1">
-              Master Next.js 15 App Router in 2026. Everything you need to build...
+            <div className="text-[11px] font-medium text-zinc-200 truncate">
+              How I film a week of videos in one day. Gear, script and schedule...
             </div>
-            <div className="flex items-center gap-1.5 text-[9px] text-indigo-400 font-mono">
-              <span className="text-sky-400">00:00</span> Intro &bull; <span className="text-sky-400">02:30</span> Server Actions &bull; <span className="text-sky-400">08:15</span> Deploy
-            </div>
+            <div className="truncate text-[10px] text-zinc-400 font-mono"><span className="text-sky-400">00:00</span> Intro <span className="ml-2 text-sky-400">02:30</span> Gear <span className="ml-2 text-sky-400">08:15</span> Schedule</div>
             <div className="flex justify-between items-center text-[9px] text-zinc-500 font-mono pt-1 border-t border-zinc-800/60">
-              <span className="text-zinc-400">#NextJS #WebDev</span>
+              <span className="text-zinc-400">#Filmmaking #Creator</span>
               <span className="text-emerald-400 font-semibold">1,240 / 5,000 chars</span>
             </div>
           </div>
@@ -326,7 +323,7 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
           </div>
           {/* Mini Revenue Curve SVG */}
           <div className="h-10 w-full relative">
-            <svg viewBox="0 0 160 40" preserveAspectRatio="none" className="w-full h-full">
+            <svg viewBox="0 0 160 40" preserveAspectRatio="none" className="w-full h-full" aria-hidden="true">
               <defs>
                 <linearGradient id="revGrad" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="0%" stopColor="#10b981" stopOpacity="0.3" />
@@ -388,7 +385,7 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
           {/* Progress bar */}
           <div className="space-y-1.5">
             <div className="w-full h-2.5 rounded-full bg-zinc-800 overflow-hidden p-0.5 border border-zinc-700/60">
-              <div className="h-full rounded-full bg-amber-400 transition-all duration-300" style={{ width: '71%' }} />
+              <div className="h-full rounded-full bg-amber-400 " style={{ width: '71%' }} />
             </div>
             <div className="flex items-center justify-between text-[10px] text-zinc-400">
               <span>1,160 hrs remaining</span>
@@ -494,7 +491,7 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
               </div>
             ))}
           </div>
-          <div className="text-[10px] text-zinc-400 pt-1 border-t border-zinc-800">YouTube · Instagram · TikTok</div>
+          <div className="text-[10px] text-zinc-400 pt-1 border-t border-zinc-800">YouTube, Instagram, TikTok</div>
         </div>
       );
 
@@ -508,14 +505,11 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
           <div className="flex items-end gap-2">
             {[['w-[46%]', '1280×720'], ['w-[30%]', '640×480'], ['w-[18%]', '480×360']].map(([width, label]) => (
               <div key={label} className={`${width} space-y-1`}>
-                <div className="aspect-video rounded bg-gradient-to-br from-orange-400 via-rose-500 to-indigo-500" />
-                <span className="block text-[9px] font-mono text-zinc-400">{label}</span>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/examples/thumbnail-source.webp" alt="" width={160} height={90} className="aspect-video w-full rounded object-cover" loading="lazy" decoding="async" />
+                <span className="block text-[10px] font-mono text-zinc-400">{label}</span>
               </div>
             ))}
-          </div>
-          <div className="flex items-center justify-between text-[10px] text-zinc-400 pt-1 border-t border-zinc-800">
-            <span>Max res · SD · HQ</span>
-            <span className="text-zinc-200 font-medium">JPG</span>
           </div>
         </div>
       );
@@ -525,7 +519,9 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
         <div className={`tool-preview preview-thumbnail-tester w-full h-full p-3.5 bg-white text-zinc-900 flex gap-3 select-none ${className}`} data-ui>
           {['A', 'B'].map((version, index) => (
             <div key={version} className="flex-1 min-w-0 space-y-1.5">
-              <div className={`relative aspect-video rounded-lg bg-gradient-to-br ${index ? 'from-sky-400 to-emerald-500' : 'from-orange-400 to-rose-500'}`}>
+              <div className="relative aspect-video rounded-lg overflow-hidden bg-zinc-900">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={index ? '/examples/compressor-source.webp' : '/examples/thumbnail-source.webp'} alt="" width={160} height={90} className="w-full h-full object-cover" loading="lazy" decoding="async" />
                 <span className="absolute bottom-1 right-1 rounded bg-black/80 px-1 text-[8px] font-medium text-white">10:24</span>
                 <span className="absolute top-1 left-1 rounded bg-white/90 px-1 text-[8px] font-bold">{version}</span>
               </div>

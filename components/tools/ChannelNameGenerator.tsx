@@ -1,4 +1,3 @@
-/* Hallmark · genre: modern-minimal · macrostructure: Workbench */
 'use client';
 
 import { useState, useEffect, useId } from 'react';
@@ -193,8 +192,7 @@ export default function ChannelNameGenerator({}: ChannelNameGeneratorProps) {
           {/* AI / Client-side badge */}
           <div className="flex items-center justify-between p-3 rounded-xl bg-[var(--bg-canvas-subtle)] border border-[var(--border-hairline)]">
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse" />
-              <span className="text-xs font-mono font-medium text-[var(--text-ink)]">
+              <span className="text-xs font-medium text-[var(--text-ink)]">
                 {cn.aiBadge}
               </span>
             </div>
@@ -256,7 +254,7 @@ export default function ChannelNameGenerator({}: ChannelNameGeneratorProps) {
                       setNiche(n.id);
                       handleGenerate(keyword, n.id);
                     }}
-                    className={`text-left px-3 py-2 rounded-xl text-xs font-medium border transition-all ${
+                    className={`text-left px-3 py-2 rounded-xl text-xs font-medium border transition ${
                       isSelected
                         ? 'border-indigo-500 bg-indigo-500/15 text-[var(--text-ink)] shadow-sm'
                         : 'border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-[var(--text-muted)] hover:text-[var(--text-ink)] hover:border-[var(--border-subtle)]'
@@ -282,7 +280,7 @@ export default function ChannelNameGenerator({}: ChannelNameGeneratorProps) {
                     key={s.id}
                     type="button"
                     onClick={() => setStyle(s.id)}
-                    className={`text-left p-3 rounded-xl border transition-all ${
+                    className={`text-left p-3 rounded-xl border transition ${
                       isSelected
                         ? 'border-indigo-500 bg-indigo-500/15 text-[var(--text-ink)] shadow-sm'
                         : 'border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-[var(--text-muted)] hover:text-[var(--text-ink)] hover:border-[var(--border-subtle)]'
@@ -313,7 +311,7 @@ export default function ChannelNameGenerator({}: ChannelNameGeneratorProps) {
                     key={l.id}
                     type="button"
                     onClick={() => setLength(l.id)}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-all ${
+                    className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition ${
                       isSelected
                         ? 'border-indigo-500 bg-indigo-500/15 text-[var(--text-ink)]'
                         : 'border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-[var(--text-muted)] hover:text-[var(--text-ink)]'
@@ -381,7 +379,7 @@ export default function ChannelNameGenerator({}: ChannelNameGeneratorProps) {
               <button
                 type="button"
                 onClick={() => setActiveTab('results')}
-                className={`text-xs font-semibold px-2.5 py-1.5 rounded-lg transition-all ${
+                className={`text-xs font-semibold px-2.5 py-1.5 rounded-lg transition ${
                   activeTab === 'results'
                     ? 'bg-indigo-500/15 text-indigo-400 border border-indigo-500/30'
                     : 'text-[var(--text-muted)] hover:text-[var(--text-ink)]'
@@ -392,7 +390,7 @@ export default function ChannelNameGenerator({}: ChannelNameGeneratorProps) {
               <button
                 type="button"
                 onClick={() => setActiveTab('favorites')}
-                className={`text-xs font-semibold px-2.5 py-1.5 rounded-lg transition-all flex items-center gap-1.5 ${
+                className={`text-xs font-semibold px-2.5 py-1.5 rounded-lg transition flex items-center gap-1.5 ${
                   activeTab === 'favorites'
                     ? 'bg-indigo-500/15 text-indigo-400 border border-indigo-500/30'
                     : 'text-[var(--text-muted)] hover:text-[var(--text-ink)]'
@@ -455,7 +453,7 @@ export default function ChannelNameGenerator({}: ChannelNameGeneratorProps) {
                   return (
                     <div
                       key={item.id}
-                      className="p-3.5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] hover:border-indigo-500/40 hover:bg-indigo-500/[0.03] transition-all flex items-center justify-between gap-3 group"
+                      className="p-3.5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] hover:border-indigo-500/40 hover:bg-indigo-500/[0.03] transition flex items-center justify-between gap-3 group"
                     >
                       <div className="min-w-0 flex-1">
                         <div className="flex items-center gap-2">
@@ -488,7 +486,7 @@ export default function ChannelNameGenerator({}: ChannelNameGeneratorProps) {
                           onClick={() => toggleFavorite(item)}
                           title={isFav ? cn.buttonSaved : cn.buttonSave}
                           aria-label={isFav ? cn.buttonSaved : cn.buttonSave}
-                          className={`p-2 rounded-lg border transition-all text-xs ${
+                          className={`p-2 rounded-lg border transition text-xs ${
                             isFav
                               ? 'bg-amber-500/20 border-amber-500/40 text-amber-400'
                               : 'border-transparent text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800'

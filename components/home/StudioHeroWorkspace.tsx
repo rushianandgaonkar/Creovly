@@ -99,30 +99,17 @@ export default function StudioHeroWorkspace() {
     >
       {/* Studio Top Window Bar */}
       <div className="flex flex-wrap items-center justify-between gap-3 px-4 py-3 bg-zinc-900/90 border-b border-zinc-800 text-xs">
-        <div className="flex items-center gap-2.5">
-          <div className="flex gap-1.5" aria-hidden="true">
-            <span className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
-            <span className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
-            <span className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
-          </div>
-          <span className="font-semibold text-zinc-200">
-            {ws.title}{' '}
-            <span className="text-zinc-500 font-normal">{ws.projectDraft}</span>
-          </span>
-        </div>
+        <span className="font-semibold text-zinc-200">
+          {ws.title}{' '}
+          <span className="text-zinc-400 font-normal">{ws.projectDraft}</span>
+        </span>
 
-        <div className="flex items-center gap-3">
-          <span className="inline-flex items-center gap-1.5 text-[11px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-            {ws.clientSideBadge}
-          </span>
-          <LocalizedLink
-            href="/studio"
-            className="text-[11px] font-semibold text-white bg-orange-700 hover:bg-orange-800 px-2.5 py-1 rounded transition-colors"
-          >
-            {ws.openStudio}
-          </LocalizedLink>
-        </div>
+        <LocalizedLink
+          href="/studio"
+          className="text-xs font-semibold text-white bg-orange-700 hover:bg-orange-800 px-2.5 py-1 rounded transition-colors"
+        >
+          {ws.openStudio}
+        </LocalizedLink>
       </div>
 
       {/* Main 3-Column Studio Workspace */}
@@ -156,7 +143,7 @@ export default function StudioHeroWorkspace() {
                 setCustomTitle(e.target.value);
                 setSelectedTitleIdx(null);
               }}
-              className="w-full px-3 py-2 text-sm bg-zinc-900 border border-zinc-700/80 rounded-lg text-white focus:outline-none focus:border-orange-400 transition-colors"
+              className="w-full px-3 py-2 text-sm bg-zinc-900 border border-zinc-500 rounded-lg text-white"
               placeholder={ws.titlePlaceholder}
             />
             <p className="text-[11px] text-zinc-400 flex items-center justify-between">
@@ -171,7 +158,7 @@ export default function StudioHeroWorkspace() {
 
           {/* Quick Preset Selector */}
           <div className="space-y-1.5 pt-1">
-            <span className="text-[10px] uppercase font-semibold text-zinc-500 block">
+            <span className="text-xs font-medium text-zinc-400 block">
               {ws.sampleTitlesLabel}
             </span>
             <div className="flex flex-col gap-1.5">
@@ -222,11 +209,11 @@ export default function StudioHeroWorkspace() {
             />
 
             {/* Platform Badges Overlay */}
-            <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5 z-10">
-              <span className="px-2 py-0.5 rounded bg-black/80 backdrop-blur-sm border border-emerald-500/40 text-[10px] font-semibold text-emerald-300">
+            <div className="absolute bottom-2.5 left-2.5 flex items-center gap-1.5 z-10">
+              <span className="px-2 py-0.5 rounded bg-black/80 backdrop-blur-sm border border-emerald-500/40 text-[11px] font-semibold text-emerald-300">
                 {activePreset.size}
               </span>
-              <span className="px-1.5 py-0.5 rounded bg-black/80 text-[10px] text-zinc-300">
+              <span className="px-1.5 py-0.5 rounded bg-black/80 text-[11px] text-zinc-300">
                 {ws.badgeHdPass}
               </span>
             </div>
@@ -239,7 +226,7 @@ export default function StudioHeroWorkspace() {
 
           {/* Switch Format / Artwork Preset */}
           <div className="flex items-center gap-2">
-            <span className="text-[10px] uppercase font-semibold text-zinc-500">
+            <span className="text-xs font-medium text-zinc-400">
               {ws.previewStyleLabel}
             </span>
             <div className="flex flex-wrap gap-1.5">
@@ -281,7 +268,7 @@ export default function StudioHeroWorkspace() {
                 className="w-full flex items-center justify-between text-left p-1.5 rounded hover:bg-zinc-800/60"
               >
                 <span className="text-zinc-300 truncate">{ws.checkAspect}</span>
-                <span className={checklist.resolution ? 'text-emerald-400 font-bold' : 'text-zinc-600'}>
+                <span className={checklist.resolution ? 'text-emerald-400 font-bold' : 'text-zinc-400'}>
                   {checklist.resolution ? ws.badgePass : ws.badgeSkip}
                 </span>
               </button>
@@ -292,7 +279,7 @@ export default function StudioHeroWorkspace() {
                 className="w-full flex items-center justify-between text-left p-1.5 rounded hover:bg-zinc-800/60"
               >
                 <span className="text-zinc-300 truncate">{ws.checkFileSize}</span>
-                <span className={checklist.fileSize ? 'text-emerald-400 font-bold' : 'text-zinc-600'}>
+                <span className={checklist.fileSize ? 'text-emerald-400 font-bold' : 'text-zinc-400'}>
                   {checklist.fileSize ? ws.badgePass : ws.badgeSkip}
                 </span>
               </button>
@@ -303,7 +290,7 @@ export default function StudioHeroWorkspace() {
                 className="w-full flex items-center justify-between text-left p-1.5 rounded hover:bg-zinc-800/60"
               >
                 <span className="text-zinc-300 truncate">{ws.checkSafeZone}</span>
-                <span className={checklist.safeZone ? 'text-emerald-400 font-bold' : 'text-zinc-600'}>
+                <span className={checklist.safeZone ? 'text-emerald-400 font-bold' : 'text-zinc-400'}>
                   {checklist.safeZone ? ws.badgePass : ws.badgeSkip}
                 </span>
               </button>
@@ -321,7 +308,7 @@ export default function StudioHeroWorkspace() {
                 className="w-full flex items-center justify-between text-left p-1.5 rounded hover:bg-zinc-800/60"
               >
                 <span className="text-zinc-300 truncate">{ws.checkAudio}</span>
-                <span className={checklist.audioDisclosure ? 'text-emerald-400 font-bold' : 'text-zinc-600'}>
+                <span className={checklist.audioDisclosure ? 'text-emerald-400 font-bold' : 'text-zinc-400'}>
                   {checklist.audioDisclosure ? ws.badgePass : ws.badgeSkip}
                 </span>
               </button>
@@ -332,7 +319,7 @@ export default function StudioHeroWorkspace() {
                 className="w-full flex items-center justify-between text-left p-1.5 rounded hover:bg-zinc-800/60"
               >
                 <span className="text-zinc-300 truncate">{ws.checkChapters}</span>
-                <span className={checklist.descriptionChapters ? 'text-emerald-400 font-bold' : 'text-zinc-600'}>
+                <span className={checklist.descriptionChapters ? 'text-emerald-400 font-bold' : 'text-zinc-400'}>
                   {checklist.descriptionChapters ? ws.badgePass : ws.badgeSkip}
                 </span>
               </button>

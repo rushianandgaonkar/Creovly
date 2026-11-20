@@ -95,7 +95,7 @@ export default function PolaroidLineCarousel({ tools }: { tools: ToolDefinition[
   return <section className={styles.gallery} aria-labelledby="discover-heading" aria-roledescription="carousel">
     <div className={styles.heading}>
       <div><h2 id="discover-heading">{carousel.heading}</h2><p>{carousel.subheading}</p></div>
-      <LocalizedLink href="/tools" className="focus-ring">{carousel.viewDirectory} <span aria-hidden="true">↗</span></LocalizedLink>
+      <LocalizedLink href="/tools" className="focus-ring">{carousel.viewDirectory}</LocalizedLink>
     </div>
     <div className={styles.stage}>
       <svg className={styles.string} viewBox="0 0 1200 48" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 Q600 48 1200 0" fill="none" stroke="currentColor" strokeWidth="1.5" vectorEffect="non-scaling-stroke" /></svg>
@@ -114,7 +114,6 @@ export default function PolaroidLineCarousel({ tools }: { tools: ToolDefinition[
           <LocalizedLink href={tool.href} className={`${styles.print} focus-ring`} draggable={false}>
             <div className={styles.picture} data-category={tool.category}>
               <ToolIllustration toolId={tool.id} />
-              <span className={styles.category}>{tool.category}</span>
             </div>
             <div className={styles.cardBody}>
               <div>
@@ -122,10 +121,6 @@ export default function PolaroidLineCarousel({ tools }: { tools: ToolDefinition[
                 <p>{tool.description}</p>
               </div>
               <div className={styles.actionRow}>
-                <span className={styles.badge}>
-                  <span className={styles.badgeDot} aria-hidden="true" />
-                  {carousel.localBadge}
-                </span>
                 <span className={styles.actionBtn} aria-hidden="true">
                   <ArrowUpRight className={styles.actionIcon} />
                 </span>

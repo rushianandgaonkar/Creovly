@@ -1,5 +1,3 @@
-/* Hallmark · genre: modern-minimal · macrostructure: Workbench · theme: Cobalt */
-/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 */
 import { createPageMetadata } from '@/lib/metadata';
 import PublishStudio from '@/components/studio/PublishStudio';
 

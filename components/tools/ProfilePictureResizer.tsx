@@ -238,7 +238,7 @@ export default function ProfilePictureResizer() {
                   )}
                   <p className="text-xs text-[var(--text-body)]">
                     {p.fillTip}{' '}
-                    <LocalizedLink href="/tools/logo-background-remover" className="font-medium text-[var(--brand-accent)] underline hover:no-underline">{p.fillLink}</LocalizedLink>
+                    <LocalizedLink href="/tools/logo-background-remover" className="font-medium text-[var(--brand-accent-deep)] underline hover:no-underline">{p.fillLink}</LocalizedLink>
                   </p>
                 </div>
 

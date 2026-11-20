@@ -1,4 +1,3 @@
-/* Hallmark · genre: modern-minimal · macrostructure: Workbench */
 'use client';
 
 import React from 'react';
@@ -156,7 +155,7 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
   const guideSentence = (href: string, text: { lead: string; link: string; end: string }) => (
     <p className="text-xs pt-1">
       {text.lead}{' '}
-      <LocalizedLink href={href} className="text-[var(--brand-accent)] underline hover:no-underline font-medium">
+      <LocalizedLink href={href} className="text-[var(--brand-accent-deep)] underline hover:no-underline font-medium">
         {text.link}
       </LocalizedLink>
       {text.end}
@@ -173,7 +172,7 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
           <p>
             <a
               href="https://support.google.com/youtube/answer/72431?hl=en"
-              className="text-[var(--brand-accent)] underline focus-ring"
+              className="text-[var(--brand-accent-deep)] underline focus-ring"
             >
               {g.linkText}
             </a>{' '}
@@ -352,7 +351,7 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
     <div className={`max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 ${className}`}>
       {/* Precision Breadcrumb */}
       <nav
-        className="flex items-center gap-2 text-xs font-mono text-[var(--text-muted)] mb-6 overflow-x-auto whitespace-nowrap"
+        className="flex items-center gap-2 text-xs text-[var(--text-muted)] mb-6 overflow-x-auto whitespace-nowrap"
         aria-label="Breadcrumb"
       >
         <LocalizedLink href="/" className="hover:text-[var(--text-ink)] transition-colors">
@@ -390,15 +389,10 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
         className="mb-8"
       >
         <div className="flex flex-wrap items-center gap-2 mb-3">
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)] shadow-[var(--shadow-whisper)]">
-            <span
-              className={`w-1.5 h-1.5 rounded-full ${
-                tool?.status === 'available' ? 'bg-emerald-500' : 'bg-amber-500'
-              }`}
-            />
+          <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-ink)]">
             {displayCategory}
           </span>
-          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-medium border border-emerald-500/20 bg-emerald-500/5">
+          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-medium text-[var(--state-success-text)] border border-[var(--state-success-border)] bg-[var(--state-success-bg)]">
             <svg
               className="w-3 h-3"
               fill="none"
@@ -414,9 +408,6 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
               />
             </svg>
             {t.tools.shell.badgeInBrowser}
-          </span>
-          <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-mono text-[var(--text-muted)] border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)]">
-            {t.tools.shell.badgeUpdatedSpecs}
           </span>
         </div>
 
@@ -455,12 +446,6 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
 
       {/* Educational / Guidance Content */}
       <section className="mt-14 pt-10 border-t border-[var(--border-hairline)]" aria-labelledby="guide-heading">
-        <div className="flex items-center gap-2 mb-2">
-          <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
-          <span className="text-xs font-mono text-[var(--text-muted)]">
-            {t.tools.shell.guidanceLabel}
-          </span>
-        </div>
         <h2
           id="guide-heading"
           className="text-xl font-bold tracking-tight text-[var(--text-ink)]"
@@ -477,7 +462,7 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
                 <div className="p-4 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] shadow-[var(--shadow-whisper)]">
-                  <span className="text-xs font-mono font-bold text-[var(--brand-accent)]">
+                  <span className="text-xs font-mono font-bold text-[var(--brand-accent-deep)]">
                     {t.tools.shell.defaultSteps.step1Title}
                   </span>
                   <h3 className="text-sm font-semibold text-[var(--text-ink)] mt-1">
@@ -488,7 +473,7 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
                   </p>
                 </div>
                 <div className="p-4 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] shadow-[var(--shadow-whisper)]">
-                  <span className="text-xs font-mono font-bold text-[var(--brand-accent)]">
+                  <span className="text-xs font-mono font-bold text-[var(--brand-accent-deep)]">
                     {t.tools.shell.defaultSteps.step2Title}
                   </span>
                   <h3 className="text-sm font-semibold text-[var(--text-ink)] mt-1">
@@ -499,7 +484,7 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
                   </p>
                 </div>
                 <div className="p-4 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] shadow-[var(--shadow-whisper)]">
-                  <span className="text-xs font-mono font-bold text-[var(--brand-accent)]">
+                  <span className="text-xs font-mono font-bold text-[var(--brand-accent-deep)]">
                     {t.tools.shell.defaultSteps.step3Title}
                   </span>
                   <h3 className="text-sm font-semibold text-[var(--text-ink)] mt-1">
@@ -521,12 +506,6 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
           className="mt-14 pt-10 border-t border-[var(--border-hairline)]"
           aria-labelledby="faq-heading"
         >
-          <div className="flex items-center gap-2 mb-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
-            <span className="text-xs font-mono text-[var(--text-muted)]">
-              {t.tools.shell.faqBadge}
-            </span>
-          </div>
           <h2
             id="faq-heading"
             className="text-xl font-bold tracking-tight text-[var(--text-ink)]"
@@ -539,7 +518,7 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
                 key={faq.question}
                 className="group p-4 sm:p-5 transition-colors [&_summary::-webkit-details-marker]:hidden"
               >
-                <summary className="flex items-center justify-between gap-4 cursor-pointer list-none text-left text-sm font-semibold text-[var(--text-ink)] hover:text-[var(--brand-accent)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-accent)] rounded">
+                <summary className="flex items-center justify-between gap-4 cursor-pointer list-none text-left text-sm font-semibold text-[var(--text-ink)] hover:text-[var(--brand-accent-deep)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-accent)] rounded">
                   <span>{faq.question}</span>
                   <svg
                     className="w-4 h-4 shrink-0 text-[var(--text-muted)] transition-transform duration-200 group-open:rotate-180"
@@ -568,12 +547,6 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
       >
         <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
           <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
-              <span className="text-xs font-mono text-[var(--text-muted)]">
-                {t.tools.shell.relatedBadge}
-              </span>
-            </div>
             <h2
               id="related-heading"
               className="text-xl font-bold tracking-tight text-[var(--text-ink)]"
@@ -586,10 +559,9 @@ export const ToolPageShell: React.FC<ToolPageShellProps> = ({
           </div>
           <LocalizedLink
             href="/tools"
-            className="text-xs font-mono font-medium text-[var(--brand-accent)] hover:underline inline-flex items-center gap-1"
+            className="text-sm font-medium text-[var(--brand-accent-deep)] hover:underline"
           >
-            <span>{t.tools.shell.relatedViewAll}</span>
-            <span aria-hidden="true">&rarr;</span>
+            {t.tools.shell.relatedViewAll}
           </LocalizedLink>
         </div>
 

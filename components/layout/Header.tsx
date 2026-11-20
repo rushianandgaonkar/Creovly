@@ -1,5 +1,3 @@
-/* Hallmark · genre: modern-minimal · macrostructure: Workbench · theme: Cobalt · nav: N1b · footer: Ft2 */
-/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 */
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -94,7 +92,7 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-200 backdrop-blur-md ${
+      className={`sticky top-0 z-50 w-full transition duration-200 backdrop-blur-md ${
         scrolled
           ? 'border-b border-[var(--border-hairline-strong)] bg-[var(--bg-canvas)]/90 shadow-2xs'
           : 'border-b border-[var(--border-hairline)] bg-[var(--bg-canvas)]/80'
@@ -110,10 +108,6 @@ export default function Header() {
           >
             <Wordmark size="md" />
           </LocalizedLink>
-          <span className="hidden lg:inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full border border-[var(--border-hairline-subtle)] bg-[var(--bg-canvas-subtle)] text-[10px] font-mono text-[var(--text-muted)]">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
-            <span>{t.common.nav.localBadge}</span>
-          </span>
         </div>
 
         <div className="flex items-center gap-3 sm:gap-4">
@@ -121,7 +115,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setSearchModalOpen(true)}
-            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] hover:border-[var(--brand-accent)] text-xs text-[var(--text-muted)] hover:text-[var(--text-ink)] shadow-[var(--shadow-button-elevated)] hover:shadow-[var(--shadow-button-elevated-hover)] hover:-translate-y-0.5 active:translate-y-0 transition-all focus-ring cursor-pointer"
+            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] hover:border-[var(--brand-accent)] text-xs text-[var(--text-muted)] hover:text-[var(--text-ink)] shadow-[var(--shadow-button-elevated)] hover:shadow-[var(--shadow-button-elevated-hover)] hover:-translate-y-0.5 active:translate-y-0 transition focus-ring cursor-pointer"
             aria-label={t.common.nav.openSearchPalette}
           >
             <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -135,7 +129,7 @@ export default function Header() {
             {navigationLinks()}
           </nav>
           <div className="flex items-center gap-2 border-l border-[var(--border-hairline)] pl-3 sm:pl-4">
-            <LanguageSelector className="hidden sm:inline-block" />
+            <div className="hidden sm:block"><LanguageSelector /></div>
             <ThemeToggle />
             <button
               id="navigation-toggle"

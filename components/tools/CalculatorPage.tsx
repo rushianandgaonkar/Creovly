@@ -1,4 +1,3 @@
-/* Hallmark · genre: modern-minimal · macrostructure: Workbench */
 'use client';
 
 import ToolPageShell from './ToolPageShell';
@@ -80,7 +79,7 @@ export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; s
                     ] as const
                   ).map(([href, item]) => (
                     <li key={href}>
-                      <LocalizedLink href={href} className="text-[var(--brand-accent)] underline hover:no-underline font-medium">
+                      <LocalizedLink href={href} className="text-[var(--brand-accent-deep)] underline hover:no-underline font-medium">
                         {item.label}
                       </LocalizedLink>{' '}
                       {item.note}
@@ -110,7 +109,7 @@ export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; s
               </h2>
               <p className="text-xs">
                 Review official thresholds and partner criteria in our guide to{' '}
-                <LocalizedLink href="/guides/youtube-monetization-requirements" className="text-[var(--brand-accent)] underline hover:no-underline font-medium">
+                <LocalizedLink href="/guides/youtube-monetization-requirements" className="text-[var(--brand-accent-deep)] underline hover:no-underline font-medium">
                   YouTube monetization requirements
                 </LocalizedLink>.
               </p>
@@ -120,7 +119,7 @@ export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; s
             <div>
               <p className="text-xs">
                 Track your eligibility trajectory with official platform standards in our guide to{' '}
-                <LocalizedLink href="/guides/youtube-monetization-requirements" className="text-[var(--brand-accent)] underline hover:no-underline font-medium">
+                <LocalizedLink href="/guides/youtube-monetization-requirements" className="text-[var(--brand-accent-deep)] underline hover:no-underline font-medium">
                   YouTube monetization requirements
                 </LocalizedLink>.
               </p>
@@ -147,10 +146,9 @@ export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; s
               }
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--brand-accent)] font-medium hover:underline focus-ring inline-flex items-center gap-1 text-xs font-mono"
+              className="text-[var(--brand-accent-deep)] font-medium hover:underline focus-ring text-xs"
             >
               <span>{watch ? t.calculator.shared.officialGuideLinkTextWatch : t.calculator.shared.officialGuideLinkTextRpm}</span>
-              <span aria-hidden="true">&rarr;</span>
             </a>
           </p>
         </div>

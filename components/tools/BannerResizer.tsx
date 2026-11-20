@@ -1,4 +1,3 @@
-/* Hallmark · genre: modern-minimal · macrostructure: Workbench */
 'use client';
 
 import Image from 'next/image';
@@ -246,7 +245,7 @@ export default function BannerResizer({ locale: propLocale }: { locale?: string 
                     key={btn.id}
                     type="button"
                     onClick={() => setDeviceView(btn.id)}
-                    className={`px-2.5 py-2 rounded-lg text-left border text-xs transition-all cursor-pointer ${
+                    className={`px-2.5 py-2 rounded-lg text-left border text-xs transition cursor-pointer ${
                       deviceView === btn.id
                         ? 'border-[var(--brand-accent)] bg-[var(--brand-accent)]/10 text-[var(--text-ink)] font-semibold shadow-sm'
                         : 'border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-body)] hover:border-[var(--border-strong)]'
@@ -268,7 +267,7 @@ export default function BannerResizer({ locale: propLocale }: { locale?: string 
                 <button
                   type="button"
                   onClick={() => setFitMode('cover')}
-                  className={`px-3 py-2 rounded-lg border text-xs text-center cursor-pointer transition-all ${
+                  className={`px-3 py-2 rounded-lg border text-xs text-center cursor-pointer transition ${
                     fitMode === 'cover'
                       ? 'border-[var(--brand-accent)] bg-[var(--brand-accent)]/10 text-[var(--text-ink)] font-semibold'
                       : 'border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-body)]'
@@ -279,7 +278,7 @@ export default function BannerResizer({ locale: propLocale }: { locale?: string 
                 <button
                   type="button"
                   onClick={() => setFitMode('contain')}
-                  className={`px-3 py-2 rounded-lg border text-xs text-center cursor-pointer transition-all ${
+                  className={`px-3 py-2 rounded-lg border text-xs text-center cursor-pointer transition ${
                     fitMode === 'contain'
                       ? 'border-[var(--brand-accent)] bg-[var(--brand-accent)]/10 text-[var(--text-ink)] font-semibold'
                       : 'border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-body)]'
@@ -385,7 +384,7 @@ export default function BannerResizer({ locale: propLocale }: { locale?: string 
               <a
                 href="/templates/youtube-banner-size-template.png"
                 download="youtube-banner-size-template.png"
-                className="inline-flex items-center gap-1.5 text-xs text-[var(--brand-accent)] hover:underline font-medium pt-1"
+                className="inline-flex items-center gap-1.5 text-xs text-[var(--brand-accent-deep)] hover:underline font-medium pt-1"
               >
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />

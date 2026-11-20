@@ -46,8 +46,8 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
       afterLabel: 'After',
       downloadOriginal: 'Download original',
       downloadProcessed: 'Download processed',
-      beforeDraft: 'Before // Original Draft',
-      afterDraft: 'After // Polished Draft',
+      beforeDraft: 'Before: Original Draft',
+      afterDraft: 'After: Polished Draft',
     },
     tools: {
       'logo-background-remover': [
@@ -172,8 +172,8 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
       afterLabel: 'Después',
       downloadOriginal: 'Descargar original',
       downloadProcessed: 'Descargar procesada',
-      beforeDraft: 'Antes // Borrador original',
-      afterDraft: 'Después // Borrador pulido',
+      beforeDraft: 'Antes: Borrador original',
+      afterDraft: 'Después: Borrador pulido',
     },
     tools: {
       'logo-background-remover': [
@@ -298,8 +298,8 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
       afterLabel: '適用後',
       downloadOriginal: 'オリジナルを保存',
       downloadProcessed: '処理後画像を保存',
-      beforeDraft: '修正前 // 元の下書き',
-      afterDraft: '修正後 // 洗練された下書き',
+      beforeDraft: '修正前: 元の下書き',
+      afterDraft: '修正後: 洗練された下書き',
     },
     tools: {
       'logo-background-remover': [
@@ -424,8 +424,8 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
       afterLabel: 'Après',
       downloadOriginal: 'Télécharger l\'original',
       downloadProcessed: 'Télécharger le résultat',
-      beforeDraft: 'Avant // Brouillon initial',
-      afterDraft: 'Après // Brouillon optimisé',
+      beforeDraft: 'Avant: Brouillon initial',
+      afterDraft: 'Après: Brouillon optimisé',
     },
     tools: {
       'logo-background-remover': [
@@ -550,8 +550,8 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
       afterLabel: 'Nachher',
       downloadOriginal: 'Originaldatei herunterladen',
       downloadProcessed: 'Bearbeitete Datei herunterladen',
-      beforeDraft: 'Vorher // Ursprünglicher Entwurf',
-      afterDraft: 'Nachher // Optimierter Entwurf',
+      beforeDraft: 'Vorher: Ursprünglicher Entwurf',
+      afterDraft: 'Nachher: Optimierter Entwurf',
     },
     tools: {
       'logo-background-remover': [
@@ -676,8 +676,8 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
       afterLabel: 'Depois',
       downloadOriginal: 'Descarregar original',
       downloadProcessed: 'Descarregar imagem tratada',
-      beforeDraft: 'Antes // Rascunho inicial',
-      afterDraft: 'Depois // Rascunho melhorado',
+      beforeDraft: 'Antes: Rascunho inicial',
+      afterDraft: 'Depois: Rascunho melhorado',
     },
     tools: {
       'logo-background-remover': [
@@ -802,8 +802,8 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
       afterLabel: '적용 후',
       downloadOriginal: '원본 이미지 다운로드',
       downloadProcessed: '처리된 이미지 다운로드',
-      beforeDraft: '수정 전 // 원본 초안',
-      afterDraft: '수정 후 // 다듬어진 초안',
+      beforeDraft: '수정 전: 원본 초안',
+      afterDraft: '수정 후: 다듬어진 초안',
     },
     tools: {
       'logo-background-remover': [
@@ -928,8 +928,8 @@ export const toolPlaybookTranslations: Record<Locale, PlaybookI18n> = {
       afterLabel: 'Dopo',
       downloadOriginal: 'Scarica originale',
       downloadProcessed: 'Scarica file elaborato',
-      beforeDraft: 'Prima // Bozza originale',
-      afterDraft: 'Dopo // Bozza rifinita',
+      beforeDraft: 'Prima: Bozza originale',
+      afterDraft: 'Dopo: Bozza rifinita',
     },
     tools: {
       'logo-background-remover': [

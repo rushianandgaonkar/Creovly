@@ -49,7 +49,7 @@ export default function LanguageSelector({ variant = 'header', className = '' }:
   if (variant === 'footer') {
     return (
       <div className={`flex flex-col gap-2 ${className}`}>
-        <label htmlFor="footer-language-select" className="text-[11px] font-mono text-[var(--text-ink)] font-semibold flex items-center gap-1.5">
+        <label htmlFor="footer-language-select" className="text-xs text-[var(--text-ink)] font-semibold flex items-center gap-1.5">
           <svg className="w-3.5 h-3.5 text-[var(--text-muted)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="10" />
             <line x1="2" y1="12" x2="22" y2="12" />
@@ -91,7 +91,7 @@ export default function LanguageSelector({ variant = 'header', className = '' }:
         aria-expanded={isOpen}
         aria-haspopup="listbox"
         aria-label={`Select language. Current: ${currentLang.label}`}
-        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] hover:border-[var(--brand-accent)] text-xs text-[var(--text-body)] hover:text-[var(--text-ink)] transition-all focus-ring cursor-pointer shadow-2xs"
+        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] hover:border-[var(--brand-accent)] text-xs text-[var(--text-body)] hover:text-[var(--text-ink)] transition focus-ring cursor-pointer shadow-2xs"
       >
         <svg
           className="w-3.5 h-3.5 text-[var(--text-muted)]"

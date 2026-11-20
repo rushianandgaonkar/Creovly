@@ -33,12 +33,9 @@ export default function ActionChecklist({ items }: ActionChecklistProps) {
     >
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pb-5 border-b border-[var(--border-hairline)]">
         <div>
-          <span className="text-[11px] font-mono font-medium px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/50">
-            {article.checklistBadge}
-          </span>
           <h3
             id="action-checklist-heading"
-            className="mt-2 text-xl font-bold tracking-tight text-[var(--text-ink)]"
+            className="text-xl font-bold tracking-tight text-[var(--text-ink)]"
           >
             {article.checklistTitle}
           </h3>
@@ -59,7 +56,7 @@ export default function ActionChecklist({ items }: ActionChecklistProps) {
             <li
               key={index}
               onClick={() => toggleItem(index)}
-              className={`group flex items-start gap-3.5 p-3.5 rounded-xl border transition-all cursor-pointer ${
+              className={`group flex items-start gap-3.5 p-3.5 rounded-xl border transition cursor-pointer ${
                 isChecked
                   ? 'bg-emerald-50/40 dark:bg-emerald-950/20 border-emerald-300 dark:border-emerald-800/60'
                   : 'bg-[var(--bg-canvas)] border-[var(--border-hairline)] hover:border-[var(--border-hairline-strong)]'
@@ -85,7 +82,7 @@ export default function ActionChecklist({ items }: ActionChecklistProps) {
               </div>
               <div className="flex-1 min-w-0">
                 <span
-                  className={`text-sm font-semibold transition-all block ${
+                  className={`text-sm font-semibold transition block ${
                     isChecked
                       ? 'text-[var(--text-muted)] line-through opacity-80'
                       : 'text-[var(--text-ink)]'

@@ -52,7 +52,7 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
     <article className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
       {/* Navigation Breadcrumbs */}
       <nav aria-label="Breadcrumb" className="mb-6">
-        <ol className="flex items-center space-x-2 text-xs font-mono text-[var(--text-muted)]">
+        <ol className="flex items-center space-x-2 text-xs text-[var(--text-muted)]">
           <li>
             <LocalizedLink href="/" className="hover:text-[var(--text-ink)] transition-colors">
               {t.tools.shell.breadcrumbHome}
@@ -73,16 +73,12 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
 
       {/* Guide Hero with approved violet tone */}
       <PageHero tone="violet" className="mb-10">
-        <div className="flex flex-wrap items-center gap-2 mb-3">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-3 text-xs text-[var(--text-muted)]">
           <Badge variant="neutral">{displayCategory}</Badge>
-          <span className="text-xs font-mono text-[var(--text-muted)]">{displayReadTime}</span>
-          <span className="text-xs font-mono text-[var(--text-muted)]">&middot;</span>
-          <span className="text-xs font-mono text-[var(--text-muted)]">
-            {t.guides.article.author}
-          </span>
-          <span className="text-xs font-mono text-[var(--text-muted)]">&middot;</span>
-          <span className="text-xs font-mono text-[var(--text-muted)]">
-            {t.guides.article.lastVerifiedPrefix} {guide.lastVerified}
+          <span>{displayReadTime}</span>
+          <span>{t.guides.article.author}</span>
+          <span>
+            {t.guides.article.lastVerifiedPrefix} <time>{guide.lastVerified}</time>
           </span>
         </div>
         <h1 className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--text-ink)] leading-tight">
@@ -101,8 +97,8 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
             if (!entry) return null;
             return (
               <React.Fragment key={slug}>
-                {i > 0 && ' · '}
-                <LocalizedLink href={entry.href} className="font-medium text-[var(--brand-accent)] underline hover:no-underline">
+                {i > 0 && ', '}
+                <LocalizedLink href={entry.href} className="font-medium text-[var(--brand-accent-deep)] underline hover:no-underline">
                   {translations[locale]?.tools?.[slug]?.title || entry.title}
                 </LocalizedLink>
               </React.Fragment>
@@ -143,11 +139,9 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
           aria-label="Official Documentation"
           className="mb-10 p-5 rounded-xl border border-[var(--border-hairline-strong)] bg-[var(--bg-canvas-subtle)]"
         >
-          <div className="flex items-center gap-2 mb-2">
-            <span className="text-[11px] font-mono font-semibold text-[var(--brand-accent-deep)]">
-              {t.guides.article.verifiedLabel}
-            </span>
-          </div>
+          <p className="text-sm font-semibold text-[var(--text-ink)] mb-1">
+            {t.guides.article.verifiedLabel}
+          </p>
           <p className="text-xs text-[var(--text-muted)] mb-3">
             {t.guides.article.sourcesDescription}
           </p>
@@ -158,10 +152,10 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
                   href={source.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-medium text-[var(--brand-accent)] hover:underline inline-flex items-center gap-1"
+                  className="font-medium text-[var(--brand-accent-deep)] hover:underline inline-flex items-center gap-1"
                 >
                   {source.label}
-                  <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg aria-hidden="true" className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -170,7 +164,7 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
                     />
                   </svg>
                 </a>
-                <span className="text-[var(--text-body)]">— {source.description}</span>
+                <span className="text-[var(--text-body)]">{source.description}</span>
               </li>
             ))}
           </ul>
@@ -207,10 +201,7 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
       {displayFaqs.length > 0 && (
         <section className="mt-14 pt-8 border-t border-[var(--border-hairline)]" aria-labelledby="guide-faqs-heading">
           <div className="mb-6">
-            <span className="text-xs font-mono text-[var(--text-muted)]">
-              {t.tools.shell.faqBadge}
-            </span>
-            <h2 id="guide-faqs-heading" className="text-xl font-bold tracking-tight text-[var(--text-ink)] mt-1">
+            <h2 id="guide-faqs-heading" className="text-xl font-bold tracking-tight text-[var(--text-ink)]">
               {t.tools.shell.faqHeading}
             </h2>
           </div>
@@ -237,10 +228,7 @@ export default function GuideArticle({ guide }: GuideArticleProps) {
       {relatedTools.length > 0 && (
         <section className="mt-16 pt-10 border-t border-[var(--border-hairline)]">
           <div className="mb-6">
-            <span className="text-xs font-mono text-[var(--text-muted)]">
-              {t.guides.article.appliedUtilitiesBadge}
-            </span>
-            <h2 className="text-xl font-bold tracking-tight text-[var(--text-ink)] mt-1">
+            <h2 className="text-xl font-bold tracking-tight text-[var(--text-ink)]">
               {t.guides.article.relatedToolsHeading}
             </h2>
             <p className="text-xs sm:text-sm text-[var(--text-body)] mt-1">

@@ -216,7 +216,7 @@ export default function ScriptLengthCalculator() {
 
           <p className="text-xs text-[var(--text-body)]">
             {s.nextStep}{' '}
-            <LocalizedLink href="/tools/youtube-timestamp-generator" className="font-medium text-[var(--brand-accent)] underline hover:no-underline">
+            <LocalizedLink href="/tools/youtube-timestamp-generator" className="font-medium text-[var(--brand-accent-deep)] underline hover:no-underline">
               {s.nextStepLink}
             </LocalizedLink>
           </p>

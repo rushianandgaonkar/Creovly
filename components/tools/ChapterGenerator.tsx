@@ -173,7 +173,7 @@ export default function ChapterGenerator() {
 
             <p className="text-xs text-[var(--text-body)]">
               {c.nextStep}{' '}
-              <LocalizedLink href="/tools/youtube-description-generator" className="font-medium text-[var(--brand-accent)] underline hover:no-underline">
+              <LocalizedLink href="/tools/youtube-description-generator" className="font-medium text-[var(--brand-accent-deep)] underline hover:no-underline">
                 {c.nextStepLink}
               </LocalizedLink>
             </p>

@@ -123,28 +123,15 @@ export default function ToolDiscovery({
     .replace('{status}', statusLabel);
 
   return (
-    <section id="creator-tools" aria-labelledby="discover-heading" className="space-y-6">
-      <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-[var(--border-hairline)] pb-4">
-        <div>
-          <h2
-            id="discover-heading"
-            className="text-xl sm:text-2xl font-bold tracking-tight text-[var(--text-ink)]"
-          >
-            {t.tools.directory.heading}
-          </h2>
-          <p className="text-xs text-[var(--text-muted)] mt-0.5">
-            {t.tools.directory.subheading}
-          </p>
-        </div>
-        <p
-          role="status"
-          aria-live="polite"
-          aria-atomic="true"
-          className="text-xs font-mono text-[var(--text-muted)]"
-        >
-          {countDisplay}
-        </p>
-      </div>
+    <section id="creator-tools" aria-label={t.tools.directory.heading} className="space-y-6">
+      <p
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+        className="text-sm text-[var(--text-muted)]"
+      >
+        {countDisplay}
+      </p>
 
       <div className={visualCards ? 'discovery-search' : 'max-w-xl'}>
         <Input
@@ -156,7 +143,6 @@ export default function ToolDiscovery({
           onChange={(event) => setQuery(event.target.value)}
           hint={
             <span className="inline-flex items-center gap-1.5 text-xs text-[var(--text-muted)]">
-              <span>{t.common.nav.searchShortcut}</span>
               <kbd className="inline-flex items-center justify-center min-w-5 h-5 px-1.5 text-[11px] font-mono rounded border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-[var(--text-body)] shadow-2xs">
                 /
               </kbd>
@@ -179,7 +165,7 @@ export default function ToolDiscovery({
               type="button"
               aria-pressed={isSelected}
               onClick={() => setCategory(item.id)}
-              className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border text-xs font-medium focus-ring transition-all duration-150 cursor-pointer ${
+              className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border text-xs font-medium focus-ring transition duration-150 cursor-pointer ${
                 isSelected
                   ? 'bg-[var(--brand-primary)] text-[var(--brand-on-primary)] border-[var(--brand-primary)] shadow-2xs font-semibold'
                   : 'bg-[var(--bg-canvas-elevated)] text-[var(--text-body)] border-[var(--border-hairline)] hover:border-[var(--border-hairline-strong)] hover:text-[var(--text-ink)]'
@@ -187,7 +173,7 @@ export default function ToolDiscovery({
             >
               <span>{item.label}</span>
               <span
-                className={`px-1.5 py-0.5 rounded-full text-[10px] font-mono tabular-nums ${
+                className={`px-1.5 py-0.5 rounded-full text-[11px] tabular-nums ${
                   isSelected
                     ? 'bg-white/20 text-[var(--brand-on-primary)]'
                     : 'bg-[var(--bg-canvas-subtle)] text-[var(--text-muted)]'

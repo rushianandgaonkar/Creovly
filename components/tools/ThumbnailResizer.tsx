@@ -1,4 +1,3 @@
-/* Hallmark · genre: modern-minimal · macrostructure: Workbench */
 'use client';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -534,9 +533,9 @@ export default function ThumbnailResizer() {
               <Button
                 href={translateHref('/tools/youtube-thumbnail-compressor')}
                 variant="outline"
-                className="w-full text-xs font-mono"
+                className="w-full text-xs"
               >
-                {t.compressor.title} &rarr;
+                {t.compressor.title}
               </Button>
             </>
           )}

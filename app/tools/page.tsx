@@ -1,4 +1,3 @@
-/* Hallmark · genre: modern-minimal · macrostructure: Workbench */
 import { createPageMetadata } from '@/lib/metadata';
 import ToolsDirectoryContent from '@/components/tools/ToolsDirectoryContent';
 import JsonLd from '@/components/seo/JsonLd';

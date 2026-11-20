@@ -38,7 +38,7 @@ export function CopyField({ id, label, value, hint, multiline, openable, labels 
         <label htmlFor={id} className="text-xs font-medium text-[var(--text-ink)]">{label}</label>
         <div className="flex items-center gap-3">
           {openable && (
-            <a href={value} target="_blank" rel="noopener noreferrer" className="text-xs font-medium text-[var(--brand-accent)] underline hover:no-underline focus-ring rounded">
+            <a href={value} target="_blank" rel="noopener noreferrer" className="text-xs font-medium text-[var(--brand-accent-deep)] underline hover:no-underline focus-ring rounded">
               {labels.testLink}
             </a>
           )}

@@ -1,4 +1,3 @@
-/* Hallmark · genre: modern-minimal · macrostructure: Workbench */
 'use client';
 
 import { toolGuidance, titleDemonstration } from '@/config/tool-guidance';
@@ -26,12 +25,6 @@ export default function ToolDemonstration({ slug }: { slug: string }) {
       className="mt-14 pt-10 border-t border-[var(--border-hairline)] scroll-mt-20"
       aria-labelledby="example-heading"
     >
-      <div className="flex items-center gap-2 mb-2">
-        <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
-        <span className="text-xs font-mono text-[var(--brand-accent)] font-medium">
-          {demoText.badge}
-        </span>
-      </div>
       <div
         id="example-heading"
         className="text-xl font-bold tracking-tight text-[var(--text-ink)]"
@@ -67,21 +60,20 @@ export default function ToolDemonstration({ slug }: { slug: string }) {
             />
             <div className="flex flex-wrap items-center justify-between gap-3 text-xs text-[var(--text-body)] p-3.5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] shadow-[var(--shadow-whisper)]">
               <span className="font-mono">
-                {beforeAsset?.width} × {beforeAsset?.height} px · Demonstration Reference
+                {beforeAsset?.width} × {beforeAsset?.height} px
               </span>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-4">
                 <a
                   href={`/examples/${example.before}`}
                   download
-                  className="font-mono text-xs text-[var(--brand-accent)] hover:underline focus-ring"
+                  className="text-xs text-[var(--brand-accent-deep)] hover:underline focus-ring"
                 >
                   {demoText.downloadOriginal} {example.before.endsWith('.png') ? 'PNG' : 'JPEG'}
                 </a>
-                <span className="text-[var(--text-faint)]">·</span>
                 <a
                   href={`/examples/${example.after}`}
                   download
-                  className="font-mono text-xs text-[var(--brand-accent)] hover:underline focus-ring"
+                  className="text-xs text-[var(--brand-accent-deep)] hover:underline focus-ring"
                 >
                   {demoText.downloadProcessed} {example.after.endsWith('.png') ? 'PNG' : 'JPEG'}
                 </a>
@@ -103,14 +95,14 @@ export default function ToolDemonstration({ slug }: { slug: string }) {
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono font-semibold text-[var(--text-ink)]">
+                    <span className="text-sm font-semibold text-[var(--text-ink)]">
                       {index === 0 ? demoText.beforeDraft : demoText.afterDraft}
                     </span>
                     <span
-                      className={`text-[10px] font-mono px-2 py-0.5 rounded ${
+                      className={`text-xs font-mono px-2 py-0.5 rounded border ${
                         index === 0
-                          ? 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20'
-                          : 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20'
+                          ? 'bg-[var(--state-warning-bg)] text-[var(--state-warning-text)] border-[var(--state-warning-border)]'
+                          : 'bg-[var(--state-success-bg)] text-[var(--state-success-text)] border-[var(--state-success-border)]'
                       }`}
                     >
                       {analysis.characters} units
@@ -135,12 +127,9 @@ export default function ToolDemonstration({ slug }: { slug: string }) {
         <>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-6">
             <div className="min-w-0 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] p-5 sm:p-6 shadow-[var(--shadow-whisper)]">
-              <div className="flex items-center justify-between mb-4 pb-2 border-b border-[var(--border-hairline-subtle)]">
-                <h3 className="text-xs font-mono font-semibold text-[var(--text-ink)]">
-                  Sample Inputs
-                </h3>
-                <span className="text-[10px] font-mono text-[var(--text-muted)]">BENCHMARK</span>
-              </div>
+              <h3 className="mb-4 pb-2 border-b border-[var(--border-hairline-subtle)] text-sm font-semibold text-[var(--text-ink)]">
+                Sample Inputs
+              </h3>
               <dl className="space-y-3 text-sm">
                 {definition.fields.map((field) => (
                   <div key={field.key} className="flex flex-wrap justify-between gap-2">
@@ -154,14 +143,9 @@ export default function ToolDemonstration({ slug }: { slug: string }) {
               </dl>
             </div>
             <div className="min-w-0 rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] p-5 sm:p-6 shadow-[var(--shadow-whisper)]">
-              <div className="flex items-center justify-between mb-4 pb-2 border-b border-[var(--border-hairline-subtle)]">
-                <h3 className="text-xs font-mono font-semibold text-[var(--text-ink)]">
-                  Calculated Output
-                </h3>
-                <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400">
-                  OUTPUT
-                </span>
-              </div>
+              <h3 className="mb-4 pb-2 border-b border-[var(--border-hairline-subtle)] text-sm font-semibold text-[var(--text-ink)]">
+                Calculated Output
+              </h3>
               <dl className="space-y-3 text-sm">
                 {calculation.metrics.map((metric) => (
                   <div key={metric.label} className="flex flex-wrap justify-between gap-2">

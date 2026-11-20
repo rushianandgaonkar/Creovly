@@ -20,7 +20,7 @@ import {
 type SizeState = 'loading' | 'ready' | 'missing' | 'failed';
 type DownloadState = 'idle' | 'busy' | 'fallback';
 
-const linkClass = 'font-medium text-[var(--brand-accent)] underline hover:no-underline focus-ring rounded';
+const linkClass = 'font-medium text-[var(--brand-accent-deep)] underline hover:no-underline focus-ring rounded';
 
 function SizeCard({ videoId, size, label }: { videoId: string; size: ThumbnailSize; label: string }) {
   const { t } = useI18n();

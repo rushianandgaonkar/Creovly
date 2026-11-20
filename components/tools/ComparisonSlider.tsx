@@ -180,7 +180,7 @@ export default function ComparisonSlider({
             className="absolute top-0 bottom-0 w-0.5 bg-[var(--brand-accent)] pointer-events-none shadow-[0_0_8px_rgba(0,112,243,0.4)]"
             style={{ left: `${sliderPosition}%` }}
           >
-            <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-[var(--bg-canvas-elevated)] border-2 border-[var(--brand-accent)] shadow-md flex items-center justify-center text-[var(--brand-accent)] font-mono text-[11px] font-bold">
+            <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-[var(--bg-canvas-elevated)] border-2 border-[var(--brand-accent)] shadow-md flex items-center justify-center text-[var(--brand-accent-deep)] font-mono text-[11px] font-bold">
               ◂▸
             </div>
           </div>

@@ -1,4 +1,3 @@
-/* Hallmark · genre: modern-minimal · macrostructure: Workbench */
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
@@ -130,7 +129,7 @@ export default function TitleChecker() {
               </div>
               <div className="w-full h-1.5 rounded-full bg-[var(--bg-canvas-subtle)] border border-[var(--border-hairline)] overflow-hidden">
                 <div
-                  className={`h-full transition-all duration-300 rounded-full ${
+                  className={`h-full rounded-full ${
                     draftFeedback.tone === 'error'
                       ? 'bg-rose-500'
                       : draftFeedback.tone === 'warning'
@@ -156,17 +155,14 @@ export default function TitleChecker() {
           />
 
           <div className="space-y-2">
-            <div className="flex items-center justify-between">
-              <label htmlFor="title-preview-width" className="text-xs font-medium text-[var(--text-ink)]">
-                {t.titleChecker.viewportWidthLabel}
-              </label>
+            <div className="flex items-center justify-end">
               <div className="flex items-center gap-1">
                 {viewportPresets.map((preset) => (
                   <button
                     key={preset.width}
                     type="button"
                     onClick={() => setWidth(preset.width)}
-                    className={`px-2 py-0.5 rounded text-[10px] font-mono border transition-all cursor-pointer ${
+                    className={`px-2 py-0.5 rounded text-xs border transition cursor-pointer ${
                       width === preset.width
                         ? 'border-[var(--brand-accent)] bg-[var(--brand-accent-soft)] text-[var(--brand-accent-deep)] font-semibold'
                         : 'border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-muted)]'
@@ -220,7 +216,7 @@ export default function TitleChecker() {
 
                 <div
                   style={{ width, maxWidth: '100%' }}
-                  className="rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] overflow-hidden shadow-[var(--shadow-floating)] transition-all"
+                  className="rounded-2xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] overflow-hidden shadow-[var(--shadow-floating)] transition"
                 >
                   {/* Simulated 16:9 Thumbnail Header */}
                   <div className="relative aspect-video w-full bg-[var(--bg-canvas-subtle)] flex items-center justify-center border-b border-[var(--border-hairline-subtle)]">
@@ -310,7 +306,7 @@ export default function TitleChecker() {
                     <ul className="space-y-1.5 text-xs text-[var(--text-body)]">
                       {result.notes.map((note) => (
                         <li key={note} className="flex items-start gap-2">
-                          <span className="text-[var(--brand-accent)] shrink-0 font-bold">✓</span>
+                          <span className="text-[var(--brand-accent-deep)] shrink-0 font-bold">✓</span>
                           <span>{localizeNote(note)}</span>
                         </li>
                       ))}
@@ -320,7 +316,7 @@ export default function TitleChecker() {
               )}
             </div>
           ) : (
-            <div className="py-16 text-center text-xs text-[var(--text-muted)] font-mono">
+            <div className="py-16 text-center text-sm text-[var(--text-muted)]">
               {t.titleChecker.inputTitlePlaceholder}
             </div>
           )}

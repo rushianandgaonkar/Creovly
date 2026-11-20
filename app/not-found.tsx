@@ -10,7 +10,7 @@ export const metadata = {
 export default function NotFound() {
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-20 sm:py-28 text-center space-y-6">
-      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-xs font-mono text-[var(--brand-accent)] font-semibold">
+      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-xs font-mono text-[var(--brand-accent-deep)] font-semibold">
         Error 404
       </div>
 
@@ -35,7 +35,7 @@ export default function NotFound() {
       </div>
 
       <div className="pt-10 border-t border-[var(--border-hairline)] text-xs text-[var(--text-muted)] font-mono">
-        Need help finding something? <Link href="/contact" className="text-[var(--brand-accent)] underline">Contact support</Link>
+        Need help finding something? <Link href="/contact" className="text-[var(--brand-accent-deep)] underline">Contact support</Link>
       </div>
     </div>
   );

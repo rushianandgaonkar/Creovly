@@ -52,12 +52,6 @@ export default function LinkToUs() {
   return (
     <section id="media-kit" className="space-y-6 pt-4 scroll-mt-20" aria-labelledby="media-kit-heading">
       <div className="space-y-2">
-        <div className="flex items-center gap-2">
-          <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
-          <span className="text-xs font-mono text-[var(--text-muted)]">
-            Media Kit &amp; Brand Assets
-          </span>
-        </div>
         <h2 id="media-kit-heading" className="text-2xl font-bold tracking-tight text-[var(--text-ink)]">
           Media Kit &amp; Brand Assets
         </h2>
@@ -69,7 +63,6 @@ export default function LinkToUs() {
       {/* Voluntary Attribution & Policy Notice */}
       <div className="p-4 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] space-y-1.5 text-xs text-[var(--text-body)]">
         <div className="flex items-center gap-2 font-semibold text-[var(--text-ink)]">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
           <span>Voluntary &amp; Independent Attribution Notice</span>
         </div>
         <p className="leading-relaxed">
@@ -99,14 +92,14 @@ export default function LinkToUs() {
             <a
               href="/favicon.svg"
               download="creovly-logo.svg"
-              className="text-xs font-mono font-medium px-3 py-1.5 rounded-md border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] hover:text-[var(--brand-accent)] hover:border-[var(--brand-accent)] transition-colors focus-ring"
+              className="text-xs font-mono font-medium px-3 py-1.5 rounded-md border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] hover:text-[var(--brand-accent-deep)] hover:border-[var(--brand-accent)] transition-colors focus-ring"
             >
               Download SVG
             </a>
             <a
               href="/apple-touch-icon.png"
               download="creovly-mark.png"
-              className="text-xs font-mono font-medium px-3 py-1.5 rounded-md border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] hover:text-[var(--brand-accent)] hover:border-[var(--brand-accent)] transition-colors focus-ring"
+              className="text-xs font-mono font-medium px-3 py-1.5 rounded-md border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] hover:text-[var(--brand-accent-deep)] hover:border-[var(--brand-accent)] transition-colors focus-ring"
             >
               Download PNG
             </a>

@@ -13,7 +13,6 @@ export default function WorkflowShowcase() {
     {
       id: 'visuals',
       number: '01',
-      tag: 'Visual Audit',
       title: t.home.workflow.steps.pack.title,
       description: t.home.workflow.steps.pack.description,
       highlights: [
@@ -27,7 +26,6 @@ export default function WorkflowShowcase() {
     {
       id: 'metadata',
       number: '02',
-      tag: 'Metadata Engine',
       title: t.home.workflow.steps.audit.title,
       description: t.home.workflow.steps.audit.description,
       highlights: [
@@ -41,7 +39,6 @@ export default function WorkflowShowcase() {
     {
       id: 'package',
       number: '03',
-      tag: 'Local Packaging',
       title: t.home.workflow.steps.export.title,
       description: t.home.workflow.steps.export.description,
       highlights: [
@@ -63,9 +60,6 @@ export default function WorkflowShowcase() {
     >
       {/* Section Header */}
       <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 space-y-3">
-        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-semibold border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-[var(--text-muted)] mb-2">
-          {t.home.workflow.badge}
-        </div>
         <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--text-ink)]">
           {t.home.workflow.heading}
         </h2>
@@ -87,7 +81,7 @@ export default function WorkflowShowcase() {
                 role="tab"
                 aria-selected={isActive}
                 onClick={() => setActiveStepIndex(idx)}
-                className={`w-full text-left p-5 rounded-xl border transition-all duration-200 focus-ring ${
+                className={`w-full text-left p-5 rounded-xl border transition duration-200 focus-ring ${
                   isActive
                     ? 'border-[var(--brand-accent)] bg-[var(--bg-canvas-elevated)] shadow-sm'
                     : 'border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] hover:border-[var(--border-hairline-strong)]'
@@ -105,13 +99,6 @@ export default function WorkflowShowcase() {
                     {step.number}
                   </span>
                   <span className="min-w-0">
-                    <span
-                      className={`block text-xs font-semibold tracking-wide mb-1 ${
-                        isActive ? 'text-[var(--brand-accent)]' : 'text-[var(--text-muted)]'
-                      }`}
-                    >
-                      Stage {step.number} &bull; {step.tag}
-                    </span>
                     <span className="block text-base font-semibold tracking-tight text-[var(--text-ink)]">
                       {step.title}
                     </span>
@@ -133,12 +120,6 @@ export default function WorkflowShowcase() {
           >
             {/* Step Header */}
             <div className="space-y-2 border-b border-[var(--border-hairline)] pb-5">
-              <div className="flex items-center justify-between gap-2">
-                <span className="text-xs font-semibold tracking-wide text-[var(--brand-accent)]">
-                  Stage {activeStep.number} &mdash; {activeStep.tag}
-                </span>
-                <span className="text-xs text-[var(--text-muted)]">Runs in your browser</span>
-              </div>
               <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[var(--text-ink)]">
                 {activeStep.title}
               </h3>
@@ -213,15 +194,15 @@ export default function WorkflowShowcase() {
                   {/* Metrics Row */}
                   <div className="grid grid-cols-3 gap-2 text-center text-xs">
                     <div className="p-2.5 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
-                      <span className="block text-[10px] text-[var(--text-muted)]">Character Count</span>
+                      <span className="block text-[11px] text-[var(--text-muted)]">Character Count</span>
                       <strong className="text-[var(--text-ink)] text-sm">48 / 100</strong>
                     </div>
                     <div className="p-2.5 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
-                      <span className="block text-[10px] text-[var(--text-muted)]">Mobile Feed</span>
+                      <span className="block text-[11px] text-[var(--text-muted)]">Mobile Feed</span>
                       <strong className="text-[var(--text-ink)] text-sm">Wrap preview</strong>
                     </div>
                     <div className="p-2.5 rounded-lg border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)]">
-                      <span className="block text-[10px] text-[var(--text-muted)]">Sample data</span>
+                      <span className="block text-[11px] text-[var(--text-muted)]">Sample data</span>
                       <strong className="text-[var(--text-muted)] text-sm">Illustrative</strong>
                     </div>
                   </div>
@@ -234,10 +215,9 @@ export default function WorkflowShowcase() {
                   <div className="p-4 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] space-y-3">
                     <div className="flex items-center justify-between text-xs text-[var(--text-muted)]">
                       <span className="font-semibold text-[var(--text-ink)] flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-emerald-500" />
                         Package Contents (ZIP Archive)
                       </span>
-                      <span className="text-[var(--brand-accent)] font-semibold">Ready to Export</span>
+                      <span className="text-[var(--brand-accent-deep)] font-semibold">Ready to Export</span>
                     </div>
 
                     <div className="space-y-2 text-xs text-[var(--text-body)]">
@@ -261,7 +241,7 @@ export default function WorkflowShowcase() {
                   </div>
 
                   <div className="p-3 rounded-lg border border-emerald-500/20 bg-emerald-500/5 text-xs text-emerald-800 dark:text-emerald-300 flex items-center gap-2">
-                    <svg className="w-4 h-4 shrink-0 text-emerald-600" viewBox="0 0 20 20" fill="currentColor">
+                    <svg aria-hidden="true" className="w-4 h-4 shrink-0 text-emerald-600" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                     </svg>
                     <span>100% browser-generated ZIP. Media and draft text never touch external servers.</span>
@@ -275,7 +255,7 @@ export default function WorkflowShowcase() {
               <ul className="text-[13px] text-[var(--text-body)] space-y-2">
                 {activeStep.highlights.map((item, idx) => (
                   <li key={idx} className="flex items-center gap-2">
-                    <svg className="w-3.5 h-3.5 text-emerald-500 shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                    <svg aria-hidden="true" className="w-3.5 h-3.5 text-emerald-500 shrink-0" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                     </svg>
                     <span>{item}</span>
@@ -288,7 +268,7 @@ export default function WorkflowShowcase() {
             <div className="pt-2 border-t border-[var(--border-hairline)] flex items-center justify-between">
               <LocalizedLink href={activeStep.toolLink}>
                 <Button variant="primary">
-                  {activeStep.toolLabel} &rarr;
+                  {activeStep.toolLabel}
                 </Button>
               </LocalizedLink>
               <span className="text-xs text-[var(--text-muted)]">

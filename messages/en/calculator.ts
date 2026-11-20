@@ -1,7 +1,7 @@
 export const calculator = {
   shared: {
     parametersHeading: '{title} Parameters',
-    loadExample: 'Load Example Scenario →',
+    loadExample: 'Load Example Scenario',
     calculateButton: 'Calculate Scenario',
     clearButton: 'Clear',
     validationNoticeTitle: 'Input validation notice',

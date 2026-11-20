@@ -1,4 +1,3 @@
-/* Hallmark · genre: modern-minimal · macrostructure: Workbench */
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
@@ -158,7 +157,7 @@ export default function CreatorCalculator({ kind }: { kind: CalculatorKind }) {
                 clear();
                 setInput({ ...definition.example });
               }}
-              className="text-[11px] font-mono text-[var(--brand-accent)] hover:underline focus-ring cursor-pointer"
+              className="text-[11px] font-mono text-[var(--brand-accent-deep)] hover:underline focus-ring cursor-pointer"
             >
               {t.calculator.shared.loadExample}
             </button>

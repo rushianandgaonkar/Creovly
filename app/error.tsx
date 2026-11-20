@@ -19,7 +19,7 @@ export default function ErrorPage({
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-20 sm:py-28 text-center space-y-6">
       <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-rose-500/20 bg-rose-500/10 text-xs font-mono text-rose-600 dark:text-rose-400 font-semibold">
-        Error 500 — Unexpected Error
+        Error 500: unexpected error
       </div>
 
       <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-[var(--text-ink)]">
@@ -51,7 +51,7 @@ export default function ErrorPage({
       </div>
 
       <div className="pt-10 border-t border-[var(--border-hairline)] text-xs text-[var(--text-muted)] font-mono">
-        If this issue persists, please <Link href="/contact" className="text-[var(--brand-accent)] underline">let our team know</Link>.
+        If this issue persists, please <Link href="/contact" className="text-[var(--brand-accent-deep)] underline">let our team know</Link>.
       </div>
     </div>
   );

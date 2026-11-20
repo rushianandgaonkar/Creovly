@@ -12,7 +12,7 @@ const variantStyles = {
   new: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20',
   free: 'bg-zinc-500/10 text-zinc-700 dark:text-zinc-300 border-zinc-500/20',
   neutral: 'bg-[var(--bg-canvas-subtle)] text-[var(--text-muted)] border-[var(--border-hairline)]',
-  accent: 'bg-[var(--brand-accent)]/10 text-[var(--brand-accent)] border-[var(--brand-accent)]/30',
+  accent: 'bg-[var(--brand-accent)]/10 text-[var(--brand-accent-deep)] border-[var(--brand-accent)]/30',
 };
 
 const sizeStyles = {

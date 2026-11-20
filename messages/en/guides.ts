@@ -5,7 +5,7 @@ export const guides = {
     heading: 'Creator Guides & Benchmarks',
     subheading:
       'Engineered guides covering YouTube packaging standards, monetization mathematics, and pre-publish best practices with official platform citations.',
-    readGuide: 'Read guide →',
+    readGuide: 'Read guide',
   },
   article: {
     verifiedLabel: 'Verified Platform Standard',

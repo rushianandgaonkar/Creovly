@@ -1,5 +1,6 @@
 'use client';
 
+import { Mail } from 'lucide-react';
 import React, { useState } from 'react';
 import Button from '@/components/ui/Button';
 import { useI18n } from '@/lib/i18n';
@@ -74,8 +75,8 @@ export default function ContactForm() {
   if (status === 'submitted') {
     return (
       <div className="p-8 sm:p-10 rounded-2xl border border-emerald-500/20 bg-emerald-500/5 text-center space-y-5 animate-fade-in">
-        <div className="w-12 h-12 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 mx-auto flex items-center justify-center font-bold text-xl">
-          ✉
+        <div className="w-12 h-12 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 mx-auto flex items-center justify-center">
+          <Mail className="w-5 h-5" aria-hidden="true" />
         </div>
         <div className="space-y-2">
           <h3 className="text-xl font-bold text-[var(--text-ink)]">
@@ -126,7 +127,7 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             placeholder={contact.form.namePlaceholder}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-control)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition-all"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-control)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition"
           />
         </div>
 
@@ -141,7 +142,7 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             placeholder={contact.form.emailPlaceholder}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-control)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition-all"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-control)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition"
           />
         </div>
       </div>
@@ -158,7 +159,7 @@ export default function ContactForm() {
             value={formData.channel}
             onChange={handleChange}
             placeholder={contact.form.channelPlaceholder}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-control)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition-all"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-control)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition"
           />
         </div>
 
@@ -171,7 +172,7 @@ export default function ContactForm() {
             name="subject"
             value={formData.subject}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-control)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition-all cursor-pointer"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-control)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition cursor-pointer"
           >
             <option value="Feedback">{contact.form.topics.feedback}</option>
             <option value="Bug">{contact.form.topics.bug}</option>
@@ -192,13 +193,13 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           placeholder={contact.form.messagePlaceholder}
-          className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-control)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition-all leading-relaxed"
+          className="w-full px-3.5 py-2.5 rounded-xl border border-[var(--border-control)] bg-[var(--bg-canvas)] text-xs text-[var(--text-ink)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)]/20 focus:border-[var(--brand-accent)] transition leading-relaxed"
         />
       </div>
 
       <div className="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <Button type="submit" variant="primary" size="md" className="shrink-0">
-          {contact.form.buttonSubmit} &rarr;
+          {contact.form.buttonSubmit}
         </Button>
         <span className="text-[11px] text-[var(--text-muted)]">
           {contact.form.privacyNote}

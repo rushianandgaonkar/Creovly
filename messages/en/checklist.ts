@@ -13,11 +13,11 @@ export const checklist = {
     exportButton: 'Export Checklist (.txt)',
     resetAria: 'Reset all checklist items to unchecked',
     auditReadiness: 'Audit Readiness:',
-    packageStudioButton: 'Package Project in Studio →',
+    packageStudioButton: 'Package Project in Studio',
     completeLabel: '✓ Complete',
     itemsCount: '{completed} of {total} items',
     storageNotice: 'Checklist progress auto-saves to your local browser storage.',
-    openStudioButton: 'Open Publish Studio →',
+    openStudioButton: 'Open Publish Studio',
   },
   sections: [
     {

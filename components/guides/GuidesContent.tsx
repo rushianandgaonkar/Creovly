@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Badge from '@/components/ui/Badge';
 import ToolCard from '@/components/ui/ToolCard';
 import { toolRegistry } from '@/config/site';
 import PageHero from '@/components/ui/PageHero';
@@ -18,7 +17,7 @@ export default function GuidesContent() {
       {/* Precision Breadcrumb */}
       <nav
         aria-label="Breadcrumb"
-        className="flex items-center gap-2 text-xs font-mono text-[var(--text-muted)] mb-6"
+        className="flex items-center gap-2 text-xs text-[var(--text-muted)] mb-6"
       >
         <LocalizedLink href="/" className="hover:text-[var(--text-ink)] transition-colors">
           {t.tools.shell.breadcrumbHome}
@@ -32,10 +31,6 @@ export default function GuidesContent() {
       </nav>
 
       <PageHero tone="violet" className="mb-12">
-        <div className="inline-flex items-center gap-2 mb-2">
-          <Badge variant="neutral">{guidesIndex.heroBadge}</Badge>
-          <span className="text-xs font-mono text-[var(--text-muted)]">{guidesIndex.heroVerified}</span>
-        </div>
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-[var(--text-ink)]">
           {guidesIndex.heading}
         </h1>
@@ -56,14 +51,14 @@ export default function GuidesContent() {
           return (
             <article
               key={guide.slug}
-              className="p-5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] flex flex-col justify-between hover:border-[var(--border-hairline-strong)] hover:shadow-[var(--shadow-floating)] transition-all group"
+              className="p-5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] flex flex-col justify-between hover:border-[var(--border-hairline-strong)] hover:shadow-[var(--shadow-floating)] transition group"
             >
               <div>
                 <div className="flex items-center justify-between text-[11px] font-mono text-[var(--text-muted)] mb-3">
                   <span>{displayCategory}</span>
                   <span>{displayReadTime}</span>
                 </div>
-                <h2 className="text-base font-semibold text-[var(--text-ink)] leading-snug group-hover:text-[var(--brand-accent)] transition-colors">
+                <h2 className="text-base font-semibold text-[var(--text-ink)] leading-snug group-hover:text-[var(--brand-accent-deep)] transition-colors">
                   <LocalizedLink href={`/guides/${guide.slug}`} className="focus:outline-none">
                     {displayTitle}
                   </LocalizedLink>
@@ -78,7 +73,7 @@ export default function GuidesContent() {
                 </span>
                 <LocalizedLink
                   href={`/guides/${guide.slug}`}
-                  className="text-xs font-medium text-[var(--brand-accent)] hover:underline inline-flex items-center gap-1"
+                  className="text-xs font-medium text-[var(--brand-accent-deep)] hover:underline inline-flex items-center gap-1"
                 >
                   {t.guides.index.readGuide}
                 </LocalizedLink>

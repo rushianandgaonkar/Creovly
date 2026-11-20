@@ -1,3 +1,7 @@
+/* Hallmark · checked: 2026-11-19 · genre: modern-minimal (inferred) · system: DESIGN.md (locked)
+ * fixed: 2a 10a 19 26a 30a 33 34 39a 40 47a 54 63 64 66 67 69 73 · structural: printed (8, 9, 42, 58, 84)
+ * built: the project · redesign: polish · v2.0.0 */
+/* Hallmark · waive 49b · footer and card links are full tool names, two lines at most at 768 · they are the keyword anchor text for each tool page */
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -126,10 +130,12 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
+  overflow-x: clip;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -143,6 +149,8 @@ body:lang(ja) { --font-display-stack: "Hiragino Sans", "Yu Gothic", "Noto Sans J
 body:lang(ko) { --font-display-stack: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui, sans-serif; }
 @layer base {
   h1, h2 { font-family: var(--font-display-stack); }
+  /* DESIGN.md §5: one instant accent ring for every control; utilities may still override. */
+  :focus-visible { outline: 2px solid var(--brand-accent); outline-offset: 2px; }
 }
 :root:is(:lang(ja), :lang(ko)) :is(h1, h2) { letter-spacing: normal; }
 :root:lang(ja) :is(h1, h2) { line-break: strict; }
@@ -336,32 +344,10 @@ html.dark {
   animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Interactive Ripple Background (tactile ambient canvas) */
-@keyframes ripple {
-  0% {
-    width: 0px;
-    height: 0px;
-    opacity: 0.85;
-  }
-  100% {
-    width: 480px;
-    height: 480px;
-    opacity: 0;
-  }
-}
-
-.animate-ripple {
-  animation: ripple 2s cubic-bezier(0.15, 0.5, 0.35, 1) forwards;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-in-up {
     animation: none;
     transform: none;
-  }
-  .animate-ripple {
-    animation: none;
-    display: none;
   }
   .spotlight-card::before {
     display: none;

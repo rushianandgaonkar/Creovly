@@ -162,7 +162,7 @@ export default function QuickSearchModal({
 
         {/* Search Input Bar */}
         <div className="flex items-center gap-3 px-4 py-3.5 border-b border-[var(--border-hairline)] bg-[var(--bg-canvas)]">
-          <svg className="w-5 h-5 text-[var(--brand-accent)] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg aria-hidden="true" className="w-5 h-5 text-[var(--brand-accent-deep)] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
           <input
@@ -205,7 +205,7 @@ export default function QuickSearchModal({
                         {item.title}
                       </span>
                       {item.tag && (
-                        <span className="px-1.5 py-0.2 rounded text-[10px] font-mono bg-[var(--bg-canvas-elevated)] border border-[var(--border-hairline)] text-[var(--brand-accent)]">
+                        <span className="px-1.5 py-0.2 rounded text-[10px] font-mono bg-[var(--bg-canvas-elevated)] border border-[var(--border-hairline)] text-[var(--brand-accent-deep)]">
                           {item.tag}
                         </span>
                       )}
@@ -214,8 +214,8 @@ export default function QuickSearchModal({
                       {item.description}
                     </p>
                   </div>
-                  <span className="text-[10px] font-mono text-[var(--text-faint)] shrink-0 self-center hidden sm:inline-block">
-                    {item.category} &rarr;
+                  <span className="text-[11px] text-[var(--text-muted)] shrink-0 self-center hidden sm:inline-block">
+                    {item.category}
                   </span>
                 </button>
               );

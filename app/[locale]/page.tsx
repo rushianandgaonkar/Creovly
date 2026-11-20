@@ -64,7 +64,6 @@ export default async function LocalizedHomePage({ params }: LocalizedPageProps) 
     <>
       <JsonLd data={[websiteJsonLd(), organizationJsonLd()]} />
       <CreatorHero
-        badge={content.home.badge}
         title={content.home.title}
         subtitle={content.home.subtitle}
         description={content.home.description}

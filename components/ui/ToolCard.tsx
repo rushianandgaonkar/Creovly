@@ -5,7 +5,6 @@ import Badge from './Badge';
 import type { ToolStatus } from '@/types';
 import ToolIllustration from '@/components/tools/ToolIllustration';
 import { useI18n, LocalizedLink } from '@/lib/i18n';
-import { getToolFeatureTag } from '@/config/i18n';
 
 export interface ToolCardProps {
   title: string;
@@ -37,7 +36,6 @@ export const ToolCard: React.FC<ToolCardProps> = ({
   illustration,
 }) => {
   const { t, locale } = useI18n();
-  const featureTag = illustration ? getToolFeatureTag(locale, illustration) : undefined;
 
   const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -61,18 +59,18 @@ export const ToolCard: React.FC<ToolCardProps> = ({
     <LocalizedLink
       href={href}
       onMouseMove={handleMouseMove}
-      className={`spotlight-card group relative flex flex-col justify-between p-5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] hover:border-[var(--border-hairline-strong)] hover:shadow-[var(--shadow-floating)] transition-all duration-200 focus-ring overflow-hidden ${className}`}
+      className={`spotlight-card group relative flex flex-col justify-between p-5 rounded-xl border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] hover:border-[var(--border-hairline-strong)] hover:shadow-[var(--shadow-floating)] transition duration-200 focus-ring overflow-hidden ${className}`}
     >
       <div>
         {illustration && (
-          <div className="h-28 -mx-5 -mt-5 mb-4 border-b border-[var(--border-hairline)] overflow-hidden relative">
+          <div className="aspect-[16/10] min-h-[180px] -mx-5 -mt-5 mb-4 border-b border-[var(--border-hairline)] overflow-hidden relative">
             <ToolIllustration toolId={illustration} />
           </div>
         )}
         {/* Card Header: Category + Optional Badge */}
         {(!illustration || status !== 'available' || badge) && (
           <div className="flex items-center justify-between gap-2 mb-3">
-            <span className="text-[11px] font-mono text-[var(--text-muted)]">
+            <span className="text-xs text-[var(--text-muted)]">
               {categoryLabel}
             </span>
             {status !== 'available' ? (
@@ -88,10 +86,10 @@ export const ToolCard: React.FC<ToolCardProps> = ({
         )}
 
         {/* Title with Arrow indicator */}
-        <Heading className="text-base font-semibold text-[var(--text-ink)] group-hover:text-[var(--brand-accent)] transition-colors duration-150 flex items-center justify-between gap-2 tracking-tight">
+        <Heading className="text-base font-semibold text-[var(--text-ink)] group-hover:text-[var(--brand-accent-deep)] transition-colors duration-150 flex items-center justify-between gap-2 tracking-tight">
           <span>{title}</span>
           <svg
-            className="w-4 h-4 text-[var(--text-muted)] group-hover:text-[var(--brand-accent)] group-hover:translate-x-0.5 transition-transform duration-150 shrink-0"
+            className="w-4 h-4 text-[var(--text-muted)] group-hover:text-[var(--brand-accent-deep)] group-hover:translate-x-0.5 transition-transform duration-150 shrink-0"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -107,26 +105,6 @@ export const ToolCard: React.FC<ToolCardProps> = ({
           {description}
         </p>
 
-        {/* Feature Spec Chip */}
-        {featureTag && (
-          <div className="mt-3">
-            <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md border border-[var(--border-hairline)] bg-[var(--bg-canvas-subtle)] text-[10px] font-mono text-[var(--text-muted)] font-medium">
-              <span className="w-1 h-1 rounded-full bg-[var(--brand-accent)]" />
-              {featureTag}
-            </span>
-          </div>
-        )}
-      </div>
-
-      {/* Footer / Action prompt */}
-      <div className="mt-4 pt-3 border-t border-[var(--border-hairline-subtle)] flex items-center justify-between text-xs text-[var(--text-muted)] font-medium">
-        <span className="inline-flex items-center gap-1.5 group-hover:text-[var(--text-ink)] transition-colors">
-          <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]"></span>
-          {status === 'available' ? t.common.badges.available : t.common.badges.preview}
-        </span>
-        <span className="text-[var(--brand-accent)] group-hover:underline">
-          {status === 'available' ? t.common.buttons.open : t.common.badges.preview} &rarr;
-        </span>
       </div>
     </LocalizedLink>
   );

@@ -18,7 +18,7 @@
 .preset { padding: 12px 4px; border: 1px solid transparent; border-radius: 12px; text-align: center; cursor: pointer; transition: background 180ms, border-color 180ms; }
 .preset:hover { background: var(--bg-canvas-subtle); }
 .preset[aria-pressed='true'] { background: var(--brand-accent-soft); border-color: var(--brand-accent); }
-.preset:disabled { opacity: .5; cursor: default; }
+.preset:disabled { opacity: .5; cursor: not-allowed; }
 .folder { display: block; position: relative; height: 82px; margin: 0 auto 12px; width: min(100%, 100px); isolation: isolate; }
 .sheet { position: absolute; inset: 4px 12px 18px; background: var(--artwork-paper); border: 1px solid var(--border-hairline-strong); border-radius: 6px; transform: rotate(-6deg); transition: transform 180ms; }
 .preset:is(:hover, :focus-visible, [aria-pressed='true']):not(:disabled) .sheet { transform: translateY(-5px) rotate(-3deg); }
