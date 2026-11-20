@@ -95,7 +95,7 @@ export const studio = {
     checkTitle: 'Title length is within 100 characters',
     checkMobile: 'Primary hook fits within ~55 characters for mobile feeds',
     checkImage: 'Thumbnail is uploaded and formatted',
-    checkSize: 'Image file size is under YouTube’s 2 MB limit',
+    checkSize: "Image file size is under the 2 MB mobile upload limit",
     checkSafeZone: 'Shorts safe zone verified (if vertical video)',
     checkDisclosure: 'Affiliate and sponsorship disclosures added if applicable',
     confirmAccuracy: 'Title and image accurately represent the video',

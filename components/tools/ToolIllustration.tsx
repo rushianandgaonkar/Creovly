@@ -580,6 +580,70 @@ export default function ToolIllustration({ toolId, className = '' }: ToolIllustr
         </div>
       );
 
+    case 'thumbnail-size':
+      return (
+        <div className={`tool-preview preview-thumbnail-size w-full h-full p-3.5 bg-zinc-900 text-zinc-100 flex flex-col justify-between select-none ${className}`} data-ui>
+          <div className="flex items-center justify-between text-[10px] text-zinc-400">
+            <span className="font-medium">Thumbnail check</span>
+            <span className="text-zinc-400 font-semibold">Example</span>
+          </div>
+          <div className="mx-auto w-3/5 aspect-video rounded border border-dashed border-sky-400/70 flex items-center justify-center font-mono text-[10px] text-sky-200">16:9</div>
+          <div className="space-y-1 text-[10px]">
+            {[['Size', '3840 × 2160'], ['File', '1.4 MB JPG']].map(([label, value]) => (
+              <div key={label} className="flex justify-between"><span className="text-zinc-400">{label}</span><span className="font-mono text-emerald-300">{value}</span></div>
+            ))}
+          </div>
+        </div>
+      );
+
+    case 'best-time-to-post-on-youtube':
+      return (
+        <div className={`tool-preview preview-best-time w-full h-full p-3.5 bg-zinc-900 text-zinc-100 flex flex-col justify-between select-none ${className}`} data-ui>
+          <div className="flex items-center justify-between text-[10px] text-zinc-400">
+            <span className="font-medium">Publish 2 hours before peak</span>
+            <span className="text-zinc-400 font-semibold">Example</span>
+          </div>
+          <div className="text-2xl font-bold text-white tracking-tight font-mono">4:00 PM</div>
+          <div className="space-y-1 font-mono text-[10px]">
+            {[['Fri', '4:00 PM'], ['Sat', '4:00 PM'], ['Sun', '4:00 PM']].map(([dayName, at]) => (
+              <div key={dayName} className="flex justify-between"><span className="text-zinc-400">{dayName}</span><span className="text-orange-300">{at}</span></div>
+            ))}
+          </div>
+        </div>
+      );
+
+    case 'hashtag-generator':
+      return (
+        <div className={`tool-preview preview-hashtag-generator w-full h-full p-3.5 bg-zinc-900 text-zinc-100 flex flex-col justify-between select-none ${className}`} data-ui>
+          <div className="flex items-center justify-between text-[10px] text-zinc-400">
+            <span className="font-medium">home workout, no equipment</span>
+            <span className="text-zinc-400 font-semibold">Example</span>
+          </div>
+          <div className="flex flex-wrap gap-1">
+            {['#HomeWorkout', '#NoEquipment', '#Workout', '#Fitness'].map((tag) => (
+              <span key={tag} className="px-1.5 py-0.5 rounded-full bg-orange-500/15 text-orange-200 text-[10px] font-medium border border-orange-400/30">{tag}</span>
+            ))}
+          </div>
+          <div className="text-[10px] text-zinc-400 font-mono">4 / 15</div>
+        </div>
+      );
+
+    case 'cpm-calculator':
+      return (
+        <div className={`tool-preview preview-cpm w-full h-full p-3.5 bg-zinc-900 text-zinc-100 flex flex-col justify-between select-none ${className}`} data-ui>
+          <div className="flex items-center justify-between text-[10px] text-zinc-400">
+            <span className="font-medium">100,000 views at $8 CPM</span>
+            <span className="text-zinc-400 font-semibold">Example</span>
+          </div>
+          <div className="text-2xl font-bold text-white tracking-tight font-mono">$264</div>
+          <div className="space-y-1 text-[10px]">
+            {[['Gross ad revenue', '$480'], ['Your share', '55%']].map(([label, value]) => (
+              <div key={label} className="flex justify-between"><span className="text-zinc-400">{label}</span><span className="font-mono text-zinc-100">{value}</span></div>
+            ))}
+          </div>
+        </div>
+      );
+
     default:
       return null;
   }

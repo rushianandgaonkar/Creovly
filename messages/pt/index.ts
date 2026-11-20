@@ -275,7 +275,7 @@ export const messagesPt: Messages = {
         },
         {
           question: 'Qual é o tamanho máximo de ficheiro para uma miniatura no YouTube?',
-          answer: 'De acordo com as regras do YouTube, o ficheiro não pode ultrapassar 2 MB em envios através de dispositivos móveis e até 50 MB através do navegador no computador. Formatos permitidos: JPEG, PNG e GIF.',
+          answer: "Miniaturas personalizadas podem ter até 2 MB quando enviadas pelo app YouTube Studio no celular e até 50 MB por um navegador no computador. O YouTube indica JPG e PNG como formatos.",
         },
         {
           question: 'Como comprimir uma miniatura PNG para o YouTube?',
@@ -285,7 +285,7 @@ export const messagesPt: Messages = {
       resizer: [
         {
           question: 'Qual é o tamanho ideal de miniatura para o YouTube em 2026?',
-          answer: 'As miniaturas de vídeos padrão exigem proporção 16:9 e largura mínima de 640 píxeis. A resolução recomendada é de 1280 × 720 píxeis, com peso inferior a 2 MB para envio móvel.',
+          answer: "O YouTube recomenda 3840 × 2160 pixels em 16:9, com largura mínima de 640 pixels. 1280 × 720 continua sendo um tamanho comum e cumpre as duas regras. Fique abaixo de 2 MB para envios pelo celular (50 MB no computador) e salve em JPG ou PNG.",
         },
         {
           question: 'Como redimensionar uma imagem para miniatura do YouTube?',
@@ -603,7 +603,7 @@ export const messagesPt: Messages = {
       thumbnailTester: [
         {
           question: 'Qual o tamanho ideal da thumbnail do YouTube?',
-          answer: 'Envie 1280 × 720 px (16:9), com largura mínima de 640 px, em JPG, PNG ou GIF com menos de 2 MB. O YouTube mostra a mesma imagem com cerca de 168 px de largura nos sugeridos e em largura total no celular, então teste em tamanho pequeno antes de publicar.',
+          answer: "Use 16:9 com largura mínima de 640 px. O YouTube recomenda 3840 × 2160, e 1280 × 720 também funciona. Salve em JPG ou PNG, abaixo de 2 MB se enviar pelo celular (50 MB no computador). O YouTube mostra a mesma imagem de cerca de 168 px de largura nos vídeos sugeridos até a largura total no celular, então teste em tamanho pequeno antes de publicar.",
         },
         {
           question: 'Minha thumbnail é enviada para algum lugar?',
@@ -1581,7 +1581,7 @@ export const messagesPt: Messages = {
       checkTitle: 'Comprimento do título dentro do limite de 100 carateres',
       checkMobile: 'O gancho principal cabe nos primeiros 50 carateres (legível em telemóveis)',
       checkImage: 'Miniatura carregada e no formato correto',
-      checkSize: 'Peso da imagem inferior ao limite de 2 MB do YouTube',
+      checkSize: "Peso da imagem abaixo do limite de 2 MB para envio pelo celular",
       checkSafeZone: 'Zona segura de Shorts respeitada (em vídeos verticais)',
       checkDisclosure: 'Avisos de patrocínio ou links de afiliados identificados',
       confirmAccuracy: 'O título e a imagem representam com precisão o conteúdo do vídeo',
@@ -1649,7 +1649,7 @@ export const messagesPt: Messages = {
           {
             id: 'thumb-size',
             title: 'Formato, resolução e peso da miniatura adequados ao envio',
-            description: 'Proporção 16:9 (recomendado 1280×720, mínimo 640 px de largura) em JPG ou PNG. A app YouTube Studio no telemóvel bloqueia acima de 2 MB restritos.',
+            description: "Proporção 16:9 (o YouTube recomenda 3840×2160; 1280×720 também serve; largura mínima 640 px) em JPG ou PNG. O app YouTube Studio para celular aceita até 2 MB; no computador, até 50 MB.",
           },
           {
             id: 'thumb-mobile',
@@ -1761,7 +1761,7 @@ export const messagesPt: Messages = {
         title: 'Tamanho da miniatura do YouTube: 1280×720, limite de 2 MB e CTR',
         category: 'Apresentação visual',
         readTime: '6 min de leitura',
-        description: 'O tamanho da miniatura do YouTube é 1280×720 pixels em 16:9, menos de 2 MB, em JPG, PNG ou GIF. Limites oficiais, zonas seguras e como redimensionar ou comprimir.',
+        description: "O YouTube recomenda miniaturas de 3840×2160 em 16:9, e 1280×720 continua funcionando. Até 2 MB no celular e 50 MB no computador, em JPG ou PNG. Veja zonas seguras e como redimensionar ou comprimir.",
       },
       'decoding-youtube-rpm': {
         title: 'Descodificar o RPM do YouTube: Como os criadores são realmente pagos em 2026',

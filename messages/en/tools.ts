@@ -80,7 +80,7 @@ export const tools = {
       },
       {
         question: 'What is the maximum file size for a YouTube thumbnail?',
-        answer: 'According to official YouTube platform specifications, custom thumbnails must be under 2 MB for mobile Studio uploads and under 50 MB for desktop browser uploads. Supported formats are JPEG, PNG, and GIF.',
+        answer: "Custom thumbnails can be up to 2 MB when uploaded from the YouTube Studio mobile app and up to 50 MB from a desktop browser. YouTube lists JPG and PNG as formats.",
       },
       {
         question: 'How to compress a PNG thumbnail for YouTube?',
@@ -90,7 +90,7 @@ export const tools = {
     resizer: [
       {
         question: 'What is the best YouTube thumbnail size in 2026?',
-        answer: 'Standard YouTube video thumbnails require a 16:9 aspect ratio with a minimum width of 640 pixels. The recommended baseline resolution is 1280 × 720 pixels, with higher resolutions up to 3840 × 2160 supported on desktop. Files must remain under 2 MB for mobile Studio uploads and under 50 MB for desktop browser uploads. Supported formats are JPG, PNG, GIF, and BMP (with JPG and PNG officially recommended).',
+        answer: "YouTube recommends 3840 × 2160 pixels at 16:9, with a minimum width of 640 pixels. 1280 × 720 is still a common size and meets both rules. Keep files under 2 MB for mobile uploads (50 MB on desktop) and save as JPG or PNG.",
       },
       {
         question: 'How to resize an image for a YouTube thumbnail?',
@@ -408,7 +408,7 @@ export const tools = {
     thumbnailTester: [
       {
         question: 'What size should a YouTube thumbnail be?',
-        answer: 'Upload 1280 × 720 px (16:9) with a minimum width of 640 px, as a JPG, PNG or GIF under 2 MB. YouTube shows the same image from about 168 px wide in suggested videos to full width on phones, so test it small before you publish.',
+        answer: "Use 16:9 with a minimum width of 640 px. YouTube recommends 3840 × 2160, and 1280 × 720 also works. Save as JPG or PNG, under 2 MB if you upload from your phone (50 MB on desktop). YouTube shows the same image from about 168 px wide in suggested videos to full width on phones, so test it small before you publish.",
       },
       {
         question: 'Is my thumbnail uploaded anywhere?',

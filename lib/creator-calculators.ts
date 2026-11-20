@@ -1,4 +1,4 @@
-export type CalculatorKind = 'revenue' | 'rpm' | 'watch-hours' | 'monetization';
+export type CalculatorKind = 'revenue' | 'rpm' | 'watch-hours' | 'monetization' | 'cpm';
 export interface CalculatorField { key: string; label: string; suffix?: string; min?: number; max?: number; integer?: boolean }
 export interface CalculatorDefinition { title: string; fields: CalculatorField[]; example: Record<string, string>; note: string }
 export const calculatorDefinitions: Record<CalculatorKind, CalculatorDefinition> = {
@@ -26,6 +26,12 @@ export const calculatorDefinitions: Record<CalculatorKind, CalculatorDefinition>
     example: { views: '150000', rpm: '4', deals: '1', fee: '2200', affiliate: '350', other: '0', costs: '500' },
     note: 'All amounts are USD assumptions. Platform income uses your RPM after YouTube’s share. Add only income not already included in that RPM to avoid double counting. Costs are subtracted once; taxes are not calculated. Subscriber count is not used to invent sponsorship rates.',
   },
+  cpm: {
+    title: 'CPM earnings estimate',
+    fields: [{ key: 'views', label: 'Views', suffix: 'views', integer: true }, { key: 'rate', label: 'Monetized playback rate', suffix: '%', max: 100 }, { key: 'cpm', label: 'Playback-based CPM (USD)', suffix: 'USD' }, { key: 'share', label: 'Your revenue share', suffix: '%', max: 100 }],
+    example: { views: '100000', rate: '60', cpm: '8', share: '55' },
+    note: 'Take playback-based CPM and the monetized playback rate from YouTube Analytics (Revenue tab). CPM is what advertisers pay before YouTube’s share. Long-form ad revenue share in the YouTube Partner Program is 55% to the creator; change it if your terms differ. Ad revenue only; memberships, Premium and other sources are not included.',
+  },
 };
 export interface CalculatorResult { metrics: { label: string; value: number | null; unit: 'money' | 'number' | 'months' | 'percent'; detail?: string }[]; formula: string; explanation: string }
 
@@ -49,6 +55,10 @@ export function calculateCreator(kind: CalculatorKind, input: Record<string, str
   if (kind === 'watch-hours') {
     const remaining = Math.max(0, v.goal - v.current); const months = remaining === 0 ? 0 : v.monthly === 0 ? null : remaining / v.monthly;
     return { metrics: [metric('Hours remaining', remaining, 'number'), metric('Progress to goal', Math.min(100, v.current / v.goal * 100), 'percent'), metric('Months at this pace', months, 'months', 'Assumes no hours expire'), metric('Additional views needed', Math.ceil(remaining * 60 / v.duration), 'number', 'At the average duration entered')], formula: 'Remaining = max(0, goal − current). Months = remaining ÷ monthly hours. Views = ceiling(remaining × 60 ÷ average minutes).', explanation: remaining === 0 ? 'Your entered hours meet your chosen goal. This does not confirm monetization eligibility.' : v.monthly === 0 ? 'With zero additional monthly hours, there is no estimated completion time.' : 'A simple accumulation scenario. Expiring watch hours can make the actual timeline longer or prevent this goal being reached.' };
+  }
+  if (kind === 'cpm') {
+    const playbacks = v.views * v.rate / 100; const gross = playbacks / 1000 * v.cpm; const creator = gross * v.share / 100;
+    return { metrics: [metric('Estimated creator ad revenue', creator, 'money', `${v.share}% of gross`), metric('Gross ad revenue', gross, 'money', 'What advertisers paid'), metric('Monetized playbacks', Math.round(playbacks), 'number'), metric('Effective ad RPM', v.views ? creator / v.views * 1000 : 0, 'money', 'Per 1,000 views')], formula: 'Playbacks = views × rate. Gross = playbacks ÷ 1,000 × CPM. Creator = gross × share. RPM = creator ÷ views × 1,000.', explanation: 'An estimate from your own Analytics figures. Actual CPM changes by country, season, ad format and topic.' };
   }
   const platform = v.views / 1000 * v.rpm; const sponsorships = v.deals * v.fee; const total = platform + sponsorships + v.affiliate + v.other; const net = total - v.costs;
   return { metrics: [metric('Monthly total income', total, 'money'), metric('Monthly after costs', net, 'money', 'Before taxes'), metric('Platform income', platform, 'money'), metric('Sponsorship income', sponsorships, 'money'), metric('Affiliate income', v.affiliate, 'money'), metric('Other income', v.other, 'money'), metric('Monthly costs', v.costs, 'money'), metric('Annual after costs', net * 12, 'money', '12 identical months; before taxes')], formula: 'Platform = views ÷ 1,000 × RPM. Sponsorships = deals × fee. Total = platform + sponsorships + affiliate + other. After costs = total − costs.', explanation: net < 0 ? 'Your entered costs exceed your income scenario. Negative amounts represent a loss before taxes.' : 'This adds your assumptions; it does not predict deals, revenue, eligibility, or taxes.' };

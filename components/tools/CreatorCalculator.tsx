@@ -53,6 +53,8 @@ export default function CreatorCalculator({ kind }: { kind: CalculatorKind }) {
         return t.calculator.watchHours.title;
       case 'monetization':
         return t.calculator.monetization.title;
+      default:
+        return definition.title;
     }
   };
 
@@ -66,6 +68,8 @@ export default function CreatorCalculator({ kind }: { kind: CalculatorKind }) {
         return t.calculator.watchHours.note;
       case 'monetization':
         return t.calculator.monetization.note;
+      default:
+        return definition.note;
     }
   };
 

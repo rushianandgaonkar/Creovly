@@ -52,6 +52,7 @@ export const footerNavigation = {
         { name: 'Thumbnail Downloader', href: '/tools/youtube-thumbnail-downloader' },
         { name: 'Thumbnail Tester & Preview', href: '/tools/youtube-thumbnail-tester' },
         { name: 'Shorts Safe Zone', href: '/tools/youtube-shorts-safe-zone' },
+        { name: 'Thumbnail Size Checker', href: '/tools/youtube-thumbnail-size' },
       ],
     },
     {
@@ -59,6 +60,8 @@ export const footerNavigation = {
       items: [
         { name: 'Channel Name Generator', href: '/tools/youtube-channel-name-generator' },
         { name: 'Tag Generator', href: '/tools/youtube-tag-generator' },
+        { name: 'Hashtag Generator', href: '/tools/youtube-hashtag-generator' },
+        { name: 'Best Time to Post', href: '/tools/best-time-to-post-on-youtube' },
         { name: 'Description Generator', href: '/tools/youtube-description-generator' },
         { name: 'Link Generator', href: '/tools/youtube-link-generator' },
         { name: 'Chapters & Timestamp Generator', href: '/tools/youtube-timestamp-generator' },
@@ -72,6 +75,7 @@ export const footerNavigation = {
       items: [
         { name: 'Money Calculator', href: '/tools/youtube-revenue-calculator' },
         { name: 'RPM Calculator', href: '/tools/youtube-rpm-calculator' },
+        { name: 'CPM Calculator', href: '/tools/youtube-cpm-calculator' },
         { name: 'Watch Hours Calculator', href: '/tools/youtube-watch-hours-calculator' },
         { name: 'Monetization Calculator', href: '/tools/youtube-monetization-calculator' },
         { name: 'Engagement Rate Calculator', href: '/tools/engagement-rate-calculator' },
@@ -131,7 +135,7 @@ export const toolRegistry: ToolDefinition[] = [
     category: 'thumbnail',
     categoryLabel: 'Thumbnail Tools',
     description:
-      'YouTube thumbnail size is 1280x720 pixels (16:9, under 2 MB). Use this free thumbnail resizer to fit any image to that size, preview framing, and download it.',
+      "Resize any image to a YouTube thumbnail size: 1280x720 or the recommended 3840x2160, both 16:9. Preview the framing and download it free in your browser.",
     status: 'available',
     seoTarget: 'YouTube Thumbnail Resizer',
   },
@@ -366,6 +370,60 @@ export const toolRegistry: ToolDefinition[] = [
       'Find out how long your script takes to read aloud. Paste text or enter a word count, pick a speaking pace, and see how many words a 5- or 10-minute video needs.',
     status: 'available',
     seoTarget: 'Words to Minutes Calculator',
+  },
+  {
+    id: 'youtube-thumbnail-size',
+    title: 'YouTube Thumbnail Size Checker',
+    seoTitle: 'YouTube Thumbnail Size 2026: Specs & Checker',
+    slug: 'youtube-thumbnail-size',
+    href: '/tools/youtube-thumbnail-size',
+    category: 'thumbnail',
+    categoryLabel: 'Thumbnail Tools',
+    description:
+      'The YouTube thumbnail size, ratio, file size and formats in one place. Drop in your image to check it against YouTube’s rules, right in your browser.',
+    status: 'available',
+    seoTarget: 'YouTube Thumbnail Size',
+    applicationCategory: 'MultimediaApplication',
+  },
+  {
+    id: 'best-time-to-post-on-youtube',
+    heroTone: 'indigo',
+    title: 'Best Time to Post on YouTube',
+    seoTitle: 'Best Time to Post on YouTube: Planner',
+    slug: 'best-time-to-post-on-youtube',
+    href: '/tools/best-time-to-post-on-youtube',
+    category: 'title',
+    categoryLabel: 'Title Tools',
+    description:
+      'Find your best time to post on YouTube from your audience’s peak hour. See when to publish each day this week, in your time zone and theirs.',
+    status: 'available',
+    seoTarget: 'Best Time to Post on YouTube',
+  },
+  {
+    id: 'youtube-hashtag-generator',
+    title: 'YouTube Hashtag Generator',
+    seoTitle: 'Free YouTube Hashtag Generator',
+    slug: 'youtube-hashtag-generator',
+    href: '/tools/youtube-hashtag-generator',
+    category: 'title',
+    categoryLabel: 'Title Tools',
+    description:
+      'Turn your video topic into YouTube hashtags with no spaces, no duplicates and a sensible limit. Pick the ones you want and copy them into your description.',
+    status: 'available',
+    seoTarget: 'YouTube Hashtag Generator',
+  },
+  {
+    id: 'youtube-cpm-calculator',
+    title: 'YouTube CPM Calculator',
+    seoTitle: 'YouTube CPM Calculator: Ad Earnings from CPM',
+    slug: 'youtube-cpm-calculator',
+    href: '/tools/youtube-cpm-calculator',
+    category: 'money-growth',
+    categoryLabel: 'Money & Growth',
+    description:
+      'Estimate YouTube ad earnings from your views, monetized playback rate and playback-based CPM, after the creator revenue share. Free, in your browser.',
+    status: 'available',
+    seoTarget: 'YouTube CPM Calculator',
   },
 ];
 

@@ -275,7 +275,7 @@ export const messagesDe: Messages = {
         },
         {
           question: 'Was ist die maximale Dateigröße für ein YouTube-Thumbnail?',
-          answer: 'Laut YouTube-Richtlinien gilt für Uploads über die mobile App ein Limit von 2 MB, im Desktop-Browser sind bis zu 50 MB zulässig. Erlaubte Formate sind JPEG, PNG und GIF.',
+          answer: "Eigene Thumbnails dürfen in der YouTube Studio App bis 2 MB und im Desktop-Browser bis 50 MB groß sein. YouTube nennt JPG und PNG als Formate.",
         },
         {
           question: 'Wie komprimiere ich ein PNG-Thumbnail für YouTube?',
@@ -285,7 +285,7 @@ export const messagesDe: Messages = {
       resizer: [
         {
           question: 'Welche Thumbnail-Größe ist 2026 für YouTube optimal?',
-          answer: 'Standard-Thumbnails erfordern ein Seitenverhältnis von 16:9 mit einer Mindestbreite von 640 Pixeln. Die empfohlene Auflösung beträgt 1280 × 720 Pixel bei maximal 2 MB Dateigröße mobil.',
+          answer: "YouTube empfiehlt 3840 × 2160 Pixel im Format 16:9 bei mindestens 640 Pixeln Breite. 1280 × 720 ist weiterhin gängig und erfüllt beide Regeln. Bleib für mobile Uploads unter 2 MB (am Computer bis 50 MB) und speichere als JPG oder PNG.",
         },
         {
           question: 'Wie passe ich ein Bild an die YouTube-Thumbnail-Größe an?',
@@ -603,7 +603,7 @@ export const messagesDe: Messages = {
       thumbnailTester: [
         {
           question: 'Welche Größe sollte ein YouTube-Thumbnail haben?',
-          answer: 'Lade 1280 × 720 px (16:9) mit mindestens 640 px Breite hoch, als JPG, PNG oder GIF unter 2 MB. YouTube zeigt dasselbe Bild von etwa 168 px Breite in den Vorschlägen bis zur vollen Breite auf dem Handy – teste es also klein, bevor du veröffentlichst.',
+          answer: "Nutze 16:9 mit mindestens 640 px Breite. YouTube empfiehlt 3840 × 2160, 1280 × 720 funktioniert auch. Speichere als JPG oder PNG, unter 2 MB, wenn du vom Handy hochlädst (am Computer bis 50 MB). YouTube zeigt dasselbe Bild von etwa 168 px Breite in vorgeschlagenen Videos bis zur vollen Breite auf Handys, teste es also klein, bevor du veröffentlichst.",
         },
         {
           question: 'Wird mein Thumbnail irgendwo hochgeladen?',
@@ -1581,7 +1581,7 @@ export const messagesDe: Messages = {
       checkTitle: 'Titellänge liegt innerhalb von 100 Zeichen',
       checkMobile: 'Hauptaussage passt in die ersten 50 Zeichen (mobil lesbar)',
       checkImage: 'Thumbnail geladen und korrekt formatiert',
-      checkSize: 'Dateigröße unter dem YouTube-Limit von 2 MB',
+      checkSize: "Dateigröße unter dem 2-MB-Limit für mobile Uploads",
       checkSafeZone: 'Shorts Safe Zone beachtet (bei Hochformat)',
       checkDisclosure: 'Werbehinweise oder Affiliate-Kennzeichnungen vorhanden',
       confirmAccuracy: 'Titel und Thumbnail geben den Inhalt des Videos wahrheitsgemäß wieder',
@@ -1649,7 +1649,7 @@ export const messagesDe: Messages = {
           {
             id: 'thumb-size',
             title: 'Thumbnail-Format, Auflösung und Dateigröße entsprechen den Vorgaben',
-            description: '16:9-Verhältnis (empfohlen 1280×720, mind. 640 px breit) als JPG oder PNG. Die YouTube Studio App blockiert über 2 MB strikt.',
+            description: "16:9-Verhältnis (YouTube empfiehlt 3840×2160; 1280×720 geht auch; mind. 640 px breit) als JPG oder PNG. Die YouTube Studio App akzeptiert bis 2 MB, am Computer sind bis 50 MB möglich.",
           },
           {
             id: 'thumb-mobile',
@@ -1761,7 +1761,7 @@ export const messagesDe: Messages = {
         title: 'YouTube-Thumbnail-Größe: 1280×720, 2-MB-Limit & Klickrate',
         category: 'Visuelle Gestaltung',
         readTime: '6 Min. Lesezeit',
-        description: 'Die YouTube-Thumbnail-Größe beträgt 1280×720 Pixel im Format 16:9, unter 2 MB, als JPG, PNG oder GIF. Offizielle Limits, sichere Zonen sowie Verkleinern und Komprimieren.',
+        description: "YouTube empfiehlt Thumbnails mit 3840×2160 im Format 16:9, 1280×720 funktioniert weiterhin. Bis 2 MB mobil und 50 MB am Computer, als JPG oder PNG. Mit sicheren Bereichen, Skalieren und Komprimieren.",
       },
       'decoding-youtube-rpm': {
         title: 'YouTube RPM entschlüsselt: Was Creator 2026 wirklich verdienen',

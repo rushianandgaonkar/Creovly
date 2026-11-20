@@ -275,7 +275,7 @@ export const messagesKo: Messages = {
         },
         {
           question: 'YouTube 썸네일의 최대 허용 파일 크기는 얼마인가요?',
-          answer: 'YouTube 공식 기준에 따르면 모바일 앱 업로드 시 최대 2MB, PC 데스크톱 브라우저 업로드 시 최대 50MB까지 지원됩니다. 권장 확장자는 JPEG, PNG, GIF입니다.',
+          answer: "맞춤 썸네일은 YouTube Studio 모바일 앱에서 최대 2MB, PC 브라우저에서 최대 50MB까지 업로드할 수 있습니다. 유튜브가 안내하는 형식은 JPG와 PNG입니다.",
         },
         {
           question: 'PNG 썸네일을 효과적으로 압축하려면 어떻게 해야 하나요?',
@@ -285,7 +285,7 @@ export const messagesKo: Messages = {
       resizer: [
         {
           question: '2026년 기준 가장 이상적인 YouTube 썸네일 크기는 얼마인가요?',
-          answer: '기본 가로형 영상 썸네일은 16:9 비율, 최소 너비 640픽셀 이상이어야 하며 권장 해상도는 1280 × 720픽셀입니다. 파일 크기는 2MB 미만이어야 합니다.',
+          answer: "유튜브 권장 크기는 3840 × 2160픽셀(16:9), 최소 너비 640픽셀입니다. 1280 × 720도 여전히 널리 쓰이며 두 조건을 모두 충족합니다. 모바일 업로드는 2MB 미만(PC는 50MB까지)으로 맞추고 JPG 또는 PNG로 저장하세요.",
         },
         {
           question: '일반 이미지를 YouTube 썸네일 크기로 맞추려면 어떻게 하나요?',
@@ -603,7 +603,7 @@ export const messagesKo: Messages = {
       thumbnailTester: [
         {
           question: '유튜브 썸네일 크기는 얼마가 좋나요?',
-          answer: '1280 × 720픽셀(16:9), 최소 너비 640픽셀, 2MB 미만의 JPG·PNG·GIF로 올리세요. 같은 이미지가 추천 동영상에서는 너비 약 168픽셀로, 휴대폰에서는 화면 전체 너비로 보이므로 게시 전에 작은 크기로 확인하세요.',
+          answer: "16:9 비율, 최소 너비 640px로 만드세요. 유튜브 권장 크기는 3840 × 2160이며 1280 × 720도 사용할 수 있습니다. JPG 또는 PNG로 저장하고 휴대폰에서 올린다면 2MB 미만(PC는 50MB까지)으로 맞추세요. 같은 이미지가 추천 동영상에서는 약 168px 너비부터 휴대폰에서는 전체 너비까지 표시되므로 게시 전에 작은 크기로도 확인하세요.",
         },
         {
           question: '내 썸네일이 어딘가에 업로드되나요?',
@@ -1581,7 +1581,7 @@ export const messagesKo: Messages = {
       checkTitle: '제목 글자수가 100자 한도 이내임',
       checkMobile: '핵심 후킹 문구가 모바일 가독 범위(50자) 안에 위치함',
       checkImage: '썸네일 이미지가 올바르게 등록되고 규격에 맞음',
-      checkSize: '이미지 용량이 YouTube 제한치인 2MB 미만임',
+      checkSize: "이미지 용량이 모바일 업로드 한도인 2MB 미만임",
       checkSafeZone: '쇼츠 세이프존 영역을 준수함 (세로 영상인 경우)',
       checkDisclosure: '협찬 유료 광고 또는 제휴 마케팅 고지 문구가 포함됨',
       confirmAccuracy: '제목과 썸네일이 영상의 실제 내용을 정확히 반영함',
@@ -1649,7 +1649,7 @@ export const messagesKo: Messages = {
           {
             id: 'thumb-size',
             title: '썸네일의 비율, 해상도, 파일 용량이 규격에 적합한지 확인',
-            description: '16:9 비율(권장 1280×720, 최소 너비 640px)의 JPG 또는 PNG 포맷. 모바일 YouTube Studio 앱은 2MB를 엄격히 제한합니다.',
+            description: "16:9 비율(유튜브 권장 3840×2160, 1280×720도 가능, 최소 너비 640px)의 JPG 또는 PNG. YouTube Studio 모바일 앱은 2MB까지, PC는 50MB까지 업로드할 수 있습니다.",
           },
           {
             id: 'thumb-mobile',
@@ -1761,7 +1761,7 @@ export const messagesKo: Messages = {
         title: '유튜브 썸네일 크기: 1280×720, 2MB 제한과 CTR 팁',
         category: '시각 디자인',
         readTime: '6분 분량',
-        description: '유튜브 썸네일 크기는 1280×720 픽셀, 비율 16:9, 2MB 미만, JPG·PNG·GIF 형식입니다. 공식 제한, 안전 영역, 리사이즈와 압축 방법을 안내합니다.',
+        description: "유튜브 권장 썸네일 크기는 3840×2160(16:9)이며 1280×720도 사용할 수 있습니다. 모바일 2MB, PC 50MB까지, JPG 또는 PNG. 안전 영역과 크기 조정·압축 방법도 확인하세요.",
       },
       'decoding-youtube-rpm': {
         title: 'YouTube RPM 완벽 분석: 2026년 크리에이터 정산 수익의 실제 구조',

@@ -39,6 +39,10 @@ import ThumbnailDownloader from '@/components/tools/ThumbnailDownloader';
 import ThumbnailTester from '@/components/tools/ThumbnailTester';
 import ChapterGenerator from '@/components/tools/ChapterGenerator';
 import ScriptLengthCalculator from '@/components/tools/ScriptLengthCalculator';
+import ContentToolPage from '@/components/tools/ContentToolPage';
+import ThumbnailSizeChecker from '@/components/tools/ThumbnailSizeChecker';
+import BestTimeToPost from '@/components/tools/BestTimeToPost';
+import HashtagGenerator from '@/components/tools/HashtagGenerator';
 import GuidesContent from '@/components/guides/GuidesContent';
 import GuideArticle from '@/components/guides/GuideArticle';
 import AboutPage from '@/app/about/page';
@@ -71,6 +75,10 @@ const staticSlugs = [
   ['tools', 'youtube-thumbnail-tester'],
   ['tools', 'youtube-timestamp-generator'],
   ['tools', 'words-to-minutes-calculator'],
+  ['tools', 'youtube-thumbnail-size'],
+  ['tools', 'best-time-to-post-on-youtube'],
+  ['tools', 'youtube-hashtag-generator'],
+  ['tools', 'youtube-cpm-calculator'],
   ['guides'],
   ...guides.map((g) => ['guides', g.slug]),
   ['about'],
@@ -481,6 +489,18 @@ export default async function LocalizedPage({ params }: LocalizedCatchAllProps) 
             <ScriptLengthCalculator />
           </ToolPageShell>
         );
+        break;
+      case 'youtube-thumbnail-size':
+        toolComponent = <ContentToolPage slug={tool.slug}><ThumbnailSizeChecker /></ContentToolPage>;
+        break;
+      case 'best-time-to-post-on-youtube':
+        toolComponent = <ContentToolPage slug={tool.slug}><BestTimeToPost /></ContentToolPage>;
+        break;
+      case 'youtube-hashtag-generator':
+        toolComponent = <ContentToolPage slug={tool.slug}><HashtagGenerator /></ContentToolPage>;
+        break;
+      case 'youtube-cpm-calculator':
+        toolComponent = <CalculatorPage kind="cpm" slug="youtube-cpm-calculator" />;
         break;
       default:
         notFound();

@@ -38,7 +38,7 @@ export const guides = {
       category: 'Visual Packaging',
       readTime: '6 min read',
       description:
-        'YouTube thumbnail size is 1280×720 pixels at 16:9, under 2 MB, in JPG, PNG or GIF. See the official limits, safe zones and how to resize or compress yours.',
+        "YouTube recommends 3840×2160 thumbnails at 16:9, and 1280×720 still works. Files can be 2 MB on mobile and 50 MB on desktop, in JPG or PNG. See safe zones and how to resize or compress yours.",
     },
     'decoding-youtube-rpm': {
       title: 'Decoding YouTube RPM: How Creators Actually Get Paid in 2026',
