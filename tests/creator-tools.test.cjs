@@ -70,7 +70,7 @@ test('youtube-title-checker targets both "Title Checker" and "YouTube Title Chec
   const tool = siteConfig.toolRegistry.find((t) => t.slug === 'youtube-title-checker');
   assert.ok(tool);
   assert.ok(tool.seoTitle.includes('Title Checker'));
-  assert.equal(tool.seoTarget, 'Title Checker');
+  assert.equal(tool.seoTarget, 'YouTube Title Checker');
   assert.ok(tool.description.toLowerCase().includes('free title checker'), 'Description must include "free title checker"');
 
   const i18n = load('config/i18n.ts');

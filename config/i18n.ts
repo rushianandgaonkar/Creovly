@@ -327,9 +327,9 @@ export const translations: Record<Locale, I18nContent> = {
         keywords: ['youtube description generator', 'youtube video description generator', 'youtube description template', 'free youtube description generator', 'youtube description maker'],
       },
       'youtube-title-checker': {
-        title: 'Title Checker & Analyzer for YouTube',
-        seoTitle: 'Title Checker: Free YouTube Title Length, Hook & Truncation Analyzer',
-        description: 'Free title checker and YouTube headline analyzer. Check title length, 50-character mobile truncation cutoff, keyword hooks, and CTR preview before you publish.',
+        title: 'YouTube Title Checker & Analyzer',
+        seoTitle: 'YouTube Title Checker: Free Title Length Tool',
+        description: 'Free title checker for YouTube videos. Count title characters against the 100-character limit, see where long titles get cut off, and check keyword placement before you publish.',
         categoryLabel: 'Title Tools',
         keywords: ['title checker', 'free title checker', 'youtube title checker', 'youtube title analyzer', 'youtube title tester', 'youtube title length checker', 'headline analyzer', 'video title truncation analyzer', 'catchy youtube titles', 'youtube title character counter'],
       },

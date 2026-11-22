@@ -41,11 +41,11 @@ export const guides = {
         "YouTube recommends 3840×2160 thumbnails at 16:9, and 1280×720 still works. Files can be 2 MB on mobile and 50 MB on desktop, in JPG or PNG. See safe zones and how to resize or compress yours.",
     },
     'decoding-youtube-rpm': {
-      title: 'Decoding YouTube RPM: How Creators Actually Get Paid in 2026',
+      title: 'What Is RPM on YouTube? How Creators Actually Get Paid in 2026',
       category: 'Monetization',
       readTime: '8 min read',
       description:
-        'A mathematical analysis of creator RPM vs advertiser CPM, geographic audience tiers, platform revenue shares, and net earnings calculation.',
+        "RPM on YouTube is the money a creator earns per 1,000 views after YouTube's revenue share. See the RPM formula, how RPM differs from CPM, what revenue counts, and why Shorts RPM is lower.",
     },
     'youtube-shorts-safe-zone': {
       title: 'Shorts Safe Zones: Keeping Subtitles & Faces Unobscured',

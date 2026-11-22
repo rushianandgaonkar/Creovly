@@ -105,6 +105,13 @@ export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; s
               <h2 className="text-base font-bold text-[var(--text-ink)] pt-1">
                 {seo.calculators.rpmHow}
               </h2>
+              <p className="text-xs">
+                New to the metric? Read{' '}
+                <LocalizedLink href="/guides/decoding-youtube-rpm" className="text-[var(--brand-accent-deep)] underline hover:no-underline font-medium">
+                  What is RPM on YouTube?
+                </LocalizedLink>{' '}
+                for the formula and what revenue it includes.
+              </p>
             </div>
           )}
           {kind === 'monetization' && (
@@ -127,6 +134,12 @@ export default function CalculatorPage({ kind, slug }: { kind: CalculatorKind; s
             <div>
               <p>{t.calculator.cpm.about1}</p>
               <p>{t.calculator.cpm.about2}</p>
+              <p className="text-xs">
+                See how CPM turns into creator earnings in{' '}
+                <LocalizedLink href="/guides/decoding-youtube-rpm" className="text-[var(--brand-accent-deep)] underline hover:no-underline font-medium">
+                  What is RPM on YouTube?
+                </LocalizedLink>.
+              </p>
               <p>
                 <a
                   href="https://support.google.com/youtube/answer/9314357"

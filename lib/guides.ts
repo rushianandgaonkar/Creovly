@@ -125,12 +125,12 @@ export const guides: GuideItem[] = [
   },
   {
     slug: 'decoding-youtube-rpm',
-    title: 'Decoding YouTube RPM: How Creators Actually Get Paid in 2026',
-    seoTitle: 'YouTube RPM Explained: How Creators Get Paid',
+    title: 'What Is RPM on YouTube? How Creators Actually Get Paid in 2026',
+    seoTitle: 'What Is RPM on YouTube? RPM vs CPM Explained',
     category: 'Monetization',
     readTime: '8 min read',
     description:
-      'The mathematical reality of creator RPM vs. advertiser CPM, included revenue streams, Shorts pooled payouts, and avoiding double revenue deductions.',
+      "RPM on YouTube is the money a creator earns per 1,000 views after YouTube's revenue share. See the RPM formula, how RPM differs from CPM, what revenue counts, and why Shorts RPM is lower.",
     lastVerified: 'October 2026',
     officialSources: [
       {
