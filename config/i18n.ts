@@ -1072,9 +1072,9 @@ export const translations: Record<Locale, I18nContent> = {
         keywords: ['redimensionner miniature youtube', 'convertisseur taille miniature youtube', 'taille miniature youtube 1280x720', 'dimensions banniere youtube', 'format image youtube', 'redimensionner photo profil'],
       },
       'youtube-banner-size': {
-        title: 'Vérificateur et redimensionneur de bannière YouTube',
-        seoTitle: 'Taille bannière YouTube: 2560x1440 et template',
-        description: 'Taille de bannière YouTube : 2560x1440 px, zone de sécurité 1546x423 px, 6 Mo max. Vérifiez le rendu TV, ordinateur et mobile, redimensionnez votre image et obtenez le modèle gratuit.',
+        title: 'Taille bannière YouTube : vérificateur et redimensionneur',
+        seoTitle: 'Taille bannière YouTube : 2560x1440 (mobile, PC)',
+        description: 'Quelle est la taille d’une bannière YouTube ? 2560x1440 px, dont une zone de sécurité de 1546x423 px visible sur téléphone et PC, 6 Mo max. Vérifiez le rendu TV, ordinateur et mobile et redimensionnez votre image.',
         categoryLabel: 'Outils de miniatures',
         keywords: ['taille banniere youtube', 'dimension banniere youtube tous appareils', 'template banniere youtube png', 'safe zone banniere youtube mobile', 'convertisseur taille banniere youtube'],
       },

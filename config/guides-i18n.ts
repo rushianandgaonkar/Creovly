@@ -791,11 +791,11 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
     },
     'how-much-does-youtube-pay-per-1000-views': {
       title: '¿Cuánto Paga YouTube por 1.000 Visitas? (Tarifas y Calculadora 2026)',
-      seoTitle: '¿Cuánto Paga YouTube por 1.000 Visitas?',
+      seoTitle: '¿Cuánto Paga YouTube por 1.000 Visitas? (2–12 $)',
       category: 'Monetización y Economía',
       readTime: '7 min de lectura',
       description:
-        'Descubre cuánto paga YouTube por 1.000 visitas según temática, vídeos largos frente a Shorts, RPM neto y cómo calcular tus ingresos de creador.',
+        'De media, YouTube paga entre 2 $ y 12 $ por cada 1.000 visitas en vídeos largos, según temática y país. Compara con Shorts, entiende el RPM neto y calcula tus ingresos.',
       officialSources: [
         {
           label: 'Ayuda de YouTube: Métricas de YouTube Analytics (RPM)',
@@ -1889,11 +1889,11 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
     },
     'how-much-does-youtube-pay-per-1000-views': {
       title: 'Combien Paye YouTube Pour 1 000 Vues ? (Tarifs et Rémunération 2026)',
-      seoTitle: 'Combien Paye YouTube Pour 1 000 Vues ?',
+      seoTitle: 'Combien Paye YouTube Pour 1 000 Vues ? (2 à 12 €)',
       category: 'Monétisation et Économie',
       readTime: '7 min de lecture',
       description:
-        'Découvrez combien paye YouTube pour 1 000 vues selon la thématique, vidéos longues vs Shorts, RPM net et comment calculer vos revenus de créateur.',
+        'En moyenne, YouTube paye entre 2 € et 12 € pour 1 000 vues sur les vidéos longues, selon la thématique et le pays. Comparez avec les Shorts, comprenez le RPM net et calculez vos revenus.',
       officialSources: [
         {
           label: 'Aide YouTube : Comprendre les statistiques YouTube Analytics (RPM)',
@@ -2989,7 +2989,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       category: 'Monetização e Economia',
       readTime: '7 min de leitura',
       description:
-        'Descubra quanto o YouTube paga por 1.000 visualizações por nicho, vídeos longos vs Shorts, RPM líquido e como calcular os ganhos do seu canal.',
+        'Em média, o YouTube paga entre US$ 2 e US$ 12 por 1.000 visualizações em vídeos longos, conforme nicho e país. Compare com Shorts, entenda o RPM líquido e calcule os ganhos do seu canal.',
       officialSources: [
         {
           label: 'Ajuda do YouTube: Noções básicas sobre métricas do YouTube Analytics (RPM)',
@@ -4082,7 +4082,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       category: 'Monetizzazione ed Economia',
       readTime: '7 min di lettura',
       description:
-        'Scopri quanto paga YouTube per 1.000 visualizzazioni in base alla nicchia, video lunghi vs Shorts, RPM netto e come calcolare le tue entrate.',
+        'In media YouTube paga tra 2 € e 12 € ogni 1.000 visualizzazioni sui video lunghi, a seconda di nicchia e paese. Confronta con gli Shorts, scopri l’RPM netto e calcola le tue entrate.',
       officialSources: [
         {
           label: 'Guida di YouTube: Informazioni sulle metriche di YouTube Analytics (RPM)',
