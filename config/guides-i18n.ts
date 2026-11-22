@@ -1889,11 +1889,11 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
     },
     'how-much-does-youtube-pay-per-1000-views': {
       title: 'Combien Paye YouTube Pour 1 000 Vues ? (Tarifs et Rémunération 2026)',
-      seoTitle: 'Combien Paye YouTube Pour 1 000 Vues ? (2 à 12 €)',
+      seoTitle: 'Combien Paye YouTube Pour 1 000 Vues ? (2 à 12 $)',
       category: 'Monétisation et Économie',
       readTime: '7 min de lecture',
       description:
-        'En moyenne, YouTube paye entre 2 € et 12 € pour 1 000 vues sur les vidéos longues, selon la thématique et le pays. Comparez avec les Shorts, comprenez le RPM net et calculez vos revenus.',
+        'En moyenne, YouTube paye entre 2 $ et 12 $ pour 1 000 vues sur les vidéos longues, selon la thématique et le pays. Comparez avec les Shorts, comprenez le RPM net et calculez vos revenus.',
       officialSources: [
         {
           label: 'Aide YouTube : Comprendre les statistiques YouTube Analytics (RPM)',
@@ -1909,8 +1909,8 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       contentSections: [
         {
           heading: '1. Combien paye YouTube pour 1 000 vues en moyenne ?',
-          body: 'En moyenne, YouTube verse aux créateurs entre 2,00 € et 12,00 € pour 1 000 vues sur les vidéos longues standards dans les pays occidentaux à fort pouvoir d’achat (France, États-Unis, Canada, Allemagne, Royaume-Uni). Cet indicateur est appelé le RPM net (Revenu Pour Mille vues). Ces gains oscillent fortement selon le sujet : les secteurs commerciaux comme la finance personnelle, l’investissement ou les logiciels professionnels atteignent des RPM de 15,00 € à plus de 35,00 € par tranche de 1 000 vues. À l’inverse, le divertissement généraliste, les vlogs et le gaming génèrent plutôt entre 1,50 € et 4,50 €. Sur les YouTube Shorts, le modèle de fonds partagé offre des tarifs nettement inférieurs, compris entre 0,02 € et 0,07 € pour 1 000 vues.',
-          keyTakeaway: 'La majorité des vidéos longues rapportent entre 2 € et 12 € pour 1 000 vues, contre seulement 0,02 € à 0,07 € sur les Shorts.',
+          body: 'En moyenne, YouTube verse aux créateurs entre 2,00 $ et 12,00 $ pour 1 000 vues sur les vidéos longues standards dans les pays occidentaux à fort pouvoir d’achat (France, États-Unis, Canada, Allemagne, Royaume-Uni). Cet indicateur est appelé le RPM net (Revenu Pour Mille vues). Ces gains oscillent fortement selon le sujet : les secteurs commerciaux comme la finance personnelle, l’investissement ou les logiciels professionnels atteignent des RPM de 15,00 $ à plus de 35,00 $ par tranche de 1 000 vues. À l’inverse, le divertissement généraliste, les vlogs et le gaming génèrent plutôt entre 1,50 $ et 4,50 $. Sur les YouTube Shorts, le modèle de fonds partagé offre des tarifs nettement inférieurs, compris entre 0,02 $ et 0,07 $ pour 1 000 vues.',
+          keyTakeaway: 'La majorité des vidéos longues rapportent entre 2 $ et 12 $ pour 1 000 vues, contre seulement 0,02 $ à 0,07 $ sur les Shorts.',
         },
         {
           heading: '2. CPM vs RPM : pourquoi les marques dépensent plus que vous ne touchez',
@@ -1924,13 +1924,13 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         },
         {
           heading: '4. Grille de rémunération par thématique : finance, tech, gaming et vlogs',
-          body: 'Les enchères publicitaires diffèrent de manière spectaculaire selon la catégorie : (1) Finance personnelle, crypto et investissement : 12,00 € à 35,00 €+ ; (2) Tech, tutoriels informatiques et code : 6,00 € à 18,00 € ; (3) Entrepreneuriat et marketing digital : 7,00 € à 22,00 € ; (4) Éducation et développement personnel : 4,00 € à 10,00 € ; (5) Santé et musculation : 3,00 € à 8,00 € ; (6) Vlogs, voyages et style de vie : 1,80 € à 4,50 € ; (7) Gaming et jeux vidéo : 1,20 € à 3,50 € ; (8) Humour et sketchs : 1,20 € à 3,00 €. Vous pouvez estimer vos gains potentiels avec notre Calculateur d’Argent YouTube.',
+          body: 'Les enchères publicitaires diffèrent de manière spectaculaire selon la catégorie : (1) Finance personnelle, crypto et investissement : 12,00 $ à 35,00 $+ ; (2) Tech, tutoriels informatiques et code : 6,00 $ à 18,00 $ ; (3) Entrepreneuriat et marketing digital : 7,00 $ à 22,00 $ ; (4) Éducation et développement personnel : 4,00 $ à 10,00 $ ; (5) Santé et musculation : 3,00 $ à 8,00 $ ; (6) Vlogs, voyages et style de vie : 1,80 $ à 4,50 $ ; (7) Gaming et jeux vidéo : 1,20 $ à 3,50 $ ; (8) Humour et sketchs : 1,20 $ à 3,00 $. Vous pouvez estimer vos gains potentiels avec notre Calculateur d’Argent YouTube.',
           keyTakeaway: 'Les contenus à forte valeur marchande rapportent 5 à 10 fois plus par vue que le divertissement grand public.',
         },
         {
           heading: '5. Projeter vos revenus : de 1 000 à 1 000 000 de vues',
-          body: 'Calculer la progression financière permet de fixer des objectifs réalistes : 1 000 vues = 2,00 € à 12,00 € (longs) ou 0,02 € à 0,07 € (Shorts). 10 000 vues = 20,00 € à 120,00 € (longs) ou 0,20 € à 0,70 € (Shorts). 100 000 vues = 200,00 € à 1 200,00 € (longs) ou 2,00 € à 7,00 € (Shorts). 1 000 000 de vues = 2 000,00 € à 12 000,00 €+ (longs) ou 20,00 € à 70,00 € (Shorts). Pour intégrer l’ensemble de vos sources de revenus (sponsors, affiliations, abonnements), utilisez le Calculateur de Monétisation YouTube.',
-          keyTakeaway: '1 million de vues sur des vidéos longues rapporte généralement 2 000 € à 12 000 €+, contre seulement 20 € à 70 € pour 1 million de Shorts.',
+          body: 'Calculer la progression financière permet de fixer des objectifs réalistes : 1 000 vues = 2,00 $ à 12,00 $ (longs) ou 0,02 $ à 0,07 $ (Shorts). 10 000 vues = 20,00 $ à 120,00 $ (longs) ou 0,20 $ à 0,70 $ (Shorts). 100 000 vues = 200,00 $ à 1 200,00 $ (longs) ou 2,00 $ à 7,00 $ (Shorts). 1 000 000 de vues = 2 000,00 $ à 12 000,00 $+ (longs) ou 20,00 $ à 70,00 $ (Shorts). Pour intégrer l’ensemble de vos sources de revenus (sponsors, affiliations, abonnements), utilisez le Calculateur de Monétisation YouTube.',
+          keyTakeaway: '1 million de vues sur des vidéos longues rapporte généralement 2 000 $ à 12 000 $+, contre seulement 20 $ à 70 $ pour 1 million de Shorts.',
         },
       ],
       workedExample: {
@@ -1938,9 +1938,9 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         scenario:
           'Deux créateurs publient chacun une vidéo de 12 minutes cumulant exactement 250 000 vues en 30 jours. Le créateur A produit des tutoriels de code pour des développeurs. Le créateur B publie des temps forts de jeux vidéo destinés à une large audience jeune.',
         steps: [
-          'Analyse du créateur A (Tutoriel code) : La forte demande des annonceurs de logiciels offre un RPM net de 9,20 €. Rémunération : (250 000 / 1 000) × 9,20 € = 2 300,00 €.',
-          'Analyse du créateur B (Gaming) : Un public plus jeune et des annonces génériques génèrent un RPM de 2,10 €. Rémunération : (250 000 / 1 000) × 2,10 € = 525,00 €.',
-          'Comparaison de l’écart : Pour un nombre de vues parfaitement égal (250 000 vues), le créateur A a généré 1 775,00 € de plus (soit 4,3 fois plus de revenus) grâce à l’intention d’achat de son audience.',
+          'Analyse du créateur A (Tutoriel code) : La forte demande des annonceurs de logiciels offre un RPM net de 9,20 $. Rémunération : (250 000 / 1 000) × 9,20 $ = 2 300,00 $.',
+          'Analyse du créateur B (Gaming) : Un public plus jeune et des annonces génériques génèrent un RPM de 2,10 $. Rémunération : (250 000 / 1 000) × 2,10 $ = 525,00 $.',
+          'Comparaison de l’écart : Pour un nombre de vues parfaitement égal (250 000 vues), le créateur A a généré 1 775,00 $ de plus (soit 4,3 fois plus de revenus) grâce à l’intention d’achat de son audience.',
         ],
         conclusion:
           'Le volume de vues n’est que la moitié de l’équation : le profil économique du public et le sujet multiplient votre rémunération par mille vues.',
@@ -1971,12 +1971,12 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         {
           question: 'Combien paye YouTube pour 1 000 vues ?',
           answer:
-            'En moyenne, les créateurs touchent entre 2,00 € et 12,00 € pour 1 000 vues sur des vidéos longues dans les pays francophones et occidentaux. Les niches comme la finance peuvent dépasser 20,00 €, tandis que les Shorts payent entre 0,02 € et 0,07 €.',
+            'En moyenne, les créateurs touchent entre 2,00 $ et 12,00 $ pour 1 000 vues sur des vidéos longues dans les pays francophones et occidentaux. Les niches comme la finance peuvent dépasser 20,00 $, tandis que les Shorts payent entre 0,02 $ et 0,07 $.',
         },
         {
           question: 'Combien rapporte 1 million de vues sur YouTube ?',
           answer:
-            'Un million de vues sur une vidéo longue rapporte en général entre 2 000 € et 12 000 € net. En finance ou tech, ce montant peut dépasser 20 000 €. Sur les Shorts, 1 million de vues ne rapporte qu’environ 20 € à 70 €.',
+            'Un million de vues sur une vidéo longue rapporte en général entre 2 000 $ et 12 000 $ net. En finance ou tech, ce montant peut dépasser 20 000 $. Sur les Shorts, 1 million de vues ne rapporte qu’environ 20 $ à 70 $.',
         },
         {
           question: 'Quelle est la différence entre CPM et RPM sur YouTube ?',
@@ -2457,8 +2457,8 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       contentSections: [
         {
           heading: '1. Wie viel zahlt YouTube pro 1.000 Aufrufe im Durchschnitt?',
-          body: 'Im Durchschnitt zahlt YouTube für Standard-Videos im Langformat in wirtschaftsstarken Märkten (wie Deutschland, Österreich, Schweiz, USA und Großbritannien) zwischen 2,00 € und 12,00 € pro 1.000 Aufrufe. Diese Kennzahl wird als Netto-RPM (Revenue Per Mille) bezeichnet. Die Einnahmen variieren stark je nach Thema: Kommerzielle Nischen wie persönliche Finanzen, B2B-Software, Immobilien und Krypto erzielen RPM-Werte von 15,00 € bis über 35,00 € pro 1.000 Views. Kanäle für allgemeine Unterhaltung, Vlogs oder Gaming bewegen sich dagegen meist zwischen 1,50 € und 4,50 €. Bei YouTube Shorts liegt die Vergütung durch das Sammelpool-Modell deutlich niedriger – typischerweise bei nur 0,02 € bis 0,07 € pro 1.000 Aufrufen.',
-          keyTakeaway: 'Die meisten Langform-Kanäle erzielen 2 € bis 12 € pro 1.000 Aufrufe, während YouTube Shorts meist nur 0,02 € bis 0,07 € einbringen.',
+          body: 'Im Durchschnitt zahlt YouTube für Standard-Videos im Langformat in wirtschaftsstarken Märkten (wie Deutschland, Österreich, Schweiz, USA und Großbritannien) zwischen 2,00 $ und 12,00 $ pro 1.000 Aufrufe. Diese Kennzahl wird als Netto-RPM (Revenue Per Mille) bezeichnet. Die Einnahmen variieren stark je nach Thema: Kommerzielle Nischen wie persönliche Finanzen, B2B-Software, Immobilien und Krypto erzielen RPM-Werte von 15,00 $ bis über 35,00 $ pro 1.000 Views. Kanäle für allgemeine Unterhaltung, Vlogs oder Gaming bewegen sich dagegen meist zwischen 1,50 $ und 4,50 $. Bei YouTube Shorts liegt die Vergütung durch das Sammelpool-Modell deutlich niedriger – typischerweise bei nur 0,02 $ bis 0,07 $ pro 1.000 Aufrufen.',
+          keyTakeaway: 'Die meisten Langform-Kanäle erzielen 2 $ bis 12 $ pro 1.000 Aufrufe, während YouTube Shorts meist nur 0,02 $ bis 0,07 $ einbringen.',
         },
         {
           heading: '2. CPM vs. RPM: Warum Werbekunden mehr zahlen, als du erhältst',
@@ -2472,13 +2472,13 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         },
         {
           heading: '4. Vergütung nach Nische: Finanzen, Tech, Gaming und Vlogs',
-          body: 'Die Werbebudgets unterscheiden sich gravierend je nach Genre: (1) Finanzen, Krypto & Geldanlage: 12,00 € bis 35,00 €+; (2) Software, IT & Programmierung: 6,00 € bis 18,00 €; (3) Business & Online-Marketing: 7,00 € bis 22,00 €; (4) Bildung & Tutorials: 4,00 € bis 10,00 €; (5) Fitness & Gesundheit: 3,00 € bis 8,00 €; (6) Lifestyle, Reisen & Vlogs: 1,80 € bis 4,50 €; (7) Gaming & LetsPlays: 1,20 € bis 3,50 €; (8) Comedy & Unterhaltung: 1,20 € bis 3,00 €. Berechne verschiedene Nischen-Szenarien direkt mit unserem YouTube-Geld-Rechner.',
+          body: 'Die Werbebudgets unterscheiden sich gravierend je nach Genre: (1) Finanzen, Krypto & Geldanlage: 12,00 $ bis 35,00 $+; (2) Software, IT & Programmierung: 6,00 $ bis 18,00 $; (3) Business & Online-Marketing: 7,00 $ bis 22,00 $; (4) Bildung & Tutorials: 4,00 $ bis 10,00 $; (5) Fitness & Gesundheit: 3,00 $ bis 8,00 $; (6) Lifestyle, Reisen & Vlogs: 1,80 $ bis 4,50 $; (7) Gaming & LetsPlays: 1,20 $ bis 3,50 $; (8) Comedy & Unterhaltung: 1,20 $ bis 3,00 $. Berechne verschiedene Nischen-Szenarien direkt mit unserem YouTube-Geld-Rechner.',
           keyTakeaway: 'Geschäftliche und finanzielle Themen erzielen pro Aufruf das 5- bis 10-fache von reinen Gaming- oder Unterhaltungsvideos.',
         },
         {
           heading: '5. Einnahmen hochrechnen: Von 1.000 bis 1.000.000 Aufrufen',
-          body: 'Die rechnerische Skalierung verdeutlicht realistische Meilensteine: 1.000 Aufrufe bringen 2,00 € bis 12,00 € (Langformat) oder 0,02 € bis 0,07 € (Shorts). 10.000 Aufrufe bringen 20,00 € bis 120,00 € (Langformat) oder 0,20 € bis 0,70 € (Shorts). 100.000 Aufrufe bringen 200,00 € bis 1.200,00 € (Langformat) oder 2,00 € bis 7,00 € (Shorts). 1.000.000 Aufrufe bringen 2.000,00 € bis 12.000,00 €+ (Langformat) oder 20,00 € bis 70,00 € (Shorts). Wenn du auch Sponsoring, Affiliate-Links und Mitgliedschaften einbeziehen möchtest, nutze unseren YouTube-Monetarisierungsrechner.',
-          keyTakeaway: '1 Million Aufrufe im Langformat bringen typischerweise 2.000 € bis über 12.000 € Nettoerlös, während 1 Million Shorts nur etwa 20 € bis 70 € erzielen.',
+          body: 'Die rechnerische Skalierung verdeutlicht realistische Meilensteine: 1.000 Aufrufe bringen 2,00 $ bis 12,00 $ (Langformat) oder 0,02 $ bis 0,07 $ (Shorts). 10.000 Aufrufe bringen 20,00 $ bis 120,00 $ (Langformat) oder 0,20 $ bis 0,70 $ (Shorts). 100.000 Aufrufe bringen 200,00 $ bis 1.200,00 $ (Langformat) oder 2,00 $ bis 7,00 $ (Shorts). 1.000.000 Aufrufe bringen 2.000,00 $ bis 12.000,00 $+ (Langformat) oder 20,00 $ bis 70,00 $ (Shorts). Wenn du auch Sponsoring, Affiliate-Links und Mitgliedschaften einbeziehen möchtest, nutze unseren YouTube-Monetarisierungsrechner.',
+          keyTakeaway: '1 Million Aufrufe im Langformat bringen typischerweise 2.000 $ bis über 12.000 $ Nettoerlös, während 1 Million Shorts nur etwa 20 $ bis 70 $ erzielen.',
         },
       ],
       workedExample: {
@@ -2486,9 +2486,9 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         scenario:
           'Zwei Creator veröffentlichen jeweils ein 12-minütiges Video, das innerhalb von 30 Tagen exakt 250.000 Aufrufe erzielt. Creator A betreibt einen Kanal für Programmiertutorials mit Zuschauern aus Deutschland und den USA. Creator B betreibt einen Gaming-Highlight-Kanal mit einer jüngeren, internationalen Zuschauerschaft.',
         steps: [
-          'Analyse Creator A (Coding-Tutorial): Hohe Nachfrage von Softwareunternehmen führt zu einem Netto-RPM von 9,20 €. Gesamtertrag: (250.000 / 1.000) × 9,20 € = 2.300,00 €.',
-          'Analyse Creator B (Gaming-Highlights): Jüngere Zielgruppe und niedrigere Gebote führen zu einem Netto-RPM von 2,10 €. Gesamtertrag: (250.000 / 1.000) × 2,10 € = 525,00 €.',
-          'Vergleich des Unterschieds: Bei exakt gleicher Aufrufzahl (250.000 Views) verdiente Creator A 1.775,00 € mehr (über 4,3-mal so viel) aufgrund der Kaufkraft und Relevanz der Zielgruppe.',
+          'Analyse Creator A (Coding-Tutorial): Hohe Nachfrage von Softwareunternehmen führt zu einem Netto-RPM von 9,20 $. Gesamtertrag: (250.000 / 1.000) × 9,20 $ = 2.300,00 $.',
+          'Analyse Creator B (Gaming-Highlights): Jüngere Zielgruppe und niedrigere Gebote führen zu einem Netto-RPM von 2,10 $. Gesamtertrag: (250.000 / 1.000) × 2,10 $ = 525,00 $.',
+          'Vergleich des Unterschieds: Bei exakt gleicher Aufrufzahl (250.000 Views) verdiente Creator A 1.775,00 $ mehr (über 4,3-mal so viel) aufgrund der Kaufkraft und Relevanz der Zielgruppe.',
         ],
         conclusion:
           'Die reine Zahl der Aufrufe ist nur die halbe Wahrheit. Die Kaufabsicht der Nische und die Herkunft der Zuschauer multiplizieren deine Einnahmen pro 1.000 Aufrufe.',
@@ -2519,12 +2519,12 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         {
           question: 'Wie viel zahlt YouTube pro 1.000 Aufrufe?',
           answer:
-            'Die meisten Creator verdienen bei regulären Langformat-Videos zwischen 2,00 € und 12,00 € pro 1.000 Aufrufe. In lukrativen Nischen wie Finanzen können es 20,00 € bis 35,00 €+ sein, während Shorts 0,02 € bis 0,07 € zahlen.',
+            'Die meisten Creator verdienen bei regulären Langformat-Videos zwischen 2,00 $ und 12,00 $ pro 1.000 Aufrufe. In lukrativen Nischen wie Finanzen können es 20,00 $ bis 35,00 $+ sein, während Shorts 0,02 $ bis 0,07 $ zahlen.',
         },
         {
           question: 'Wie viel verdient man mit 1 Million Aufrufen auf YouTube?',
           answer:
-            'Eine Million Aufrufe eines Langvideos bringen in der Regel zwischen 2.000 € und 12.000 € Werbeeinnahmen ein. Bei Shorts sind es lediglich etwa 20 € bis 70 € pro Million Views.',
+            'Eine Million Aufrufe eines Langvideos bringen in der Regel zwischen 2.000 $ und 12.000 $ Werbeeinnahmen ein. Bei Shorts sind es lediglich etwa 20 $ bis 70 $ pro Million Views.',
         },
         {
           question: 'Was ist der Unterschied zwischen CPM und RPM bei YouTube?',
@@ -4082,7 +4082,7 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       category: 'Monetizzazione ed Economia',
       readTime: '7 min di lettura',
       description:
-        'In media YouTube paga tra 2 € e 12 € ogni 1.000 visualizzazioni sui video lunghi, a seconda di nicchia e paese. Confronta con gli Shorts, scopri l’RPM netto e calcola le tue entrate.',
+        'In media YouTube paga tra 2 $ e 12 $ ogni 1.000 visualizzazioni sui video lunghi, a seconda di nicchia e paese. Confronta con gli Shorts, scopri l’RPM netto e calcola le tue entrate.',
       officialSources: [
         {
           label: 'Guida di YouTube: Informazioni sulle metriche di YouTube Analytics (RPM)',
@@ -4098,8 +4098,8 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
       contentSections: [
         {
           heading: '1. Quanto paga YouTube per 1.000 visualizzazioni in media?',
-          body: 'In media, YouTube corrisponde ai creator tra 2,00 € e 12,00 € ogni 1.000 visualizzazioni per video lunghi tradizionali nei mercati a forte inserzionismo (come Italia, Germania, Regno Unito e Stati Uniti). Questo parametro è noto come RPM netto (Entrate per mille visualizzazioni). Le cifre variano sensibilmente in base alla categoria: settori commerciali come finanza personale, software B2B, investimenti e immobiliare possono registrare RPM compresi tra 15,00 € e oltre 35,00 € per 1.000 views. Al contrario, canali di intrattenimento, vlog o videogiochi si attestano in genere tra 1,50 € e 4,50 €. Per quanto riguarda i YouTube Shorts, il modello a pool condiviso genera compensi sensibilmente inferiori, compresi tra 0,02 € e 0,07 € per 1.000 visualizzazioni.',
-          keyTakeaway: 'La maggior parte dei video lunghi genera tra 2 € e 12 € per 1.000 visualizzazioni, mentre gli Shorts rendono da 0,02 € a 0,07 € ogni mille views.',
+          body: 'In media, YouTube corrisponde ai creator tra 2,00 $ e 12,00 $ ogni 1.000 visualizzazioni per video lunghi tradizionali nei mercati a forte inserzionismo (come Italia, Germania, Regno Unito e Stati Uniti). Questo parametro è noto come RPM netto (Entrate per mille visualizzazioni). Le cifre variano sensibilmente in base alla categoria: settori commerciali come finanza personale, software B2B, investimenti e immobiliare possono registrare RPM compresi tra 15,00 $ e oltre 35,00 $ per 1.000 views. Al contrario, canali di intrattenimento, vlog o videogiochi si attestano in genere tra 1,50 $ e 4,50 $. Per quanto riguarda i YouTube Shorts, il modello a pool condiviso genera compensi sensibilmente inferiori, compresi tra 0,02 $ e 0,07 $ per 1.000 visualizzazioni.',
+          keyTakeaway: 'La maggior parte dei video lunghi genera tra 2 $ e 12 $ per 1.000 visualizzazioni, mentre gli Shorts rendono da 0,02 $ a 0,07 $ ogni mille views.',
         },
         {
           heading: '2. CPM vs RPM: perché gli inserzionisti spendono più di quanto ricevi',
@@ -4113,13 +4113,13 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         },
         {
           heading: '4. Compensi stimati per nicchia: finanza, tecnologia, gaming e vlog',
-          body: 'I budget degli inserzionisti cambiano radicalmente tra generi: (1) Finanza personale, crypto e investimenti: 12,00 € a 35,00 €+; (2) Software, recensioni tech e programmazione: 6,00 € a 18,00 €; (3) Business e marketing online: 7,00 € a 22,00 €; (4) Istruzione, carriera e tutorial: 4,00 € a 10,00 €; (5) Fitness e salute: 3,00 € a 8,00 €; (6) Viaggi, lifestyle e vlog: 1,80 € a 4,50 €; (7) Gaming ed esport: 1,20 € a 3,50 €; (8) Comicità e intrattenimento: 1,20 € a 3,00 €. Puoi simulare le tue stime con il nostro Calcolatore di Guadagni YouTube.',
+          body: 'I budget degli inserzionisti cambiano radicalmente tra generi: (1) Finanza personale, crypto e investimenti: 12,00 $ a 35,00 $+; (2) Software, recensioni tech e programmazione: 6,00 $ a 18,00 $; (3) Business e marketing online: 7,00 $ a 22,00 $; (4) Istruzione, carriera e tutorial: 4,00 $ a 10,00 $; (5) Fitness e salute: 3,00 $ a 8,00 $; (6) Viaggi, lifestyle e vlog: 1,80 $ a 4,50 $; (7) Gaming ed esport: 1,20 $ a 3,50 $; (8) Comicità e intrattenimento: 1,20 $ a 3,00 $. Puoi simulare le tue stime con il nostro Calcolatore di Guadagni YouTube.',
           keyTakeaway: 'I contenuti legati al mondo professionale e finanziario rendono da 5 a 10 volte più per visualizzazione rispetto all’intrattenimento generico.',
         },
         {
           heading: '5. Proiezione dei guadagni: da 1.000 a 1.000.000 di visualizzazioni',
-          body: 'Comprendere la progressione matematica aiuta a stabilire traguardi raggiungibili: 1.000 visualizzazioni = 2,00 € a 12,00 € (lunghi) o 0,02 € a 0,07 € (Shorts). 10.000 visualizzazioni = 20,00 € a 120,00 € (lunghi) o 0,20 € a 0,70 € (Shorts). 100.000 visualizzazioni = 200,00 € a 1.200,00 € (lunghi) o 2,00 € a 7,00 € (Shorts). 1.000.000 di visualizzazioni = 2.000,00 € a 12.000,00 €+ (lunghi) o 20,00 € a 70,00 € (Shorts). Per stimare le entrate complessive comprensive di sponsor, affiliazioni e abbonamenti, utilizza il Calcolatore di Monetizzazione YouTube.',
-          keyTakeaway: '1 milione di visualizzazioni su video lunghi frutta in genere da 2.000 € a 12.000 €+ netti, contro solo 20 € - 70 € circa su 1 milione di Shorts.',
+          body: 'Comprendere la progressione matematica aiuta a stabilire traguardi raggiungibili: 1.000 visualizzazioni = 2,00 $ a 12,00 $ (lunghi) o 0,02 $ a 0,07 $ (Shorts). 10.000 visualizzazioni = 20,00 $ a 120,00 $ (lunghi) o 0,20 $ a 0,70 $ (Shorts). 100.000 visualizzazioni = 200,00 $ a 1.200,00 $ (lunghi) o 2,00 $ a 7,00 $ (Shorts). 1.000.000 di visualizzazioni = 2.000,00 $ a 12.000,00 $+ (lunghi) o 20,00 $ a 70,00 $ (Shorts). Per stimare le entrate complessive comprensive di sponsor, affiliazioni e abbonamenti, utilizza il Calcolatore di Monetizzazione YouTube.',
+          keyTakeaway: '1 milione di visualizzazioni su video lunghi frutta in genere da 2.000 $ a 12.000 $+ netti, contro solo 20 $ - 70 $ circa su 1 milione di Shorts.',
         },
       ],
       workedExample: {
@@ -4127,9 +4127,9 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         scenario:
           'Due creator pubblicano ciascuno un video da 12 minuti che ottiene esattamente 250.000 visualizzazioni nell’arco di 30 giorni. Il Creator A realizza tutorial di sviluppo software per professionisti. Il Creator B pubblica sintesi di videogiochi per un vasto pubblico giovane.',
         steps: [
-          'Analisi Creator A (Tutorial software): La forte concorrenza tra aziende tech garantisce un RPM netto di 9,20 €. Guadagno complessivo: (250.000 / 1.000) × 9,20 € = 2.300,00 €.',
-          'Analisi Creator B (Gaming): Un pubblico molto giovane e inserzioni generiche producono un RPM di 2,10 €. Guadagno complessivo: (250.000 / 1.000) × 2,10 € = 525,00 €.',
-          'Confronto del divario: Pur registrando esattamente le medesime visualizzazioni (250.000 ciascuno), il Creator A ha incassato 1.775,00 € in più (oltre 4,3 volte tanto) grazie al valore economico del suo pubblico.',
+          'Analisi Creator A (Tutorial software): La forte concorrenza tra aziende tech garantisce un RPM netto di 9,20 $. Guadagno complessivo: (250.000 / 1.000) × 9,20 $ = 2.300,00 $.',
+          'Analisi Creator B (Gaming): Un pubblico molto giovane e inserzioni generiche producono un RPM di 2,10 $. Guadagno complessivo: (250.000 / 1.000) × 2,10 $ = 525,00 $.',
+          'Confronto del divario: Pur registrando esattamente le medesime visualizzazioni (250.000 ciascuno), il Creator A ha incassato 1.775,00 $ in più (oltre 4,3 volte tanto) grazie al valore economico del suo pubblico.',
         ],
         conclusion:
           'Il conteggio grezzo delle visualizzazioni è solo metà del quadro. L’intenzione d’acquisto del settore e il pubblico geografico moltiplicano il rendimento per mille views.',
@@ -4160,12 +4160,12 @@ export const localizedGuides: Record<Locale, Record<string, LocalizedGuideData>>
         {
           question: 'Quanto paga YouTube per 1.000 visualizzazioni?',
           answer:
-            'La maggior parte dei creator guadagna tra 2,00 € e 12,00 € ogni 1.000 visualizzazioni sui video lunghi tradizionali. Nelle nicchie ad alto valore come la finanza si possono superare i 20,00 €, mentre gli Shorts pagano tra 0,02 € e 0,07 €.',
+            'La maggior parte dei creator guadagna tra 2,00 $ e 12,00 $ ogni 1.000 visualizzazioni sui video lunghi tradizionali. Nelle nicchie ad alto valore come la finanza si possono superare i 20,00 $, mentre gli Shorts pagano tra 0,02 $ e 0,07 $.',
         },
         {
           question: 'Quanto si guadagna con 1 milione di visualizzazioni su YouTube?',
           answer:
-            'Un milione di visualizzazioni su un video lungo genera solitamente tra 2.000 € e 12.000 € di ricavi pubblicitari netti. Nelle nicchie tech o business può superare i 20.000 €. Con i YouTube Shorts, 1 milione di visualizzazioni frutta solo 20 € - 70 € circa.',
+            'Un milione di visualizzazioni su un video lungo genera solitamente tra 2.000 $ e 12.000 $ di ricavi pubblicitari netti. Nelle nicchie tech o business può superare i 20.000 $. Con i YouTube Shorts, 1 milione di visualizzazioni frutta solo 20 $ - 70 $ circa.',
         },
         {
           question: 'Qual è la differenza tra CPM e RPM su YouTube?',
