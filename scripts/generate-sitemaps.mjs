@@ -13,6 +13,7 @@ function loadTsModule(filePath, mocks = {}) {
     if (id === '@/config/site') return loadTsModule(path.resolve('config/site.ts'), mocks);
     if (id === '@/config/i18n') return loadTsModule(path.resolve('config/i18n.ts'), mocks);
     if (id === '@/lib/guides') return loadTsModule(path.resolve('lib/guides.ts'), mocks);
+    if (id === '@/config/page-dates') return loadTsModule(path.resolve('config/page-dates.ts'), mocks);
     if (id === '@/types') return {};
     throw new Error(`Cannot resolve mock for: ${id}`);
   };

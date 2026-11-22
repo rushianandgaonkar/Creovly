@@ -97,3 +97,12 @@ test('Shorts export cancellation occurs before decode', async () => {
   const abort = new AbortController(); abort.abort();
   await assert.rejects(exportShortsGuide(new File(['x'],'frame.png'),starterMargins,undefined,abort.signal),{name:'AbortError'});
 });
+test('every sitemap page has a valid lastmod date', () => {
+  const { pageLastModified } = load('config/page-dates.ts');
+  const { toolRegistry } = load('config/site.ts', { '@/types': {} });
+  const { guides } = load('lib/guides.ts');
+  const paths = [...toolRegistry.map((t) => t.href), ...guides.map((g) => `/guides/${g.slug}`)];
+  for (const path of paths) {
+    assert.match(pageLastModified[path] || '', /^\d{4}-\d{2}-\d{2}$/, `Missing lastmod for ${path} in config/page-dates.ts`);
+  }
+});

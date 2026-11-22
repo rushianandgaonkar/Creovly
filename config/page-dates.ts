@@ -1,0 +1,51 @@
+/**
+ * Last real content change per page (YYYY-MM-DD), used for sitemap <lastmod>.
+ * Bump a page's date when its visible content changes; every tool and guide
+ * must have an entry (enforced by tests/creator-tools.test.cjs).
+ */
+export const pageLastModified: Record<string, string> = {
+  '': '2026-11-20',
+  '/studio': '2026-11-20',
+  '/checklist': '2026-11-20',
+  '/tools': '2026-11-20',
+  '/tools/thumbnail': '2026-11-20',
+  '/guides': '2026-11-17',
+  '/about': '2026-11-03',
+  '/contact': '2026-11-03',
+  '/privacy': '2026-11-03',
+  '/terms': '2026-10-31',
+
+  '/tools/youtube-thumbnail-resizer': '2026-11-20',
+  '/tools/youtube-thumbnail-compressor': '2026-11-20',
+  '/tools/youtube-thumbnail-size': '2026-11-20',
+  '/tools/youtube-thumbnail-downloader': '2026-11-17',
+  '/tools/youtube-thumbnail-tester': '2026-11-17',
+  '/tools/logo-background-remover': '2026-11-17',
+  '/tools/youtube-shorts-safe-zone': '2026-11-17',
+  '/tools/youtube-banner-size': '2026-11-22',
+  '/tools/youtube-banner-maker': '2026-11-20',
+  '/tools/youtube-profile-picture-resizer': '2026-11-17',
+  '/tools/youtube-title-checker': '2026-11-22',
+  '/tools/youtube-description-generator': '2026-11-17',
+  '/tools/youtube-tag-generator': '2026-11-17',
+  '/tools/youtube-hashtag-generator': '2026-11-20',
+  '/tools/youtube-channel-name-generator': '2026-11-17',
+  '/tools/youtube-link-generator': '2026-11-17',
+  '/tools/youtube-timestamp-generator': '2026-11-17',
+  '/tools/words-to-minutes-calculator': '2026-11-17',
+  '/tools/best-time-to-post-on-youtube': '2026-11-20',
+  '/tools/youtube-revenue-calculator': '2026-11-17',
+  '/tools/youtube-rpm-calculator': '2026-11-22',
+  '/tools/youtube-cpm-calculator': '2026-11-22',
+  '/tools/youtube-watch-hours-calculator': '2026-11-17',
+  '/tools/youtube-monetization-calculator': '2026-11-17',
+  '/tools/engagement-rate-calculator': '2026-11-17',
+
+  '/guides/youtube-thumbnail-blueprint': '2026-11-20',
+  '/guides/decoding-youtube-rpm': '2026-11-22',
+  '/guides/youtube-shorts-safe-zone': '2026-11-17',
+  '/guides/youtube-banner-size': '2026-11-17',
+  '/guides/youtube-monetization-requirements': '2026-11-17',
+  '/guides/how-to-change-youtube-thumbnail': '2026-11-17',
+  '/guides/how-much-does-youtube-pay-per-1000-views': '2026-11-22',
+};

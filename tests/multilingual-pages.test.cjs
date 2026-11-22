@@ -22,6 +22,7 @@ function loadTsModule(filePath, customRequire = null) {
       if (id === '@/config/i18n') return loadTsModule('config/i18n.ts', req);
       if (id === '@/config/site') return loadTsModule('config/site.ts', req);
       if (id === '@/lib/guides') return loadTsModule('lib/guides.ts', req);
+      if (id === '@/config/page-dates') return loadTsModule('config/page-dates.ts', req);
       return {};
     });
   fn(mod.exports, req, mod);
